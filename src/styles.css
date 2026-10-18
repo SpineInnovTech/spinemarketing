@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-paper: #ffffff;
+  --color-ice: #f0f8ff;
+  --color-mist: #ebf7ff;
+  --color-navy: #082b5e;
+  --color-muted: #4e607a;
+  --color-line: #d6e8f8;
+  --color-blue: #006fe8;
+  --color-deep: #0055b8;
+  --color-night: #071526;
+  --color-night-fg: #e7f2fc;
+  --color-night-muted: #a9bcce;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-paper text-navy font-sans antialiased;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 3px;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
+
+.spine-label {
+  writing-mode: vertical-rl;
+}
+
+.story-wash {
+  background:
+    radial-gradient(ellipse 55% 45% at 88% 8%, rgb(0 111 232 / 0.14), transparent 62%),
+    radial-gradient(ellipse 40% 36% at 0% 100%, rgb(0 111 232 / 0.08), transparent 60%),
+    var(--color-ice);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 80;
+  transform: translateY(-160%);
+  border-radius: 0.75rem;
+  background: var(--color-navy);
+  color: var(--color-paper);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+.marquee-track {
+  animation: marquee 48s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.beam-frame {
+  position: relative;
+}
+.beam-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from var(--beam-angle), transparent 0 72%, #006fe8 86%, #c5dffb 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam-spin 9s linear infinite;
+  pointer-events: none;
+}
+@property --beam-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes beam-spin {
+  to { --beam-angle: 360deg; }
+}
+.dot-field {
+  background-color: var(--color-ice);
+  background-image: radial-gradient(rgb(8 43 94 / 0.14) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .beam-frame::after { animation: none; }
+  .marquee-track { animation: none; }
+}
