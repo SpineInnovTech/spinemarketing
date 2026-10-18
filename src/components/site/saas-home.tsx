@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento";
-import { WorkbenchShell, workbenchModes } from "@/components/site/workbench-shell";
+import { PreviewPrinciples, WorkspacePreview } from "@/components/site/workspace-preview";
 import { PRODUCT_SITE } from "@/lib/site";
 
 const flow = ["Connect", "Authorize", "Assemble", "Work", "Approve", "Execute", "Verify", "Continue"];
@@ -48,38 +48,10 @@ export function SaasHome() {
               Discover the architecture
             </a>
           </div>
-          <figure className="beam-frame mx-auto mt-12 max-w-4xl overflow-hidden rounded-card border border-line bg-paper text-left shadow-[0_30px_80px_-36px_rgb(8_43_94/0.55)]">
-            <img
-              src="/media/dashboard.webp"
-              alt="QA fixture of a Spine Workspace view. Not live customer telemetry."
-              className="w-full"
-            />
-            <figcaption className="border-t border-line px-4 py-3 text-xs text-muted">
-              QA fixture of an application view. Not live customer data, and not a measured outcome.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section className="border-b border-line bg-ice">
-        <div className="mx-auto max-w-6xl px-5 py-16">
-          <p className="text-sm font-semibold text-deep">Spine Workspace</p>
-          <h2 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight md:text-4xl">Nine entries. The work opens inside My Work.</h2>
-          <p className="mt-3 max-w-2xl text-muted">Keep your AI. Keep your tools. This is the shell where that work is seen. Domain views stay inside the workbench you are allowed to open.</p>
-          <div className="mt-8 grid items-start gap-4 lg:grid-cols-12">
-            <WorkbenchShell className="lg:col-span-4" />
-            <div className="grid gap-3 sm:grid-cols-2 lg:col-span-8">
-              {workbenchModes.map(([title, body]) => (
-                <article key={title} className="rounded-card border border-line bg-paper p-4">
-                  <h3 className="font-semibold">{title}</h3>
-                  <p className="mt-1 text-sm text-muted">{body}</p>
-                </article>
-              ))}
-            </div>
+          <div className="mx-auto mt-12 max-w-5xl">
+            <WorkspacePreview />
+            <PreviewPrinciples />
           </div>
-          <a href="/workspace" className="mt-6 inline-flex h-11 items-center text-sm font-semibold text-deep">
-            See how My Work is organized
-          </a>
         </div>
       </section>
 
