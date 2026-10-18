@@ -6,7 +6,7 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "Questions | Spine InnovTech" },
-      { name: "description", content: "Plain answers on shared context, human control, readiness, captures and how to evaluate SpineWorkspace." },
+      { name: "description", content: "Plain answers on shared context, human control, readiness, captures and how to evaluate Spine Workspace." },
     ],
   }),
   component: FaqPage,

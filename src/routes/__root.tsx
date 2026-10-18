@@ -1,7 +1,8 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import { createRootRoute, HeadContent, Outlet, Scripts, useLocation } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteMissing } from "@/components/site/shell";
+import { corporateCanonical } from "@/lib/site-seo";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -26,10 +27,17 @@ export const Route = createRootRoute({
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
     ],
   }),
-  component: () => (
+  component: RootDocument,
+  notFoundComponent: SiteMissing,
+});
+
+function RootDocument() {
+  const pathname = useLocation({ select: (location) => location.pathname });
+  return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
+        <link rel="canonical" href={corporateCanonical(pathname)} />
       </head>
       <body>
         <PreviewHostBridge />
@@ -39,6 +47,5 @@ export const Route = createRootRoute({
         <Scripts />
       </body>
     </html>
-  ),
-  notFoundComponent: SiteMissing,
-});
+  );
+}

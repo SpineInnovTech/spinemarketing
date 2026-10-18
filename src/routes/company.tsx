@@ -26,7 +26,7 @@ function CompanyPage() {
         lede="We build the working relationship: shared context, an AI agent as the counterpart, and a decision that stays with a person."
         scene={<HomePlate />}
       >
-        <PrimaryLink to="/workspace">Explore SpineWorkspace</PrimaryLink>
+        <PrimaryLink to="/workspace">Explore Spine Workspace</PrimaryLink>
         <SecondaryLink to="/story">Our story</SecondaryLink>
       </PageHero>
       <section className="mx-auto max-w-6xl px-5 py-16">
@@ -43,7 +43,7 @@ function CompanyPage() {
           </div>
           <div className="grid gap-3">
             {[
-              ["SpineWorkspace", "The flagship workspace where people and AI work from shared business context."],
+              ["Spine Workspace", "The flagship workspace where people and AI work from shared business context."],
               ["Spine technology", "The architecture for organizing context, projecting views, preparing proposals, governing actions and preserving continuity."],
               ["Host Connected", "Keep the AI host and the tools you already use. Move the work and the context. Do not replace either."],
             ].map(([title, body]) => (

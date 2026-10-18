@@ -19,7 +19,7 @@ function PrivacyPage() {
       <PageHero
         eyebrow="Privacy notice"
         title="This notice covers the corporate website."
-        lede="SpineWorkspace accounts, connected business data and customer workspaces are a separate product experience. They are not described here."
+        lede="Spine Workspace accounts, connected business data and customer workspaces are a separate product experience. They are not described here."
       />
       <article className="mx-auto max-w-3xl space-y-8 px-5 py-16 text-muted">
         <p className="text-sm">

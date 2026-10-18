@@ -37,7 +37,7 @@ function SecurityPage() {
         <div className="md:col-span-2 max-w-3xl">
           <h2 className="text-2xl font-semibold tracking-tight">How to evaluate, and how to report</h2>
           <p className="mt-3 text-muted">
-            Teams evaluating SpineWorkspace can ask for the security documentation that actually exists: supported controls, data-flow description, and known limitations. If you believe you have found an issue, write privately. Include the domain, how to reproduce it, and the potential impact. Do not expose another organization’s data or run disruptive tests.
+            Teams evaluating Spine Workspace can ask for the security documentation that actually exists: supported controls, data-flow description, and known limitations. If you believe you have found an issue, write privately. Include the domain, how to reproduce it, and the potential impact. Do not expose another organization’s data or run disruptive tests.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <SecondaryLink to="/contact">Ask a security question</SecondaryLink>

@@ -24,9 +24,11 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProductRouteImport } from './routes/product'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SiteMapRouteImport } from './routes/site-map'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as SpineRouteImport } from './routes/spine'
 import { Route as StoryRouteImport } from './routes/story'
@@ -114,6 +116,11 @@ const ProductsRoute = ProductsRouteImport.update({
   path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SecurityRoute = SecurityRouteImport.update({
   id: '/security',
   path: '/security',
@@ -127,6 +134,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const SiteMapRoute = SiteMapRouteImport.update({
   id: '/site-map',
   path: '/site-map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolutionsRoute = SolutionsRouteImport.update({
@@ -201,9 +213,11 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
   '/products': typeof ProductsRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
   '/site-map': typeof SiteMapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/spine': typeof SpineRoute
   '/story': typeof StoryRoute
@@ -232,9 +246,11 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
   '/products': typeof ProductsRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
   '/site-map': typeof SiteMapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/spine': typeof SpineRoute
   '/story': typeof StoryRoute
@@ -264,9 +280,11 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/product': typeof ProductRoute
   '/products': typeof ProductsRoute
+  '/robots.txt': typeof RobotsDottxtRoute
   '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
   '/site-map': typeof SiteMapRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRoute
   '/spine': typeof SpineRoute
   '/story': typeof StoryRoute
@@ -297,9 +315,11 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/product'
     | '/products'
+    | '/robots.txt'
     | '/security'
     | '/services'
     | '/site-map'
+    | '/sitemap.xml'
     | '/solutions'
     | '/spine'
     | '/story'
@@ -328,9 +348,11 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/product'
     | '/products'
+    | '/robots.txt'
     | '/security'
     | '/services'
     | '/site-map'
+    | '/sitemap.xml'
     | '/solutions'
     | '/spine'
     | '/story'
@@ -359,9 +381,11 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/product'
     | '/products'
+    | '/robots.txt'
     | '/security'
     | '/services'
     | '/site-map'
+    | '/sitemap.xml'
     | '/solutions'
     | '/spine'
     | '/story'
@@ -391,9 +415,11 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   ProductRoute: typeof ProductRoute
   ProductsRoute: typeof ProductsRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
   SecurityRoute: typeof SecurityRoute
   ServicesRoute: typeof ServicesRoute
   SiteMapRoute: typeof SiteMapRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SolutionsRoute: typeof SolutionsRoute
   SpineRoute: typeof SpineRoute
   StoryRoute: typeof StoryRoute
@@ -514,6 +540,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/security': {
       id: '/security'
       path: '/security'
@@ -533,6 +566,13 @@ declare module '@tanstack/react-router' {
       path: '/site-map'
       fullPath: '/site-map'
       preLoaderRoute: typeof SiteMapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solutions': {
@@ -631,9 +671,11 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   ProductRoute: ProductRoute,
   ProductsRoute: ProductsRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
   SecurityRoute: SecurityRoute,
   ServicesRoute: ServicesRoute,
   SiteMapRoute: SiteMapRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SolutionsRoute: SolutionsRoute,
   SpineRoute: SpineRoute,
   StoryRoute: StoryRoute,

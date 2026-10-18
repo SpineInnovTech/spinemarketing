@@ -1,9 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { Capture, CaptureNote, PageHero, SecondaryLink } from "@/components/site/blocks";
 import { WorkspacePlate } from "@/components/site/plates";
 import { Page } from "@/components/site/shell";
 import { WorkbenchShell, workbenchModes } from "@/components/site/workbench-shell";
 import { PRODUCT_SITE } from "@/lib/site";
+import { referralUrl, SITE_LINKS } from "@/lib/site-links";
 
 export const Route = createFileRoute("/workspace")({
   head: () => ({
@@ -33,7 +34,7 @@ function WorkspacePage() {
           href={PRODUCT_SITE}
           className="inline-flex min-h-11 items-center rounded-full bg-blue px-5 text-sm font-semibold text-paper"
         >
-          Visit SpineWorkspace
+          Visit Spine Workspace
         </a>
         <SecondaryLink to="/contact">Discuss an evaluation</SecondaryLink>
       </PageHero>
@@ -202,7 +203,7 @@ function WorkspacePage() {
               Review the preparation. Make changes. Ask for a revision. Approve or decline the next step where the workflow supports those actions. An available tool does not, by itself, grant permission to use it.
             </p>
             <p className="mt-3 text-muted">
-              SpineWorkspace builds on supported business tools and authorized connections. Spine Network extends continuity into compatible AI environments. It does not replace the tools that own the records.
+              Spine Workspace builds on supported business tools and authorized connections. Spine Network extends continuity into compatible AI environments. It does not replace the tools that own the records.
             </p>
           </div>
         </div>
@@ -211,17 +212,17 @@ function WorkspacePage() {
       <section id="pricing" className="mx-auto max-w-6xl px-5 py-16">
         <h2 className="text-3xl font-semibold tracking-tight">Why evaluate it?</h2>
         <p className="mt-4 max-w-2xl text-muted">
-          Evaluate SpineWorkspace when your team spends substantial effort assembling context, repeating handoffs, or turning AI output into reviewable business work.
+          Evaluate Spine Workspace when your team spends substantial effort assembling context, repeating handoffs, or turning AI output into reviewable business work.
         </p>
         <div className="mt-8 max-w-xl rounded-card border border-line p-6">
-          <p className="text-sm font-semibold text-deep">Starter · starting price</p>
-          <p className="mt-2 text-4xl font-semibold tracking-tight">US$49 <span className="text-lg font-medium text-muted">/ user / month</span></p>
+          <p className="text-sm font-semibold text-deep">Plans and evaluation</p>
+          <p className="mt-2 text-2xl font-semibold tracking-tight">Find the right product plan</p>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            Billed monthly. This is the entry subscription for the workspace. Provider usage, implementation and your existing tool subscriptions are scoped or payable separately. Confirm the full commercial terms for the workflow you intend to run. There is no self-serve checkout on this site.
+            Current pricing and commercial terms live on the Spine Workspace product site. Start with the workflow you intend to run, then review the product plan and any implementation needs.
           </p>
-          <Link to="/contact" search={{ topic: "evaluation" }} className="mt-6 inline-flex min-h-11 items-center rounded-full bg-blue px-5 text-sm font-semibold text-paper">
-            Discuss an evaluation
-          </Link>
+          <a href={referralUrl(SITE_LINKS.productPricing)} className="mt-6 inline-flex min-h-11 items-center rounded-full bg-blue px-5 text-sm font-semibold text-paper">
+            View product pricing
+          </a>
         </div>
       </section>
     </Page>

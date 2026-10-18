@@ -90,12 +90,12 @@ function ActiveView({ view }: { view: ViewId }) {
   }
   if (view === "graph") {
     return (
-      <div className="relative mt-3 grid min-h-48 grid-cols-3 place-items-center rounded-xl border border-line bg-paper p-4 text-[11px]">
-        <span className="rounded-full border border-line bg-ice px-2 py-1">Account updates</span>
-        <span className="col-start-2 row-start-2 grid size-20 place-items-center rounded-full bg-blue text-center text-xs font-semibold text-paper">Customer review</span>
-        <span className="col-start-3 row-start-2 rounded-full border border-line bg-ice px-2 py-1">Support history</span>
-        <span className="col-start-2 row-start-3 rounded-full border border-line bg-ice px-2 py-1">Meeting notes</span>
-        <span className="col-start-1 row-start-2 rounded-full border border-line bg-ice px-2 py-1">Next step</span>
+      <div className="relative mt-3 grid min-h-48 grid-cols-3 place-items-center gap-2 rounded-xl border border-line bg-paper p-3 text-center text-[11px] sm:p-4">
+        <span className="max-w-full rounded-full border border-line bg-ice px-2 py-1">Account updates</span>
+        <span className="col-start-2 row-start-2 grid size-14 place-items-center rounded-full bg-blue text-xs font-semibold text-paper sm:size-20">Customer review</span>
+        <span className="col-start-3 row-start-2 max-w-full rounded-full border border-line bg-ice px-2 py-1">Support history</span>
+        <span className="col-start-2 row-start-3 max-w-full rounded-full border border-line bg-ice px-2 py-1">Meeting notes</span>
+        <span className="col-start-1 row-start-2 max-w-full rounded-full border border-line bg-ice px-2 py-1">Next step</span>
       </div>
     );
   }
@@ -114,7 +114,7 @@ function ActiveView({ view }: { view: ViewId }) {
   }
   if (view === "automations") {
     return (
-      <div className="mt-3 grid grid-cols-5 overflow-hidden rounded-xl border border-line bg-paper text-center text-xs">
+      <div className="mt-3 grid grid-cols-2 overflow-hidden rounded-xl border border-line bg-paper text-center text-xs sm:grid-cols-5">
         {["Signal", "Prepare", "Review", "Act", "Observe"].map((step, index) => (
           <div key={step} className="border-r border-line px-2 py-4 last:border-r-0">
             <p className="text-[10px] font-semibold text-blue">{String(index + 1).padStart(2, "0")}</p>
@@ -160,18 +160,18 @@ function ActiveView({ view }: { view: ViewId }) {
   }
   return (
     <div className="mt-3 overflow-hidden rounded-xl border border-line bg-paper">
-      <div className="flex items-center justify-between border-b border-line px-3 py-2 text-xs">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line px-3 py-2 text-xs">
         <strong>Work in context</strong>
         <span className="text-[10px] uppercase tracking-wide text-muted">Evidence · freshness · owner</span>
       </div>
       {rows.map(([title, detail, Icon]) => (
-        <div key={title} className="grid grid-cols-[auto_1fr_auto] items-center gap-3 border-b border-line px-3 py-3 last:border-b-0">
+        <div key={title} className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-2 border-b border-line px-3 py-3 last:border-b-0 sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-3">
           <span className="grid size-7 place-items-center rounded-lg bg-ice text-blue"><Icon className="size-3.5" /></span>
           <div>
             <strong className="block text-xs">{title}</strong>
             <span className="text-[11px] text-muted">{detail}</span>
           </div>
-          <span className="rounded-full bg-ice px-2 py-1 text-[10px] text-deep">Visible state</span>
+          <span className="col-start-2 w-fit rounded-full bg-ice px-2 py-1 text-[10px] text-deep sm:col-auto">Visible state</span>
         </div>
       ))}
     </div>
@@ -192,18 +192,18 @@ export function WorkspacePreview() {
   }
 
   return (
-    <div className="overflow-x-auto pb-2">
-      <div className="min-w-[760px] overflow-hidden rounded-[1.4rem] border border-line bg-paper text-left shadow-[0_30px_80px_-36px_rgb(8_43_94/0.45)]">
-        <div className="flex items-center gap-3 border-b border-line bg-ice px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.08em] text-muted">
+    <div className="min-w-0 pb-2">
+      <div className="w-full min-w-0 overflow-hidden rounded-[1.4rem] border border-line bg-paper text-left shadow-[0_30px_80px_-36px_rgb(8_43_94/0.45)]">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-line bg-ice px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.08em] text-muted">
           <span className="flex gap-1" aria-hidden="true">
             <span className="size-1.5 rounded-full bg-[#7eb6ff]" />
             <span className="size-1.5 rounded-full bg-[#f0b429]" />
             <span className="size-1.5 rounded-full bg-blue" />
           </span>
           <span>Spine Workspace · My Work</span>
-          <span className="ml-auto text-deep">Illustrative interface · no live data</span>
+          <span className="w-full text-deep sm:ml-auto sm:w-auto">Illustrative interface · no live data</span>
         </div>
-        <div className="flex gap-1 overflow-x-auto border-b border-line bg-paper px-3 py-2" role="tablist" aria-label="Workbench views">
+        <div className="grid grid-cols-2 gap-1 border-b border-line bg-paper px-3 py-2 sm:flex sm:flex-wrap" role="tablist" aria-label="Workbench views">
           {views.map(([id, label, Icon], index) => (
             <button
               key={id}
@@ -211,18 +211,19 @@ export function WorkspacePreview() {
               role="tab"
               id={`${previewId}-${id}`}
               aria-selected={active === id}
+              aria-controls={`${previewId}-panel`}
               tabIndex={active === id ? 0 : -1}
               ref={(node) => { tabs.current[index] = node; }}
               onClick={() => setActive(id)}
               onKeyDown={(event) => onKey(event, index)}
-              className={"inline-flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3 text-xs font-semibold " + (active === id ? "border border-blue bg-ice text-deep ring-2 ring-blue/30" : "text-muted")}
+              className={"inline-flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-full px-3 text-xs font-semibold " + (active === id ? "border border-blue bg-ice text-deep ring-2 ring-blue/30" : "text-muted")}
             >
               <Icon className="size-3.5" /> {label}
             </button>
           ))}
         </div>
-        <div className="grid min-h-[460px] grid-cols-[168px_minmax(0,1fr)]">
-          <aside className="flex flex-col bg-[#071833] p-3 text-[12px] text-[#d6e8ff]" aria-label="Workspace navigation">
+        <div className="grid min-h-[460px] grid-cols-1 sm:grid-cols-[168px_minmax(0,1fr)]">
+          <aside className="hidden flex-col bg-[#071833] p-3 text-[12px] text-[#d6e8ff] sm:flex" aria-label="Workspace navigation">
             <span className="mb-3 ml-1 grid size-7 place-items-center rounded-lg bg-blue text-paper">
               <span className="size-2.5 rotate-45 rounded-[2px] border border-paper" />
             </span>
@@ -239,18 +240,18 @@ export function WorkspacePreview() {
             ))}
             <span className="mt-auto flex h-9 items-center gap-2 border-t border-white/10 px-2 pt-2"><CircleUserRound className="size-3.5" /> Profile</span>
           </aside>
-          <section className="bg-[radial-gradient(circle_at_90%_0%,rgb(0_111_232/0.08),transparent_16rem),#f7fbff] p-4" role="tabpanel" id={`${previewId}-panel`} aria-labelledby={`${previewId}-${active}`}>
+          <section className="min-w-0 bg-[radial-gradient(circle_at_90%_0%,rgb(0_111_232/0.08),transparent_16rem),#f7fbff] p-3 sm:p-4" role="tabpanel" id={`${previewId}-panel`} aria-labelledby={`${previewId}-${active}`}>
             <div className="flex h-9 items-center gap-2 rounded-lg border border-line bg-paper px-3 text-xs text-muted">
               <Search className="size-3.5" /> Find a work view
             </div>
-            <header className="flex items-end justify-between gap-3 py-4">
+            <header className="flex flex-wrap items-end justify-between gap-3 py-4">
               <div>
                 <p className="text-[10px] uppercase tracking-wide text-muted">Account Success · Role-aware view</p>
                 <h3 className="mt-1 text-lg font-semibold">Customer review</h3>
               </div>
               <span className="rounded-full bg-ice px-2 py-1 text-[11px] text-deep">Same scoped context</span>
             </header>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
               {[
                 ["Goal", "Prepare next step"],
                 ["Evidence", "Linked sources"],

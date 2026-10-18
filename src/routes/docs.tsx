@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero, PrimaryLink } from "@/components/site/blocks";
 import { Page } from "@/components/site/shell";
+import { referralUrl, SITE_LINKS } from "@/lib/site-links";
 
 export const Route = createFileRoute("/docs")({
   head: () => ({
@@ -13,6 +14,8 @@ export const Route = createFileRoute("/docs")({
 });
 
 const cards = [
+  [referralUrl(SITE_LINKS.documentation), "Spine Workspace documentation", "Product documentation and developer references on the product's documentation site."],
+  [referralUrl(SITE_LINKS.productPlatform), "Product platform", "Explore the published Spine Workspace platform capabilities."],
   ["/technology", "Architecture overview", "The relationship between Fabric, Workbench, Twin, governed execution and Network."],
   ["/workspace", "Working surfaces", "How Dashboard and Canvas present context for different kinds of work."],
   ["/technology/fabric", "Context and sources", "Source relationships, lineage and permission-aware retrieval."],

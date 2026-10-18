@@ -109,7 +109,7 @@ export function RelationshipFrame() {
       <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-deep">Application view · the person’s workspace stays in the center</p>
       <img
         src="/media/shell.webp"
-        alt="SpineWorkspace shell for an Account Success view, with fixture records, a Fabric table and a link into Canvas."
+        alt="Spine Workspace shell for an Account Success view, with fixture records, a Fabric table and a link into Canvas."
         className="w-full rounded-card border border-line bg-paper"
       />
       <div className="mt-3 grid gap-3 md:grid-cols-2">
