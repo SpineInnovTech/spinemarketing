@@ -92,7 +92,7 @@ function ActiveView({ view }: { view: ViewId }) {
     return (
       <div className="relative mt-3 grid min-h-48 grid-cols-3 place-items-center gap-2 rounded-xl border border-line bg-paper p-3 text-center text-[11px] sm:p-4">
         <span className="max-w-full rounded-full border border-line bg-ice px-2 py-1">Account updates</span>
-        <span className="col-start-2 row-start-2 grid size-14 place-items-center rounded-full bg-blue text-xs font-semibold text-paper sm:size-20">Customer review</span>
+        <span className="col-start-2 row-start-2 grid size-14 place-items-center rounded-full bg-blue text-[10px] font-semibold text-paper sm:size-20 sm:text-xs">Customer review</span>
         <span className="col-start-3 row-start-2 max-w-full rounded-full border border-line bg-ice px-2 py-1">Support history</span>
         <span className="col-start-2 row-start-3 max-w-full rounded-full border border-line bg-ice px-2 py-1">Meeting notes</span>
         <span className="col-start-1 row-start-2 max-w-full rounded-full border border-line bg-ice px-2 py-1">Next step</span>
