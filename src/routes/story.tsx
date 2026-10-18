@@ -26,7 +26,7 @@ function StoryPage() {
         </p>
         {[
           ["From connected records to shared understanding", "We organize information around the business and the work — not only around the application that stores it. A customer, an issue, an opportunity and a decision are more useful when their relationships stay visible."],
-          ["From assistance to shared work", "AI can help gather information and prepare a proposal. The person needs a place to inspect that preparation, add judgment and direct what happens next. That is the role of SpineWorkspace."],
+          ["From assistance to shared work", "AI can help gather information and prepare a proposal. The person needs a place to inspect that preparation, add judgment and direct what happens next. That is the role of Spine Workspace."],
           ["From individual sessions to continuity", "Work spans people, applications and AI environments. Spine Network is designed to help relevant context and work state continue across those boundaries, subject to the authority available in each environment."],
           ["What comes next", "The direction stays the same: reduce the burden of preparation, make shared context usable, and preserve human control."],
         ].map(([title, body]) => (
@@ -37,7 +37,7 @@ function StoryPage() {
         ))}
         <div className="flex flex-wrap gap-3">
           <PrimaryLink to="/technology">Explore our technology</PrimaryLink>
-          <SecondaryLink to="/workspace">Meet SpineWorkspace</SecondaryLink>
+          <SecondaryLink to="/workspace">Meet Spine Workspace</SecondaryLink>
         </div>
       </section>
     </Page>

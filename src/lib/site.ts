@@ -1,8 +1,10 @@
+import { referralUrl, SITE_LINKS } from "./site-links";
+
 export const COMPANY = "Spine InnovTech";
 export const LEGAL = "Spine InnovTech Private Limited";
 export const PRODUCT = "Spine Workspace";
 export const EMAIL = "connect@spineworkspace.com";
-export const PRODUCT_SITE = "https://spineworkspace.com";
+export const PRODUCT_SITE = referralUrl(SITE_LINKS.product);
 
 export const offerings = [
   { href: "/workspace", name: "Spine Workspace", line: "Keep your AI. Keep your tools. Connect your work." },
@@ -10,7 +12,7 @@ export const offerings = [
   { href: "/technology#workbench", name: "Workbench", line: "Nine shell entries. My Work opens the modes." },
   { href: "/twin", name: "Twin", line: "The context-aware counterpart. It prepares. It does not decide." },
   { href: "/governance", name: "Governance", line: "Hermes coordinates execution. A proposal is not permission." },
-  { href: "/technology/network", name: "Host Connected", line: "Keep the AI host and the tools you already use. Move the work and the context." },
+  { href: "/technology/network", name: "Host Connected", line: "Connect compatible AI hosts through supported capabilities and explicit permissions." },
 ] as const;
 
 export const CAPTURE_NOTE =
@@ -77,7 +79,7 @@ export const principles = [
 export const faqs = [
   {
     q: "What does Spine InnovTech build?",
-    a: "Technology that lets people and AI work from shared business context. Agents support preparation. People retain direction and authority. SpineWorkspace is the flagship product, not the whole of the company.",
+    a: "Technology that lets people and AI work from shared business context. Agents support preparation. People retain direction and authority. Spine Workspace is the flagship product, not the whole of the company.",
   },
   {
     q: "Do we have to replace our existing tools?",
@@ -104,7 +106,7 @@ export const faqs = [
     a: "Standard work views are already built. Your team does not have to engineer those interfaces first. Source access, connections and permitted actions still require the appropriate setup.",
   },
   {
-    q: "Is SpineWorkspace only a Canvas?",
+    q: "Is Spine Workspace only a Canvas?",
     a: "No. It includes Dashboard and Canvas, alongside supported role-relevant views over the same Spine Fabric.",
   },
   {
@@ -113,7 +115,7 @@ export const faqs = [
   },
   {
     q: "How do we decide whether it is worth paying for?",
-    a: "Evaluate one workflow you already know. Look at how much preparation is still manual, whether the evidence behind a proposal is visible, whether the next decision is clear, and whether another person or session can continue — with the control your team requires. The entry subscription starts at US$49 per user per month. Provider usage, implementation and existing tool subscriptions are scoped separately.",
+    a: "Evaluate one workflow you already know. Look at how much preparation is still manual, whether the evidence behind a proposal is visible, whether the next decision is clear, and whether another person or session can continue with the control your team requires. Current plans and commercial terms live on the Spine Workspace product site.",
   },
 ] as const;
 

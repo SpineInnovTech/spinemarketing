@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AgentPlate, FabricPlate, GovernPlate, HomePlate, NetworkPlate, WorkbenchPlate, WorkspacePlate } from "@/components/site/plates";
 
 const offers = [
-  { href: "/workspace", name: "SpineWorkspace", line: "The place you and the agent work.", plate: <WorkspacePlate /> },
+  { href: "/workspace", name: "Spine Workspace", line: "The place you and the agent work.", plate: <WorkspacePlate /> },
   { href: "/technology/fabric", name: "Fabric", line: "Records become one situation.", plate: <FabricPlate /> },
   { href: "/technology#workbench", name: "Workbench", line: "A surface for this role, already built.", plate: <WorkbenchPlate /> },
   { href: "/technology#twin", name: "AI agents", line: "The counterpart that prepares.", plate: <AgentPlate /> },
@@ -22,7 +22,7 @@ export function StoryHome() {
             <p className="mt-5 max-w-md text-lg text-muted">AI agents are the counterpart. They prepare. You decide.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/workspace" className="inline-flex min-h-11 items-center rounded-full bg-blue px-5 text-sm font-semibold text-paper">
-                Explore SpineWorkspace
+                Explore Spine Workspace
               </Link>
               <a href="#offers" className="inline-flex min-h-11 items-center rounded-full border border-line bg-paper px-5 text-sm font-semibold">
                 See what we build

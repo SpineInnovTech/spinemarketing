@@ -62,7 +62,7 @@ export const scenes = {
   },
   workspace: {
     name: "Renewal review",
-    note: "Example · SpineWorkspace",
+    note: "Example · Spine Workspace",
     point: 3,
     marks: [
       { who: "Agent" as const, label: "Account updates", detail: "Latest activity, brought in." },

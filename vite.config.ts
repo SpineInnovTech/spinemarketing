@@ -170,7 +170,30 @@ export default defineConfig(({ command, isPreview }) => ({
     ...(command === "build" || isPreview
       ? [
           nitro({
-            preset: "vercel",
+            preset: "cloudflare_module",
+            cloudflare: {
+              wrangler: {
+                name: "spineinnovtech-corporate-site",
+                account_id: "3b815e3cd31a7ce892c2c65ea8873387",
+                compatibility_date: "2026-10-03",
+                compatibility_flags: ["nodejs_compat"],
+                workers_dev: false,
+                preview_urls: false,
+                routes: [{ pattern: "spineinnovtech.spineworkspace.com", custom_domain: true }],
+                vars: { VITE_AUTH_ENABLED: "false" },
+              },
+            },
+            routeRules: {
+              "/**": {
+                headers: {
+                  "X-Content-Type-Options": "nosniff",
+                  "Referrer-Policy": "strict-origin-when-cross-origin",
+                  "X-Frame-Options": "DENY",
+                  "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                  "Permissions-Policy": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()",
+                },
+              },
+            },
             // Auto-registers server/middleware/* (the PWA install page +
             // manifest + head-tag middleware). Nitro v3 defaults serverDir to
             // false, so removing this silently unwires /?install=1 on deploys.

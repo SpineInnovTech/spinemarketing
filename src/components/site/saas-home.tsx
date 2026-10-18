@@ -74,8 +74,9 @@ export function SaasHome() {
 
       <section id="pillars" className="border-y border-line bg-ice">
         <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
-          <p className="text-sm font-semibold text-deep">The product</p>
-          <h2 className="mt-2 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">One organization. One Spine. Three pillars.</h2>
+          <p className="text-sm font-semibold text-deep">Meet Spine Workspace</p>
+          <h2 className="mt-2 max-w-2xl text-3xl font-semibold tracking-tight md:text-4xl">Keep Your AI. Keep Your Tools. Connect Your Work.</h2>
+          <p className="mt-4 max-w-2xl text-muted">Our flagship product brings people and AI together around permitted business context and living memory. Explore its capabilities, solutions, and plans on the product site.</p>
           <div className="mt-8">
             <BentoGrid>
               <BentoCard
@@ -87,7 +88,7 @@ export function SaasHome() {
               <BentoCard
                 eyebrow="02 · Connection"
                 title="Host Connected"
-                body="Keep the AI host and the tools you already use. No connection silo. The work and the context move. The host is not replaced."
+                body="Keep your AI host and tools. Available connections depend on supported integrations, exposed capabilities, and your permissions."
               />
               <BentoCard
                 className="md:col-span-2"
@@ -102,8 +103,8 @@ export function SaasHome() {
               />
             </BentoGrid>
           </div>
-          <a href="/platform" className="mt-6 inline-flex h-11 items-center text-sm font-semibold text-deep">
-            Explore the Spine platform
+          <a href={PRODUCT_SITE} className="mt-6 inline-flex h-11 items-center text-sm font-semibold text-deep">
+            Explore Spine Workspace
           </a>
         </div>
       </section>
@@ -200,7 +201,7 @@ export function SaasHome() {
         <h2 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight md:text-4xl">Not another assistant. The context the assistants share.</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           {[
-            ["Keep the host", "Most products ask you to leave ChatGPT, Claude, or Cursor. Spine Workspace connects the host you already use."],
+            ["Keep the host", "Keep your preferred AI host where compatible. Supported integrations and explicit permissions determine which capabilities Spine Workspace can use."],
             ["One spine, not a prompt", "A wrapper remembers a chat. Spine is built to hold tenant-scoped business context, with identity and consent in front of it."],
             ["A person still decides", "“Please ask first” is not a control. A consequential action is proposed, approved, or declined. Approval is not the same as execution."],
             ["Done is checked", "An agent’s report, a queue receipt, and a provider acknowledgement are not the outcome. The design reads the source back before it calls the work reconciled."],

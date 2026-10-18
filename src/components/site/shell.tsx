@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Dock, DockItem } from "@/components/magicui/dock";
 import { COMPANY, LEGAL, offerings } from "@/lib/site";
+import { referralUrl, SITE_LINKS } from "@/lib/site-links";
 
 export function Mark({ className = "h-7 w-auto" }: { className?: string }) {
   return <img src="/logo.png" alt="" className={className} />;
@@ -26,6 +27,9 @@ const menus = [
     id: "products",
     label: "Product",
     links: [
+      [referralUrl(SITE_LINKS.product), "Explore Spine Workspace", "Our flagship product. Keep your AI and your tools."],
+      [referralUrl(SITE_LINKS.productSolutions), "Product solutions", "Find the product journey for your team."],
+      [referralUrl(SITE_LINKS.productPricing), "Product pricing", "Plans and evaluation on the product site."],
       ...offerings.map((item) => [item.href, item.name, item.line] as const),
       ["/platform", "Technology overview", "One Spine. How the parts fit."],
       ["/docs", "Docs and developers", "The evaluator map. Not a second product site."],
@@ -91,7 +95,10 @@ function Header() {
             ))}
             </Dock>
         </nav>
-        <Link to="/contact" search={{ topic: "general" }} className="ml-2 hidden h-9 items-center rounded-full bg-blue px-4 text-sm font-semibold text-paper lg:inline-flex">
+        <a href={SITE_LINKS.workspace} className="ml-2 hidden min-h-11 items-center rounded-full border border-line px-4 text-sm font-semibold lg:inline-flex">
+          Open workspace
+        </a>
+        <Link to="/contact" search={{ topic: "general" }} className="hidden min-h-11 items-center rounded-full bg-blue px-4 text-sm font-semibold text-paper lg:inline-flex">
           Talk to us
         </Link>
         <button
@@ -117,7 +124,10 @@ function Header() {
         </div>
       ) : null}
       {open ? (
-        <nav className="border-t border-line px-5 py-3 lg:hidden" aria-label="Mobile">
+        <nav className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line px-5 py-3 lg:hidden" aria-label="Mobile">
+          <a href={SITE_LINKS.workspace} className="mb-3 flex min-h-11 items-center rounded-full border border-line px-4 text-sm font-semibold" onClick={() => setOpen(false)}>
+            Open workspace
+          </a>
           {menus.map((item) => (
             <div key={item.id} className="py-2">
               <p className="text-xs font-semibold uppercase tracking-wide text-deep">{item.label}</p>
@@ -151,7 +161,11 @@ function Footer() {
           </p>
         </div>
         <FooterCol heading="Company" links={[["/company", "About"], ["/story", "Story"], ["/services", "Services"], ["/site-map", "All pages"], ["/contact", "Contact"]]} />
-        <FooterCol heading="Products" links={offerings.map((item) => [item.href, item.name] as const)} />
+        <FooterCol heading="Product and platform" links={[
+          [referralUrl(SITE_LINKS.product), "Explore Spine Workspace"],
+          ...offerings.map((item) => [item.href, item.name] as const),
+          [SITE_LINKS.workspace, "Open workspace"],
+        ]} />
         <FooterCol heading="Insights" links={[["/blog", "Blog"], ["/docs", "Documentation"], ["/faq", "Questions"]]} />
         <FooterCol heading="Trust" links={[["/security", "Security"], ["/privacy", "Privacy"], ["/terms", "Terms"]]} />
       </div>
