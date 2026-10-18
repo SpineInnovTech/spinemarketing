@@ -1,5 +1,7 @@
 node_modules
 .vercel
+.output
+.wrangler
 .grok
 .tanstack
 screenshots

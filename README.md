@@ -34,3 +34,20 @@ VITE_AUTH_ENABLED=false DATABASE_URL='' npm run preview -- --host 127.0.0.1 --po
 ```
 
 The empty database setting skips the existing optional migration step for a local marketing-only build. Do not replace deployment database settings or introduce a second account system for this integration.
+
+## Production: Cloudflare only
+
+The production hostname is **https://spineinnovtech.spineworkspace.com**. The native Nitro `cloudflare_module` build runs on Worker `spineinnovtech-corporate-site`. `vite.config.ts` owns the generated Wrangler settings. Both workers.dev and preview URLs are disabled, and the only custom-domain route is the corporate hostname. The legacy company hostname retains its existing redirect.
+
+Wrangler is pinned in the lockfile so local validation and deployment use the same Workers runtime tooling. The dedicated marketing build sets the public auth flag to false and does not run the optional database migrator.
+
+```sh
+npm ci --ignore-scripts
+npm run test:site
+npm run typecheck
+npm run build:cloudflare
+npm exec -- wrangler deploy --dry-run --config .output/server/wrangler.json
+npm run deploy:cloudflare
+```
+
+`vercel.json` disables all automatic Git deployments. The corporate Vercel project has no configured domains or aliases; its automatic preview publishing is disabled. Historical deployments are retained behind project authentication. No Vercel endpoint is used as a production origin.
