@@ -37,11 +37,11 @@ if (!pricingText.includes("US$49") || !/per user \/ month/.test(pricingText) || 
 if (applicationOffer?.price !== 49 || applicationOffer.priceCurrency !== "USD" || applicationOffer.priceSpecification?.unitText !== "user per month" || applicationOffer.priceSpecification?.billingDuration !== "P1M") {
   throw new Error("Pricing structured offer must match the visible monthly subscription.");
 }
-for (const [route, html] of [["/", text], ["/product", product]]) {
+for (const [route, html] of [["/product", product]]) {
   if (!html.includes("US$49") || !html.includes('href="/pricing"')) throw new Error(`${route} must expose the starting price and full pricing terms.`);
 }
 const header = text.match(/<header\b[\s\S]*?<\/header>/)?.[0] ?? "";
-for (const category of ["Company", "Technology", "Solutions", "Insights", "Developers"]) {
+for (const category of ["Company", "Platform", "Insights"]) {
   if (!header.includes(category)) throw new Error(`Corporate navigation category missing: ${category}`);
 }
 if (text.includes("Good morning, Operator") || text.includes("Customer Zero")) {

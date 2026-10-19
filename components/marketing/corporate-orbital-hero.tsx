@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { Check, ShieldCheck, Sparkles, Target, Layers, ArrowRight } from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
 
@@ -26,30 +25,6 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
       />
       <div className="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-[#B8E0FC]/40 blur-3xl pointer-events-none" />
       <div className="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-[#D8ECFC]/40 blur-3xl pointer-events-none" />
-
-      {/* Top Banner Navigation Bar */}
-      <div className="relative z-20 flex items-center justify-between pb-4 border-b border-[#D8E5F0]/70 mb-6">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/images/spine-logo-mark.png"
-            alt="Spine Logo Mark"
-            width={36}
-            height={32}
-            className="h-7 w-auto object-contain"
-            priority
-          />
-          <span className="text-base md:text-lg font-bold tracking-tight text-[#002B64]">
-            Spine
-            <span className="text-[#0070DC]"> InnovTech</span>
-          </span>
-        </div>
-
-        <div className="flex items-center gap-4 text-xs">
-          <span className="font-mono text-xs font-semibold text-[#002B64]">
-            spineinnovtech.spineworkspace.com
-          </span>
-        </div>
-      </div>
 
       {/* Main 2-Column Hero Body */}
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

@@ -19,7 +19,7 @@ for (const file of primary) {
 }
 for (const asset of listed.keys()) assert.ok((await stat("out/" + asset)).isFile(), `Manifest asset missing: ${asset}`);
 
-for (const route of ["index", "product"]) {
+for (const route of ["product"]) {
   const html = await readFile(`out/${route}.html`, "utf8");
   assert.ok(html.includes("Live Workbench Views"), `Missing Workbench label: ${route}`);
   assert.ok(html.includes("QA fixture"), `Missing factual provenance: ${route}`);
@@ -32,6 +32,8 @@ for (const route of ["index", "product"]) {
       `Rejected capture rendered as showcase: ${asset}`);
   }
 }
+const indexHtml = await readFile("out/index.html", "utf8");
+assert.ok(indexHtml.includes("Interactive Storyboard"), "Missing Interactive Storyboard on corporate index");
 for (const file of ["workbench-shell-20261014.mp4", "workbench-shell-20261014.vtt"]) {
   assert.ok((await stat("out/videos/workbench/" + file)).size > 0, `Recording asset missing: ${file}`);
 }
@@ -70,7 +72,7 @@ for (const capture of dashboards.captures) {
     assert.equal(dimensions.height, capture.height, `Editable dashboard height mismatch: ${file}`);
   }
 }
-for (const route of ["index", "product"]) {
+for (const route of ["product"]) {
   const html = await readFile(`out/${route}.html`, "utf8");
   assert.ok(html.includes('id="workbench-dashboards"'), `Missing editable dashboard showcase: ${route}`);
   assert.ok(html.includes("/images/workbench/editable-dashboard/overview-20261015.webp"), `Missing authentic dashboard capture: ${route}`);

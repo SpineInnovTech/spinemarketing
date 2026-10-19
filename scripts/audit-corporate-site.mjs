@@ -77,7 +77,7 @@ const form = source("components/lead-form.tsx");
 check(home.includes("InnovLabsHome"), "corporate homepage component not wired");
 check(banner.includes("SPINE INNOVTECH") && banner.includes("SpineWorkspace connects your tools, context and team."), "company identity and product introduction absent");
 check(source("components/header.tsx").includes("headerNavigation"), "header must render the full corporate navigation");
-for (const label of ["Company", "Technology", "Solutions", "Insights", "Developers"]) {
+for (const label of ["Company", "Platform & Products", "Insights"]) {
   check(source("lib/navigation.ts").includes(`label: "${label}"`), `missing corporate navigation category: ${label}`);
 }
 check(source("lib/solution-nav.ts").includes("marketingPathForSolution") && !source("lib/solution-nav.ts").includes("workspaceUrl"), "solution navigation must point to local marketing detail pages");

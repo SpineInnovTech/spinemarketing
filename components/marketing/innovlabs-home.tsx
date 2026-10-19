@@ -1,14 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { STARTER_PRICING } from "@/lib/pricing";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { CorporateOrbitalHero } from "./corporate-orbital-hero";
 import { WorkbenchHeroPreview } from "./workbench-hero-preview";
-import { WorkspaceBenefits, WorkspaceSolutions } from "./workspace-benefits";
-import { WorkspaceSubscriptionValue } from "./workspace-subscription-value";
-import { WorkbenchViewExplorer } from "./workbench-view-explorer";
+import { WorkspaceBenefits } from "./workspace-benefits";
 
 const approach = [
   ["Connect", "Bring together the records your team is authorized to use."],
@@ -52,13 +49,10 @@ export function InnovLabsHome() {
                 >
                   Explore SpineWorkspace Product <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
-                <Link href="#workbench-views" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF]">
+                <Link href="/product#workbench-views" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF]">
                   See the workspace
                 </Link>
               </div>
-              <Link href="/pricing" aria-label="See pricing" className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#082B5E] underline decoration-[#A7C7E9] underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]">
-                From {STARTER_PRICING.displayPrice}/{STARTER_PRICING.unit}/{STARTER_PRICING.interval} · {STARTER_PRICING.billing.toLowerCase()}
-              </Link>
             </BlurFade>
           </div>
 
@@ -90,7 +84,6 @@ export function InnovLabsHome() {
           <WorkbenchHeroPreview />
         </div>
       </section>
-      <WorkbenchViewExplorer initialDomain="founderops" compact />
 
       <section id="how-it-works" aria-labelledby="home-workflow-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
         <div className={container}>
@@ -123,8 +116,83 @@ export function InnovLabsHome() {
         </div>
       </section>
 
-      <WorkspaceSolutions />
-      <WorkspaceSubscriptionValue />
+      <section id="insights" aria-labelledby="home-insights-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-16 sm:py-20">
+        <div className={container}>
+          <div className="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+                Insights &amp; Research
+              </p>
+              <h2 id="home-insights-title" className={heading + " mt-4 max-w-[720px]"}>
+                Architectural thinking for governed operational intelligence.
+              </h2>
+            </div>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#006FE8] hover:underline"
+            >
+              View all articles <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <Link
+              href="/blog/spine-fabric-contextual-continuity-layer"
+              className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
+            >
+              <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">
+                Architecture
+              </span>
+              <h3 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
+                Spine Fabric: The Contextual Continuity Layer for Enterprise AI
+              </h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
+                Why business context must live in a governed data fabric rather than prompt engineering or ad-hoc vector memory.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
+                Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+
+            <Link
+              href="/blog/stop-being-the-human-api"
+              className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
+            >
+              <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">
+                Operating Thesis
+              </span>
+              <h3 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
+                Stop Being the Human API: Why Tool Proliferation Fails Operators
+              </h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
+                How humans spend 60% of their workday copying state between tools, and how unified context ends the coordination tax.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
+                Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+
+            <Link
+              href="/blog/why-ai-needs-your-approval"
+              className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
+            >
+              <span className="rounded-full bg-[#E8F9F0] px-2.5 py-0.5 text-[11px] font-semibold text-[#12B76A]">
+                Governance
+              </span>
+              <h3 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
+                Why Autonomous AI Still Requires Governed Human Authority
+              </h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
+                Separating proposal preparation from consequential execution: the zero-trust governance boundary behind Hermes.
+              </p>
+              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
+                Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
