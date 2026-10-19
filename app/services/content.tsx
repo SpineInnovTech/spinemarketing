@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Network, ShieldCheck, Waypoints, Workflow } from "lucide-react";
+import { PageHero } from "@/components/marketing/page-hero";
 
 const capabilities = [
   {
@@ -35,21 +36,13 @@ const capabilities = [
 export function ServicesContent() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[#F0F8FF] px-5 pb-24 pt-40 text-[#052858] sm:px-8 lg:pb-32 innovtech-reference-surface">
-        <div className="pointer-events-none absolute -right-20 -top-48 h-[620px] w-[620px] rounded-full bg-[#346CD0]/25 blur-[110px]" aria-hidden />
-        <div className="relative mx-auto max-w-[1220px]">
-          <p className="text-xs font-semibold uppercase tracking-[.23em] text-[#4C5C73]">Spine InnovTech / Capabilities</p>
-          <h1 className="mt-7 max-w-[1050px] text-[length:min(clamp(3.2rem,6vw,6.1rem),var(--marketing-title-size))] font-semibold leading-[1.08] tracking-[-.065em]">
-            Technology strategy grounded in <span className="text-[#0072E5]">business context.</span>
-          </h1>
-          <p className="mt-8 max-w-[770px] text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#4C5C73]">
-            We work at the intersection of enterprise connectivity, context-aware workspaces and responsible AI. Every engagement starts by understanding the existing systems, business goal and authority boundaries.
-          </p>
-          <Link href="/contact?intent=partnership" className="mt-9 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#B1CFFF] px-6 text-sm font-semibold text-[#0D2B54] transition hover:bg-white">
-            Discuss a project <ArrowRight className="h-4 w-4" aria-hidden />
-          </Link>
-        </div>
-      </section>
+      <PageHero
+        badge="Spine InnovTech / Capabilities"
+        headline="Technology strategy grounded in business context."
+        subhead="We work at the intersection of enterprise connectivity, context-aware workspaces and responsible AI. Every engagement starts by understanding the existing systems, business goal and authority boundaries."
+        primaryCta={{ label: "Discuss a project", href: "/contact?intent=partnership" }}
+        secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+      />
       <section className="bg-[#F0F8FF] px-5 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto max-w-[1220px]">
           <p className="text-xs font-semibold uppercase tracking-[.21em] text-[#2360BC]">What we focus on</p>

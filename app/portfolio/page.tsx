@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, Network, ShieldCheck, UsersRound, Waypoints }
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BreadcrumbJsonLd } from "@/components/structured-data";
+import { PageHero } from "@/components/marketing/page-hero";
 import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
@@ -53,13 +54,13 @@ export default function PortfolioPage() {
       <BreadcrumbJsonLd items={[{ name: "Home", url: absoluteUrl("/") }, { name: "Portfolio", url: absoluteUrl("/portfolio") }]} />
       <Header />
       <main id="main">
-        <section className="bg-[#F0F8FF] px-5 pb-24 pt-40 text-[#052858] sm:px-8 lg:pb-32 innovtech-reference-surface">
-          <div className="mx-auto max-w-[1220px]">
-            <p className="text-xs font-semibold uppercase tracking-[.23em] text-[#4C5C73]">Spine InnovTech / Portfolio</p>
-            <h1 className="mt-7 max-w-[1050px] text-[length:min(clamp(3.2rem,6vw,6.3rem),var(--marketing-title-size))] font-semibold leading-[1.07] tracking-[-.065em]">One direction. <span className="text-[#0072E5]">Connected capabilities.</span></h1>
-            <p className="mt-8 max-w-[780px] text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#4C5C73]">Our portfolio is built around SpineWorkspace. The elements below describe an integrated product architecture, not a list of separately purchasable products or verified customer implementations.</p>
-          </div>
-        </section>
+        <PageHero
+          badge="Spine InnovTech / Portfolio"
+          headline="One direction. Connected capabilities."
+          subhead="Our portfolio is built around SpineWorkspace. The elements below describe an integrated product architecture, not a list of separately purchasable products or verified customer implementations."
+          primaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+          secondaryCta={{ label: "Platform architecture", href: "/platform" }}
+        />
         <section className="mx-auto max-w-[1220px] px-5 py-24 sm:px-8 lg:py-32">
           <div className="grid gap-5 md:grid-cols-2">
             {work.map(({ icon: Icon, type, title, body, href, external }, index) => (

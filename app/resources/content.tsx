@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { DOCS_URL } from "@/lib/navigation";
+import { PageHero } from "@/components/marketing/page-hero";
 import {
   BookOpen,
   FileText,
@@ -89,32 +90,13 @@ const deepDives = [
 export function ResourcesContent() {
   return (
     <>
-      <section className="relative overflow-hidden bg-white">
-        <div className="mx-auto max-w-[1100px] px-6 pt-[180px] pb-[100px]">
-          <div className="mx-auto max-w-2xl text-center">
-            <motion.div
-              {...fade(0.1)}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D9E4EF] bg-[#F3F6F9] px-4 py-1.5 text-[13px] font-semibold text-[#032D60]"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Resources
-            </motion.div>
-            <motion.h1
-              {...fade(0.2)}
-              className="text-[length:min(48px,var(--marketing-title-size))] font-semibold leading-[1.1] tracking-[-0.05em] text-[#032D60] sm:text-[length:min(64px,var(--marketing-title-size))]"
-            >
-              Learn, evaluate,{" "}
-              <span className="text-primary">adopt.</span>
-            </motion.h1>
-            <motion.p
-              {...fade(0.35)}
-              className="mx-auto mt-8 max-w-xl text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.5] tracking-[-0.02em] text-[#33465B]"
-            >
-              Guides, playbooks, and deep dives to help you understand SpineWorkspace.
-            </motion.p>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Resources"
+        headline="Learn, evaluate, adopt."
+        subhead="Guides, playbooks, and architectural deep dives to help you evaluate SpineWorkspace."
+        primaryCta={{ label: "Explore use cases", href: "/use-cases" }}
+        secondaryCta={{ label: "Documentation", href: DOCS_URL }}
+      />
 
       <section className="border-y border-[#D9E4EF] bg-[#F3F6F9] py-16">
         <div className="mx-auto max-w-[1100px] px-6">

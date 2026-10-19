@@ -31,7 +31,7 @@ for (const route of ["product", "solutions", ...solutions.map(s => `solutions/${
       const entry = anchors.find(([, , text]) => text.replace(/<[^>]*>/g, "").trim() === label);
       assert.ok(entry, `/${route}: missing ${label}`);
       const url = new URL(entry[1].replaceAll("&amp;", "&"));
-      assert.equal(url.origin, "https://app.spineworkspace.com", `/${route}: real app authentication origin`);
+      assert.equal(url.origin, "https://spineworkspace.com", `/${route}: corporate site must route to product site (https://spineworkspace.com)`);
       assert.equal(url.pathname, path);
       assert.equal(url.searchParams.get("next"), expectedNext, `/${route}: preserve destination on ${label}`);
       assert.equal(url.searchParams.get("entry_domain"), domain ?? null);
@@ -39,7 +39,8 @@ for (const route of ["product", "solutions", ...solutions.map(s => `solutions/${
       checks++;
     }
   }
+  assert.ok(!html.includes("https://app.spineworkspace.com"), `/${route}: corporate site must not bypass product site to link directly to app.spineworkspace.com`);
 }
 const product = readFileSync("out/product.html", "utf8");
 assert.ok(product.includes('id="features"') && product.includes("A workspace for connected business work."), "Product features remain public");
-console.log(`Authentication entries verified: ${checks} contextual links across product, solution hub, and 20 solutions.`);
+console.log(`Product-site funnel entries verified: ${checks} contextual links across product, solution hub, and 20 solutions (zero direct app links).`);

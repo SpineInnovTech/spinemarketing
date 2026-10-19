@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BreadcrumbJsonLd } from "@/components/structured-data";
+import { PageHero } from "@/components/marketing/page-hero";
 import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
@@ -33,13 +34,13 @@ export default function UpdatesPage() {
       <BreadcrumbJsonLd items={[{ name: "Home", url: absoluteUrl("/") }, { name: "Updates", url: absoluteUrl("/updates") }]} />
       <Header />
       <main id="main">
-        <section className="bg-[#F0F8FF] px-5 pb-20 pt-40 text-[#052858] sm:px-8 lg:pb-28 innovtech-reference-surface">
-          <div className="mx-auto max-w-[1130px]">
-            <p className="text-xs font-semibold uppercase tracking-[.23em] text-[#4C5C73]">Spine InnovTech / Journal</p>
-            <h1 className="mt-7 text-[length:min(clamp(3.2rem,6vw,6rem),var(--marketing-title-size))] font-semibold leading-[1.08] tracking-[-.06em]">Company updates.</h1>
-            <p className="mt-7 max-w-[710px] text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#4C5C73]">Direction, architecture and meaningful progress from the company behind SpineWorkspace. These editorial notes are not a production release log.</p>
-          </div>
-        </section>
+        <PageHero
+          badge="Spine InnovTech / Journal"
+          headline="Company updates."
+          subhead="Direction, architecture and meaningful progress from the company behind SpineWorkspace. These editorial notes are not a production release log."
+          primaryCta={{ label: "Read the blog", href: "/blog" }}
+          secondaryCta={{ label: "Product changelog", href: "/changelog" }}
+        />
         <section className="mx-auto max-w-[1130px] px-5 py-24 sm:px-8 lg:py-32">
           <div className="grid gap-5">
             {notes.map((note) => (
