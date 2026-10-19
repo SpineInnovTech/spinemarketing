@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Check } from "lucide-react";
 import type { ReactNode } from "react";
-import { PRICING_SCOPE_NOTE, STARTER_PRICING } from "@/lib/pricing";
 import { BorderBeam } from "@/components/ui/border-beam";
 
 const comparisons = [
@@ -53,13 +52,13 @@ export function WorkspaceSubscriptionValue({ accountActions }: { accountActions?
           </div>
           <div className="relative overflow-hidden rounded-2xl border border-[#CBE5FA] bg-white p-6 shadow-[0_18px_48px_-12px_rgba(0,111,232,0.12)] sm:p-8">
             <BorderBeam size={220} duration={14} />
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">{STARTER_PRICING.name} · Starting price</p>
-            <p className="mt-5 text-[length:min(3.8rem,var(--marketing-title-size))] font-semibold leading-tight tracking-[-.04em]">{STARTER_PRICING.displayPrice}<span className="text-base font-medium tracking-normal"> /{STARTER_PRICING.unit}/{STARTER_PRICING.interval}</span></p>
-            <p className="mt-3 text-sm font-semibold text-[#4E607A]">{STARTER_PRICING.billing}</p>
-            <p className="mt-4 text-sm leading-7 text-[#4E607A]">Confirm supported connections and included usage for your team. {PRICING_SCOPE_NOTE}</p>
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">SpineWorkspace Platform · Commercial Access</p>
+            <p className="mt-5 text-[length:min(2.8rem,var(--marketing-title-size))] font-semibold leading-tight tracking-[-.04em]">Usage-Governed<span className="text-base font-medium tracking-normal block text-[#4E607A] mt-1">Starting with permanent free host-discovery</span></p>
+            <p className="mt-3 text-sm font-semibold text-[#4E607A]">Scale based on connected systems of record and sync streams</p>
+            <p className="mt-4 text-sm leading-7 text-[#4E607A]">Interactive pricing calculator, connector allowances, and self-service signup are hosted directly on the product site.</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href={STARTER_PRICING.contactHref} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-5 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition-colors hover:bg-[#0055B8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Discuss your team’s plan <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-              <Link href="/pricing" className="inline-flex min-h-12 items-center gap-2 rounded-sm px-2 text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">See pricing details <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+              <a href="https://spineworkspace.com/pricing" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-5 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition-colors hover:bg-[#0055B8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Calculate Pricing on spineworkspace.com <ArrowRight className="h-4 w-4" aria-hidden /></a>
+              <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 rounded-sm px-2 text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Contact architecture <ArrowRight className="h-4 w-4" aria-hidden /></Link>
             </div>
             {accountActions}
           </div>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { STARTER_PRICING } from "@/lib/pricing";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -40,10 +39,9 @@ export function SpineWorkspaceDetails() {
             Bring records and evidence from your tools into editable dashboards and Canvas.
             Your AI Twin prepares the next step; your team stays in control.
           </p>
-          <p className="mt-5 text-sm font-semibold text-[#245EA9]">From {STARTER_PRICING.displayPrice}/{STARTER_PRICING.unit}/{STARTER_PRICING.interval} · {STARTER_PRICING.billing.toLowerCase()}</p>
-          <div className="innovtech-actions">
-            <Link href="#workbench-views" className="innovtech-button">See the workspace <ArrowRight size={18} aria-hidden /></Link>
-            <Link href="/pricing" className="innovtech-text-link">See pricing <ArrowRight size={18} aria-hidden /></Link>
+          <div className="innovtech-actions mt-6">
+            <a href="https://spineworkspace.com" className="innovtech-button">Explore SpineWorkspace Platform <ArrowRight size={18} aria-hidden /></a>
+            <a href="https://spineworkspace.com/pricing" className="innovtech-text-link">View Product Pricing &amp; Plans <ArrowRight size={18} aria-hidden /></a>
           </div>
         </div>
         <div className="relative z-10 min-w-0">
