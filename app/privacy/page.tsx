@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { absoluteUrl } from "@/lib/site-url"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { PageHero } from "@/components/marketing/page-hero"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 import { COMPANY_LEGAL_NAME } from "@/lib/company"
 
@@ -25,12 +26,15 @@ export default function PrivacyPage() {
       ]} />
       <Header />
       <main id="main">
-        <section className="mx-auto max-w-[800px] px-6 pt-[140px] pb-24 md:px-16">
-          <h1 className="text-[length:min(36px,var(--marketing-title-size))] font-semibold tracking-[-0.04em] leading-[1.2] sm:text-[length:min(44px,var(--marketing-title-size))]">Privacy Policy</h1>
-          <p className="mt-4 text-[15px] font-medium text-muted-foreground">{COMPANY_LEGAL_NAME}</p>
-          <p className="mt-4 text-[15px] font-medium text-muted-foreground">Last updated: April 2026</p>
-
-          <div className="mt-12 space-y-10 text-[15px] font-medium leading-[1.7] text-foreground/80">
+        <PageHero
+          badge="Trust & Legal"
+          headline="Privacy Policy"
+          subhead={`${COMPANY_LEGAL_NAME} · Last updated: April 2026`}
+          primaryCta={{ label: "Security overview", href: "/security" }}
+          secondaryCta={{ label: "Terms & Conditions", href: "/terms" }}
+        />
+        <section className="mx-auto max-w-[800px] px-6 py-16 md:px-16">
+          <div className="space-y-10 text-[15px] font-medium leading-[1.7] text-foreground/80">
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">1. Information we collect</h2>
               <p className="mt-3">We collect information you provide directly: name, email, company name, and any messages you send through our contact form. When you use SpineWorkspace, we collect usage data including connected tools, workspace activity, and feature usage to improve the product.</p>

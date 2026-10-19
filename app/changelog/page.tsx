@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import { absoluteUrl } from "@/lib/site-url"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { PageHero } from "@/components/marketing/page-hero"
 import { entries } from "@/content/changelog"
-import Link from "next/link"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
@@ -26,15 +26,13 @@ export default function ChangelogPage() {
       ]} />
       <Header />
       <main id="main">
-        <section className="relative overflow-hidden bg-white">
-          <div className="mx-auto max-w-[800px] px-6 pt-[160px] pb-[80px] md:px-16">
-            <h1 className="text-[length:min(40px,var(--marketing-title-size))] font-semibold tracking-[-0.05em] leading-[1.1] text-[#032D60] sm:text-[length:min(52px,var(--marketing-title-size))]">Changelog</h1>
-            <p className="mt-4 max-w-xl text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.5] tracking-[-0.02em] text-[#33465B]">
-              The dated log. Shorter buyer notes are on{" "}
-              <Link href="/updates" className="font-semibold text-[#0176D3] hover:underline">Updates</Link>.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          badge="Product Changelog"
+          headline="What's new in SpineWorkspace."
+          subhead="The dated log of product updates, new connectors, and architecture improvements. Shorter buyer notes are on Updates."
+          primaryCta={{ label: "Company updates", href: "/updates" }}
+          secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+        />
 
         <section className="mx-auto max-w-[800px] px-6 py-16 md:px-16">
           <div className="space-y-16">

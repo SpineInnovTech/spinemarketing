@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { LeadForm, type LeadIntent } from "@/components/lead-form";
 import { FAQSection } from "@/components/faq-section";
+import { PageHero } from "@/components/marketing/page-hero";
 import { Mail, MapPin, MessageSquare, ArrowRight } from "lucide-react";
 
 const fade = (delay = 0) => ({
@@ -77,38 +78,13 @@ export function ContactContent({
 }) {
   return (
     <>
-      <section className="relative overflow-hidden border-b border-[#D6E8F8] bg-gradient-to-b from-[#F3F8FD] via-[#FAFCFE] to-white pt-[130px] pb-20">
-        <div className="relative mx-auto max-w-[900px] px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", damping: 16, stiffness: 52, delay: 0.1 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#BCD9F5] bg-white px-3.5 py-1 text-[12px] font-bold uppercase tracking-[0.08em] text-[#006FE8] shadow-sm"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            Corporate Contact & Inquiry
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", damping: 16, stiffness: 52, delay: 0.2 }}
-            className="text-[length:min(44px,var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-0.035em] text-[#032D60] sm:text-[length:min(52px,var(--marketing-title-size))]"
-          >
-            Talk to <span className="text-[#0176D3]">Spine InnovTech.</span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", damping: 16, stiffness: 52, delay: 0.35 }}
-            className="mx-auto mt-5 max-w-2xl text-[length:min(18px,var(--marketing-body-size))] leading-[1.65] text-[#3E5168]"
-          >
-            Whether you want a demo, have a question, or want to explore how
-            SpineWorkspace fits your existing environment — we&apos;re here.
-          </motion.p>
-        </div>
-      </section>
+      <PageHero
+        badge="Corporate Contact & Inquiry"
+        headline="Talk to Spine InnovTech."
+        subhead="Whether you want a demo, have a question, or want to explore how SpineWorkspace fits your existing environment — we're here."
+        primaryCta={{ label: "Use the form", href: "#contact-form" }}
+        secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+      />
 
       <section className="border-t border-[#E5E5E5] bg-[#F3F6F9] py-20 px-6 md:px-16">
         <div className="mx-auto max-w-[1100px]">

@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { createPageMetadata, breadcrumb } from "@/lib/page-metadata";
 import { MarketingPageShell } from "@/components/marketing/marketing-page-shell";
-import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { PageHero } from "@/components/marketing/page-hero";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { MagicCard } from "@/components/ui/magic-card";
 import {
-  BookOpen,
   Code2,
   FileCode2,
   Layers3,
@@ -17,7 +16,6 @@ import {
   CheckCircle2,
   Lock,
   Cpu,
-  Terminal,
 } from "lucide-react";
 
 export const metadata = createPageMetadata({
@@ -147,44 +145,13 @@ export default function DocsPage() {
 
   return (
     <MarketingPageShell breadcrumbs={breadcrumbs}>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-[#D6E8F8] bg-gradient-to-b from-[#EBF7FF] via-[#F0F8FF] to-white pt-24 pb-14 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
-        <div className="relative z-10 mx-auto max-w-6xl px-5 sm:px-8">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#006FE8] shadow-2xs">
-            <BookOpen className="h-3.5 w-3.5" />
-            <AnimatedShinyText className="text-xs font-bold uppercase tracking-wider">
-              Technical Documentation Hub
-            </AnimatedShinyText>
-          </div>
-
-          <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-[#082B5E] sm:text-4xl lg:text-5xl">
-            Spine InnovTech Documentation
-          </h1>
-
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-[#4E607A] sm:text-lg">
-            Explore the architecture, governance and integration paths behind SpineWorkspace.
-            Confirm supported connections and deployment access with your team’s technical evaluation.
-          </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-4">
-            <Link
-              href="/developers"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#006FE8] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#0055B8]"
-            >
-              <Terminal className="h-4 w-4" />
-              <span>Developer Overview</span>
-            </Link>
-            <a
-              href="/llms.txt"
-              className="inline-flex items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 py-2.5 text-sm font-semibold text-[#006FE8] shadow-xs transition hover:bg-[#EBF7FF]"
-            >
-              <FileCode2 className="h-4 w-4" />
-              <span>Machine-Readable /llms.txt</span>
-              <ExternalLink className="h-3.5 w-3.5 opacity-60" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="Technical Documentation Hub"
+        headline="Spine InnovTech Documentation"
+        subhead="Explore the architecture, governance and integration paths behind SpineWorkspace. Confirm supported connections and deployment access with your team's technical evaluation."
+        primaryCta={{ label: "Developer Overview", href: "/developers" }}
+        secondaryCta={{ label: "Machine-Readable /llms.txt", href: "/llms.txt" }}
+      />
 
       {/* Machine-Readable /llms.txt Banner */}
       <section className="border-b border-[#D6E8F8] bg-[#F0F8FF] py-6">

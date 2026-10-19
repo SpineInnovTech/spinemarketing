@@ -3,6 +3,7 @@ import { absoluteUrl } from "@/lib/site-url"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FinalCTA } from "@/components/final-cta"
+import { PageHero } from "@/components/marketing/page-hero"
 import { getContentRepository } from "@/lib/content"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -68,36 +69,13 @@ export default async function BlogPage() {
       />
       <Header />
       <main id="main">
-        <section className="relative overflow-hidden bg-white">
-          <div className="mx-auto max-w-[1100px] px-6 pt-[160px] pb-[80px] md:px-16">
-            <h1 className="text-[length:min(40px,var(--marketing-title-size))] font-semibold tracking-[-0.05em] leading-[1.1] text-[#032D60] sm:text-[length:min(52px,var(--marketing-title-size))]">Blog</h1>
-            <p className="mt-4 max-w-xl text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.5] tracking-[-0.02em] text-[#33465B]">
-              Product thinking. What changed is on{" "}
-              <Link href="/updates" className="font-semibold text-[#0176D3] hover:underline">
-                Updates
-              </Link>
-              . The dated log is the{" "}
-              <Link href="/changelog" className="font-semibold text-[#0176D3] hover:underline">
-                changelog
-              </Link>
-              . Demonstrations are in the{" "}
-              <Link href="/portfolio" className="font-semibold text-[#0176D3] hover:underline">
-                portfolio
-              </Link>
-              .
-            </p>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {["Product", "Business context", "Governance and trust"].map((cat) => (
-                <span
-                  key={cat}
-                  className="rounded-full border border-[#D9E4EF] bg-[#F3F6F9] px-3 py-1 text-[12px] font-semibold text-[#526479]"
-                >
-                  {cat}
-                </span>
-              ))}
-            </div>
-          </div>
-        </section>
+        <PageHero
+          badge="Insights & Articles"
+          headline="Product thinking and business context."
+          subhead="Articles on connected workspaces, AI governance, and operational continuity from Spine InnovTech."
+          primaryCta={{ label: "Company updates", href: "/updates" }}
+          secondaryCta={{ label: "Product changelog", href: "/changelog" }}
+        />
 
         {featured.length > 0 ? (
           <section className="mx-auto max-w-[1100px] px-6 pb-8 md:px-16">

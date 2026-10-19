@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, GitBranch, ShieldCheck, Waypoints } from "lucide-react";
+import { ArrowRight, GitBranch, ShieldCheck, Waypoints } from "lucide-react";
+import { PageHero } from "@/components/marketing/page-hero";
 
 const principles = [
   {
@@ -22,21 +23,13 @@ const principles = [
 export function AboutContent() {
   return (
     <>
-      <section className="relative overflow-hidden bg-[#F0F8FF] px-5 pb-24 pt-40 text-[#052858] sm:px-8 lg:pb-32 innovtech-reference-surface">
-        <div className="pointer-events-none absolute -right-24 -top-40 h-[550px] w-[550px] rounded-full bg-[#2763BC]/25 blur-[100px]" aria-hidden />
-        <div className="relative mx-auto max-w-[1220px]">
-          <p className="text-xs font-semibold uppercase tracking-[.23em] text-[#4C5C73]">Our origin / Spine InnovTech</p>
-          <h1 className="mt-7 max-w-[1050px] text-[length:min(clamp(3.2rem,6.2vw,6.6rem),var(--marketing-title-size))] font-semibold leading-[1.04] tracking-[-.065em]">
-            The real gap was never just <span className="text-[#0072E5]">system integration.</span>
-          </h1>
-          <p className="mt-9 max-w-[770px] text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#4C5C73]">
-            Connecting systems makes information available. Helping people understand that information, act with authority and continue work across teams is a different challenge. That is the problem behind Spine InnovTech.
-          </p>
-          <Link href="/company" className="mt-9 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#AFCBFF] px-6 text-sm font-semibold text-[#0B234A] transition hover:bg-white">
-            Meet the company <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </Link>
-        </div>
-      </section>
+      <PageHero
+        badge="Our origin / Spine InnovTech"
+        headline="The real gap was never just system integration."
+        subhead="Connecting systems makes information available. Helping people understand that information, act with authority and continue work across teams is a different challenge. That is the problem behind Spine InnovTech."
+        primaryCta={{ label: "Meet the company", href: "/company" }}
+        secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+      />
 
       <section className="mx-auto grid max-w-[1220px] gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.65fr_1.35fr] lg:gap-24 lg:py-32">
         <div>

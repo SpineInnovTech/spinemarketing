@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { PageHero } from "@/components/marketing/page-hero";
 
 export const metadata: Metadata = {
   title: "About Spine InnovTech | Technology, AI & Business Context",
@@ -34,19 +35,14 @@ export default function CompanyPage() {
   return (
     <div className="min-h-screen bg-white text-[#111B30]">
       <Header />
-      <main id="main" className="pt-16">
-        <section className="relative overflow-hidden bg-[#F0F8FF] px-5 py-24 text-[#052858] sm:px-8 lg:py-32 innovtech-reference-surface">
-          <div className="pointer-events-none absolute right-[-12%] top-[-45%] h-[650px] w-[650px] rounded-full bg-[#346BCA]/25 blur-[115px]"/>
-          <div className="relative mx-auto max-w-[1240px]">
-            <p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#4C5C73]">THE COMPANY / SPINE INNOVTECH</p>
-            <h1 className="mt-7 max-w-[1050px] text-[length:min(clamp(3.4rem,7vw,7rem),var(--marketing-title-size))] font-semibold leading-[1.02] tracking-[-.065em]">Technology should understand the <span className="text-[#0072E5]">business it serves.</span></h1>
-            <p className="mt-8 max-w-[770px] text-[length:min(19px,var(--marketing-body-size))] leading-[1.85] text-[#4C5C73]">Spine InnovTech is a technology and AI innovation company focused on a fundamental problem in modern work: information is everywhere, but shared business understanding is not.</p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link href="/#what-we-build" className="inline-flex min-h-12 items-center gap-2 rounded-full bg-[#006FE8] px-6 text-sm font-semibold text-white transition hover:bg-[#0055B8]">What we build <ArrowUpRight className="h-4 w-4"/></Link>
-              <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 rounded-full border border-[#006FE8] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:bg-[#EBF7FF]">Get in touch <ArrowRight className="h-4 w-4"/></Link>
-            </div>
-          </div>
-        </section>
+      <main id="main">
+        <PageHero
+          badge="The Company / Spine InnovTech"
+          headline="Technology should understand the business it serves."
+          subhead="Spine InnovTech is a technology and AI innovation company focused on a fundamental problem in modern work: information is everywhere, but shared business understanding is not."
+          primaryCta={{ label: "What we build", href: "/#what-we-build" }}
+          secondaryCta={{ label: "Get in touch", href: "/contact" }}
+        />
 
         <section className="mx-auto grid max-w-[1240px] gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.65fr_1.35fr] lg:gap-24 lg:py-32">
           <div><p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR STORY</p><p className="mt-5 max-w-[280px] text-sm leading-7 text-[#5A6D86]">From enterprise integration to the future of human–AI work.</p></div>

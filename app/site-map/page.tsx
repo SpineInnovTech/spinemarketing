@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { PageHero } from "@/components/marketing/page-hero";
 import { createPageMetadata } from "@/lib/page-metadata";
 import { getContentRepository } from "@/lib/content";
 import { PUBLIC_SOLUTIONS } from "@/lib/solution-taxonomy";
@@ -129,21 +130,16 @@ export default async function SiteMapPage() {
   return (
     <div className="min-h-screen bg-white text-[#082B5E]">
       <Header />
-      <main
-        id="main"
-        className="mx-auto max-w-[1320px] px-5 pb-20 pt-32 sm:px-8 lg:px-12"
-      >
-        <p className="text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-          EXPLORE SPINE INNOVTECH
-        </p>
-        <h1 className="mt-5 text-[length:min(clamp(2.5rem,5vw,4.5rem),var(--marketing-title-size))] font-semibold leading-[1.1] tracking-[-.045em]">
-          The full website, in one place.
-        </h1>
-        <p className="mt-6 max-w-[740px] text-[length:min(17px,var(--marketing-body-size))] leading-8 text-[#4E607A]">
-          Explore our company, the technology behind SpineWorkspace, business
-          solutions, practical use cases, and published thinking.
-        </p>
-        <div className="mt-12 grid items-start gap-8 lg:grid-cols-2">
+      <main id="main">
+        <PageHero
+          badge="Explore Spine InnovTech"
+          headline="The full website, in one place."
+          subhead="Explore our company, the technology behind SpineWorkspace, business solutions, practical use cases, and published thinking."
+          primaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+          secondaryCta={{ label: "Contact Spine InnovTech", href: "/contact" }}
+        />
+        <div className="mx-auto max-w-[1320px] px-5 pb-20 pt-12 sm:px-8 lg:px-12">
+          <div className="grid items-start gap-8 lg:grid-cols-2">
           {groups.map((group) => (
             <section
               key={group}
@@ -173,6 +169,7 @@ export default async function SiteMapPage() {
               </ul>
             </section>
           ))}
+          </div>
         </div>
       </main>
       <Footer />

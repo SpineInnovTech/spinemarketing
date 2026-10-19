@@ -48,29 +48,58 @@ function isWideMenu(nav: NavItem) {
 }
 
 const entryClass =
-  "group flex h-full items-start gap-3 rounded-xl border border-transparent p-3 transition-colors duration-150 hover:border-[#D9E4EF] hover:bg-[#EBF7FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none";
+  "group flex h-full items-start gap-3 rounded-xl border border-transparent p-3 transition-all duration-150 hover:border-[#CBE5FA] hover:bg-[#EBF7FF]/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none";
+
+function isPathMatch(pathname: string, href: string) {
+  const cleanHref = href.split(/[?#]/)[0] || "/";
+  if (cleanHref === "/") return pathname === "/";
+  return pathname === cleanHref || pathname.startsWith(`${cleanHref}/`);
+}
+
+function isNavActive(pathname: string, nav: NavItem) {
+  if (isPathMatch(pathname, nav.href)) return true;
+  if (nav.featured && isPathMatch(pathname, nav.featured.href)) return true;
+  if (nav.items?.some((item) => isPathMatch(pathname, item.href))) return true;
+  if (nav.supporting?.items.some((item) => isPathMatch(pathname, item.href))) return true;
+  return false;
+}
 
 function MenuEntry({
   item,
   featured = false,
+  pathname = "",
 }: {
   item: NavItemChild;
   featured?: boolean;
+  pathname?: string;
 }) {
   const Icon = item.icon;
+  const active = pathname ? isPathMatch(pathname, item.href) : false;
   return (
-    <Link href={item.href} className={`${entryClass} ${featured ? "p-4" : ""}`}>
-      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#F3F6F9] text-[#006FE8] group-hover:bg-white">
+    <Link
+      href={item.href}
+      aria-current={active ? "page" : undefined}
+      className={`${entryClass} ${featured ? "border-[#CBE5FA] bg-gradient-to-br from-[#EBF7FF] via-[#F4FAFF] to-white p-4 shadow-2xs" : ""} ${
+        active ? "border-[#CBE5FA] bg-[#F0F8FF]" : ""
+      }`}
+    >
+      <span
+        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl transition-colors ${
+          featured || active
+            ? "bg-[#006FE8] text-white"
+            : "bg-[#F0F8FF] text-[#006FE8] group-hover:bg-white group-hover:shadow-2xs"
+        }`}
+      >
         <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden />
       </span>
       <span className="min-w-0">
         <span
-          className={`block font-semibold leading-snug text-[#082B5E] ${featured ? "text-[18px]" : "text-[16px]"}`}
+          className={`block font-semibold leading-snug text-[#082B5E] ${featured ? "text-[17px]" : "text-[15px]"}`}
         >
           {item.name}
         </span>
         {item.desc && (
-          <span className="mt-1 block text-[13px] leading-5 text-[#33465B]">
+          <span className="mt-1 block text-[13px] leading-5 text-[#4E607A]">
             {item.desc}
           </span>
         )}
@@ -93,10 +122,10 @@ function FooterLinks({
           <Link
             href={link.href}
             onClick={onNavigate}
-            className="inline-flex items-center gap-1.5 rounded-md text-[14px] font-semibold leading-5 text-[#006FE8] transition-colors duration-150 hover:text-[#0055B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none"
+            className="inline-flex items-center gap-1.5 rounded-md text-[13px] font-semibold leading-5 text-[#006FE8] transition-colors duration-150 hover:text-[#0055B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none"
           >
             {link.name}
-            <ArrowRight className="h-4 w-4" aria-hidden />
+            <ArrowRight className="h-3.5 w-3.5" aria-hidden />
           </Link>
         </li>
       ))}
@@ -107,10 +136,12 @@ function FooterLinks({
 function WidePanel({
   nav,
   menuId,
+  pathname,
   onNavigate,
 }: {
   nav: NavItem;
   menuId: string;
+  pathname: string;
   onNavigate: () => void;
 }) {
   const reduce = useReducedMotion();
@@ -120,17 +151,17 @@ function WidePanel({
     <motion.div
       id={menuId}
       aria-label={`${nav.label}`}
-      initial={reduce ? false : { y: 6 }}
-      animate={{ y: 0 }}
+      initial={reduce ? false : { opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={
-        reduce ? { duration: 0 } : { duration: 0.15, ease: "easeOut" }
+        reduce ? { duration: 0 } : { duration: 0.16, ease: "easeOut" }
       }
-      className="absolute left-1/2 top-full z-50 w-[min(960px,calc(100vw-32px))] -translate-x-1/2 px-0 pt-2"
+      className="absolute left-1/2 top-full z-50 w-[min(980px,calc(100vw-32px))] -translate-x-1/2 px-0 pt-2"
       onClick={(event) => {
         if ((event.target as HTMLElement).closest("a")) onNavigate();
       }}
     >
-      <div className="flex max-h-[calc(100dvh-88px)] w-full flex-col rounded-2xl border border-[#D9E4EF] bg-white shadow-[0_8px_24px_rgba(3,45,96,0.08)]">
+      <div className="flex max-h-[calc(100dvh-88px)] w-full flex-col overflow-hidden rounded-2xl border border-[#CBE5FA] bg-white/98 shadow-[0_20px_50px_rgba(8,43,94,0.12)] backdrop-blur-md">
         <div className="min-h-0 overflow-x-hidden overflow-y-auto p-5 md:p-6">
           {nav.connectorMarks && nav.connectorMarks.length > 0 ? (
             <IntegrationMarkGroups
@@ -138,21 +169,21 @@ function WidePanel({
               kinds={nav.kindMarks}
             />
           ) : nav.featured ? (
-            <ul className="grid grid-cols-2 gap-4">
+            <ul className="grid grid-cols-2 gap-3.5">
               <li className="col-span-2">
-                <MenuEntry item={nav.featured} featured />
+                <MenuEntry item={nav.featured} featured pathname={pathname} />
               </li>
               {productEntries.map((item) => (
                 <li key={item.name}>
-                  <MenuEntry item={item} />
+                  <MenuEntry item={item} pathname={pathname} />
                 </li>
               ))}
             </ul>
           ) : (
-            <ul className="grid grid-cols-2 gap-4 xl:grid-cols-3">
+            <ul className="grid grid-cols-2 gap-3.5 xl:grid-cols-3">
               {productEntries.map((item) => (
                 <li key={item.name}>
-                  <MenuEntry item={item} />
+                  <MenuEntry item={item} pathname={pathname} />
                 </li>
               ))}
             </ul>
@@ -161,19 +192,20 @@ function WidePanel({
             <div className="mt-5 border-t border-[#D9E4EF] pt-4">
               <p
                 id={`${menuId}-supporting`}
-                className="text-[13px] font-semibold leading-5 text-[#082B5E]"
+                className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#4E607A]"
               >
                 {nav.supporting.label}
               </p>
               <ul
                 aria-labelledby={`${menuId}-supporting`}
-                className="mt-2 flex flex-wrap gap-1"
+                className="mt-2.5 flex flex-wrap gap-1.5"
               >
                 {nav.supporting.items.map((item) => (
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="inline-flex items-center rounded-lg px-2.5 py-1.5 text-[13px] font-medium leading-5 text-[#33465B] transition-colors duration-150 hover:bg-[#EBF7FF] hover:text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none"
+                      aria-current={isPathMatch(pathname, item.href) ? "page" : undefined}
+                      className="inline-flex items-center rounded-lg border border-[#E2EDF8] bg-[#F8FBFF] px-3 py-1.5 text-[13px] font-medium leading-5 text-[#082B5E] transition-colors duration-150 hover:border-[#CBE5FA] hover:bg-[#EBF7FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none"
                     >
                       {item.name}
                     </Link>
@@ -184,7 +216,7 @@ function WidePanel({
           )}
         </div>
         {nav.menuFooter && nav.menuFooter.length > 0 && (
-          <div className="mt-0 shrink-0 border-t border-[#D9E4EF] px-5 py-4 md:px-6">
+          <div className="mt-0 shrink-0 border-t border-[#D9E4EF] bg-[#F8FBFF] px-5 py-3.5 md:px-6">
             <FooterLinks links={nav.menuFooter} />
           </div>
         )}
@@ -196,37 +228,57 @@ function WidePanel({
 function CompactPanel({
   nav,
   menuId,
+  pathname,
   onNavigate,
 }: {
   nav: NavItem;
   menuId: string;
+  pathname: string;
   onNavigate: () => void;
 }) {
+  const reduce = useReducedMotion();
   if (!nav.items?.length) return null;
   return (
-    <div
+    <motion.div
       id={menuId}
       aria-label={nav.label}
-      className="absolute right-0 top-full z-50 w-[min(340px,calc(100vw-32px))] pt-2"
+      initial={reduce ? false : { opacity: 0, y: 6 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={
+        reduce ? { duration: 0 } : { duration: 0.16, ease: "easeOut" }
+      }
+      className="absolute left-0 top-full z-50 w-[min(380px,calc(100vw-32px))] pt-2"
       onClick={(event) => {
         if ((event.target as HTMLElement).closest("a")) onNavigate();
       }}
     >
-      <div className="rounded-2xl border border-[#D9E4EF] bg-white p-3 shadow-[0_8px_24px_rgba(3,45,96,0.08)]">
+      <div className="overflow-hidden rounded-2xl border border-[#CBE5FA] bg-white/98 p-3.5 shadow-[0_20px_50px_rgba(8,43,94,0.12)] backdrop-blur-md">
+        <div className="mb-2 flex items-center justify-between border-b border-[#EBF3FA] px-2.5 pb-2">
+          <span className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#006FE8]">
+            {nav.label}
+          </span>
+          <Link
+            href={nav.href}
+            className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#4E607A] hover:text-[#006FE8]"
+          >
+            Overview <ArrowRight className="h-3 w-3" aria-hidden />
+          </Link>
+        </div>
         <ul className="flex flex-col gap-1">
           {nav.items.map((item) => (
             <li key={item.name}>
-              <MenuEntry item={item} />
+              <MenuEntry item={item} pathname={pathname} />
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 function NavTrigger({
   nav,
+  pathname,
   activeMenu,
   onEnter,
   onLeave,
@@ -234,6 +286,7 @@ function NavTrigger({
   triggerRef,
 }: {
   nav: NavItem;
+  pathname: string;
   activeMenu: string | null;
   onEnter: (label: string) => void;
   onLeave: () => void;
@@ -241,13 +294,17 @@ function NavTrigger({
   triggerRef: (node: HTMLButtonElement | null) => void;
 }) {
   const isOpen = activeMenu === nav.label;
+  const isCurrent = isNavActive(pathname, nav);
   const menuId = menuIdFor(nav.label);
   const wide = isWideMenu(nav);
   const hasDropdown = hasMenu(nav);
 
   if (!hasDropdown) {
-    const linkClass =
-      "inline-flex h-10 items-center rounded-[10px] px-3 text-[15px] font-medium text-[#33465B] transition-colors duration-150 hover:text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none";
+    const linkClass = `inline-flex h-10 items-center rounded-[10px] px-3 text-[15px] font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none ${
+      isCurrent
+        ? "bg-[#EBF7FF] font-semibold text-[#006FE8]"
+        : "text-[#33465B] hover:bg-[#F3F8FD] hover:text-[#082B5E]"
+    }`;
     if (nav.external) {
       return (
         <a
@@ -262,7 +319,12 @@ function NavTrigger({
       );
     }
     return (
-      <Link href={nav.href} className={linkClass} onMouseEnter={onLeave}>
+      <Link
+        href={nav.href}
+        aria-current={isCurrent ? "page" : undefined}
+        className={linkClass}
+        onMouseEnter={onLeave}
+      >
         {nav.label}
       </Link>
     );
@@ -282,12 +344,14 @@ function NavTrigger({
         id={`${menuId}-trigger`}
         onClick={() => onToggle(nav.label)}
         className={`inline-flex h-10 items-center gap-1 rounded-[10px] px-3 text-[15px] font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2 motion-reduce:transition-none ${
-          isOpen ? "text-[#082B5E]" : "text-[#33465B] hover:text-[#082B5E]"
+          isOpen || isCurrent
+            ? "bg-[#EBF7FF] font-semibold text-[#082B5E]"
+            : "text-[#33465B] hover:bg-[#F3F8FD] hover:text-[#082B5E]"
         }`}
       >
         {nav.label}
         <ChevronDown
-          className={`h-3.5 w-3.5 transition-transform duration-200 motion-reduce:transition-none ${isOpen ? "rotate-180" : ""}`}
+          className={`h-3.5 w-3.5 transition-transform duration-200 motion-reduce:transition-none ${isOpen ? "rotate-180 text-[#006FE8]" : ""}`}
           aria-hidden
         />
       </button>
@@ -295,6 +359,7 @@ function NavTrigger({
         <WidePanel
           nav={nav}
           menuId={menuId}
+          pathname={pathname}
           onNavigate={() => onToggle(nav.label)}
         />
       )}
@@ -302,6 +367,7 @@ function NavTrigger({
         <CompactPanel
           nav={nav}
           menuId={menuId}
+          pathname={pathname}
           onNavigate={() => onToggle(nav.label)}
         />
       )}
@@ -347,7 +413,8 @@ export function Header({
 }: {
   initiallyHidden?: boolean;
 }) {
-  const authLinks = workspaceEntryLinks(usePathname() ?? "");
+  const currentPathname = usePathname() ?? "";
+  const authLinks = workspaceEntryLinks(currentPathname);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [heroRevealed, setHeroRevealed] = useState(!initiallyHidden);
@@ -492,8 +559,7 @@ export function Header({
     <>
       {activeMenu && heroRevealed && (
         <div
-          className="fixed inset-0 z-40 bg-[#082B5E]/20"
-          onMouseEnter={handleLeave}
+          className="fixed inset-0 z-40 bg-[#082B5E]/20 backdrop-blur-[2px]"
           onClick={() => closeDesktopMenu(false)}
         />
       )}
@@ -501,6 +567,7 @@ export function Header({
       <motion.header
         suppressHydrationWarning
         className="fixed top-0 left-0 right-0 z-50"
+        onMouseEnter={clearTimers}
         initial={
           initiallyHidden ? { y: "-100%", opacity: 0 } : { y: 0, opacity: 1 }
         }
@@ -540,11 +607,12 @@ export function Header({
             </span>
           </Link>
 
-          <div className="hidden items-center gap-0 xl:flex">
+          <div className="hidden items-center gap-0.5 xl:flex">
             {navigation.map((nav) => (
               <NavTrigger
                 key={nav.label}
                 nav={nav}
+                pathname={currentPathname}
                 activeMenu={activeMenu}
                 onEnter={handleEnter}
                 onLeave={handleLeave}
@@ -732,33 +800,30 @@ export function Header({
                 );
               })}
 
-              <div className="mt-4 flex flex-col gap-2 pb-4">
-                <a href={authLinks.signup} onClick={closeMobile} className="flex h-10 items-center justify-center rounded-md bg-[#006FE8] text-[14px] font-semibold text-white hover:bg-[#0055B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2">Sign up</a>
+              <div className="mt-4 grid grid-cols-2 gap-2 pb-4">
+                <a href={authLinks.signup} onClick={closeMobile} className="col-span-2 flex h-10 items-center justify-center rounded-md bg-[#006FE8] text-[14px] font-semibold text-white hover:bg-[#0055B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2">Sign up</a>
                 <a href={authLinks.login} onClick={closeMobile} className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]">Sign in</a>
-                <a
-                  href={DOCS_URL}
-                  className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeMobile}
-                >
-                  Docs
-                </a>
                 <Link
                   href="/product"
-                  className="flex h-10 items-center justify-center rounded-md border border-[#C9C9C9] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
+                  className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
                   onClick={closeMobile}
                 >
                   SpineWorkspace
                 </Link>
-                <Button
-                  className="h-10 w-full rounded-md bg-[#006FE8] font-semibold text-white hover:bg-[#0055B8]"
-                  asChild
+                <Link
+                  href={DOCS_URL}
+                  className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
+                  onClick={closeMobile}
                 >
-                  <Link href="/contact" onClick={closeMobile}>
-                    Contact us
-                  </Link>
-                </Button>
+                  Docs
+                </Link>
+                <Link
+                  href="/contact"
+                  className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
+                  onClick={closeMobile}
+                >
+                  Contact us
+                </Link>
               </div>
             </div>
           </motion.div>

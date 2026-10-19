@@ -83,10 +83,30 @@ function withSecurityHeaders(response: Response, request: Request): Response {
   });
 }
 
+const PRODUCT_SITE_ORIGIN = "https://spineworkspace.com";
+const CORPORATE_ENTRY_REDIRECT_PATHS = new Set([
+  "/login",
+  "/signup",
+  "/onboarding",
+  "/workspace",
+]);
+
+function maybeProductEntryRedirect(request: Request): Response | null {
+  const url = new URL(request.url);
+  const normalized = url.pathname.replace(/\/+$/, "") || "/";
+  if (!CORPORATE_ENTRY_REDIRECT_PATHS.has(normalized)) return null;
+  const targetPath = normalized === "/login" || normalized === "/signup" ? normalized : "/get-started";
+  const target = new URL(targetPath + url.search, PRODUCT_SITE_ORIGIN);
+  return Response.redirect(target.toString(), 302);
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const redirect = maybeCanonicalRedirect(request, env);
     if (redirect) return redirect;
+
+    const productEntryRedirect = maybeProductEntryRedirect(request);
+    if (productEntryRedirect) return productEntryRedirect;
 
     const response = await env.ASSETS.fetch(request);
     return withSecurityHeaders(response, request);

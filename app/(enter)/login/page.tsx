@@ -35,7 +35,11 @@ export default function LoginPage() {
             SpineWorkspace is the business-context workspace where humans and AI work together. Sign-in continues into setup for your operating area.
           </p>
           <p className="mt-4 rounded-md border border-[#E5E5E5] bg-white p-3 text-[13px] leading-[1.55] text-[#444]">
-            Identity is not connected yet. Continuing creates a local setup draft in this browser. It does not create an account, tenant, or provisioned workspace.
+            This corporate site introduces Spine InnovTech. To evaluate or enter the SpineWorkspace product, continue on the product site at{" "}
+            <a href="https://spineworkspace.com" className="font-semibold text-[#0176D3] hover:underline">
+              spineworkspace.com
+            </a>
+            .
           </p>
         </div>
         <form onSubmit={onSubmit} className="rounded-md border border-[#E5E5E5] bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -53,8 +57,14 @@ export default function LoginPage() {
           />
           {error && <p className="mt-2 text-[13px] text-[#BA0517]">{error}</p>}
           <button type="submit" className="mt-4 h-10 w-full rounded-md bg-[#0176D3] text-[14px] font-semibold text-white hover:bg-[#0B5CAB]">
-            Continue to setup
+            Continue to setup preview
           </button>
+          <a
+            href="https://spineworkspace.com/login?next=%2Fworkspace%2Fmy-work"
+            className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-md border border-[#0176D3] bg-[#F0F8FF] text-[14px] font-semibold text-[#032D60] hover:bg-[#E1F0FF]"
+          >
+            Continue on SpineWorkspace product site
+          </a>
           <p className="mt-4 text-[13px] text-[#444]">
             Need access for a team?{" "}
             <Link href="/request-access" className="font-semibold text-[#0176D3] hover:underline">
