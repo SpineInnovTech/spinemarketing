@@ -30,7 +30,7 @@ const storyScenes = [
     detail:
       "Connect CRM accounts, support tickets, contracts and billing records into one permissioned context graph before anyone—or any AI—takes action.",
     ctaLabel: "Explore Customer Journey",
-    ctaHref: "#workbench-customer-journey",
+    ctaHref: "/product#workbench-customer-journey",
   },
   {
     id: "views",
@@ -41,7 +41,7 @@ const storyScenes = [
     detail:
       "Run daily queues, KPIs and local drafts in role-based dashboards, or switch to Canvas for connected documents, live tables and context graphs.",
     ctaLabel: "Explore Dashboard Bento",
-    ctaHref: "#workbench-dashboards",
+    ctaHref: "/product#workbench-dashboards",
   },
   {
     id: "governance",
@@ -52,7 +52,7 @@ const storyScenes = [
     detail:
       "Ask your AI Twin to summarize risks or draft a follow-up with linked evidence. Consequential writes stay behind your approval gate and carry across hosts.",
     ctaLabel: "Watch 26s Shell Walkthrough",
-    ctaHref: "#workbench-recording",
+    ctaHref: "/product#workbench-recording",
   },
 ] as const;
 
