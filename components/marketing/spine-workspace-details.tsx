@@ -34,7 +34,7 @@ export function SpineWorkspaceDetails() {
         <div className="innovtech-product-copy relative z-10">
           <p className="innovtech-eyebrow inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-white px-3.5 py-1 shadow-2xs">
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            <AnimatedShinyText shimmerWidth={140}>SPINEWORKSPACE · YOUR TEAM AND AI, IN CONTEXT</AnimatedShinyText>
+            <AnimatedShinyText shimmerWidth={140}>SPINE WORKSPACE · YOUR TEAM AND AI, IN CONTEXT</AnimatedShinyText>
           </p>
           <h1 id="product-title" className="mt-5">One Fabric. 13 domains. Ready to work.</h1>
           <p className="innovtech-hero-description">
