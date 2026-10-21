@@ -1,4 +1,5 @@
 import { DOCS_URL } from "@/lib/navigation";
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site";
 
 export type CtaLink = { label: string; href: string };
 
@@ -454,7 +455,7 @@ export const pages = {
     finalCta: {
       headline: "Ready to see it in your environment?",
       primaryCta: { label: "Book a demo", href: "/contact?intent=demo" },
-      secondaryCta: { label: "Explore SpineWorkspace", href: "/spineworkspace" },
+      secondaryCta: { label: EXPLORE_SPINEWORKSPACE_LABEL, href: PRODUCT_SITE_URL },
     },
   },
 
@@ -831,7 +832,7 @@ export const homeCopy = {
   finalCta: {
     headline: "Ready to bring truth and context into one workspace?",
     primaryCta: { label: "Book a demo", href: "/contact?intent=demo" },
-    secondaryCta: { label: "Explore SpineWorkspace", href: "/spineworkspace" },
+    secondaryCta: { label: EXPLORE_SPINEWORKSPACE_LABEL, href: PRODUCT_SITE_URL },
   },
 };
 

@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { LeadForm, type LeadIntent } from "@/components/lead-form";
 import { FAQSection } from "@/components/faq-section";
 import { PageHero } from "@/components/marketing/page-hero";
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site";
 import { Mail, MapPin, MessageSquare, ArrowRight } from "lucide-react";
 
 const fade = (delay = 0) => ({
@@ -83,7 +84,7 @@ export function ContactContent({
         headline="Talk to Spine InnovTech."
         subhead="Whether you want a demo, have a question, or want to explore how SpineWorkspace fits your existing environment — we're here."
         primaryCta={{ label: "Use the form", href: "#contact-form" }}
-        secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+        secondaryCta={{ label: EXPLORE_SPINEWORKSPACE_LABEL, href: PRODUCT_SITE_URL }}
       />
 
       <section className="border-t border-[#E5E5E5] bg-[#F3F6F9] py-20 px-6 md:px-16">

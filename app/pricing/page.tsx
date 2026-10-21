@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/structured-data";
 import { absoluteUrl } from "@/lib/site-url";
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site";
 
 const pricingDescription =
   "SpineWorkspace pricing and commercial access models are hosted on the product site at spineworkspace.com. Start free or estimate usage based on connected tools.";
@@ -82,6 +83,12 @@ export default function PricingPage() {
                 Talk to Enterprise Architecture <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
+            <p className="mt-5 text-sm text-[#4E607A]">
+              New to SpineWorkspace?{" "}
+              <Link href="/product" className="font-semibold text-[#006FE8] hover:underline">
+                See the product and Workbench views
+              </Link>
+            </p>
           </div>
         </section>
 
@@ -103,10 +110,10 @@ export default function PricingPage() {
                   </ul>
                 </div>
                 <a
-                  href="https://auth.spineworkspace.com/signup"
+                  href={PRODUCT_SITE_URL}
                   className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-[#006FE8] hover:underline"
                 >
-                  Register Free Account <ArrowRight className="h-3.5 w-3.5" />
+                  {EXPLORE_SPINEWORKSPACE_LABEL} <ArrowRight className="h-3.5 w-3.5" />
                 </a>
               </article>
 

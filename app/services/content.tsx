@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Network, ShieldCheck, Waypoints, Workflow } from "lucide-react";
 import { PageHero } from "@/components/marketing/page-hero";
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site";
 
 const capabilities = [
   {
@@ -41,7 +42,7 @@ export function ServicesContent() {
         headline="Technology strategy grounded in business context."
         subhead="We work at the intersection of enterprise connectivity, context-aware workspaces and responsible AI. Every engagement starts by understanding the existing systems, business goal and authority boundaries."
         primaryCta={{ label: "Discuss a project", href: "/contact?intent=partnership" }}
-        secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+        secondaryCta={{ label: EXPLORE_SPINEWORKSPACE_LABEL, href: PRODUCT_SITE_URL }}
       />
       <section className="bg-[#F0F8FF] px-5 py-24 sm:px-8 lg:py-32">
         <div className="mx-auto max-w-[1220px]">
@@ -73,7 +74,7 @@ export function ServicesContent() {
           </div>
           <div className="flex flex-col gap-3">
             <Link href="/contact" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#112E59] px-6 text-sm font-semibold text-white transition hover:bg-[#2659A0]">Contact Spine InnovTech <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-            <a href="/product" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#BDD0EA] bg-white px-6 text-sm font-semibold text-[#112E59] transition hover:border-[#2659A0]">Explore SpineWorkspace <ArrowUpRight className="h-4 w-4" aria-hidden /></a>
+            <a href={PRODUCT_SITE_URL} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#BDD0EA] bg-white px-6 text-sm font-semibold text-[#112E59] transition hover:border-[#2659A0]">{EXPLORE_SPINEWORKSPACE_LABEL} <ArrowUpRight className="h-4 w-4" aria-hidden /></a>
           </div>
         </div>
       </section>

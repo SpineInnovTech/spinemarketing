@@ -4,7 +4,7 @@
  */
 import { readFileSync, statSync } from "node:fs";
 import "./verify-domain-solutions.mjs";
-import "./verify-auth-entry.mjs";
+import "./verify-product-funnel.mjs";
 import "./verify-workbench-artifact.mjs";
 const text = readFileSync("out/index.html", "utf8");
 const sitemap = readFileSync("out/sitemap.xml", "utf8");

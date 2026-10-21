@@ -13,8 +13,10 @@
 | Test environment | `test.spineinnovtech.com` → Worker `spineinnovlabs-marketing-test` |
 | Legacy corporate hosts (301 → apex) | `spineinnovtech.spineworkspace.com`, `spineinnovlabs.spineworkspace.com`, `www.spineinnovlabs.com`, `spineinnovlabs.com` |
 | Product public website | **Separate** `spineworkspace-live/apps/marketing`, `spineworkspace.com` |
-| Authenticated workspace | **Separate** `app.spineworkspace.com` |
-| Sign-in / sign-up | **Separate** `auth.spineworkspace.com` |
+| Authenticated workspace | **Separate** `app.spineworkspace.com` — never linked from the corporate site |
+| Sign-in / sign-up | **Separate** `auth.spineworkspace.com` — never linked from the corporate site |
+
+**Funnel:** `spineinnovtech.com` → (**Explore SpineWorkspace**) → `spineworkspace.com` → `auth.spineworkspace.com` → `app.spineworkspace.com`. The corporate Worker 302s `/login`, `/signup`, `/onboarding`, `/workspace` and `/request-access` to `https://spineworkspace.com/`.
 
 **CircleCI is retired from this repository.** Cloudflare Workers Builds is the only automated deployment authority for the corporate Worker. Do not re-enable `.circleci/config.yml`, introduce another deployment provider, or point the product apex to this company Worker.
 

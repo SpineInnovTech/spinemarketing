@@ -4,8 +4,9 @@ import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { WorkbenchHeroPreview } from "./workbench-hero-preview";
-import { WorkspaceAuthActions } from "./workspace-auth-actions";
+import { ExploreSpineWorkspaceCta } from "./explore-spineworkspace-cta";
 import { WorkspaceBenefits, WorkspaceSolutions } from "./workspace-benefits";
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site";
 import { WorkspaceSubscriptionValue } from "./workspace-subscription-value";
 import { WorkbenchViewExplorer } from "./workbench-view-explorer";
 
@@ -40,7 +41,7 @@ export function SpineWorkspaceDetails() {
             Your AI Twin prepares the next step; your team stays in control.
           </p>
           <div className="innovtech-actions mt-6">
-            <a href="https://spineworkspace.com" className="innovtech-button">Explore SpineWorkspace Platform <ArrowRight size={18} aria-hidden /></a>
+            <a href={PRODUCT_SITE_URL} className="innovtech-button">{EXPLORE_SPINEWORKSPACE_LABEL} <ArrowRight size={18} aria-hidden /></a>
             <a href="https://spineworkspace.com/pricing" className="innovtech-text-link">View Product Pricing &amp; Plans <ArrowRight size={18} aria-hidden /></a>
           </div>
         </div>
@@ -80,7 +81,7 @@ export function SpineWorkspaceDetails() {
       </section>
 
       <WorkspaceSolutions />
-      <WorkspaceSubscriptionValue accountActions={<WorkspaceAuthActions />} />
+      <WorkspaceSubscriptionValue accountActions={<ExploreSpineWorkspaceCta />} />
     </div>
   );
 }

@@ -29,14 +29,7 @@ const redirects = new Map(
     .map(([source, target]) => [source, target]),
 );
 const origin = "https://spineinnovtech.com";
-const excluded = new Set([
-  "/404",
-  "/_not-found",
-  "/login",
-  "/workspace",
-  "/onboarding",
-  "/request-access",
-]);
+const excluded = new Set(["/404", "/_not-found"]);
 function localPath(href, source) {
   const url = new URL(href.replaceAll("&amp;", "&"), origin + source);
   if (url.origin !== origin) return null;

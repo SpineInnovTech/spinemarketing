@@ -1,6 +1,6 @@
 import { Section, SectionHeader } from "./section";
 import { getSolutionDomain } from "@/lib/solution-domains";
-import { WorkspaceAuthActions } from "./workspace-auth-actions";
+import { ExploreSpineWorkspaceCta } from "./explore-spineworkspace-cta";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { WorkbenchViewExplorer } from "./workbench-view-explorer";
@@ -40,7 +40,7 @@ export function SolutionDomainFeatures({ slug }: { slug: string }) {
     <>
       <Section id="domain-features" variant="muted" className="scroll-mt-24">
         <SectionHeader align="left" label={`${domain.name} / Features`} headline={`Features for ${domain.name}.`} body={domain.summary} />
-        <WorkspaceAuthActions pathname={`/solutions/${slug}`} />
+        <ExploreSpineWorkspaceCta />
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {domain.features.map(([title, detail], index) => (
             <BlurFade key={title} delay={index * 0.05} inView className="h-full">

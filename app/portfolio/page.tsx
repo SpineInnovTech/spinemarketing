@@ -5,6 +5,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BreadcrumbJsonLd } from "@/components/structured-data";
 import { PageHero } from "@/components/marketing/page-hero";
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site";
 import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
@@ -58,7 +59,7 @@ export default function PortfolioPage() {
           badge="Spine InnovTech / Portfolio"
           headline="One direction. Connected capabilities."
           subhead="Our portfolio is built around SpineWorkspace. The elements below describe an integrated product architecture, not a list of separately purchasable products or verified customer implementations."
-          primaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+          primaryCta={{ label: EXPLORE_SPINEWORKSPACE_LABEL, href: PRODUCT_SITE_URL }}
           secondaryCta={{ label: "Platform architecture", href: "/platform" }}
         />
         <section className="mx-auto max-w-[1220px] px-5 py-24 sm:px-8 lg:py-32">

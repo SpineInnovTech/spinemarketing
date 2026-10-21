@@ -84,21 +84,23 @@ function withSecurityHeaders(response: Response, request: Request): Response {
   });
 }
 
-const PRODUCT_SITE_ORIGIN = "https://spineworkspace.com";
+// The corporate site has no auth landing. Old or guessed entry paths go to the
+// product site's home, which owns sign-in/sign-up and the hand-off to
+// auth.spineworkspace.com / app.spineworkspace.com. Auth query params are dropped.
+const PRODUCT_SITE_HOME = "https://spineworkspace.com/";
 const CORPORATE_ENTRY_REDIRECT_PATHS = new Set([
   "/login",
   "/signup",
   "/onboarding",
   "/workspace",
+  "/request-access",
 ]);
 
 function maybeProductEntryRedirect(request: Request): Response | null {
   const url = new URL(request.url);
   const normalized = url.pathname.replace(/\/+$/, "") || "/";
   if (!CORPORATE_ENTRY_REDIRECT_PATHS.has(normalized)) return null;
-  const targetPath = normalized === "/login" || normalized === "/signup" ? normalized : "/get-started";
-  const target = new URL(targetPath + url.search, PRODUCT_SITE_ORIGIN);
-  return Response.redirect(target.toString(), 302);
+  return Response.redirect(PRODUCT_SITE_HOME, 302);
 }
 
 export default {

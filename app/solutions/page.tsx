@@ -8,12 +8,12 @@ import { StatsBar } from "@/components/stats-bar"
 import { BenefitsGrid } from "@/components/benefits-grid"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
-import { WorkspaceAuthActions } from "@/components/marketing/workspace-auth-actions"
+import { ExploreSpineWorkspaceCta } from "@/components/marketing/explore-spineworkspace-cta"
 
 export const metadata: Metadata = {
   title: "Solutions by Team & Industry | Spine InnovTech",
   description:
-    "Explore SpineWorkspace features and workflows for sales, customer success, finance, operations, and industry-specific work. Sign up or sign in to your authorized workspace.",
+    "Explore SpineWorkspace features and workflows for sales, customer success, finance, operations, and industry-specific work.",
   alternates: { canonical: "/solutions" },
   openGraph: {
     title: "Solutions by Team & Industry | Spine InnovTech",
@@ -32,9 +32,9 @@ export default function SolutionsPage() {
       <Header />
       <main id="main">
         <SolutionsContent />
-        <section className="mx-auto max-w-7xl px-6 py-8 sm:px-8" aria-label="Enter SpineWorkspace">
+        <section className="mx-auto max-w-7xl px-6 py-8 sm:px-8" aria-label="Explore SpineWorkspace">
           <h2 className="text-[length:min(1.5rem,var(--marketing-heading-size))]/[var(--tw-leading,1.3333333333)] font-semibold text-[#082B5E]">Bring your team’s work into SpineWorkspace.</h2>
-          <WorkspaceAuthActions />
+          <ExploreSpineWorkspaceCta />
         </section>
         <StatsBar
           stats={[

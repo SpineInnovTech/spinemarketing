@@ -32,8 +32,7 @@ export const headerNavigation: NavItem[] = [
       name: "SpineWorkspace",
       href: "/product",
       icon: Layers3,
-      desc: "Our core shared workspace for humans and AI (spineworkspace.com)",
-      external: true,
+      desc: "Our core shared workspace for humans and AI",
     },
     items: [
       { name: "Spine Fabric", href: "/platform/spine-fabric", icon: Network, desc: "Governed operational business context" },
