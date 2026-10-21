@@ -5,7 +5,8 @@ import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { CorporateOrbitalHero } from "./corporate-orbital-hero";
 import { WorkbenchHeroPreview } from "./workbench-hero-preview";
-import { WorkspaceBenefits } from "./workspace-benefits";
+import { ThreeProductPillars } from "./three-product-pillars";
+import { SpineNetworkContinuity } from "./spine-network-continuity";
 
 const approach = [
   ["Connect", "Bring together the records your team is authorized to use."],
@@ -27,18 +28,17 @@ export function InnovLabsHome() {
             <BlurFade delay={0.02} inView>
               <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8] shadow-2xs">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · SPINEWORKSPACE</AnimatedShinyText>
+                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · SPINE WORKSPACE</AnimatedShinyText>
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
               <h1 id="company-title" className="mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-.045em] text-[#032D60]">
-                SpineWorkspace connects your tools, context and team.
+                One business context. Every domain. Ready for work.
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>
               <p className={body + " mt-4 max-w-[680px] mx-auto"}>
-                Bring records and evidence from your tools into editable dashboards and Canvas.
-                Your AI Twin prepares the next step; your team stays in control.
+                Spine Workspace builds governed business context from connected tools, projects it into 13 ready-built domain workspaces, and lets people and AI work from the same permitted evidence.
               </p>
             </BlurFade>
             <BlurFade delay={0.14} inView>
@@ -68,7 +68,7 @@ export function InnovLabsHome() {
         </div>
       </section>
 
-      <WorkspaceBenefits />
+      <ThreeProductPillars />
 
       <section id="workbench-story" className="scroll-mt-24 bg-[#F8FBFF] py-14 sm:py-18 border-b border-[#D6E8F8]">
         <div className={container}>
@@ -84,6 +84,8 @@ export function InnovLabsHome() {
           <WorkbenchHeroPreview />
         </div>
       </section>
+
+      <SpineNetworkContinuity />
 
       <section id="how-it-works" aria-labelledby="home-workflow-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
         <div className={container}>

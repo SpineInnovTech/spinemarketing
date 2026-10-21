@@ -329,18 +329,18 @@ export const pages = {
           "The intended connection experience identifies the host binding, principal, tenant, workspace and permitted scopes. That identity evidence does not establish access to the host's private applications or connectors.",
       },
       {
-        headline: "Discovered capabilities still require authority.",
+        headline: "A known connection may not be executable from this host.",
         body:
-          "A capability may be explicitly host-exposed, separately bound to Spine or unavailable. Discovery metadata does not grant permission. Current consent, scopes, membership and capability policy determine what may be used.",
+          "Spine Network distinguishes a connection available on its owning host from a managed or explicitly delegated route that another host can use. A private host connection may be discoverable without being executable elsewhere. Discovery alone never grants permission; current consent, scopes, membership and policy still apply.",
       },
       {
         headline: "Verify the invocation and its outcome separately.",
         body: "The five required stages are identity verification, capability discovery, authorization, safe invocation and reconciliation. An ingestion acknowledgement must be followed by canonical materialization, source lineage and authorized retrieval before data readiness is proven.",
       },
       {
-        headline: "Carry the work forward with independent permissions.",
+        headline: "Use the same semantic tools with independent authority.",
         body:
-          "Spine Network is designed to preserve the same entity, versioned context, work item and checkpoint across compatible hosts. Each destination re-evaluates authority and produces its own retrieval trace. Private host memory, credentials and privileges do not transfer. These are evidence requirements, not a claim of a verified production handoff.",
+          "Spine Network MCP defines 29 public semantic tools, including get_my_continuity, get_active_context, store_in_spine, prepare_action, get_action_plan and approve_action. Approved source-backed observations and versioned work context may be resumed in another compatible host only within its own access policy. A successful approval is not itself provider execution or reconciliation.",
       },
     ],
     crossLinks: {
@@ -412,13 +412,13 @@ export const pages = {
       },
     ],
     scenario: {
-      headline: "One objective. Two tools. The story continues.",
-      body: "A delivery dependency changes in a project tool. The team opens another tool to prepare the handoff. SpineWorkspace carries the record and the evidence for that work, so the story does not have to be rebuilt.",
+      headline: "Start in Cursor. Continue in Claude. Return through ChatGPT.",
+      body: "An authenticated operator submits a source-backed decision in Cursor through store_in_spine. Once governed promotion completes, another authorized host can retrieve the permitted continuity and continue the work without sharing the first host’s private session or credentials.",
       steps: [
-        "A delivery dependency changes in the project tool",
-        "The record and the evidence travel with the work to the tool used for the note",
-        "A person accepts, edits, or rejects the proposal",
-        "Outcome reconciled in Workbench",
+        "Cursor submits a decision with its evidence for governed promotion",
+        "Claude independently authorizes and retrieves permitted continuity",
+        "ChatGPT resumes authorized active context without importing private chat memory",
+        "Any consequential action follows review, approval, execution and source readback",
       ],
     },
     crossLinks: {
