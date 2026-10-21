@@ -15,10 +15,10 @@ export function SpineNetworkContinuity() {
       <div className="mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12">
         <p className="text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">SPINE NETWORK</p>
         <h2 id="spine-network-title" className="mt-4 max-w-[1000px] text-[length:min(clamp(2rem,4vw,3.4rem),var(--marketing-heading-size))] font-semibold leading-tight tracking-[-.04em] text-[#082B5E]">
-          Change AI hosts without rebuilding the business story.
+          Start in one AI host. Continue from the same governed work in another.
         </h2>
         <p className="mt-5 max-w-[890px] text-base leading-8 text-[#4E607A]">
-          Spine Network is designed to carry authorized business context, work and continuity between compatible AI hosts. Each host connects through its own identity and permissions; one host never inherits another host&apos;s private connectors or credentials.
+          Spine Network MCP is the semantic entrypoint for authorized context and continuity. The Continuity Bridge resolves who is asking and what they may retrieve; Spine Fabric holds source-linked work context. Compatible AI hosts can resume approved work without inheriting another host&apos;s credentials.
         </p>
         <div className="mt-9 grid items-stretch gap-4 lg:grid-cols-[1fr_auto_1.15fr_auto_1fr]">
           <div className="rounded-2xl border border-[#C9E0F2] bg-[#F2F9FF] p-6">
@@ -41,6 +41,31 @@ export function SpineNetworkContinuity() {
             <p className="mt-2 text-sm leading-6 text-[#536C86]">Re-authorize, retrieve the same governed work context and continue without transferring credentials.</p>
             <p className="mt-5 border-t border-[#D0E4F5] pt-3 text-xs text-[#426A8F]">Separate identity and capability checks</p>
           </div>
+        </div>
+        <div className="mt-12 rounded-3xl border border-[#C6DEF2] bg-[#F3F9FF] p-6 sm:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[.15em] text-[#006FE8]">THE CONTINUITY BRIDGE IN PRACTICE</p>
+          <h3 className="mt-3 text-[length:min(clamp(1.6rem,3vw,2.5rem),var(--marketing-heading-size))] font-semibold text-[#082B5E]">One work item. Three independent AI environments.</h3>
+          <p className="mt-3 max-w-[880px] text-sm leading-7 text-[#526C84]">Example workflow using the Spine Network semantic interface. Continuation depends on source-backed context being accepted and available to the destination host under its own permissions.</p>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {[
+              {host:"Cursor",purpose:"Capture a decision",tool:"store_in_spine",description:"Submit a source-linked decision for governed promotion; this is not an immediate, unreviewed memory write."},
+              {host:"Claude",purpose:"Resume the work",tool:"get_my_continuity",description:"Retrieve context and commitments permitted to Claude's independently authenticated actor."},
+              {host:"ChatGPT",purpose:"Return to the active work",tool:"get_active_context",description:"Recover the authorized active context instead of copying a private transcript from another host."},
+            ].map(({host,purpose,tool,description},i)=>(
+              <article key={host} className="rounded-2xl border border-[#D3E5F4] bg-white p-5">
+                <p className="font-mono text-xs text-[#698BAD]">0{i+1} · {host}</p>
+                <h4 className="mt-3 text-base font-semibold text-[#082B5E]">{purpose}</h4>
+                <code className="mt-3 block rounded-lg bg-[#EAF5FF] px-3 py-2 text-xs font-semibold text-[#125FAD]">{tool}</code>
+                <p className="mt-3 text-xs leading-6 text-[#536D87]">{description}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-6 flex flex-wrap gap-2 text-xs font-medium text-[#235E91]">
+            <span className="rounded-full border border-[#B8D8F0] bg-white px-3 py-2">prepare_action — proposed</span>
+            <span className="rounded-full border border-[#B8D8F0] bg-white px-3 py-2">get_action_plan — reviewed</span>
+            <span className="rounded-full border border-[#B8D8F0] bg-white px-3 py-2">approve_action — authorized, not executed</span>
+          </div>
+          <p className="mt-4 text-xs leading-6 text-[#55738D]">Provider execution remains separate from approval. Results become verified business outcomes only after an authorized operation, source readback and reconciliation. The interface may expose a host-held connection as known but not executable from another host.</p>
         </div>
         <div className="mt-12 flex flex-wrap items-center justify-between gap-3">
           <div><p className="text-xs font-semibold uppercase tracking-[.15em] text-[#006FE8]">CONNECTION EVIDENCE</p><h3 className="mt-2 text-[length:min(clamp(1.6rem,3vw,2.5rem),var(--marketing-heading-size))] font-semibold text-[#082B5E]">Know what is connected, permitted and actually working.</h3></div>
