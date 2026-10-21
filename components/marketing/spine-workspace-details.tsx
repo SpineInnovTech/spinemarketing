@@ -6,6 +6,8 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { WorkbenchHeroPreview } from "./workbench-hero-preview";
 import { WorkspaceAuthActions } from "./workspace-auth-actions";
 import { WorkspaceBenefits, WorkspaceSolutions } from "./workspace-benefits";
+import { ThreeProductPillars } from "./three-product-pillars";
+import { SpineNetworkContinuity } from "./spine-network-continuity";
 import { WorkspaceSubscriptionValue } from "./workspace-subscription-value";
 import { WorkbenchViewExplorer } from "./workbench-view-explorer";
 
@@ -34,10 +36,9 @@ export function SpineWorkspaceDetails() {
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
             <AnimatedShinyText shimmerWidth={140}>SPINEWORKSPACE · YOUR TEAM AND AI, IN CONTEXT</AnimatedShinyText>
           </p>
-          <h1 id="product-title" className="mt-5">A workspace for connected business work.</h1>
+          <h1 id="product-title" className="mt-5">One Fabric. 13 domains. Ready to work.</h1>
           <p className="innovtech-hero-description">
-            Bring records and evidence from your tools into editable dashboards and Canvas.
-            Your AI Twin prepares the next step; your team stays in control.
+            Spine Fabric assembles authorized truth, relationships and evidence from connected sources. Its domain projections give every team ready-built Workbench views while Twin helps prepare governed next steps.
           </p>
           <div className="innovtech-actions mt-6">
             <a href="https://spineworkspace.com" className="innovtech-button">Explore SpineWorkspace Platform <ArrowRight size={18} aria-hidden /></a>
@@ -53,8 +54,10 @@ export function SpineWorkspaceDetails() {
         </div>
       </section>
 
+      <ThreeProductPillars compact />
       <WorkspaceBenefits detailed />
       <WorkbenchViewExplorer initialDomain="founderops" />
+      <SpineNetworkContinuity />
 
       <section id="how-it-works" aria-labelledby="product-workflow-title" className="innovtech-section innovtech-white-section scroll-mt-24">
         <p className="innovtech-eyebrow">How the workspace works</p>
