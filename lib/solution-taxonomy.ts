@@ -256,7 +256,7 @@ export const INTERNAL_SURFACES: InternalSurface[] = [
   { host: "docs.spineworkspace.com", label: "Docs", note: "Link from header/footer Docs; not a solution page." },
   { host: "brandstore.spineworkspace.com", label: "Brand Store", note: "Internal only." },
   { host: "changelog.spineworkspace.com", label: "Changelog", note: "Internal/product updates." },
-  { host: "blog.spineworkspace.com", label: "Blog", note: "Marketing blog stays on spineinnovtech.spineworkspace.com/blog." },
+  { host: "blog.spineworkspace.com", label: "Blog", note: "Marketing blog stays on spineinnovtech.com/blog." },
   { host: "admin.spineworkspace.com", label: "Admin", note: "Control surface; not buyer-facing." },
 ];
 

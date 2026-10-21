@@ -2,7 +2,7 @@
 
 The official company website for **Spine InnovTech**, builder of **Spine Workspace**. This repository contains company, technology, solutions, resources and corporate marketing pages.
 
-- **Corporate site:** https://spineinnovlabs.spineworkspace.com/
+- **Corporate site:** https://spineinnovtech.com/ (dev: https://dev.spineinnovtech.com/, test: https://test.spineinnovtech.com/)
 - **Source:** `SpineInnovLabs/spinemarketing`, `main`
 - **Host:** Cloudflare Workers + Static Assets
 - **Production Worker:** `spineinnovlabs-marketing`
@@ -10,6 +10,7 @@ The official company website for **Spine InnovTech**, builder of **Spine Workspa
 - **Framework:** Next.js 16 static export, npm + `package-lock.json`
 - **Content:** Sanity at build time (with a legacy-content fallback)
 - **Spine Workspace product details:** `/product` — features, workflow, and underlying technology. Marketing product links stay on this site.
+- **Product funnel:** this site has **no sign-in or sign-up**. Its only product action is **Explore SpineWorkspace** → https://spineworkspace.com, which owns the hand-off to `auth.spineworkspace.com` and `app.spineworkspace.com`. Enforced by `scripts/verify-product-funnel.mjs`.
 
 ## Local development
 

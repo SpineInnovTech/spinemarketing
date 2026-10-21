@@ -46,26 +46,9 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     destination: "/platform/spine-fabric",
     reason: "Legacy name for the Spine Fabric technical page.",
   },
-  {
-    path: "/login",
-    action: "exclude",
-    reason: "Marketing preview of sign-in. noindex. Not a published buyer page.",
-  },
-  {
-    path: "/onboarding",
-    action: "exclude",
-    reason: "Marketing preview of setup. noindex.",
-  },
-  {
-    path: "/request-access",
-    action: "exclude",
-    reason: "Marketing preview of access request. noindex.",
-  },
-  {
-    path: "/workspace",
-    action: "exclude",
-    reason: "Marketing preview of the workbench. noindex.",
-  },
+  // /login, /signup, /onboarding, /workspace and /request-access are not pages:
+  // the corporate site has no auth landing. worker/index.ts 302s them to
+  // https://spineworkspace.com/, which owns sign-in and the app hand-off.
   {
     path: "/product/the-adaptive-workspace",
     action: "keep",

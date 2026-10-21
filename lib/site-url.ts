@@ -2,7 +2,7 @@
  * Public site origin for canonical URLs, sitemap, robots, and structured data.
  * Set at build time via NEXT_PUBLIC_SITE_URL or PUBLIC_SITE_URL.
  */
-const DEFAULT_PRODUCTION_ORIGIN = "https://spineinnovtech.spineworkspace.com";
+const DEFAULT_PRODUCTION_ORIGIN = "https://spineinnovtech.com";
 
 function readConfiguredOrigin(): string {
   const raw =

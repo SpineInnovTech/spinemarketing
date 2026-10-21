@@ -6,6 +6,7 @@ import { WorkbenchViewExplorer } from "@/components/marketing/workbench-view-exp
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site";
 
 export function SolutionsContent() {
   const functionSlugs = new Set(PUBLIC_SOLUTIONS.map(solution => solution.slug));
@@ -29,9 +30,9 @@ export function SolutionsContent() {
               Finance, customer success, product, and leadership need different perspectives, not disconnected versions of business truth. Explore how the same contextual workspace supports different responsibilities, goals, and decisions.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/product" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition hover:bg-[#0055B8]">
-                Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
+              <a href={PRODUCT_SITE_URL} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition hover:bg-[#0055B8]">
+                {EXPLORE_SPINEWORKSPACE_LABEL} <ArrowRight className="h-4 w-4" aria-hidden />
+              </a>
               <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#006FE8] bg-white px-6 text-sm font-semibold text-[#082B5E] shadow-2xs transition hover:bg-[#EBF7FF]">
                 Discuss your use case <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
               </Link>

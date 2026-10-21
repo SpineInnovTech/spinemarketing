@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/marketing/page-hero"
 import { entries } from "@/content/changelog"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
+import { EXPLORE_SPINEWORKSPACE_LABEL, PRODUCT_SITE_URL } from "@/lib/product-site"
 
 export const metadata: Metadata = {
   title: "Changelog | Spine InnovTech",
@@ -31,7 +32,7 @@ export default function ChangelogPage() {
           headline="What's new in SpineWorkspace."
           subhead="The dated log of product updates, new connectors, and architecture improvements. Shorter buyer notes are on Updates."
           primaryCta={{ label: "Company updates", href: "/updates" }}
-          secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+          secondaryCta={{ label: EXPLORE_SPINEWORKSPACE_LABEL, href: PRODUCT_SITE_URL }}
         />
 
         <section className="mx-auto max-w-[800px] px-6 py-16 md:px-16">

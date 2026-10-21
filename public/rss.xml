@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spine InnovTech Blog</title>
-    <link>https://spineinnovtech.spineworkspace.com/blog</link>
+    <link>https://spineinnovtech.com/blog</link>
     <description>Insights on connected workspaces, AI governance, and operational intelligence.</description>
     <language>en</language>
-    <atom:link href="https://spineinnovtech.spineworkspace.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://spineinnovtech.com/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>The tools keep the record. The workspace shows the work.</title>
-      <link>https://spineinnovtech.spineworkspace.com/blog/spine-fabric-contextual-continuity-layer</link>
-      <guid>https://spineinnovtech.spineworkspace.com/blog/spine-fabric-contextual-continuity-layer</guid>
+      <link>https://spineinnovtech.com/blog/spine-fabric-contextual-continuity-layer</link>
+      <guid>https://spineinnovtech.com/blog/spine-fabric-contextual-continuity-layer</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
       <description>Four kinds of information stay apart: the record, the evidence, the draft, and the person. Twin prepares within authorized context. Consequential actions need the right authority.</description>
     </item>
     <item>
       <title>Stop being the translator between your tools</title>
-      <link>https://spineinnovtech.spineworkspace.com/blog/stop-being-the-human-api</link>
-      <guid>https://spineinnovtech.spineworkspace.com/blog/stop-being-the-human-api</guid>
+      <link>https://spineinnovtech.com/blog/stop-being-the-human-api</link>
+      <guid>https://spineinnovtech.com/blog/stop-being-the-human-api</guid>
       <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
       <description>Every founder, operator, and account manager starts their day the same way: open 12 tabs, copy-paste context, and lose an hour before real work begins.</description>
     </item>
     <item>
       <title>Why AI needs your approval — every single time</title>
-      <link>https://spineinnovtech.spineworkspace.com/blog/why-ai-needs-your-approval</link>
-      <guid>https://spineinnovtech.spineworkspace.com/blog/why-ai-needs-your-approval</guid>
+      <link>https://spineinnovtech.com/blog/why-ai-needs-your-approval</link>
+      <guid>https://spineinnovtech.com/blog/why-ai-needs-your-approval</guid>
       <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
       <description>Most AI tools act first and ask questions later. We built Spine InnovTech the opposite way, and here's why that matters.</description>
     </item>

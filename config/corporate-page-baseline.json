@@ -1,6 +1,6 @@
 {
   "sourceCommit": "ed3b2472979e59108c60f9ffac56310ee8851b7d",
-  "note": "Preserve every pre-recovery exported page, including legacy aliases and noindex account previews; public directory excludes account previews and follows redirect policy.",
+  "note": "Preserve every pre-recovery exported page, including legacy aliases. Account previews (/login, /onboarding, /request-access, /workspace) were removed on 2026-10-21: the corporate site has no auth landing and the Worker redirects those paths to https://spineworkspace.com/.",
   "routes": [
     "/about",
     "/account-success",
@@ -24,8 +24,6 @@
     "/host-connected-environment",
     "/",
     "/integrations",
-    "/login",
-    "/onboarding",
     "/personal-ops",
     "/platform/how-it-works",
     "/platform/infrastructure",
@@ -42,7 +40,6 @@
     "/product/the-adaptive-workspace",
     "/product",
     "/proof",
-    "/request-access",
     "/resources/campaign",
     "/resources",
     "/security",
@@ -80,7 +77,6 @@
     "/use-cases/sales",
     "/use-cases/teams",
     "/use-cases",
-    "/why",
-    "/workspace"
+    "/why"
   ]
 }

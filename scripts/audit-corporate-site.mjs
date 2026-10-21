@@ -28,7 +28,8 @@ function visitPages(directory, segments = []) {
   }
 }
 visitPages("app");
-check(routeFiles.length >= 71, "expected at least 71 corporate and legacy route entrypoints");
+// 72 route entrypoints minus the 4 account previews removed on 2026-10-21 (no auth landing).
+check(routeFiles.length >= 68, "expected at least 68 corporate and legacy route entrypoints");
 function existsRoute(route) {
   if (routePaths.has(route) || existsSync("public" + route)) return true;
   return [...routePaths].some((pattern) => {
@@ -88,7 +89,10 @@ check(meta.includes('template: "%s"'), "metadata template can duplicate corporat
 check(/path: "\/product",\s*action: "keep"/.test(policy), "product-details page must be included in the corporate sitemap");
 check(source("app/product/page.tsx").includes("SpineWorkspaceDetails"), "product overview must render product details instead of redirecting");
 check(!source("lib/navigation.ts").includes("SPINE_WORKSPACE_APEX"), "marketing product navigation must remain on this site");
-check(existsSync("app/(enter)/layout.tsx") && source("app/(enter)/layout.tsx").includes("index: false"), "marketing account previews must be noindex");
+// Corporate → product funnel: no auth landing here; the product site owns sign-in and the app.
+check(!existsSync("app/(enter)"), "corporate site must not ship sign-in, onboarding or workspace previews");
+check(!/Sign (in|up)|\/signup|\/login/.test(source("components/header.tsx")), "corporate header must not offer Sign in / Sign up");
+check(source("components/header.tsx").includes("PRODUCT_SITE_URL"), "corporate header must offer Explore SpineWorkspace to the product site");
 check(about.includes("Spine InnovTech") && !about.includes("$8M"), "unsupported founder case must not be presented");
 check(!services.includes("14 days") && services.includes("text-white"), "services must avoid invented delivery guarantees");
 check(!contact.includes("SOC 2 aligned") && !contact.includes("24 hours") && !contact.includes("1–2 weeks"), "contact has unsupported guarantees");

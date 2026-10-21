@@ -2,7 +2,7 @@
  * Post-Wrangler production acceptance. Fails when CDN/Worker still serves the
  * previous release. This check runs on Cloudflare Builds after deployment.
  */
-const origin = "https://spineinnovtech.spineworkspace.com";
+const origin = process.env.SPINE_LIVE_ORIGIN || "https://spineinnovtech.com";
 const retries = Number(process.env.SPINE_DEPLOY_VERIFY_ATTEMPTS || 8);
 let last = "no response";
 for (let attempt = 1; attempt <= retries; attempt++) {
