@@ -14,26 +14,26 @@ export const metadata: Metadata = {
     types: { "application/rss+xml": "/rss.xml" },
   },
   title: {
-    default: "Spine InnovTech | Intelligence for Connected Business",
+    default: "Spine InnovTech | One Context Across Business Work",
     template: "%s",
   },
   description:
-    "Technology and AI innovation for shared business context, governed action, and connected work. Meet the company behind SpineWorkspace.",
+    "Spine InnovTech builds Spine Workspace: one governed context Fabric across 13 domains, ready-built Workbench views and cross-host continuity through Spine Network.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Spine InnovTech | Intelligence for Connected Business",
+    title: "Spine InnovTech | One Context Across Business Work",
     description:
-      "Technology and AI innovation for shared business context, governed action, and connected work. Meet the company behind SpineWorkspace.",
+      "Governed business context, 13 domain projections and ready-to-work views. Meet the company behind SpineWorkspace.",
     siteName: "Spine InnovTech",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spine InnovTech | Intelligence for Connected Business",
+    title: "Spine InnovTech | One Context Across Business Work",
     description:
       "Technology and AI innovation for shared business context, governed action, and connected work.",
     images: ["/og.png"],
