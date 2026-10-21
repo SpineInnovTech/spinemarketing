@@ -40,8 +40,13 @@ check(existsSync("wrangler.jsonc"), "Cloudflare Wrangler config missing");
 const wrangler = JSON.parse(read("wrangler.jsonc"));
 check(wrangler.assets?.directory === "./out", "Wrangler must deploy the Next.js out/ directory");
 check(
-  wrangler.env?.prod?.routes?.some((route) => route.pattern === "spineinnovtech.spineworkspace.com"),
-  "spineinnovtech.spineworkspace.com hostname is not bound to Cloudflare Worker",
+  wrangler.env?.prod?.routes?.some((route) => route.pattern === "spineinnovtech.com"),
+  "spineinnovtech.com apex hostname is not bound to Cloudflare Worker",
+);
+check(
+  wrangler.env?.dev?.routes?.some((route) => route.pattern === "dev.spineinnovtech.com") &&
+    wrangler.env?.test?.routes?.some((route) => route.pattern === "test.spineinnovtech.com"),
+  "dev.spineinnovtech.com / test.spineinnovtech.com environment hostnames are not bound",
 );
 
 const home = read("app/page.tsx");

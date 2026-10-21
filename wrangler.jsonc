@@ -21,28 +21,48 @@
   "env": {
     "dev": {
       "name": "spineinnovlabs-marketing-dev",
-      "workers_dev": true
+      "workers_dev": true,
+      "routes": [
+        {
+          "pattern": "dev.spineinnovtech.com",
+          "custom_domain": true
+        }
+      ]
     },
     "test": {
       "name": "spineinnovlabs-marketing-test",
-      "workers_dev": true
+      "workers_dev": true,
+      "routes": [
+        {
+          "pattern": "test.spineinnovtech.com",
+          "custom_domain": true
+        }
+      ]
     },
     "prod": {
       "name": "spineinnovlabs-marketing",
       "routes": [
         {
-          "pattern": "spineinnovlabs.spineworkspace.com",
+          "pattern": "spineinnovtech.com",
+          "custom_domain": true
+        },
+        {
+          "pattern": "www.spineinnovtech.com",
           "custom_domain": true
         },
         {
           "pattern": "spineinnovtech.spineworkspace.com",
           "custom_domain": true
+        },
+        {
+          "pattern": "spineinnovlabs.spineworkspace.com",
+          "custom_domain": true
         }
       ],
       "vars": {
         "CANONICAL_REDIRECTS_ENABLED": "true",
-        "CANONICAL_SITE_URL": "https://spineinnovtech.spineworkspace.com",
-        "LEGACY_REDIRECT_HOSTS": "spineinnovlabs.spineworkspace.com,www.spineinnovlabs.com,spineinnovlabs.com"
+        "CANONICAL_SITE_URL": "https://spineinnovtech.com",
+        "LEGACY_REDIRECT_HOSTS": "www.spineinnovtech.com,spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,www.spineinnovlabs.com,spineinnovlabs.com"
       }
     }
   }

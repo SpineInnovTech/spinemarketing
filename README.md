@@ -2,7 +2,7 @@
 
 The official company website for **Spine InnovTech**, builder of **Spine Workspace**. This repository contains company, technology, solutions, resources and corporate marketing pages.
 
-- **Corporate site:** https://spineinnovlabs.spineworkspace.com/
+- **Corporate site:** https://spineinnovtech.com/ (dev: https://dev.spineinnovtech.com/, test: https://test.spineinnovtech.com/)
 - **Source:** `SpineInnovLabs/spinemarketing`, `main`
 - **Host:** Cloudflare Workers + Static Assets
 - **Production Worker:** `spineinnovlabs-marketing`

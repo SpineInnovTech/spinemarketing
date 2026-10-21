@@ -1,7 +1,8 @@
 /**
  * Edge wrapper for spineinnovlabs-marketing static assets.
- * Domain cutover: enable CANONICAL_REDIRECT_HOST + CANONICAL_SITE_URL vars on prod
- * to 301 legacy hostnames to the apex (see docs/DEPLOYMENT.md).
+ * Canonical corporate origin is the apex https://spineinnovtech.com; prod vars
+ * (CANONICAL_REDIRECTS_ENABLED, CANONICAL_SITE_URL, LEGACY_REDIRECT_HOSTS) 301
+ * www and legacy hostnames to it (see docs/DEPLOYMENT.md).
  */
 
 export interface Env {

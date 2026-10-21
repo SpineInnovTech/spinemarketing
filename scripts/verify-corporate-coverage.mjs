@@ -28,7 +28,7 @@ const redirects = new Map(
     .map((line) => line.trim().split(/\s+/))
     .map(([source, target]) => [source, target]),
 );
-const origin = "https://spineinnovtech.spineworkspace.com";
+const origin = "https://spineinnovtech.com";
 const excluded = new Set([
   "/404",
   "/_not-found",

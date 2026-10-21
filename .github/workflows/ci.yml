@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 env:
-  NEXT_PUBLIC_SITE_URL: https://spineinnovlabs.spineworkspace.com
+  NEXT_PUBLIC_SITE_URL: https://spineinnovtech.com
 
 jobs:
   build:

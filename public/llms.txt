@@ -2,45 +2,45 @@
 
 > Intelligence for Connected Business — and SpineWorkspace, where humans and AI work from shared business context.
 
-Canonical Domain: https://spineinnovtech.spineworkspace.com
-Documentation Index: https://spineinnovtech.spineworkspace.com/llms.txt
+Canonical Domain: https://spineinnovtech.com
+Documentation Index: https://spineinnovtech.com/llms.txt
 
 ## Platform Architecture & Technical Documentation
-- [Documentation Hub](https://spineinnovtech.spineworkspace.com/docs): Technical documentation hub, architecture specifications, and API reference.
-- [Platform Architecture](https://spineinnovtech.spineworkspace.com/platform): Overview of the Spine platform, twin architecture, and contextual continuity layer.
-- [Spine Fabric](https://spineinnovtech.spineworkspace.com/platform/spine-fabric): Contextual continuity layer connecting source systems without data duplication.
-- [How It Works](https://spineinnovtech.spineworkspace.com/platform/how-it-works): Deterministic ingestion, entity resolution, and governance boundaries.
-- [Infrastructure](https://spineinnovtech.spineworkspace.com/platform/infrastructure): Multi-tenant isolation, edge routing, and cloud infrastructure.
-- [Integrations Catalog](https://spineinnovtech.spineworkspace.com/platform/integrations): 65+ connectors for CRM, ERP, support, code, and communications.
-- [Developers](https://spineinnovtech.spineworkspace.com/developers): MCP server integration, local development, and API access.
-- [Security Architecture](https://spineinnovtech.spineworkspace.com/security): Tenant isolation, encryption, access boundaries, and audit logging.
-- [Governance Model](https://spineinnovtech.spineworkspace.com/governance): Read-and-propose execution model with mandatory human approval.
-- [Business Context](https://spineinnovtech.spineworkspace.com/business-context): Carrying durable context and evidence across systems of record.
-- [Spine Twin](https://spineinnovtech.spineworkspace.com/twin): Context-aware assistant operating strictly within permitted business boundaries.
-- [The Adaptive Workspace](https://spineinnovtech.spineworkspace.com/adaptive-workspace): Role-based workbenches adapting to each function.
-- [Approval Gates](https://spineinnovtech.spineworkspace.com/product/approval-gate-twin): Governed actions requiring human sign-off before write-back.
-- [Continuity](https://spineinnovtech.spineworkspace.com/continuity): Multi-session conversational and task continuity without context loss.
-- [Host-Connected Environment](https://spineinnovtech.spineworkspace.com/host-connected-environment): Operating natively inside customer-managed environments.
+- [Documentation Hub](https://spineinnovtech.com/docs): Technical documentation hub, architecture specifications, and API reference.
+- [Platform Architecture](https://spineinnovtech.com/platform): Overview of the Spine platform, twin architecture, and contextual continuity layer.
+- [Spine Fabric](https://spineinnovtech.com/platform/spine-fabric): Contextual continuity layer connecting source systems without data duplication.
+- [How It Works](https://spineinnovtech.com/platform/how-it-works): Deterministic ingestion, entity resolution, and governance boundaries.
+- [Infrastructure](https://spineinnovtech.com/platform/infrastructure): Multi-tenant isolation, edge routing, and cloud infrastructure.
+- [Integrations Catalog](https://spineinnovtech.com/platform/integrations): 65+ connectors for CRM, ERP, support, code, and communications.
+- [Developers](https://spineinnovtech.com/developers): MCP server integration, local development, and API access.
+- [Security Architecture](https://spineinnovtech.com/security): Tenant isolation, encryption, access boundaries, and audit logging.
+- [Governance Model](https://spineinnovtech.com/governance): Read-and-propose execution model with mandatory human approval.
+- [Business Context](https://spineinnovtech.com/business-context): Carrying durable context and evidence across systems of record.
+- [Spine Twin](https://spineinnovtech.com/twin): Context-aware assistant operating strictly within permitted business boundaries.
+- [The Adaptive Workspace](https://spineinnovtech.com/adaptive-workspace): Role-based workbenches adapting to each function.
+- [Approval Gates](https://spineinnovtech.com/product/approval-gate-twin): Governed actions requiring human sign-off before write-back.
+- [Continuity](https://spineinnovtech.com/continuity): Multi-session conversational and task continuity without context loss.
+- [Host-Connected Environment](https://spineinnovtech.com/host-connected-environment): Operating natively inside customer-managed environments.
 
 ## Role & Functional Solutions
-- [Account Success](https://spineinnovtech.spineworkspace.com/solutions/customer-success): Carry customer history from onboarding to growth.
-- [Finance & Business Operations](https://spineinnovtech.spineworkspace.com/solutions/finance): Revenue, risk, and operations from unified truth.
-- [Sales](https://spineinnovtech.spineworkspace.com/solutions/sales): Revenue continuity grounded in records and conversation context.
-- [Marketing](https://spineinnovtech.spineworkspace.com/solutions/marketing): Campaigns connected to verifiable business outcomes.
-- [Content](https://spineinnovtech.spineworkspace.com/solutions/content): Editorial production with the brief's full context.
-- [Customer Support](https://spineinnovtech.spineworkspace.com/solutions/customer-support): Ticket resolution with the full customer story in view.
-- [Product & Engineering](https://spineinnovtech.spineworkspace.com/solutions/product-engineering): Roadmaps and delivery linked to customer signals.
-- [Founders & CXOs](https://spineinnovtech.spineworkspace.com/solutions/founders): Goals, KPIs, decisions, and execution in one picture.
-- [Human Resources](https://spineinnovtech.spineworkspace.com/solutions/human-resources): People operations with the records and context for each decision.
-- [Legal](https://spineinnovtech.spineworkspace.com/solutions/legal): Contract reviews with evidence and authority.
-- [Memory & Knowledge](https://spineinnovtech.spineworkspace.com/solutions/memoryandknowledge): Organizational memory that compounds over time.
-- [Individual / Personal](https://spineinnovtech.spineworkspace.com/solutions/individual): Personal workspace with boundaries kept strictly separate.
+- [Account Success](https://spineinnovtech.com/solutions/customer-success): Carry customer history from onboarding to growth.
+- [Finance & Business Operations](https://spineinnovtech.com/solutions/finance): Revenue, risk, and operations from unified truth.
+- [Sales](https://spineinnovtech.com/solutions/sales): Revenue continuity grounded in records and conversation context.
+- [Marketing](https://spineinnovtech.com/solutions/marketing): Campaigns connected to verifiable business outcomes.
+- [Content](https://spineinnovtech.com/solutions/content): Editorial production with the brief's full context.
+- [Customer Support](https://spineinnovtech.com/solutions/customer-support): Ticket resolution with the full customer story in view.
+- [Product & Engineering](https://spineinnovtech.com/solutions/product-engineering): Roadmaps and delivery linked to customer signals.
+- [Founders & CXOs](https://spineinnovtech.com/solutions/founders): Goals, KPIs, decisions, and execution in one picture.
+- [Human Resources](https://spineinnovtech.com/solutions/human-resources): People operations with the records and context for each decision.
+- [Legal](https://spineinnovtech.com/solutions/legal): Contract reviews with evidence and authority.
+- [Memory & Knowledge](https://spineinnovtech.com/solutions/memoryandknowledge): Organizational memory that compounds over time.
+- [Individual / Personal](https://spineinnovtech.com/solutions/individual): Personal workspace with boundaries kept strictly separate.
 
 ## Company & Resources
-- [About Spine InnovTech](https://spineinnovtech.spineworkspace.com/about): Origins, mission, and operating principles.
-- [Company Overview](https://spineinnovtech.spineworkspace.com/company): Corporate profile and leadership perspective.
-- [Subscriptions & Pricing](https://spineinnovtech.spineworkspace.com/pricing): Transparent commercial engagement and limits.
-- [Contact](https://spineinnovtech.spineworkspace.com/contact): Reach out for quotes, architectural reviews, or demonstrations.
-- [Blog](https://spineinnovtech.spineworkspace.com/blog): Perspectives on AI governance, shared context, and connected work.
-- [Resources](https://spineinnovtech.spineworkspace.com/resources): Public assets, documentation references, and architectural materials.
-- [Sitemap Directory](https://spineinnovtech.spineworkspace.com/site-map): Complete index of all public website pages.
+- [About Spine InnovTech](https://spineinnovtech.com/about): Origins, mission, and operating principles.
+- [Company Overview](https://spineinnovtech.com/company): Corporate profile and leadership perspective.
+- [Subscriptions & Pricing](https://spineinnovtech.com/pricing): Transparent commercial engagement and limits.
+- [Contact](https://spineinnovtech.com/contact): Reach out for quotes, architectural reviews, or demonstrations.
+- [Blog](https://spineinnovtech.com/blog): Perspectives on AI governance, shared context, and connected work.
+- [Resources](https://spineinnovtech.com/resources): Public assets, documentation references, and architectural materials.
+- [Sitemap Directory](https://spineinnovtech.com/site-map): Complete index of all public website pages.
