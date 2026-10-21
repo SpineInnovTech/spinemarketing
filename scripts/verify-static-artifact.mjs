@@ -27,18 +27,22 @@ if (!productAlias || productAlias[1] !== "/product" || productAlias[2] !== "301"
 if (!text.includes("SpineWorkspace connects your tools, context and team.") || !text.includes("Spine InnovTech")) {
   throw new Error("Static export missing corporate hero/company identity.");
 }
+// Commercial plans, the calculator and checkout are hosted by the product site
+// (2187e22). Corporate pricing explains access and hands off to it; it must not
+// publish a separate machine-readable offer that could drift from the product site.
 const pricing = readFileSync("out/pricing.html", "utf8");
-const pricingText = pricing.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");
 const pricingSchemas = [...pricing.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
-const applicationOffer = pricingSchemas.find((schema) => schema["@type"] === "SoftwareApplication")?.offers;
-if (!pricingText.includes("US$49") || !/per user \/ month/.test(pricingText) || !pricingText.includes("Billed monthly") || !pricingText.includes("AI/provider usage and custom setup are scoped separately.")) {
-  throw new Error("Starting price must show currency, per-user monthly billing and separately scoped costs.");
+if (!pricing.includes('href="https://spineworkspace.com/pricing"')) {
+  throw new Error("Corporate pricing must hand commercial plans off to https://spineworkspace.com/pricing.");
 }
-if (applicationOffer?.price !== 49 || applicationOffer.priceCurrency !== "USD" || applicationOffer.priceSpecification?.unitText !== "user per month" || applicationOffer.priceSpecification?.billingDuration !== "P1M") {
-  throw new Error("Pricing structured offer must match the visible monthly subscription.");
+if (!pricing.includes('href="/product"')) {
+  throw new Error("Corporate pricing must link to the local product-details page.");
 }
-for (const [route, html] of [["/product", product]]) {
-  if (!html.includes("US$49") || !html.includes('href="/pricing"')) throw new Error(`${route} must expose the starting price and full pricing terms.`);
+if (pricingSchemas.some((schema) => schema.offers)) {
+  throw new Error("Corporate pricing must not publish its own structured offer; plans live on spineworkspace.com/pricing.");
+}
+if (!product.includes('href="https://spineworkspace.com/pricing"')) {
+  throw new Error("/product must link to product-site pricing and plans.");
 }
 const header = text.match(/<header\b[\s\S]*?<\/header>/)?.[0] ?? "";
 for (const category of ["Company", "Platform", "Insights"]) {
