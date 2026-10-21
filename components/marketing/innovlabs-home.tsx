@@ -28,7 +28,7 @@ export function InnovLabsHome() {
             <BlurFade delay={0.02} inView>
               <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8] shadow-2xs">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · SPINEWORKSPACE</AnimatedShinyText>
+                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · SPINE WORKSPACE</AnimatedShinyText>
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
