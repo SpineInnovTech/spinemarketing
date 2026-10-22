@@ -47,7 +47,6 @@ const publicSurface = [
   "app/page.tsx",
   "app/company/page.tsx",
   "app/about/content.tsx",
-  "app/services/content.tsx",
   "app/contact/content.tsx",
   "app/portfolio/page.tsx",
   "app/pricing/page.tsx",
@@ -70,7 +69,6 @@ const policy = source("lib/route-policy.ts");
 const privacy = source("app/privacy/page.tsx");
 const terms = source("app/terms/page.tsx");
 const about = source("app/about/content.tsx");
-const services = source("app/services/content.tsx");
 const contact = source("app/contact/content.tsx");
 const form = source("components/lead-form.tsx");
 
@@ -99,7 +97,6 @@ check(source("app/product/page.tsx").includes("SpineWorkspaceDetails"), "product
 check(!source("lib/navigation.ts").includes("SPINE_WORKSPACE_APEX"), "marketing product navigation must remain on this site");
 check(existsSync("app/(enter)/layout.tsx") && source("app/(enter)/layout.tsx").includes("index: false"), "marketing account previews must be noindex");
 check(about.includes("Spine InnovTech") && !about.includes("$8M"), "unsupported founder case must not be presented");
-check(!services.includes("14 days") && services.includes("text-white"), "services must avoid invented delivery guarantees");
 check(!contact.includes("SOC 2 aligned") && !contact.includes("24 hours") && !contact.includes("1–2 weeks"), "contact has unsupported guarantees");
 check(form.includes('setStatus("prepared")') && form.includes("has not submitted it"), "mailto fallback must never claim a received enquiry");
 check(privacy.includes("Privacy Policy") && terms.includes("Terms"), "legal pages must exist");

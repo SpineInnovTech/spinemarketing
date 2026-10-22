@@ -607,21 +607,6 @@ export const pages = {
       },
     ],
   },
-
-  useCasesHub: {
-    meta: {
-      title: "Use Cases — Business work, connected",
-      description: "See how SpineWorkspace applies to your role and operating model.",
-      path: "/use-cases",
-    },
-    hero: {
-      badge: "Use Cases",
-      headline: "Business work, connected.",
-      subhead: "See how SpineWorkspace applies to your role.",
-      primaryCta: { label: "Book a demo", href: "/contact?intent=demo" },
-    },
-    sections: [],
-  },
 } satisfies Record<string, NarrativePageCopy | { meta: NarrativePageCopy["meta"]; hero: PageHeroCopy; sections: ContentSectionCopy[] }>;
 
 export const proofCards: ProofCardCopy[] = [

@@ -154,11 +154,6 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     reason: "Spine InnovTech company page. Distinct from About.",
   },
   {
-    path: "/use-cases",
-    action: "keep",
-    reason: "Practical scenarios hub. Distinct from the solutions catalogue.",
-  },
-  {
     path: "/use-cases/sales",
     action: "keep",
     reason: "Sales scenario. Distinct from /solutions/sales.",
@@ -202,16 +197,6 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     path: "/resources",
     action: "keep",
     reason: "Resources hub. Not a duplicate of the blog.",
-  },
-  {
-    path: "/resources/campaign",
-    action: "keep",
-    reason: "Campaign gallery with its own architecture assets.",
-  },
-  {
-    path: "/services",
-    action: "keep",
-    reason: "Implementation and onboarding services. Not a duplicate of Contact.",
   },
   {
     path: "/changelog",
