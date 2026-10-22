@@ -30,7 +30,7 @@ if (!text.includes("We build the foundation for connected business work.") || !t
 const pricing = readFileSync("out/pricing.html", "utf8");
 const pricingText = pricing.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");
 const pricingSchemas = [...pricing.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
-if (!pricingText.includes("pricing") || !pricingText.includes("SpineWorkspace") || !pricing.includes("https://spineworkspace.com/pricing") || !pricing.includes('href="/product"')) {
+if (!pricingText.includes("pricing") || !pricingText.includes("Spine Workspace") || !pricing.includes("https://spineworkspace.com/pricing") || !pricing.includes('href="/product"')) {
   throw new Error("Pricing page must expose commercial terms, link to product pricing calculator, and link to product details.");
 }
 if (!pricingSchemas.some((schema) => schema["@type"] === "FAQPage" || schema["@type"] === "BreadcrumbList")) {

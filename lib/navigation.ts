@@ -29,7 +29,7 @@ export const headerNavigation: NavItem[] = [
     label: "Platform & Products",
     href: "/platform",
     featured: {
-      name: "SpineWorkspace",
+      name: "Spine Workspace",
       href: "https://spineworkspace.com",
       icon: Layers3,
       desc: "Our core shared workspace for humans and AI (spineworkspace.com)",
@@ -73,7 +73,7 @@ export const footerColumns: FooterColumn[] = [
   {
     heading: "Platform & Products",
     links: [
-      { name: "SpineWorkspace", href: "https://spineworkspace.com", external: true },
+      { name: "Spine Workspace", href: "https://spineworkspace.com", external: true },
       { name: "Spine Fabric", href: "/platform/spine-fabric" },
       { name: "Spine Twin", href: "/twin" },
       { name: "Governance & Runtime", href: "/governance" },

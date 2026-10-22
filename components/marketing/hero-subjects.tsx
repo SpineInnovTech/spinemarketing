@@ -260,7 +260,7 @@ export function AppCluster() {
       <div className="relative mx-auto hidden h-[440px] max-w-[560px] lg:block">
         <div className="absolute left-1/2 top-1/2 z-10 w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-[#D9E4EF] bg-[#032D60] px-4 py-5 text-center text-white shadow-[0_8px_24px_rgba(3,45,96,0.12)]">
           <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#00A2DF]">Truth and context</p>
-          <p className="mt-1 text-[16px] font-semibold">SpineWorkspace</p>
+          <p className="mt-1 text-[16px] font-semibold">Spine Workspace</p>
         </div>
         {CLUSTER.map((logo, index) => (
           <div key={logo.id} className={`absolute ${CLUSTER_POSITIONS[index]}`}>
@@ -270,7 +270,7 @@ export function AppCluster() {
       </div>
       <ul className="flex flex-wrap items-center gap-3 lg:hidden">
         <li className="inline-flex shrink-0 items-center rounded-xl bg-[#032D60] px-3 py-2 text-[13px] font-semibold whitespace-nowrap text-white">
-          SpineWorkspace
+          Spine Workspace
         </li>
         {CLUSTER.map((logo) => (
           <li key={logo.id}>

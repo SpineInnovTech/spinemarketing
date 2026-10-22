@@ -31,7 +31,7 @@ export function ProofSection() {
         >
           <div className="arvio-card p-10">
             <p className="text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.6] tracking-[-0.02em] text-foreground">
-              An eight million account showed quiet distress across many tools. SpineWorkspace caught the pattern early, so the team stepped in with full control.
+              An eight million account showed quiet distress across many tools. Spine Workspace caught the pattern early, so the team stepped in with full control.
             </p>
 
             <div className="mt-8 grid grid-cols-1 gap-4 border-t border-border/60 pt-6 sm:grid-cols-3">

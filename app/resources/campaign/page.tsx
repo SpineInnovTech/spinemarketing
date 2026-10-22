@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     description:
       "Architecture illustrations and 36 campaign concepts. Illustrative assets, not evidence of deployed product controls.",
     images: [
-      { url: "/images/campaign/Post-Spine.jpg", width: 1080, height: 1080, alt: "SpineWorkspace — The SpineWorkspace Architecture" },
+      { url: "/images/campaign/Post-Spine.jpg", width: 1080, height: 1080, alt: "Spine Workspace — The Spine Workspace Architecture" },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Campaign Gallery — Architecture & Creatives | Spine InnovTech",
-    description: "Architecture illustrations and earlier campaign concepts for SpineWorkspace.",
+    description: "Architecture illustrations and earlier campaign concepts for Spine Workspace.",
     images: ["/images/campaign/Post-Spine.jpg"],
   },
 }
@@ -28,18 +28,18 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "SpineWorkspace Campaign Gallery",
+  name: "Spine Workspace Campaign Gallery",
   description:
     "36 campaign designs across LinkedIn and WhatsApp — crafted for Account Success, Business Ops, and Personal Ops professionals.",
   url: absoluteUrl("/resources/campaign"),
   publisher: {
     "@type": "Organization",
-    name: "SpineWorkspace",
+    name: "Spine Workspace",
     url: absoluteUrl("/"),
   },
   mainEntity: {
     "@type": "ImageGallery",
-    name: "SpineWorkspace Marketing Campaign Designs",
+    name: "Spine Workspace Marketing Campaign Designs",
     numberOfItems: 36,
     about: [
       { "@type": "Thing", name: "Account Success" },

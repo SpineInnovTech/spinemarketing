@@ -52,7 +52,7 @@ function DefaultHeroArtCard({
   headline: string;
   principle?: string;
 }) {
-  const surfaceLabel = badge?.trim() || "SpineWorkspace Surface";
+  const surfaceLabel = badge?.trim() || "Spine Workspace Surface";
   const headlineLine = headline.split("\n")[0]?.trim() || headline;
 
   return (
@@ -130,7 +130,7 @@ function DefaultHeroArtCard({
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#D9E4EF] bg-white px-3.5 py-2 text-[12px] text-[#526479]">
         <span className="inline-flex items-center gap-1.5 font-medium text-[#032D60]">
           <CheckCircle2 className="h-3.5 w-3.5 text-[#006FE8]" aria-hidden />
-          Spine InnovTech · SpineWorkspace architecture
+          Spine InnovTech · Spine Workspace architecture
         </span>
         <span>Illustrative interface · source systems stay authoritative</span>
       </div>

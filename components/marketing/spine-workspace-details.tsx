@@ -40,7 +40,7 @@ export function SpineWorkspaceDetails() {
             Your AI Twin prepares the next step; your team stays in control.
           </p>
           <div className="innovtech-actions mt-6">
-            <a href="https://spineworkspace.com" className="innovtech-button">Explore SpineWorkspace Platform <ArrowRight size={18} aria-hidden /></a>
+            <a href="https://spineworkspace.com" className="innovtech-button">Explore Spine Workspace Platform <ArrowRight size={18} aria-hidden /></a>
             <a href="https://spineworkspace.com/pricing" className="innovtech-text-link">View Product Pricing &amp; Plans <ArrowRight size={18} aria-hidden /></a>
           </div>
         </div>

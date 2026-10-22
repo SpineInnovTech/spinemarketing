@@ -17,15 +17,15 @@ export function WorkspaceSubscriptionValue({ accountActions }: { accountActions?
         <div className="mx-auto max-w-[1220px] px-5 sm:px-8 lg:px-12">
           <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            Why choose SpineWorkspace?
+            Why choose Spine Workspace?
           </p>
           <h2 id="workspace-subscription-title" className="mt-5 max-w-[760px] text-[length:var(--marketing-heading-size)] font-semibold leading-[1.2] tracking-[-.03em]">Keep your tools. Connect the work.</h2>
-          <p className="mt-5 max-w-[760px] text-[length:var(--marketing-body-size)] leading-[1.85] text-[#4E607A]">Your tools hold the records. SpineWorkspace brings the context, working views and decisions together.</p>
+          <p className="mt-5 max-w-[760px] text-[length:var(--marketing-body-size)] leading-[1.85] text-[#4E607A]">Your tools hold the records. Spine Workspace brings the context, working views and decisions together.</p>
           <div className="relative mt-8 overflow-hidden rounded-2xl border border-[#CBE5FA] bg-white shadow-[0_8px_30px_-10px_rgba(0,111,232,0.08)]">
             <BorderBeam size={200} duration={16} />
             <table className="w-full border-collapse text-left text-sm leading-7">
-              <caption className="sr-only">How SpineWorkspace complements existing application categories</caption>
-              <thead className="bg-[#F0F8FF]"><tr><th scope="col" className="w-2/5 px-4 py-4 font-semibold sm:px-6">What you already use</th><th scope="col" className="px-4 py-4 font-semibold sm:px-6">What SpineWorkspace adds</th></tr></thead>
+              <caption className="sr-only">How Spine Workspace complements existing application categories</caption>
+              <thead className="bg-[#F0F8FF]"><tr><th scope="col" className="w-2/5 px-4 py-4 font-semibold sm:px-6">What you already use</th><th scope="col" className="px-4 py-4 font-semibold sm:px-6">What Spine Workspace adds</th></tr></thead>
               <tbody>
                 {comparisons.map(([existing, value]) => <tr key={existing} className="border-t border-[#D6E8F8] transition-colors hover:bg-[#F8FCFF]"><th scope="row" className="px-4 py-4 align-top font-medium sm:px-6">{existing}</th><td className="px-4 py-4 align-top text-[#4E607A] sm:px-6">{value}</td></tr>)}
               </tbody>
@@ -52,7 +52,7 @@ export function WorkspaceSubscriptionValue({ accountActions }: { accountActions?
           </div>
           <div className="relative overflow-hidden rounded-2xl border border-[#CBE5FA] bg-white p-6 shadow-[0_18px_48px_-12px_rgba(0,111,232,0.12)] sm:p-8">
             <BorderBeam size={220} duration={14} />
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">SpineWorkspace Platform · Commercial Access</p>
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">Spine Workspace Platform · Commercial Access</p>
             <p className="mt-5 text-[length:min(2.8rem,var(--marketing-title-size))] font-semibold leading-tight tracking-[-.04em]">Usage-Governed<span className="text-base font-medium tracking-normal block text-[#4E607A] mt-1">Starting with permanent free host-discovery</span></p>
             <p className="mt-3 text-sm font-semibold text-[#4E607A]">Scale based on connected systems of record and sync streams</p>
             <p className="mt-4 text-sm leading-7 text-[#4E607A]">Interactive pricing calculator, connector allowances, and self-service signup are hosted directly on the product site.</p>

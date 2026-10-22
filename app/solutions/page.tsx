@@ -13,12 +13,12 @@ import { WorkspaceAuthActions } from "@/components/marketing/workspace-auth-acti
 export const metadata: Metadata = {
   title: "Solutions by Team & Industry | Spine InnovTech",
   description:
-    "Explore SpineWorkspace features and workflows for sales, customer success, finance, operations, and industry-specific work. Sign up or sign in to your authorized workspace.",
+    "Explore Spine Workspace features and workflows for sales, customer success, finance, operations, and industry-specific work. Sign up or sign in to your authorized workspace.",
   alternates: { canonical: "/solutions" },
   openGraph: {
     title: "Solutions by Team & Industry | Spine InnovTech",
     description: "Explore domain-specific features, connected context, and governed workflows by team and industry.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace Solutions" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace Solutions" }],
   },
 }
 
@@ -32,8 +32,8 @@ export default function SolutionsPage() {
       <Header />
       <main id="main">
         <SolutionsContent />
-        <section className="mx-auto max-w-7xl px-6 py-8 sm:px-8" aria-label="Enter SpineWorkspace">
-          <h2 className="text-[length:min(1.5rem,var(--marketing-heading-size))]/[var(--tw-leading,1.3333333333)] font-semibold text-[#082B5E]">Bring your team’s work into SpineWorkspace.</h2>
+        <section className="mx-auto max-w-7xl px-6 py-8 sm:px-8" aria-label="Enter Spine Workspace">
+          <h2 className="text-[length:min(1.5rem,var(--marketing-heading-size))]/[var(--tw-leading,1.3333333333)] font-semibold text-[#082B5E]">Bring your team’s work into Spine Workspace.</h2>
           <WorkspaceAuthActions />
         </section>
         <StatsBar
@@ -45,7 +45,7 @@ export default function SolutionsPage() {
           ]}
         />
         <BenefitsGrid
-          tag="Why SpineWorkspace"
+          tag="Why Spine Workspace"
           heading="Same Spine. Every context."
         />
         <TestimonialsSection

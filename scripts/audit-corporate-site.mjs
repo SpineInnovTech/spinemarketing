@@ -98,6 +98,16 @@ check(source("app/pricing/page.tsx").includes('href="/product"'), "corporate pri
 check(source("app/portfolio/page.tsx").includes("not a list of separately purchasable products"), "portfolio must clarify capability architecture");
 check(existsSync("public/og.png") && existsSync("public/icon.svg"), "social and brand assets missing");
 
+// Unified seven-step story: required proof + action, and two-word product brand.
+const aboutPage = source("app/about/page.tsx");
+const aboutProof = source("app/about/sticky-sections.tsx");
+check(aboutPage.includes("AboutJourneyScroll"), "About/Our story must render the founder proof (seven-step: the proof)");
+check(aboutProof.includes("$8M") && aboutProof.includes("MuleSoft") && aboutProof.includes("Salesforce") && aboutProof.includes("governed shared context"), "About proof must tell the $8M renewal outcome with authorized Slack/email/MuleSoft/Salesforce context");
+check(banner.includes("Explore Spine Workspace") && banner.includes('href="/proof"'), "homepage must offer the action CTA (Explore Spine Workspace) and a path to the proof");
+for (const [label, text] of [["homepage", banner], ["footer", footer], ["about", about], ["company", source("app/company/page.tsx")]]) {
+  check(!/\bSpineWorkspace\b/.test(text), `visitor copy must use two-word 'Spine Workspace' on ${label}`);
+}
+
 for (const file of routeFiles) {
   const content = source(file);
   if (/title:\s*["'][^"'\n]*\| SpineWorkspace/.test(content)) {

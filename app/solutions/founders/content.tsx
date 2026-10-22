@@ -15,7 +15,7 @@ export function FoundersContent() {
         {
           label: "Monday morning",
           before: "Open Slack, email, CRM, billing dashboard. Ask 3 people for the latest numbers. Get 3 different answers.",
-          after: "Open SpineWorkspace. One screen: top 10 at-risk accounts, forecast drift, cash runway, pipeline health — all live.",
+          after: "Open Spine Workspace. One screen: top 10 at-risk accounts, forecast drift, cash runway, pipeline health — all live.",
         },
         {
           label: "Board prep",

@@ -31,7 +31,7 @@ export function CustomerSuccessRoleContent() {
         },
       ]}
       timeline={[
-        { time: "8:00", title: "Morning Brief", desc: "Open SpineWorkspace. Your Signal Center shows 3 accounts that need attention today: one usage drop, one support spike, one payment delay. Everything else is green." },
+        { time: "8:00", title: "Morning Brief", desc: "Open Spine Workspace. Your Signal Center shows 3 accounts that need attention today: one usage drop, one support spike, one payment delay. Everything else is green." },
         { time: "8:30", title: "Triage the usage drop", desc: "Acme Corp's daily active users dropped 30% last week. AI shows the evidence — the team stopped using the reporting module after their admin left. AI drafted an onboarding email to the new admin." },
         { time: "9:15", title: "Prepare for the 10am call", desc: "Meeting with GlobalTech in 45 minutes. One click generates a prep sheet: health score, recent tickets, feature adoption, contract details, last 5 email threads." },
         { time: "11:00", title: "Handle the support spike", desc: "NovaPay filed 4 tickets this week — all about the same integration issue. AI summarized the pattern and drafted an escalation to engineering with the evidence attached." },

@@ -8,12 +8,12 @@ import { COMPANY_LEGAL_NAME } from "@/lib/company"
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Spine InnovTech",
-  description: "Terms of service for using SpineWorkspace.",
+  description: "Terms of service for using Spine Workspace.",
   alternates: { canonical: "/terms" },
   openGraph: {
     title: "Terms & Conditions | Spine InnovTech",
-    description: "Terms of service for using SpineWorkspace.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    description: "Terms of service for using Spine Workspace.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
   },
 }
 
@@ -37,12 +37,12 @@ export default function TermsPage() {
           <div className="space-y-10 text-[15px] font-medium leading-[1.7] text-foreground/80">
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">1. Acceptance of terms</h2>
-              <p className="mt-3">By accessing or using SpineWorkspace, you agree to be bound by these terms. If you do not agree, do not use the service.</p>
+              <p className="mt-3">By accessing or using Spine Workspace, you agree to be bound by these terms. If you do not agree, do not use the service.</p>
             </div>
 
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">2. Service description</h2>
-              <p className="mt-3">SpineWorkspace is a business-context workspace that connects your business tools, organizes your data, and provides AI-assisted insights with human approval. The service is provided &quot;as is&quot; and we continuously improve it.</p>
+              <p className="mt-3">Spine Workspace is a business-context workspace that connects your business tools, organizes your data, and provides AI-assisted insights with human approval. The service is provided &quot;as is&quot; and we continuously improve it.</p>
             </div>
 
             <div>
@@ -52,12 +52,12 @@ export default function TermsPage() {
 
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">4. Your data</h2>
-              <p className="mt-3">You retain ownership of all data you connect to or create within SpineWorkspace. We do not claim ownership of your business data. You grant us a limited license to process your data solely to provide the service.</p>
+              <p className="mt-3">You retain ownership of all data you connect to or create within Spine Workspace. We do not claim ownership of your business data. You grant us a limited license to process your data solely to provide the service.</p>
             </div>
 
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">5. Acceptable use</h2>
-              <p className="mt-3">You agree not to use SpineWorkspace for any unlawful purpose, to attempt to gain unauthorized access to other accounts, or to interfere with the service&apos;s operation.</p>
+              <p className="mt-3">You agree not to use Spine Workspace for any unlawful purpose, to attempt to gain unauthorized access to other accounts, or to interfere with the service&apos;s operation.</p>
             </div>
 
             <div>
@@ -67,7 +67,7 @@ export default function TermsPage() {
 
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">7. Limitation of liability</h2>
-              <p className="mt-3">SpineWorkspace is provided &quot;as is&quot; without warranties of any kind. We are not liable for any indirect, incidental, or consequential damages arising from your use of the service.</p>
+              <p className="mt-3">Spine Workspace is provided &quot;as is&quot; without warranties of any kind. We are not liable for any indirect, incidental, or consequential damages arising from your use of the service.</p>
             </div>
 
             <div>

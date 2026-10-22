@@ -8,12 +8,12 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
   title: "Changelog | Spine InnovTech",
-  description: "What's new in SpineWorkspace — product updates, new connectors, and improvements.",
+  description: "What's new in Spine Workspace — product updates, new connectors, and improvements.",
   alternates: { canonical: "/changelog" },
   openGraph: {
     title: "Changelog | Spine InnovTech",
-    description: "What's new in SpineWorkspace — product updates, new connectors, and improvements.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    description: "What's new in Spine Workspace — product updates, new connectors, and improvements.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
   },
 }
 
@@ -28,10 +28,10 @@ export default function ChangelogPage() {
       <main id="main">
         <PageHero
           badge="Product Changelog"
-          headline="What's new in SpineWorkspace."
+          headline="What's new in Spine Workspace."
           subhead="The dated log of product updates, new connectors, and architecture improvements. Shorter buyer notes are on Updates."
           primaryCta={{ label: "Company updates", href: "/updates" }}
-          secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+          secondaryCta={{ label: "Explore Spine Workspace", href: "/product" }}
         />
 
         <section className="mx-auto max-w-[800px] px-6 py-16 md:px-16">

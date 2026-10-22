@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FinalCTA } from "@/components/final-cta"
 import { AboutContent } from "./content"
+import { AboutJourneyScroll } from "./sticky-sections"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function AboutPage() {
       <Header />
       <main id="main">
         <AboutContent />
+        <AboutJourneyScroll />
         <FinalCTA />
       </main>
       <Footer />

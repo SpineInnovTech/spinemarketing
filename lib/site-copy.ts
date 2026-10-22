@@ -43,7 +43,7 @@ export const pages = {
     meta: {
       title: "Spine Workspace — One Fabric, 13 Domain Workspaces",
       description:
-        "SpineWorkspace brings authoritative truth and the context for the current task together. Source systems stay authoritative.",
+        "Spine Workspace brings authoritative truth and the context for the current task together. Source systems stay authoritative.",
       path: "/spineworkspace",
     },
     hero: {
@@ -58,7 +58,7 @@ export const pages = {
       {
         headline: "A workspace for the business, not another tool in the stack.",
         body:
-          "SpineWorkspace sits above your existing systems. It does not replace your CRM, email, or project tools. It brings their truth together with the context for the current task. SpineWorkspace and Spine Workbench are the same offering.",
+          "Spine Workspace sits above your existing systems. It does not replace your CRM, email, or project tools. It brings their truth together with the context for the current task. Spine Workspace and Spine Workbench are the same offering.",
       },
       {
         headline: "Everything that matters to how work gets done.",
@@ -76,8 +76,8 @@ export const pages = {
       {
         headline: "The Spine InnovTech technology ecosystem.",
         cards: [
-          { title: "SpineWorkspace", description: "The workspace where a person sees the work and decides.", href: "/spineworkspace" },
-          { title: "Spine Platform", description: "The governed architecture behind SpineWorkspace.", href: "/platform" },
+          { title: "Spine Workspace", description: "The workspace where a person sees the work and decides.", href: "/spineworkspace" },
+          { title: "Spine Platform", description: "The governed architecture behind Spine Workspace.", href: "/platform" },
           { title: "Spine Fabric", description: "One connection to the tools that keep the record.", href: "/platform/spine-fabric" },
           { title: "Spine Twin", description: "Prepares a proposal when someone asks.", href: "/twin" },
           { title: "Spine Coworker", description: "Gathers the records and evidence this person may use.", href: "/twin#coworker" },
@@ -149,7 +149,7 @@ export const pages = {
       },
     ],
     crossLinks: {
-      prev: { label: "SpineWorkspace", href: "/product" },
+      prev: { label: "Spine Workspace", href: "/product" },
       next: { label: "Spine Context Assembler", href: "/business-context" },
       related: [{ label: "Spine Fabric", href: "/platform/spine-fabric" }, { label: "Governed execution", href: "/governance" }],
     },
@@ -174,7 +174,7 @@ export const pages = {
         label: "The record",
         headline: "Keep the record, the evidence, and the person apart.",
         body:
-          "The tools you already use keep the record. Personal notes stay with the person. What happened in this sitting stays with this sitting. What the organization has already decided is shared. Those stay apart. SpineWorkspace does not become a new home for the record.",
+          "The tools you already use keep the record. Personal notes stay with the person. What happened in this sitting stays with this sitting. What the organization has already decided is shared. Those stay apart. Spine Workspace does not become a new home for the record.",
       },
       {
         headline: "What business context includes.",
@@ -188,7 +188,7 @@ export const pages = {
       {
         headline: "Connect truth and context—without claiming source authority.",
         body:
-          "SpineWorkspace connects to the tools you already use and gathers what this task needs. The CRM, the desk, and the billing tool keep the record. Business Context is where the evidence for this task is brought together.",
+          "Spine Workspace connects to the tools you already use and gathers what this task needs. The CRM, the desk, and the billing tool keep the record. Business Context is where the evidence for this task is brought together.",
       },
       {
         headline: "Proposals do not become business truth.",
@@ -213,7 +213,7 @@ export const pages = {
       badge: "Spine Triage Bot",
       headline: "See what needs a decision.",
       subhead:
-        "Spine Triage Bot is a SpineWorkspace capability. It sorts a new message, file, or ticket so a person can see what needs attention. It does not write the record.",
+        "Spine Triage Bot is a Spine Workspace capability. It sorts a new message, file, or ticket so a person can see what needs attention. It does not write the record.",
       primaryCta: { label: "See Spine Twin", href: "/twin" },
     },
     sections: [
@@ -245,14 +245,14 @@ export const pages = {
       badge: "Spine Folder Monitor",
       headline: "A new file shows up with the work.",
       subhead:
-        "Spine Folder Monitor is a SpineWorkspace capability. It watches the folders the business already uses. When a file arrives or changes, the workspace can show it with the task. The file stays in the folder.",
+        "Spine Folder Monitor is a Spine Workspace capability. It watches the folders the business already uses. When a file arrives or changes, the workspace can show it with the task. The file stays in the folder.",
       primaryCta: { label: "See Spine Fabric", href: "/platform/spine-fabric" },
     },
     sections: [
       {
         headline: "The folder stays where it is.",
         body:
-          "Contracts, notes, and exports stay in the folders the team already opens. Spine Folder Monitor notices a new or changed file and brings it into view for the task. SpineWorkspace does not become a new home for the file.",
+          "Contracts, notes, and exports stay in the folders the team already opens. Spine Folder Monitor notices a new or changed file and brings it into view for the task. Spine Workspace does not become a new home for the file.",
       },
       {
         headline: "The file is evidence until a person decides.",
@@ -413,7 +413,7 @@ export const pages = {
     ],
     scenario: {
       headline: "One objective. Two tools. The story continues.",
-      body: "A delivery dependency changes in a project tool. The team opens another tool to prepare the handoff. SpineWorkspace carries the record and the evidence for that work, so the story does not have to be rebuilt.",
+      body: "A delivery dependency changes in a project tool. The team opens another tool to prepare the handoff. Spine Workspace carries the record and the evidence for that work, so the story does not have to be rebuilt.",
       steps: [
         "A delivery dependency changes in the project tool",
         "The record and the evidence travel with the work to the tool used for the note",
@@ -454,22 +454,22 @@ export const pages = {
     finalCta: {
       headline: "Ready to see it in your environment?",
       primaryCta: { label: "Book a demo", href: "/contact?intent=demo" },
-      secondaryCta: { label: "Explore SpineWorkspace", href: "/spineworkspace" },
+      secondaryCta: { label: "Explore Spine Workspace", href: "/spineworkspace" },
     },
   },
 
   company: {
     meta: {
-      title: "Company — Spine InnovTech builds SpineWorkspace",
+      title: "Company — Spine InnovTech builds Spine Workspace",
       description:
-        "Spine InnovTech builds SpineWorkspace. Spine Fabric, Workbench, Twin, Runtime and Marketplace describe parts of one governed business-context workspace; supporting agents and tools are capabilities, not separately marketed products.",
+        "Spine InnovTech builds Spine Workspace. Spine Fabric, Workbench, Twin, Runtime and Marketplace describe parts of one governed business-context workspace; supporting agents and tools are capabilities, not separately marketed products.",
       path: "/company",
     },
     hero: {
       badge: "Spine InnovTech",
       headline: "We build for the work that gets lost between systems.",
       subhead:
-        "Spine InnovTech builds SpineWorkspace. Spine Fabric, Workbench, Twin, Runtime and Marketplace describe parts of one governed business-context workspace; supporting agents and tools are capabilities, not separately marketed products. The systems teams already depend on remain authoritative.",
+        "Spine InnovTech builds Spine Workspace. Spine Fabric, Workbench, Twin, Runtime and Marketplace describe parts of one governed business-context workspace; supporting agents and tools are capabilities, not separately marketed products. The systems teams already depend on remain authoritative.",
       primaryCta: { label: "Speak with the team", href: "/contact" },
       secondaryCta: { label: "See a workflow", href: "/product#how-it-works" },
     },
@@ -482,8 +482,8 @@ export const pages = {
       {
         headline: "What we ship.",
         cards: [
-          { title: "SpineWorkspace", description: "The workspace where a person sees the work and decides.", href: "/spineworkspace" },
-          { title: "Spine Platform", description: "The governed architecture behind SpineWorkspace.", href: "/platform" },
+          { title: "Spine Workspace", description: "The workspace where a person sees the work and decides.", href: "/spineworkspace" },
+          { title: "Spine Platform", description: "The governed architecture behind Spine Workspace.", href: "/platform" },
           { title: "Spine Fabric", description: "One connection to the tools that keep the record.", href: "/platform/spine-fabric" },
           { title: "Spine Twin", description: "Prepares a proposal when someone asks.", href: "/twin" },
           { title: "Spine Coworker", description: "Gathers the records and evidence this person may use.", href: "/twin#coworker" },
@@ -519,8 +519,8 @@ export const pages = {
 
   developers: {
     meta: {
-      title: "Developers — Evaluate Your SpineWorkspace Integration",
-      description: "Review connector coverage, events, AI host access and permissions for your SpineWorkspace integration.",
+      title: "Developers — Evaluate Your Spine Workspace Integration",
+      description: "Review connector coverage, events, AI host access and permissions for your Spine Workspace integration.",
       path: "/developers",
     },
     hero: {
@@ -548,7 +548,7 @@ export const pages = {
   platformHub: {
     meta: {
       title: "Spine Platform",
-      description: "Explore the architecture behind SpineWorkspace: business context, role-aware collaboration, context-aware AI and governed execution.",
+      description: "Explore the architecture behind Spine Workspace: business context, role-aware collaboration, context-aware AI and governed execution.",
       path: "/platform",
     },
     hero: {
@@ -575,7 +575,7 @@ export const pages = {
   securityPage: {
     meta: {
       title: "Security — Governance, data handling, and bounded execution",
-      description: "Access controls, evidence, auditability, and execution boundaries for SpineWorkspace.",
+      description: "Access controls, evidence, auditability, and execution boundaries for Spine Workspace.",
       path: "/security",
     },
     hero: {
@@ -611,13 +611,13 @@ export const pages = {
   useCasesHub: {
     meta: {
       title: "Use Cases — Business work, connected",
-      description: "See how SpineWorkspace applies to your role and operating model.",
+      description: "See how Spine Workspace applies to your role and operating model.",
       path: "/use-cases",
     },
     hero: {
       badge: "Use Cases",
       headline: "Business work, connected.",
-      subhead: "See how SpineWorkspace applies to your role.",
+      subhead: "See how Spine Workspace applies to your role.",
       primaryCta: { label: "Book a demo", href: "/contact?intent=demo" },
     },
     sections: [],
@@ -627,11 +627,11 @@ export const pages = {
 export const proofCards: ProofCardCopy[] = [
   {
     title: "The tools you already use",
-    description: "Each tool stays itself. SpineWorkspace shares the record and the evidence for the work. The tools do not have to talk to each other directly.",
+    description: "Each tool stays itself. Spine Workspace shares the record and the evidence for the work. The tools do not have to talk to each other directly.",
   },
   {
     title: "What is actually connected",
-    description: "SpineWorkspace sees which tools are available and working. It does not assume a connection that is not there.",
+    description: "Spine Workspace sees which tools are available and working. It does not assume a connection that is not there.",
   },
   {
     title: "Use what is already there",
@@ -778,7 +778,7 @@ export const ecosystemChips = [
 
 export const homeCopy = {
   meta: {
-    title: "SpineWorkspace — Governed AI workspace for operational work",
+    title: "Spine Workspace — Governed AI workspace for operational work",
     description:
       "Connect authorized business signals from the systems you already use. People and AI work from the same evidence. People stay in charge.",
     path: "/",
@@ -787,7 +787,7 @@ export const homeCopy = {
     badge: "Governed AI workspace for operational work",
     headline: "Your tools hold the records. Bring the context together. Decide the next step.",
     subhead:
-      "SpineWorkspace brings authorized records, messages, documents, and recent decisions into one workspace. People and AI work from the same evidence, review proposals, and approve changes to the systems that own the record.",
+      "Spine Workspace brings authorized records, messages, documents, and recent decisions into one workspace. People and AI work from the same evidence, review proposals, and approve changes to the systems that own the record.",
     primaryCta: { label: "See the renewal workflow", href: "#renewal-workflow" },
     secondaryCta: { label: "Book a tailored demo", href: "/contact?intent=demo" },
   },
@@ -803,13 +803,13 @@ export const homeCopy = {
     ],
   },
   product: {
-    label: "SpineWorkspace",
+    label: "Spine Workspace",
     headline: "One workspace around the business—not another app.",
-    body: "SpineWorkspace connects your existing tools so people and AI work from the same truth and the context for this task.",
+    body: "Spine Workspace connects your existing tools so people and AI work from the same truth and the context for this task.",
     cards: [
       { title: "Workbench", description: "Role-aware views of goals, truth, context, and work", href: "/adaptive-workspace" },
       { title: "Twin", description: "Prepares a proposal from governed truth and context, then waits for review", href: "/twin" },
-      { title: "SpineWorkspace", description: "Connects systems without claiming source authority", href: "/platform/spine-fabric" },
+      { title: "Spine Workspace", description: "Connects systems without claiming source authority", href: "/platform/spine-fabric" },
       { title: "Governance", description: "Humans approve. AI proposes. Nothing executes without authority.", href: "/governance" },
       { title: "Continuity", description: "Work, memory, and evidence persist across sessions and hosts", href: "/continuity" },
     ],
@@ -818,20 +818,20 @@ export const homeCopy = {
     label: "Your environment",
     headline: "Connect what you already use. Discover what's available.",
     body:
-      "SpineWorkspace connects the tools, files, and conversations you already use. It sees what is actually open, and it carries the record and the evidence forward.",
+      "Spine Workspace connects the tools, files, and conversations you already use. It sees what is actually open, and it carries the record and the evidence forward.",
     cta: { label: "See how hosts connect", href: "/host-connected-environment" },
   },
   proofTeaser: {
     label: "Proof",
     headline: "Independent hosts. Shared truth and context. Governed work.",
     body:
-      "SpineWorkspace sees which tools are open, keeps the record and the evidence apart, and waits for a person to decide.",
+      "Spine Workspace sees which tools are open, keeps the record and the evidence apart, and waits for a person to decide.",
     cta: { label: "See the proof", href: "/proof" },
   },
   finalCta: {
     headline: "Ready to bring truth and context into one workspace?",
     primaryCta: { label: "Book a demo", href: "/contact?intent=demo" },
-    secondaryCta: { label: "Explore SpineWorkspace", href: "/spineworkspace" },
+    secondaryCta: { label: "Explore Spine Workspace", href: "/spineworkspace" },
   },
 };
 

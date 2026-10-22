@@ -21,7 +21,7 @@ import {
 export const metadata = createPageMetadata({
   title: "Documentation | Technical Reference & Architecture",
   description:
-    "Comprehensive documentation for Spine InnovTech and SpineWorkspace: architecture, Spine Fabric, governed runtime, connectors, and machine-readable llms.txt index.",
+    "Comprehensive documentation for Spine InnovTech and Spine Workspace: architecture, Spine Fabric, governed runtime, connectors, and machine-readable llms.txt index.",
   path: "/docs",
 });
 
@@ -104,7 +104,7 @@ const DOC_SECTIONS = [
         desc: "Durable cross-session state persistence for complex long-running operations.",
       },
       {
-        title: "SpineWorkspace Product Details",
+        title: "Spine Workspace Product Details",
         href: "/product",
         desc: "Flagship unified workspace environment for cross-functional operators and AI.",
       },
@@ -148,7 +148,7 @@ export default function DocsPage() {
       <PageHero
         badge="Technical Documentation Hub"
         headline="Spine InnovTech Documentation"
-        subhead="Explore the architecture, governance and integration paths behind SpineWorkspace. Confirm supported connections and deployment access with your team's technical evaluation."
+        subhead="Explore the architecture, governance and integration paths behind Spine Workspace. Confirm supported connections and deployment access with your team's technical evaluation."
         primaryCta={{ label: "Developer Overview", href: "/developers" }}
         secondaryCta={{ label: "Machine-Readable /llms.txt", href: "/llms.txt" }}
       />

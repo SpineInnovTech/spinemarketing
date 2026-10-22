@@ -15,7 +15,7 @@ export function IndividualContent() {
       beforeAfter={[
         {
           before: "8:15am. Open email (47 unread). Open Slack (12 channels with notifications). Open Jira (8 tickets). Open calendar (5 meetings). Where do you start?",
-          after: "8:15am. Open SpineWorkspace. Morning Brief: 3 things that need your attention today, ranked by urgency. Everything else can wait.",
+          after: "8:15am. Open Spine Workspace. Morning Brief: 3 things that need your attention today, ranked by urgency. Everything else can wait.",
         },
         {
           before: "You had an important conversation last Thursday about a client issue. What was the context? Scroll through Slack, email, and Notion for 15 minutes.",
@@ -27,7 +27,7 @@ export function IndividualContent() {
         },
       ]}
       timeline={[
-        { time: "8:00", title: "Morning Brief", desc: "Open SpineWorkspace. Your personal Signal Center shows 3 things that need attention: a deadline today, a follow-up from yesterday, and a client who responded overnight." },
+        { time: "8:00", title: "Morning Brief", desc: "Open Spine Workspace. Your personal Signal Center shows 3 things that need attention: a deadline today, a follow-up from yesterday, and a client who responded overnight." },
         { time: "8:30", title: "Context recall", desc: "Yesterday's strategy discussion about the Q3 roadmap? Ask the AI. It pulls up your notes, the decisions made, and the follow-ups assigned to you." },
         { time: "10:00", title: "Meeting prep", desc: "Client call in 30 minutes. One click generates a prep sheet: latest project status, recent emails, support tickets, and your notes from the last meeting." },
         { time: "12:30", title: "Smart drafting", desc: "Need to update three stakeholders on different projects. AI drafts each email with context from the relevant tools. You review, tweak, and send." },

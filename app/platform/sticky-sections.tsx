@@ -97,7 +97,7 @@ const gatherItems = [
   { icon: Server, label: "Infrastructure", description: "Delivery, storage, event processing, and recovery.", color: "#ec4899" },
   { icon: GitBranch, label: "Connected tools", description: "Provider-specific capabilities and permissions.", color: "#14b8a6" },
   { icon: RefreshCw, label: "Spine Runtime", description: "Authorize, execute, observe, and reconcile.", color: "#f97316" },
-  { icon: Layers, label: "SpineWorkspace", description: "Adaptive architecture. Survives tool migrations.", color: "#6366f1" },
+  { icon: Layers, label: "Spine Workspace", description: "Adaptive architecture. Survives tool migrations.", color: "#6366f1" },
 ];
 
 export function PlatformStickyScroll() {
@@ -105,7 +105,7 @@ export function PlatformStickyScroll() {
     <>
       <StickyScroll
         tag="Deep Dive"
-        heading={<>Five layers of the <span className="text-primary">SpineWorkspace.</span></>}
+        heading={<>Five layers of the <span className="text-primary">Spine Workspace.</span></>}
         subheading="Scroll to explore each layer of the architecture that adapts to your tools."
         items={scrollItems}
       />

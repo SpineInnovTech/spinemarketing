@@ -697,7 +697,7 @@ export function CorporateArchitectureStoryboard() {
             href="https://spineworkspace.com"
             className="inline-flex items-center gap-1.5 rounded-lg border border-[#006FE8] bg-[#006FE8] px-3.5 py-1.5 text-xs font-semibold text-white shadow-2xs hover:bg-[#0055B8] transition-colors"
           >
-            Explore SpineWorkspace Product <ArrowRight className="h-3 w-3" aria-hidden />
+            Explore Spine Workspace Product <ArrowRight className="h-3 w-3" aria-hidden />
           </a>
         </div>
       </div>

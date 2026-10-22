@@ -173,7 +173,7 @@ export function WorkbenchCanvasShowcase() {
           </figcaption>
           <button type="button" onClick={() => { setActualSize(false); setExpanded(true); }} aria-label={`Enlarge ${imageLabel} application capture`} className="block w-full cursor-zoom-in bg-[#F0F8FF] p-2 text-left focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#006FE8] sm:p-3">
             <div className="overflow-hidden rounded-xl border border-[#D6E8F8] bg-white shadow-2xs">
-              <WorkbenchCapturePreview src={imagePath} alt={`Captured SpineWorkspace frontend: ${imageLabel}. Enlarge to inspect the complete application shell and QA account menu.`} height={imageHeight} desktop={active === "sidebar" ? sidebarDesktopFrames[sidebar] : desktopFrames[active]} mobile={active === "sidebar" ? sidebarFrames[sidebar] : mobileFrames[active]} eager />
+              <WorkbenchCapturePreview src={imagePath} alt={`Captured Spine Workspace frontend: ${imageLabel}. Enlarge to inspect the complete application shell and QA account menu.`} height={imageHeight} desktop={active === "sidebar" ? sidebarDesktopFrames[sidebar] : desktopFrames[active]} mobile={active === "sidebar" ? sidebarFrames[sidebar] : mobileFrames[active]} eager />
             </div>
           </button>
         </figure>

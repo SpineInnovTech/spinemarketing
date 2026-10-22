@@ -66,7 +66,7 @@ export function WorkbenchHeroPreview() {
 
   return (
     <div
-      aria-label="SpineWorkspace visual architecture storyboard"
+      aria-label="Spine Workspace visual architecture storyboard"
       className="relative overflow-hidden rounded-2xl border border-[#BBDDF8] bg-white shadow-[0_20px_60px_rgba(0,111,232,0.10)]"
     >
       <BorderBeam size={260} duration={14} colorFrom="#006FE8" colorTo="#38BDF8" />
@@ -342,7 +342,7 @@ export function WorkbenchHeroPreview() {
                   step: "Step 3",
                   icon: Layers,
                   title: "Host Continuity",
-                  body: "Carry context checkpoints across SpineWorkspace, ChatGPT, Claude and Cursor.",
+                  body: "Carry context checkpoints across Spine Workspace, ChatGPT, Claude and Cursor.",
                 },
               ].map(({ step, icon: Icon, title, body }) => (
                 <div
@@ -368,7 +368,7 @@ export function WorkbenchHeroPreview() {
                 </span>
                 <div>
                   <p className="text-xs font-bold text-[#082B5E]">
-                    Portable context across AI hosts &amp; SpineWorkspace
+                    Portable context across AI hosts &amp; Spine Workspace
                   </p>
                   <p className="text-[11px] text-[#4E607A]">
                     Resume authorized work across ChatGPT, Claude, Cursor and the web shell without moving private credentials.

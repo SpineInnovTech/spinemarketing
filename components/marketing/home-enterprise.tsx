@@ -18,7 +18,7 @@ const rise = {
 
 const productModel = [
   {
-    name: "SpineWorkspace",
+    name: "Spine Workspace",
     body: "The renewal and account workspace where people review evidence and decide.",
     href: "/spineworkspace",
   },
@@ -74,8 +74,8 @@ export function EnterpriseHome() {
         tone="ice"
         badge="Built for customer-success and revenue teams managing complex renewals"
         headline={"Stop rebuilding the customer story\nbefore every renewal decision."}
-        subhead="SpineWorkspace brings CRM activity, support signals, email commitments, documents, and finance context into one evidence-backed renewal proposal—so your team can review, approve, and execute the next step with control."
-        principle="Your CRM, support desk, inbox, finance platform, and document store remain the systems of record. SpineWorkspace assembles authorized context around the decision—without becoming another source of truth."
+        subhead="Spine Workspace brings CRM activity, support signals, email commitments, documents, and finance context into one evidence-backed renewal proposal—so your team can review, approve, and execute the next step with control."
+        principle="Your CRM, support desk, inbox, finance platform, and document store remain the systems of record. Spine Workspace assembles authorized context around the decision—without becoming another source of truth."
         primaryCta={{ label: "See a renewal decision packet", href: "#renewal-decision-packet" }}
         secondaryCta={{ label: "Book a workflow review", href: "/contact?intent=workflow-review" }}
         art={<RenewalReviewPanel />}
@@ -119,7 +119,7 @@ export function EnterpriseHome() {
             >
               <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">With Spine</p>
               <p className="mt-4 text-[16px] leading-[1.75] text-[#33465B]">
-                SpineWorkspace gathers authorized evidence, surfaces unresolved commitments and at-risk signals, creates
+                Spine Workspace gathers authorized evidence, surfaces unresolved commitments and at-risk signals, creates
                 a source-linked proposal, routes it to the accountable reviewer, and records the approved action back in
                 the owning system.
               </p>
@@ -203,7 +203,7 @@ export function EnterpriseHome() {
               AI prepares the case. Your team owns the decision.
             </h2>
             <p className="mt-4 text-[16px] leading-[1.7] text-[#33465B]">
-              SpineWorkspace does not silently alter customer, commercial, or operational records. It gives accountable
+              Spine Workspace does not silently alter customer, commercial, or operational records. It gives accountable
               people the evidence, recommendation, and controls required to decide what happens next.
             </p>
             <p className="mt-4 text-[15px] leading-[1.65] text-[#526479]">

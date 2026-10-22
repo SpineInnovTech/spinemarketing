@@ -70,7 +70,7 @@ export function DayInLifeLayout({
       {domainFeatures}
 
       <Section variant="muted">
-        <SectionHeader label="Before and after" headline="A day with and without SpineWorkspace" body="Illustrative workflow examples, not measured customer results." />
+        <SectionHeader label="Before and after" headline="A day with and without Spine Workspace" body="Illustrative workflow examples, not measured customer results." />
         <div className="grid gap-4 sm:grid-cols-2">
           <motion.div {...fade(0)}>
             <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.08em] text-red-600">Without</p>
@@ -83,7 +83,7 @@ export function DayInLifeLayout({
             </div>
           </motion.div>
           <motion.div {...fade(0.1)}>
-            <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">With SpineWorkspace</p>
+            <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">With Spine Workspace</p>
             <div className="space-y-3">
               {beforeAfter.map((item, i) => (
                 <div key={i} className="rounded-md border border-[#0176D3]/20 bg-[#F3F6F9] p-4">
@@ -107,7 +107,7 @@ export function DayInLifeLayout({
       ) : null}
 
       <Section>
-        <SectionHeader label="A day in the life" headline="How your day flows with SpineWorkspace" />
+        <SectionHeader label="A day in the life" headline="How your day flows with Spine Workspace" />
         <div className="mx-auto max-w-[800px] space-y-0">
           {timeline.map((slot, i) => (
             <motion.div
