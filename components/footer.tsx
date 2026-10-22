@@ -25,7 +25,7 @@ export function Footer() {
               </span>
             </Link>
             <h2 className="mt-8 max-w-[420px] text-[length:min(clamp(1.8rem,3vw,2.8rem),var(--marketing-heading-size))] font-semibold leading-[1.2] tracking-[-.05em] text-white">
-              We build the foundation for connected business work.
+              We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work.
             </h2>
             <p className="mt-5 max-w-[400px] text-[14px] leading-[1.85] text-[#CBD9EB]">
               Spine InnovTech develops technology for shared business

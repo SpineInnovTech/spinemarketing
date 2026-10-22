@@ -75,7 +75,7 @@ const contact = source("app/contact/content.tsx");
 const form = source("components/lead-form.tsx");
 
 check(home.includes("InnovLabsHome"), "corporate homepage component not wired");
-check(banner.includes("SPINE INNOVTECH") && banner.includes("We build the foundation for connected business work."), "company identity and product introduction absent");
+check(banner.includes("SPINE INNOVTECH") && banner.includes("We build governed business context for humans and AI."), "company identity and product introduction absent");
 check(source("components/header.tsx").includes("headerNavigation"), "header must render the full corporate navigation");
 for (const label of ["Company", "Technology", "Insights"]) {
   check(source("lib/navigation.ts").includes(`label: "${label}"`), `missing corporate navigation category: ${label}`);
@@ -89,7 +89,7 @@ check(source("lib/solution-nav.ts").includes("marketingPathForSolution") && !sou
 for (const heading of ["Company", "Technology", "Product", "Perspectives"]) {
   check(source("lib/navigation.ts").includes(`heading: "${heading}"`), `footer missing master group: ${heading}`);
 }
-check(footer.includes("We build the foundation for connected business work."), "footer must carry the master brand statement");
+check(footer.includes("We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work."), "footer must carry the master brand statement");
 check(source("lib/navigation.ts").includes('href: "/site-map"') && source("lib/navigation.ts").includes('name: "Site map"'), "footer must link the Site map directory in the bottom bar");
 check(footer.includes("Spine InnovTech"), "corporate footer absent");
 check(!meta.includes('canonical: "/"'), "site-wide root canonical incorrectly points all routes to /");

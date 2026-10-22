@@ -88,5 +88,5 @@ export const footerUtilityLinks: { name: string; href: string }[] = [
   { name: "Site map", href: "/site-map" },
 ];
 
-export const COMPANY_TAGLINE = "We build the foundation for connected business work. Shared business context. Human and AI collaboration. Explicit authority. Work continuity.";
+export const COMPANY_TAGLINE = "We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work.";
 export const PRODUCT_ONELINER = "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.";

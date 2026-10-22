@@ -57,7 +57,7 @@ const contactFAQs = [
   },
   {
     question: "How does Spine InnovTech relate to SpineWorkspace?",
-    answer: "Spine InnovTech is the company building the foundation for connected business work. SpineWorkspace is its flagship product, where humans and AI share one governed view of the business while existing tools remain the systems of record.",
+    answer: "Spine InnovTech is the company that builds the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work. SpineWorkspace is its flagship product, where humans and AI share one governed view of the business while existing tools remain the systems of record.",
   },
 ];
 

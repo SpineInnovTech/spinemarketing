@@ -22,28 +22,28 @@ export const metadata: Metadata = {
     types: { "application/rss+xml": "/rss.xml" },
   },
   title: {
-    default: "Spine InnovTech — Foundation for Connected Business Work",
+    default: "Spine InnovTech — Governed Business Context for Humans and AI",
     template: "%s",
   },
   description:
-    "Spine InnovTech builds technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
+    "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "We build the foundation for connected business work.",
+    title: "Governed foundation for humans and AI to share business context and move work forward.",
     description:
-      "Technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
+      "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
     siteName: "Spine InnovTech",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "We build the foundation for connected business work.",
+    title: "Governed foundation for humans and AI to share business context and move work forward.",
     description:
-      "Technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
+      "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
     images: ["/og.png"],
   },
 }
