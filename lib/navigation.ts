@@ -1,6 +1,4 @@
 import type { LucideIcon } from "lucide-react";
-import { BookOpen, Building2, Code2, Compass, FileText, History, Layers3, Mail, Network, Newspaper, ShieldCheck, Sparkles, Users, Workflow } from "lucide-react";
-import { getSolutionNavItems } from "@/lib/solution-nav";
 import type { ConnectorNavMark, KindNavMark } from "@/lib/integration-nav";
 
 export type NavItemChild = { name: string; href: string; icon: LucideIcon; desc?: string; external?: boolean };
@@ -14,48 +12,14 @@ export type NavItem = {
 
 export const DOCS_URL = "/docs";
 
+// Header navigation — Final Content Master (00. Shared Site Content › Header).
+// Exact labels and destinations; a flat top-level bar with no mega-menus.
 export const headerNavigation: NavItem[] = [
-  {
-    label: "Company",
-    href: "/company",
-    items: [
-      { name: "About Spine InnovTech", href: "/company", icon: Building2, desc: "Our story, vision, and principles" },
-      { name: "Our philosophy", href: "/about", icon: Compass, desc: "How we think and build" },
-      { name: "Vision & principles", href: "/company#principles", icon: ShieldCheck, desc: "What guides our engineering" },
-      { name: "Contact", href: "/contact", icon: Mail, desc: "Connect with our team" },
-    ],
-  },
-  {
-    label: "Technology",
-    href: "/platform",
-    featured: {
-      name: "SpineWorkspace",
-      href: "https://spineworkspace.com",
-      icon: Layers3,
-      desc: "Our flagship product for humans and AI (spineworkspace.com)",
-      external: true,
-    },
-    items: [
-      { name: "Technology overview", href: "/platform", icon: Network, desc: "The foundation for connected business work" },
-      { name: "Trust & governance", href: "/security", icon: ShieldCheck, desc: "Access, authority, provenance and outcomes" },
-      { name: "Responsible AI", href: "/governance", icon: Sparkles, desc: "AI within business responsibility" },
-      { name: "About SpineWorkspace", href: "/spineworkspace", icon: Workflow, desc: "Our flagship product, explained" },
-    ],
-    menuFooter: [
-      { name: "Explore the technology foundation", href: "/platform" },
-    ],
-  },
-  {
-    label: "Insights",
-    href: "/blog",
-    items: [
-      { name: "Insights", href: "/blog", icon: BookOpen, desc: "Perspectives on context, authority and connected work" },
-      { name: "Research & resources", href: "/resources", icon: FileText, desc: "Architecture, thinking, and explainers" },
-      { name: "Updates", href: "/updates", icon: Newspaper, desc: "Company and product updates" },
-      { name: "Changelog", href: "/changelog", icon: History, desc: "Dated technical changes" },
-      { name: "Portfolio & demonstrations", href: "/portfolio", icon: Layers3, desc: "Illustrative workflows and architecture" },
-    ],
-  },
+  { label: "Company", href: "/company" },
+  { label: "Technology", href: "/platform" },
+  { label: "Our philosophy", href: "/about" },
+  { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export type FooterColumn = { heading: string; links: { name: string; href: string; external?: boolean }[] };
