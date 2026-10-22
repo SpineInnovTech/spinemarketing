@@ -253,6 +253,21 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     action: "exclude",
     reason: "Contact confirmation page (content master 11A). noindex and kept out of the sitemap; visiting it must not imply a new submission.",
   },
+  {
+    path: "/insights/connected-software-shared-understanding",
+    action: "keep",
+    reason: "Insights article 10A (content master). Canonical at /insights/<slug>; verbatim copy. /blog remains the legacy article alias.",
+  },
+  {
+    path: "/insights/connection-and-authority",
+    action: "keep",
+    reason: "Insights article 10B (content master). Canonical at /insights/<slug>; verbatim copy. /blog remains the legacy article alias.",
+  },
+  {
+    path: "/insights/work-continuity",
+    action: "keep",
+    reason: "Insights article 10C (content master). Canonical at /insights/<slug>; verbatim copy. /blog remains the legacy article alias.",
+  },
 ];
 
 export const REDIRECT_SOURCES = new Set(
