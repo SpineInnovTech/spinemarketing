@@ -4,6 +4,7 @@ import path from "path"
 import { getContentRepository } from "@/lib/content"
 import { PUBLIC_SOLUTIONS, marketingPathForSolution } from "@/lib/solution-taxonomy"
 import { SITEMAP_EXCLUSIONS } from "@/lib/route-policy"
+import { INSIGHT_ARTICLES } from "@/lib/insights"
 import { absoluteUrl, publicSiteUrl } from "@/lib/site-url"
 
 export const dynamic = "force-static"
@@ -110,6 +111,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     byUrl.set(url, {
       url,
       lastModified: post.updatedAt ?? post.publishedAt,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })
+  }
+
+  for (const article of INSIGHT_ARTICLES) {
+    const route = `/insights/${article.slug}`
+    assertPublishable(route)
+    const url = absoluteUrl(route)
+    byUrl.set(url, {
+      url,
       changeFrequency: "monthly",
       priority: 0.7,
     })
