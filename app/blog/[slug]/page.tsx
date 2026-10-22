@@ -25,7 +25,7 @@ export async function generateMetadata({
   const post = await repo.getArticleBySlug(slug)
   if (!post) return { title: "Not Found" }
 
-  const title = post.seo?.title ?? `${post.title} | SpineWorkspace Blog`
+  const title = post.seo?.title ?? `${post.title} | Insights`
   const description = post.seo?.description ?? post.excerpt
   const canonical = post.seo?.canonicalPath ?? `/blog/${post.slug}`
 

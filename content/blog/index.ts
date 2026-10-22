@@ -82,7 +82,7 @@ It's the product. Twin prepares the next step. A person decides. The tools that 
     slug: "spine-fabric-contextual-continuity-layer",
     title: "The tools keep the record. The workspace shows the work.",
     description:
-      "Four kinds of information stay apart: the record, the evidence, the draft, and the person. Twin prepares within authorized context. Consequential actions need the right authority.",
+      "Four kinds of information stay apart: the record, the evidence, the draft, the person. Twin prepares within authorized context; actions need authority.",
     date: "2026-09-02",
     author: "Spine InnovTech Team",
     readTime: "5 min read",

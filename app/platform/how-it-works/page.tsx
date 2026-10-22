@@ -9,11 +9,11 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "How it works | Spine InnovTech",
   description:
-    "People and Twin work from authorized business context. Investigate, prepare, review consequential actions, and reconcile observed results in the systems that own the records.",
+    "People and Twin work from authorized business context: investigate, prepare, review consequential actions, and reconcile results in the source systems.",
   alternates: { canonical: "/platform/how-it-works" },
   openGraph: {
     title: "How it works | Spine InnovTech",
-    description: "People and Twin work from authorized business context. Investigate, prepare, review consequential actions, and reconcile observed results in the systems that own the records.",
+    description: "People and Twin work from authorized business context: investigate, prepare, review consequential actions, and reconcile results in the source systems.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }

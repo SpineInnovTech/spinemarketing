@@ -19,9 +19,9 @@ import {
 } from "lucide-react";
 
 export const metadata = createPageMetadata({
-  title: "Documentation | Technical Reference & Architecture",
+  title: "Documentation & Technical Reference",
   description:
-    "Comprehensive documentation for Spine InnovTech and SpineWorkspace: architecture, Spine Fabric, governed runtime, connectors, and machine-readable llms.txt index.",
+    "Documentation for Spine InnovTech and SpineWorkspace: architecture, Spine Fabric, governed runtime, connectors, and the machine-readable llms.txt index.",
   path: "/docs",
 });
 
