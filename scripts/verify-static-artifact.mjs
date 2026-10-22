@@ -24,8 +24,11 @@ const productAlias = redirects.find(([source]) => source === "/spineworkspace");
 if (!productAlias || productAlias[1] !== "/product" || productAlias[2] !== "301") {
   throw new Error("Legacy /spineworkspace entry must redirect internally to /product.");
 }
-if (!text.includes("We build the foundation for connected business work.") || !text.includes("Spine InnovTech")) {
+if (!text.includes("We build governed business context for humans and AI.") || !text.includes("Spine InnovTech")) {
   throw new Error("Static export missing corporate hero/company identity.");
+}
+if (text.includes("We build the foundation for connected business work.")) {
+  throw new Error("Static export still carries the old homepage H1.");
 }
 const pricing = readFileSync("out/pricing.html", "utf8");
 const pricingText = pricing.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");

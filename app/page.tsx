@@ -3,8 +3,8 @@ import { Header } from "@/components/header-client"
 import { Footer } from "@/components/footer"
 import { InnovLabsHome } from "@/components/marketing/innovlabs-home"
 export const metadata: Metadata = {
-  title: "Spine InnovTech — Foundation for Connected Business Work",
-  description: "Spine InnovTech builds technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
+  title: "Spine InnovTech — Governed Business Context for Humans and AI",
+  description: "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
   alternates: { canonical: "/" },
 };
 

@@ -222,7 +222,7 @@ const EXPECTED_FOOTER_GROUPS = [
     { label: "Resources", href: "/resources" },
   ] },
 ];
-const FOOTER_BRAND_STATEMENT = "We build the foundation for connected business work.";
+const FOOTER_BRAND_STATEMENT = "We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work.";
 const FOOTER_CLOSING_LINE =
   "Source systems stay authoritative. Authority stays with people. Context stays with the work.";
 const FOOTER_COPYRIGHT = "© 2026 Spine InnovTech. All rights reserved.";
