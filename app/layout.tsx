@@ -72,9 +72,6 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} overflow-x-clip bg-white text-[#181818] antialiased`} suppressHydrationWarning>
-        <a href="#main" className="skip-link">
-          Skip to main content
-        </a>
         {children}
         <FirebaseAnalytics />
       </body>

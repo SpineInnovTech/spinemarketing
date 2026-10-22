@@ -94,3 +94,82 @@ if (!pages.has("/site-map")) throw new Error("Full website directory missing.");
 console.log(
   `Corporate coverage verified: all ${baseline.routes.length} previous exported pages retained; ${publicPages.length} public pages reachable from the homepage.`,
 );
+
+// --- Shared corporate header proof -------------------------------------------
+// Every listed corporate route must render ONE shared header: the same five
+// navigation links and the same product CTA, from the Final Content Master
+// (00. Shared Site Content › Header). This proves the header is shared rather
+// than copied-and-drifted per page. Routes are checked only when their page is
+// exported (routes still to be built are covered by a later route round).
+const SHARED_HEADER_LINKS = [
+  { label: "Company", href: "/company" },
+  { label: "Technology", href: "/platform" },
+  { label: "Our philosophy", href: "/about" },
+  { label: "Insights", href: "/insights" },
+  { label: "Contact", href: "/contact" },
+];
+const HEADER_CTA = { label: "Explore SpineWorkspace", href: "https://spineworkspace.com" };
+const SKIP_LINK_TEXT = "Skip to content";
+
+// The brief's corporate surface that must carry the shared header. Only full
+// (non-redirecting) corporate pages are listed — redirect stubs such as
+// /spineworkspace carry no chrome. Content-master labels that differ from the
+// repo's canonical routes are mapped to the real route here.
+const HEADER_REQUIRED_ROUTES = [
+  "/",
+  "/company",
+  "/platform",
+  "/about",
+  "/product", // content master "About SpineWorkspace" / "/spine-workspace"
+  "/security", // content master "Trust & governance" / "/trust"
+  "/governance", // content master "Responsible AI" / "/responsible-ai"
+  "/insights",
+  "/blog", // Insights article alias
+  "/contact",
+];
+
+function headerLinkPresent(html, href, label) {
+  // Match an anchor whose href is this destination, then confirm the label text
+  // is present in its inner markup. We intentionally do NOT strip tags: the
+  // labels are contiguous plain text (optionally wrapped in a single span), so a
+  // whitespace-normalised substring check is sufficient and avoids an
+  // incomplete-sanitisation pattern. This reads our own built HTML, not user input.
+  const escaped = href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const anchor = new RegExp(`<a\\b[^>]*\\bhref="${escaped}/?"[^>]*>([\\s\\S]*?)</a>`, "g");
+  for (const match of html.matchAll(anchor)) {
+    const inner = match[1].replace(/\s+/g, " ");
+    if (inner.includes(label)) return true;
+  }
+  return false;
+}
+
+const headerFailures = [];
+let headerChecked = 0;
+for (const route of HEADER_REQUIRED_ROUTES) {
+  const html = pages.get(route);
+  if (!html) {
+    // Route not exported in this PR; coverage for new routes is a later round.
+    continue;
+  }
+  headerChecked += 1;
+  for (const link of SHARED_HEADER_LINKS) {
+    if (!headerLinkPresent(html, link.href, link.label)) {
+      headerFailures.push(`${route}: missing header link ${link.label} -> ${link.href}`);
+    }
+  }
+  if (!headerLinkPresent(html, HEADER_CTA.href, HEADER_CTA.label)) {
+    headerFailures.push(`${route}: missing header CTA ${HEADER_CTA.label} -> ${HEADER_CTA.href}`);
+  }
+  if (!html.includes(SKIP_LINK_TEXT)) {
+    headerFailures.push(`${route}: missing "${SKIP_LINK_TEXT}" accessibility link`);
+  }
+}
+if (headerChecked === 0) {
+  throw new Error("Shared header proof ran against zero exported routes.");
+}
+if (headerFailures.length) {
+  throw new Error(`Shared header not consistent across routes:\n  ${headerFailures.join("\n  ")}`);
+}
+console.log(
+  `Shared header verified on ${headerChecked} corporate routes: identical five-link nav + product CTA + skip link.`,
+);
