@@ -170,7 +170,7 @@ export function PageHero({
             ) : null}
 
             <BlurFade delay={0.06} inView>
-              <h1 className="max-w-full whitespace-pre-line text-balance text-[#032D60] text-[length:min(clamp(2.25rem,4.4vw,3.5rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-0.035em]">
+              <h1 className="font-display max-w-full whitespace-pre-line text-balance text-[#032D60] text-[length:min(clamp(2.25rem,4.4vw,3.5rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-0.015em]">
                 {headline}
               </h1>
             </BlurFade>

@@ -55,6 +55,13 @@ main h2[class*="--marketing-heading-size"] {
   letter-spacing: -0.03em;
 }
 
+/* Hero display headings (Plus Jakarta Sans) read looser than the Inter default:
+   keep clear word spaces at large sizes. Beats the generic rule above. */
+main h1.font-display,
+main h2.font-display {
+  letter-spacing: -0.015em;
+}
+
 html[data-theme="light"] {
   color-scheme: light;
 }
@@ -86,6 +93,7 @@ html[data-theme="light"] {
 
 @theme inline {
   --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-display: var(--font-jakarta), "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
   --color-background: rgb(var(--background));
   --color-foreground: rgb(var(--foreground));
