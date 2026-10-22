@@ -27,18 +27,22 @@ export function InnovLabsHome() {
             <BlurFade delay={0.02} inView>
               <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8] shadow-2xs">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · SPINEWORKSPACE</AnimatedShinyText>
+                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · THE GOVERNED CONTEXT SUBSTRATE</AnimatedShinyText>
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
               <h1 id="company-title" className="mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-.045em] text-[#032D60]">
-                SpineWorkspace connects your tools, context and team.
+                Humans govern the business.{" "}
+                <span className="block text-[#006FE8] italic">AI helps the work.</span>
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>
               <p className={body + " mt-4 max-w-[680px] mx-auto"}>
-                Bring records and evidence from your tools into editable dashboards and Canvas.
-                Your AI Twin prepares the next step; your team stays in control.
+                SpineWorkspace is where humans and AI share one governed view of the business.
+                Your existing tools keep the record. Your Twin prepares the next step. You decide. The story continues.
+              </p>
+              <p className="mt-2 text-[13px] font-medium tracking-tight text-[#5E728B]">
+                Source systems stay authoritative. Authority stays with people. Context stays with the work.
               </p>
             </BlurFade>
             <BlurFade delay={0.14} inView>
@@ -47,7 +51,7 @@ export function InnovLabsHome() {
                   href="https://spineworkspace.com"
                   className={button}
                 >
-                  Explore SpineWorkspace Product <ArrowRight className="h-4 w-4" aria-hidden />
+                  Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
                 <Link href="/platform" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF]">
                   Explore Architecture

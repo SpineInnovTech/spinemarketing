@@ -32,12 +32,18 @@ export function SpineWorkspaceDetails() {
         <div className="innovtech-product-copy relative z-10">
           <p className="innovtech-eyebrow inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-white px-3.5 py-1 shadow-2xs">
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            <AnimatedShinyText shimmerWidth={140}>SPINEWORKSPACE · YOUR TEAM AND AI, IN CONTEXT</AnimatedShinyText>
+            <AnimatedShinyText shimmerWidth={140}>SPINEWORKSPACE · THE GOVERNED WORKSPACE</AnimatedShinyText>
           </p>
-          <h1 id="product-title" className="mt-5">A workspace for connected business work.</h1>
+          <h1 id="product-title" className="mt-5">
+            Humans govern the business.{" "}
+            <span className="block text-[#006FE8] italic">AI helps the work.</span>
+          </h1>
           <p className="innovtech-hero-description">
-            Bring records and evidence from your tools into editable dashboards and Canvas.
-            Your AI Twin prepares the next step; your team stays in control.
+            SpineWorkspace is where humans and AI share one governed view of the business.
+            Your existing tools keep the record. Your Twin prepares the next step. You decide. The story continues.
+          </p>
+          <p className="mt-2 text-xs font-semibold text-[#5E728B]">
+            Source systems stay authoritative. Authority stays with people. Context stays with the work.
           </p>
           <div className="innovtech-actions mt-6">
             <a href="https://spineworkspace.com" className="innovtech-button">Explore SpineWorkspace Platform <ArrowRight size={18} aria-hidden /></a>

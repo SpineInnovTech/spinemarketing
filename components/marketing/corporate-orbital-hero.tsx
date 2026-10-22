@@ -43,10 +43,10 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
 
           <div className="text-xs sm:text-sm leading-relaxed mb-5 text-[#5E728B]">
             <strong className="text-[#0070DC] font-bold block mb-1">
-              AI builds the context. Humans stay in control.
+              Humans govern the business. AI helps the work.
             </strong>
             <span>
-              Spine InnovTech builds the foundational data fabric powering SpineWorkspace — turning fragmented tools and autonomous AI into unified, trusted execution.
+              Spine InnovTech builds the foundational context substrate powering SpineWorkspace — where source systems stay authoritative, authority stays with people, and context stays with the work.
             </span>
           </div>
 

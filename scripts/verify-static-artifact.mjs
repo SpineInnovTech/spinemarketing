@@ -14,7 +14,7 @@ const redirects = readFileSync("out/_redirects", "utf8")
   .map(line => line.trim())
   .filter(line => line && !line.startsWith("#"))
   .map(line => line.split(/\s+/));
-if (!product.includes("A workspace for connected business work.") || !product.includes('id="features"') || !product.includes('id="how-it-works"')) {
+if (!product.includes("Humans govern the business.") || !product.includes('id="features"') || !product.includes('id="how-it-works"')) {
   throw new Error("Static export missing local Spine Workspace product features.");
 }
 if (redirects.some(([source]) => source.replace(/\/$/, "") === "/product")) {
@@ -24,7 +24,7 @@ const productAlias = redirects.find(([source]) => source === "/spineworkspace");
 if (!productAlias || productAlias[1] !== "/product" || productAlias[2] !== "301") {
   throw new Error("Legacy /spineworkspace entry must redirect internally to /product.");
 }
-if (!text.includes("SpineWorkspace connects your tools, context and team.") || !text.includes("Spine InnovTech")) {
+if (!text.includes("Humans govern the business.") || !text.includes("Spine InnovTech")) {
   throw new Error("Static export missing corporate hero/company identity.");
 }
 const pricing = readFileSync("out/pricing.html", "utf8");
