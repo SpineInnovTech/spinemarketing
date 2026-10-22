@@ -35,29 +35,17 @@ export function AboutContent() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[.21em] text-[#2461BC]">Why we began</p>
           <div className="mt-7 h-px w-20 bg-[#2461BC]" aria-hidden />
-          <div className="mt-8 rounded-2xl border border-[#D7E4F3] bg-[#F7FAFF] p-5">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#2461BC]">Founder Origin</p>
-            <p className="mt-2 text-xs leading-relaxed text-[#576C86]">An $8 million account save that proved connecting data is not the same as preserving the story.</p>
-          </div>
         </div>
         <div>
           <h2 className="text-[length:min(clamp(2.3rem,4.5vw,4.3rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.055em] text-[#102747]">Integration connected the systems. People still carried the context.</h2>
-          <div className="mt-8 rounded-2xl border-l-4 border-[#2461BC] bg-[#F8FBFF] p-6 shadow-sm">
-            <p className="text-[length:min(17px,var(--marketing-body-size))] italic leading-relaxed text-[#17375F]">
-              &ldquo;An $8 million renewal was red with no history. Connecting the authorized systems showed the real blocker. The account was saved. The gap that remained — no continuous shared record of the work — is what Spine is built to close.&rdquo;
-            </p>
-          </div>
           <p className="mt-8 text-[length:min(17px,var(--marketing-body-size))] leading-[1.95] text-[#536883]">
-            When I was a MuleSoft Customer Success Manager at Salesforce, I managed four enterprise accounts. Keeping an account healthy meant tracking goals, deployments, usage, support, and a success plan across disconnected systems. We maintained this in Excel and rebuilt the story every week for leadership.
+            The idea took shape through experience in software engineering, integration architecture and customer-facing enterprise work. To understand one customer or decision, a person often has to move across CRM, support, documents, messages and meetings, reconstructing the same business story repeatedly.
           </p>
           <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] leading-[1.95] text-[#536883]">
-            One $8 million renewal was already red when it was handed to me. There was no reliable history of what had happened since the product was bought. I connected Slack, email, the MuleSoft connector, and multiple Salesforce connectors (including Org 62 and Accounts) through Gemini and NotebookLM. That connected context showed the real problem: the customer had never started meaningful usage. With that clarity I took the appropriate measures, and the $8 million account was saved.
-          </p>
-          <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] leading-[1.95] text-[#536883]">
-            The lasting gap was clear. Data could be pulled, but there was still no continuous, shared record of decisions, blockers, and outcomes that stayed with the work. Existing tools remained the systems of record, yet the story of the account did not.
+            This is not a story about replacing the tools organizations already trust. It is about connecting business context around goals, relationships, work and evidence so that a person or AI counterpart can understand what matters without losing the boundaries that protect the business.
           </p>
           <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.95] text-[#17375F]">
-            That is why SpineWorkspace exists: so humans and AI can share one governed view of the business, while source systems stay authoritative and people retain the decision. Context and decisions carry forward so the story does not have to be rebuilt.
+            Our direction is simple: shared business understanding, useful collaboration between humans and AI, and governed paths from intention to verified outcome.
           </p>
         </div>
       </section>
