@@ -22,28 +22,28 @@ const contactFAQs = [
     answer: "Submit a request through our contact form with your expected team size, connectors, and deployment requirements. We provide a transparent written commercial quote tailored to your environment, including workspace seats, connector limits, and dedicated onboarding support.",
   },
   {
-    question: "Is my data safe with SpineWorkspace?",
-    answer: "Yes. SpineWorkspace enforces strict tenant isolation, encrypted connector credential storage, and role-based access control. In accordance with our privacy policy, customer business data and connector context are never used to train generalized foundation models.",
+    question: "Is my data safe with Spine Workspace?",
+    answer: "Spine Workspace is designed around tenant isolation, encrypted connector credential storage, and role-based access control. Access boundaries, authority and the data handling that apply depend on your deployment, connected providers and agreements — contact us to discuss the controls and documentation relevant to your requirements.",
   },
   {
     question: "Which tools do you connect?",
     answer: (
       <span>
-        SpineWorkspace connects across CRM, ERP, project management, code repositories, communication, and document systems—spanning over 65 connector configurations. Explore our{" "}
+        Spine Workspace connects across CRM, ERP, project management, code repositories, communication, and document systems. Explore our{" "}
         <Link href="/platform/integrations" className="text-[#0176D3] underline underline-offset-2 hover:text-[#0B5CAB]">
           integrations catalog
         </Link>
-        . Source systems of record remain fully authoritative, with Spine maintaining unified read context and bi-directional coordination.
+        . Source systems of record remain authoritative, with Spine maintaining governed read context and authorized coordination.
       </span>
     ),
   },
   {
     question: "Do I need to replace my current tools?",
-    answer: "No. SpineWorkspace is designed around a read-and-propose architecture that complements your existing systems of record. The tools you already use keep the primary record; Spine Twin analyzes context and prepares proposed actions, but any consequential changes require explicit human approval before write-back.",
+    answer: "No. Spine Workspace is designed around a read-and-propose architecture that complements your existing systems of record. The tools you already use keep the primary record; Spine Twin analyzes context and prepares proposed actions, but any consequential changes require explicit human approval before write-back.",
   },
   {
     question: "How long does setup take?",
-    answer: "Initial configuration typically takes a few hours to connect your tools via secure OAuth, map core business entities, and establish governance boundaries—mirroring the onboarding steps below. Your team can conduct their first operational context review shortly after connectors are authenticated.",
+    answer: "Setup connects your tools via secure OAuth, maps core business entities, and establishes governance boundaries. The time depends on the connectors and the scope of your environment; contact us to discuss what your deployment would involve.",
   },
 ];
 
@@ -81,9 +81,9 @@ export function ContactContent({
       <PageHero
         badge="Corporate Contact & Inquiry"
         headline="Talk to Spine InnovTech."
-        subhead="Whether you want a demo, have a question, or want to explore how SpineWorkspace fits your existing environment — we're here."
+        subhead="Whether you want a demo, have a question, or want to explore how Spine Workspace fits your existing environment — we're here."
         primaryCta={{ label: "Use the form", href: "#contact-form" }}
-        secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+        secondaryCta={{ label: "Explore Spine Workspace", href: "/product" }}
       />
 
       <section className="border-t border-[#E5E5E5] bg-[#F3F6F9] py-20 px-6 md:px-16">
@@ -93,7 +93,7 @@ export function ContactContent({
               {
                 icon: MessageSquare,
                 title: "Book a demo",
-                desc: "Discuss SpineWorkspace and arrange a relevant product walkthrough.",
+                desc: "Discuss Spine Workspace and arrange a relevant product walkthrough.",
                 cta: "Book a demo",
                 href: "/contact?intent=demo",
                 external: false,

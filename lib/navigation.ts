@@ -100,5 +100,5 @@ export const footerColumns: FooterColumn[] = [
   },
 ];
 
-export const COMPANY_TAGLINE = "Building the intelligence behind connected business. Connected systems. Shared context. Governed intelligence.";
-export const PRODUCT_ONELINER = "SpineWorkspace is the business-context workspace where humans and AI work together.";
+export const COMPANY_TAGLINE = "We build the foundation for connected business work. Shared business context. Human and AI collaboration. Governed capabilities. Work continuity.";
+export const PRODUCT_ONELINER = "Spine Workspace is the business-context workspace where humans and AI work together.";
