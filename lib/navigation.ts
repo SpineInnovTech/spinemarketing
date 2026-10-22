@@ -25,13 +25,13 @@ export const headerNavigation: NavItem[] = [
 export type FooterColumn = { heading: string; links: { name: string; href: string; external?: boolean }[] };
 
 // Footer navigation — Final Content Master (00. Shared Site Content › Footer),
-// extended by the user's 22 Oct 2026 request to surface the two existing
-// corporate pages directly: "Technology portfolio" (/portfolio) as the last
-// Technology link, and "Resources" (/resources) after Insights in Perspectives.
-// Four groups and thirteen links, in this order, with these exact labels and
-// destinations. Do not add other links (no /blog, login, pricing). Legal links
-// are handled separately (footerLegalLinks) and shown only when a complete
-// published policy page exists.
+// extended by the user's 22 Oct 2026 requests to surface the existing corporate
+// pages directly: "Technology portfolio" (/portfolio) as the last Technology
+// link, and in Perspectives the order "Insights", "Company news" (/updates) and
+// "Resources" (/resources). Four groups and fourteen links, in this order, with
+// these exact labels and destinations. Do not add other links (no /blog, login,
+// pricing). Legal links are handled separately (footerLegalLinks) and shown only
+// when a complete published policy page exists.
 export const footerColumns: FooterColumn[] = [
   {
     heading: "Company",
@@ -63,6 +63,7 @@ export const footerColumns: FooterColumn[] = [
     heading: "Perspectives",
     links: [
       { name: "Insights", href: "/insights" },
+      { name: "Company news", href: "/updates" },
       { name: "Resources", href: "/resources" },
     ],
   },

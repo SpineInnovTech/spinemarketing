@@ -35,6 +35,7 @@ const names: Record<string, string> = {
   "/resources": "Research & resources",
   "/resources/campaign": "Architecture & campaign gallery",
   "/blog": "Blog & articles",
+  "/updates": "Company news",
   "/portfolio": "Portfolio & demonstrations",
   "/developers": "For developers",
   "/integrations": "Connected capabilities & integrations",
