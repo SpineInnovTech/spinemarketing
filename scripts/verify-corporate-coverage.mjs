@@ -128,12 +128,16 @@ const HEADER_REQUIRED_ROUTES = [
 ];
 
 function headerLinkPresent(html, href, label) {
-  // Match an anchor whose href is this destination and whose text includes the label.
+  // Match an anchor whose href is this destination, then confirm the label text
+  // is present in its inner markup. We intentionally do NOT strip tags: the
+  // labels are contiguous plain text (optionally wrapped in a single span), so a
+  // whitespace-normalised substring check is sufficient and avoids an
+  // incomplete-sanitisation pattern. This reads our own built HTML, not user input.
   const escaped = href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const anchor = new RegExp(`<a\\b[^>]*\\bhref="${escaped}/?"[^>]*>([\\s\\S]*?)</a>`, "g");
   for (const match of html.matchAll(anchor)) {
-    const text = match[1].replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
-    if (text.includes(label)) return true;
+    const inner = match[1].replace(/\s+/g, " ");
+    if (inner.includes(label)) return true;
   }
   return false;
 }
