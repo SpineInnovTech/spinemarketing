@@ -96,7 +96,7 @@ check(form.includes('setStatus("prepared")') && form.includes("has not submitted
 check(privacy.includes("Privacy Policy") && terms.includes("Terms"), "legal pages must exist");
 const pricing = source("app/pricing/page.tsx");
 const workerSource = source("worker/index.ts");
-check(pricing.includes("https://spineworkspace.com/pricing"), "corporate /pricing must redirect to the product pricing page");
+check(/https:\/\/spineworkspace\.com\/pricing/.test(pricing), "corporate /pricing must redirect to the product pricing page");
 check(/status:\s*308/.test(workerSource) && workerSource.includes("maybePricingRedirect"), "worker must issue a permanent 308 redirect for /pricing to the product site");
 check(!/\$\d+\s*\/\s*(seat|user|tool|stream|month)/i.test(pricing) && !/checkout|Register Free Account|signup/i.test(pricing), "corporate pricing page must not expose plans, checkout or product signup");
 check(source("app/portfolio/page.tsx").includes("not a list of separately purchasable products"), "portfolio must clarify capability architecture");

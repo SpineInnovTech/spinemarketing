@@ -29,7 +29,7 @@ if (!text.includes("We build the foundation for connected business work.") || !t
 }
 const pricing = readFileSync("out/pricing.html", "utf8");
 const pricingText = pricing.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");
-if (!pricing.includes("https://spineworkspace.com/pricing")) {
+if (!/https:\/\/spineworkspace\.com\/pricing/.test(pricing)) {
   throw new Error("Pricing page must point visitors to the product pricing page at spineworkspace.com/pricing.");
 }
 if (!/<meta[^>]+http-equiv="refresh"[^>]+spineworkspace\.com\/pricing/i.test(pricing)) {
@@ -39,7 +39,7 @@ if (/\$\s?\d+\s*(?:\/\s*)?(seat|user|tool|sync|stream|month)/i.test(pricingText)
   throw new Error("Corporate pricing page must not expose plans, prices, checkout or product signup.");
 }
 for (const [route, html] of [["/product", product]]) {
-  if (!html.includes("https://spineworkspace.com")) throw new Error(`${route} must link to the product website.`);
+  if (!/https:\/\/spineworkspace\.com/.test(html)) throw new Error(`${route} must link to the product website.`);
 }
 const header = text.match(/<header\b[\s\S]*?<\/header>/)?.[0] ?? "";
 for (const category of ["Company", "Technology", "Insights"]) {
