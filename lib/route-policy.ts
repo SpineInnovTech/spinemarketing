@@ -19,6 +19,12 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     reason: "Legacy entry redirects to the local SpineWorkspace product-details page.",
   },
   {
+    path: "/pricing",
+    action: "redirect",
+    destination: "https://spineworkspace.com/pricing",
+    reason: "Pricing is the product site's responsibility; the Worker issues a permanent 308 to spineworkspace.com/pricing. Kept addressable, excluded from the sitemap as a redirect.",
+  },
+  {
     path: "/ai",
     action: "redirect",
     destination: "/twin",
