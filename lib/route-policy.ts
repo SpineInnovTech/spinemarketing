@@ -223,6 +223,36 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     action: "keep",
     reason: "Demonstrations of the product. Not customer results, and not a duplicate of /proof.",
   },
+  {
+    path: "/spine-workspace",
+    action: "keep",
+    reason: "Corporate SpineWorkspace product overview (content master 05). Hands product depth off to spineworkspace.com. Distinct from the legacy /spineworkspace redirect.",
+  },
+  {
+    path: "/trust",
+    action: "keep",
+    reason: "Trust & governance design commitments (content master 06). Access, authority, provenance and outcome verification.",
+  },
+  {
+    path: "/responsible-ai",
+    action: "keep",
+    reason: "Responsible AI approach (content master 07). Evidence, bounded delegation, meaningful review, correction and memory boundaries.",
+  },
+  {
+    path: "/partners",
+    action: "keep",
+    reason: "Partnerships (content master 08). Invitation to collaborate; does not imply signed partners.",
+  },
+  {
+    path: "/careers",
+    action: "keep",
+    reason: "Careers (content master 09). Invitation to introduce yourself; does not imply open vacancies.",
+  },
+  {
+    path: "/contact/thank-you",
+    action: "exclude",
+    reason: "Contact confirmation page (content master 11A). noindex and kept out of the sitemap; visiting it must not imply a new submission.",
+  },
 ];
 
 export const REDIRECT_SOURCES = new Set(
