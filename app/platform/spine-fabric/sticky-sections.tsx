@@ -13,7 +13,7 @@ const items = [
   {
     tag: "The record",
     title: "The tools keep the record",
-    description: "Customers, tickets, billing, contracts, and approvals stay in the tools that already own them. SpineWorkspace does not create a new home for the record.",
+    description: "Customers, tickets, billing, contracts, and approvals stay in the tools that already own them. Spine Workspace does not create a new home for the record.",
     icon: Database,
     color: "#2dd4bf",
     features: [

@@ -107,17 +107,17 @@
 
 4. **Regression Test Additions in `scripts/test-e2e.mjs`**:
    Extended Tier 2 test `T2.16` to assert:
-   - Double-slash canonical redirect: `https://spineinnovlabs.spineworkspace.com//attacker.com` -> `https://spineinnovtech.com/attacker.com` (301)
-   - Backslash canonical redirect: `https://spineinnovlabs.spineworkspace.com/\attacker.com` -> `https://spineinnovtech.com/attacker.com` (301)
+   - Double-slash canonical redirect: `https://spineinnovtech.spineworkspace.com//attacker.com` -> `https://spineinnovtech.com/attacker.com` (301)
+   - Backslash canonical redirect: `https://spineinnovtech.spineworkspace.com/\attacker.com` -> `https://spineinnovtech.com/attacker.com` (301)
    - Double-slash app entry URL: `appEntryUrl("//attacker.com")` -> `https://app.spineworkspace.com/attacker.com`
    - Backslash app entry URL: `appEntryUrl("\\\\attacker.com")` -> `https://app.spineworkspace.com/attacker.com`
 
 ### C. Empirical Verification Outputs
 1. **Adversarial Redirect Verification**:
    ```
-   [PASS] https://spineinnovlabs.com//attacker.com -> https://spineinnovtech.com/attacker.com
-   [PASS] https://spineinnovlabs.com/\attacker.com -> https://spineinnovtech.com/attacker.com
-   [PASS] https://spineinnovlabs.com///attacker.com/path?a=1 -> https://spineinnovtech.com/attacker.com/path?a=1
+   [PASS] https://spineinnovtech.com//attacker.com -> https://spineinnovtech.com/attacker.com
+   [PASS] https://spineinnovtech.com/\attacker.com -> https://spineinnovtech.com/attacker.com
+   [PASS] https://spineinnovtech.com///attacker.com/path?a=1 -> https://spineinnovtech.com/attacker.com/path?a=1
    [PASS] https://spineinnovtech.spineworkspace.com//attacker.com -> https://spineinnovtech.com/attacker.com
    ```
 2. **Adversarial `appEntryUrl` Verification**:
@@ -185,9 +185,9 @@ To independently verify the fixes:
    cd /Users/nirmal/Github/spinemarketing-magic-ui
    node -e '
    import("./worker/index.ts").then(worker => {
-     const env = { CANONICAL_REDIRECTS_ENABLED: "true", CANONICAL_SITE_URL: "https://spineinnovtech.com", LEGACY_REDIRECT_HOSTS: "spineinnovlabs.com" };
-     const res1 = worker.maybeCanonicalRedirect(new Request("https://spineinnovlabs.com//attacker.com"), env);
-     const res2 = worker.maybeCanonicalRedirect(new Request("https://spineinnovlabs.com/\\\\attacker.com"), env);
+     const env = { CANONICAL_REDIRECTS_ENABLED: "true", CANONICAL_SITE_URL: "https://spineinnovtech.com", LEGACY_REDIRECT_HOSTS: "spineinnovtech.com" };
+     const res1 = worker.maybeCanonicalRedirect(new Request("https://spineinnovtech.com//attacker.com"), env);
+     const res2 = worker.maybeCanonicalRedirect(new Request("https://spineinnovtech.com/\\\\attacker.com"), env);
      console.log("//attacker.com ->", res1.headers.get("Location"));
      console.log("/\\\\attacker.com ->", res2.headers.get("Location"));
    });'

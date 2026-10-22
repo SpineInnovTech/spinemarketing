@@ -4,16 +4,17 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FinalCTA } from "@/components/final-cta"
 import { AboutContent } from "./content"
+import { AboutJourneyScroll } from "./sticky-sections"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Our Origins | Spine InnovTech",
+  title: "Our Philosophy | Spine InnovTech",
   description:
-    "Why Spine InnovTech builds SpineWorkspace, the business-context workspace.",
+    "Read the engineering principles behind Spine InnovTech: source authority, shared context, human judgment and observable business outcomes.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "Our Origins | Spine InnovTech",
-    description: "Why Spine InnovTech builds SpineWorkspace, the business-context workspace.",
+    title: "Our Philosophy | Spine InnovTech",
+    description: "Read the engineering principles behind Spine InnovTech: source authority, shared context, human judgment and observable business outcomes.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
@@ -28,6 +29,7 @@ export default function AboutPage() {
       <Header />
       <main id="main">
         <AboutContent />
+        <AboutJourneyScroll />
         <FinalCTA />
       </main>
       <Footer />

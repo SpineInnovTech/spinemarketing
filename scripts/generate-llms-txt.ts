@@ -4,7 +4,7 @@ import { absoluteUrl } from "../lib/site-url";
 async function main() {
   const content = `# Spine InnovTech
 
-> Intelligence for Connected Business — and SpineWorkspace, where humans and AI work from shared business context.
+> Intelligence for Connected Business — and Spine Workspace, where humans and AI work from shared business context.
 
 Canonical Domain: ${absoluteUrl("/")}
 Documentation Index: ${absoluteUrl("/llms.txt")}

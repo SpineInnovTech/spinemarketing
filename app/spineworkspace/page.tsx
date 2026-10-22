@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "SpineWorkspace | Spine InnovTech",
-  description: "Redirecting to SpineWorkspace product overview.",
+  title: "Spine Workspace | Spine InnovTech",
+  description: "Redirecting to Spine Workspace product overview.",
   alternates: { canonical: "/product" },
 };
 

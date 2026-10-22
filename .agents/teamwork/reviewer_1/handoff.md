@@ -81,7 +81,7 @@ All requirements (R1–R5) from `ORIGINAL_REQUEST.md` and milestones (M1–M5) f
 
 #### 1. Open Redirect & Protocol-Relative URL Attack
 - **Assumption Challenged**: `url.pathname` always stays constrained to `canonicalBase` (`https://spineinnovtech.com`).
-- **Attack Scenario**: An attacker issues `GET https://spineinnovlabs.spineworkspace.com//attacker.com/malware`.
+- **Attack Scenario**: An attacker issues `GET https://spineinnovtech.spineworkspace.com//attacker.com/malware`.
 - **Actual Behavior**: In Node/WHATWG URL parsing, `new URL("//attacker.com/malware", "https://spineinnovtech.com")` resolves to `https://attacker.com/malware`.
 - **Blast Radius**: If Cloudflare edge proxy does not collapse double slashes, an attacker could abuse legacy hostname 301 redirects as an open redirect.
 - **Mitigation**: Add path normalization `url.pathname.replace(/^\/+/, "/")`.
@@ -91,7 +91,7 @@ All requirements (R1–R5) from `ORIGINAL_REQUEST.md` and milestones (M1–M5) f
 - **Stress Test Result**: **PASS**. Ran Tier 2 tests `T2.1` and `T2.9`. Query parameters and encoded characters (`%20`, `&`, `=`) were preserved exactly.
 
 #### 3. Mixed-Case Hostname and Port Variations
-- **Assumption Challenged**: Hostnames sent with unconventional casing (`SpineInnovLabs.Spineworkspace.COM`) or host headers containing port numbers (`spineinnovlabs.spineworkspace.com:8443`) are matched accurately.
+- **Assumption Challenged**: Hostnames sent with unconventional casing (`SpineInnovTech.Spineworkspace.COM`) or host headers containing port numbers (`spineinnovtech.spineworkspace.com:8443`) are matched accurately.
 - **Stress Test Result**: **PASS**. Ran Tier 2 tests `T2.4` and `T2.5`. `parseLegacyHosts` normalizes using `.toLowerCase()`, and `url.hostname` strips port numbers automatically.
 
 #### 4. SSR / SSG Hydration Mismatches in Corporate Architecture Storyboard

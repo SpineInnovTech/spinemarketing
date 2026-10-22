@@ -14,28 +14,28 @@ export const metadata: Metadata = {
     types: { "application/rss+xml": "/rss.xml" },
   },
   title: {
-    default: "Spine InnovTech | Intelligence for Connected Business",
+    default: "Spine InnovTech — Foundation for Connected Business Work",
     template: "%s",
   },
   description:
-    "Technology and AI innovation for shared business context, governed action, and connected work. Meet the company behind SpineWorkspace.",
+    "Spine InnovTech builds technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Spine InnovTech | Intelligence for Connected Business",
+    title: "We build the foundation for connected business work.",
     description:
-      "Technology and AI innovation for shared business context, governed action, and connected work. Meet the company behind SpineWorkspace.",
+      "Technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
     siteName: "Spine InnovTech",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spine InnovTech | Intelligence for Connected Business",
+    title: "We build the foundation for connected business work.",
     description:
-      "Technology and AI innovation for shared business context, governed action, and connected work.",
+      "Technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
     images: ["/og.png"],
   },
 }
@@ -56,7 +56,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Spine InnovTech",
               legalName: "Spine InnovTech Private Limited",
-              description: "Technology and AI innovation company behind SpineWorkspace",
+              description: "Technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
               url: publicSiteUrl,
               logo: absoluteUrl("/icon.svg"),
               sameAs: [],

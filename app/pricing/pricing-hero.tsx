@@ -90,9 +90,9 @@ export function PricingHero() {
     <PageHero
       badge="Evaluation & pricing"
       headline={"Start with one governed workflow.\nScale from there."}
-      subhead="SpineWorkspace starts at US$49 per user / month billed monthly. Most teams begin with one scoped workflow, then expand across connectors and governance depth as adoption grows."
+      subhead="Spine Workspace starts at US$49 per user / month billed monthly. Most teams begin with one scoped workflow, then expand across connectors and governance depth as adoption grows."
       primaryCta={{ label: "Book a workflow review", href: "/contact?intent=workflow-review" }}
-      secondaryCta={{ label: "Explore SpineWorkspace", href: "/product#features" }}
+      secondaryCta={{ label: "Explore Spine Workspace", href: "/product#features" }}
       art={<PricingTierPreviewCard />}
     />
   );

@@ -207,27 +207,27 @@ export function CampaignGalleryContent() {
         <div className="mx-auto max-w-[1200px]">
           <motion.div {...fade()} className="mb-8 flex items-center gap-3">
             <h2 className="text-[22px] font-semibold tracking-[-0.03em] text-[#052858]">
-              The SpineWorkspace — Architecture Blueprints
+              The Spine Workspace — Architecture Blueprints
             </h2>
             <span className="rounded-full bg-primary/15 px-2.5 py-0.5 text-[11px] font-bold text-primary uppercase tracking-wider">
               Core
             </span>
           </motion.div>
           <motion.p {...fade(0.05)} className="mb-10 max-w-3xl text-[15px] font-medium leading-[1.6] text-white/45">
-            These illustrations explore how tools and evidence relate to shared business context. They do not establish connector availability or prove deployed controls. Explore Spine Fabric for the contextual foundation and SpineWorkspace for the product features.
+            These illustrations explore how tools and evidence relate to shared business context. They do not establish connector availability or prove deployed controls. Explore Spine Fabric for the contextual foundation and Spine Workspace for the product features.
           </motion.p>
 
           <div className="grid gap-6 sm:grid-cols-2">
             {[
               {
                 src: "/images/campaign/Post-Category.jpg",
-                title: "The SpineWorkspace for Enterprise Intelligence",
-                desc: "Problem vs Solution — tool sprawl and ungrounded AI risk on the left, the SpineWorkspace with governed cognitive loop on the right. Three data flows (Structured, Unstructured, AI Memory) converge at the Truth Boundary.",
+                title: "The Spine Workspace for Enterprise Intelligence",
+                desc: "Problem vs Solution — tool sprawl and ungrounded AI risk on the left, the Spine Workspace with governed cognitive loop on the right. Three data flows (Structured, Unstructured, AI Memory) converge at the Truth Boundary.",
               },
               {
                 src: "/images/campaign/Post-Spine.jpg",
                 title: "The Spine — Powering Governed, Context-Rich AI",
-                desc: "Full architecture showing the Workspace, Twin, SpineWorkspace as the record the tools already keep, and the The loop (Think → Govern → Act → Adjust) — illustrative demonstration, not a customer result.",
+                desc: "Full architecture showing the Workspace, Twin, Spine Workspace as the record the tools already keep, and the The loop (Think → Govern → Act → Adjust) — illustrative demonstration, not a customer result.",
               },
               {
                 src: "/images/campaign/Post-Governance.jpg",
@@ -237,7 +237,7 @@ export function CampaignGalleryContent() {
               {
                 src: "/images/campaign/Carousel-BusinessOps.jpg",
                 title: "Three Planes of Data Integration",
-                desc: "The record, the evidence, and earlier conversations — all feeding the SpineWorkspace. The one connection, Governed The loop, and one view of the customer.",
+                desc: "The record, the evidence, and earlier conversations — all feeding the Spine Workspace. The one connection, Governed The loop, and one view of the customer.",
               },
             ].map((arch, i) => (
               <motion.div
@@ -268,7 +268,7 @@ export function CampaignGalleryContent() {
               href="/platform/spine-fabric"
               className="text-[13px] font-semibold text-primary hover:text-primary transition flex items-center gap-1"
             >
-              Explore the SpineWorkspace
+              Explore the Spine Workspace
               <ChevronRight className="h-3.5 w-3.5" />
             </Link>
             <span className="text-white/10">|</span>
@@ -358,7 +358,7 @@ export function CampaignGalleryContent() {
                     <button type="button" aria-label={`View ${asset.title}`} onClick={() => setLightbox(asset)} className="relative block w-full overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#0055B8]">
                       <Image
                         src={asset.src}
-                        alt={`${asset.title} — SpineWorkspace ${typeLabel(asset.type)}`}
+                        alt={`${asset.title} — Spine Workspace ${typeLabel(asset.type)}`}
                         width={asset.width}
                         height={asset.height}
                         className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
@@ -405,7 +405,7 @@ export function CampaignGalleryContent() {
             <span className="text-[#0176D3]">in action?</span>
           </motion.h2>
           <motion.p {...fade(0.1)} className="mt-6 text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.5] tracking-[-0.02em] text-[#444]">
-            Illustrative campaign designs showing how SpineWorkspace capabilities are communicated. Book a demo to see the product demonstration.
+            Illustrative campaign designs showing how Spine Workspace capabilities are communicated. Book a demo to see the product demonstration.
           </motion.p>
           <motion.div {...fade(0.2)} className="mt-10 flex flex-col items-center justify-center gap-2.5 sm:flex-row">
             <Button

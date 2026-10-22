@@ -3,7 +3,7 @@ import path from "node:path";
 import { parse } from "yaml";
 
 export type PublicSitesEnvironment = {
-  spine_innovlabs: {
+  spine_innovtech: {
     public_url: string;
     canonical_url: string;
     legacy_redirect_hosts?: string[];
@@ -18,7 +18,7 @@ export type PublicSitesEnvironment = {
 
 export type UrlRuleCondition = {
   env?: string | string[];
-  innovlabs_canonical_live?: boolean;
+  innovtech_canonical_live?: boolean;
 };
 
 export type UrlRuleStep =

@@ -1,6 +1,6 @@
-# Spine InnovLabs - Exact Page Contents
+# Spine InnovTech - Exact Page Contents
 
-This document contains the complete text content from all 45 pages of the Spine InnovLabs website.
+This document contains the complete text content from all 45 pages of the Spine InnovTech website.
 
 ---
 
@@ -17,7 +17,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 **HERO SECTION**
 - **Badge**: "The Founder Story"
 - **Headline**: "How a red account and 13 years of plumbing led to a new category of software."
-- **Subheadline**: "Nirmal Prince J · Founder & CEO, Spine InnovLabs · Bengaluru, India"
+- **Subheadline**: "Nirmal Prince J · Founder & CEO, Spine InnovTech · Bengaluru, India"
 
 **CHAPTER 1: The architect who built the data fabric**
 - **Quote**: "The thing that kept me up at night wasn't a broken API. It was watching smart people make the wrong decisions because their tools couldn't talk to each other."
@@ -42,19 +42,19 @@ This document contains the complete text content from all 45 pages of the Spine 
 - **Impact**: "Written off as lost. Saved — because one person manually connected every signal."
 - **Quote**: "I saved it. But it nearly killed me to do it by hand. That's when I knew: this should never require one person to do alone. And I was going to build the system that made sure it didn't."
 
-**CHAPTER 4: The birth of Spine InnovLabs**
+**CHAPTER 4: The birth of Spine InnovTech**
 - **Foundation**: "Not a whiteboard exercise. A lived experience — signals visible only through manual integration."
 - **Vision**: "He set out to automate what he did by hand: cross-referencing, signal discovery, context building."
 - **Mission**: "He had spent 13 years building integration layers. Now he was going to build the intelligence layer."
 
-**What Spine InnovLabs Actually Solves**:
+**What Spine InnovTech Actually Solves**:
 1. "Connect every app into Spine Fabric — one source of truth."
 2. "Three data ecosystems — Truth, Context, AI Sessions — merge into Entity 360."
 3. "The cognitive loop: Think. Act. Govern. Repeat. Adjust."
 4. "AI thinks. You approve or deny. AI works. Knowledge compounds."
 5. "Human approval required before anything executes."
 
-**Key Panel**: "A Knowledge Workspace over Spine Fabric — the Workspace is where you work, the Cognitive Layer is where AI serves you. This is Spine InnovLabs."
+**Key Panel**: "A Knowledge Workspace over Spine Fabric — the Workspace is where you work, the Cognitive Layer is where AI serves you. This is Spine InnovTech."
 
 **TIMELINE - The Journey**:
 - 2014: "Soft Dev" — "Started in software development. Learning the craft of building systems from scratch."
@@ -64,7 +64,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 - "The Crisis": "The Red Account" — "$8M account at 100% attrition risk. Zero handover."
 - "The Discovery": "Two Hidden Signals" — "Unsigned contract. Hidden conflicts. Invisible to every dashboard."
 - "The Save": "$8M Renewed" — "Both signals resolved. Full renewal. Account saved."
-- 2025: "Founded Spine InnovLabs" — "Built in Bengaluru. Automates what was done manually."
+- 2025: "Founded Spine InnovTech" — "Built in Bengaluru. Automates what was done manually."
 - 2026: "Knowledge Workspace over Spine Fabric" — "Workspace + Cognitive Layer. Three data ecosystems. You stay in control."
 
 **CLOSING SECTION**
@@ -147,7 +147,7 @@ This document contains the complete text content from all 45 pages of the Spine 
    **A**: Yes. You can upgrade or downgrade at any time. When upgrading, you get immediate access to the new tier's features. When downgrading, changes take effect at your next billing cycle.
 
 2. **Q**: Is there a free trial?
-   **A**: We offer guided demos where you can see Spine InnovLabs working with your actual tools and data. Book a demo and we'll walk you through a personalized setup.
+   **A**: We offer guided demos where you can see Spine InnovTech working with your actual tools and data. Book a demo and we'll walk you through a personalized setup.
 
 3. **Q**: What counts as a 'connector'?
    **A**: Each app you connect counts as one connector — for example, Salesforce is one connector, Slack is another. Connecting multiple instances of the same app (e.g., two Salesforce orgs) counts as two connectors.
@@ -201,7 +201,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 
 **HERO SECTION**
 - **Headline**: "Built for how you actually work."
-- **Description**: "Every team has different tools, different metrics, and different daily priorities. Spine InnovLabs connects them all and shows each person exactly what they need to see."
+- **Description**: "Every team has different tools, different metrics, and different daily priorities. Spine InnovTech connects them all and shows each person exactly what they need to see."
 
 **HOW IT WORKS STRIP**:
 - Connect — "Link the apps your team already uses."
@@ -237,10 +237,10 @@ This document contains the complete text content from all 45 pages of the Spine 
 **HERO SECTION**
 - **Headline**: "Contact"
 - **Tagline**: "Let's talk."
-- **Description**: "Whether you want a demo, have a question, or want to explore how Spine InnovLabs fits your apps — we're here."
+- **Description**: "Whether you want a demo, have a question, or want to explore how Spine InnovTech fits your apps — we're here."
 
 **CONTACT OPTIONS**:
-1. **Book a demo** — "See Spine InnovLabs in action with a live walkthrough tailored to your use case."
+1. **Book a demo** — "See Spine InnovTech in action with a live walkthrough tailored to your use case."
 2. **Email us** — "General questions, partnership inquiries, or anything else — we respond within 24 hours."
 3. **Visit us** — "Based in India, serving teams globally. Available for in-person meetings by appointment."
 
@@ -286,7 +286,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 ### 9. WHY PAGE (/why)
 
 **HERO SECTION**
-- **Headline**: "Why Spine InnovLabs"
+- **Headline**: "Why Spine InnovTech"
 - **Subheadline**: "The apps problem is not fragmentation."
 - **Description**: "Signal is scattered. AI has no context. Actions bypass governance."
 
@@ -371,7 +371,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 **HERO SECTION**
 - **Headline**: "Resources"
 - **Tagline**: "Learn, evaluate, adopt."
-- **Description**: "Guides, playbooks, and deep dives to help you understand Spine InnovLabs."
+- **Description**: "Guides, playbooks, and deep dives to help you understand Spine InnovTech."
 
 **START HERE**:
 - **Tagline**: "Three places to begin."
@@ -385,7 +385,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 - **Security & governance** — "AES-256 encryption, SOC 2 alignment, full audit trails."
 - **The Adaptive Workspace** — "Nine role-based views from one canonical record."
 - **Approval Gate & Twin** — "Governed AI that proposes with evidence. You approve."
-- **Why Spine InnovLabs** — "The problem we exist to solve. Signal, context, governance."
+- **Why Spine InnovTech** — "The problem we exist to solve. Signal, context, governance."
 - **Integrations** — "70+ connectors. REST, GraphQL, webhooks, MCP."
 
 ---
@@ -455,7 +455,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 
 **BEFORE/AFTER**:
 - "Every other dashboard shows you a department."
-- "Spine InnovLabs shows you the business."
+- "Spine InnovTech shows you the business."
 
 **ROLE LENSES**:
 - **Tagline**: "Same workspace. Different lenses."
@@ -635,7 +635,7 @@ This document contains the complete text content from all 45 pages of the Spine 
    - Usage data: connected tools, workspace activity, feature usage
 
 2. **How we use your information**
-   - Provide and improve Spine InnovLabs
+   - Provide and improve Spine InnovTech
    - Communicate about your account
    - Send product updates (with consent)
    - Ensure security and prevent fraud
@@ -674,7 +674,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 ### 19. TERMS & CONDITIONS PAGE (/terms)
 
 **SECTIONS**:
-1. **Acceptance of terms** — By accessing Spine InnovLabs, you agree to be bound by these terms.
+1. **Acceptance of terms** — By accessing Spine InnovTech, you agree to be bound by these terms.
 2. **Service description** — Knowledge workspace connecting business tools with AI-assisted insights and human approval.
 3. **Your account** — You are responsible for security of credentials and accuracy of information.
 4. **Your data** — You retain ownership of all data. We don't claim ownership of your business data.
@@ -702,17 +702,17 @@ This document contains the complete text content from all 45 pages of the Spine 
 
 1. **"Stop being the human API between your tools"**
    - **Date**: April 12, 2026
-   - **Author**: Spine InnovLabs Team
+   - **Author**: Spine InnovTech Team
    - **Read Time**: 4 min read
    - **Tags**: Product, Workspace
    - **Description**: "Every founder, operator, and account manager starts their day the same way: open 12 tabs, copy-paste context, and lose an hour before real work begins."
 
 2. **"Why AI needs your approval — every single time"**
    - **Date**: April 10, 2026
-   - **Author**: Spine InnovLabs Team
+   - **Author**: Spine InnovTech Team
    - **Read Time**: 3 min read
    - **Tags**: AI, Trust
-   - **Description**: "Most AI tools act first and ask questions later. We built Spine InnovLabs the opposite way, and here's why that matters."
+   - **Description**: "Most AI tools act first and ask questions later. We built Spine InnovTech the opposite way, and here's why that matters."
 
 ---
 
@@ -973,7 +973,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 
 **FINAL CTA**:
 - "Intelligence that compounds daily."
-- "The more you use Spine InnovLabs, the sharper its signals become."
+- "The more you use Spine InnovTech, the sharper its signals become."
 - "Approval Gate & Twin in Action →"
 
 ---
@@ -1391,7 +1391,7 @@ This document contains the complete text content from all 45 pages of the Spine 
 
 **FINAL CTA SECTION**:
 - "Ready to see it in action?"
-- "These are real campaign designs showing real Spine InnovLabs capabilities. Book a demo to see the Workspace live."
+- "These are real campaign designs showing real Spine InnovTech capabilities. Book a demo to see the Workspace live."
 - **CTAs**: "Book a demo" | "See pricing"
 
 ---
@@ -1406,12 +1406,12 @@ This document contains the complete text content from all 45 pages of the Spine 
 
 ## BRANDING ELEMENTS
 
-**Company Name**: Spine InnovLabs
+**Company Name**: Spine InnovTech
 **Full Tagline**: "Stop being the human API between your apps."
 **Founder**: Nirmal Prince J
 **Founded**: 2025
-**Incorporated**: Spine InnovLabs
-**Domain**: spineinnovlabs.com
+**Incorporated**: Spine InnovTech
+**Domain**: spineinnovtech.com
 
 **Key Brand Concepts**:
 - The Adaptive Spine (data layer)

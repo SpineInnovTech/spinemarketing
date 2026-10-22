@@ -43,7 +43,7 @@ export function EnterpriseHome() {
           <h1 className="mt-6 max-w-3xl text-[length:min(3rem,var(--marketing-title-size))]/[var(--tw-leading,1)] font-bold leading-tight md:text-[length:min(3.75rem,var(--marketing-title-size))]/[var(--tw-leading,1)]">
             Your work already has the data.
             <br />
-            SpineWorkspace gives it context.
+            Spine Workspace gives it context.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-[#3C4A5A]">
             Bring your work, connected tools, and AI Twin together in one workspace—to understand what matters, coordinate next steps, and move work forward under your authority.
@@ -76,7 +76,7 @@ export function EnterpriseHome() {
         <motion.div {...rise}>
           <SectionHeader
             headline="More than a view of your business. A place to move it forward."
-            body="Connected context is the foundation. SpineWorkspace brings the work, collaboration, actions, and continuity around it."
+            body="Connected context is the foundation. Spine Workspace brings the work, collaboration, actions, and continuity around it."
           />
           <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-2">
             {capabilities.map(([t, b]) => (
@@ -146,7 +146,7 @@ export function EnterpriseHome() {
             <p className="py-3"><span className="font-semibold text-[#181818]">When evidence is sufficient:</span> Account / Entity synthesis</p>
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-center">
-            SpineWorkspace does not invent the missing pieces. It shows what is known, what is stale, what conflicts, and what still needs a source.
+            Spine Workspace does not invent the missing pieces. It shows what is known, what is stale, what conflicts, and what still needs a source.
           </p>
           <p className="mx-auto mt-2 max-w-2xl text-center text-sm text-[#6B7A8D]">
             Rich synthesis depends on sufficient evidence, entity binding, freshness, and reconciliation—not simply time since signup.
@@ -184,7 +184,7 @@ export function EnterpriseHome() {
         <motion.div {...rise}>
           <SectionHeader
             headline="Keep your systems. Connect the work between them."
-            body="SpineWorkspace brings authorized context and available capabilities around your existing systems. Those systems continue to perform the actions they own."
+            body="Spine Workspace brings authorized context and available capabilities around your existing systems. Those systems continue to perform the actions they own."
           />
           <p className="mx-auto mt-8 max-w-3xl text-center text-[#3C4A5A]">CRM · Support · Billing · Communication · Documents · Engineering · Data · AI tools · MCP / plugins</p>
         </motion.div>
@@ -195,7 +195,7 @@ export function EnterpriseHome() {
         <motion.div {...rise}>
           <SectionHeader
             headline="Move work forward. Keep authority clear."
-            body="AI prepares an action. A human or authorized policy grants authority. The connected system performs it. SpineWorkspace verifies the result and reconciles it with the business context. The next participant continues from the verified outcome."
+            body="AI prepares an action. A human or authorized policy grants authority. The connected system performs it. Spine Workspace verifies the result and reconciles it with the business context. The next participant continues from the verified outcome."
           />
           <p className="mx-auto mt-8 max-w-3xl text-center font-semibold">Know → Decide → Approve → Act → Verify → Continue</p>
           <p className="mx-auto mt-6 max-w-2xl text-center">Done does not mean the API returned 200. Done means the outcome was verified.</p>

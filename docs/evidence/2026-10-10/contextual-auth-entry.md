@@ -4,7 +4,7 @@ The approved change adds real app Sign up / Sign in actions in the shared header
 
 The handoff uses `app.spineworkspace.com/signup` and `/login`, carrying an explicit app-local `next`. Fourteen distinct registered domain projections are requested; the five industry pages without their own projection enter My Work. Founder Operations enters `company-overview`; its manifest does not have a dashboard. Entry hints do not grant access: the app's Descope/One Access and Gateway remain authoritative.
 
-Reference: `SpineInnovLabs/spineworkspace-live@f5dffed1bc2607a6b282856cbf59e6f007020af5`, login/signup pages, catchall Work route, workbench-config domain estate, and complete projection manifests.
+Reference: `SpineInnovTech/spineworkspace-live@f5dffed1bc2607a6b282856cbf59e6f007020af5`, login/signup pages, catchall Work route, workbench-config domain estate, and complete projection manifests.
 
 Validation:
 

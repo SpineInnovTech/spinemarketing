@@ -116,7 +116,7 @@ GET /solutions/individual             -> status: 302 -> https://spineworkspace.c
    - `productSiteUrl()` maps all 20 solution slugs to valid destinations on `https://spineworkspace.com/solutions/<slug>`.
    - `workspaceEntryLinks()` generates HTTPS URLs targeting `https://auth.spineworkspace.com` with `next` and `entry_domain` query parameters.
    - `appEntryUrl()` generates HTTPS URLs targeting `https://app.spineworkspace.com`.
-   - Edge Worker (`worker/index.ts`) verified to issue 301 canonical redirects for legacy hostnames (`spineinnovtech.spineworkspace.com`, `spineinnovlabs.*`) preserving path and query.
+   - Edge Worker (`worker/index.ts`) verified to issue 301 canonical redirects for legacy hostnames (`spineinnovtech.spineworkspace.com`, `spineinnovtech.*`) preserving path and query.
 
 ---
 

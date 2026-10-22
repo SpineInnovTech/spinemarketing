@@ -4,15 +4,15 @@
 version: 1
 
 flags:
-  innovlabs_canonical_live:
+  innovtech_canonical_live:
     default: false
     from_env:
       CANONICAL_REDIRECTS_ENABLED: ["true", "1", "yes"]
-      SPINE_INNOVLABS_CANONICAL_LIVE: ["true", "1", "yes"]
+      SPINE_INNOVTECH_CANONICAL_LIVE: ["true", "1", "yes"]
 
 environments:
   prod:
-    spine_innovlabs:
+    spine_innovtech:
       public_url: https://spineinnovtech.com
       canonical_url: https://spineinnovtech.com
       legacy_redirect_hosts:
@@ -28,7 +28,7 @@ environments:
       domain_root: spineworkspace.com
 
   test:
-    spine_innovlabs:
+    spine_innovtech:
       public_url: https://spineinnovtech.com
       canonical_url: https://spineinnovtech.com
     spine_workspace:
@@ -38,8 +38,8 @@ environments:
       domain_root: spineworkspace.com
 
   dev:
-    spine_innovlabs:
-      public_url: https://spineinnovlabs-marketing-dev.workers.dev
+    spine_innovtech:
+      public_url: https://spineinnovtech-marketing-dev.workers.dev
       canonical_url: https://spineinnovtech.com
     spine_workspace:
       apex: https://spineworkspace.com
@@ -48,16 +48,16 @@ environments:
       domain_root: spineworkspace.com
 
 url_rules:
-  spine_innovlabs_site:
-    - if: { env: prod, innovlabs_canonical_live: true }
-      then_ref: environments.prod.spine_innovlabs.canonical_url
-    - if: { env: prod, innovlabs_canonical_live: false }
-      then_ref: environments.prod.spine_innovlabs.public_url
+  spine_innovtech_site:
+    - if: { env: prod, innovtech_canonical_live: true }
+      then_ref: environments.prod.spine_innovtech.canonical_url
+    - if: { env: prod, innovtech_canonical_live: false }
+      then_ref: environments.prod.spine_innovtech.public_url
     - if: { env: test }
-      then_ref: environments.test.spine_innovlabs.public_url
+      then_ref: environments.test.spine_innovtech.public_url
     - if: { env: dev }
-      then_ref: environments.dev.spine_innovlabs.public_url
-    - else_ref: environments.prod.spine_innovlabs.public_url
+      then_ref: environments.dev.spine_innovtech.public_url
+    - else_ref: environments.prod.spine_innovtech.public_url
 
   spine_workspace_apex:
     - if: { env: [prod, test, dev] }
@@ -75,8 +75,8 @@ url_rules:
     - else_ref: environments.prod.spine_workspace.auth
 
 navigation:
-  innovlabs_product_cta: spine_workspace.apex
-  workspace_footer_parent: spine_innovlabs_site
+  innovtech_product_cta: spine_workspace.apex
+  workspace_footer_parent: spine_innovtech_site
 
 build:
   prod_site_url: https://spineinnovtech.com

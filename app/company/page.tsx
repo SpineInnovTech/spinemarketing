@@ -6,12 +6,12 @@ import { Footer } from "@/components/footer";
 import { PageHero } from "@/components/marketing/page-hero";
 
 export const metadata: Metadata = {
-  title: "About Spine InnovTech | Technology, AI & Business Context",
-  description: "Discover why Spine InnovTech builds connected, context-aware technology, and the company behind SpineWorkspace.",
+  title: "Company — Spine InnovTech",
+  description: "Meet Spine InnovTech, the technology company behind Spine Workspace, and learn why we build for the work between business systems.",
   alternates: { canonical: "/company" },
   openGraph: {
-    title: "About Spine InnovTech",
-    description: "The company building intelligence for connected business and the SpineWorkspace experience.",
+    title: "Company — Spine InnovTech",
+    description: "Meet Spine InnovTech, the technology company behind Spine Workspace, and learn why we build for the work between business systems.",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
@@ -37,21 +37,21 @@ export default function CompanyPage() {
       <Header />
       <main id="main">
         <PageHero
-          badge="The Company / Spine InnovTech"
-          headline="Technology should understand the business it serves."
-          subhead="Spine InnovTech is a technology and AI innovation company focused on a fundamental problem in modern work: information is everywhere, but shared business understanding is not."
-          primaryCta={{ label: "What we build", href: "/#what-we-build" }}
-          secondaryCta={{ label: "Get in touch", href: "/contact" }}
+          badge="About the company / Spine InnovTech"
+          headline="We build for the work between systems."
+          subhead="Spine InnovTech is a technology company focused on a persistent business problem: the information needed to act lives across many systems, while responsibility for understanding it falls on people. We develop the foundation for that understanding to remain connected, governed and useful as work moves between people, teams and AI environments."
+          primaryCta={{ label: "Explore our technology", href: "/platform" }}
+          secondaryCta={{ label: "Talk to us", href: "/contact" }}
         />
 
         <section className="mx-auto grid max-w-[1240px] gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.65fr_1.35fr] lg:gap-24 lg:py-32">
-          <div><p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR STORY</p><p className="mt-5 max-w-[280px] text-sm leading-7 text-[#5A6D86]">From enterprise integration to the future of human–AI work.</p></div>
+          <div><p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR PURPOSE</p><p className="mt-5 max-w-[280px] text-sm leading-7 text-[#5A6D86]">Help people and AI understand the business they are working in.</p></div>
           <div>
             <h2 className="text-[length:min(clamp(2.5rem,4.8vw,4.6rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.06em]">The next big challenge is not connecting another application.</h2>
-            <p className="mt-8 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">The idea behind Spine InnovTech emerged from hands-on experience with enterprise integrations and customer-facing work. A single account, incident, or decision often required moving through CRM, support systems, email, documents, meetings, financial tools, and conversations with colleagues.</p>
-            <p className="mt-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">The friction was not just in moving data between systems. It was in reconstructing what the business knew, why it mattered, what had been decided, and what needed to happen next.</p>
-            <p className="mt-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">AI makes that problem more visible. Models can generate useful language and reasoning, but meaningful business assistance requires context, permissions, evidence, and continuity beyond the current conversation.</p>
-            <p className="mt-5 text-[length:min(18px,var(--marketing-body-size))] font-medium leading-[1.9] text-[#1A355B]">We started Spine InnovTech to build for that reality: a connected business environment where people and AI work from context, not fragments.</p>
+            <p className="mt-8 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">A useful business system needs more than access to information. It needs to establish what a record refers to, how it relates to other evidence, who is responsible and which decisions are already in motion.</p>
+            <p className="mt-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">Our work began with a recurring observation from enterprise integration and customer-facing operations: moving information between applications does not automatically preserve its meaning. A support escalation might connect to a customer commitment; that commitment might depend on a technical change; the technical change might affect an account goal discussed in a different system.</p>
+            <p className="mt-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">The connections matter because someone must decide what to do next. We make that context available where work happens, with clear boundaries around access, authority and accountability.</p>
+            <p className="mt-5 text-[length:min(18px,var(--marketing-body-size))] font-medium leading-[1.9] text-[#1A355B]">We want people to spend more of their time exercising judgment and moving work forward, with less effort spent reconstructing its history.</p>
           </div>
         </section>
 
@@ -93,8 +93,8 @@ export default function CompanyPage() {
 
         <section className="bg-white py-24 lg:py-32">
           <div className="mx-auto grid max-w-[1240px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
-            <div><p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR FLAGSHIP</p><h2 className="mt-5 text-[length:min(clamp(2.6rem,4.5vw,4.7rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.06em]">SpineWorkspace brings the idea to work.</h2></div>
-            <div><p className="text-[length:min(20px,var(--marketing-body-size))] font-medium leading-[1.7] text-[#253F62]">One workspace for humans and AI to understand the business, share the work, and achieve goals together.</p><p className="mt-5 text-[16px] leading-[1.85] text-[#556982]">SpineWorkspace is our flagship product. Its human-facing workbench and context-aware AI counterpart are supported by Spine Fabric, Spine Runtime, and connected capabilities. The architecture is designed for context to be usable while responsibility stays clear.</p><Link href="/product" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#0D2B59] px-6 text-sm font-semibold text-white transition hover:bg-[#2854A0]">Explore SpineWorkspace <ArrowUpRight className="h-4 w-4"/></Link></div>
+            <div><p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR FLAGSHIP</p><h2 className="mt-5 text-[length:min(clamp(2.6rem,4.5vw,4.7rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.06em]">One foundation, expressed through a working product.</h2></div>
+            <div><p className="text-[length:min(20px,var(--marketing-body-size))] font-medium leading-[1.7] text-[#253F62]">Spine InnovTech is the company behind Spine Workspace.</p><p className="mt-5 text-[16px] leading-[1.85] text-[#556982]">Our technology work centers on business context, governed capabilities and continuity. Spine Workspace brings those ideas together in a shared working environment for people and AI. The company develops the foundation and its engineering principles; the product makes that foundation usable in everyday work.</p><Link href="/product" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#0D2B59] px-6 text-sm font-semibold text-white transition hover:bg-[#2854A0]">Meet Spine Workspace <ArrowUpRight className="h-4 w-4"/></Link></div>
           </div>
         </section>
 

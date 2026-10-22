@@ -194,13 +194,18 @@ registerTest(1, 1, "F1.3", "wrangler.jsonc specifies www.spineinnovtech.com as c
   assert.equal(r.custom_domain, true, "www.spineinnovtech.com must have custom_domain: true");
 });
 
-registerTest(1, 1, "F1.4", "wrangler.jsonc retains legacy cutover routes for redirection", async () => {
+registerTest(1, 1, "F1.4", "wrangler.jsonc binds only spineinnovtech.com production domains (no legacy custom-domain bindings)", async () => {
   const w = readJsonSafe("wrangler.jsonc");
   const routes = w?.env?.prod?.routes || [];
-  assert.ok(
-    routes.some((r) => r.pattern === "spineinnovlabs.spineworkspace.com"),
-    "spineinnovlabs.spineworkspace.com route must be present for cutover",
-  );
+  const patterns = routes.map((r) => r.pattern);
+  // Deployment decision: production worker serves spineinnovtech.com only.
+  // Legacy hosts are handled by passive LEGACY_REDIRECT_HOSTS + worker redirect
+  // source, never by binding this worker to an old custom domain.
+  const allowed = new Set(["spineinnovtech.com", "www.spineinnovtech.com"]);
+  assert.ok(patterns.length > 0, "Production must bind at least the canonical spineinnovtech.com domain");
+  for (const pattern of patterns) {
+    assert.ok(allowed.has(pattern), "Production must bind only spineinnovtech.com hosts; found non-allowed binding: " + pattern);
+  }
 });
 
 registerTest(1, 1, "F1.5", "wrangler.jsonc routes follow clean hostname format", async () => {
@@ -795,14 +800,14 @@ registerTest(1, 18, "F18.1", "FinalCTA links to https://spineworkspace.com", asy
 
 registerTest(1, 18, "F18.2", "Header navigation featured item links to https://spineworkspace.com", async () => {
   const text = readFileSync("lib/navigation.ts", "utf8");
-  assert.ok(text.includes('name: "SpineWorkspace"'), "SpineWorkspace featured item must exist");
+  assert.ok(text.includes('name: "Spine Workspace"'), "Spine Workspace featured item must exist");
   assert.ok(text.includes("spineworkspace.com"), "Must link to spineworkspace.com");
 });
 
 registerTest(1, 18, "F18.3", "Footer links SpineWorkspace to https://spineworkspace.com", async () => {
   const text = readFileSync("lib/navigation.ts", "utf8");
   assert.ok(text.includes("footerColumns"), "footerColumns must exist");
-  assert.ok(text.includes("SpineWorkspace"), "SpineWorkspace link must exist in footer");
+  assert.ok(text.includes("Spine Workspace"), "Spine Workspace link must exist in footer");
 });
 
 registerTest(1, 18, "F18.4", "Header does not contain broken internal workbench links", async () => {
@@ -823,7 +828,7 @@ registerTest(1, 19, "F19.1", "app/pricing/page.tsx contains explicit link to /pr
 
 registerTest(1, 19, "F19.2", "Pricing page link describes exploring product features", async () => {
   const text = readFileSync("app/pricing/page.tsx", "utf8");
-  assert.ok(text.includes("product") || text.includes("SpineWorkspace"), "Link text must describe product");
+  assert.ok(text.includes("product") || text.includes("Spine Workspace"), "Link text must describe product");
 });
 
 registerTest(1, 19, "F19.3", "Pricing page satisfies audit-corporate-site requirement", async () => {
@@ -1219,7 +1224,7 @@ registerTest(3, null, "T3.8", "Corporate Architecture Storyboard concepts align 
 registerTest(3, null, "T3.9", "Pricing page retains /product link for audit compliance and describes product", async () => {
   const pricing = readFileSync("app/pricing/page.tsx", "utf8");
   assert.ok(pricing.includes('href="/product"'), "Pricing page must link to /product");
-  assert.ok(pricing.includes("SpineWorkspace") || pricing.includes("product"), "Pricing page must describe product");
+  assert.ok(pricing.includes("Spine Workspace") || pricing.includes("product"), "Pricing page must describe product");
 });
 
 registerTest(3, null, "T3.10", "QA script assertions in check-cloudflare-config.mjs align with wrangler.jsonc", async () => {

@@ -38,7 +38,7 @@ const ASIDES: Record<string, Aside> = {
     rows: [
       { term: "Sits above", detail: "Existing systems, including CRM, email, and project tools." },
       { term: "Brings together", detail: "Authoritative truth and the context for the current task." },
-      { term: "Stays in place", detail: "SpineWorkspace does not replace the tools already in the stack." },
+      { term: "Stays in place", detail: "Spine Workspace does not replace the tools already in the stack." },
     ],
   },
   "The record and the evidence first. Then a proposal.": {
@@ -80,7 +80,7 @@ const ASIDES: Record<string, Aside> = {
     title: "The tools stay themselves",
     rows: [
       { term: "Already in use", detail: "Tools, files, conversations, and workflows already open for that person." },
-      { term: "When connected", detail: "SpineWorkspace connects to them. It does not replace them." },
+      { term: "When connected", detail: "Spine Workspace connects to them. It does not replace them." },
     ],
   },
   "Work continues across the tools you already use.": {

@@ -17,7 +17,7 @@ export function FinalCTA() {
               Build on shared context, not disconnected tools.
             </h2>
             <p className="mt-6 max-w-[700px] text-[16px] leading-[1.85] text-[#4E607A]">
-              Explore how our technology connects business context, human judgment and governed AI capability. Start with the company behind the thinking or meet SpineWorkspace, our flagship product.
+              Explore how our technology connects business context, human judgment and governed AI capability. Start with the company behind the thinking or meet Spine Workspace, our flagship product.
             </p>
           </div>
           <div className="flex flex-col items-start gap-3 lg:items-stretch">
@@ -25,7 +25,7 @@ export function FinalCTA() {
               Contact Spine InnovTech <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
             <a href="https://spineworkspace.com" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#006FE8] bg-white px-6 py-3 text-sm font-semibold text-[#082B5E] transition-colors hover:bg-[#EBF7FF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">
-              Explore SpineWorkspace <ArrowUpRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
+              Explore Spine Workspace <ArrowUpRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
             </a>
           </div>
         </div>

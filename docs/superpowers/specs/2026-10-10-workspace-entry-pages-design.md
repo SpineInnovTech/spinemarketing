@@ -2,7 +2,7 @@
 
 Status: entry specification updated for role-first onboarding; runtime changes are under review in spineworkspace-live. Live TEST acceptance remains blocked at authenticated session access.
 Date: 2026-10-10. Updated: 2026-10-11.
-Historical source baseline for the original inspection table: `SpineInnovLabs/spineworkspace-live@f5dffed1bc2607a6b282856cbf59e6f007020af5`. Current runtime work builds on `dev@9c10e703f2ad3c0618320c3b002961afedfdabdb`.
+Historical source baseline for the original inspection table: `SpineInnovTech/spineworkspace-live@f5dffed1bc2607a6b282856cbf59e6f007020af5`. Current runtime work builds on `dev@9c10e703f2ad3c0618320c3b002961afedfdabdb`.
 Parent branding in this work: Spine InnovTech / Spine InnovTech Private Limited, as directed by the founder. Existing repository identifiers remain unchanged.
 
 ## Intended outcome
@@ -171,6 +171,6 @@ The user confirmed that neither a Descope-authenticated TEST browser session nor
 
 PR #19 remains a documentation change. The existing marketing pages and their public feature content remain intact; this update does not claim a production app deployment. The broad host-federation gap remains tracked by spineworkspace-live issue #440.
 
-Runtime implementation: draft [spineworkspace-live #444](https://github.com/SpineInnovLabs/spineworkspace-live/pull/444) targets `dev`. Full web tests (1,679 passing), Gateway tests (664 passing, five existing pending), whole-web/Gateway/shared configuration typechecks, the TEST OpenNext build, and five built-app local fixture UI checks pass. The fixture used no provider records and cannot satisfy live acceptance.
+Runtime implementation: draft [spineworkspace-live #444](https://github.com/SpineInnovTech/spineworkspace-live/pull/444) targets `dev`. Full web tests (1,679 passing), Gateway tests (664 passing, five existing pending), whole-web/Gateway/shared configuration typechecks, the TEST OpenNext build, and five built-app local fixture UI checks pass. The fixture used no provider records and cannot satisfy live acceptance.
 
 The newly supplied Descope management network binding is present. Read-only management and public signing-key API requests both returned a Cloudflare HTML 403, preventing management-key/project/test-user/provider verification. This is an API access blocker, not proof that the key is invalid. No management impersonation or replacement authenticated user session was created.

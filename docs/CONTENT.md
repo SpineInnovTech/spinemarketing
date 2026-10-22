@@ -28,7 +28,7 @@ flowchart LR
   Studio[Sanity Studio] --> Lake[Content Lake]
   Lake --> Build[CircleCI build]
   Build --> Out[out/]
-  Out --> CF[spineinnovlabs-marketing]
+  Out --> CF[spineinnovtech-marketing]
   Webhook[Sanity webhook] --> GH[GitHub / CircleCI]
 ```
 
@@ -100,7 +100,7 @@ The repo includes [`.github/workflows/cms-rebuild.yml`](../.github/workflows/cms
 
 In Sanity: **API → Webhooks** → URL:
 
-`https://api.github.com/repos/SpineInnovLabs/spinemarketing/dispatches`
+`https://api.github.com/repos/SpineInnovTech/spinemarketing/dispatches`
 
 Body:
 

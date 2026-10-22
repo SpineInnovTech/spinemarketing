@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: { absolute: "Company & Product Updates | Spine InnovTech" },
-  description: "Notes from Spine InnovTech on company direction, business context, SpineWorkspace and responsible AI.",
+  description: "Notes from Spine InnovTech on company direction, business context, Spine Workspace and responsible AI.",
   alternates: { canonical: "/updates" },
 };
 
@@ -17,14 +17,14 @@ const notes = [
   {
     period: "October 2026",
     category: "Company direction",
-    title: "Spine InnovTech and SpineWorkspace: two distinct roles",
-    body: "Spine InnovTech is the company and technology identity. SpineWorkspace is the flagship business-context workspace where people and AI collaborate. This website introduces the company, its technology, and the features of SpineWorkspace so visitors can evaluate the product before entering a workspace.",
+    title: "Spine InnovTech and Spine Workspace: two distinct roles",
+    body: "Spine InnovTech is the company and technology identity. Spine Workspace is the flagship business-context workspace where people and AI collaborate. This website introduces the company, its technology, and the features of Spine Workspace so visitors can evaluate the product before entering a workspace.",
   },
   {
     period: "September 2026",
     category: "Architecture",
     title: "One product with a governed architecture",
-    body: "Spine Fabric, Workbench, Twin, Runtime and the Marketplace describe connected capabilities of SpineWorkspace. Business context, authority and verified outcomes remain the design focus rather than separate standalone AI agents.",
+    body: "Spine Fabric, Workbench, Twin, Runtime and the Marketplace describe connected capabilities of Spine Workspace. Business context, authority and verified outcomes remain the design focus rather than separate standalone AI agents.",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function UpdatesPage() {
         <PageHero
           badge="Spine InnovTech / Journal"
           headline="Company updates."
-          subhead="Direction, architecture and meaningful progress from the company behind SpineWorkspace. These editorial notes are not a production release log."
+          subhead="Direction, architecture and meaningful progress from the company behind Spine Workspace. These editorial notes are not a production release log."
           primaryCta={{ label: "Read the blog", href: "/blog" }}
           secondaryCta={{ label: "Product changelog", href: "/changelog" }}
         />

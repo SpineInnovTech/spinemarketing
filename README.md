@@ -2,10 +2,10 @@
 
 The official company website for **Spine InnovTech**, builder of **Spine Workspace**. This repository contains company, technology, solutions, resources and corporate marketing pages.
 
-- **Corporate site:** https://spineinnovlabs.spineworkspace.com/
-- **Source:** `SpineInnovLabs/spinemarketing`, `main`
+- **Corporate site:** https://spineinnovtech.spineworkspace.com/
+- **Source:** `SpineInnovTech/spinemarketing`, `main`
 - **Host:** Cloudflare Workers + Static Assets
-- **Production Worker:** `spineinnovlabs-marketing`
+- **Production Worker:** `spineinnovtech-marketing`
 - **Deployment:** **Cloudflare Workers Builds (GitHub integration)** — no CircleCI dependency
 - **Framework:** Next.js 16 static export, npm + `package-lock.json`
 - **Content:** Sanity at build time (with a legacy-content fallback)

@@ -193,7 +193,7 @@ export function PersonalOpsContent() {
           >
             <h2 className="section-heading">
               What changes with{" "}
-              <span className="text-primary">SpineWorkspace</span>
+              <span className="text-primary">Spine Workspace</span>
             </h2>
           </motion.div>
           <div className="mx-auto mt-16 grid max-w-4xl gap-6 sm:grid-cols-2">
@@ -287,7 +287,7 @@ export function PersonalOpsContent() {
           >
             <h2 className="section-heading">
               What individuals{" "}
-              <span className="text-primary">do inside SpineWorkspace</span>
+              <span className="text-primary">do inside Spine Workspace</span>
             </h2>
           </motion.div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">

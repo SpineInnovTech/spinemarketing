@@ -75,7 +75,7 @@ const contact = source("app/contact/content.tsx");
 const form = source("components/lead-form.tsx");
 
 check(home.includes("InnovLabsHome"), "corporate homepage component not wired");
-check(banner.includes("SPINE INNOVTECH") && banner.includes("SpineWorkspace connects your tools, context and team."), "company identity and product introduction absent");
+check(banner.includes("SPINE INNOVTECH") && banner.includes("We build the foundation for connected business work."), "company identity and product introduction absent");
 check(source("components/header.tsx").includes("headerNavigation"), "header must render the full corporate navigation");
 for (const label of ["Company", "Platform & Products", "Insights"]) {
   check(source("lib/navigation.ts").includes(`label: "${label}"`), `missing corporate navigation category: ${label}`);
@@ -97,6 +97,16 @@ check(privacy.includes("Privacy Policy") && terms.includes("Terms"), "legal page
 check(source("app/pricing/page.tsx").includes('href="/product"'), "corporate pricing must link to the local product-details page");
 check(source("app/portfolio/page.tsx").includes("not a list of separately purchasable products"), "portfolio must clarify capability architecture");
 check(existsSync("public/og.png") && existsSync("public/icon.svg"), "social and brand assets missing");
+
+// Unified seven-step story: required proof + action, and two-word product brand.
+const aboutPage = source("app/about/page.tsx");
+const aboutProof = source("app/about/sticky-sections.tsx");
+check(aboutPage.includes("AboutJourneyScroll"), "About/Our story must render the founder proof (seven-step: the proof)");
+check(aboutProof.includes("$8M") && aboutProof.includes("MuleSoft") && aboutProof.includes("Salesforce") && aboutProof.includes("governed shared context"), "About proof must tell the $8M renewal outcome with authorized Slack/email/MuleSoft/Salesforce context");
+check(banner.includes("Explore Spine Workspace") && banner.includes('href="/proof"'), "homepage must offer the action CTA (Explore Spine Workspace) and a path to the proof");
+for (const [label, text] of [["homepage", banner], ["footer", footer], ["about", about], ["company", source("app/company/page.tsx")]]) {
+  check(!/\bSpineWorkspace\b/.test(text), `visitor copy must use two-word 'Spine Workspace' on ${label}`);
+}
 
 for (const file of routeFiles) {
   const content = source(file);

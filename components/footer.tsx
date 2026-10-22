@@ -25,12 +25,12 @@ export function Footer() {
               </span>
             </Link>
             <h2 className="mt-8 max-w-[420px] text-[length:min(clamp(1.8rem,3vw,2.8rem),var(--marketing-heading-size))] font-semibold leading-[1.2] tracking-[-.05em] text-white">
-              Building the intelligence behind connected business.
+              We build the foundation for connected business work.
             </h2>
             <p className="mt-5 max-w-[400px] text-[14px] leading-[1.85] text-[#CBD9EB]">
-              Connected systems. Shared context. Governed intelligence. Building
-              SpineWorkspace for humans and AI to work together with business
-              context.
+              Spine InnovTech develops technology for shared business context,
+              human and AI collaboration, governed capabilities and work
+              continuity.
             </p>
             <Link
               href="/contact"
@@ -75,6 +75,10 @@ export function Footer() {
             ))}
           </nav>
         </div>
+        <p className="border-b border-white/15 py-6 text-[13px] leading-[1.8] text-[#CBD9EB]">
+          Your tools keep the record. Your people keep the authority. Context
+          continues with the work.
+        </p>
         <div className="flex flex-wrap items-center justify-between gap-4 py-7">
           <p className="text-[12px] text-[#CBD9EB]">
             © {new Date().getFullYear()} {COMPANY_LEGAL_NAME}. Built

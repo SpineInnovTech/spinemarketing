@@ -15,16 +15,16 @@ interface FAQSectionProps {
 
 const platformFAQs: FAQItem[] = [
   {
-    question: "Does SpineWorkspace replace our tools?",
-    answer: "No. The tools you already use keep the record: customers, tickets, billing, contracts, and approvals. SpineWorkspace shows the work. The evidence for this person and this task stays evidence. Twin's draft is not the record.",
+    question: "Does Spine Workspace replace our tools?",
+    answer: "No. The tools you already use keep the record: customers, tickets, billing, contracts, and approvals. Spine Workspace shows the work. The evidence for this person and this task stays evidence. Twin's draft is not the record.",
   },
   {
     question: "What are the Workspace and Twin?",
     answer: "The Workspace brings goals, responsibilities, evidence, decisions, and next steps into a shared work environment. Twin helps investigate, prepare, and coordinate work using authorized business context. Consequential actions remain subject to the right authority and policy; source systems keep their authoritative roles.",
   },
   {
-    question: "How is SpineWorkspace different from a CRM or a dashboard tool?",
-    answer: "A CRM, a billing system, or a ticket tool holds the truth. SpineWorkspace does not replace that record. It assembles the context for this person and this task, and Twin prepares a proposal. Nothing becomes a decision until a person accepts it.",
+    question: "How is Spine Workspace different from a CRM or a dashboard tool?",
+    answer: "A CRM, a billing system, or a ticket tool holds the truth. Spine Workspace does not replace that record. It assembles the context for this person and this task, and Twin prepares a proposal. Nothing becomes a decision until a person accepts it.",
   },
   {
     question: "Does Twin act on its own?",

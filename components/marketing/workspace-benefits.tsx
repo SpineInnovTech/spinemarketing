@@ -23,7 +23,7 @@ const benefits = [
     title: "Editable dashboards and Canvas",
     body: "Edit record drafts from operational dashboards with KPIs and actions. Compose Canvas documents, tables and graphs from reusable UI Library blocks.",
     href: "https://spineworkspace.com",
-    link: "Explore SpineWorkspace Product",
+    link: "Explore Spine Workspace Product",
   },
 ];
 

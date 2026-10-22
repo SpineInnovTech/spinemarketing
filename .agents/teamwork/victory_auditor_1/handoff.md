@@ -16,7 +16,7 @@ Direct empirical observations conducted with zero shared context from the implem
 1. **Domain & Edge Redirect Configuration**:
    - In `wrangler.jsonc`:
      * Lines 32–49 declare `spineinnovtech.com` and `www.spineinnovtech.com` under `env.prod.routes` with `custom_domain: true`.
-     * `env.prod.vars.CANONICAL_REDIRECTS_ENABLED = "true"`, `CANONICAL_SITE_URL = "https://spineinnovtech.com"`, and `LEGACY_REDIRECT_HOSTS` includes `spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com`.
+     * `env.prod.vars.CANONICAL_REDIRECTS_ENABLED = "true"`, `CANONICAL_SITE_URL = "https://spineinnovtech.com"`, and `LEGACY_REDIRECT_HOSTS` includes `spineinnovtech.spineworkspace.com,spineinnovtech.spineworkspace.com,spineinnovtech.com,www.spineinnovtech.com,www.spineinnovtech.com`.
    - In `worker/index.ts`:
      * Line 48: `const safePath = "/" + url.pathname.replace(/^[\/\\]+/, "");` strips leading slashes and backslashes.
      * Line 49: `const target = new URL(safePath + url.search, canonicalBase);`

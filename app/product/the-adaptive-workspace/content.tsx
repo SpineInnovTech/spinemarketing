@@ -101,7 +101,7 @@ export function TheAdaptiveWorkspaceContent() {
             className="text-[length:min(44px,var(--marketing-title-size))] font-semibold leading-[1.08] tracking-[-0.05em] text-white sm:text-[length:min(64px,var(--marketing-title-size))]"
           >
             Your daily surface{" "}
-            <span className="text-primary">on top of SpineWorkspace.</span>
+            <span className="text-primary">on top of Spine Workspace.</span>
           </motion.h1>
           <motion.p
             {...heroFade(0.38)}

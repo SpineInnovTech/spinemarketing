@@ -12,14 +12,14 @@ const resourceItems = [
   {
     tag: "Use-case library",
     title: "Real-world playbooks for every team.",
-    description: "Revenue, CS, support, finance, and executive decisioning — see how SpineWorkspace transforms each workflow.",
+    description: "Revenue, CS, support, finance, and executive decisioning — see how Spine Workspace transforms each workflow.",
     icon: BookOpen,
     color: "#1BA784",
     features: ["Account success patterns", "Revenue operations plays", "Executive decision briefs"],
   },
   {
     tag: "Platform guides",
-    title: "Understand SpineWorkspace, Workspace, and Twin.",
+    title: "Understand Spine Workspace, Workspace, and Twin.",
     description: "Deep-dive guides on how data flows, how intelligence surfaces, and how governance works.",
     icon: FileText,
     color: "#3b82f6",

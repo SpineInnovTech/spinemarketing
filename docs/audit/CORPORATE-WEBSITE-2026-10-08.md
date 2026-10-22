@@ -1,9 +1,9 @@
-# Spine InnovLabs — Corporate Website Audit
+# Spine InnovTech — Corporate Website Audit
 
 **Date:** 8 October 2026  
-**Repository:** `SpineInnovLabs/spinemarketing`  
+**Repository:** `SpineInnovTech/spinemarketing`  
 **Branch of review:** `audit/corporate-site-all-pages-20261008` (merge before next release)  
-**Deployment target:** https://spineinnovlabs.spineworkspace.com/  
+**Deployment target:** https://spineinnovtech.spineworkspace.com/  
 **Scope:** 71 Next.js route entrypoint files, shared layout/navigation/CTAs, lead capture, security copy, canonical/SEO, product-boundary messaging, and the CircleCI release contract.
 
 ## Sign-off boundary
@@ -14,7 +14,7 @@ This is a **source/architecture/content audit**, not a claim of a full rendered 
 
 | Priority | Finding | Action |
 | --- | --- | --- |
-| P0 | Corporate hostname still showed the former product homepage | New Spine InnovLabs homepage is wired in source; CircleCI + Cloudflare production verification required after credits return |
+| P0 | Corporate hostname still showed the former product homepage | New Spine InnovTech homepage is wired in source; CircleCI + Cloudflare production verification required after credits return |
 | P0 | Unverifiable security, legal and operational claims | Removed specific unproven encryption, residency, compliance, retention and delivery guarantees from primary security/Contact/Services copy; **legal review remains open** |
 | P1 | Corporate site presented company architecture as independent products | Corrected shared copy: Spine Workspace is the flagship; Fabric, Workbench, Twin, Marketplace and Runtime are capabilities/layers |
 | P1 | About page included an unsupported $8M customer rescue | Replaced with a grounded company origin and principles page; removed legacy journey/testimonial appendices |

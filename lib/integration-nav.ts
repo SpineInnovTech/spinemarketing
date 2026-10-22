@@ -52,7 +52,7 @@ export function getConnectorNavMarks(): ConnectorNavMark[] {
   return marks;
 }
 
-/** Categories SpineWorkspace connects. Icons only — not product claims or counts. */
+/** Categories Spine Workspace connects. Icons only — not product claims or counts. */
 export const INTEGRATION_KIND_MARKS: KindNavMark[] = [
   { name: "Connections", icon: Cable },
   { name: "Plugins", icon: Puzzle },

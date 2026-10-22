@@ -87,7 +87,7 @@ async function migratePost(
     readingTimeLabel: post.readTime,
     featured: post.slug === "stop-being-the-human-api",
     seo: {
-      title: `${post.title} | SpineWorkspace Blog`,
+      title: `${post.title} | Spine Workspace Blog`,
       description: post.description,
     },
   })

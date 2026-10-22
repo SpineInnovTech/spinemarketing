@@ -29,7 +29,7 @@ export const headerNavigation: NavItem[] = [
     label: "Platform & Products",
     href: "/platform",
     featured: {
-      name: "SpineWorkspace",
+      name: "Spine Workspace",
       href: "https://spineworkspace.com",
       icon: Layers3,
       desc: "Our core shared workspace for humans and AI (spineworkspace.com)",
@@ -73,7 +73,7 @@ export const footerColumns: FooterColumn[] = [
   {
     heading: "Platform & Products",
     links: [
-      { name: "SpineWorkspace", href: "https://spineworkspace.com", external: true },
+      { name: "Spine Workspace", href: "https://spineworkspace.com", external: true },
       { name: "Spine Fabric", href: "/platform/spine-fabric" },
       { name: "Spine Twin", href: "/twin" },
       { name: "Governance & Runtime", href: "/governance" },
@@ -100,5 +100,5 @@ export const footerColumns: FooterColumn[] = [
   },
 ];
 
-export const COMPANY_TAGLINE = "Building the intelligence behind connected business. Connected systems. Shared context. Governed intelligence.";
-export const PRODUCT_ONELINER = "SpineWorkspace is the business-context workspace where humans and AI work together.";
+export const COMPANY_TAGLINE = "We build the foundation for connected business work. Shared business context. Human and AI collaboration. Governed capabilities. Work continuity.";
+export const PRODUCT_ONELINER = "Spine Workspace is the business-context workspace where humans and AI work together.";

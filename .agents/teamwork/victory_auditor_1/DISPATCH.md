@@ -18,7 +18,7 @@ Conduct an independent 3-phase audit (timeline analysis, cheating detection, ind
 Verify all acceptance criteria from ORIGINAL_REQUEST.md:
 1. Domain & Redirects:
    - wrangler.jsonc specifies spineinnovtech.com and www.spineinnovtech.com under env.prod.routes.
-   - worker/index.ts redirects legacy hosts (spineinnovlabs.*, spineinnovtech.spineworkspace.com) to https://spineinnovtech.com with status 301 while preserving path and query strings, and sanitizes against open redirects.
+   - worker/index.ts redirects legacy hosts (spineinnovtech.*, spineinnovtech.spineworkspace.com) to https://spineinnovtech.com with status 301 while preserving path and query strings, and sanitizes against open redirects.
    - DNS records documented in docs/CLOUDFLARE_DNS_SETUP.md.
 2. Corporate Homepage Presentation:
    - Homepage showcases diagrammatic architecture representations of Spine InnovTech technology.

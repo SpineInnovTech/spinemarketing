@@ -47,7 +47,7 @@ export function InfrastructureContent() {
         <PageHero
           badge="Infrastructure"
           headline="Six services. Global edge. Near real-time."
-          subhead="Explore the service responsibilities and infrastructure approach behind SpineWorkspace. Deployment regions, performance, and recovery behavior depend on the configured environment."
+          subhead="Explore the service responsibilities and infrastructure approach behind Spine Workspace. Deployment regions, performance, and recovery behavior depend on the configured environment."
           primaryCta={{ label: "See the architecture", href: "/contact?intent=demo" }}
         />
 

@@ -7,14 +7,14 @@ import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/structured-data";
 import { absoluteUrl } from "@/lib/site-url";
 
 const pricingDescription =
-  "SpineWorkspace pricing and commercial access models are hosted on the product site at spineworkspace.com. Start free or estimate usage based on connected tools.";
+  "Spine Workspace pricing and commercial access models are hosted on the product site at spineworkspace.com. Start free or estimate usage based on connected tools.";
 
 export const metadata: Metadata = {
-  title: { absolute: "SpineWorkspace Pricing & Access | Spine InnovTech" },
+  title: { absolute: "Spine Workspace Pricing & Access | Spine InnovTech" },
   description: pricingDescription,
   alternates: { canonical: "/pricing" },
   openGraph: {
-    title: "SpineWorkspace Pricing & Commercial Access",
+    title: "Spine Workspace Pricing & Commercial Access",
     description: pricingDescription,
     url: absoluteUrl("/pricing"),
   },
@@ -22,14 +22,14 @@ export const metadata: Metadata = {
 
 const pricingQuestions = [
   {
-    question: "Where are SpineWorkspace commercial plans and pricing hosted?",
+    question: "Where are Spine Workspace commercial plans and pricing hosted?",
     answer:
       "All commercial plans, the interactive connector usage calculator, free-tier registration, and checkout are hosted exclusively on the product website at spineworkspace.com/pricing.",
   },
   {
-    question: "Does SpineWorkspace offer a free starting tier?",
+    question: "Does Spine Workspace offer a free starting tier?",
     answer:
-      "Yes. SpineWorkspace provides a permanently free tier for individual operators to connect 1 AI host (via Spine Network MCP) and up to 2 data sources with 5,000 indexed business context entities.",
+      "Yes. Spine Workspace provides a permanently free tier for individual operators to connect 1 AI host (via Spine Network MCP) and up to 2 data sources with 5,000 indexed business context entities.",
   },
   {
     question: "How is team pricing calculated?",
@@ -37,9 +37,9 @@ const pricingQuestions = [
       "Pricing scales with your connected footprint: base seats ($29/user/month), active connected systems of record ($15/tool/month), and high-frequency sync streams ($10/stream/month).",
   },
   {
-    question: "How does Spine InnovTech relate to SpineWorkspace?",
+    question: "How does Spine InnovTech relate to Spine Workspace?",
     answer:
-      "Spine InnovTech Private Limited is the parent company and engineering organization building the Spine Fabric and Governed Agent Runtime powering SpineWorkspace.",
+      "Spine InnovTech Private Limited is the parent company and engineering organization building the Spine Fabric and Governed Agent Runtime powering Spine Workspace.",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function PricingPage() {
               Transparent, usage-governed pricing for your workspace.
             </h1>
             <p className="mt-5 max-w-[700px] mx-auto text-[length:var(--marketing-body-size)] leading-7 text-[#4E607A]">
-              SpineWorkspace pricing is consumption-governed and hosted on the product site. Start with our permanently free tier, or calculate your team’s exact plan based on the tools and sync streams you connect.
+              Spine Workspace pricing is consumption-governed and hosted on the product site. Start with our permanently free tier, or calculate your team’s exact plan based on the tools and sync streams you connect.
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">

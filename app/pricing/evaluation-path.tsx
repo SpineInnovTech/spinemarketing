@@ -54,7 +54,7 @@ export function PricingEvaluationPath() {
             Priced to the workflow, not the buzzword
           </h2>
           <p className="mt-4 text-[16px] leading-[1.65] text-[#33465B]">
-            SpineWorkspace is priced to integration scope, governance needs, and the operating workflows you run. Start with a scoped evaluation — not a generic trial claim.
+            Spine Workspace is priced to integration scope, governance needs, and the operating workflows you run. Start with a scoped evaluation — not a generic trial claim.
           </p>
         </div>
 

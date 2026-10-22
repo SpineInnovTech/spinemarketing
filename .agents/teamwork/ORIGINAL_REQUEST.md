@@ -13,7 +13,7 @@ Integrity mode: development
 
 ### R1. Corporate Domain Cutover & Cloudflare Worker Configuration
 - Configure `wrangler.jsonc`, `config.yaml`, and Cloudflare build settings in `spinemarketing-magic-ui` for `spineinnovtech.com` and `www.spineinnovtech.com` as the primary production custom domains.
-- Configure HTTP 301 canonical redirects in `worker/index.ts` from legacy hostnames (`spineinnovtech.spineworkspace.com`, `spineinnovlabs.spineworkspace.com`, `spineinnovlabs.com`, `www.spineinnovlabs.com`) to `https://spineinnovtech.com`.
+- Configure HTTP 301 canonical redirects in `worker/index.ts` from legacy hostnames (`spineinnovtech.spineworkspace.com`, `spineinnovtech.spineworkspace.com`, `spineinnovtech.com`, `www.spineinnovtech.com`) to `https://spineinnovtech.com`.
 - Document the exact DNS records (CNAME/apex flattening) required in Cloudflare dashboard for `spineinnovtech.com`.
 
 ### R2. Realign Corporate Homepage to Diagrammatic Architecture
@@ -40,7 +40,7 @@ Integrity mode: development
 
 ### Domain & Redirects
 - [ ] `wrangler.jsonc` specifies `spineinnovtech.com` and `www.spineinnovtech.com` under `env.prod.routes`.
-- [ ] `worker/index.ts` redirects legacy hosts (`spineinnovlabs.*`, `spineinnovtech.spineworkspace.com`) to `https://spineinnovtech.com` with status 301 while preserving path and query strings.
+- [ ] `worker/index.ts` redirects legacy hosts (`spineinnovtech.*`, `spineinnovtech.spineworkspace.com`) to `https://spineinnovtech.com` with status 301 while preserving path and query strings.
 
 ### Corporate Homepage Presentation
 - [ ] Homepage showcases diagrammatic architecture representations of Spine InnovTech technology.

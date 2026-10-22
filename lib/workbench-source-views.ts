@@ -1,6 +1,6 @@
 /**
  * Source-backed Workbench view inventory, extracted 2026-10-12 from
- * SpineInnovLabs/spineworkspace-live on main.
+ * SpineInnovTech/spineworkspace-live on main.
  * Source: packages/workbench-config/src/domain-estate.ts (23 projections),
  * packages/workbenches/src/<domain>/views.ts (domain manifests) and
  * apps/web/components/l1/domain-view-runtime-registry.tsx (runtime-only domains).

@@ -18,35 +18,35 @@ import {
 const journeyItems = [
   {
     tag: "The integration years",
-    title: "13 years connecting enterprise systems.",
-    description: "The tools were connected. The people making decisions still could not see the whole story.",
+    title: "Years connecting enterprise systems.",
+    description: "The tools were connected. The people making decisions still could not see the whole story with reliable history behind it.",
     icon: Wrench,
     color: "#3b82f6",
     features: ["The tools stayed themselves", "The record stayed in those tools", "The person still had to rebuild the story"],
   },
   {
     tag: "The red account",
-    title: "$8M at 100% attrition risk. Zero handover.",
-    description: "Illustrative origin, not a customer result. A colleague left. Their biggest account landed with no context. Seven systems, seven formats, seven teams — nobody could see across all of it.",
+    title: "An $8M renewal was red, with no reliable history.",
+    description: "Illustrative founder outcome, not a published customer result. A major $8M renewal went red. No one could assemble a reliable history of what had happened across the account, so no one could see the real issue.",
     icon: AlertCircle,
     color: "#ef4444",
-    features: ["$8M contract value", "100% attrition risk", "Zero documentation"],
+    features: ["$8M renewal at risk", "No reliable account history", "The real issue stayed hidden"],
   },
   {
-    tag: "The hidden signals",
-    title: "Two signals no dashboard could surface.",
-    description: "An unsigned contract stalling everything. An interpersonal conflict derailing the renewal. Both invisible to every tool.",
+    tag: "Authorized context exposed the issue",
+    title: "Authorized Slack, email, MuleSoft and Salesforce context.",
+    description: "Working within authorized access, context drawn from Slack, email, MuleSoft and multiple Salesforce connectors was related together. Seen as one governed view, the records exposed the real issue the dashboards had missed.",
     icon: Search,
     color: "#f59e0b",
-    features: ["Unsigned contract discovered", "Hidden conflict identified", "Cross-system correlation"],
+    features: ["Slack + email + MuleSoft", "Multiple Salesforce connectors", "Authorized, governed access only"],
   },
   {
-    tag: "The save",
-    title: "Full renewal. $8 million back from the edge.",
-    description: "Illustrative outcome, not a published customer result. Both signals resolved manually. The story is how the product idea started.",
+    tag: "The save, and the lasting need",
+    title: "The account was saved. The lasting need was continuity.",
+    description: "Illustrative outcome, not a published customer result. With the real issue in view, the account was saved. The lasting lesson was clear: what a business needs is continuous, governed shared context — not another one-off manual rescue.",
     icon: CheckCircle2,
     color: "#1BA784",
-    features: ["Full $8M renewal", "Relationship restored", "Manual integration proved the concept"],
+    features: ["Account saved", "Source systems stayed authoritative", "Continuous governed shared context was the need"],
   },
 ];
 
@@ -62,8 +62,8 @@ const platformNodes = [
 export function AboutJourneyScroll() {
   return (
     <StickyScroll
-      tag="Illustrative origin story"
-      heading="How the idea started — not a customer result."
+      tag="The proof / Our story"
+      heading="Why we build: an $8M renewal, saved by governed shared context."
       items={journeyItems}
     />
   );

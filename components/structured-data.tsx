@@ -25,12 +25,12 @@ export function SoftwareApplicationJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "SpineWorkspace",
+    name: "Spine Workspace",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     url: publicSiteUrl,
     description:
-      "SpineWorkspace is a governed AI workspace for operational work. Connect authorized business signals from existing systems. People and AI work from the same evidence. Built by Spine InnovTech.",
+      "Spine Workspace is a governed AI workspace for operational work. Connect authorized business signals from existing systems. People and AI work from the same evidence. Built by Spine InnovTech.",
   }
 
   return (
@@ -80,7 +80,7 @@ export function WebPageJsonLd({
     url,
     isPartOf: {
       "@type": "WebSite",
-      name: "SpineWorkspace",
+      name: "Spine Workspace",
       url: publicSiteUrl,
     },
   }

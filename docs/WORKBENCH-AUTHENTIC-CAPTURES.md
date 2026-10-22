@@ -1,6 +1,6 @@
 # Authentic Workbench visual assets — capture contract
 
-Source of truth: `SpineInnovLabs/spineworkspace-live` (not the marketing repository).
+Source of truth: `SpineInnovTech/spineworkspace-live` (not the marketing repository).
 The domain/view catalogue in `lib/workbench-source-views.ts` is an extracted
 inventory of declared L1 views. It is **not a rendered UI screenshot**, a runtime
 availability guarantee, or evidence of completed execution.

@@ -25,7 +25,7 @@ export async function generateMetadata({
   const post = await repo.getArticleBySlug(slug)
   if (!post) return { title: "Not Found" }
 
-  const title = post.seo?.title ?? `${post.title} | SpineWorkspace Blog`
+  const title = post.seo?.title ?? `${post.title} | Spine Workspace Blog`
   const description = post.seo?.description ?? post.excerpt
   const canonical = post.seo?.canonicalPath ?? `/blog/${post.slug}`
 
@@ -145,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <section className="mx-auto max-w-[800px] px-6 pb-16 md:px-16">
           <div className="rounded-2xl border border-border/50 bg-muted/30 p-8 text-center">
             <p className="text-[length:min(18px,var(--marketing-body-size))] font-semibold tracking-[-0.03em]">Ready to stop translating between your tools?</p>
-            <p className="mt-2 text-[15px] font-medium text-muted-foreground">See SpineWorkspace in action.</p>
+            <p className="mt-2 text-[15px] font-medium text-muted-foreground">See Spine Workspace in action.</p>
             <Link
               href="/contact?intent=demo"
               className="mt-4 inline-flex h-[42px] items-center rounded-xl px-6 text-[15px] font-semibold text-white"

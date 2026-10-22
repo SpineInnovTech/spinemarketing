@@ -7,7 +7,7 @@
   - `F20.5: QA scripts have zero references to spineinnovtech.spineworkspace.com as canonical`: Error: Must not assert old staging hostname as canonical site URL.
   - `T3.10: QA script assertions in check-cloudflare-config.mjs align with wrangler.jsonc`: Error: check-cloudflare-config.mjs must assert https://spineinnovtech.com.
 - Prior script implementations contained outdated domain and route expectations:
-  - `scripts/check-cloudflare-config.mjs` (lines 27-30) asserted `wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovlabs.spineworkspace.com" && r.custom_domain === true)` and `wrangler.env.prod.vars?.CANONICAL_SITE_URL === "https://spineinnovtech.spineworkspace.com"`.
+  - `scripts/check-cloudflare-config.mjs` (lines 27-30) asserted `wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovtech.spineworkspace.com" && r.custom_domain === true)` and `wrangler.env.prod.vars?.CANONICAL_SITE_URL === "https://spineinnovtech.spineworkspace.com"`.
   - `scripts/check-release-preflight.mjs` (lines 42-45) asserted `wrangler.env?.prod?.routes?.some((route) => route.pattern === "spineinnovtech.spineworkspace.com")`.
   - `scripts/verify-auth-entry.mjs` (line 34) asserted `url.origin === "https://spineworkspace.com"`, lacked 5 solution domains (`saas`, `services`, `professional-services`, `manufacturing`, `retail`), and asserted `!html.includes("https://app.spineworkspace.com")`.
   - `scripts/verify-static-artifact.mjs` asserted sitemap and llms.txt reference `spineinnovtech.spineworkspace.com` (lines 50-56) and verified legacy starter pricing $49/mo (lines 33-42) rather than the consumption-governed pricing model.
