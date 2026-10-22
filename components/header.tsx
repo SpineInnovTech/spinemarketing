@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { workspaceEntryLinks } from "@/lib/workspace-entry";
 import { Button } from "@/components/ui/button";
 import { SpineLogo } from "@/components/spine-logo";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
@@ -414,7 +413,6 @@ export function Header({
   initiallyHidden?: boolean;
 }) {
   const currentPathname = usePathname() ?? "";
-  const authLinks = workspaceEntryLinks(currentPathname);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [heroRevealed, setHeroRevealed] = useState(!initiallyHidden);
@@ -625,20 +623,17 @@ export function Header({
           </div>
 
           <div className="hidden shrink-0 items-center gap-2 xl:flex">
-            <Link
-              href="/product"
-              className="inline-flex h-10 items-center rounded-[10px] px-3 text-[15px] font-semibold text-[#082B5E] hover:bg-[#F3F6F9] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2"
-            >
-              SpineWorkspace
-            </Link>
-            <a href={authLinks.login} className="inline-flex h-10 items-center rounded-[10px] px-3 text-[14px] font-semibold text-[#082B5E] hover:bg-[#F3F6F9] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2">
-              Sign in
-            </a>
             <Button
               className="h-10 rounded-[10px] bg-[#006FE8] px-4 text-[14px] font-semibold text-white hover:bg-[#0055B8]"
               asChild
             >
-              <a href={authLinks.signup}>Sign up</a>
+              <a
+                href="https://spineworkspace.com"
+                className="inline-flex items-center gap-1.5"
+              >
+                <span>Explore SpineWorkspace</span>
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </a>
             </Button>
           </div>
 
@@ -800,30 +795,31 @@ export function Header({
                 );
               })}
 
-              <div className="mt-4 grid grid-cols-2 gap-2 pb-4">
-                <a href={authLinks.signup} onClick={closeMobile} className="col-span-2 flex h-10 items-center justify-center rounded-md bg-[#006FE8] text-[14px] font-semibold text-white hover:bg-[#0055B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2">Sign up</a>
-                <a href={authLinks.login} onClick={closeMobile} className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]">Sign in</a>
-                <Link
-                  href="/product"
-                  className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
+              <div className="mt-4 flex flex-col gap-2 pb-4">
+                <a
+                  href="https://spineworkspace.com"
                   onClick={closeMobile}
+                  className="flex h-10 items-center justify-center gap-1.5 rounded-md bg-[#006FE8] text-[14px] font-semibold text-white hover:bg-[#0055B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2"
                 >
-                  SpineWorkspace
-                </Link>
-                <Link
-                  href={DOCS_URL}
-                  className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
-                  onClick={closeMobile}
-                >
-                  Docs
-                </Link>
-                <Link
-                  href="/contact"
-                  className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
-                  onClick={closeMobile}
-                >
-                  Contact us
-                </Link>
+                  <span>Explore SpineWorkspace</span>
+                  <ArrowRight className="h-4 w-4" aria-hidden />
+                </a>
+                <div className="grid grid-cols-2 gap-2">
+                  <Link
+                    href={DOCS_URL}
+                    className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
+                    onClick={closeMobile}
+                  >
+                    Docs
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="flex h-10 items-center justify-center rounded-md border border-[#D9E4EF] text-[14px] font-semibold text-[#082B5E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8]"
+                    onClick={closeMobile}
+                  >
+                    Contact us
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>

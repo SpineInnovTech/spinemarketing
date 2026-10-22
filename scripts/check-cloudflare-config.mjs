@@ -24,10 +24,11 @@ assert(wrangler.env?.prod?.name === build.worker, "prod environment must target 
 assert(wrangler.main === "worker/index.ts", "static asset Worker entry must remain stable");
 assert(wrangler.assets?.directory === "./out", "static assets must be served from out/");
 assert(wrangler.assets?.binding === "ASSETS", "Worker must bind static assets");
-assert(wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovlabs.spineworkspace.com" && r.custom_domain === true), "production custom domain missing");
-assert(wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovtech.spineworkspace.com" && r.custom_domain === true), "spineinnovtech custom domain missing");
+assert(wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovtech.com" && r.custom_domain === true), "production custom domain spineinnovtech.com missing");
+assert(wrangler.env?.prod?.routes?.some(r => r.pattern === "www.spineinnovtech.com" && r.custom_domain === true), "production custom domain www.spineinnovtech.com missing");
 assert(wrangler.env.prod.vars?.CANONICAL_REDIRECTS_ENABLED === "true", "canonical domain consolidation redirects must be enabled");
-assert(wrangler.env.prod.vars?.CANONICAL_SITE_URL === "https://spineinnovtech.spineworkspace.com", "canonical site URL must point to spineinnovtech.spineworkspace.com");
+assert(wrangler.env.prod.vars?.CANONICAL_SITE_URL === "https://spineinnovtech.com", "canonical site URL must point to spineinnovtech.com");
+assert(wrangler.env.prod.vars?.LEGACY_REDIRECT_HOSTS?.includes("spineinnovtech.spineworkspace.com"), "legacy redirect hosts must include spineinnovtech.spineworkspace.com");
 assert(/output:\s*['"]export['"]/.test(next), "Next.js must remain static export");
 assert(worker.includes("env.ASSETS.fetch(request)"), "Worker must serve static asset binding");
 assert(build.repository === "SpineInnovLabs/spinemarketing" && build.productionBranch === "main", "build repo/branch mismatch");

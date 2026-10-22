@@ -76,12 +76,24 @@ export default function PricingPage() {
                 Go to Product Pricing Calculator <ExternalLink className="h-4 w-4" />
               </a>
               <Link
+                href="/product"
+                className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-6 text-sm font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]"
+              >
+                Explore Product Architecture <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
                 href="/contact"
                 className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-6 text-sm font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]"
               >
                 Talk to Enterprise Architecture <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
+            <p className="mt-4 text-xs text-[#566E89]">
+              Review full architectural capabilities on the{" "}
+              <Link href="/product" className="text-[#006FE8] font-semibold hover:underline">
+                product details page
+              </Link>.
+            </p>
           </div>
         </section>
 

@@ -19,6 +19,7 @@ const SECURITY_HEADERS: Record<string, string> = {
   "Permissions-Policy":
     "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()",
   "X-Frame-Options": "DENY",
+  "X-DNS-Prefetch-Control": "on",
 };
 
 function parseLegacyHosts(raw: string | undefined): Set<string> {
@@ -31,16 +32,21 @@ function parseLegacyHosts(raw: string | undefined): Set<string> {
   );
 }
 
-function maybeCanonicalRedirect(request: Request, env: Env): Response | null {
+const DEFAULT_CANONICAL_SITE_URL = "https://spineinnovtech.com";
+const DEFAULT_LEGACY_REDIRECT_HOSTS =
+  "spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com";
+
+export function maybeCanonicalRedirect(request: Request, env: Env): Response | null {
   if (env.CANONICAL_REDIRECTS_ENABLED !== "true") return null;
-  const canonicalBase = env.CANONICAL_SITE_URL?.replace(/\/+$/, "");
+  const canonicalBase = (env.CANONICAL_SITE_URL || DEFAULT_CANONICAL_SITE_URL).replace(/\/+$/, "");
   if (!canonicalBase) return null;
 
   const url = new URL(request.url);
-  const legacyHosts = parseLegacyHosts(env.LEGACY_REDIRECT_HOSTS);
+  const legacyHosts = parseLegacyHosts(env.LEGACY_REDIRECT_HOSTS || DEFAULT_LEGACY_REDIRECT_HOSTS);
   if (!legacyHosts.has(url.hostname.toLowerCase())) return null;
 
-  const target = new URL(url.pathname + url.search, canonicalBase);
+  const safePath = "/" + url.pathname.replace(/^[\/\\]+/, "");
+  const target = new URL(safePath + url.search, canonicalBase);
   return Response.redirect(target.toString(), 301);
 }
 
@@ -83,6 +89,8 @@ function withSecurityHeaders(response: Response, request: Request): Response {
   });
 }
 
+const AUTH_SITE_ORIGIN = "https://auth.spineworkspace.com";
+const APP_SITE_ORIGIN = "https://app.spineworkspace.com";
 const PRODUCT_SITE_ORIGIN = "https://spineworkspace.com";
 const CORPORATE_ENTRY_REDIRECT_PATHS = new Set([
   "/login",
@@ -91,12 +99,20 @@ const CORPORATE_ENTRY_REDIRECT_PATHS = new Set([
   "/workspace",
 ]);
 
-function maybeProductEntryRedirect(request: Request): Response | null {
+export function maybeProductEntryRedirect(request: Request): Response | null {
   const url = new URL(request.url);
   const normalized = url.pathname.replace(/\/+$/, "") || "/";
   if (!CORPORATE_ENTRY_REDIRECT_PATHS.has(normalized)) return null;
-  const targetPath = normalized === "/login" || normalized === "/signup" ? normalized : "/get-started";
-  const target = new URL(targetPath + url.search, PRODUCT_SITE_ORIGIN);
+
+  let target: URL;
+  if (normalized === "/login" || normalized === "/signup") {
+    target = new URL(normalized + url.search, AUTH_SITE_ORIGIN);
+  } else if (normalized === "/workspace") {
+    target = new URL("/" + (url.search ? url.search : ""), APP_SITE_ORIGIN);
+  } else {
+    target = new URL("/get-started" + url.search, PRODUCT_SITE_ORIGIN);
+  }
+
   return Response.redirect(target.toString(), 302);
 }
 

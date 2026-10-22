@@ -34,6 +34,14 @@ for (const route of ["product"]) {
 }
 const indexHtml = await readFile("out/index.html", "utf8");
 assert.ok(indexHtml.includes("Interactive Storyboard"), "Missing Interactive Storyboard on corporate index");
+assert.ok(
+  indexHtml.includes("Corporate Architecture Storyboard") || indexHtml.includes("Governed Context Fabric"),
+  "Missing diagrammatic architecture storyboard on corporate index"
+);
+assert.ok(
+  !indexHtml.includes("workbench-hero-preview") && !indexHtml.includes("Good morning, Operator"),
+  "Corporate index must not display product workbench previews or authenticated workspace content"
+);
 for (const file of ["workbench-shell-20261014.mp4", "workbench-shell-20261014.vtt"]) {
   assert.ok((await stat("out/videos/workbench/" + file)).size > 0, `Recording asset missing: ${file}`);
 }

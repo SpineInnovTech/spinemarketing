@@ -24,7 +24,7 @@ export function FinalCTA() {
             <Link href="/contact" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#006FE8] px-6 py-3 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition-colors hover:bg-[#0055B8] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">
               Contact Spine InnovTech <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
-            <a href="/product" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#006FE8] bg-white px-6 py-3 text-sm font-semibold text-[#082B5E] transition-colors hover:bg-[#EBF7FF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">
+            <a href="https://spineworkspace.com" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[#006FE8] bg-white px-6 py-3 text-sm font-semibold text-[#082B5E] transition-colors hover:bg-[#EBF7FF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">
               Explore SpineWorkspace <ArrowUpRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
             </a>
           </div>

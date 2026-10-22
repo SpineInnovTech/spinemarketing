@@ -9,7 +9,7 @@
   "deployCommand": "npm run deploy:cloudflare",
   "previewBuilds": "disabled until production validated; if enabled later use separate dev worker, never a production custom domain",
   "buildVariables": {
-    "NEXT_PUBLIC_SITE_URL": "https://spineinnovtech.spineworkspace.com",
+    "NEXT_PUBLIC_SITE_URL": "https://spineinnovtech.com",
     "CONTENT_PROVIDER": "sanity",
     "SANITY_DATASET": "production",
     "NODE_VERSION": "22"

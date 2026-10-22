@@ -15,15 +15,15 @@ const benefits = [
     icon: Layers3,
     title: "One Fabric across 13 domains",
     body: "Give Sales, Finance, Account Success and other teams their own views of shared business context, with access appropriate to each role.",
-    href: "/product#workbench-views",
-    link: "See the domain views",
+    href: "/platform/spine-fabric",
+    link: "Explore Spine Fabric",
   },
   {
     icon: PanelsTopLeft,
     title: "Editable dashboards and Canvas",
     body: "Edit record drafts from operational dashboards with KPIs and actions. Compose Canvas documents, tables and graphs from reusable UI Library blocks.",
-    href: "/product#workbench-views",
-    link: "Explore Workbench views",
+    href: "https://spineworkspace.com",
+    link: "Explore SpineWorkspace Product",
   },
 ];
 
@@ -65,9 +65,21 @@ export function WorkspaceBenefits({ detailed = false }: { detailed?: boolean }) 
                   <h3 className="mt-5 text-[length:var(--marketing-card-size)] font-semibold leading-[1.4] tracking-[-.025em]">{title}</h3>
                   <p className="mt-4 text-[14px] leading-7 text-[#4E607A]">{body}</p>
                 </div>
-                <Link href={href} className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-sm border-t border-[#EBF2F9] pt-4 text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">
-                  {link} <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden />
-                </Link>
+                {href.startsWith("http") ? (
+                  <a
+                    href={href}
+                    className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-sm border-t border-[#EBF2F9] pt-4 text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]"
+                  >
+                    {link} <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                  </a>
+                ) : (
+                  <Link
+                    href={href}
+                    className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-sm border-t border-[#EBF2F9] pt-4 text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]"
+                  >
+                    {link} <ArrowRight className="h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                  </Link>
+                )}
               </MagicCard>
             </BlurFade>
           ))}

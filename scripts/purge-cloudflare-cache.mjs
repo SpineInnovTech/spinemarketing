@@ -4,7 +4,10 @@
  */
 import { execSync } from "node:child_process";
 
-const ZONE_ID = "e400477f3fc2b13a70dd3d63407ce21b";
+const ZONES = [
+  { name: "spineinnovtech.com", id: "34480999355fa1cafddf15e3285a346d" },
+  { name: "spineworkspace.com", id: "e400477f3fc2b13a70dd3d63407ce21b" },
+];
 
 let apiToken = "";
 
@@ -35,22 +38,24 @@ if (!apiToken) {
   process.exit(0);
 }
 
-try {
-  const res = await fetch(`https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/purge_cache`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiToken}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ purge_everything: true }),
-  });
+for (const zone of ZONES) {
+  try {
+    const res = await fetch(`https://api.cloudflare.com/client/v4/zones/${zone.id}/purge_cache`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ purge_everything: true }),
+    });
 
-  const data = await res.json();
-  if (data.success) {
-    console.log("✓ Cloudflare edge cache purged successfully (purge_everything: true).");
-  } else {
-    console.warn("⚠️ Warning: Cloudflare cache purge failed:", data.errors);
+    const data = await res.json();
+    if (data.success) {
+      console.log(`✓ Cloudflare edge cache for ${zone.name} purged successfully.`);
+    } else {
+      console.warn(`⚠️ Warning: Cloudflare cache purge failed for ${zone.name}:`, data.errors);
+    }
+  } catch (err) {
+    console.warn(`⚠️ Warning: Cloudflare cache purge request failed for ${zone.name}:`, err.message);
   }
-} catch (err) {
-  console.warn("⚠️ Warning: Cloudflare cache purge request failed:", err.message);
 }

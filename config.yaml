@@ -13,9 +13,11 @@ flags:
 environments:
   prod:
     spine_innovlabs:
-      public_url: https://spineinnovtech.spineworkspace.com
-      canonical_url: https://spineinnovtech.spineworkspace.com
+      public_url: https://spineinnovtech.com
+      canonical_url: https://spineinnovtech.com
       legacy_redirect_hosts:
+        - spineinnovtech.spineworkspace.com
+        - www.spineinnovtech.com
         - spineinnovlabs.spineworkspace.com
         - www.spineinnovlabs.com
         - spineinnovlabs.com
@@ -27,8 +29,8 @@ environments:
 
   test:
     spine_innovlabs:
-      public_url: https://spineinnovtech.spineworkspace.com
-      canonical_url: https://spineinnovtech.spineworkspace.com
+      public_url: https://spineinnovtech.com
+      canonical_url: https://spineinnovtech.com
     spine_workspace:
       apex: https://spineworkspace.com
       app: https://app.spineworkspace.com
@@ -38,7 +40,7 @@ environments:
   dev:
     spine_innovlabs:
       public_url: https://spineinnovlabs-marketing-dev.workers.dev
-      canonical_url: https://spineinnovtech.spineworkspace.com
+      canonical_url: https://spineinnovtech.com
     spine_workspace:
       apex: https://spineworkspace.com
       app: https://app.spineworkspace.com
@@ -77,4 +79,4 @@ navigation:
   workspace_footer_parent: spine_innovlabs_site
 
 build:
-  prod_site_url: https://spineinnovtech.spineworkspace.com
+  prod_site_url: https://spineinnovtech.com

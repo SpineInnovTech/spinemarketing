@@ -1,6 +1,7 @@
 {
   "name": "spineworkspace-marketing",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "tsx scripts/generate-rss.ts && tsx scripts/generate-llms-txt.ts && tsx scripts/generate-responsive-screenshots.ts && next build --webpack",

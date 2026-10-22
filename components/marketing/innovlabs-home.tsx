@@ -4,7 +4,7 @@ import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { CorporateOrbitalHero } from "./corporate-orbital-hero";
-import { WorkbenchHeroPreview } from "./workbench-hero-preview";
+import { CorporateArchitectureStoryboard } from "./corporate-architecture-storyboard";
 import { WorkspaceBenefits } from "./workspace-benefits";
 
 const approach = [
@@ -49,8 +49,8 @@ export function InnovLabsHome() {
                 >
                   Explore SpineWorkspace Product <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
-                <Link href="/product#workbench-views" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF]">
-                  See the workspace
+                <Link href="/platform" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF]">
+                  Explore Architecture
                 </Link>
               </div>
             </BlurFade>
@@ -70,7 +70,7 @@ export function InnovLabsHome() {
 
       <WorkspaceBenefits />
 
-      <section id="workbench-story" className="scroll-mt-24 bg-[#F8FBFF] py-14 sm:py-18 border-b border-[#D6E8F8]">
+      <section id="architecture-story" className="scroll-mt-24 bg-[#F8FBFF] py-14 sm:py-18 border-b border-[#D6E8F8]">
         <div className={container}>
           <div className="mb-8">
             <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
@@ -78,10 +78,10 @@ export function InnovLabsHome() {
               Interactive Storyboard
             </p>
             <h2 className={heading + " mt-3 max-w-[820px]"}>
-              See how business context transforms into collaborative execution.
+              Governed Architecture: From Source Systems to Multi-Host Execution.
             </h2>
           </div>
-          <WorkbenchHeroPreview />
+          <CorporateArchitectureStoryboard />
         </div>
       </section>
 
