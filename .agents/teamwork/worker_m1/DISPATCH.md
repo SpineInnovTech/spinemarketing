@@ -21,8 +21,8 @@ DO NOT CHEAT. All implementations must be genuine. DO NOT hardcode test results,
 
 ## Tasks & Acceptance Criteria
 1. `wrangler.jsonc`:
-   - Under `env.prod.routes`, add `spineinnovtech.com` (`custom_domain: true`) and `www.spineinnovtech.com` (`custom_domain: true`), retaining legacy routes `spineinnovlabs.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
-   - Under `env.prod.vars`, update `CANONICAL_SITE_URL` to `"https://spineinnovtech.com"`, and `LEGACY_REDIRECT_HOSTS` to include `spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com`.
+   - Under `env.prod.routes`, add `spineinnovtech.com` (`custom_domain: true`) and `www.spineinnovtech.com` (`custom_domain: true`), retaining legacy routes `spineinnovtech.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
+   - Under `env.prod.vars`, update `CANONICAL_SITE_URL` to `"https://spineinnovtech.com"`, and `LEGACY_REDIRECT_HOSTS` to include `spineinnovtech.spineworkspace.com,spineinnovtech.spineworkspace.com,spineinnovtech.com,www.spineinnovtech.com,www.spineinnovtech.com`.
 2. `config.yaml` & `config/cloudflare-builds.json`:
    - Set `prod.spine_innovlabs.public_url` and `canonical_url` to `https://spineinnovtech.com`.
    - Update `legacy_redirect_hosts` to include all legacy domains.

@@ -61,8 +61,8 @@ function conditionMatches(
 ): boolean {
   if (!envMatches(condition.env, activeEnv)) return false;
   if (
-    condition.innovlabs_canonical_live !== undefined &&
-    flags.innovlabs_canonical_live !== condition.innovlabs_canonical_live
+    condition.innovtech_canonical_live !== undefined &&
+    flags.innovtech_canonical_live !== condition.innovtech_canonical_live
   ) {
     return false;
   }
@@ -116,7 +116,7 @@ export function resolvedPublicSites(
   activeEnv: string = process.env.SPINE_PUBLIC_SITES_ENV ?? "prod",
 ): PublicSitesEnvironment & {
   resolved: {
-    spine_innovlabs_site: string;
+    spine_innovtech_site: string;
     spine_workspace_apex: string;
     spine_workspace_app: string;
     spine_workspace_auth: string;
@@ -131,7 +131,7 @@ export function resolvedPublicSites(
   return {
     ...base,
     resolved: {
-      spine_innovlabs_site: resolveUrlRule("spine_innovlabs_site", config, activeEnv, flags),
+      spine_innovtech_site: resolveUrlRule("spine_innovtech_site", config, activeEnv, flags),
       spine_workspace_apex: resolveUrlRule("spine_workspace_apex", config, activeEnv, flags),
       spine_workspace_app: resolveUrlRule("spine_workspace_app", config, activeEnv, flags),
       spine_workspace_auth: resolveUrlRule("spine_workspace_auth", config, activeEnv, flags),

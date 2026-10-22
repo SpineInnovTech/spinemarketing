@@ -1,7 +1,7 @@
-# Spine InnovLabs Complete Page Contents
+# Spine InnovTech Complete Page Contents
 
 ## Overview
-This document contains the structure and metadata for all pages in the Spine InnovLabs application.
+This document contains the structure and metadata for all pages in the Spine InnovTech application.
 
 ---
 
@@ -20,7 +20,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
 - **Background**: #05070A (dark)
 
 ### 2. About (/about)
-- **Title**: About | Spine InnovLabs
+- **Title**: About | Spine InnovTech
 - **Description**: Born from a real $8M account save. One Spine Fabric. One Workspace. You stay in control.
 - **Components**:
   - AboutContent
@@ -32,7 +32,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 3. Product (/product)
-- **Title**: Product | Spine InnovLabs
+- **Title**: Product | Spine InnovTech
 - **Description**: One workspace. AI surfaces what matters. You approve what happens.
 - **Components**:
   - ProductContent
@@ -45,7 +45,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 4. Pricing (/pricing)
-- **Title**: Pricing | Spine InnovLabs
+- **Title**: Pricing | Spine InnovTech
 - **Description**: Simple pricing. Start at ₹999/$49/mo. Scale to enterprise governance.
 - **Components**:
   - PricingHero
@@ -67,7 +67,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - What happens to my data if I cancel?
 
 ### 5. Platform (/platform)
-- **Title**: Platform | Spine InnovLabs
+- **Title**: Platform | Spine InnovTech
 - **Description**: The Adaptive Spine. Connects every app. Governs every AI action. Nothing happens without your approval.
 - **Components**:
   - PlatformContent
@@ -81,7 +81,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 6. Solutions (/solutions)
-- **Title**: Solutions | Spine InnovLabs
+- **Title**: Solutions | Spine InnovTech
 - **Description**: One Spine Fabric. Workspace for daily work, Cognitive Layer for AI. Built for every function, industry, and role.
 - **Components**:
   - SolutionsContent
@@ -92,7 +92,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 7. Contact (/contact)
-- **Title**: Contact | Spine InnovLabs
+- **Title**: Contact | Spine InnovTech
 - **Description**: Book a demo or request a connector. We connect your tools live.
 - **Components**:
   - ContactContent (with defaultIntent="contact")
@@ -100,7 +100,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 8. Integrations (/integrations)
-- **Title**: Integrations | Spine InnovLabs
+- **Title**: Integrations | Spine InnovTech
 - **Description**: 70+ apps connected through Spine Fabric. Salesforce, HubSpot, Slack, Stripe, and more.
 - **Components**:
   - IntegrationsContent
@@ -109,9 +109,9 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - FinalCTA
   - Footer
 
-### 9. Why Spine InnovLabs (/why)
-- **Title**: Why Spine InnovLabs | One Spine Fabric. One Workspace. Governed AI.
-- **Description**: Apps are fragmented. AI lacks context. Spine InnovLabs unifies everything under your control.
+### 9. Why Spine InnovTech (/why)
+- **Title**: Why Spine InnovTech | One Spine Fabric. One Workspace. Governed AI.
+- **Description**: Apps are fragmented. AI lacks context. Spine InnovTech unifies everything under your control.
 - **Components**:
   - WhyContent
   - WhyPainScroll (sticky)
@@ -122,7 +122,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 10. Services (/services)
-- **Title**: Services | Spine InnovLabs
+- **Title**: Services | Spine InnovTech
 - **Description**: Implementation, onboarding, and managed operations. We get you to truth faster.
 - **Components**:
   - ServicesContent
@@ -132,8 +132,8 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 11. Resources (/resources)
-- **Title**: Resources | Spine InnovLabs
-- **Description**: Guides, use cases, and tools to help you get the most from Spine InnovLabs.
+- **Title**: Resources | Spine InnovTech
+- **Description**: Guides, use cases, and tools to help you get the most from Spine InnovTech.
 - **Components**:
   - ResourcesContent
   - ResourcesScroll (sticky)
@@ -141,7 +141,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 12. The Twin - AI (/ai)
-- **Title**: The Twin | Spine InnovLabs
+- **Title**: The Twin | Spine InnovTech
 - **Description**: The Twin reads Truth, Context, and Session Summaries through Spine Fabric. Surfaces signals in the Cognitive Layer and waits for your approval.
 - **Components**:
   - AIContent
@@ -152,7 +152,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 13. Business Ops (/business-ops)
-- **Title**: Business Ops — 12 Tabs → One Workspace | Spine InnovLabs
+- **Title**: Business Ops — 12 Tabs → One Workspace | Spine InnovTech
 - **Description**: Stop toggling between 12 tabs to find context. Cross-system visibility with AI that handles the busywork.
 - **Components**:
   - BusinessOpsContent
@@ -160,7 +160,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 14. Personal Ops (/personal-ops)
-- **Title**: Personal Ops — Your Morning, Auto-Organized | Spine InnovLabs
+- **Title**: Personal Ops — Your Morning, Auto-Organized | Spine InnovTech
 - **Description**: Replace 45 minutes of app-hopping with a single morning brief. A calm workspace above all your apps.
 - **Components**:
   - PersonalOpsContent
@@ -168,7 +168,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 15. Spine & Intelligence (/spine)
-- **Title**: Spine & Intelligence | Spine InnovLabs
+- **Title**: Spine & Intelligence | Spine InnovTech
 - **Description**: Vendor-neutral data backbone. Unifies every app. AI reasons with evidence. You approve.
 - **Components**:
   - SpineContent
@@ -176,7 +176,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 16. Account Success (/account-success)
-- **Title**: Account Success — One Customer, One Record | Spine InnovLabs
+- **Title**: Account Success — One Customer, One Record | Spine InnovTech
 - **Description**: Detect churn signals across 4+ tools before it's too late. Cross-tool entity matching, confidence scoring, and human-approved merges.
 - **Components**:
   - AccountSuccessContent
@@ -184,7 +184,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 17. Security (/security)
-- **Title**: Security | Spine InnovLabs
+- **Title**: Security | Spine InnovTech
 - **Description**: Enterprise-grade security, governance, and compliance. SOC 2 aligned, encrypted at rest and in transit, with complete audit trails.
 - **Components**:
   - SecurityContent
@@ -195,8 +195,8 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 18. Privacy Policy (/privacy)
-- **Title**: Privacy Policy | Spine InnovLabs
-- **Description**: How Spine InnovLabs collects, uses, and protects your data.
+- **Title**: Privacy Policy | Spine InnovTech
+- **Description**: How Spine InnovTech collects, uses, and protects your data.
 - **Sections**:
   1. Information we collect
   2. How we use your information
@@ -208,8 +208,8 @@ This document contains the structure and metadata for all pages in the Spine Inn
   8. Contact: connect@spineworkspace.com
 
 ### 19. Terms & Conditions (/terms)
-- **Title**: Terms & Conditions | Spine InnovLabs
-- **Description**: Terms of service for using Spine InnovLabs.
+- **Title**: Terms & Conditions | Spine InnovTech
+- **Description**: Terms of service for using Spine InnovTech.
 - **Sections**:
   1. Acceptance of terms
   2. Service description
@@ -222,27 +222,27 @@ This document contains the structure and metadata for all pages in the Spine Inn
   9. Contact: connect@spineworkspace.com
 
 ### 20. Documentation (/docs)
-- **Title**: Documentation | Spine InnovLabs
+- **Title**: Documentation | Spine InnovTech
 - **Description**: Set up connectors, configure your workspace, and use AI features.
 - **Status**: Coming soon
 - **Contact**: connect@spineworkspace.com
 
 ### 21. Blog (/blog)
-- **Title**: Blog | Spine InnovLabs
+- **Title**: Blog | Spine InnovTech
 - **Description**: Insights on connected workspaces, AI governance, and operational intelligence.
 - **Blog Posts**:
   1. "Stop being the human API between your tools" (4 min read)
-     - Author: Spine InnovLabs Team
+     - Author: Spine InnovTech Team
      - Date: 2026-04-12
      - Tags: Product, Workspace
   2. "Why AI needs your approval — every single time" (3 min read)
-     - Author: Spine InnovLabs Team
+     - Author: Spine InnovTech Team
      - Date: 2026-04-10
      - Tags: AI, Trust
 
 ### 22. Changelog (/changelog)
-- **Title**: Changelog | Spine InnovLabs
-- **Description**: What's new in Spine InnovLabs — product updates, new connectors, and improvements.
+- **Title**: Changelog | Spine InnovTech
+- **Description**: What's new in Spine InnovTech — product updates, new connectors, and improvements.
 - **Format**: Timeline with dated entries and feature items
 
 ---
@@ -250,7 +250,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
 ## Platform Sub-Pages (5 pages)
 
 ### 1. Platform How it Works (/platform/how-it-works)
-- **Title**: How it Works | Spine InnovLabs Platform
+- **Title**: How it Works | Spine InnovTech Platform
 - **Description**: Data flows, identity resolution, knowledge base, and the triage mechanism that powers the Adaptive Spine.
 - **Components**:
   - PlatformHowItWorksContent
@@ -259,7 +259,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 2. Platform Integrations (/platform/integrations)
-- **Title**: Integrations | Spine InnovLabs Platform
+- **Title**: Integrations | Spine InnovTech Platform
 - **Description**: SaaS APIs, MCP, webhooks, and file drops — all through one normalization pipeline into Spine Fabric.
 - **Components**:
   - PlatformIntegrationsContent
@@ -270,7 +270,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 3. Platform The Adaptive Spine (/platform/the-adaptive-spine)
-- **Title**: The Adaptive Spine | Spine InnovLabs Platform
+- **Title**: The Adaptive Spine | Spine InnovTech Platform
 - **Description**: Vendor-neutral data layer converting fragmented SaaS into one versioned source of truth.
 - **Components**:
   - TheAdaptiveSpineContent
@@ -281,13 +281,13 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 4. Platform Infrastructure (/platform/infrastructure)
-- **Title**: Infrastructure — Spine InnovLabs
+- **Title**: Infrastructure — Spine InnovTech
 - **Description**: Multi-region infrastructure, encryption, and operational resilience powering the Adaptive Spine.
 - **Components**:
   - InfrastructureContent
 
 ### 5. Platform Security (/platform/security)
-- **Title**: Security — Spine InnovLabs Platform
+- **Title**: Security — Spine InnovTech Platform
 - **Description**: Enterprise-grade security architecture for the Adaptive Spine — encryption, access control, and audit trails.
 - **Components**:
   - PlatformSecurityContent
@@ -297,7 +297,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
 ## Product Sub-Pages (4 pages)
 
 ### 1. Product How it Works (/product/how-it-works)
-- **Title**: How it Works | Spine InnovLabs Product
+- **Title**: How it Works | Spine InnovTech Product
 - **Description**: The Cognitive Layer — proactive signals, morning briefs, pattern detection, and evidence-backed reasoning.
 - **Components**:
   - ProductHowItWorksContent
@@ -306,13 +306,13 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 2. Product Security (/product/security)
-- **Title**: Security — Spine InnovLabs Product
+- **Title**: Security — Spine InnovTech Product
 - **Description**: Security controls built into the product — approval gates, audit logs, and governance by design.
 - **Components**:
   - ProductSecurityContent
 
 ### 3. Product The Adaptive Workspace (/product/the-adaptive-workspace)
-- **Title**: The Adaptive Workspace | Spine InnovLabs Product
+- **Title**: The Adaptive Workspace | Spine InnovTech Product
 - **Description**: Role-based views built on Entity 360. Nine workspace views, one canonical truth.
 - **Components**:
   - TheAdaptiveWorkspaceContent
@@ -321,7 +321,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
   - Footer
 
 ### 4. Product Approval Gate & Twin (/product/approval-gate-twin)
-- **Title**: Approval Gate & Twin in Action | Spine InnovLabs Product
+- **Title**: Approval Gate & Twin in Action | Spine InnovTech Product
 - **Description**: AI proposes, you approve. Governed approval queues, tiered routing, Twin scoring, and 24-hour rollback.
 - **Components**:
   - ApprovalGateTwinContent
@@ -335,62 +335,62 @@ This document contains the structure and metadata for all pages in the Spine Inn
 ## Solutions Pages (13 pages)
 
 ### 1. Finance (/solutions/finance)
-- **Title**: Finance | Spine InnovLabs Solutions
+- **Title**: Finance | Spine InnovTech Solutions
 - **Description**: Revenue, risk, collections, cash — the financial picture that finance leaders actually need.
 - **Components**: FinanceIndustryContent, FinalCTA, Footer
 
 ### 2. Customer Success (/solutions/customer-success)
-- **Title**: Customer Success & Account Managers | Spine InnovLabs
+- **Title**: Customer Success & Account Managers | Spine InnovTech
 - **Description**: Save at-risk accounts. Accelerate renewals. Surface expansion signals.
 - **Components**: CustomerSuccessRoleContent, FinalCTA, Footer
 
 ### 3. SaaS (/solutions/saas)
-- **Title**: SaaS | Spine InnovLabs Solutions
+- **Title**: SaaS | Spine InnovTech Solutions
 - **Description**: Renewals, expansion, adoption — connected in one account view.
 - **Components**: SaasContent, FinalCTA, Footer
 
 ### 4. RevOps (/solutions/revops)
-- **Title**: RevOps & Business Operations | Spine InnovLabs
+- **Title**: RevOps & Business Operations | Spine InnovTech
 - **Description**: Pipelines, headcount, projects, exceptions — connected and actionable.
 - **Components**: RevOpsContent, FinalCTA, Footer
 
 ### 5. Operations (/solutions/operations)
-- **Title**: Operations & Delivery Leaders | Spine InnovLabs
+- **Title**: Operations & Delivery Leaders | Spine InnovTech
 - **Description**: Utilisation, delivery, exceptions, escalations — the live view that keeps projects on track.
 - **Components**: OperationsContent, FinalCTA, Footer
 
 ### 6. Founders & CXOs (/solutions/founders)
-- **Title**: Founders & CXOs | Spine InnovLabs
+- **Title**: Founders & CXOs | Spine InnovTech
 - **Description**: Monday brief. Revenue movement. Board pack — available in seconds.
 - **Components**: FoundersContent, FinalCTA, Footer
 
 ### 7. Retail & Ecommerce (/solutions/retail)
-- **Title**: Retail & Ecommerce | Spine InnovLabs Solutions
+- **Title**: Retail & Ecommerce | Spine InnovTech Solutions
 - **Description**: Stock, orders, returns, support — every signal connected so teams act before problems become complaints.
 - **Components**: RetailContent, FinalCTA, Footer
 
 ### 8. Manufacturing & Trade (/solutions/manufacturing)
-- **Title**: Manufacturing & Trade | Spine InnovLabs Solutions
+- **Title**: Manufacturing & Trade | Spine InnovTech Solutions
 - **Description**: Orders, shipments, payments — live across ERP, CRM, and logistics.
 - **Components**: ManufacturingContent, FinalCTA, Footer
 
 ### 9. Individual Professionals (/solutions/individual)
-- **Title**: Individual Professionals | Spine InnovLabs
+- **Title**: Individual Professionals | Spine InnovTech
 - **Description**: Morning brief, session memory, task queue — your day, organized.
 - **Components**: IndividualContent, FinalCTA, Footer
 
 ### 10. Finance Leaders (/solutions/finance-leaders)
-- **Title**: Finance Leaders | Spine InnovLabs
+- **Title**: Finance Leaders | Spine InnovTech
 - **Description**: Cash, collections, runway — accounting, billing, and CRM unified.
 - **Components**: FinanceLeadersContent, FinalCTA, Footer
 
 ### 11. Professional Services (/solutions/professional-services)
-- **Title**: Professional Services | Spine InnovLabs Solutions
+- **Title**: Professional Services | Spine InnovTech Solutions
 - **Description**: Engagements, deliverables, billing, relationships — the full account view.
 - **Components**: ProfessionalServicesContent, FinalCTA, Footer
 
 ### 12. Services & Agencies (/solutions/services)
-- **Title**: Services & Agencies | Spine InnovLabs Solutions
+- **Title**: Services & Agencies | Spine InnovTech Solutions
 - **Description**: Projects, utilisation, invoices, client health — the full engagement picture.
 - **Components**: ServicesContent, FinalCTA, Footer
 
@@ -399,7 +399,7 @@ This document contains the structure and metadata for all pages in the Spine Inn
 ## Resources Sub-Pages (1 page)
 
 ### 1. Campaign Gallery (/resources/campaign)
-- **Title**: Campaign Gallery — Architecture & Creatives | Spine InnovLabs
+- **Title**: Campaign Gallery — Architecture & Creatives | Spine InnovTech
 - **Description**: Architecture blueprints showing the Adaptive Spine + 36 campaign designs (LinkedIn & WhatsApp) for Account Success, Business Ops, Personal Ops
 - **Components**: CampaignGalleryContent, Footer
 - **Gallery Items**: 36 campaign designs
@@ -462,9 +462,9 @@ This document contains the structure and metadata for all pages in the Spine Inn
 - **Demo CTA**: Book a demo (button at /contact?intent=demo)
 
 ### Branding
-- **Company Name**: Spine InnovLabs
+- **Company Name**: Spine InnovTech
 - **Tagline**: "Stop being the human API between your apps"
-- **Domain**: spineinnovlabs.com
+- **Domain**: spineinnovtech.com
 - **Dark Mode**: Most pages use #05070A background
 
 ---

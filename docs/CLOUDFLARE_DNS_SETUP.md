@@ -8,12 +8,12 @@ This document provides the authoritative Cloudflare DNS records, edge routing ru
 
 | Concern | Primary Target | Legacy Redirects |
 | :--- | :--- | :--- |
-| **Corporate Marketing Apex** | `https://spineinnovtech.com` | `spineinnovlabs.com`, `spineinnovlabs.spineworkspace.com`, `spineinnovtech.spineworkspace.com` |
-| **Corporate Marketing WWW** | `https://www.spineinnovtech.com` (301 to apex) | `www.spineinnovlabs.com` |
+| **Corporate Marketing Apex** | `https://spineinnovtech.com` | `spineinnovtech.com`, `spineinnovtech.spineworkspace.com`, `spineinnovlabs.spineworkspace.com` |
+| **Corporate Marketing WWW** | `https://www.spineinnovtech.com` (301 to apex) | `www.spineinnovtech.com` |
 | **Product Marketing Site** | `https://spineworkspace.com` | — |
 | **Authentication Service** | `https://auth.spineworkspace.com` | `/login`, `/signup` on corporate domain 302 redirect here |
 | **Live Application Workspace** | `https://app.spineworkspace.com` | `/workspace` on corporate domain 302 redirects here |
-| **Worker Service** | `spineinnovlabs-marketing` | Account ID: `3b815e3cd31a7ce892c2c65ea8873387` |
+| **Worker Service** | `spineinnovtech-marketing` | Account ID: `3b815e3cd31a7ce892c2c65ea8873387` |
 
 ---
 
@@ -25,12 +25,12 @@ All DNS records for the primary domain must be set to **Proxied (Orange Cloud)**
 
 | Record Type | Name / Host | Target / Content | Proxy Status | TTL | Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **CNAME** (or Worker Custom Domain) | `@` (apex) | `spineinnovlabs-marketing.workers.dev` *(or Cloudflare Custom Domain target)* | **Proxied** (Orange Cloud) | Auto | Primary corporate apex via Cloudflare CNAME flattening |
+| **CNAME** (or Worker Custom Domain) | `@` (apex) | `spineinnovtech-marketing.workers.dev` *(or Cloudflare Custom Domain target)* | **Proxied** (Orange Cloud) | Auto | Primary corporate apex via Cloudflare CNAME flattening |
 | **CNAME** | `www` | `spineinnovtech.com` | **Proxied** (Orange Cloud) | Auto | Canonical corporate www alias; redirected to apex by Worker |
 
 #### Worker Custom Domain Provisioning (Recommended)
 Instead of manual CNAME entry, bind the domains directly in the Cloudflare Dashboard:
-1. Navigate to **Workers & Pages** → `spineinnovlabs-marketing` → **Settings** → **Domains & Routes**.
+1. Navigate to **Workers & Pages** → `spineinnovtech-marketing` → **Settings** → **Domains & Routes**.
 2. Click **Add** → **Custom Domain**.
 3. Add `spineinnovtech.com`. Cloudflare will automatically provision the apex DNS record with CNAME flattening and issue Edge TLS certificates.
 4. Click **Add** → **Custom Domain** again.
@@ -41,7 +41,7 @@ This directly matches `wrangler.jsonc`:
 "routes": [
   { "pattern": "spineinnovtech.com", "custom_domain": true },
   { "pattern": "www.spineinnovtech.com", "custom_domain": true },
-  { "pattern": "spineinnovlabs.spineworkspace.com", "custom_domain": true },
+  { "pattern": "spineinnovtech.spineworkspace.com", "custom_domain": true },
   { "pattern": "spineinnovtech.spineworkspace.com", "custom_domain": true }
 ]
 ```
@@ -56,13 +56,13 @@ To preserve SEO authority, inbound backlinks, and existing bookmarks, legacy hos
 | Record Type | Name / Subdomain | Target / Content | Proxy Status | TTL |
 | :--- | :--- | :--- | :--- | :--- |
 | **CNAME** | `spineinnovtech` | Worker Custom Domain target | **Proxied** (Orange Cloud) | Auto |
-| **CNAME** | `spineinnovlabs` | Worker Custom Domain target | **Proxied** (Orange Cloud) | Auto |
+| **CNAME** | `spineinnovtech` | Worker Custom Domain target | **Proxied** (Orange Cloud) | Auto |
 
-#### Zone: `spineinnovlabs.com`
+#### Zone: `spineinnovtech.com`
 | Record Type | Name / Subdomain | Target / Content | Proxy Status | TTL |
 | :--- | :--- | :--- | :--- | :--- |
 | **CNAME** | `@` (apex) | Worker Custom Domain target | **Proxied** (Orange Cloud) | Auto |
-| **CNAME** | `www` | `spineinnovlabs.com` | **Proxied** (Orange Cloud) | Auto |
+| **CNAME** | `www` | `spineinnovtech.com` | **Proxied** (Orange Cloud) | Auto |
 
 ---
 
@@ -105,9 +105,9 @@ All legacy hostnames and `www.spineinnovtech.com` are permanently redirected to 
 | :--- | :--- | :--- |
 | `https://www.spineinnovtech.com/solutions/sales?ref=partner` | **301** | `https://spineinnovtech.com/solutions/sales?ref=partner` |
 | `https://spineinnovtech.spineworkspace.com/about` | **301** | `https://spineinnovtech.com/about` |
-| `https://spineinnovlabs.spineworkspace.com/press` | **301** | `https://spineinnovtech.com/press` |
-| `https://spineinnovlabs.com/platform` | **301** | `https://spineinnovtech.com/platform` |
-| `https://www.spineinnovlabs.com/?tracking=1` | **301** | `https://spineinnovtech.com/?tracking=1` |
+| `https://spineinnovtech.spineworkspace.com/press` | **301** | `https://spineinnovtech.com/press` |
+| `https://spineinnovtech.com/platform` | **301** | `https://spineinnovtech.com/platform` |
+| `https://www.spineinnovtech.com/?tracking=1` | **301** | `https://spineinnovtech.com/?tracking=1` |
 
 ### 4.2 Product Entry 302 Redirects (Cross-Domain Navigation)
 Corporate site entry shortcuts are redirected with HTTP 302 to their authoritative product and service origins:

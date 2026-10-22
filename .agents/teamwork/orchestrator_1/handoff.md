@@ -14,7 +14,7 @@
 All 5 core requirements from `ORIGINAL_REQUEST.md` and 23 inventoried features in `PROJECT.md` have been fully designed, implemented, stress-tested, and forensically audited across both codebases:
 1. **Corporate Domain Cutover (R1)**:
    - Configured `wrangler.jsonc`, `config.yaml`, `config/cloudflare-builds.json`, and `lib/site-url.ts` for primary custom domains `spineinnovtech.com` and `www.spineinnovtech.com`.
-   - Implemented HTTP 301 canonical edge redirects in `worker/index.ts` from all legacy hostnames (`spineinnovlabs.*`, `spineinnovtech.spineworkspace.com`), preserving pathname and search queries.
+   - Implemented HTTP 301 canonical edge redirects in `worker/index.ts` from all legacy hostnames (`spineinnovtech.*`, `spineinnovtech.spineworkspace.com`), preserving pathname and search queries.
    - Authored complete Cloudflare DNS and TLS specifications in `docs/CLOUDFLARE_DNS_SETUP.md`.
 2. **Corporate Homepage Architectural Realignment (R2)**:
    - Refactored `components/marketing/innovlabs-home.tsx` to remove product workbench dashboards and canvas storyboards (`WorkbenchHeroPreview`).
@@ -57,7 +57,7 @@ All 5 core requirements from `ORIGINAL_REQUEST.md` and 23 inventoried features i
 ## 3. Detailed Logic Chain & Architecture Verification
 
 1. **Edge Routing Contract**:
-   - `wrangler.jsonc` lines 32–49 bind `spineinnovtech.com` and `www.spineinnovtech.com` under `env.prod.routes` as custom domains, alongside legacy hostnames `spineinnovlabs.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
+   - `wrangler.jsonc` lines 32–49 bind `spineinnovtech.com` and `www.spineinnovtech.com` under `env.prod.routes` as custom domains, alongside legacy hostnames `spineinnovtech.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
    - In `worker/index.ts`, `maybeCanonicalRedirect` parses incoming hostnames against `env.LEGACY_REDIRECT_HOSTS`. A regex sanitization `safePath = "/" + url.pathname.replace(/^[\/\\]+/, "")` guarantees that incoming paths cannot escape to external schemes (eliminating CWE-601 open redirects). The redirect issues an authentic HTTP 301 to `https://spineinnovtech.com` preserving pathname and query parameters.
    - `maybeProductEntryRedirect` intercepts corporate shortcuts: `/login` and `/signup` 302-redirect to `https://auth.spineworkspace.com` preserving `next` query strings, and `/workspace` 302-redirects to `https://app.spineworkspace.com`.
 

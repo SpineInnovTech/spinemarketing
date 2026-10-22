@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "account_id": "3b815e3cd31a7ce892c2c65ea8873387",
-  "name": "spineinnovlabs-marketing",
+  "name": "spineinnovtech-marketing",
   "main": "worker/index.ts",
   "compatibility_date": "2026-10-03",
   "previews": {},
@@ -20,15 +20,15 @@
   },
   "env": {
     "dev": {
-      "name": "spineinnovlabs-marketing-dev",
+      "name": "spineinnovtech-marketing-dev",
       "workers_dev": true
     },
     "test": {
-      "name": "spineinnovlabs-marketing-test",
+      "name": "spineinnovtech-marketing-test",
       "workers_dev": true
     },
     "prod": {
-      "name": "spineinnovlabs-marketing",
+      "name": "spineinnovtech-marketing",
       "routes": [
         {
           "pattern": "spineinnovtech.com",

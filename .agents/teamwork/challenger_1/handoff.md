@@ -63,9 +63,9 @@ Direct empirical observations collected through test execution and source inspec
     const env = {
       CANONICAL_REDIRECTS_ENABLED: 'true',
       CANONICAL_SITE_URL: 'https://spineinnovtech.com',
-      LEGACY_REDIRECT_HOSTS: 'spineinnovlabs.com'
+      LEGACY_REDIRECT_HOSTS: 'spineinnovtech.com'
     };
-    const req = new Request('https://spineinnovlabs.com//attacker.com');
+    const req = new Request('https://spineinnovtech.com//attacker.com');
     const res = worker.maybeCanonicalRedirect(req, env);
     console.log('Redirect Location:', res.headers.get('Location'));
   });"
@@ -81,9 +81,9 @@ Direct empirical observations collected through test execution and source inspec
     const env = {
       CANONICAL_REDIRECTS_ENABLED: 'true',
       CANONICAL_SITE_URL: 'https://spineinnovtech.com',
-      LEGACY_REDIRECT_HOSTS: 'spineinnovlabs.com'
+      LEGACY_REDIRECT_HOSTS: 'spineinnovtech.com'
     };
-    const req = new Request('https://spineinnovlabs.com/\\\\attacker.com');
+    const req = new Request('https://spineinnovtech.com/\\\\attacker.com');
     const res = worker.maybeCanonicalRedirect(req, env);
     console.log('Redirect Location:', res.headers.get('Location'));
   });"
@@ -131,8 +131,8 @@ Direct empirical observations collected through test execution and source inspec
 1. **Step 1 (WHATWG URL Standard Behavior)**:
    In the WHATWG URL Standard (and RFC 3986), when `new URL(path, base)` is invoked and `path` begins with `//`, the path is evaluated as a scheme-relative authority (host), replacing the authority/hostname of `base`.
 2. **Step 2 (Trace of `maybeCanonicalRedirect`)**:
-   - An HTTP client requests `https://spineinnovlabs.com//attacker.com/phishing`.
-   - The worker parses `url.hostname` as `spineinnovlabs.com`, which matches `legacyHosts`.
+   - An HTTP client requests `https://spineinnovtech.com//attacker.com/phishing`.
+   - The worker parses `url.hostname` as `spineinnovtech.com`, which matches `legacyHosts`.
    - `url.pathname` is `//attacker.com/phishing`.
    - `target = new URL(url.pathname + url.search, canonicalBase)` evaluates `new URL('//attacker.com/phishing', 'https://spineinnovtech.com')`.
    - Because `url.pathname` has a leading double slash, `target.toString()` evaluates to `https://attacker.com/phishing` instead of `https://spineinnovtech.com/attacker.com/phishing`.
@@ -141,7 +141,7 @@ Direct empirical observations collected through test execution and source inspec
    - If `appEntryUrl('//attacker.com')` is invoked, `pathname.startsWith("/")` is true, so `normalized` remains `'//attacker.com'`.
    - `new URL('//attacker.com', 'https://app.spineworkspace.com')` returns `https://attacker.com/`.
 4. **Step 4 (Impact Assessment)**:
-   - Legitimate corporate domains (`spineinnovlabs.com`, `spineinnovtech.spineworkspace.com`) can be abused in phishing campaigns or credential harvest links (e.g., `https://spineinnovlabs.com//evil-phish.com`) to bypass enterprise domain reputation filters.
+   - Legitimate corporate domains (`spineinnovtech.com`, `spineinnovtech.spineworkspace.com`) can be abused in phishing campaigns or credential harvest links (e.g., `https://spineinnovtech.com//evil-phish.com`) to bypass enterprise domain reputation filters.
    - This represents CWE-601: URL Redirection to Untrusted Site ('Open Redirect').
 
 ---
@@ -155,7 +155,7 @@ Direct empirical observations collected through test execution and source inspec
 
 #### [High] Challenge 1: Open Redirect on Canonical Edge Redirect
 - **Assumption Challenged**: `url.pathname + url.search` always represents a relative path strictly scoped to `canonicalBase`.
-- **Attack Scenario**: Attacker sends a link using legitimate corporate domain `https://spineinnovlabs.com//malicious-site.com`. User or security crawler verifies that the domain belongs to Spine InnovTech and allows navigation. The Edge Worker issues an HTTP 301 redirecting the user directly to `https://malicious-site.com`.
+- **Attack Scenario**: Attacker sends a link using legitimate corporate domain `https://spineinnovtech.com//malicious-site.com`. User or security crawler verifies that the domain belongs to Spine InnovTech and allows navigation. The Edge Worker issues an HTTP 301 redirecting the user directly to `https://malicious-site.com`.
 - **Blast Radius**: Brand reputation damage, phishing vector exploitation, potential credential harvesting using company cutover domains.
 - **Mitigation**:
   In `/Users/nirmal/Github/spinemarketing-magic-ui/worker/index.ts`:
@@ -182,18 +182,18 @@ Direct empirical observations collected through test execution and source inspec
 
 | Scenario | Input | Expected Output | Actual Output | Result |
 | :--- | :--- | :--- | :--- | :---: |
-| Normal 301 | `https://spineinnovlabs.com/about` | `https://spineinnovtech.com/about` | `https://spineinnovtech.com/about` | **PASS** |
+| Normal 301 | `https://spineinnovtech.com/about` | `https://spineinnovtech.com/about` | `https://spineinnovtech.com/about` | **PASS** |
 | Uppercase Host | `https://SPINEINNOVLABS.COM/solutions` | `https://spineinnovtech.com/solutions` | `https://spineinnovtech.com/solutions` | **PASS** |
-| Port in Host | `https://spineinnovlabs.com:8080/deep/path` | `https://spineinnovtech.com/deep/path` | `https://spineinnovtech.com/deep/path` | **PASS** |
-| Complex Query | `https://spineinnovlabs.com/search?a=1&b=%20` | `https://spineinnovtech.com/search?a=1&b=%20` | `https://spineinnovtech.com/search?a=1&b=%20` | **PASS** |
+| Port in Host | `https://spineinnovtech.com:8080/deep/path` | `https://spineinnovtech.com/deep/path` | `https://spineinnovtech.com/deep/path` | **PASS** |
+| Complex Query | `https://spineinnovtech.com/search?a=1&b=%20` | `https://spineinnovtech.com/search?a=1&b=%20` | `https://spineinnovtech.com/search?a=1&b=%20` | **PASS** |
 | Auth Entry | `https://spineinnovtech.com/login?next=/dash` | `https://auth.spineworkspace.com/login?next=/dash` | `https://auth.spineworkspace.com/login?next=/dash` | **PASS** |
 | Workspace Entry | `https://spineinnovtech.com/workspace` | `https://app.spineworkspace.com/` | `https://app.spineworkspace.com/` | **PASS** |
 | Lens Mapping | `productSiteUrl('/solutions/memoryandknowledge')` | `https://spineworkspace.com/solutions/knowledge-records` | `https://spineworkspace.com/solutions/knowledge-records` | **PASS** |
 | Unknown Slug | `productSiteUrl('/solutions/random-slug')` | `https://spineworkspace.com/solutions` | `https://spineworkspace.com/solutions` | **PASS** |
 | HTML Purity | `out/index.html` scan for workbench interactive elements | 0 occurrences | 0 occurrences | **PASS** |
 | Architecture Export | `out/index.html` scan for Storyboard & Orbital Hero | Present with 3 layers | Present with 3 layers | **PASS** |
-| **Adversarial Double Slash** | `https://spineinnovlabs.com//attacker.com` | `https://spineinnovtech.com/attacker.com` | `https://attacker.com/` | **FAIL (Vulnerability)** |
-| **Adversarial Backslash** | `https://spineinnovlabs.com/\attacker.com` | `https://spineinnovtech.com/attacker.com` | `https://attacker.com/` | **FAIL (Vulnerability)** |
+| **Adversarial Double Slash** | `https://spineinnovtech.com//attacker.com` | `https://spineinnovtech.com/attacker.com` | `https://attacker.com/` | **FAIL (Vulnerability)** |
+| **Adversarial Backslash** | `https://spineinnovtech.com/\attacker.com` | `https://spineinnovtech.com/attacker.com` | `https://attacker.com/` | **FAIL (Vulnerability)** |
 | **Adversarial appEntryUrl** | `appEntryUrl('//attacker.com')` | `https://app.spineworkspace.com/attacker.com` | `https://attacker.com/` | **FAIL (Vulnerability)** |
 
 ---
@@ -241,8 +241,8 @@ To independently verify the vulnerability and its remediation:
    ```bash
    node -e "
    import(require('url').pathToFileURL('./worker/index.ts').href).then(worker => {
-     const env = { CANONICAL_REDIRECTS_ENABLED: 'true', CANONICAL_SITE_URL: 'https://spineinnovtech.com', LEGACY_REDIRECT_HOSTS: 'spineinnovlabs.com' };
-     const res = worker.maybeCanonicalRedirect(new Request('https://spineinnovlabs.com//attacker.com'), env);
+     const env = { CANONICAL_REDIRECTS_ENABLED: 'true', CANONICAL_SITE_URL: 'https://spineinnovtech.com', LEGACY_REDIRECT_HOSTS: 'spineinnovtech.com' };
+     const res = worker.maybeCanonicalRedirect(new Request('https://spineinnovtech.com//attacker.com'), env);
      console.log('Location:', res.headers.get('Location'));
    });"
    ```

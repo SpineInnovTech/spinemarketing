@@ -14,10 +14,10 @@
 - **Lines 30–48**:
 ```jsonc
 30:     "prod": {
-31:       "name": "spineinnovlabs-marketing",
+31:       "name": "spineinnovtech-marketing",
 32:       "routes": [
 33:         {
-34:           "pattern": "spineinnovlabs.spineworkspace.com",
+34:           "pattern": "spineinnovtech.spineworkspace.com",
 35:           "custom_domain": true
 36:         },
 37:         {
@@ -28,7 +28,7 @@
 42:       "vars": {
 43:         "CANONICAL_REDIRECTS_ENABLED": "true",
 44:         "CANONICAL_SITE_URL": "https://spineinnovtech.spineworkspace.com",
-45:         "LEGACY_REDIRECT_HOSTS": "spineinnovlabs.spineworkspace.com,www.spineinnovlabs.com,spineinnovlabs.com"
+45:         "LEGACY_REDIRECT_HOSTS": "spineinnovtech.spineworkspace.com,www.spineinnovtech.com,spineinnovtech.com"
 46:       }
 47:     }
 ```
@@ -47,9 +47,9 @@
 16:       public_url: https://spineinnovtech.spineworkspace.com
 17:       canonical_url: https://spineinnovtech.spineworkspace.com
 18:       legacy_redirect_hosts:
-19:         - spineinnovlabs.spineworkspace.com
-20:         - www.spineinnovlabs.com
-21:         - spineinnovlabs.com
+19:         - spineinnovtech.spineworkspace.com
+20:         - www.spineinnovtech.com
+21:         - spineinnovtech.com
 22:     spine_workspace:
 23:       apex: https://spineworkspace.com
 24:       app: https://app.spineworkspace.com
@@ -68,7 +68,7 @@
 - **Finding**:
   1. `config.yaml` sets `public_url`, `canonical_url`, and `build.prod_site_url` to `https://spineinnovtech.spineworkspace.com`.
   2. In contrast, the SSOT file at `../spineworkspace-live/config/public-sites.yaml` (lines 20–30) already specifies:
-     `canonical_url: https://spineinnovtech.com` and lists `spineinnovtech.spineworkspace.com`, `www.spineinnovtech.com`, `spineinnovlabs.spineworkspace.com`, `www.spineinnovlabs.com` under `legacy_redirect_hosts`.
+     `canonical_url: https://spineinnovtech.com` and lists `spineinnovtech.spineworkspace.com`, `www.spineinnovtech.com`, `spineinnovtech.spineworkspace.com`, `www.spineinnovtech.com` under `legacy_redirect_hosts`.
   3. `config/cloudflare-builds.json` sets `NEXT_PUBLIC_SITE_URL` to `https://spineinnovtech.spineworkspace.com`.
 
 ### 1.3 `worker/index.ts` (Edge Redirection & Routing)
@@ -195,7 +195,7 @@
 - **Path**: `scripts/check-cloudflare-config.mjs`
   - Lines 27–30:
     ```javascript
-    assert(wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovlabs.spineworkspace.com" && r.custom_domain === true), "production custom domain missing");
+    assert(wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovtech.spineworkspace.com" && r.custom_domain === true), "production custom domain missing");
     assert(wrangler.env?.prod?.routes?.some(r => r.pattern === "spineinnovtech.spineworkspace.com" && r.custom_domain === true), "spineinnovtech custom domain missing");
     assert(wrangler.env.prod.vars?.CANONICAL_REDIRECTS_ENABLED === "true", "canonical domain consolidation redirects must be enabled");
     assert(wrangler.env.prod.vars?.CANONICAL_SITE_URL === "https://spineinnovtech.spineworkspace.com", "canonical site URL must point to spineinnovtech.spineworkspace.com");
@@ -224,14 +224,14 @@
 
 1. **R1 Production Custom Domain Mapping**:
    - `ORIGINAL_REQUEST.md` (R1) and acceptance criteria mandate that `wrangler.jsonc` specifies `spineinnovtech.com` and `www.spineinnovtech.com` under `env.prod.routes`.
-   - By observation 1.1, `wrangler.jsonc` only binds `spineinnovlabs.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
+   - By observation 1.1, `wrangler.jsonc` only binds `spineinnovtech.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
    - Therefore, `wrangler.jsonc` must add route objects with `pattern: "spineinnovtech.com"` (`custom_domain: true`) and `pattern: "www.spineinnovtech.com"` (`custom_domain: true`).
-   - Legacy routes (`spineinnovtech.spineworkspace.com` and `spineinnovlabs.spineworkspace.com`) must remain in `env.prod.routes` so that Cloudflare routes inbound legacy traffic into the Worker for 301 redirection.
+   - Legacy routes (`spineinnovtech.spineworkspace.com` and `spineinnovtech.spineworkspace.com`) must remain in `env.prod.routes` so that Cloudflare routes inbound legacy traffic into the Worker for 301 redirection.
 
 2. **R1 Legacy Hostnames 301 Redirection**:
    - In `worker/index.ts`, `maybeCanonicalRedirect` redirects any hostname present in `env.LEGACY_REDIRECT_HOSTS` to `env.CANONICAL_SITE_URL` via HTTP 301, preserving `url.pathname + url.search`.
    - By observation 1.1, `CANONICAL_SITE_URL` is currently `"https://spineinnovtech.spineworkspace.com"` and `LEGACY_REDIRECT_HOSTS` does not include `spineinnovtech.spineworkspace.com`.
-   - Therefore, `CANONICAL_SITE_URL` must be changed to `"https://spineinnovtech.com"`, and `LEGACY_REDIRECT_HOSTS` must include `spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com`.
+   - Therefore, `CANONICAL_SITE_URL` must be changed to `"https://spineinnovtech.com"`, and `LEGACY_REDIRECT_HOSTS` must include `spineinnovtech.spineworkspace.com,spineinnovtech.spineworkspace.com,spineinnovtech.com,www.spineinnovtech.com,www.spineinnovtech.com`.
    - Adding hardcoded fallback defaults in `worker/index.ts` ensures resilience if environment variables are unset.
 
 3. **R1 DNS Architecture Requirements**:
@@ -240,10 +240,10 @@
      * `www.spineinnovtech.com`: CNAME record pointing to `spineinnovtech.com` (or Worker Custom Domain target), Proxied (`orange cloud`), TTL Auto.
      * SSL/TLS encryption mode must be Full (Strict) with Universal SSL active.
      * "Always Use HTTPS" must be enabled.
-   - For legacy hostnames (`spineworkspace.com` and `spineinnovlabs.com` zones):
+   - For legacy hostnames (`spineworkspace.com` and `spineinnovtech.com` zones):
      * `spineinnovtech.spineworkspace.com`: Proxied CNAME in `spineworkspace.com` zone pointing to the Worker custom domain.
-     * `spineinnovlabs.spineworkspace.com`: Proxied CNAME in `spineworkspace.com` zone pointing to the Worker custom domain.
-     * `spineinnovlabs.com` / `www.spineinnovlabs.com`: Proxied CNAME / A records in `spineinnovlabs.com` zone routed to the Worker.
+     * `spineinnovtech.spineworkspace.com`: Proxied CNAME in `spineworkspace.com` zone pointing to the Worker custom domain.
+     * `spineinnovtech.com` / `www.spineinnovtech.com`: Proxied CNAME / A records in `spineinnovtech.com` zone routed to the Worker.
 
 4. **R4 Cross-Site Destination Separation**:
    - The user request establishes strict separation among three distinct target domains:
@@ -301,7 +301,7 @@
      "routes": [
        { "pattern": "spineinnovtech.com", "custom_domain": true },
        { "pattern": "www.spineinnovtech.com", "custom_domain": true },
-       { "pattern": "spineinnovlabs.spineworkspace.com", "custom_domain": true },
+       { "pattern": "spineinnovtech.spineworkspace.com", "custom_domain": true },
        { "pattern": "spineinnovtech.spineworkspace.com", "custom_domain": true }
      ]
      ```
@@ -310,13 +310,13 @@
      "vars": {
        "CANONICAL_REDIRECTS_ENABLED": "true",
        "CANONICAL_SITE_URL": "https://spineinnovtech.com",
-       "LEGACY_REDIRECT_HOSTS": "spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com"
+       "LEGACY_REDIRECT_HOSTS": "spineinnovtech.spineworkspace.com,spineinnovtech.spineworkspace.com,spineinnovtech.com,www.spineinnovtech.com,www.spineinnovtech.com"
      }
      ```
 2. **`config.yaml`**:
    - Update `prod.spine_innovlabs.public_url` to `https://spineinnovtech.com`.
    - Update `prod.spine_innovlabs.canonical_url` to `https://spineinnovtech.com`.
-   - Update `legacy_redirect_hosts` to include `spineinnovtech.spineworkspace.com`, `www.spineinnovtech.com`, `spineinnovlabs.spineworkspace.com`, `www.spineinnovlabs.com`, `spineinnovlabs.com`.
+   - Update `legacy_redirect_hosts` to include `spineinnovtech.spineworkspace.com`, `www.spineinnovtech.com`, `spineinnovtech.spineworkspace.com`, `www.spineinnovtech.com`, `spineinnovtech.com`.
    - Update `build.prod_site_url` to `https://spineinnovtech.com`.
 3. **`worker/index.ts`**:
    - In `maybeProductEntryRedirect`:
@@ -335,8 +335,8 @@
      * SSL/TLS: Full (Strict), Universal SSL / Edge Certificate enabled. Always Use HTTPS: ON. Minimum TLS: 1.2.
    - Zone `spineworkspace.com`:
      * `spineinnovtech.spineworkspace.com`: CNAME, Proxied to Worker.
-     * `spineinnovlabs.spineworkspace.com`: CNAME, Proxied to Worker.
-   - Zone `spineinnovlabs.com`:
+     * `spineinnovtech.spineworkspace.com`: CNAME, Proxied to Worker.
+   - Zone `spineinnovtech.com`:
      * `@` and `www`: CNAME, Proxied to Worker.
 
 ### 4.2 Required Changes for R4 (Cross-Site Routing & Solution Entry Alignment)

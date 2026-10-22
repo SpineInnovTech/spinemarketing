@@ -4,7 +4,7 @@
 - **Corporate Site (`spinemarketing-magic-ui`)**:
   - Primary Domain: `https://spineinnovtech.com` (and `www.spineinnovtech.com`)
   - Cloudflare Worker edge routing (`worker/index.ts`):
-    - 301 canonical redirects for legacy hosts (`spineinnovlabs.*`, `spineinnovtech.spineworkspace.com`).
+    - 301 canonical redirects for legacy hosts (`spineinnovtech.*`, `spineinnovtech.spineworkspace.com`).
     - 302 entry redirects for auth (`/login`, `/signup` -> `https://auth.spineworkspace.com`) and workspace (`/workspace` -> `https://app.spineworkspace.com`).
   - Homepage: Pure enterprise architecture representation (`CorporateArchitectureStoryboard` + `CorporateOrbitalHero`), removing product workbench dashboards and canvas storyboards.
   - Cross-site links: Product marketing (`https://spineworkspace.com`), Authentication (`https://auth.spineworkspace.com`), Live App (`https://app.spineworkspace.com`).

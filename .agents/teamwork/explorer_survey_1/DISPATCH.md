@@ -13,7 +13,7 @@ Specifically investigate:
    - Cloudflare Pages / Worker build configuration.
 2. `worker/index.ts`:
    - Inspect existing request routing and redirection logic.
-   - Exact HTTP 301 redirection rules needed from legacy hosts (`spineinnovtech.spineworkspace.com`, `spineinnovlabs.spineworkspace.com`, `spineinnovlabs.com`, `www.spineinnovlabs.com`) to `https://spineinnovtech.com`, ensuring path and query string preservation.
+   - Exact HTTP 301 redirection rules needed from legacy hosts (`spineinnovtech.spineworkspace.com`, `spineinnovtech.spineworkspace.com`, `spineinnovtech.com`, `www.spineinnovtech.com`) to `https://spineinnovtech.com`, ensuring path and query string preservation.
 3. DNS requirements:
    - Identify and document exact DNS records (CNAME / apex flattening / ALIAS) needed in Cloudflare dashboard for `spineinnovtech.com` and `www.spineinnovtech.com`.
 4. Cross-site routing files:

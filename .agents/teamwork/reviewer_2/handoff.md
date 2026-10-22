@@ -112,7 +112,7 @@ All build and test verification commands were executed independently by Reviewer
 1. **Requirement R1 (Domain Cutover & Worker Routing)**:
    - `wrangler.jsonc` (lines 32–55): Binds `spineinnovtech.com` and `www.spineinnovtech.com` under `env.prod.routes` as custom domains. `env.prod.vars` defines `CANONICAL_REDIRECTS_ENABLED: "true"`, `CANONICAL_SITE_URL: "https://spineinnovtech.com"`, and lists legacy hosts.
    - `config.yaml` (lines 13–29, 81–83): Aligns `prod.spine_innovlabs.public_url`, `canonical_url`, and `build.prod_site_url` to `https://spineinnovtech.com`.
-   - `worker/index.ts` (lines 38–49): Emits HTTP 301 redirects for legacy hostnames (`spineinnovtech.spineworkspace.com`, `spineinnovlabs.*`, and `www.spineinnovtech.com`), preserving pathname and query search parameters.
+   - `worker/index.ts` (lines 38–49): Emits HTTP 301 redirects for legacy hostnames (`spineinnovtech.spineworkspace.com`, `spineinnovtech.*`, and `www.spineinnovtech.com`), preserving pathname and query search parameters.
    - `worker/index.ts` (lines 100–115): Intercepts `/login` and `/signup` with HTTP 302 to `https://auth.spineworkspace.com`, and `/workspace` with HTTP 302 to `https://app.spineworkspace.com`.
    - `docs/CLOUDFLARE_DNS_SETUP.md` (lines 1–178): Authoritative DNS specification detailing apex CNAME flattening, `www` alias, SSL/TLS Full (Strict), and curl verification scripts.
 

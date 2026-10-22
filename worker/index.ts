@@ -1,5 +1,5 @@
 /**
- * Edge wrapper for spineinnovlabs-marketing static assets.
+ * Edge wrapper for spineinnovtech-marketing static assets.
  * Domain cutover: enable CANONICAL_REDIRECT_HOST + CANONICAL_SITE_URL vars on prod
  * to 301 legacy hostnames to the apex (see docs/DEPLOYMENT.md).
  */

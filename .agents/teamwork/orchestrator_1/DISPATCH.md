@@ -15,7 +15,7 @@ Requirements & Acceptance Criteria:
 R1. Corporate Domain Cutover & Cloudflare Worker Configuration
 - wrangler.jsonc specifies spineinnovtech.com and www.spineinnovtech.com under env.prod.routes.
 - config.yaml and Cloudflare build settings configured for spineinnovtech.com and www.spineinnovtech.com.
-- worker/index.ts redirects legacy hosts (spineinnovlabs.*, spineinnovtech.spineworkspace.com) to https://spineinnovtech.com with 301 preserving path and query strings.
+- worker/index.ts redirects legacy hosts (spineinnovtech.*, spineinnovtech.spineworkspace.com) to https://spineinnovtech.com with 301 preserving path and query strings.
 - Document exact DNS records (CNAME/apex flattening) required in Cloudflare dashboard for spineinnovtech.com.
 
 R2. Realign Corporate Homepage to Diagrammatic Architecture

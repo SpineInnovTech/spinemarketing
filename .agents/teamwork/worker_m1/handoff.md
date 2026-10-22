@@ -16,7 +16,7 @@
 - **Lines 30–54**:
 ```jsonc
     "prod": {
-      "name": "spineinnovlabs-marketing",
+      "name": "spineinnovtech-marketing",
       "routes": [
         {
           "pattern": "spineinnovtech.com",
@@ -27,7 +27,7 @@
           "custom_domain": true
         },
         {
-          "pattern": "spineinnovlabs.spineworkspace.com",
+          "pattern": "spineinnovtech.spineworkspace.com",
           "custom_domain": true
         },
         {
@@ -38,7 +38,7 @@
       "vars": {
         "CANONICAL_REDIRECTS_ENABLED": "true",
         "CANONICAL_SITE_URL": "https://spineinnovtech.com",
-        "LEGACY_REDIRECT_HOSTS": "spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com"
+        "LEGACY_REDIRECT_HOSTS": "spineinnovtech.spineworkspace.com,spineinnovtech.spineworkspace.com,spineinnovtech.com,www.spineinnovtech.com,www.spineinnovtech.com"
       }
     }
 ```
@@ -56,9 +56,9 @@ environments:
       legacy_redirect_hosts:
         - spineinnovtech.spineworkspace.com
         - www.spineinnovtech.com
-        - spineinnovlabs.spineworkspace.com
-        - www.spineinnovlabs.com
-        - spineinnovlabs.com
+        - spineinnovtech.spineworkspace.com
+        - www.spineinnovtech.com
+        - spineinnovtech.com
 ...
 build:
   prod_site_url: https://spineinnovtech.com
@@ -76,7 +76,7 @@ build:
 ```typescript
 const DEFAULT_CANONICAL_SITE_URL = "https://spineinnovtech.com";
 const DEFAULT_LEGACY_REDIRECT_HOSTS =
-  "spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com";
+  "spineinnovtech.spineworkspace.com,spineinnovtech.spineworkspace.com,spineinnovtech.com,www.spineinnovtech.com,www.spineinnovtech.com";
 
 export function maybeCanonicalRedirect(request: Request, env: Env): Response | null {
   if (env.CANONICAL_REDIRECTS_ENABLED !== "true") return null;
@@ -140,7 +140,7 @@ const DEFAULT_PRODUCTION_ORIGIN = "https://spineinnovtech.com";
 ## 2. Logic Chain
 
 1. **Domain Cutover Ingestion Requirement**:
-   - `ORIGINAL_REQUEST.md` (R1) mandates that `spineinnovtech.com` and `www.spineinnovtech.com` serve as primary production custom domains, while legacy hostnames (`spineinnovlabs.*`, `spineinnovtech.spineworkspace.com`) 301 redirect to `https://spineinnovtech.com`.
+   - `ORIGINAL_REQUEST.md` (R1) mandates that `spineinnovtech.com` and `www.spineinnovtech.com` serve as primary production custom domains, while legacy hostnames (`spineinnovtech.*`, `spineinnovtech.spineworkspace.com`) 301 redirect to `https://spineinnovtech.com`.
    - By Observation 1.1, `wrangler.jsonc` now specifies `spineinnovtech.com` and `www.spineinnovtech.com` as custom domains under `env.prod.routes` alongside legacy routes.
    - Therefore, Cloudflare edge will route incoming traffic on both new and legacy domains directly to the Worker.
 
@@ -220,7 +220,7 @@ To independently verify the implementation:
    const env = {
      CANONICAL_REDIRECTS_ENABLED: "true",
      CANONICAL_SITE_URL: "https://spineinnovtech.com",
-     LEGACY_REDIRECT_HOSTS: "spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,www.spineinnovtech.com"
+     LEGACY_REDIRECT_HOSTS: "spineinnovtech.spineworkspace.com,spineinnovtech.spineworkspace.com,www.spineinnovtech.com"
    };
    const r1 = maybeCanonicalRedirect(new Request("https://www.spineinnovtech.com/solutions?q=1"), env);
    console.assert(r1.status === 301 && r1.headers.get("Location") === "https://spineinnovtech.com/solutions?q=1", "Canonical 301 failed");

@@ -98,7 +98,7 @@ Every feature listed in `PROJECT.md § Feature Inventory` is covered by at least
 - **T2.2**: Deeply nested paths on legacy hostnames (`/platform/spine-fabric/governance/deep/nested`).
 - **T2.3**: Trailing slash preservation and normalization on legacy hostnames.
 - **T2.4**: Mixed-case legacy hostname resolution (`SpInEiNnOvLaBs.SpInEwOrKsPaCe.CoM`).
-- **T2.5**: Hostname with explicit port numbers (`spineinnovlabs.spineworkspace.com:8443`).
+- **T2.5**: Hostname with explicit port numbers (`spineinnovtech.spineworkspace.com:8443`).
 - **T2.6**: Unmapped solution lens slug in `productSiteUrl` (`/solutions/unknown-slug-xyz`).
 - **T2.7**: Solution lens slug with trailing slash (`/solutions/memoryandknowledge/`).
 - **T2.8**: Auth entry link generation with unknown domain slug (graceful default to `/workspace/my-work`).
@@ -123,7 +123,7 @@ Every feature listed in `PROJECT.md § Feature Inventory` is covered by at least
 - **T3.10**: QA script assertions in `check-cloudflare-config.mjs` align with `wrangler.jsonc` and `config.yaml`.
 
 ### Tier 4: Real-World Scenarios (6 User Journeys)
-- **T4.1**: **Legacy Corporate Visitor Redirection Flow**: Inbound visitor requesting `http://spineinnovlabs.spineworkspace.com/company?utm_source=partner` is seamlessly redirected via 301 to `https://spineinnovtech.com/company?utm_source=partner` with full path, query, and HSTS security headers.
+- **T4.1**: **Legacy Corporate Visitor Redirection Flow**: Inbound visitor requesting `http://spineinnovtech.spineworkspace.com/company?utm_source=partner` is seamlessly redirected via 301 to `https://spineinnovtech.com/company?utm_source=partner` with full path, query, and HSTS security headers.
 - **T4.2**: **Enterprise Architect Technical Diagram Evaluation Flow**: Enterprise architect arrives on `spineinnovtech.com`, inspects the diagrammatic architecture storyboard (Context Fabric, Hermes Governance, Host Continuity), clicks platform navigation to inspect governed runtime, and validates pure corporate enterprise architecture without product workbenches.
 - **T4.3**: **Product Prospect Solution & Workbench Evaluation Flow**: Prospective customer clicks "SpineWorkspace" from corporate header, lands on `spineworkspace.com`, navigates to `/product/workbench`, interacts with 23-domain workbench views (dashboard, canvas, recording, journey), and clicks "Sign up" leading to `https://auth.spineworkspace.com/signup` with preserved entry context.
 - **T4.4**: **Existing Customer Direct Entry Flow**: Existing customer visits `spineinnovtech.com/workspace` or `spineinnovtech.com/login` and is instantly edge-redirected via 302 to `https://app.spineworkspace.com` or `https://auth.spineworkspace.com/login` without hitting static origin.
@@ -177,7 +177,7 @@ node scripts/test-e2e.mjs --verbose
 |---|---|---|---|
 | Feature 1–2: Wrangler Config | `wrangler.jsonc` content | `ORIGINAL_REQUEST.md §R1`, `PROJECT.md §Feature Inventory (1, 2)` | `routes`: `spineinnovtech.com`, `www.spineinnovtech.com`<br>`vars.CANONICAL_SITE_URL`: `https://spineinnovtech.com`<br>`vars.LEGACY_REDIRECT_HOSTS` includes legacy and www |
 | Feature 3: Config YAML | `config.yaml` content | `PROJECT.md §Feature Inventory (3)` | `public_url`: `https://spineinnovtech.com`<br>`canonical_url`: `https://spineinnovtech.com`<br>`build.prod_site_url`: `https://spineinnovtech.com` |
-| Feature 4: Edge 301 Redirects | Request with legacy host (`spineinnovlabs.*`, `spineinnovtech.spineworkspace.com`) | `ORIGINAL_REQUEST.md §R1`, `PROJECT.md §Interface Contracts (4)` | Status: `301`<br>`Location`: `https://spineinnovtech.com${pathname}${search}` |
+| Feature 4: Edge 301 Redirects | Request with legacy host (`spineinnovtech.*`, `spineinnovtech.spineworkspace.com`) | `ORIGINAL_REQUEST.md §R1`, `PROJECT.md §Interface Contracts (4)` | Status: `301`<br>`Location`: `https://spineinnovtech.com${pathname}${search}` |
 | Feature 5: Edge 302 Entry Redirects | Request to `/login`, `/signup`, `/workspace` | `PROJECT.md §Architecture`, `PROJECT.md §Feature Inventory (5)` | `/login` -> `302 https://auth.spineworkspace.com/login`<br>`/signup` -> `302 https://auth.spineworkspace.com/signup`<br>`/workspace` -> `302 https://app.spineworkspace.com/` |
 | Feature 6: Cloudflare DNS | `docs/CLOUDFLARE_DNS_SETUP.md` content | `ORIGINAL_REQUEST.md §R1`, `PROJECT.md §Feature Inventory (6)` | Apex flattening, www CNAME, Full (strict) SSL, Proxied status documented |
 | Feature 7–8: Architecture Homepage | `innovlabs-home.tsx`, `corporate-architecture-storyboard.tsx` | `ORIGINAL_REQUEST.md §R2`, `PROJECT.md §Feature Inventory (7, 8)` | `WorkbenchHeroPreview` removed; `CorporateArchitectureStoryboard` rendered; Context Fabric, Hermes Governance, Host Continuity present |

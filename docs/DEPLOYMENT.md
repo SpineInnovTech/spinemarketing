@@ -4,11 +4,11 @@
 
 | Concern | Owner |
 | --- | --- |
-| Corporate marketing Git source | `SpineInnovLabs/spinemarketing` → `main` |
+| Corporate marketing Git source | `SpineInnovTech/spinemarketing` → `main` |
 | CI/CD (production) | **Cloudflare Workers Builds**, connected to the above GitHub repository |
-| Worker name | `spineinnovlabs-marketing` |
+| Worker name | `spineinnovtech-marketing` |
 | Cloudflare account | The account ID in `wrangler.jsonc` |
-| Live corporate hostname | `spineinnovlabs.spineworkspace.com` |
+| Live corporate hostname | `spineinnovtech.spineworkspace.com` |
 | Product public website | **Separate** `spineworkspace-live/apps/marketing`, `spineworkspace.com` |
 | Authenticated workspace | **Separate** `app.spineworkspace.com` |
 | Sign-in / sign-up | **Separate** `auth.spineworkspace.com` |
@@ -17,18 +17,18 @@
 
 ## Cloudflare Workers Builds — one-time dashboard connection
 
-Existing Worker: **Workers & Pages** → `spineinnovlabs-marketing` → **Settings** → **Builds** → **Connect**.
+Existing Worker: **Workers & Pages** → `spineinnovtech-marketing` → **Settings** → **Builds** → **Connect**.
 
-1. Authorize Cloudflare's GitHub App for **SpineInnovLabs/spinemarketing**, if not already authorized.
-2. Connect **the existing Worker** `spineinnovlabs-marketing` rather than creating a second production Worker. Git-linked Worker names must match the `name` in the Wrangler configuration.
+1. Authorize Cloudflare's GitHub App for **SpineInnovTech/spinemarketing**, if not already authorized.
+2. Connect **the existing Worker** `spineinnovtech-marketing` rather than creating a second production Worker. Git-linked Worker names must match the `name` in the Wrangler configuration.
 3. Set production branch to `main`, root directory to `.` (repo root), and **enable production builds**.
 4. Set **Build command** to `npm run build:cloudflare`.
 5. Set **Deploy command** to `npm run deploy:cloudflare`.
 6. Keep non-production preview builds disabled during initial migration. Later, use an isolated non-production Worker/preview command only after review; never bind previews to the production custom domain.
-7. Set build variables (public, used during build): `NODE_VERSION=22`, `NEXT_PUBLIC_SITE_URL=https://spineinnovlabs.spineworkspace.com`, `CONTENT_PROVIDER=sanity`, `SANITY_DATASET=production`.
+7. Set build variables (public, used during build): `NODE_VERSION=22`, `NEXT_PUBLIC_SITE_URL=https://spineinnovtech.spineworkspace.com`, `CONTENT_PROVIDER=sanity`, `SANITY_DATASET=production`.
 8. Set build secrets through Cloudflare settings (never commit): `SANITY_PROJECT_ID`; `SANITY_API_READ_TOKEN` if required for the configured dataset. The actual Sanity connection must be verified before accepting blog freshness. Inspect `docs/CONTENT.md` for fallback behavior.
 9. Cloudflare Workers Builds manages a deployment token; you **do not need a CircleCI token or personal Wrangler OAuth credentials**. If overriding the token, use appropriately scoped Cloudflare credentials **inside Cloudflare**, not source code.
-10. Review `wrangler.jsonc`: production worker is `spineinnovlabs-marketing`, binds `./out`, and owns only `spineinnovlabs.spineworkspace.com`. `CANONICAL_REDIRECTS_ENABLED=false` until an approved move to `spineinnovlabs.com`.
+10. Review `wrangler.jsonc`: production worker is `spineinnovtech-marketing`, binds `./out`, and owns only `spineinnovtech.spineworkspace.com`. `CANONICAL_REDIRECTS_ENABLED=false` until an approved move to `spineinnovtech.com`.
 
 Configuration reference: [`config/cloudflare-builds.json`](../config/cloudflare-builds.json). **This file documents dashboard settings; it does not automatically connect GitHub or provision Cloudflare account resources.**
 
@@ -59,7 +59,7 @@ With Cloudflare credentials supplied to Wrangler in the local environment:
 
 ```bash
 npm ci --no-audit --no-fund
-export NEXT_PUBLIC_SITE_URL=https://spineinnovlabs.spineworkspace.com
+export NEXT_PUBLIC_SITE_URL=https://spineinnovtech.spineworkspace.com
 export CONTENT_PROVIDER=sanity
 export SANITY_DATASET=production
 # Set SANITY_PROJECT_ID and SANITY_API_READ_TOKEN securely if applicable.
@@ -82,14 +82,14 @@ Prefer **Sanity Publish webhook → Cloudflare Workers Builds Deploy Hook**:
 
 Do **not** change the `spineworkspace.com` / `www.spineworkspace.com` product host, `auth.spineworkspace.com`, or `app.spineworkspace.com` during corporate migration. Those are separate applications. Fix their ownership via the `spineworkspace-live` repository and the Cloudflare account.
 
-Do **not** turn on the future `spineinnovlabs.com` canonical redirect without verifying the new DNS, certificates and published URLs; `wrangler.jsonc` intentionally has redirect disabled.
+Do **not** turn on the future `spineinnovtech.com` canonical redirect without verifying the new DNS, certificates and published URLs; `wrangler.jsonc` intentionally has redirect disabled.
 
 ### Acceptance and troubleshooting
 
 - If **no Cloudflare build starts**, check that the Git integration is connected to the **existing** Worker and the latest `main` push is visible in Settings → Builds. This cannot be resolved by committing a Wrangler file alone.
 - If **build fails**, inspect the Cloudflare build log. The site must pass route/brand checks, TypeScript, static export, and HTML/sitemap validation.
 - If **deploy fails**, check Cloudflare Builds' deploy token permissions, correct Worker name, account, and custom-domain ownership. No CircleCI credentials are involved.
-- If **site still serves old content**, check which Worker/custom domain owns `spineinnovlabs.spineworkspace.com`. A successful Wrangler upload to a different Worker is **not** a release. `verify:live` fails when the corporate hero is absent or the final hostname redirects away.
+- If **site still serves old content**, check which Worker/custom domain owns `spineinnovtech.spineworkspace.com`. A successful Wrangler upload to a different Worker is **not** a release. `verify:live` fails when the corporate hero is absent or the final hostname redirects away.
 - If **Sanity posts are stale**, verify configured build secrets and rerun a Deploy Hook after a content publication.
 - **Only declare production success** once the Cloudflare build and deployment complete and the live page contains `Move business` and `Spine InnovTech`.
 

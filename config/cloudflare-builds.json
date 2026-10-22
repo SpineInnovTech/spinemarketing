@@ -1,8 +1,8 @@
 {
   "note": "Repository-side documented settings for Cloudflare Workers Builds. Cloudflare dashboard owns the actual Git integration, secrets, and build triggers.",
-  "worker": "spineinnovlabs-marketing",
+  "worker": "spineinnovtech-marketing",
   "account": "3b815e3cd31a7ce892c2c65ea8873387",
-  "repository": "SpineInnovLabs/spinemarketing",
+  "repository": "SpineInnovTech/spinemarketing",
   "productionBranch": "main",
   "rootDirectory": ".",
   "buildCommand": "npm run build:cloudflare",

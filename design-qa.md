@@ -52,4 +52,4 @@ The review package additionally contains company, Fabric, solution detail, archi
 
 ## Publication status
 
-Release status and live HTTP verification are tracked in [GitHub pull request 15](https://github.com/SpineInnovLabs/spinemarketing/pull/15). This report covers implementation verification. Production browser verification is limited by the execution environment's proxy-certificate trust; no TLS verification was disabled.
+Release status and live HTTP verification are tracked in [GitHub pull request 15](https://github.com/SpineInnovTech/spinemarketing/pull/15). This report covers implementation verification. Production browser verification is limited by the execution environment's proxy-certificate trust; no TLS verification was disabled.

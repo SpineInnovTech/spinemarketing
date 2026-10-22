@@ -1,6 +1,6 @@
 # Customer journey source and claim boundary
 
-Reviewed application source: `SpineInnovLabs/spineworkspace-live`, commit
+Reviewed application source: `SpineInnovTech/spineworkspace-live`, commit
 `095fd8017c905c25be2832b02be3b35deabc8fe6`, branch
 `feat/e2e-customer-journey-closure`.
 

@@ -101,7 +101,7 @@ Direct inspection of `/Users/nirmal/Github/spineworkspace-live/apps/marketing`:
        `assert.ok(!html.includes("https://app.spineworkspace.com"))`
        *Conflict with R4*: R4 requires auth actions to target `https://auth.spineworkspace.com` and app actions to target `https://app.spineworkspace.com`.
      - `scripts/check-cloudflare-config.mjs` (Lines 27-30):
-       Checks for routes `spineinnovlabs.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
+       Checks for routes `spineinnovtech.spineworkspace.com` and `spineinnovtech.spineworkspace.com`.
        *Conflict with R1*: R1 cutover targets `spineinnovtech.com` and `www.spineinnovtech.com`.
      - `scripts/check-release-preflight.mjs` (Line 43):
        Checks for `spineinnovtech.spineworkspace.com` in `wrangler.jsonc`.

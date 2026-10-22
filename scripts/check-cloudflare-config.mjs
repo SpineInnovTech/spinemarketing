@@ -31,7 +31,7 @@ assert(wrangler.env.prod.vars?.CANONICAL_SITE_URL === "https://spineinnovtech.co
 assert(wrangler.env.prod.vars?.LEGACY_REDIRECT_HOSTS?.includes("spineinnovtech.spineworkspace.com"), "legacy redirect hosts must include spineinnovtech.spineworkspace.com");
 assert(/output:\s*['"]export['"]/.test(next), "Next.js must remain static export");
 assert(worker.includes("env.ASSETS.fetch(request)"), "Worker must serve static asset binding");
-assert(build.repository === "SpineInnovLabs/spinemarketing" && build.productionBranch === "main", "build repo/branch mismatch");
+assert(build.repository === "SpineInnovTech/spinemarketing" && build.productionBranch === "main", "build repo/branch mismatch");
 assert(build.rootDirectory === ".", "Cloudflare Builds must use repository root");
 assert(build.buildCommand === "npm run build:cloudflare", "Cloudflare Build command mismatch");
 const pipeline = pkg.scripts?.["build:cloudflare"] ?? "";
