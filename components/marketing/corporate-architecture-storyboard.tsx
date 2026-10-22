@@ -350,8 +350,8 @@ export function CorporateArchitectureStoryboard() {
                 <span>All 13 enterprise domains bound to shared entity graphs</span>
               </div>
               <div className="flex items-center gap-4 font-mono text-[11px]">
-                <span>Graph Resolution: &lt;12ms</span>
-                <span>Provenance: 100% Immutable</span>
+                <span>Source-Authoritative Retrieval</span>
+                <span>Immutable Read Receipts</span>
                 <span>Lineage: SHA-256</span>
               </div>
             </div>

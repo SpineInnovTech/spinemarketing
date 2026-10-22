@@ -168,7 +168,7 @@ export function InnovLabsHome() {
                 Stop Being the Human API: Why Tool Proliferation Fails Operators
               </h3>
               <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
-                How humans spend 60% of their workday copying state between tools, and how unified context ends the coordination tax.
+                How much of the workday operators lose copying state between tools, and how unified context ends the coordination tax.
               </p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
                 Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

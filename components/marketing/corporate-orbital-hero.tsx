@@ -38,15 +38,15 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
           </div>
 
           <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-black text-[#002B64] tracking-tight leading-[1.12] mb-3">
-            Governing the shared operational context where humans and AI work.
+            The governed workbench where humans and AI move business context and work forward.
           </h2>
 
           <div className="text-xs sm:text-sm leading-relaxed mb-5 text-[#5E728B]">
             <strong className="text-[#0070DC] font-bold block mb-1">
-              AI builds the context. Humans stay in control.
+              Humans govern the business. AI helps the work.
             </strong>
             <span>
-              Spine InnovTech builds the foundational data fabric powering SpineWorkspace — turning fragmented tools and autonomous AI into unified, trusted execution.
+              SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.
             </span>
           </div>
 
@@ -67,7 +67,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
           </div>
 
           <p className="text-xs text-[#8293A9] font-medium pt-2 border-t border-[#D8E5F0]/60">
-            Parent Company of SpineWorkspace · Governed Enterprise Foundation
+            The company behind SpineWorkspace · Governed Enterprise Foundation
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             </div>
             <div className="bg-white/90 rounded-lg p-1.5 border border-[#D8ECFC] shadow-2xs">
               <span className="text-[8px] font-bold text-[#002B64] block">Operational Context</span>
-              <span className="text-[7.5px] text-[#5E728B] leading-tight block">Single governed truth</span>
+              <span className="text-[7.5px] text-[#5E728B] leading-tight block">One governed view</span>
             </div>
             <div className="bg-white/90 rounded-lg p-1.5 border border-[#D8ECFC] shadow-2xs">
               <span className="text-[8px] font-bold text-[#002B64] block">Account Anchor</span>
@@ -144,7 +144,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             </div>
             <div className="bg-[#E8F9F0] rounded-lg p-1.5 border border-[#12B76A]/40 shadow-2xs">
               <span className="text-[8px] font-bold text-[#12B76A] block">KPI Movement</span>
-              <span className="text-[7.5px] text-[#002B64] leading-tight block">71 governed metrics</span>
+              <span className="text-[7.5px] text-[#002B64] leading-tight block">Governed metrics</span>
             </div>
           </div>
 
@@ -260,7 +260,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
       <div className="relative z-10 mt-6 pt-4 border-t border-[#D8E5F0]/70 flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2 text-[#5E728B]">
           <span className="inline-block w-2 h-2 rounded-full bg-[#12B76A]" />
-          <span>Single Source of Truth for Business Context &amp; Connection State</span>
+          <span>One governed view of business context &amp; connection state</span>
         </div>
         <div className="flex items-center gap-4 text-[11px] font-medium text-[#0070DC]">
           <span>Connect Once, Continue Forever</span>
