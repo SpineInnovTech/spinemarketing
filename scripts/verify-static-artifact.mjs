@@ -84,7 +84,16 @@ if (!twin.includes("The Twin uses the context it is permitted to access")) {
   throw new Error("Twin capability introduction was dropped by its card layout.");
 }
 const resources = readFileSync("out/resources.html", "utf8");
-if (resources.includes("Published planning prices") || !resources.includes('href="/use-cases"')) {
+// Resources is now a corporate hub: it must route to corporate destinations and
+// the product website, never to the retired legacy product pages, and must not
+// carry the old planning-price claim.
+if (resources.includes("Published planning prices")) {
+  throw new Error("Resources must not carry the retired planning-price claim.");
+}
+if (resources.includes('href="/use-cases"') || resources.includes('href="/pricing"')) {
+  throw new Error("Resources must not link the retired legacy product pages (use cases, pricing).");
+}
+if (!resources.includes('href="/insights"') || !resources.includes('href="https://spineworkspace.com"')) {
   throw new Error("Resources must describe current destinations and commercial scope accurately.");
 }
 console.log("Corporate HTML, broad technology scope, resource destinations, product routing, and sitemap artifact verified.");

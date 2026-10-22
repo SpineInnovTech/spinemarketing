@@ -19,7 +19,7 @@ const work = [
     type: "Flagship product",
     title: "SpineWorkspace",
     body: "A business-context workspace for people and AI to understand the business, share work and move goals forward together.",
-    href: "/product",
+    href: "/spine-workspace",
     external: false,
   },
   {
@@ -43,7 +43,7 @@ const work = [
     type: "Governed execution",
     title: "Spine Runtime",
     body: "The controls that separate discovery, proposals, authority, execution, observation and reconciliation.",
-    href: "/governance",
+    href: "/trust",
     external: false,
   },
 ];
@@ -58,7 +58,7 @@ export default function PortfolioPage() {
           badge="Spine InnovTech / Portfolio"
           headline="One direction. Connected capabilities."
           subhead="Our portfolio is built around SpineWorkspace. The elements below describe an integrated product architecture, not a list of separately purchasable products or verified customer implementations."
-          primaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
+          primaryCta={{ label: "Explore SpineWorkspace", href: "/spine-workspace" }}
           secondaryCta={{ label: "Platform architecture", href: "/platform" }}
         />
         <section className="mx-auto max-w-[1220px] px-5 py-24 sm:px-8 lg:py-32">

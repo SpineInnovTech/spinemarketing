@@ -24,11 +24,14 @@ export const headerNavigation: NavItem[] = [
 
 export type FooterColumn = { heading: string; links: { name: string; href: string; external?: boolean }[] };
 
-// Footer navigation — Final Content Master (00. Shared Site Content › Footer).
-// Exactly four groups and eleven links, in this order, with these exact labels
-// and destinations. Do not add other links (no /blog, /resources, login,
-// pricing). Legal links are handled separately (footerLegalLinks) and shown
-// only when a complete published policy page exists.
+// Footer navigation — Final Content Master (00. Shared Site Content › Footer),
+// extended by the user's 22 Oct 2026 request to surface the two existing
+// corporate pages directly: "Technology portfolio" (/portfolio) as the last
+// Technology link, and "Resources" (/resources) after Insights in Perspectives.
+// Four groups and thirteen links, in this order, with these exact labels and
+// destinations. Do not add other links (no /blog, login, pricing). Legal links
+// are handled separately (footerLegalLinks) and shown only when a complete
+// published policy page exists.
 export const footerColumns: FooterColumn[] = [
   {
     heading: "Company",
@@ -46,6 +49,7 @@ export const footerColumns: FooterColumn[] = [
       { name: "Trust & governance", href: "/trust" },
       { name: "Responsible AI", href: "/responsible-ai" },
       { name: "Partnerships", href: "/partners" },
+      { name: "Technology portfolio", href: "/portfolio" },
     ],
   },
   {
@@ -57,7 +61,10 @@ export const footerColumns: FooterColumn[] = [
   },
   {
     heading: "Perspectives",
-    links: [{ name: "Insights", href: "/insights" }],
+    links: [
+      { name: "Insights", href: "/insights" },
+      { name: "Resources", href: "/resources" },
+    ],
   },
 ];
 
@@ -71,11 +78,11 @@ export const footerLegalLinks: { name: string; href: string }[] = [
   { name: "Website terms", href: "/terms" },
 ];
 
-// Bottom-bar utility links — not part of the master's four footer groups. The
-// Site map link keeps the full website directory (/site-map) reachable from the
-// footer, so /resources and the directory-only pages stay reachable through it
-// and the coverage gate can stay strict for every route (conductor decision
-// superseding A1). It sits beside the legal links, not inside the 11 grouped
+// Bottom-bar utility links — not part of the master's footer groups. The Site
+// map link keeps the full website directory (/site-map) reachable from the
+// footer, so the directory-only pages stay reachable through it and the
+// coverage gate can stay strict for every route (conductor decision
+// superseding A1). It sits beside the legal links, not inside the grouped
 // master links.
 export const footerUtilityLinks: { name: string; href: string }[] = [
   { name: "Site map", href: "/site-map" },
