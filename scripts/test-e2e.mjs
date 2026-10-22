@@ -194,12 +194,20 @@ registerTest(1, 1, "F1.3", "wrangler.jsonc specifies www.spineinnovtech.com as c
   assert.equal(r.custom_domain, true, "www.spineinnovtech.com must have custom_domain: true");
 });
 
-registerTest(1, 1, "F1.4", "wrangler.jsonc retains legacy cutover routes for redirection", async () => {
+registerTest(1, 1, "F1.4", "wrangler.jsonc binds only spineinnovtech.com production domains (no legacy custom-domain bindings)", async () => {
   const w = readJsonSafe("wrangler.jsonc");
   const routes = w?.env?.prod?.routes || [];
+  const patterns = routes.map((r) => r.pattern);
+  // Deployment decision: production worker serves spineinnovtech.com only.
+  // Legacy hosts are handled by passive LEGACY_REDIRECT_HOSTS + worker redirect
+  // source, never by binding this worker to an old custom domain.
+  const allowed = new Set(["spineinnovtech.com", "www.spineinnovtech.com"]);
+  for (const pattern of patterns) {
+    assert.ok(allowed.has(pattern), "Production must not bind non-spineinnovtech.com host: " + pattern);
+  }
   assert.ok(
-    routes.some((r) => r.pattern === "spineinnovlabs.spineworkspace.com"),
-    "spineinnovlabs.spineworkspace.com route must be present for cutover",
+    !patterns.some((p) => p.includes("spineworkspace.com") || p.includes("spineinnovlabs")),
+    "Production must not retain legacy spineworkspace.com / spineinnovlabs custom-domain bindings",
   );
 });
 

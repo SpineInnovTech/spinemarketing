@@ -37,14 +37,6 @@
         {
           "pattern": "www.spineinnovtech.com",
           "custom_domain": true
-        },
-        {
-          "pattern": "spineinnovlabs.spineworkspace.com",
-          "custom_domain": true
-        },
-        {
-          "pattern": "spineinnovtech.spineworkspace.com",
-          "custom_domain": true
         }
       ],
       "vars": {
