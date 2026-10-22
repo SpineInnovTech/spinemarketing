@@ -12,12 +12,52 @@ export type NavItem = {
 
 export const DOCS_URL = "/docs";
 
-// Header navigation — Final Content Master (00. Shared Site Content › Header).
-// Exact labels and destinations; a flat top-level bar with no mega-menus.
-export const headerNavigation: NavItem[] = [
-  { label: "Company", href: "/company" },
-  { label: "Technology", href: "/platform" },
-  { label: "Our philosophy", href: "/about" },
+// Header navigation — Final Content Master (00. Shared Site Content › Header),
+// extended by Nirmal's 22 Oct 2026 request to open the three primary top-level
+// items (Company, Technology, Our philosophy) as dropdown submenus of plain
+// links, while Insights and Contact stay direct links and the CTA is unchanged.
+// A submenu entry is a top item with a `submenu` array; a direct entry has
+// none. Links in each submenu are plain in-page links (not role=menu items),
+// in exactly this order with these exact labels and destinations.
+export type HeaderSubLink = { label: string; href: string };
+export type HeaderNavItem = {
+  label: string;
+  href: string;
+  submenu?: HeaderSubLink[];
+};
+
+export const headerNavigation: HeaderNavItem[] = [
+  {
+    label: "Company",
+    href: "/company",
+    submenu: [
+      { label: "Company overview", href: "/company" },
+      { label: "Our story", href: "/company#our-story" },
+      { label: "Founder", href: "/company#founder" },
+      { label: "Partnerships", href: "/partners" },
+      { label: "Careers", href: "/careers" },
+    ],
+  },
+  {
+    label: "Technology",
+    href: "/platform",
+    submenu: [
+      { label: "Technology overview", href: "/platform" },
+      { label: "Shared business context", href: "/platform#business-context" },
+      { label: "Authority & execution", href: "/platform#governed-execution" },
+      { label: "Work continuity", href: "/platform#work-continuity" },
+      { label: "SpineWorkspace overview", href: "/spine-workspace" },
+    ],
+  },
+  {
+    label: "Our philosophy",
+    href: "/about",
+    submenu: [
+      { label: "Engineering principles", href: "/about" },
+      { label: "Trust & governance", href: "/trust" },
+      { label: "Responsible AI", href: "/responsible-ai" },
+    ],
+  },
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
@@ -89,5 +129,5 @@ export const footerUtilityLinks: { name: string; href: string }[] = [
   { name: "Site map", href: "/site-map" },
 ];
 
-export const COMPANY_TAGLINE = "We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work.";
+export const COMPANY_TAGLINE = "We build governed business context for humans and AI.";
 export const PRODUCT_ONELINER = "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.";

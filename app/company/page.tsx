@@ -44,6 +44,30 @@ export default function CompanyPage() {
           secondaryCta={{ label: "Talk to us", href: "/contact" }}
         />
 
+        <section id="our-story" className="scroll-mt-24 mx-auto max-w-[1240px] px-5 py-24 sm:px-8 lg:py-32">
+          <p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR STARTING POINT</p>
+          <h2 className="mt-5 max-w-[820px] text-[length:min(clamp(2.5rem,4.6vw,4.6rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.06em]">The experience behind the company.</h2>
+          <div className="mt-8 max-w-[760px] space-y-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">
+            <p>Before founding Spine InnovTech, our founder worked on an $8 million renewal that was already at risk, with no reliable account history.</p>
+            <p>Connecting Slack, email, the MuleSoft connector and multiple Salesforce connectors through authorized surfaces revealed the underlying problem. The account was saved.</p>
+            <p>The experience exposed a recurring challenge: the information existed, but someone had to assemble its meaning before the team could act.</p>
+            <p>It also raised the question behind Spine InnovTech. How could the understanding built during that work remain available when the account changed hands, the next issue emerged or a different AI session began?</p>
+            <p className="font-medium text-[#1A355B]">The lasting need was continuous, governed context. That is the foundation we set out to build.</p>
+          </div>
+        </section>
+
+        <section id="founder" className="scroll-mt-24 bg-[#F0F8FF] py-24 lg:py-32 innovtech-reference-surface">
+          <div className="mx-auto max-w-[1240px] px-5 sm:px-8">
+            <p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">FOUNDER</p>
+            <h3 className="mt-5 text-[length:min(clamp(2rem,3.4vw,3.4rem),var(--marketing-heading-size))] font-semibold leading-[1.15] tracking-[-.05em] text-[#052858]">Nirmal Prince J</h3>
+            <p className="mt-3 text-[length:min(18px,var(--marketing-body-size))] font-semibold text-[#2463C2]">Founder &amp; Chief Executive Officer</p>
+            <div className="mt-8 max-w-[760px] space-y-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">
+              <p>Nirmal&apos;s background spans enterprise integration architecture and customer-facing work, including experience with MuleSoft and Salesforce ecosystems.</p>
+              <p>That experience informs Spine InnovTech&apos;s focus on preserving the meaning of business work, giving people and AI a common basis for understanding it, and keeping authority explicit.</p>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto grid max-w-[1240px] gap-12 px-5 py-24 sm:px-8 lg:grid-cols-[.65fr_1.35fr] lg:gap-24 lg:py-32">
           <div><p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR PURPOSE</p><p className="mt-5 max-w-[280px] text-sm leading-7 text-[#5A6D86]">Help people and AI understand the business they are working in.</p></div>
           <div>

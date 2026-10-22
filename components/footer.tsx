@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SpineLogo } from "@/components/spine-logo";
-import { footerColumns, footerLegalLinks, footerUtilityLinks } from "@/lib/navigation";
+import { footerColumns, footerLegalLinks, footerUtilityLinks, COMPANY_TAGLINE } from "@/lib/navigation";
 import { COMPANY_NAME } from "@/lib/company";
 
 export function Footer() {
@@ -24,8 +24,8 @@ export function Footer() {
                 Spine <span className="text-[#9BCAFF]">InnovTech</span>
               </span>
             </Link>
-            <h2 className="mt-8 max-w-[420px] text-[length:min(clamp(1.8rem,3vw,2.8rem),var(--marketing-heading-size))] font-semibold leading-[1.2] tracking-[-.05em] text-white">
-              We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work.
+            <h2 className="mt-8 max-w-[440px] text-[length:min(clamp(1.5rem,2.2vw,2rem),var(--marketing-heading-size))] font-semibold leading-[1.25] tracking-[-.04em] text-white">
+              {COMPANY_TAGLINE}
             </h2>
             <p className="mt-5 max-w-[400px] text-[14px] leading-[1.85] text-[#CBD9EB]">
               Spine InnovTech develops technology for shared business
