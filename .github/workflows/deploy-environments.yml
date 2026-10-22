@@ -1,0 +1,92 @@
+# Non-production environment deploys.
+#
+# Pushes to the long-lived `dev` branch deploy the Cloudflare Worker
+# `spineinnovtech-marketing-dev` to https://dev.spineinnovtech.com, and pushes to
+# `test` deploy `spineinnovtech-marketing-test` to https://test.spineinnovtech.com.
+#
+# Production is NOT handled here. Prod stays a manual `npm run deploy:cloudflare`
+# run from `main`; there is deliberately no prod job in this workflow.
+name: Deploy environments
+
+on:
+  push:
+    branches:
+      - dev
+      - test
+
+# Least privilege: the job only reads the repo; the Cloudflare deploy uses the
+# API token secret, not the GITHUB_TOKEN.
+permissions:
+  contents: read
+
+jobs:
+  deploy-dev:
+    name: Deploy dev -> dev.spineinnovtech.com
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    # One deploy per branch at a time; a newer push cancels an in-flight run.
+    concurrency:
+      group: deploy-dev-${{ github.ref }}
+      cancel-in-progress: true
+    environment:
+      name: dev
+      url: https://dev.spineinnovtech.com
+    env:
+      NEXT_PUBLIC_SITE_URL: https://spineinnovtech.com
+      CONTENT_PROVIDER: sanity
+      SANITY_DATASET: production
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Checkout dev
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build static artifact
+        run: npm run build:cloudflare
+
+      - name: Deploy to Cloudflare (dev)
+        run: npx wrangler deploy --env dev
+
+  deploy-test:
+    name: Deploy test -> test.spineinnovtech.com
+    if: github.ref == 'refs/heads/test'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deploy-test-${{ github.ref }}
+      cancel-in-progress: true
+    environment:
+      name: test
+      url: https://test.spineinnovtech.com
+    env:
+      NEXT_PUBLIC_SITE_URL: https://spineinnovtech.com
+      CONTENT_PROVIDER: sanity
+      SANITY_DATASET: production
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Checkout test
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Build static artifact
+        run: npm run build:cloudflare
+
+      - name: Deploy to Cloudflare (test)
+        run: npx wrangler deploy --env test
