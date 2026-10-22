@@ -31,7 +31,7 @@ export function InnovLabsHome() {
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
-              <h1 id="company-title" className="mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-.045em] text-[#032D60]">
+              <h1 id="company-title" className="font-display mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-extrabold leading-[1.08] tracking-[-.025em] text-[#032D60]">
                 We build the foundation for connected business work.
               </h1>
             </BlurFade>

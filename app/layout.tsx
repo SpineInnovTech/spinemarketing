@@ -1,12 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 
 import { FirebaseAnalytics } from "@/components/firebase-analytics"
 import { absoluteUrl, publicSiteUrl } from "@/lib/site-url"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+// Display face for hero headlines only; body/nav/buttons stay Inter. Self-hosted
+// by next/font, so no runtime Google call and the CSP is unaffected.
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+  variable: "--font-jakarta",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(publicSiteUrl),
@@ -71,7 +79,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} overflow-x-clip bg-white text-[#181818] antialiased`} suppressHydrationWarning>
+      <body className={`${inter.className} ${plusJakarta.variable} overflow-x-clip bg-white text-[#181818] antialiased`} suppressHydrationWarning>
         {children}
         <FirebaseAnalytics />
       </body>

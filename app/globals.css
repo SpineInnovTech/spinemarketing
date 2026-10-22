@@ -86,6 +86,7 @@ html[data-theme="light"] {
 
 @theme inline {
   --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-display: var(--font-jakarta), "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
   --color-background: rgb(var(--background));
   --color-foreground: rgb(var(--foreground));
