@@ -4,18 +4,18 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FinalCTA } from "@/components/final-cta";
 import { ResourcesContent } from "./content";
-import { ResourcesScroll } from "./sticky-sections";
 import { BreadcrumbJsonLd } from "@/components/structured-data";
 
 export const metadata: Metadata = {
-  title: "Resources | Spine InnovTech",
+  title: { absolute: "Resources | Spine InnovTech" },
   description:
-    "Guides, use cases, and tools to help you get the most from SpineWorkspace.",
+    "Perspectives, our technology approach and demonstrations from Spine InnovTech. Detailed product guides and getting started live on the product website.",
   alternates: { canonical: "/resources" },
   openGraph: {
     title: "Resources | Spine InnovTech",
-    description: "Guides, use cases, and tools to help you get the most from SpineWorkspace.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    description:
+      "Perspectives, our technology approach and demonstrations from Spine InnovTech. Detailed product guides and getting started live on the product website.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 };
 
@@ -29,7 +29,6 @@ export default function ResourcesPage() {
       <Header />
       <main id="main">
         <ResourcesContent />
-        <ResourcesScroll />
         <FinalCTA />
       </main>
       <Footer />
