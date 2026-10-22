@@ -54,8 +54,9 @@ function localPath(href, source) {
   return path;
 }
 // Home reachability is computed from "/" alone and the gate is STRICT for every
-// route: no route is exempt. The footer bottom bar links the site directory
-// ("Site map" -> /site-map), so /resources and the directory-only pages are
+// route: no route is exempt. /portfolio and /resources are now direct footer
+// links (Technology and Perspectives groups); the footer bottom bar also links
+// the site directory ("Site map" -> /site-map), so the directory-only pages are
 // reachable through it, and every master route is reachable through the header
 // and footer groups. If any public page is still unreachable, the gate fails
 // and the unreachable route is reported (conductor decision: add the footer
@@ -184,8 +185,9 @@ console.log(
 
 // --- Shared corporate footer proof -------------------------------------------
 // Every indexable corporate route must render the ONE shared footer: the exact
-// four groups and eleven links from the Final Content Master (00. Shared Site
-// Content › Footer), in order, plus the brand statement, closing line and
+// four groups and thirteen links from the Final Content Master (00. Shared Site
+// Content › Footer) as extended by the user's 22 Oct 2026 request (Technology
+// portfolio, Resources), in order, plus the brand statement, closing line and
 // verbatim copyright, and the legal links that correspond to a complete policy
 // Legal links shown only when a complete published policy page exists. /cookies
 // has no page on main, so "Cookie notice" is intentionally absent.
@@ -209,6 +211,7 @@ const EXPECTED_FOOTER_GROUPS = [
     { label: "Trust & governance", href: "/trust" },
     { label: "Responsible AI", href: "/responsible-ai" },
     { label: "Partnerships", href: "/partners" },
+    { label: "Technology portfolio", href: "/portfolio" },
   ] },
   { heading: "Product", links: [
     { label: "About SpineWorkspace", href: "/spine-workspace" },
@@ -216,6 +219,7 @@ const EXPECTED_FOOTER_GROUPS = [
   ] },
   { heading: "Perspectives", links: [
     { label: "Insights", href: "/insights" },
+    { label: "Resources", href: "/resources" },
   ] },
 ];
 const FOOTER_BRAND_STATEMENT = "We build the foundation for connected business work.";
@@ -229,9 +233,9 @@ const SHARED_FOOTER_UTILITY_LINKS = [
 ];
 // Links the master forbids inside the footer: a stray one is a drift
 // regression. /site-map is NOT forbidden — it is the sanctioned bottom-bar
-// utility link that keeps the directory reachable; /resources stays forbidden
-// (it is reachable via the directory, not the footer).
-const FOOTER_FORBIDDEN_HREFS = ["/blog", "/resources", "/login", "/pricing"];
+// utility link that keeps the directory reachable. /resources is NOT forbidden
+// — the user's 22 Oct request surfaces it as a direct Perspectives link.
+const FOOTER_FORBIDDEN_HREFS = ["/blog", "/login", "/pricing"];
 
 const HTML_ENTITIES = {
   "&amp;": "&",
@@ -385,5 +389,5 @@ if (footerFailures.length) {
   throw new Error(`Shared footer not consistent across routes:\n  ${footerFailures.join("\n  ")}`);
 }
 console.log(
-  `Shared footer verified on ${footerChecked} indexable routes (${footerSkipped} without the shared footer skipped): exact 11 links + 2 legal links + brand/closing/copyright.`,
+  `Shared footer verified on ${footerChecked} indexable routes (${footerSkipped} without the shared footer skipped): exact 13 links + 2 legal links + brand/closing/copyright.`,
 );
