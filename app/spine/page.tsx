@@ -7,14 +7,15 @@ import { SpineContent } from "./content"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Spine & Intelligence | Spine InnovTech",
+  title: "Spine — The foundation for connected business work | Spine InnovTech",
   description:
-    "SpineWorkspace: the shared contextual layer under your business. Unifies every app. AI reasons with evidence. You approve.",
+    "Spine is the foundation Spine InnovTech builds so humans and AI can share one governed view of the business, while existing tools keep the record.",
   alternates: { canonical: "/spine" },
   openGraph: {
-    title: "Spine & Intelligence | Spine InnovTech",
-    description: "SpineWorkspace: the shared contextual layer under your business. Unifies every app. AI reasons with evidence. You approve.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    title: "Spine — The foundation for connected business work | Spine InnovTech",
+    description:
+      "Spine is the foundation Spine InnovTech builds so humans and AI can share one governed view of the business, while existing tools keep the record.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 
@@ -23,7 +24,7 @@ export default function SpinePage() {
     <div className="min-h-screen bg-white">
       <BreadcrumbJsonLd items={[
         { name: "Home", url: absoluteUrl("/") },
-        { name: "Spine & Intelligence", url: absoluteUrl("/spine") },
+        { name: "Spine", url: absoluteUrl("/spine") },
       ]} />
       <Header />
       <main id="main">

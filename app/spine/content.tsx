@@ -1,275 +1,111 @@
-"use client";
+import Link from "next/link"
+import { ArrowRight, Network, Waypoints } from "lucide-react"
+import { PageHero } from "@/components/marketing/page-hero"
+import { Section, SectionHeader } from "@/components/marketing/section"
 
-import { motion } from "framer-motion";
-import {
-  Database,
-  MessageSquare,
-  FileText,
-  GitMerge,
-  Lock,
-  Eye,
-  Brain,
-  CheckSquare,
-  History,
-  Zap,
-} from "lucide-react";
+const responsibilities = [
+  {
+    title: "Business context",
+    body: "Relate authorized records, evidence, goals, decisions and outcomes while preserving their sources and meaning.",
+  },
+  {
+    title: "Human and AI collaboration",
+    body: "Give people and AI context relevant to their responsibilities, so they can investigate and prepare work from a consistent understanding.",
+  },
+  {
+    title: "Explicit authority",
+    body: "Separate what a connected system can do from what a particular person or AI is permitted to do. Keep consequential actions tied to human decisions.",
+  },
+  {
+    title: "Work continuity",
+    body: "Carry evidence, decisions, ownership and progress forward across handoffs and compatible environments, within the receiving environment's permissions.",
+  },
+]
 
-const spineCapabilities = [
+const paths = [
   {
-    icon: Database,
-    title: "Structured data flows",
-    desc: "CRM, billing, support, and usage data flowing into SpineWorkspace.",
+    icon: Network,
+    eyebrow: "The technical detail",
+    title: "Spine Fabric",
+    body: "How the foundation relates authorized records, evidence and decisions across the systems a business already uses, while source systems stay authoritative.",
+    href: "/platform/spine-fabric",
+    cta: "Explore Spine Fabric",
   },
   {
-    icon: MessageSquare,
-    title: "Unstructured context",
-    desc: "Emails, transcripts, and conversations indexed alongside records.",
+    icon: Waypoints,
+    eyebrow: "The AI counterpart",
+    title: "Spine Twin",
+    body: "A context-aware AI counterpart that investigates, prepares work and proposes next steps, while consequential actions wait for a person's approval.",
+    href: "/twin",
+    cta: "Meet Spine Twin",
   },
-  {
-    icon: FileText,
-    title: "Session Summaries",
-    desc: "Auditable AI outputs stored as first-class data.",
-  },
-  {
-    icon: GitMerge,
-    title: "Entity-level unification",
-    desc: "Every data point linked to the right entity across apps.",
-  },
-];
-
-const hitlSteps = [
-  {
-    label: "Signal detected",
-    desc: "Cross-system pattern surfaces from SpineWorkspace.",
-  },
-  {
-    label: "AI reasons with evidence",
-    desc: "The record, the evidence, and the other options.",
-  },
-  {
-    label: "Surfaced in the Twin",
-    desc: "Recommendation appears with complete evidence trail.",
-  },
-  {
-    label: "You approve",
-    desc: "Nothing executes until you approve. Review is structural.",
-  },
-  {
-    label: "Action executes in the Workspace",
-    desc: "Approved actions execute and Session Summary is logged.",
-  },
-];
-
-const differentiators = [
-  {
-    icon: Lock,
-    title: "Vendor-neutral",
-    desc: "Sits above your apps — reasons across all of them.",
-  },
-  {
-    icon: Eye,
-    title: "Adaptive",
-    desc: "Adapts as your stack changes. Context keeps accumulating.",
-  },
-  {
-    icon: Brain,
-    title: "Evidence-first",
-    desc: "Every AI output tied to its source data.",
-  },
-  {
-    icon: CheckSquare,
-    title: "A person decides",
-    desc: "Review cannot be bypassed by any workflow or API.",
-  },
-  {
-    icon: History,
-    title: "Permanent audit",
-    desc: "Every action and approval logged immutably.",
-  },
-  {
-    icon: Zap,
-    title: "The view for this role",
-    desc: "Sales, operations, and leadership see the same work in the view they need.",
-  },
-];
+]
 
 export function SpineContent() {
   return (
     <>
-      {/* Hero */}
-      <section
-        className="marketing-surface relative overflow-hidden pb-24 pt-40 bg-white"
-      >
-        <div className="mx-auto max-w-[800px] px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", damping: 20, stiffness: 80 }}
-            className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[13px] font-semibold text-white/60"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Spine &amp; Intelligence
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", damping: 18, stiffness: 70, delay: 0.15 }}
-            className="text-[length:min(48px,var(--marketing-title-size))] font-semibold leading-[1.1] tracking-[-0.05em] text-white sm:text-[length:min(64px,var(--marketing-title-size))]"
-          >
-            The intelligence layer{" "}
-            <span className="text-primary">above your apps.</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", damping: 16, stiffness: 52, delay: 0.35 }}
-            className="mx-auto mt-8 max-w-2xl text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.5] tracking-[-0.02em] text-white/55"
-          >
-            A vendor-neutral layer unifying records, conversations, and AI outputs — every action waits for human approval.
-          </motion.p>
-        </div>
-      </section>
+      <PageHero
+        tone="ice"
+        badge="Our technology foundation"
+        headline={"A foundation for shared\nbusiness understanding."}
+        subhead="Spine is the foundation Spine InnovTech builds so humans and AI can share one governed view of the business, while existing tools keep the record. This page is a short introduction; the detail lives on the pages it links to."
+        primaryCta={{ label: "See the technical detail", href: "/platform/spine-fabric" }}
+        secondaryCta={{ label: "Meet the AI counterpart", href: "/twin" }}
+      />
 
-      {/* What SpineWorkspace does */}
-      <section className="arvio-section marketing-surface">
-        <div className="mx-auto max-w-[1100px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            className="mx-auto max-w-2xl text-center"
-          >
-            <h2 className="section-heading">
-              Three flows.{" "}
-              <span className="text-primary">One unified truth.</span>
-            </h2>
-            <p className="section-subheading mt-4">
-              Truth, Context, and Session Summaries unified into one intelligence layer.
-            </p>
-          </motion.div>
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {spineCapabilities.map(({ icon: Icon, title, desc }, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6, delay: i * 0.08 }}
-                className="arvio-card p-6"
-              >
-                <div
-                  className="flex h-10 w-10 items-center justify-center rounded-lg"
-                  style={{ background: "var(--gradient-primary-icon)" }}
-                >
-                  <Icon className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="mt-4 text-[16px] font-semibold tracking-[-0.03em]">
-                  {title}
-                </h3>
-                <p className="mt-2 text-[14px] font-medium leading-[1.6] text-muted-foreground">
-                  {desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+      <Section variant="muted">
+        <SectionHeader
+          align="left"
+          label="What the foundation keeps connected"
+          headline="Four responsibilities business work needs to keep together."
+          body="Our engineering brings these together so understanding, judgment and continuity stay connected around the systems an organization already uses."
+        />
+        <div className="grid gap-4 md:grid-cols-2">
+          {responsibilities.map((item) => (
+            <article key={item.title} className="rounded-[24px] border border-[#D7E4F3] bg-white p-8 shadow-[0_20px_45px_-40px_rgba(10,38,87,.4)]">
+              <h2 className="text-[length:min(22px,var(--marketing-card-size))] font-semibold leading-[1.25] tracking-[-.03em] text-[#13365F]">{item.title}</h2>
+              <p className="mt-4 text-[15px] leading-[1.9] text-[#576C86]">{item.body}</p>
+            </article>
+          ))}
         </div>
-      </section>
+      </Section>
 
-      {/* a person flow */}
-      <section
-        className="arvio-section marketing-surface bg-white"
-      >
-        <div className="mx-auto max-w-[1100px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            className="mx-auto max-w-2xl text-center"
-          >
-            <h2 className="text-[length:min(40px,var(--marketing-heading-size))] font-semibold tracking-[-0.05em] leading-[1.15] text-white sm:text-[length:min(48px,var(--marketing-heading-size))]">
-              Human-in-the-loop is{" "}
-              <span className="text-primary">not a setting.</span>
-            </h2>
-            <p className="mt-4 text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.5] text-white/55">
-              The Review is built into the execution path. Nothing bypasses it.
-            </p>
-          </motion.div>
-          <div className="relative mx-auto mt-16 max-w-3xl">
-            {hitlSteps.map(({ label, desc }, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -16 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6, delay: i * 0.1 }}
-                className="relative mb-8 flex gap-6 last:mb-0"
-              >
-                <div className="flex flex-col items-center">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-[13px] font-bold text-white">
-                    {i + 1}
-                  </div>
-                  {i < hitlSteps.length - 1 && (
-                    <div className="mt-2 h-full w-px bg-white/10" />
-                  )}
-                </div>
-                <div className="pb-2">
-                  <h3 className="text-[16px] font-semibold tracking-[-0.03em] text-white">
-                    {label}
-                  </h3>
-                  <p className="mt-1.5 text-[14px] font-medium leading-[1.6] text-white/45">
-                    {desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+      <Section>
+        <SectionHeader
+          align="left"
+          label="One clear path"
+          headline="Where to go for the detail."
+          body="Spine is one foundation, not three products. These two pages explain how it works and the AI counterpart that works within it."
+        />
+        <div className="grid gap-5 md:grid-cols-2">
+          {paths.map(({ icon: Icon, eyebrow, title, body, href, cta }) => (
+            <article key={title} className="flex flex-col rounded-[26px] border border-[#D8E4F3] bg-white p-8 transition-colors hover:border-[#A0BDEA] sm:p-10">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#E8F2FF] text-[#235EAE]"><Icon className="h-6 w-6" aria-hidden /></span>
+              <p className="mt-8 text-xs font-semibold uppercase tracking-[.2em] text-[#386DA9]">{eyebrow}</p>
+              <h2 className="mt-4 text-[length:min(28px,var(--marketing-heading-size))] font-semibold tracking-[-.04em] text-[#112F59]">{title}</h2>
+              <p className="mt-5 flex-1 text-[16px] leading-[1.85] text-[#536A85]">{body}</p>
+              <Link href={href} className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#1E5EA8] hover:underline">{cta} <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+            </article>
+          ))}
         </div>
-      </section>
+      </Section>
 
-      {/* Differentiators */}
-      <section className="arvio-section marketing-surface">
-        <div className="mx-auto max-w-[1100px]">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            className="mx-auto max-w-2xl text-center"
-          >
-            <h2 className="section-heading">
-              What makes SpineWorkspace{" "}
-              <span className="text-primary">different</span>
-            </h2>
-          </motion.div>
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {differentiators.map(({ icon: Icon, title, desc }, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6, delay: i * 0.07 }}
-                className="arvio-card p-6"
-              >
-                <div
-                  className="flex h-10 w-10 items-center justify-center rounded-lg"
-                  style={{ background: "var(--gradient-primary-icon)" }}
-                >
-                  <Icon className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="mt-4 text-[16px] font-semibold tracking-[-0.03em]">
-                  {title}
-                </h3>
-                <p className="mt-2 text-[14px] font-medium leading-[1.6] text-muted-foreground">
-                  {desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+      <Section variant="muted">
+        <SectionHeader
+          align="left"
+          label="Keep exploring"
+          headline="See the foundation across our work."
+          body="The technology overview sets the whole architecture in context; the portfolio shows how the pieces fit around SpineWorkspace."
+        />
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <Link href="/platform" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white transition hover:bg-[#0055B8]">
+            Technology overview <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+          <Link href="/portfolio" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">
+            See the portfolio <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
+          </Link>
         </div>
-      </section>
+      </Section>
     </>
-  );
+  )
 }
