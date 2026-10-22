@@ -226,16 +226,20 @@ function decodeEntities(text) {
   // Decode the handful of HTML entities Next emits in our own built markup so a
   // plain-text master label ("Trust & governance") matches rendered
   // "Trust &amp; governance". Reads our own built HTML, not user input.
+  // The ampersand entities (&amp; / &#38;) are decoded LAST: decoding them
+  // first could turn an already-escaped sequence like "&amp;lt;" into "&lt;"
+  // and then into "<" (double-unescaping). Decoding every other entity first,
+  // then the ampersand, makes each entity decode exactly once.
   return text
-    .replace(/&amp;/g, "&")
-    .replace(/&#38;/g, "&")
     .replace(/&copy;/g, "©")
     .replace(/&#169;/g, "©")
     .replace(/&nbsp;/g, " ")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">");
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/&#38;/g, "&");
 }
 
 function normaliseText(html) {
