@@ -6,6 +6,7 @@ import { FinalCTA } from "@/components/final-cta"
 import { PlatformHubIntro } from "./hub"
 import { PlatformFAQ } from "./faq"
 import { PlatformStickyScroll } from "./sticky-sections"
+import { TechnologyDetailLinks } from "./technology-detail-links"
 import { BreadcrumbJsonLd, SoftwareApplicationJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function PlatformPage() {
       <main id="main">
         <PlatformHubIntro />
         <PlatformStickyScroll />
+        <TechnologyDetailLinks />
         <PlatformFAQ />
         <FinalCTA />
       </main>

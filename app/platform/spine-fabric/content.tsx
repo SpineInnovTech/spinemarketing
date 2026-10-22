@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Database, GitBranch, History, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ArrowUpRight, Database, GitBranch, History, ShieldCheck } from "lucide-react";
 import { PageHero } from "@/components/marketing/page-hero";
 import { Section, SectionHeader } from "@/components/marketing/section";
 
@@ -22,11 +23,12 @@ export function SpineFabricContent() {
   return (
     <>
       <PageHero
-        badge="Spine Fabric · Core technology"
+        tone="ice"
+        badge="Spine Fabric · The contextual foundation"
         headline="A business is more than its records."
-        subhead="Spine Fabric is the contextual foundation behind SpineWorkspace. It represents how people, goals, records, evidence, decisions and work relate across the tools your business uses."
-        primaryCta={{ label: "Explore the architecture", href: "/platform" }}
-        secondaryCta={{ label: "Discover SpineWorkspace", href: "/product" }}
+        subhead="Spine Fabric is the contextual foundation behind our work. It relates how people, goals, records, evidence, decisions and work connect across the tools a business already uses, while those tools keep the record."
+        primaryCta={{ label: "Technology overview", href: "/platform" }}
+        secondaryCta={{ label: "Explore SpineWorkspace", href: "https://spineworkspace.com" }}
         art={
           <figure>
             <Image src="/images/corporate-architecture.png" width={1774} height={887} priority alt="Concept illustration of Fabric, Workbench, Twin and Runtime within one connected business architecture" className="h-auto w-full rounded-xl" />
@@ -40,7 +42,7 @@ export function SpineFabricContent() {
           {foundations.map(({ icon: Icon, title, body }) => (
             <article key={title} className="rounded-2xl border border-[#D6E8F8] bg-white p-7">
               <Icon className="mb-5 h-7 w-7 text-[#006FE8]" aria-hidden />
-              <h3 className="text-[length:min(1.25rem,var(--marketing-card-size))]/[var(--tw-leading,1.4)] font-semibold text-[#082B5E]">{title}</h3>
+              <h2 className="text-[length:min(1.25rem,var(--marketing-card-size))]/[var(--tw-leading,1.4)] font-semibold text-[#082B5E]">{title}</h2>
               <p className="mt-3 text-[15px] leading-relaxed text-[#4E607A]">{body}</p>
             </article>
           ))}
@@ -52,7 +54,7 @@ export function SpineFabricContent() {
           {examples.map(({ title, context, detail }) => (
             <article key={title} className="rounded-2xl border border-[#D6E8F8] bg-[#F0F8FF] p-7">
               <p className="text-xs font-bold uppercase tracking-wider text-[#0055B8]">{title}</p>
-              <h3 className="mt-4 text-[length:min(1.25rem,var(--marketing-card-size))]/[var(--tw-leading,1.4)] font-semibold text-[#082B5E]">{context}</h3>
+              <h2 className="mt-4 text-[length:min(1.25rem,var(--marketing-card-size))]/[var(--tw-leading,1.4)] font-semibold text-[#082B5E]">{context}</h2>
               <p className="mt-3 text-[15px] leading-relaxed text-[#4E607A]">{detail}</p>
             </article>
           ))}
@@ -64,16 +66,33 @@ export function SpineFabricContent() {
           {[
             ["Connect", "Read the relevant records, events, documents and conversations through authorized connections."],
             ["Relate", "Link information to the right people, entities, goals and work, retaining its source and history."],
-            ["Understand", "Bring the permitted context into Workbench and Twin so people can review a situation and prepare options."],
+            ["Understand", "Bring the permitted context into shared surfaces so people can review a situation and prepare options."],
             ["Continue", "Carry decisions and observed results forward while governed actions remain subject to the appropriate authority."],
           ].map(([title, body], i) => (
             <li key={title} className="rounded-2xl border border-[#D6E8F8] bg-white p-7">
               <p className="text-xs font-bold text-[#0055B8]">0{i + 1}</p>
-              <h3 className="mt-3 text-[length:min(1.25rem,var(--marketing-card-size))]/[var(--tw-leading,1.4)] font-semibold text-[#082B5E]">{title}</h3>
+              <h2 className="mt-3 text-[length:min(1.25rem,var(--marketing-card-size))]/[var(--tw-leading,1.4)] font-semibold text-[#082B5E]">{title}</h2>
               <p className="mt-3 text-[15px] leading-relaxed text-[#4E607A]">{body}</p>
             </li>
           ))}
         </ol>
+      </Section>
+      <Section>
+        <SectionHeader align="left" label="Keep exploring" headline="See how the foundation fits together." body="Spine Fabric is the detail behind the foundation. Start from the introduction, meet the AI counterpart, or step back to the full architecture." />
+        <div className="flex flex-wrap gap-3">
+          <Link href="/spine" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">
+            Spine, in brief <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
+          </Link>
+          <Link href="/twin" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">
+            Meet Spine Twin <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
+          </Link>
+          <Link href="/platform" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white transition hover:bg-[#0055B8]">
+            Technology overview <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+          <Link href="/portfolio" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">
+            See the portfolio <ArrowUpRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
+          </Link>
+        </div>
       </Section>
     </>
   );

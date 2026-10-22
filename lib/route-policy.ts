@@ -111,7 +111,12 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
   {
     path: "/spine",
     action: "keep",
-    reason: "Buyer introduction to Spine Fabric. Distinct from /business-context and /platform/spine-fabric.",
+    reason: "Corporate introduction to the Spine foundation. Short overview that links to /platform/spine-fabric for detail and /twin for the AI counterpart.",
+  },
+  {
+    path: "/twin",
+    action: "keep",
+    reason: "Corporate technology page for Spine Twin: context-aware AI within human authority. Links /trust and /responsible-ai.",
   },
   {
     path: "/business-context",
@@ -121,7 +126,7 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
   {
     path: "/platform/spine-fabric",
     action: "keep",
-    reason: "Technical Spine Fabric page. Distinct from the buyer /spine and /business-context pages.",
+    reason: "Corporate technology detail page for Spine Fabric: the contextual foundation. Source systems stay authoritative. Linked from /spine and /portfolio.",
   },
   {
     path: "/account-success",
