@@ -1,6 +1,6 @@
 /**
  * Sitemap and static-host alias policy.
- * Redirects here must match firebase.json (single hop, permanent).
+ * Redirects here must match public/_redirects (Cloudflare Workers Assets; single hop, permanent).
  * Reasons are the record for every excluded or redirected route.
  */
 
