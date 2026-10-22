@@ -202,13 +202,10 @@ registerTest(1, 1, "F1.4", "wrangler.jsonc binds only spineinnovtech.com product
   // Legacy hosts are handled by passive LEGACY_REDIRECT_HOSTS + worker redirect
   // source, never by binding this worker to an old custom domain.
   const allowed = new Set(["spineinnovtech.com", "www.spineinnovtech.com"]);
+  assert.ok(patterns.length > 0, "Production must bind at least the canonical spineinnovtech.com domain");
   for (const pattern of patterns) {
-    assert.ok(allowed.has(pattern), "Production must not bind non-spineinnovtech.com host: " + pattern);
+    assert.ok(allowed.has(pattern), "Production must bind only spineinnovtech.com hosts; found non-allowed binding: " + pattern);
   }
-  assert.ok(
-    !patterns.some((p) => p.includes("spineworkspace.com") || p.includes("spineinnovlabs")),
-    "Production must not retain legacy spineworkspace.com / spineinnovlabs custom-domain bindings",
-  );
 });
 
 registerTest(1, 1, "F1.5", "wrangler.jsonc routes follow clean hostname format", async () => {
