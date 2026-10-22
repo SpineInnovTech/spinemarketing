@@ -5,7 +5,7 @@ import { Section, SectionHeader } from "@/components/marketing/section";
 const arrivals = [
   {
     title: "The record",
-    body: "Customers, tickets, billing, contracts, and approvals stay in the tools that already own them. Spine Workspace reads them. It does not become a second record.",
+    body: "Customers, tickets, billing, contracts, and approvals stay in the tools that already own them. SpineWorkspace reads them. It does not become a second record.",
   },
   {
     title: "The evidence",
@@ -62,7 +62,7 @@ export function PlatformHowItWorksContent() {
         tone="ice"
         headline={"The tools keep the record.\nThe workspace shows the work."}
         subhead="People and Twin work from permitted business context. Twin helps investigate and prepare; consequential actions need the appropriate authority. Source systems retain their authoritative roles."
-        principle="Spine Workspace does not replace truth. Source systems stay authoritative."
+        principle="SpineWorkspace does not replace truth. Source systems stay authoritative."
         primaryCta={{ label: "See a workflow", href: "/product#how-it-works" }}
         secondaryCta={{ label: "Book a tailored demo", href: "/contact?intent=demo" }}
       />
@@ -71,7 +71,7 @@ export function PlatformHowItWorksContent() {
           align="left"
           label="What comes in"
           headline="Four things arrive. They are not the same thing."
-          body="A customer status, a last email, a suggested follow-up, and a person’s permission answer different questions. Spine Workspace keeps them apart."
+          body="A customer status, a last email, a suggested follow-up, and a person’s permission answer different questions. SpineWorkspace keeps them apart."
         />
         <ul className="grid gap-4 md:grid-cols-2">
           {arrivals.map((item) => (

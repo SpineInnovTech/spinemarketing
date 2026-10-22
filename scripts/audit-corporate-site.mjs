@@ -77,7 +77,7 @@ const form = source("components/lead-form.tsx");
 check(home.includes("InnovLabsHome"), "corporate homepage component not wired");
 check(banner.includes("SPINE INNOVTECH") && banner.includes("We build the foundation for connected business work."), "company identity and product introduction absent");
 check(source("components/header.tsx").includes("headerNavigation"), "header must render the full corporate navigation");
-for (const label of ["Company", "Platform & Products", "Insights"]) {
+for (const label of ["Company", "Technology", "Insights"]) {
   check(source("lib/navigation.ts").includes(`label: "${label}"`), `missing corporate navigation category: ${label}`);
 }
 check(source("lib/solution-nav.ts").includes("marketingPathForSolution") && !source("lib/solution-nav.ts").includes("workspaceUrl"), "solution navigation must point to local marketing detail pages");
@@ -94,24 +94,43 @@ check(!services.includes("14 days") && services.includes("text-white"), "service
 check(!contact.includes("SOC 2 aligned") && !contact.includes("24 hours") && !contact.includes("1–2 weeks"), "contact has unsupported guarantees");
 check(form.includes('setStatus("prepared")') && form.includes("has not submitted it"), "mailto fallback must never claim a received enquiry");
 check(privacy.includes("Privacy Policy") && terms.includes("Terms"), "legal pages must exist");
-check(source("app/pricing/page.tsx").includes('href="/product"'), "corporate pricing must link to the local product-details page");
+const pricing = source("app/pricing/page.tsx");
+const workerSource = source("worker/index.ts");
+check(pricing.includes("https://spineworkspace.com/pricing"), "corporate /pricing must redirect to the product pricing page");
+check(/status:\s*308/.test(workerSource) && workerSource.includes("maybePricingRedirect"), "worker must issue a permanent 308 redirect for /pricing to the product site");
+check(!/\$\d+\s*\/\s*(seat|user|tool|stream|month)/i.test(pricing) && !/checkout|Register Free Account|signup/i.test(pricing), "corporate pricing page must not expose plans, checkout or product signup");
 check(source("app/portfolio/page.tsx").includes("not a list of separately purchasable products"), "portfolio must clarify capability architecture");
 check(existsSync("public/og.png") && existsSync("public/icon.svg"), "social and brand assets missing");
 
-// Unified seven-step story: required proof + action, and two-word product brand.
+// Origin story: the $8M renewal is PRIOR FOUNDER EXPERIENCE, not a product result.
 const aboutPage = source("app/about/page.tsx");
 const aboutProof = source("app/about/sticky-sections.tsx");
-check(aboutPage.includes("AboutJourneyScroll"), "About/Our story must render the founder proof (seven-step: the proof)");
-check(aboutProof.includes("$8M") && aboutProof.includes("MuleSoft") && aboutProof.includes("Salesforce") && aboutProof.includes("governed shared context"), "About proof must tell the $8M renewal outcome with authorized Slack/email/MuleSoft/Salesforce context");
-check(banner.includes("Explore Spine Workspace") && banner.includes('href="/proof"'), "homepage must offer the action CTA (Explore Spine Workspace) and a path to the proof");
-for (const [label, text] of [["homepage", banner], ["footer", footer], ["about", about], ["company", source("app/company/page.tsx")]]) {
-  check(!/\bSpineWorkspace\b/.test(text), `visitor copy must use two-word 'Spine Workspace' on ${label}`);
-}
+check(aboutPage.includes("AboutJourneyScroll"), "About/Our story must render the founder origin story");
+check(aboutProof.includes("$8M") && aboutProof.includes("MuleSoft") && aboutProof.includes("Salesforce"), "About origin must tell the $8M renewal with authorized Slack/email/MuleSoft/Salesforce context");
+check(/Before founding Spine InnovTech/.test(aboutProof) && /not a SpineWorkspace customer result/i.test(aboutProof), "About $8M must be framed as prior founder experience, not a SpineWorkspace customer result/testimonial/ROI");
+check(banner.includes("Explore SpineWorkspace") && banner.includes('href="/proof"'), "homepage must offer the action CTA (Explore SpineWorkspace, one word) and a path to the proof");
 
+// Product brand is ONE WORD in visitor copy everywhere. Company is 'Spine InnovTech'.
+const brandSources = [
+  ["homepage", banner],
+  ["footer", footer],
+  ["about-content", about],
+  ["about-origin", aboutProof],
+  ["company", source("app/company/page.tsx")],
+  ["header", source("components/header.tsx")],
+  ["navigation", source("lib/navigation.ts")],
+  ["contact", contact],
+];
+for (const [label, text] of brandSources) {
+  check(!/\bSpine Workspace\b/.test(text), `visitor copy must use one-word 'SpineWorkspace' on ${label}`);
+}
+// Branding must be consistent across EVERY public corporate route source,
+// including solution, use-case and campaign pages. URLs and code identifiers
+// never contain the two-word form (no space), so a match is always visitor copy.
 for (const file of routeFiles) {
   const content = source(file);
-  if (/title:\s*["'][^"'\n]*\| SpineWorkspace/.test(content)) {
-    errors.push(`outdated compact product branding in title: ${file}`);
+  if (/\bSpine Workspace\b/.test(content)) {
+    errors.push(`outdated two-word product brand in route source: ${file}`);
   }
 }
 warnings.push("Privacy/terms: require legal review of controller identity, commitments, retention and jurisdiction.");

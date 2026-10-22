@@ -49,7 +49,7 @@ const painItems = [
 ];
 
 const answerNodes = [
-  { label: "Spine Workspace", icon: Layers, color: "#0176D3" },
+  { label: "SpineWorkspace", icon: Layers, color: "#0176D3" },
   { label: "Workspace", icon: Brain, color: "#3b82f6" },
   { label: "Twin", icon: Zap, color: "#8b5cf6" },
   { label: "Review", icon: ShieldCheck, color: "#f59e0b" },
@@ -70,9 +70,9 @@ export function WhyPainScroll() {
 export function WhyAnswerGather() {
   return (
     <StickyGather
-      tag="The Spine Workspace Answer"
+      tag="The SpineWorkspace Answer"
       heading="Six capabilities. One governed workspace."
-      centerLabel="Spine Workspace"
+      centerLabel="SpineWorkspace"
       items={answerNodes}
     />
   );

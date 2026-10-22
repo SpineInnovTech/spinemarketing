@@ -2,7 +2,7 @@
  * Authentic Workbench Screenshot Asset Library & 4-Part Value Narrative Metadata.
  * 
  * Provenance:
- * All assets captured directly from the authentic local Spine Workspace Workbench (apps/web)
+ * All assets captured directly from the authentic local SpineWorkspace Workbench (apps/web)
  * running on Next.js 16 with deterministic demonstration fixtures and the canonical WORKBENCH_SHELL.
  * Verified against docs/WORKBENCH-SCREENSHOT-PROVENANCE.md.
  * 

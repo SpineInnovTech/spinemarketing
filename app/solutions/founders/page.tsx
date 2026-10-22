@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Founders & CXOs | Spine InnovTech",
     description: "Monday brief. Revenue movement. Board pack — available in seconds.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

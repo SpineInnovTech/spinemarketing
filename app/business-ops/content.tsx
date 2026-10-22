@@ -265,14 +265,14 @@ function OpsConnectVisual() {
         >
           <Image
             src="/icon.svg"
-            alt="Spine Workspace"
+            alt="SpineWorkspace"
             width={28}
             height={28}
             className="brightness-0 invert"
           />
         </div>
         <span className="text-[11px] font-semibold text-muted-foreground">
-          Spine Workspace
+          SpineWorkspace
         </span>
       </div>
       <div className="flex flex-col gap-6">
@@ -324,7 +324,7 @@ function OpsNormalizeVisual() {
         >
           <Image
             src="/icon.svg"
-            alt="Spine Workspace"
+            alt="SpineWorkspace"
             width={32}
             height={32}
             className="brightness-0 invert"
@@ -547,7 +547,7 @@ const howItWorksSteps: StickyScrollStep[] = [
     visual: <OpsConnectVisual />,
   },
   {
-    label: "Step 02 \u2014 Build Spine Workspace",
+    label: "Step 02 \u2014 Build SpineWorkspace",
     title: "Three data flows. One complete picture.",
     description:
       "Revenue, pipeline, and costs sync as Truth. Context and sessions converge in your Workspace.",
@@ -836,7 +836,7 @@ export function BusinessOpsContent() {
               <span className="text-white/40">a department.</span>
             </h2>
             <p className="mt-4 text-[length:min(17px,var(--marketing-body-size))] font-semibold leading-[1.5] text-primary">
-              Spine Workspace shows you the business.
+              SpineWorkspace shows you the business.
             </p>
           </motion.div>
 
@@ -1040,7 +1040,7 @@ export function BusinessOpsContent() {
           >
             <h2 className="section-heading">
               What Business Ops leaders{" "}
-              <span className="text-primary">do inside Spine Workspace</span>
+              <span className="text-primary">do inside SpineWorkspace</span>
             </h2>
           </motion.div>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">

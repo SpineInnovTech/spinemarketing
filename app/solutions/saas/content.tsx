@@ -31,7 +31,7 @@ export function SaasContent() {
         },
       ]}
       signals={[
-        { label: "Usage telemetry ingested", detail: "Product analytics from Mixpanel, Amplitude, or Segment flow into Spine Workspace automatically." },
+        { label: "Usage telemetry ingested", detail: "Product analytics from Mixpanel, Amplitude, or Segment flow into SpineWorkspace automatically." },
         { label: "Health score calculated", detail: "AI combines logins, feature adoption, support tickets, and payment history into one score." },
         { label: "Risk signal fires", detail: "When usage drops 30% and the champion hasn't replied, you see it in your Signal Center." },
         { label: "Evidence shown, action drafted", detail: "AI shows the exact data behind the alert and drafts the outreach email for you." },

@@ -37,16 +37,16 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-black text-[#002B64] tracking-tight leading-[1.12] mb-3">
+          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-black text-[#002B64] tracking-tight leading-[1.12] mb-3">
             Governing the shared operational context where humans and AI work.
-          </h1>
+          </h2>
 
           <div className="text-xs sm:text-sm leading-relaxed mb-5 text-[#5E728B]">
             <strong className="text-[#0070DC] font-bold block mb-1">
               AI builds the context. Humans stay in control.
             </strong>
             <span>
-              Spine InnovTech builds the foundational data fabric powering Spine Workspace — turning fragmented tools and autonomous AI into unified, trusted execution.
+              Spine InnovTech builds the foundational data fabric powering SpineWorkspace — turning fragmented tools and autonomous AI into unified, trusted execution.
             </span>
           </div>
 
@@ -55,7 +55,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
               href="https://spineworkspace.com"
               className="px-5 py-2.5 rounded-xl bg-[#0070DC] hover:bg-[#005EBB] text-white font-bold text-xs shadow-md shadow-[#0070DC]/20 transition-all flex items-center gap-1.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0070DC]"
             >
-              <span>Explore Spine Workspace Product</span>
+              <span>Explore SpineWorkspace Product</span>
               <ArrowRight className="h-3.5 w-3.5" />
             </a>
             <a
@@ -67,7 +67,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
           </div>
 
           <p className="text-xs text-[#8293A9] font-medium pt-2 border-t border-[#D8E5F0]/60">
-            Parent Company of Spine Workspace · Governed Enterprise Foundation
+            Parent Company of SpineWorkspace · Governed Enterprise Foundation
           </p>
         </div>
 

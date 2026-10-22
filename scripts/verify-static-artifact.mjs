@@ -15,7 +15,7 @@ const redirects = readFileSync("out/_redirects", "utf8")
   .filter(line => line && !line.startsWith("#"))
   .map(line => line.split(/\s+/));
 if (!product.includes("A workspace for connected business work.") || !product.includes('id="features"') || !product.includes('id="how-it-works"')) {
-  throw new Error("Static export missing local Spine Workspace product features.");
+  throw new Error("Static export missing local SpineWorkspace product features.");
 }
 if (redirects.some(([source]) => source.replace(/\/$/, "") === "/product")) {
   throw new Error("Cloudflare asset redirects must not override the local /product page.");
@@ -29,18 +29,20 @@ if (!text.includes("We build the foundation for connected business work.") || !t
 }
 const pricing = readFileSync("out/pricing.html", "utf8");
 const pricingText = pricing.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");
-const pricingSchemas = [...pricing.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
-if (!pricingText.includes("pricing") || !pricingText.includes("Spine Workspace") || !pricing.includes('href="https://spineworkspace.com/pricing"') || !pricing.includes('href="/product"')) {
-  throw new Error("Pricing page must expose commercial terms, link to product pricing calculator, and link to product details.");
+if (!pricing.includes("https://spineworkspace.com/pricing")) {
+  throw new Error("Pricing page must point visitors to the product pricing page at spineworkspace.com/pricing.");
 }
-if (!pricingSchemas.some((schema) => schema["@type"] === "FAQPage" || schema["@type"] === "BreadcrumbList")) {
-  throw new Error("Pricing page must include structured JSON-LD FAQ/Breadcrumb schema.");
+if (!/<meta[^>]+http-equiv="refresh"[^>]+spineworkspace\.com\/pricing/i.test(pricing)) {
+  throw new Error("Pricing fallback page must carry a meta-refresh to the product pricing page (the Worker issues the primary 308).");
+}
+if (/\$\s?\d+\s*(?:\/\s*)?(seat|user|tool|sync|stream|month)/i.test(pricingText) || /\bcheckout\b/i.test(pricingText) || /Register Free Account/i.test(pricing)) {
+  throw new Error("Corporate pricing page must not expose plans, prices, checkout or product signup.");
 }
 for (const [route, html] of [["/product", product]]) {
-  if (!html.includes("https://spineworkspace.com/pricing") && !html.includes('href="/pricing"')) throw new Error(`${route} must expose product pricing navigation.`);
+  if (!html.includes("https://spineworkspace.com")) throw new Error(`${route} must link to the product website.`);
 }
 const header = text.match(/<header\b[\s\S]*?<\/header>/)?.[0] ?? "";
-for (const category of ["Company", "Platform", "Insights"]) {
+for (const category of ["Company", "Technology", "Insights"]) {
   if (!header.includes(category)) throw new Error(`Corporate navigation category missing: ${category}`);
 }
 if (text.includes("Good morning, Operator") || text.includes("Customer Zero")) {

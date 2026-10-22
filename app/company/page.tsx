@@ -7,11 +7,11 @@ import { PageHero } from "@/components/marketing/page-hero";
 
 export const metadata: Metadata = {
   title: "Company — Spine InnovTech",
-  description: "Meet Spine InnovTech, the technology company behind Spine Workspace, and learn why we build for the work between business systems.",
+  description: "Meet Spine InnovTech, the technology company behind SpineWorkspace, and learn why we build for the work between business systems.",
   alternates: { canonical: "/company" },
   openGraph: {
     title: "Company — Spine InnovTech",
-    description: "Meet Spine InnovTech, the technology company behind Spine Workspace, and learn why we build for the work between business systems.",
+    description: "Meet Spine InnovTech, the technology company behind SpineWorkspace, and learn why we build for the work between business systems.",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
@@ -94,7 +94,7 @@ export default function CompanyPage() {
         <section className="bg-white py-24 lg:py-32">
           <div className="mx-auto grid max-w-[1240px] items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
             <div><p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">OUR FLAGSHIP</p><h2 className="mt-5 text-[length:min(clamp(2.6rem,4.5vw,4.7rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.06em]">One foundation, expressed through a working product.</h2></div>
-            <div><p className="text-[length:min(20px,var(--marketing-body-size))] font-medium leading-[1.7] text-[#253F62]">Spine InnovTech is the company behind Spine Workspace.</p><p className="mt-5 text-[16px] leading-[1.85] text-[#556982]">Our technology work centers on business context, governed capabilities and continuity. Spine Workspace brings those ideas together in a shared working environment for people and AI. The company develops the foundation and its engineering principles; the product makes that foundation usable in everyday work.</p><Link href="/product" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#0D2B59] px-6 text-sm font-semibold text-white transition hover:bg-[#2854A0]">Meet Spine Workspace <ArrowUpRight className="h-4 w-4"/></Link></div>
+            <div><p className="text-[length:min(20px,var(--marketing-body-size))] font-medium leading-[1.7] text-[#253F62]">Spine InnovTech is the company behind SpineWorkspace.</p><p className="mt-5 text-[16px] leading-[1.85] text-[#556982]">Our technology work centers on business context, governed capabilities and continuity. SpineWorkspace brings those ideas together in a shared working environment for people and AI. The company develops the foundation and its engineering principles; the product makes that foundation usable in everyday work.</p><Link href="/product" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#0D2B59] px-6 text-sm font-semibold text-white transition hover:bg-[#2854A0]">Meet SpineWorkspace <ArrowUpRight className="h-4 w-4"/></Link></div>
           </div>
         </section>
 

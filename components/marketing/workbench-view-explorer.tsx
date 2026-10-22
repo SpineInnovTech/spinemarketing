@@ -764,7 +764,7 @@ export function WorkbenchViewExplorer({
             >
               <div className="flex items-center gap-2 border-b border-[#D6E8F8] pb-4 text-sm font-semibold">
                 <LayoutDashboard className="h-5 w-5 text-[#006FE8]" aria-hidden="true" />
-                Spine Workspace
+                SpineWorkspace
               </div>
               <p className="mt-5 text-[11px] font-semibold uppercase tracking-[.14em] text-[#577592]">
                 Shared navigation

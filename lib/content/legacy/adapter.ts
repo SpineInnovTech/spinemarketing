@@ -40,7 +40,7 @@ function mapPostToArticle(post: (typeof posts)[number]): Article {
     ...summary,
     content: markdownToPortableText(post.body),
     seo: {
-      title: `${post.title} | Spine Workspace Blog`,
+      title: `${post.title} | SpineWorkspace Blog`,
       description: post.description,
     },
   }

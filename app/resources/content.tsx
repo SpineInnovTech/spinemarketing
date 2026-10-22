@@ -75,7 +75,7 @@ const deepDives = [
   },
   {
     icon: Video,
-    title: "Why Spine Workspace",
+    title: "Why SpineWorkspace",
     desc: "The problem we exist to solve. Signal, context, governance.",
     href: "/about",
   },
@@ -93,7 +93,7 @@ export function ResourcesContent() {
       <PageHero
         badge="Resources"
         headline="Learn, evaluate, adopt."
-        subhead="Guides, playbooks, and architectural deep dives to help you evaluate Spine Workspace."
+        subhead="Guides, playbooks, and architectural deep dives to help you evaluate SpineWorkspace."
         primaryCta={{ label: "Explore use cases", href: "/use-cases" }}
         secondaryCta={{ label: "Documentation", href: DOCS_URL }}
       />

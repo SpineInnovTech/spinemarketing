@@ -99,6 +99,24 @@ const CORPORATE_ENTRY_REDIRECT_PATHS = new Set([
   "/workspace",
 ]);
 
+/**
+ * Pricing and commercial intent is the product site's responsibility. The
+ * corporate /pricing route stays addressable but permanently (308) redirects
+ * to the product pricing page, preserving method and carrying no corporate
+ * pricing, checkout or signup surface. 308 keeps the request method intact and
+ * signals a permanent move to search engines.
+ */
+export function maybePricingRedirect(request: Request): Response | null {
+  const url = new URL(request.url);
+  const normalized = url.pathname.replace(/\/+$/, "") || "/";
+  if (normalized !== "/pricing") return null;
+  const target = new URL("/pricing" + url.search, PRODUCT_SITE_ORIGIN);
+  return new Response(null, {
+    status: 308,
+    headers: { Location: target.toString() },
+  });
+}
+
 export function maybeProductEntryRedirect(request: Request): Response | null {
   const url = new URL(request.url);
   const normalized = url.pathname.replace(/\/+$/, "") || "/";
@@ -120,6 +138,9 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const redirect = maybeCanonicalRedirect(request, env);
     if (redirect) return redirect;
+
+    const pricingRedirect = maybePricingRedirect(request);
+    if (pricingRedirect) return pricingRedirect;
 
     const productEntryRedirect = maybeProductEntryRedirect(request);
     if (productEntryRedirect) return productEntryRedirect;

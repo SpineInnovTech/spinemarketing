@@ -43,7 +43,7 @@ export function ThreeProductPillars({ compact = false }: { compact?: boolean }) 
           One business context. Every domain. Ready for work.
         </h2>
         <p className="mt-5 max-w-[840px] text-[16px] leading-8 text-[#4E607A]">
-          Not an AI wrapper or a new silo. Spine Workspace is a business-context Workbench: one governed Fabric, projected into ready-built operational views for the people and AI doing the work.
+          Not an AI wrapper or a new silo. SpineWorkspace is a business-context Workbench: one governed Fabric, projected into ready-built operational views for the people and AI doing the work.
         </p>
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {pillars.map(({ number, icon: Icon, title, promise, description, proof, href, link }) => (

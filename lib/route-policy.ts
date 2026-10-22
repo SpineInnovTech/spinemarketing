@@ -16,7 +16,7 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     path: "/spineworkspace",
     action: "redirect",
     destination: "/product",
-    reason: "Legacy entry redirects to the local Spine Workspace product-details page.",
+    reason: "Legacy entry redirects to the local SpineWorkspace product-details page.",
   },
   {
     path: "/ai",
@@ -27,7 +27,7 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
   {
     path: "/product",
     action: "keep",
-    reason: "Spine Workspace product details, features, workflow, and technology live on the corporate marketing site.",
+    reason: "SpineWorkspace product details, features, workflow, and technology live on the corporate marketing site.",
   },
   {
     path: "/why",

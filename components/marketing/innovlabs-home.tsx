@@ -27,7 +27,7 @@ export function InnovLabsHome() {
             <BlurFade delay={0.02} inView>
               <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8] shadow-2xs">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · BUILDING THE FOUNDATION FOR CONNECTED WORK</AnimatedShinyText>
+                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · CONNECTED BUSINESS WORK</AnimatedShinyText>
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
@@ -37,11 +37,10 @@ export function InnovLabsHome() {
             </BlurFade>
             <BlurFade delay={0.1} inView>
               <p className={body + " mt-4 max-w-[680px] mx-auto"}>
-                Spine InnovTech develops technology that helps people and AI understand
-                business work through shared, governed context. Our flagship product,
-                Spine Workspace, brings that foundation into a working environment where
-                humans and AI collaborate from authorized information while existing tools
-                remain the systems of record.
+                Spine InnovTech builds the foundation so humans and AI can share
+                one governed view of the business, while existing tools keep the
+                record. Our flagship product, SpineWorkspace, brings that
+                foundation into daily work.
               </p>
             </BlurFade>
             <BlurFade delay={0.14} inView>
@@ -50,7 +49,7 @@ export function InnovLabsHome() {
                   href="https://spineworkspace.com"
                   className={button}
                 >
-                  Explore Spine Workspace <ArrowRight className="h-4 w-4" aria-hidden />
+                  Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
                 <Link href="/company" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF]">
                   Discover our approach

@@ -48,7 +48,7 @@ function CellValue({ value }: { value: boolean | string }) {
 export function ComparisonSection({
   rows = defaultRows,
   heading = "The better way to work.",
-  subheading = "See how Spine Workspace compares to stitching tools together.",
+  subheading = "See how SpineWorkspace compares to stitching tools together.",
 }: {
   rows?: ComparisonRow[];
   heading?: string;
@@ -65,7 +65,7 @@ export function ComparisonSection({
           className="mx-auto mb-12 max-w-2xl text-center"
         >
           <p className="mb-3 text-[12px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">
-            Why Spine Workspace
+            Why SpineWorkspace
           </p>
           <h2 className="text-[length:min(32px,var(--marketing-heading-size))] font-semibold leading-[1.15] tracking-[-0.03em] text-[#032D60] sm:text-[length:min(40px,var(--marketing-heading-size))]">
             {heading}
@@ -87,7 +87,7 @@ export function ComparisonSection({
               Feature
             </span>
             <span className="w-[100px] text-center text-[13px] font-bold text-[#0176D3]">
-              Spine Workspace
+              SpineWorkspace
             </span>
             <span className="w-[100px] text-center text-[13px] font-bold text-[#706E6B]">
               Others

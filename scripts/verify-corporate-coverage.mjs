@@ -36,6 +36,7 @@ const excluded = new Set([
   "/workspace",
   "/onboarding",
   "/request-access",
+  "/pricing",
 ]);
 function localPath(href, source) {
   const url = new URL(href.replaceAll("&amp;", "&"), origin + source);

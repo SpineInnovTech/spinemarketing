@@ -20,7 +20,7 @@ const names: Record<string, string> = {
   "/company": "About Spine InnovTech",
   "/about": "Our story",
   "/platform": "Technology overview",
-  "/product": "Spine Workspace — product details & features",
+  "/product": "SpineWorkspace — product details & features",
   "/platform/spine-fabric": "Spine Fabric — technical overview",
   "/spine": "Spine Fabric — introduction",
   "/twin": "Spine Twin",
@@ -134,8 +134,8 @@ export default async function SiteMapPage() {
         <PageHero
           badge="Explore Spine InnovTech"
           headline="The full website, in one place."
-          subhead="Explore our company, the technology behind Spine Workspace, business solutions, practical use cases, and published thinking."
-          primaryCta={{ label: "Explore Spine Workspace", href: "/product" }}
+          subhead="Explore our company, the technology behind SpineWorkspace, business solutions, practical use cases, and published thinking."
+          primaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
           secondaryCta={{ label: "Contact Spine InnovTech", href: "/contact" }}
         />
         <div className="mx-auto max-w-[1320px] px-5 pb-20 pt-12 sm:px-8 lg:px-12">

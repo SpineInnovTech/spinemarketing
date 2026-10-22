@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Customer Success & Account Managers | Spine InnovTech",
     description: "Save at-risk accounts. Accelerate renewals. Surface expansion signals.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

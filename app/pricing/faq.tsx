@@ -9,7 +9,7 @@ const pricingFAQs = [
   },
   {
     question: "Is there a free trial?",
-    answer: "We offer guided demos where you can see Spine Workspace working with your actual tools and data. Book a demo and we'll walk you through a personalized setup.",
+    answer: "We offer guided demos where you can see SpineWorkspace working with your actual tools and data. Book a demo and we'll walk you through a personalized setup.",
   },
   {
     question: "What counts as a 'connector'?",

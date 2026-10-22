@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/platform/spine-fabric" },
   openGraph: {
     title: "Spine Fabric | Spine InnovTech",
-    description: "Explore the contextual foundation behind Spine Workspace: relationships, provenance, authority and continuity.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    description: "Explore the contextual foundation behind SpineWorkspace: relationships, provenance, authority and continuity.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

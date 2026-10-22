@@ -18,18 +18,32 @@ const fade = (delay = 0) => ({
 
 const contactFAQs = [
   {
-    question: "How do I get pricing?",
-    answer: "Submit a request through our contact form with your expected team size, connectors, and deployment requirements. We provide a transparent written commercial quote tailored to your environment, including workspace seats, connector limits, and dedicated onboarding support.",
+    question: "Where do I get SpineWorkspace pricing?",
+    answer: (
+      <span>
+        Product evaluation, availability, commercial discussions and getting
+        started are handled on the product website. Visit{" "}
+        <a
+          href="https://spineworkspace.com/pricing"
+          className="text-[#0176D3] underline underline-offset-2 hover:text-[#0B5CAB]"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          spineworkspace.com/pricing
+        </a>
+        . This corporate site covers the company, technology approach, partnerships, research and careers.
+      </span>
+    ),
   },
   {
-    question: "Is my data safe with Spine Workspace?",
-    answer: "Spine Workspace is designed around tenant isolation, encrypted connector credential storage, and role-based access control. Access boundaries, authority and the data handling that apply depend on your deployment, connected providers and agreements — contact us to discuss the controls and documentation relevant to your requirements.",
+    question: "Is my data safe with SpineWorkspace?",
+    answer: "SpineWorkspace is designed around tenant isolation, encrypted connector credential storage, and role-based access control. Access boundaries, authority and the data handling that apply depend on your deployment, connected providers and agreements — contact the product team to discuss the controls and documentation relevant to your requirements.",
   },
   {
     question: "Which tools do you connect?",
     answer: (
       <span>
-        Spine Workspace connects across CRM, ERP, project management, code repositories, communication, and document systems. Explore our{" "}
+        SpineWorkspace connects across CRM, ERP, project management, code repositories, communication, and document systems. Explore our{" "}
         <Link href="/platform/integrations" className="text-[#0176D3] underline underline-offset-2 hover:text-[#0B5CAB]">
           integrations catalog
         </Link>
@@ -39,34 +53,34 @@ const contactFAQs = [
   },
   {
     question: "Do I need to replace my current tools?",
-    answer: "No. Spine Workspace is designed around a read-and-propose architecture that complements your existing systems of record. The tools you already use keep the primary record; Spine Twin analyzes context and prepares proposed actions, but any consequential changes require explicit human approval before write-back.",
+    answer: "No. SpineWorkspace is designed around a read-and-propose architecture that complements your existing systems of record. The tools you already use keep the primary record; the Twin analyzes context and prepares proposed actions, but any consequential changes require explicit human approval before write-back.",
   },
   {
-    question: "How long does setup take?",
-    answer: "Setup connects your tools via secure OAuth, maps core business entities, and establishes governance boundaries. The time depends on the connectors and the scope of your environment; contact us to discuss what your deployment would involve.",
+    question: "How does Spine InnovTech relate to SpineWorkspace?",
+    answer: "Spine InnovTech is the company building the foundation for connected business work. SpineWorkspace is its flagship product, where humans and AI share one governed view of the business while existing tools remain the systems of record.",
   },
 ];
 
 const VALID_INTENTS: LeadIntent[] = [
   "contact",
-  "demo",
-  "pricing",
-  "design-partner",
+  "technology",
   "partnership",
-  "media",
-  "careers",
+  "trust",
   "security",
+  "careers",
+  "media",
+  "research",
 ];
 
 function ContactIntentForm({ defaultIntent }: { defaultIntent: LeadIntent }) {
   const searchParams = useSearchParams();
-  const intentFromUrl = searchParams.get("intent");
+  const raw = searchParams.get("topic") ?? searchParams.get("intent");
   const resolvedIntent = useMemo(() => {
-    if (intentFromUrl && VALID_INTENTS.includes(intentFromUrl as LeadIntent)) {
-      return intentFromUrl as LeadIntent;
+    if (raw && VALID_INTENTS.includes(raw as LeadIntent)) {
+      return raw as LeadIntent;
     }
     return defaultIntent;
-  }, [intentFromUrl, defaultIntent]);
+  }, [raw, defaultIntent]);
 
   return <LeadForm defaultIntent={resolvedIntent} />;
 }
@@ -79,11 +93,11 @@ export function ContactContent({
   return (
     <>
       <PageHero
-        badge="Corporate Contact & Inquiry"
-        headline="Talk to Spine InnovTech."
-        subhead="Whether you want a demo, have a question, or want to explore how Spine Workspace fits your existing environment — we're here."
+        badge="Contact Spine InnovTech"
+        headline="Tell us what you are working on."
+        subhead="Contact us about the company, our technology approach, partnerships, research, careers or a potential collaboration. A brief description of the problem or opportunity will help us understand where a conversation could be useful."
         primaryCta={{ label: "Use the form", href: "#contact-form" }}
-        secondaryCta={{ label: "Explore Spine Workspace", href: "/product" }}
+        secondaryCta={{ label: "About SpineWorkspace", href: "/spineworkspace" }}
       />
 
       <section className="border-t border-[#E5E5E5] bg-[#F3F6F9] py-20 px-6 md:px-16">
@@ -92,11 +106,11 @@ export function ContactContent({
             {[
               {
                 icon: MessageSquare,
-                title: "Book a demo",
-                desc: "Discuss Spine Workspace and arrange a relevant product walkthrough.",
-                cta: "Book a demo",
-                href: "/contact?intent=demo",
-                external: false,
+                title: "Evaluate SpineWorkspace",
+                desc: "For product questions, workflow evaluation, availability and getting started, contact the SpineWorkspace team.",
+                cta: "Contact the product team",
+                href: "https://spineworkspace.com/contact",
+                external: true,
               },
               {
                 icon: Mail,

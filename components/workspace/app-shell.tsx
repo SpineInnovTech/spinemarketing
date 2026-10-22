@@ -27,7 +27,7 @@ export function AppShell({
         <aside className="hidden w-[220px] shrink-0 flex-col border-r border-[#E5E5E5] bg-white md:flex">
           <Link href="/" className="flex items-center gap-2 border-b border-[#E5E5E5] px-4 py-4">
             <SpineLogo className="h-7 w-7 text-[#032D60]" />
-            <span className="text-[14px] font-semibold text-[#032D60]">Spine Workspace</span>
+            <span className="text-[14px] font-semibold text-[#032D60]">SpineWorkspace</span>
           </Link>
           <nav className="flex flex-1 flex-col gap-0.5 p-2" aria-label="Workspace">
             {NAV.map((item) =>
@@ -58,7 +58,7 @@ export function AppShell({
         <div className="flex min-w-0 flex-1 flex-col">
           <header className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E5E5E5] bg-white px-4 py-3 md:px-6">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">Spine Workspace</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">SpineWorkspace</p>
               <h1 className="text-[18px] font-semibold text-[#032D60]">{title}</h1>
               {subtitle && <p className="text-[13px] text-[#444]">{subtitle}</p>}
             </div>

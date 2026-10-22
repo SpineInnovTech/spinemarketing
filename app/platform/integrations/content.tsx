@@ -48,7 +48,7 @@ const protocols = [
   {
     icon: Globe, accent: "#3b82f6", bg: "rgba(59,130,246,0.12)",
     name: "The apps",
-    desc: "Each app stays itself. Spine Workspace does not become a new home for the record.",
+    desc: "Each app stays itself. SpineWorkspace does not become a new home for the record.",
     tags: ["The record stays put", "The app stays in charge", "One connection"],
   },
   {

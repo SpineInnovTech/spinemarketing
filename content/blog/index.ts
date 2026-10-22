@@ -34,7 +34,7 @@ Every time you switch tabs, you lose context. Every time you copy-paste a custom
 
 ## What if the story did not have to be rebuilt?
 
-Spine Workspace connects the tools, files, and conversations you already use. It does not create a new home for the record. The CRM, the desk, and the billing tool stay in charge. The workspace shows the view this role needs for the task in front of them.
+SpineWorkspace connects the tools, files, and conversations you already use. It does not create a new home for the record. The CRM, the desk, and the billing tool stay in charge. The workspace shows the view this role needs for the task in front of them.
 
 ## Twin prepares within authorized context
 
@@ -90,7 +90,7 @@ It's the product. Twin prepares the next step. A person decides. The tools that 
     category: "Business context",
     body: `The work is already in the tools you use. The customer is in the CRM. The ticket is in the desk. The bill is in billing. The promise is in email. The person who has to act is the one piecing that together.
 
-Spine Workspace does not create a new home for that record. It connects the tools, files, and conversations you already use, and it keeps four kinds of information apart.
+SpineWorkspace does not create a new home for that record. It connects the tools, files, and conversations you already use, and it keeps four kinds of information apart.
 
 ## Four things, kept apart
 
