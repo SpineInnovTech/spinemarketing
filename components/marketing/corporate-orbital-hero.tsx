@@ -37,7 +37,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-black text-[#002B64] tracking-tight leading-[1.12] mb-3">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#002B64] tracking-[-0.015em] leading-[1.12] mb-3">
             The governed workbench where humans and AI move business context and work forward.
           </h2>
 
