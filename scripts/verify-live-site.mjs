@@ -12,12 +12,12 @@ for (let attempt = 1; attempt <= retries; attempt++) {
     const response = await fetch(url, { headers: { "Cache-Control": "no-cache" }, redirect: "follow", signal: AbortSignal.timeout(20000) });
     const html = await response.text();
     if (response.ok && new URL(response.url).hostname === new URL(origin).hostname &&
-        html.includes("SpineWorkspace connects your tools, context and team.") && html.includes("Spine InnovTech") &&
+        html.includes("We build the foundation for connected business work.") && html.includes("Spine InnovTech") &&
         !html.includes("Good morning, Operator")) {
       console.log(`Cloudflare production verified: ${origin} (HTTP ${response.status})`);
       process.exit(0);
     }
-    last = `HTTP ${response.status}; final host ${new URL(response.url).hostname}; product introduction ${html.includes("SpineWorkspace connects your tools, context and team.")}`;
+    last = `HTTP ${response.status}; final host ${new URL(response.url).hostname}; product introduction ${html.includes("We build the foundation for connected business work.")}`;
   } catch (error) {
     last = String(error);
   }
