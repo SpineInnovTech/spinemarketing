@@ -16,7 +16,6 @@ const PRIORITY_MAP: Record<string, number> = {
   "/business-context": 0.9,
   "/proof": 0.9,
   "/solutions": 0.92,
-  "/use-cases": 0.85,
   "/platform": 0.85,
   "/developers": 0.85,
   "/pricing": 0.8,

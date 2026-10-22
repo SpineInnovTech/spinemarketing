@@ -67,7 +67,7 @@ if (statSync("out/index.html").size < 1024) {
 const broadRoutes = [
   "twin", "business-context", "continuity", "governance", "adaptive-workspace",
   "host-connected-environment", "platform", "platform/spine-fabric",
-  "platform/how-it-works", "integrations", "security", "developers", "use-cases",
+  "platform/how-it-works", "integrations", "security", "developers",
 ];
 for (const route of broadRoutes) {
   const html = readFileSync(`out/${route}.html`, "utf8");

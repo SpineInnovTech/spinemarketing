@@ -49,11 +49,9 @@
     "/product",
     "/proof",
     "/request-access",
-    "/resources/campaign",
     "/resources",
     "/responsible-ai",
     "/security",
-    "/services",
     "/solutions/content",
     "/solutions/customer-success",
     "/solutions/customer-support",
@@ -88,7 +86,6 @@
     "/use-cases/operations",
     "/use-cases/sales",
     "/use-cases/teams",
-    "/use-cases",
     "/why",
     "/workspace"
   ]

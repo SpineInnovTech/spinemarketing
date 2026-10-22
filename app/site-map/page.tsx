@@ -31,9 +31,7 @@ const names: Record<string, string> = {
   "/product/approval-gate-twin": "Approval gate & Twin walkthrough",
   "/host-connected-environment": "Host connected environments",
   "/solutions": "All business solutions",
-  "/use-cases": "Business use cases",
   "/resources": "Research & resources",
-  "/resources/campaign": "Architecture & campaign gallery",
   "/blog": "Blog & articles",
   "/updates": "Company news",
   "/portfolio": "Portfolio & demonstrations",
@@ -88,7 +86,6 @@ function category(path: string) {
       "/company",
       "/about",
       "/contact",
-      "/services",
       "/pricing",
       "/site-map",
     ].includes(path)
