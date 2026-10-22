@@ -71,5 +71,15 @@ export const footerLegalLinks: { name: string; href: string }[] = [
   { name: "Website terms", href: "/terms" },
 ];
 
+// Bottom-bar utility links — not part of the master's four footer groups. The
+// Site map link keeps the full website directory (/site-map) reachable from the
+// footer, so /resources and the directory-only pages stay reachable through it
+// and the coverage gate can stay strict for every route (conductor decision
+// superseding A1). It sits beside the legal links, not inside the 11 grouped
+// master links.
+export const footerUtilityLinks: { name: string; href: string }[] = [
+  { name: "Site map", href: "/site-map" },
+];
+
 export const COMPANY_TAGLINE = "We build the foundation for connected business work. Shared business context. Human and AI collaboration. Explicit authority. Work continuity.";
 export const PRODUCT_ONELINER = "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.";

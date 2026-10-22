@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SpineLogo } from "@/components/spine-logo";
-import { footerColumns, footerLegalLinks } from "@/lib/navigation";
+import { footerColumns, footerLegalLinks, footerUtilityLinks } from "@/lib/navigation";
 import { COMPANY_NAME } from "@/lib/company";
 
 export function Footer() {
@@ -83,9 +83,9 @@ export function Footer() {
           <p className="text-[12px] text-[#CBD9EB]">
             © 2026 {COMPANY_NAME}. All rights reserved.
           </p>
-          {footerLegalLinks.length > 0 && (
+          {(footerLegalLinks.length > 0 || footerUtilityLinks.length > 0) && (
             <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              {footerLegalLinks.map((link) => (
+              {[...footerLegalLinks, ...footerUtilityLinks].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

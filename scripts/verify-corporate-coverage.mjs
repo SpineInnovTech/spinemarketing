@@ -53,38 +53,13 @@ function localPath(href, source) {
   }
   return path;
 }
-// Non-master pages kept live and in sitemap.xml but intentionally NOT linked
-// from the shared footer or header. The Final Content Master footer (00.
-// Shared Site Content) and route list (13.C) include none of them, so the
-// footer round removed the footer /site-map and /resources links. Conductor
-// decision (round 8, Option A1, user re-confirmed "only the 11 specified
-// links, no extras" after being told these pages lose their footer link path):
-//   - keep the footer strictly to the master's 11 links + legal links;
-//   - keep every page live — do NOT delete, redirect or noindex any of them;
-//   - exempt ONLY the routes listed below from home-reachability.
-// These are the directory roots (/site-map, /resources) plus the 13 pages the
-// directory was the sole home path to. Home reachability is computed from "/"
-// ALONE below — links from an exempt page do NOT make any other page count as
-// reachable — so every master route in 13.C stays strictly reachable and the
-// gate is NOT loosened for anything else. Explicit routes only, no wildcards.
-// A later audit round reviews these with the user.
-const REACHABILITY_EXEMPT = new Set([
-  "/site-map", // full website directory (unlinked from footer per A1)
-  "/resources", // research & resources hub (unlinked from footer per A1)
-  "/services", // directory-only
-  "/spine", // directory-only
-  "/triage-bot", // directory-only
-  "/folder-monitor", // directory-only
-  "/portfolio", // directory-only
-  "/account-success", // directory-only
-  "/resources/campaign", // directory-only (under /resources)
-  "/use-cases", // directory-only
-  "/use-cases/sales", // directory-only
-  "/use-cases/operations", // directory-only
-  "/use-cases/teams", // directory-only
-  "/use-cases/customer-success", // directory-only
-  "/use-cases/founders-and-leaders", // directory-only
-]);
+// Home reachability is computed from "/" alone and the gate is STRICT for every
+// route: no route is exempt. The footer bottom bar links the site directory
+// ("Site map" -> /site-map), so /resources and the directory-only pages are
+// reachable through it, and every master route is reachable through the header
+// and footer groups. If any public page is still unreachable, the gate fails
+// and the unreachable route is reported (conductor decision: add the footer
+// Site map link, superseding the earlier A1 per-route exemption).
 const reachable = new Set(["/"]);
 const pending = ["/"];
 const broken = new Set();
@@ -115,11 +90,8 @@ while (pending.length) {
 const publicPages = [...pages.keys()].filter(
   (path) => !excluded.has(path) && !redirects.has(path),
 );
-// REACHABILITY_EXEMPT (defined above, seeded into the crawl) also lets its own
-// two roots pass even when the homepage does not link them directly.
-const unreachable = publicPages.filter(
-  (path) => !reachable.has(path) && !REACHABILITY_EXEMPT.has(path),
-);
+// Strict: every public page must be reachable from "/". No route is exempt.
+const unreachable = publicPages.filter((path) => !reachable.has(path));
 if (broken.size)
   throw new Error(`Broken internal links: ${[...broken].join(", ")}`);
 if (unreachable.length)
@@ -250,8 +222,16 @@ const FOOTER_BRAND_STATEMENT = "We build the foundation for connected business w
 const FOOTER_CLOSING_LINE =
   "Source systems stay authoritative. Authority stays with people. Context stays with the work.";
 const FOOTER_COPYRIGHT = "© 2026 Spine InnovTech. All rights reserved.";
-// Footer links the master forbids: a stray one of these is a drift regression.
-const FOOTER_FORBIDDEN_HREFS = ["/blog", "/resources", "/site-map", "/login", "/pricing"];
+// Bottom-bar utility links — beside the legal links, not inside the master's
+// four groups. "Site map" keeps the directory reachable from the footer.
+const SHARED_FOOTER_UTILITY_LINKS = [
+  { label: "Site map", href: "/site-map" },
+];
+// Links the master forbids inside the footer: a stray one is a drift
+// regression. /site-map is NOT forbidden — it is the sanctioned bottom-bar
+// utility link that keeps the directory reachable; /resources stays forbidden
+// (it is reachable via the directory, not the footer).
+const FOOTER_FORBIDDEN_HREFS = ["/blog", "/resources", "/login", "/pricing"];
 
 const HTML_ENTITIES = {
   "&amp;": "&",
@@ -375,6 +355,11 @@ for (const route of footerRequiredRoutes) {
   for (const link of SHARED_FOOTER_LEGAL_LINKS) {
     if (!footerLinkPresent(html, link.href, link.label)) {
       footerFailures.push(`${route}: missing legal link ${link.label} -> ${link.href}`);
+    }
+  }
+  for (const link of SHARED_FOOTER_UTILITY_LINKS) {
+    if (!footerLinkPresent(html, link.href, link.label)) {
+      footerFailures.push(`${route}: missing utility link ${link.label} -> ${link.href}`);
     }
   }
   for (const forbidden of FOOTER_FORBIDDEN_HREFS) {
