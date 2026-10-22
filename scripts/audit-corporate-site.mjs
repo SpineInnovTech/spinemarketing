@@ -81,7 +81,16 @@ for (const label of ["Company", "Technology", "Insights"]) {
   check(source("lib/navigation.ts").includes(`label: "${label}"`), `missing corporate navigation category: ${label}`);
 }
 check(source("lib/solution-nav.ts").includes("marketingPathForSolution") && !source("lib/solution-nav.ts").includes("workspaceUrl"), "solution navigation must point to local marketing detail pages");
-check(footer.includes('href="/site-map"'), "footer must expose the complete website directory");
+// Footer follows the Final Content Master (00. Shared Site Content › Footer):
+// the four master groups and the brand statement, PLUS a bottom-bar "Site map"
+// utility link that keeps the full website directory reachable (conductor
+// decision superseding A1: add the footer Site map link so the coverage gate
+// stays strict for every route).
+for (const heading of ["Company", "Technology", "Product", "Perspectives"]) {
+  check(source("lib/navigation.ts").includes(`heading: "${heading}"`), `footer missing master group: ${heading}`);
+}
+check(footer.includes("We build the foundation for connected business work."), "footer must carry the master brand statement");
+check(source("lib/navigation.ts").includes('href: "/site-map"') && source("lib/navigation.ts").includes('name: "Site map"'), "footer must link the Site map directory in the bottom bar");
 check(footer.includes("Spine InnovTech"), "corporate footer absent");
 check(!meta.includes('canonical: "/"'), "site-wide root canonical incorrectly points all routes to /");
 check(meta.includes('template: "%s"'), "metadata template can duplicate corporate suffixes");

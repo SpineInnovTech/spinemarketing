@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { SpineLogo } from "@/components/spine-logo";
-import { footerColumns } from "@/lib/navigation";
+import { footerColumns, footerLegalLinks, footerUtilityLinks } from "@/lib/navigation";
 import { COMPANY_NAME } from "@/lib/company";
 
 export function Footer() {
@@ -81,21 +81,22 @@ export function Footer() {
         </p>
         <div className="flex flex-wrap items-center justify-between gap-4 py-7">
           <p className="text-[12px] text-[#CBD9EB]">
-            © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
-            Built in Coimbatore, Tamil Nadu, India.
+            © 2026 {COMPANY_NAME}. All rights reserved.
           </p>
-          <Link
-            href="/site-map"
-            className="text-[12px] text-[#CBD9EB] hover:text-white"
-          >
-            All website pages
-          </Link>
-          <a
-            href="mailto:connect@spineworkspace.com"
-            className="inline-flex items-center gap-2 text-[12px] text-[#CBD9EB] transition hover:text-white"
-          >
-            <Mail className="h-3.5 w-3.5" /> connect@spineworkspace.com
-          </a>
+          {(footerLegalLinks.length > 0 || footerUtilityLinks.length > 0) && (
+            <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
+              {[...footerLegalLinks, ...footerUtilityLinks].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-[12px] text-[#CBD9EB] transition hover:text-white"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </footer>

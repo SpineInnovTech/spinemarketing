@@ -53,6 +53,13 @@ function localPath(href, source) {
   }
   return path;
 }
+// Home reachability is computed from "/" alone and the gate is STRICT for every
+// route: no route is exempt. The footer bottom bar links the site directory
+// ("Site map" -> /site-map), so /resources and the directory-only pages are
+// reachable through it, and every master route is reachable through the header
+// and footer groups. If any public page is still unreachable, the gate fails
+// and the unreachable route is reported (conductor decision: add the footer
+// Site map link, superseding the earlier A1 per-route exemption).
 const reachable = new Set(["/"]);
 const pending = ["/"];
 const broken = new Set();
@@ -83,6 +90,7 @@ while (pending.length) {
 const publicPages = [...pages.keys()].filter(
   (path) => !excluded.has(path) && !redirects.has(path),
 );
+// Strict: every public page must be reachable from "/". No route is exempt.
 const unreachable = publicPages.filter((path) => !reachable.has(path));
 if (broken.size)
   throw new Error(`Broken internal links: ${[...broken].join(", ")}`);
@@ -172,4 +180,210 @@ if (headerFailures.length) {
 }
 console.log(
   `Shared header verified on ${headerChecked} corporate routes: identical five-link nav + product CTA + skip link.`,
+);
+
+// --- Shared corporate footer proof -------------------------------------------
+// Every indexable corporate route must render the ONE shared footer: the exact
+// four groups and eleven links from the Final Content Master (00. Shared Site
+// Content › Footer), in order, plus the brand statement, closing line and
+// verbatim copyright, and the legal links that correspond to a complete policy
+// Legal links shown only when a complete published policy page exists. /cookies
+// has no page on main, so "Cookie notice" is intentionally absent.
+const SHARED_FOOTER_LEGAL_LINKS = [
+  { label: "Privacy notice", href: "/privacy" },
+  { label: "Website terms", href: "/terms" },
+];
+// The exact ordered group structure the Final Content Master requires: four
+// groups, these headings in this order, and within each group these links in
+// this order with these exact labels. Used for an ordered, exact comparison —
+// presence-anywhere is not enough, because the master fixes order and grouping.
+const EXPECTED_FOOTER_GROUPS = [
+  { heading: "Company", links: [
+    { label: "Company", href: "/company" },
+    { label: "Our philosophy", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "Contact", href: "/contact" },
+  ] },
+  { heading: "Technology", links: [
+    { label: "Technology overview", href: "/platform" },
+    { label: "Trust & governance", href: "/trust" },
+    { label: "Responsible AI", href: "/responsible-ai" },
+    { label: "Partnerships", href: "/partners" },
+  ] },
+  { heading: "Product", links: [
+    { label: "About SpineWorkspace", href: "/spine-workspace" },
+    { label: "Visit the product website", href: "https://spineworkspace.com" },
+  ] },
+  { heading: "Perspectives", links: [
+    { label: "Insights", href: "/insights" },
+  ] },
+];
+const FOOTER_BRAND_STATEMENT = "We build the foundation for connected business work.";
+const FOOTER_CLOSING_LINE =
+  "Source systems stay authoritative. Authority stays with people. Context stays with the work.";
+const FOOTER_COPYRIGHT = "© 2026 Spine InnovTech. All rights reserved.";
+// Bottom-bar utility links — beside the legal links, not inside the master's
+// four groups. "Site map" keeps the directory reachable from the footer.
+const SHARED_FOOTER_UTILITY_LINKS = [
+  { label: "Site map", href: "/site-map" },
+];
+// Links the master forbids inside the footer: a stray one is a drift
+// regression. /site-map is NOT forbidden — it is the sanctioned bottom-bar
+// utility link that keeps the directory reachable; /resources stays forbidden
+// (it is reachable via the directory, not the footer).
+const FOOTER_FORBIDDEN_HREFS = ["/blog", "/resources", "/login", "/pricing"];
+
+const HTML_ENTITIES = {
+  "&amp;": "&",
+  "&#38;": "&",
+  "&copy;": "©",
+  "&#169;": "©",
+  "&nbsp;": " ",
+  "&quot;": '"',
+  "&#39;": "'",
+  "&lt;": "<",
+  "&gt;": ">",
+};
+function decodeEntities(text) {
+  // Decode the handful of HTML entities Next emits in our own built markup so a
+  // plain-text master label ("Trust & governance") matches rendered
+  // "Trust &amp; governance". Reads our own built HTML, not user input.
+  // Single pass over the input: each entity is matched once and replaced from a
+  // fixed table, so a replacement's output ("&") is never re-scanned as the
+  // start of another entity. This is what keeps it free of double-unescaping —
+  // chained .replace() calls would feed one replacement's "&" into the next.
+  return text.replace(
+    /&(?:amp|#38|copy|#169|nbsp|quot|#39|lt|gt);/g,
+    (entity) => HTML_ENTITIES[entity] ?? entity,
+  );
+}
+
+function normaliseText(html) {
+  // Strip tags, decode entities and collapse whitespace so verbatim phrases are
+  // matched against rendered text, not markup. Tag-stripping inserts a space
+  // between adjacent inline text nodes (e.g. "Spine InnovTech" + "." renders as
+  // one word on the page but "Spine InnovTech ." after stripping), so spaces
+  // introduced before closing punctuation are removed to match what a visitor
+  // sees. Reads our own built HTML.
+  return decodeEntities(html.replace(/<[^>]+>/g, " "))
+    .replace(/\s+/g, " ")
+    .replace(/\s+([.,;:])/g, "$1");
+}
+
+// Anchor-with-label match that is tolerant of entity-encoded labels (e.g.
+// "Trust &amp; governance"). href and label both come from our own footer spec.
+function footerLinkPresent(html, href, label) {
+  const escaped = href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const anchor = new RegExp(`<a\\b[^>]*\\bhref="${escaped}/?"[^>]*>([\\s\\S]*?)</a>`, "g");
+  for (const match of html.matchAll(anchor)) {
+    const inner = decodeEntities(match[1].replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+    if (inner.includes(label)) return true;
+  }
+  return false;
+}
+
+// Parse a footer's ordered nav groups: [{ heading, links: [{ href, label }] }].
+// Reads the <nav aria-label="Footer navigation"> block of our own built HTML.
+function parseFooterGroups(footerHtml) {
+  const navMatch = footerHtml.match(/<nav\b[^>]*aria-label="Footer navigation"[\s\S]*?<\/nav>/i);
+  if (!navMatch) return null;
+  const nav = navMatch[0];
+  // Each group is a <div> wrapping one <h3> heading and its <ul> of links.
+  return [...nav.matchAll(/<div\b[^>]*>([\s\S]*?)<\/div>/g)]
+    .map((m) => m[1])
+    .filter((block) => /<h3\b/.test(block))
+    .map((block) => {
+      const headingMatch = block.match(/<h3\b[^>]*>([\s\S]*?)<\/h3>/);
+      const heading = headingMatch
+        ? decodeEntities(headingMatch[1].replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim()
+        : "";
+      const links = [...block.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)].map((a) => ({
+        href: a[1].replace(/\/$/, "") || a[1],
+        label: decodeEntities(a[2].replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim(),
+      }));
+      return { heading, links };
+    });
+}
+
+// The master's ordered structure, rendered as comparable strings.
+function groupsSignature(groups) {
+  return groups
+    .map((g) => `${g.heading}|` + g.links.map((l) => `${l.label}=>${l.href.replace(/\/$/, "") || l.href}`).join(","))
+    .join(" || ");
+}
+const EXPECTED_GROUPS_SIGNATURE = groupsSignature(EXPECTED_FOOTER_GROUPS);
+
+// Routes that MUST carry the shared footer are identified STRUCTURALLY — by the
+// footer's distinctive <nav aria-label="Footer navigation"> landmark — NOT by
+// any content string the proof also asserts. Using an asserted string (e.g. the
+// brand statement) to decide whether to check a route would let a footer that
+// dropped that string be silently skipped instead of failed.
+const footerRequiredRoutes = publicPages.filter((route) => pages.has(route));
+const footerFailures = [];
+let footerChecked = 0;
+let footerSkipped = 0;
+for (const route of footerRequiredRoutes) {
+  const page = pages.get(route);
+  if (!page) continue;
+  const footerMatch = page.match(/<footer\b[\s\S]*?<\/footer>/i);
+  // A page with no <footer>, or a <footer> that is not the shared corporate
+  // footer (no "Footer navigation" landmark), is out of scope: enter/login
+  // flows render no footer; this round touches only the one shared footer.
+  if (!footerMatch || !/aria-label="Footer navigation"/.test(footerMatch[0])) {
+    footerSkipped += 1;
+    continue;
+  }
+  const html = footerMatch[0];
+  const text = normaliseText(html);
+  footerChecked += 1;
+
+  // Ordered, exact structural comparison: headings in order, and within each
+  // group the links in order with exact labels and destinations. This rejects
+  // reordered links, extra links, wrong grouping and near-miss labels.
+  const groups = parseFooterGroups(html);
+  if (!groups) {
+    footerFailures.push(`${route}: footer nav landmark present but unparseable`);
+  } else {
+    const actual = groupsSignature(groups);
+    if (actual !== EXPECTED_GROUPS_SIGNATURE) {
+      footerFailures.push(
+        `${route}: footer group structure does not match master exactly\n      expected: ${EXPECTED_GROUPS_SIGNATURE}\n      actual:   ${actual}`,
+      );
+    }
+  }
+
+  for (const link of SHARED_FOOTER_LEGAL_LINKS) {
+    if (!footerLinkPresent(html, link.href, link.label)) {
+      footerFailures.push(`${route}: missing legal link ${link.label} -> ${link.href}`);
+    }
+  }
+  for (const link of SHARED_FOOTER_UTILITY_LINKS) {
+    if (!footerLinkPresent(html, link.href, link.label)) {
+      footerFailures.push(`${route}: missing utility link ${link.label} -> ${link.href}`);
+    }
+  }
+  for (const forbidden of FOOTER_FORBIDDEN_HREFS) {
+    const escaped = forbidden.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (new RegExp(`\\bhref="${escaped}/?"`).test(html)) {
+      footerFailures.push(`${route}: forbidden footer link present -> ${forbidden}`);
+    }
+  }
+  if (!text.includes(FOOTER_BRAND_STATEMENT)) {
+    footerFailures.push(`${route}: missing footer brand statement`);
+  }
+  if (!text.includes(FOOTER_CLOSING_LINE)) {
+    footerFailures.push(`${route}: missing footer closing line`);
+  }
+  if (!text.includes(FOOTER_COPYRIGHT)) {
+    footerFailures.push(`${route}: missing verbatim copyright`);
+  }
+}
+if (footerChecked === 0) {
+  throw new Error("Shared footer proof ran against zero exported routes.");
+}
+if (footerFailures.length) {
+  throw new Error(`Shared footer not consistent across routes:\n  ${footerFailures.join("\n  ")}`);
+}
+console.log(
+  `Shared footer verified on ${footerChecked} indexable routes (${footerSkipped} without the shared footer skipped): exact 11 links + 2 legal links + brand/closing/copyright.`,
 );
