@@ -87,7 +87,11 @@ check(source("lib/solution-nav.ts").includes("marketingPathForSolution") && !sou
 for (const heading of ["Company", "Technology", "Product", "Perspectives"]) {
   check(source("lib/navigation.ts").includes(`heading: "${heading}"`), `footer missing master group: ${heading}`);
 }
-check(footer.includes("We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work."), "footer must carry the master brand statement");
+check(
+  source("lib/navigation.ts").includes('export const COMPANY_TAGLINE = "We build governed business context for humans and AI.";') &&
+    footer.includes("COMPANY_TAGLINE"),
+  "footer must carry the short brand statement",
+);
 check(source("lib/navigation.ts").includes('href: "/site-map"') && source("lib/navigation.ts").includes('name: "Site map"'), "footer must link the Site map directory in the bottom bar");
 check(footer.includes("Spine InnovTech"), "corporate footer absent");
 check(!meta.includes('canonical: "/"'), "site-wide root canonical incorrectly points all routes to /");

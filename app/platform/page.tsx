@@ -6,6 +6,7 @@ import { FinalCTA } from "@/components/final-cta"
 import { PlatformHubIntro } from "./hub"
 import { PlatformFAQ } from "./faq"
 import { PlatformStickyScroll } from "./sticky-sections"
+import { PlatformCorporateSections } from "./corporate-sections"
 import { TechnologyDetailLinks } from "./technology-detail-links"
 import { BreadcrumbJsonLd, SoftwareApplicationJsonLd } from "@/components/structured-data"
 
@@ -33,6 +34,7 @@ export default function PlatformPage() {
       <main id="main">
         <PlatformHubIntro />
         <PlatformStickyScroll />
+        <PlatformCorporateSections />
         <TechnologyDetailLinks />
         <PlatformFAQ />
         <FinalCTA />

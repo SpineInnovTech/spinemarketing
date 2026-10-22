@@ -110,15 +110,38 @@ console.log(
 // (00. Shared Site Content › Header). This proves the header is shared rather
 // than copied-and-drifted per page. Routes are checked only when their page is
 // exported (routes still to be built are covered by a later route round).
-const SHARED_HEADER_LINKS = [
-  { label: "Company", href: "/company" },
-  { label: "Technology", href: "/platform" },
-  { label: "Our philosophy", href: "/about" },
+const SKIP_LINK_TEXT = "Skip to content";
+
+// The header is three dropdown submenus (Company, Technology, Our philosophy)
+// plus two direct links (Insights, Contact) and the product CTA. Each submenu
+// trigger is a <button aria-expanded>; its links are plain <a> rendered into
+// the static HTML (shown/hidden with the `hidden` attribute). The gate asserts
+// the full structure in ORDER: three trigger labels, thirteen sub-links with
+// exact labels and destinations, two direct links, the CTA and the skip link.
+const HEADER_DROPDOWN_TRIGGERS = ["Company", "Technology", "Our philosophy"];
+const HEADER_SUBLINKS = [
+  // Company
+  { label: "Company overview", href: "/company" },
+  { label: "Our story", href: "/company#our-story" },
+  { label: "Founder", href: "/company#founder" },
+  { label: "Partnerships", href: "/partners" },
+  { label: "Careers", href: "/careers" },
+  // Technology
+  { label: "Technology overview", href: "/platform" },
+  { label: "Shared business context", href: "/platform#business-context" },
+  { label: "Authority & execution", href: "/platform#governed-execution" },
+  { label: "Work continuity", href: "/platform#work-continuity" },
+  { label: "SpineWorkspace overview", href: "/spine-workspace" },
+  // Our philosophy
+  { label: "Engineering principles", href: "/about" },
+  { label: "Trust & governance", href: "/trust" },
+  { label: "Responsible AI", href: "/responsible-ai" },
+];
+const HEADER_DIRECT_LINKS = [
   { label: "Insights", href: "/insights" },
   { label: "Contact", href: "/contact" },
 ];
 const HEADER_CTA = { label: "Explore SpineWorkspace", href: "https://spineworkspace.com" };
-const SKIP_LINK_TEXT = "Skip to content";
 
 // The brief's corporate surface that must carry the shared header. Only full
 // (non-redirecting) corporate pages are listed — redirect stubs such as
@@ -137,39 +160,95 @@ const HEADER_REQUIRED_ROUTES = [
   "/contact",
 ];
 
-function headerLinkPresent(html, href, label) {
-  // Match an anchor whose href is this destination, then confirm the label text
-  // is present in its inner markup. We intentionally do NOT strip tags: the
-  // labels are contiguous plain text (optionally wrapped in a single span), so a
-  // whitespace-normalised substring check is sufficient and avoids an
-  // incomplete-sanitisation pattern. This reads our own built HTML, not user input.
-  const escaped = href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const anchor = new RegExp(`<a\\b[^>]*\\bhref="${escaped}/?"[^>]*>([\\s\\S]*?)</a>`, "g");
-  for (const match of html.matchAll(anchor)) {
-    const inner = match[1].replace(/\s+/g, " ");
-    if (inner.includes(label)) return true;
-  }
-  return false;
+function normaliseInner(markup) {
+  // Strip tags, decode the handful of entities Next emits, collapse whitespace.
+  return decodeEntitiesHeader(markup.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+}
+function decodeEntitiesHeader(text) {
+  return text.replace(/&(?:amp|#38);/g, "&");
+}
+
+// The <header>…</header> block of a page; returns null when none is present.
+function extractHeader(html) {
+  const m = html.match(/<header\b[\s\S]*?<\/header>/i);
+  return m ? m[0] : null;
+}
+
+// Ordered list of the dropdown trigger button labels (buttons carrying
+// aria-expanded + aria-haspopup). The mobile menu toggle also carries
+// aria-expanded but has no label text, so blank labels are dropped.
+function headerTriggerLabels(headerHtml) {
+  return [...headerHtml.matchAll(/<button\b[^>]*\baria-expanded\b[^>]*>([\s\S]*?)<\/button>/g)]
+    .map((m) => normaliseInner(m[1]))
+    .filter(Boolean);
+}
+
+// Ordered list of every anchor in the header as { href, label }.
+function headerAnchors(headerHtml) {
+  return [...headerHtml.matchAll(/<a\b[^>]*\bhref="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)].map((m) => ({
+    href: (m[1].replace(/\/$/, "") || m[1]).replace(/&amp;/g, "&"),
+    label: normaliseInner(m[2]),
+  }));
 }
 
 const headerFailures = [];
 let headerChecked = 0;
 for (const route of HEADER_REQUIRED_ROUTES) {
-  const html = pages.get(route);
-  if (!html) {
+  const page = pages.get(route);
+  if (!page) {
     // Route not exported in this PR; coverage for new routes is a later round.
     continue;
   }
+  const headerHtml = extractHeader(page);
+  if (!headerHtml) {
+    headerFailures.push(`${route}: no <header> element`);
+    continue;
+  }
   headerChecked += 1;
-  for (const link of SHARED_HEADER_LINKS) {
-    if (!headerLinkPresent(html, link.href, link.label)) {
-      headerFailures.push(`${route}: missing header link ${link.label} -> ${link.href}`);
+
+  // 1) Three dropdown triggers in order.
+  const triggers = headerTriggerLabels(headerHtml);
+  for (let i = 0; i < HEADER_DROPDOWN_TRIGGERS.length; i++) {
+    if (triggers[i] !== HEADER_DROPDOWN_TRIGGERS[i]) {
+      headerFailures.push(
+        `${route}: dropdown trigger #${i + 1} expected "${HEADER_DROPDOWN_TRIGGERS[i]}", got "${triggers[i] ?? "(missing)"}"`,
+      );
     }
   }
-  if (!headerLinkPresent(html, HEADER_CTA.href, HEADER_CTA.label)) {
+
+  const anchors = headerAnchors(headerHtml);
+  // Build a lookup of href -> ordered labels for exact-destination matching.
+  const findAnchor = (href, label) =>
+    anchors.find((a) => a.href === href && a.label === label);
+
+  // 2) Thirteen sub-links with exact label + destination, in order. Order is
+  // checked by the index of each successive match increasing.
+  let lastIndex = -1;
+  for (const sub of HEADER_SUBLINKS) {
+    const idx = anchors.findIndex(
+      (a, i) => i > lastIndex && a.href === sub.href && a.label === sub.label,
+    );
+    if (idx === -1) {
+      headerFailures.push(`${route}: missing/out-of-order sub-link ${sub.label} -> ${sub.href}`);
+    } else {
+      lastIndex = idx;
+    }
+  }
+
+  // 3) Two direct links.
+  for (const link of HEADER_DIRECT_LINKS) {
+    if (!findAnchor(link.href, link.label)) {
+      headerFailures.push(`${route}: missing direct link ${link.label} -> ${link.href}`);
+    }
+  }
+
+  // 4) CTA.
+  if (!findAnchor(HEADER_CTA.href.replace(/\/$/, ""), HEADER_CTA.label)) {
     headerFailures.push(`${route}: missing header CTA ${HEADER_CTA.label} -> ${HEADER_CTA.href}`);
   }
-  if (!html.includes(SKIP_LINK_TEXT)) {
+
+  // 5) Skip link.
+  if (!page.includes(SKIP_LINK_TEXT)) {
     headerFailures.push(`${route}: missing "${SKIP_LINK_TEXT}" accessibility link`);
   }
 }
@@ -180,7 +259,7 @@ if (headerFailures.length) {
   throw new Error(`Shared header not consistent across routes:\n  ${headerFailures.join("\n  ")}`);
 }
 console.log(
-  `Shared header verified on ${headerChecked} corporate routes: identical five-link nav + product CTA + skip link.`,
+  `Shared header verified on ${headerChecked} corporate routes: 3 dropdown triggers + 13 sub-links (exact order) + 2 direct links + product CTA + skip link.`,
 );
 
 // --- Shared corporate footer proof -------------------------------------------
@@ -224,7 +303,7 @@ const EXPECTED_FOOTER_GROUPS = [
     { label: "Resources", href: "/resources" },
   ] },
 ];
-const FOOTER_BRAND_STATEMENT = "We build the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work.";
+const FOOTER_BRAND_STATEMENT = "We build governed business context for humans and AI.";
 const FOOTER_CLOSING_LINE =
   "Source systems stay authoritative. Authority stays with people. Context stays with the work.";
 const FOOTER_COPYRIGHT = "© 2026 Spine InnovTech. All rights reserved.";
