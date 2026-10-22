@@ -185,10 +185,11 @@ console.log(
 
 // --- Shared corporate footer proof -------------------------------------------
 // Every indexable corporate route must render the ONE shared footer: the exact
-// four groups and thirteen links from the Final Content Master (00. Shared Site
-// Content › Footer) as extended by the user's 22 Oct 2026 request (Technology
-// portfolio, Resources), in order, plus the brand statement, closing line and
-// verbatim copyright, and the legal links that correspond to a complete policy
+// four groups and fourteen links from the Final Content Master (00. Shared Site
+// Content › Footer) as extended by the user's 22 Oct 2026 requests (Technology
+// portfolio; and in Perspectives: Insights, Company news -> /updates, Resources),
+// in order, plus the brand statement, closing line and verbatim copyright, and
+// the legal links that correspond to a complete policy
 // Legal links shown only when a complete published policy page exists. /cookies
 // has no page on main, so "Cookie notice" is intentionally absent.
 const SHARED_FOOTER_LEGAL_LINKS = [
@@ -219,6 +220,7 @@ const EXPECTED_FOOTER_GROUPS = [
   ] },
   { heading: "Perspectives", links: [
     { label: "Insights", href: "/insights" },
+    { label: "Company news", href: "/updates" },
     { label: "Resources", href: "/resources" },
   ] },
 ];
@@ -389,5 +391,5 @@ if (footerFailures.length) {
   throw new Error(`Shared footer not consistent across routes:\n  ${footerFailures.join("\n  ")}`);
 }
 console.log(
-  `Shared footer verified on ${footerChecked} indexable routes (${footerSkipped} without the shared footer skipped): exact 13 links + 2 legal links + brand/closing/copyright.`,
+  `Shared footer verified on ${footerChecked} indexable routes (${footerSkipped} without the shared footer skipped): exact 14 links + 2 legal links + brand/closing/copyright.`,
 );

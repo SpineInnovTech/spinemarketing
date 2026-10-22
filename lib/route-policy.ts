@@ -216,7 +216,7 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
   {
     path: "/updates",
     action: "keep",
-    reason: "Short buyer-facing notes. The dated log stays at /changelog.",
+    reason: "Corporate Company news page: dated company-voice notes on company direction and architecture. Product release notes stay on spineworkspace.com; the dated product log stays at /changelog.",
   },
   {
     path: "/portfolio",
