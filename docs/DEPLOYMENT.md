@@ -1,5 +1,42 @@
 # Spine InnovTech — direct Cloudflare Workers Builds deployment
 
+## Branching strategy and environments
+
+Three long-lived branches map to three Cloudflare Worker environments. Changes
+flow one way: a feature branch into `dev`, `dev` into `test`, `test` into `main`.
+Only `main` reaches the live production site, and only by a manual deploy.
+
+| Branch | Environment | Host | How it deploys |
+| --- | --- | --- | --- |
+| `dev` | dev | `dev.spineinnovtech.com` | Auto on push, via `.github/workflows/deploy-environments.yml` (`wrangler deploy --env dev`) |
+| `test` | test | `test.spineinnovtech.com` | Auto on push, same workflow (`wrangler deploy --env test`) |
+| `main` | prod | `spineinnovtech.com` + `www.spineinnovtech.com` | **Manual only** — `npm run deploy:cloudflare` from `main` |
+
+### Flow
+
+```text
+feature/* ──PR──▶ dev   ──(auto)──▶ dev.spineinnovtech.com
+dev       ──PR──▶ test  ──(auto)──▶ test.spineinnovtech.com
+test      ──PR──▶ main  ──(manual npm run deploy:cloudflare)──▶ spineinnovtech.com + www
+```
+
+- `dev` and `test` are **non-production**: the Worker sets `SITE_ENV=dev`/`test`,
+  which adds `X-Robots-Tag: noindex, nofollow` to every response and serves a
+  blanket-disallow `/robots.txt`, so neither host is ever indexed. They disable
+  canonical redirects (`CANONICAL_REDIRECTS_ENABLED=false`).
+- Production (`SITE_ENV=prod`) behaves exactly as before — no noindex header, the
+  real `/robots.txt`, canonical redirects on.
+- There is **no automated prod deploy**. A green `dev`/`test` deploy never touches
+  the live site. Production is released only by a person running
+  `npm run deploy:cloudflare` on `main`.
+- Branch protection: `main` and `test` require a pull request before merging and
+  block force-push/deletion; `dev` blocks force-push/deletion. CI (`ci.yml`) is
+  `workflow_dispatch`-only, so no required status checks gate merges.
+
+---
+
+# Spine InnovTech — direct Cloudflare Workers Builds deployment (production)
+
 ## Hosting ownership
 
 | Concern | Owner |

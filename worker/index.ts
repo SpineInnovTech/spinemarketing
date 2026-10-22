@@ -11,6 +11,14 @@ export interface Env {
   CANONICAL_SITE_URL?: string;
   /** Comma-separated hostnames (e.g. spineinnovlabs.spineworkspace.com,www.spineinnovlabs.com) */
   LEGACY_REDIRECT_HOSTS?: string;
+  /** Deployment environment. "prod" (or unset) behaves as production; any other value ("dev", "test") marks a non-production environment that must not be indexed. */
+  SITE_ENV?: string;
+}
+
+/** A non-production environment is any SITE_ENV that is set and not "prod". */
+export function isNonProdEnv(env: Env): boolean {
+  const siteEnv = env.SITE_ENV?.trim().toLowerCase();
+  return !!siteEnv && siteEnv !== "prod";
 }
 
 const SECURITY_HEADERS: Record<string, string> = {
@@ -134,18 +142,60 @@ export function maybeProductEntryRedirect(request: Request): Response | null {
   return Response.redirect(target.toString(), 302);
 }
 
+const NOINDEX_HEADER = "noindex, nofollow";
+const NONPROD_ROBOTS_BODY = "User-agent: *\nDisallow: /\n";
+
+/**
+ * In a non-production environment, answer /robots.txt with a blanket disallow so
+ * dev/test hosts are never crawled. Production (SITE_ENV "prod" or unset) is
+ * unaffected and serves the static robots.txt asset as before.
+ */
+export function maybeNonProdRobots(request: Request, env: Env): Response | null {
+  if (!isNonProdEnv(env)) return null;
+  const url = new URL(request.url);
+  const normalized = url.pathname.replace(/\/+$/, "") || "/";
+  if (normalized !== "/robots.txt") return null;
+  return new Response(NONPROD_ROBOTS_BODY, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "X-Robots-Tag": NOINDEX_HEADER,
+      "Cache-Control": "public, max-age=0, must-revalidate",
+    },
+  });
+}
+
+/**
+ * In a non-production environment, stamp X-Robots-Tag: noindex, nofollow on every
+ * response so dev/test content is kept out of search indexes. Production is a
+ * no-op: the original response is returned unchanged.
+ */
+export function withNoindexHeader(response: Response, env: Env): Response {
+  if (!isNonProdEnv(env)) return response;
+  const headers = new Headers(response.headers);
+  headers.set("X-Robots-Tag", NOINDEX_HEADER);
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const redirect = maybeCanonicalRedirect(request, env);
-    if (redirect) return redirect;
+    if (redirect) return withNoindexHeader(redirect, env);
 
     const pricingRedirect = maybePricingRedirect(request);
-    if (pricingRedirect) return pricingRedirect;
+    if (pricingRedirect) return withNoindexHeader(pricingRedirect, env);
 
     const productEntryRedirect = maybeProductEntryRedirect(request);
-    if (productEntryRedirect) return productEntryRedirect;
+    if (productEntryRedirect) return withNoindexHeader(productEntryRedirect, env);
+
+    const nonProdRobots = maybeNonProdRobots(request, env);
+    if (nonProdRobots) return nonProdRobots;
 
     const response = await env.ASSETS.fetch(request);
-    return withSecurityHeaders(response, request);
+    return withNoindexHeader(withSecurityHeaders(response, request), env);
   },
 };

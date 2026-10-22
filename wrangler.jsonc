@@ -21,11 +21,33 @@
   "env": {
     "dev": {
       "name": "spineinnovtech-marketing-dev",
-      "workers_dev": true
+      "workers_dev": true,
+      "routes": [
+        {
+          "pattern": "dev.spineinnovtech.com",
+          "custom_domain": true
+        }
+      ],
+      "vars": {
+        "CANONICAL_SITE_URL": "https://spineinnovtech.com",
+        "CANONICAL_REDIRECTS_ENABLED": "false",
+        "SITE_ENV": "dev"
+      }
     },
     "test": {
       "name": "spineinnovtech-marketing-test",
-      "workers_dev": true
+      "workers_dev": true,
+      "routes": [
+        {
+          "pattern": "test.spineinnovtech.com",
+          "custom_domain": true
+        }
+      ],
+      "vars": {
+        "CANONICAL_SITE_URL": "https://spineinnovtech.com",
+        "CANONICAL_REDIRECTS_ENABLED": "false",
+        "SITE_ENV": "test"
+      }
     },
     "prod": {
       "name": "spineinnovtech-marketing",
@@ -42,7 +64,8 @@
       "vars": {
         "CANONICAL_REDIRECTS_ENABLED": "true",
         "CANONICAL_SITE_URL": "https://spineinnovtech.com",
-        "LEGACY_REDIRECT_HOSTS": "spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com"
+        "LEGACY_REDIRECT_HOSTS": "spineinnovtech.spineworkspace.com,spineinnovlabs.spineworkspace.com,spineinnovlabs.com,www.spineinnovlabs.com,www.spineinnovtech.com",
+        "SITE_ENV": "prod"
       }
     }
   }
