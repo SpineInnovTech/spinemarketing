@@ -9,25 +9,25 @@ import { Badge } from "@/components/ui/badge"
 
 export type LeadIntent =
   | "contact"
-  | "demo"
-  | "pricing"
-  | "design-partner"
+  | "technology"
   | "partnership"
-  | "media"
-  | "careers"
+  | "trust"
   | "security"
+  | "careers"
+  | "media"
+  | "research"
 
 const MAIL = "connect@spineworkspace.com"
 
 const INTENT_LABELS: Record<LeadIntent, string> = {
-  contact: "General contact",
-  demo: "Book a demo",
-  pricing: "Pricing / plan question",
-  "design-partner": "Design partner interest",
-  partnership: "Partnership / ecosystem",
-  media: "Media / speaking",
-  careers: "Hiring / careers",
-  security: "Security inquiry",
+  contact: "General inquiry",
+  technology: "Technology & architecture",
+  partnership: "Partnership",
+  trust: "Trust & governance",
+  security: "Security report",
+  careers: "Careers",
+  media: "Media",
+  research: "Research",
 }
 
 function intentLabel(intent: LeadIntent): string {

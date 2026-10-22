@@ -18,7 +18,7 @@ const spineCapabilities = [
   {
     icon: Database,
     title: "Structured data flows",
-    desc: "CRM, billing, support, and usage data flowing into Spine Workspace.",
+    desc: "CRM, billing, support, and usage data flowing into SpineWorkspace.",
   },
   {
     icon: MessageSquare,
@@ -40,7 +40,7 @@ const spineCapabilities = [
 const hitlSteps = [
   {
     label: "Signal detected",
-    desc: "Cross-system pattern surfaces from Spine Workspace.",
+    desc: "Cross-system pattern surfaces from SpineWorkspace.",
   },
   {
     label: "AI reasons with evidence",
@@ -130,7 +130,7 @@ export function SpineContent() {
         </div>
       </section>
 
-      {/* What Spine Workspace does */}
+      {/* What SpineWorkspace does */}
       <section className="arvio-section marketing-surface">
         <div className="mx-auto max-w-[1100px]">
           <motion.div
@@ -239,7 +239,7 @@ export function SpineContent() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="section-heading">
-              What makes Spine Workspace{" "}
+              What makes SpineWorkspace{" "}
               <span className="text-primary">different</span>
             </h2>
           </motion.div>

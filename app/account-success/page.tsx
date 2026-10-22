@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Account Success — One Customer, One Record | Spine InnovTech",
     description:
       "Detect churn signals across 4+ tools before it's too late. Cross-tool entity matching with confidence scoring.",
-    images: [{ url: "/images/campaign/Banner-AccountSuccess-A.jpg", width: 1584, height: 396, alt: "Spine Workspace Account Success" }],
+    images: [{ url: "/images/campaign/Banner-AccountSuccess-A.jpg", width: 1584, height: 396, alt: "SpineWorkspace Account Success" }],
   },
   twitter: {
     card: "summary_large_image",

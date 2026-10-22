@@ -28,14 +28,14 @@ export default function LoginPage() {
         <div>
           <Link href="/" className="inline-flex items-center gap-2 text-[#032D60]">
             <SpineLogo className="h-8 w-8" />
-            <span className="text-[16px] font-semibold">Spine Workspace</span>
+            <span className="text-[16px] font-semibold">SpineWorkspace</span>
           </Link>
           <h1 className="mt-8 text-[length:min(32px,var(--marketing-title-size))] font-semibold tracking-[-0.03em] text-[#032D60]">Sign in</h1>
           <p className="mt-3 text-[15px] leading-[1.6] text-[#444]">
-            Spine Workspace is the business-context workspace where humans and AI work together. Sign-in continues into setup for your operating area.
+            SpineWorkspace is the business-context workspace where humans and AI work together. Sign-in continues into setup for your operating area.
           </p>
           <p className="mt-4 rounded-md border border-[#E5E5E5] bg-white p-3 text-[13px] leading-[1.55] text-[#444]">
-            This corporate site introduces Spine InnovTech. To evaluate or enter the Spine Workspace product, continue on the product site at{" "}
+            This corporate site introduces Spine InnovTech. To evaluate or enter the SpineWorkspace product, continue on the product site at{" "}
             <a href="https://spineworkspace.com" className="font-semibold text-[#0176D3] hover:underline">
               spineworkspace.com
             </a>
@@ -63,7 +63,7 @@ export default function LoginPage() {
             href="https://spineworkspace.com/login?next=%2Fworkspace%2Fmy-work"
             className="mt-3 inline-flex h-10 w-full items-center justify-center rounded-md border border-[#0176D3] bg-[#F0F8FF] text-[14px] font-semibold text-[#032D60] hover:bg-[#E1F0FF]"
           >
-            Continue on Spine Workspace product site
+            Continue on SpineWorkspace product site
           </a>
           <p className="mt-4 text-[13px] text-[#444]">
             Need access for a team?{" "}

@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: { absolute: "Technology Portfolio | Spine InnovTech" },
-  description: "Explore the Spine InnovTech technology portfolio: the Spine Workspace product, Spine Fabric, Spine Twin and governed execution architecture.",
+  description: "Explore the Spine InnovTech technology portfolio: the SpineWorkspace product, Spine Fabric, Spine Twin and governed execution architecture.",
   alternates: { canonical: "/portfolio" },
 };
 
@@ -17,7 +17,7 @@ const work = [
   {
     icon: UsersRound,
     type: "Flagship product",
-    title: "Spine Workspace",
+    title: "SpineWorkspace",
     body: "A business-context workspace for people and AI to understand the business, share work and move goals forward together.",
     href: "/product",
     external: false,
@@ -57,8 +57,8 @@ export default function PortfolioPage() {
         <PageHero
           badge="Spine InnovTech / Portfolio"
           headline="One direction. Connected capabilities."
-          subhead="Our portfolio is built around Spine Workspace. The elements below describe an integrated product architecture, not a list of separately purchasable products or verified customer implementations."
-          primaryCta={{ label: "Explore Spine Workspace", href: "/product" }}
+          subhead="Our portfolio is built around SpineWorkspace. The elements below describe an integrated product architecture, not a list of separately purchasable products or verified customer implementations."
+          primaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
           secondaryCta={{ label: "Platform architecture", href: "/platform" }}
         />
         <section className="mx-auto max-w-[1220px] px-5 py-24 sm:px-8 lg:py-32">

@@ -13,7 +13,7 @@ const plans = [
     features: [
       "Connect a small set of tools and see basics clearly",
       "Manual approvals for every move keep early trust strong",
-      "Great for individuals or small teams testing Spine Workspace",
+      "Great for individuals or small teams testing SpineWorkspace",
     ],
     cta: "Get started",
     href: "/contact?intent=pricing",

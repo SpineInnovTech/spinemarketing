@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Connected Ecosystems & Integrations | Spine InnovTech",
     description: "Connect business systems and assemble shared context for people and their Twin. Source systems stay authoritative.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace Integrations" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace Integrations" }],
   },
 }
 

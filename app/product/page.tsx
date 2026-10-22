@@ -3,9 +3,9 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { SpineWorkspaceDetails } from "@/components/marketing/spine-workspace-details";
 export const metadata: Metadata = {
-  title: "Spine Workspace — Dashboards, Canvas & AI | Spine InnovTech",
+  title: "SpineWorkspace — Dashboards, Canvas & AI | Spine InnovTech",
   description:
-    "See editable dashboards, Canvas views and AI assistance connected to your business records with Spine Workspace.",
+    "See editable dashboards, Canvas views and AI assistance connected to your business records with SpineWorkspace.",
   alternates: { canonical: "/product" },
 };
 

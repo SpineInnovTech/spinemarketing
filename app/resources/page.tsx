@@ -10,12 +10,12 @@ import { BreadcrumbJsonLd } from "@/components/structured-data";
 export const metadata: Metadata = {
   title: "Resources | Spine InnovTech",
   description:
-    "Guides, use cases, and tools to help you get the most from Spine Workspace.",
+    "Guides, use cases, and tools to help you get the most from SpineWorkspace.",
   alternates: { canonical: "/resources" },
   openGraph: {
     title: "Resources | Spine InnovTech",
-    description: "Guides, use cases, and tools to help you get the most from Spine Workspace.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    description: "Guides, use cases, and tools to help you get the most from SpineWorkspace.",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 };
 

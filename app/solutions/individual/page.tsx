@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Individual Professionals | Spine InnovTech",
     description: "Morning brief, session memory, task queue — your day, organized.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

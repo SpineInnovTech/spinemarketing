@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Business Ops — 12 Tabs → One Workspace | Spine InnovTech",
     description: "Stop toggling between 12 tabs to find context. Cross-system visibility with AI that handles the busywork.",
-    images: [{ url: "/images/campaign/Banner-BusinessOps-A.jpg", width: 1584, height: 396, alt: "Spine Workspace Business Ops" }],
+    images: [{ url: "/images/campaign/Banner-BusinessOps-A.jpg", width: 1584, height: 396, alt: "SpineWorkspace Business Ops" }],
   },
   twitter: {
     card: "summary_large_image",

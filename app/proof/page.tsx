@@ -4,7 +4,7 @@ import { MarketingPageShell } from "@/components/marketing/marketing-page-shell"
 import { breadcrumb, createPageMetadata } from "@/lib/page-metadata";
 
 export const metadata = createPageMetadata({
-  title: "Product evidence — Spine Workspace",
+  title: "Product evidence — SpineWorkspace",
   description: "Inspect authentic Workbench captures, a recorded shell walkthrough and a controlled renewal journey, with clear source and test boundaries.",
   path: "/proof",
 });
@@ -53,7 +53,7 @@ export default function ProofPage() {
     <MarketingPageShell breadcrumbs={breadcrumb("/proof", "Product evidence")}>
       <section aria-labelledby="proof-title" className="border-b border-[#D6E8F8] bg-[#F0F8FF] px-5 pb-12 pt-32 text-[#082B5E] sm:px-8 sm:pb-16">
         <div className="mx-auto max-w-[1240px]">
-          <p className="text-xs font-semibold uppercase tracking-[.2em] text-[#006FE8]">Spine Workspace · Product evidence</p>
+          <p className="text-xs font-semibold uppercase tracking-[.2em] text-[#006FE8]">SpineWorkspace · Product evidence</p>
           <h1 id="proof-title" className="mt-5 max-w-[850px] text-[length:min(clamp(2.7rem,5vw,4.8rem),var(--marketing-title-size))] font-semibold leading-[1.1] tracking-[-.045em]">Product evidence you can inspect.</h1>
           <p className="mt-6 max-w-[740px] text-[length:var(--marketing-body-size)] leading-7 text-[#4E607A]">See the interface, watch real interactions and follow the recorded test scope behind one workflow.</p>
         </div>

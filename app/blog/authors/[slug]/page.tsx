@@ -25,7 +25,7 @@ export async function generateMetadata({
   const author = articles.find((a) => a.author.slug === slug)?.author
   if (!author) return { title: "Not Found" }
   return {
-    title: `${author.name} | Spine Workspace Blog`,
+    title: `${author.name} | SpineWorkspace Blog`,
     description: author.bio ?? `Articles by ${author.name}.`,
     alternates: { canonical: `/blog/authors/${slug}` },
   }

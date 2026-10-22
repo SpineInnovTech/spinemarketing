@@ -53,7 +53,7 @@ export function RoleSolutionLayout({
       />
 
       <Section variant="muted">
-        <SectionHeader label="Focus areas" headline="What this role needs from Spine Workspace" />
+        <SectionHeader label="Focus areas" headline="What this role needs from SpineWorkspace" />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {focus.map(({ title, desc }, i) => {
             const Icon = focusIcons[i % focusIcons.length];

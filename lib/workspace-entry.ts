@@ -1,6 +1,6 @@
 import { AUTH_ORIGIN, SPINE_WORKSPACE_APEX, SPINE_WORKSPACE_APP } from "./site-urls";
 
-// Corporate site routes exclusively to the Spine Workspace product site
+// Corporate site routes exclusively to the SpineWorkspace product site
 // (https://spineworkspace.com). Only the product site redirects to the app.
 const solutionDomains: Readonly<Record<string, string>> = {
   "customer-success": "account-success",

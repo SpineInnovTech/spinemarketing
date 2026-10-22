@@ -141,8 +141,8 @@ export function WorkbenchDashboardShowcase() {
     ? "/images/workbench/native-shell/workbench-20261015.webp"
     : `/images/workbench/editable-dashboard/${view.id}-20261015.webp`;
   const imageAlt = isNativeShell
-    ? "Captured native Spine Workspace Account Success Workbench shell with unbound KPI values, two QA records, Inspect and Ask Twin controls, and the complete blue sidebar."
-    : `Captured Spine Workspace Customer Service & Support dashboard: ${view.label}, with the real operational dashboard controls and native blue sidebar.`;
+    ? "Captured native SpineWorkspace Account Success Workbench shell with unbound KPI values, two QA records, Inspect and Ask Twin controls, and the complete blue sidebar."
+    : `Captured SpineWorkspace Customer Service & Support dashboard: ${view.label}, with the real operational dashboard controls and native blue sidebar.`;
 
   const stepDashboardView = (delta: number) => {
     const nextIndex = (activeIndex + delta + dashboardViews.length) % dashboardViews.length;

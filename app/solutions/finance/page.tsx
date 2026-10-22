@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Finance | Spine InnovTech",
     description: "Revenue, risk, collections, cash — the financial picture that finance leaders actually need to run the business.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

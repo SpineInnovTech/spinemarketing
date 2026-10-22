@@ -20,36 +20,36 @@ export const headerNavigation: NavItem[] = [
     href: "/company",
     items: [
       { name: "About Spine InnovTech", href: "/company", icon: Building2, desc: "Our story, vision, and principles" },
-      { name: "Why we build", href: "/about", icon: Compass, desc: "The enterprise integration problem behind our work" },
+      { name: "Our philosophy", href: "/about", icon: Compass, desc: "How we think and build" },
       { name: "Vision & principles", href: "/company#principles", icon: ShieldCheck, desc: "What guides our engineering" },
       { name: "Contact", href: "/contact", icon: Mail, desc: "Connect with our team" },
     ],
   },
   {
-    label: "Platform & Products",
+    label: "Technology",
     href: "/platform",
     featured: {
-      name: "Spine Workspace",
+      name: "SpineWorkspace",
       href: "https://spineworkspace.com",
       icon: Layers3,
-      desc: "Our core shared workspace for humans and AI (spineworkspace.com)",
+      desc: "Our flagship product for humans and AI (spineworkspace.com)",
       external: true,
     },
     items: [
-      { name: "Spine Fabric", href: "/platform/spine-fabric", icon: Network, desc: "Governed operational business context" },
-      { name: "Spine Twin", href: "/twin", icon: Sparkles, desc: "Context-aware AI counterpart" },
-      { name: "Governed Runtime", href: "/governance", icon: ShieldCheck, desc: "Authorization, execution, and reconciliation" },
-      { name: "Spine Capabilities", href: "/integrations", icon: Workflow, desc: "Connectors, MCP, tools, and plugins" },
+      { name: "Technology overview", href: "/platform", icon: Network, desc: "The foundation for connected business work" },
+      { name: "Trust & governance", href: "/security", icon: ShieldCheck, desc: "Access, authority, provenance and outcomes" },
+      { name: "Responsible AI", href: "/governance", icon: Sparkles, desc: "AI within business responsibility" },
+      { name: "About SpineWorkspace", href: "/spineworkspace", icon: Workflow, desc: "Our flagship product, explained" },
     ],
     menuFooter: [
-      { name: "Explore the platform architecture", href: "/platform" },
+      { name: "Explore the technology foundation", href: "/platform" },
     ],
   },
   {
     label: "Insights",
     href: "/blog",
     items: [
-      { name: "Blog", href: "/blog", icon: BookOpen, desc: "Ideas on business context and AI" },
+      { name: "Insights", href: "/blog", icon: BookOpen, desc: "Perspectives on context, authority and connected work" },
       { name: "Research & resources", href: "/resources", icon: FileText, desc: "Architecture, thinking, and explainers" },
       { name: "Updates", href: "/updates", icon: Newspaper, desc: "Company and product updates" },
       { name: "Changelog", href: "/changelog", icon: History, desc: "Dated technical changes" },
@@ -64,41 +64,38 @@ export const footerColumns: FooterColumn[] = [
   {
     heading: "Company",
     links: [
-      { name: "About", href: "/company" },
-      { name: "Our story", href: "/about" },
+      { name: "Company", href: "/company" },
+      { name: "Our philosophy", href: "/about" },
+      { name: "Careers", href: "/contact?topic=careers" },
       { name: "Contact", href: "/contact" },
-      { name: "Portfolio", href: "/portfolio" },
     ],
   },
   {
-    heading: "Platform & Products",
+    heading: "Technology",
     links: [
-      { name: "Spine Workspace", href: "https://spineworkspace.com", external: true },
-      { name: "Spine Fabric", href: "/platform/spine-fabric" },
-      { name: "Spine Twin", href: "/twin" },
-      { name: "Governance & Runtime", href: "/governance" },
-      { name: "Spine Capabilities", href: "/integrations" },
+      { name: "Technology overview", href: "/platform" },
+      { name: "Trust & governance", href: "/security" },
+      { name: "Responsible AI", href: "/governance" },
+      { name: "Partnerships", href: "/contact?topic=partnership" },
     ],
   },
   {
-    heading: "Insights",
+    heading: "Product",
     links: [
-      { name: "Blog", href: "/blog" },
+      { name: "About SpineWorkspace", href: "/spineworkspace" },
+      { name: "Visit the product website", href: "https://spineworkspace.com", external: true },
+    ],
+  },
+  {
+    heading: "Perspectives",
+    links: [
+      { name: "Insights", href: "/blog" },
       { name: "Research & resources", href: "/resources" },
-      { name: "Updates", href: "/updates" },
-      { name: "Changelog", href: "/changelog" },
-    ],
-  },
-  {
-    heading: "Trust & legal",
-    links: [
-      { name: "Security", href: "/security" },
       { name: "Privacy", href: "/privacy" },
       { name: "Terms", href: "/terms" },
-      { name: "Documentation", href: DOCS_URL },
     ],
   },
 ];
 
-export const COMPANY_TAGLINE = "We build the foundation for connected business work. Shared business context. Human and AI collaboration. Governed capabilities. Work continuity.";
-export const PRODUCT_ONELINER = "Spine Workspace is the business-context workspace where humans and AI work together.";
+export const COMPANY_TAGLINE = "We build the foundation for connected business work. Shared business context. Human and AI collaboration. Explicit authority. Work continuity.";
+export const PRODUCT_ONELINER = "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.";

@@ -103,7 +103,7 @@ export function SignalStoryLayout({
       ) : null}
 
       <Section>
-        <SectionHeader label="Signal detection" headline="How Spine Workspace surfaces what matters" />
+        <SectionHeader label="Signal detection" headline="How SpineWorkspace surfaces what matters" />
         <div className="mx-auto max-w-[800px] space-y-0">
           {signals.map((signal, i) => (
             <motion.div

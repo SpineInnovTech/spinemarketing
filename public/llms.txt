@@ -1,6 +1,6 @@
 # Spine InnovTech
 
-> Intelligence for Connected Business — and Spine Workspace, where humans and AI work from shared business context.
+> Intelligence for Connected Business — and SpineWorkspace, where humans and AI work from shared business context.
 
 Canonical Domain: https://spineinnovtech.com
 Documentation Index: https://spineinnovtech.com/llms.txt

@@ -82,7 +82,7 @@ export function WorkflowTransformLayout({
               <div className="flex h-7 w-7 items-center justify-center rounded-md bg-red-50">
                 <X className="h-3.5 w-3.5 text-red-500" />
               </div>
-              <span className="text-[13px] font-bold uppercase tracking-[0.08em] text-red-600">Without Spine Workspace</span>
+              <span className="text-[13px] font-bold uppercase tracking-[0.08em] text-red-600">Without SpineWorkspace</span>
             </div>
             {beforeAfter.map((item, i) => (
               <div key={i} className="rounded-md border border-red-200 bg-red-50/50 px-5 py-4">
@@ -95,7 +95,7 @@ export function WorkflowTransformLayout({
               <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[#0176D3]/10">
                 <Check className="h-3.5 w-3.5 text-[#0176D3]" />
               </div>
-              <span className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">With Spine Workspace</span>
+              <span className="text-[13px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">With SpineWorkspace</span>
             </div>
             {beforeAfter.map((item, i) => (
               <div key={i} className="rounded-md border border-[#0176D3]/20 bg-[#F3F6F9] px-5 py-4">

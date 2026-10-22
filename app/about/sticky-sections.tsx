@@ -19,15 +19,15 @@ const journeyItems = [
   {
     tag: "The integration years",
     title: "Years connecting enterprise systems.",
-    description: "The tools were connected. The people making decisions still could not see the whole story with reliable history behind it.",
+    description: "Before founding Spine InnovTech, our founder worked for years connecting enterprise systems. The tools were connected. The people making decisions still could not see the whole story with reliable history behind it.",
     icon: Wrench,
     color: "#3b82f6",
     features: ["The tools stayed themselves", "The record stayed in those tools", "The person still had to rebuild the story"],
   },
   {
     tag: "The red account",
-    title: "An $8M renewal was red, with no reliable history.",
-    description: "Illustrative founder outcome, not a published customer result. A major $8M renewal went red. No one could assemble a reliable history of what had happened across the account, so no one could see the real issue.",
+    title: "An $8M renewal was already at risk.",
+    description: "Prior founder experience, not a SpineWorkspace customer result. Before founding Spine InnovTech, our founder worked on an $8 million renewal that was already at risk, with no reliable account history. No one could assemble what had happened across the account, so no one could see the real issue.",
     icon: AlertCircle,
     color: "#ef4444",
     features: ["$8M renewal at risk", "No reliable account history", "The real issue stayed hidden"],
@@ -35,7 +35,7 @@ const journeyItems = [
   {
     tag: "Authorized context exposed the issue",
     title: "Authorized Slack, email, MuleSoft and Salesforce context.",
-    description: "Working within authorized access, context drawn from Slack, email, MuleSoft and multiple Salesforce connectors was related together. Seen as one governed view, the records exposed the real issue the dashboards had missed.",
+    description: "Working within authorized access, context drawn from Slack, email, the MuleSoft connector and multiple Salesforce connectors was brought together. Seen as one governed view, the records revealed the underlying problem the dashboards had missed.",
     icon: Search,
     color: "#f59e0b",
     features: ["Slack + email + MuleSoft", "Multiple Salesforce connectors", "Authorized, governed access only"],
@@ -43,7 +43,7 @@ const journeyItems = [
   {
     tag: "The save, and the lasting need",
     title: "The account was saved. The lasting need was continuity.",
-    description: "Illustrative outcome, not a published customer result. With the real issue in view, the account was saved. The lasting lesson was clear: what a business needs is continuous, governed shared context — not another one-off manual rescue.",
+    description: "Prior founder experience, not a SpineWorkspace customer result, testimonial or ROI claim. With the underlying problem in view, the account was saved. The lasting need was clear: continuous, governed shared context — a way to preserve that understanding as people, systems and decisions changed. That experience shaped the company we are building.",
     icon: CheckCircle2,
     color: "#1BA784",
     features: ["Account saved", "Source systems stayed authoritative", "Continuous governed shared context was the need"],
@@ -62,8 +62,8 @@ const platformNodes = [
 export function AboutJourneyScroll() {
   return (
     <StickyScroll
-      tag="The proof / Our story"
-      heading="Why we build: an $8M renewal, saved by governed shared context."
+      tag="Our origin / Our story"
+      heading="The experience behind the company: an $8M renewal, and the need it revealed."
       items={journeyItems}
     />
   );

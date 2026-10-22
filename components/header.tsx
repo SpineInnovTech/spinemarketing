@@ -631,7 +631,7 @@ export function Header({
                 href="https://spineworkspace.com"
                 className="inline-flex items-center gap-1.5"
               >
-                <span>Explore Spine Workspace</span>
+                <span>Explore SpineWorkspace</span>
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </a>
             </Button>
@@ -801,7 +801,7 @@ export function Header({
                   onClick={closeMobile}
                   className="flex h-10 items-center justify-center gap-1.5 rounded-md bg-[#006FE8] text-[14px] font-semibold text-white hover:bg-[#0055B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006FE8] focus-visible:ring-offset-2"
                 >
-                  <span>Explore Spine Workspace</span>
+                  <span>Explore SpineWorkspace</span>
                   <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
                 <div className="grid grid-cols-2 gap-2">

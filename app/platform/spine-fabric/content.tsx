@@ -24,9 +24,9 @@ export function SpineFabricContent() {
       <PageHero
         badge="Spine Fabric · Core technology"
         headline="A business is more than its records."
-        subhead="Spine Fabric is the contextual foundation behind Spine Workspace. It represents how people, goals, records, evidence, decisions and work relate across the tools your business uses."
+        subhead="Spine Fabric is the contextual foundation behind SpineWorkspace. It represents how people, goals, records, evidence, decisions and work relate across the tools your business uses."
         primaryCta={{ label: "Explore the architecture", href: "/platform" }}
-        secondaryCta={{ label: "Discover Spine Workspace", href: "/product" }}
+        secondaryCta={{ label: "Discover SpineWorkspace", href: "/product" }}
         art={
           <figure>
             <Image src="/images/corporate-architecture.png" width={1774} height={887} priority alt="Concept illustration of Fabric, Workbench, Twin and Runtime within one connected business architecture" className="h-auto w-full rounded-xl" />

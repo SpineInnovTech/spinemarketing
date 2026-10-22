@@ -1,6 +1,6 @@
 /**
  * Sitemap and static-host alias policy.
- * Redirects here must match firebase.json (single hop, permanent).
+ * Redirects here must match public/_redirects (Cloudflare Workers Assets; single hop, permanent).
  * Reasons are the record for every excluded or redirected route.
  */
 
@@ -16,7 +16,13 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
     path: "/spineworkspace",
     action: "redirect",
     destination: "/product",
-    reason: "Legacy entry redirects to the local Spine Workspace product-details page.",
+    reason: "Legacy entry redirects to the local SpineWorkspace product-details page.",
+  },
+  {
+    path: "/pricing",
+    action: "redirect",
+    destination: "https://spineworkspace.com/pricing",
+    reason: "Pricing is the product site's responsibility; the Worker issues a permanent 308 to spineworkspace.com/pricing. Kept addressable, excluded from the sitemap as a redirect.",
   },
   {
     path: "/ai",
@@ -27,7 +33,7 @@ export const ROUTE_DECISIONS: RouteDecision[] = [
   {
     path: "/product",
     action: "keep",
-    reason: "Spine Workspace product details, features, workflow, and technology live on the corporate marketing site.",
+    reason: "SpineWorkspace product details, features, workflow, and technology live on the corporate marketing site.",
   },
   {
     path: "/why",

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Personal Ops — Your Morning, Auto-Organized | Spine InnovTech",
     description: "Replace 45 minutes of app-hopping with a single morning brief. A calm workspace above all your apps.",
-    images: [{ url: "/images/campaign/Banner-PersonalOps-A.jpg", width: 1584, height: 396, alt: "Spine Workspace Personal Ops" }],
+    images: [{ url: "/images/campaign/Banner-PersonalOps-A.jpg", width: 1584, height: 396, alt: "SpineWorkspace Personal Ops" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Insights & Articles | Spine InnovTech",
     description: "Insights on connected workspaces, AI governance, and operational intelligence.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

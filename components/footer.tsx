@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { SpineLogo } from "@/components/spine-logo";
 import { footerColumns } from "@/lib/navigation";
-import { COMPANY_LEGAL_NAME } from "@/lib/company";
+import { COMPANY_NAME } from "@/lib/company";
 
 export function Footer() {
   return (
@@ -28,9 +28,9 @@ export function Footer() {
               We build the foundation for connected business work.
             </h2>
             <p className="mt-5 max-w-[400px] text-[14px] leading-[1.85] text-[#CBD9EB]">
-              Spine InnovTech develops technology for shared business context,
-              human and AI collaboration, governed capabilities and work
-              continuity.
+              Spine InnovTech develops technology for shared business
+              understanding, human and AI collaboration, explicit authority and
+              work continuity.
             </p>
             <Link
               href="/contact"
@@ -76,13 +76,13 @@ export function Footer() {
           </nav>
         </div>
         <p className="border-b border-white/15 py-6 text-[13px] leading-[1.8] text-[#CBD9EB]">
-          Your tools keep the record. Your people keep the authority. Context
-          continues with the work.
+          Source systems stay authoritative. Authority stays with people.
+          Context stays with the work.
         </p>
         <div className="flex flex-wrap items-center justify-between gap-4 py-7">
           <p className="text-[12px] text-[#CBD9EB]">
-            © {new Date().getFullYear()} {COMPANY_LEGAL_NAME}. Built
-            in Coimbatore, TamilNadu, India.
+            © {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
+            Built in Coimbatore, Tamil Nadu, India.
           </p>
           <Link
             href="/site-map"

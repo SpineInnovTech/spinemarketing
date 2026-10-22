@@ -69,10 +69,10 @@ export function AboutContent() {
       <section className="mx-auto grid max-w-[1220px] gap-12 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:items-center lg:py-32">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[.21em] text-[#2461BC]">From philosophy to product</p>
-          <h2 className="mt-6 text-[length:min(clamp(2.4rem,4.4vw,4.4rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.055em] text-[#0C274E]">Spine Workspace puts the principle to work.</h2>
+          <h2 className="mt-6 text-[length:min(clamp(2.4rem,4.4vw,4.4rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.055em] text-[#0C274E]">SpineWorkspace puts the principle to work.</h2>
           <p className="mt-7 text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#536883]">One workspace for humans and AI to understand the business, share the work, and achieve goals together. Spine Fabric, the Workbench, the Twin and Runtime are parts of that integrated direction.</p>
           <a href="/product" className="mt-9 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#102F5B] px-6 text-sm font-semibold text-white transition hover:bg-[#2759A0]">
-            Explore Spine Workspace <ArrowRight className="h-4 w-4" aria-hidden />
+            Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
           </a>
         </div>
         <div className="grid gap-4 rounded-[26px] bg-[#09244D] p-6 text-white sm:p-9">

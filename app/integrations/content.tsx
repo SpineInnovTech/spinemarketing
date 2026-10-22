@@ -22,7 +22,7 @@ export function IntegrationsContent() {
       <PageHero
         badge="Integrations"
         headline="Your tools. Shared context."
-        subhead="Connect the systems your team already uses. Source systems stay authoritative. Spine Workspace assembles governed business context for people and their Twin."
+        subhead="Connect the systems your team already uses. Source systems stay authoritative. SpineWorkspace assembles governed business context for people and their Twin."
         primaryCta={{ label: "Book a demo", href: "/contact?intent=demo" }}
         secondaryCta={{ label: "Read the docs", href: DOCS_URL }}
         art={<AppCluster />}
@@ -35,7 +35,7 @@ export function IntegrationsContent() {
               Bring your systems together — without replacing them
             </h2>
             <p className="mt-4 text-[16px] leading-[1.65] text-[#33465B]">
-              Integrations are about fit, permissions, and authority — not a logo wall. Spine Workspace reads authorized context, assembles evidence, and proposes work. Source systems keep the record until a person accepts a change.
+              Integrations are about fit, permissions, and authority — not a logo wall. SpineWorkspace reads authorized context, assembles evidence, and proposes work. Source systems keep the record until a person accepts a change.
             </p>
           </div>
           <div className="mt-10 overflow-x-auto">
@@ -55,7 +55,7 @@ export function IntegrationsContent() {
                   ["Document storage", "Contracts, project briefs, plans and decisions", "Files remain governed where they live"],
                   ["Finance / billing", "Invoices, payments, obligations and exceptions", "Finance systems own financial records"],
                   ["Project / engineering", "Tasks, dependencies, issues and delivery history", "Project tools own their work records"],
-                  ["Spine Workspace", "Context assembly, evidence links, proposals, review", "Does not become a new home for the record"],
+                  ["SpineWorkspace", "Context assembly, evidence links, proposals, review", "Does not become a new home for the record"],
                 ].map(([system, role, authority]) => (
                   <tr key={system} className="border-b border-[#D9E4EF]">
                     <td className="py-3 pr-4 font-semibold text-[#032D60]">{system}</td>

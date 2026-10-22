@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How it works | Spine InnovTech",
     description: "People and Twin work from authorized business context. Investigate, prepare, review consequential actions, and reconcile observed results in the systems that own the records.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

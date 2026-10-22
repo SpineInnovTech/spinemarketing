@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Finance Leaders | Spine InnovTech",
     description: "Cash, collections, runway — accounting, billing, and CRM unified.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

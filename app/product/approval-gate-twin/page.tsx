@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Governance & Twin in Action | Spine InnovTech",
     description: "Review proposed work with evidence, route consequential actions to the right authority, and reconcile observed outcomes.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

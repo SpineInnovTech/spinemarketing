@@ -185,7 +185,7 @@ const useCases = [
   {
     num: "02",
     title: "Duplicate detection at ingest",
-    desc: "New records scored against existing entities before entering Spine Workspace.",
+    desc: "New records scored against existing entities before entering SpineWorkspace.",
   },
   {
     num: "03",

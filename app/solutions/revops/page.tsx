@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RevOps & Business Operations | Spine InnovTech",
     description: "Pipelines, headcount, projects, exceptions — connected and actionable.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine Workspace" }],
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 
