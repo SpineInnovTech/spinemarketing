@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Replace the morning app-hopping with a single morning brief. A calm workspace above all your apps — connect, surface insights, approve what happens.",
   alternates: { canonical: "/personal-ops" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Personal Ops — Your Morning, Organized | Spine InnovTech",
     description: "Replace the morning app-hopping with a single morning brief. A calm workspace above all your apps.",
     images: [{ url: "/images/campaign/Banner-PersonalOps-A.jpg", width: 1584, height: 396, alt: "SpineWorkspace Personal Ops" }],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Personal Ops — Your Morning, Organized | Spine InnovTech",
-    description: "Replace the morning app-hopping with a single morning brief.",
+    description: "Replace the morning app-hopping with a single morning brief. A calm workspace above all your apps.",
     images: ["/images/campaign/Banner-PersonalOps-A.jpg"],
   },
 }

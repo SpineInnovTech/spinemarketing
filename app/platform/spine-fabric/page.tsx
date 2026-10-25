@@ -13,10 +13,11 @@ export const metadata: Metadata = {
     "Spine Fabric relates authorized records, evidence, goals, decisions and outcomes into governed business context, while existing tools keep the record.",
   alternates: { canonical: "/platform/spine-fabric" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Spine Fabric — The contextual foundation | Spine InnovTech",
     description:
       "Spine Fabric relates authorized records, evidence, goals, decisions and outcomes into governed business context, while existing tools keep the record.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

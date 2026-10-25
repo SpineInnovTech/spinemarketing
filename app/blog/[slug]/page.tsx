@@ -35,13 +35,14 @@ export async function generateMetadata({
     alternates: { canonical },
     robots: post.seo?.noIndex ? { index: false, follow: false } : undefined,
     openGraph: {
+      siteName: "Spine InnovTech",
       title,
       description,
       url: absoluteUrl(`/blog/${post.slug}`),
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      images: post.heroImageUrl ? [{ url: post.heroImageUrl }] : [{ url: "/og.png", width: 1200, height: 630 }],
+      images: post.heroImageUrl ? [{ url: post.heroImageUrl }] : [{ url: "/og-share-2026-10.png", width: 1200, height: 630 }],
     },
   }
 }

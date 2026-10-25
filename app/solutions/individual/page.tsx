@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Morning brief, session memory, task queue — your day, organized.",
   alternates: { canonical: "/solutions/individual" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Individual Professionals | Spine InnovTech",
     description: "Morning brief, session memory, task queue — your day, organized.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

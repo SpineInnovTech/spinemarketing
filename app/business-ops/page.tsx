@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Stop toggling between tabs to find context. Cross-system visibility with AI that handles the busywork — with your approval. Zero context lost.",
   alternates: { canonical: "/business-ops" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Business Ops — Many Tabs → One Workspace | Spine InnovTech",
     description: "Stop toggling between tabs to find context. Cross-system visibility with AI that handles the busywork.",
     images: [{ url: "/images/campaign/Banner-BusinessOps-A.jpg", width: 1584, height: 396, alt: "SpineWorkspace Business Ops" }],
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Business Ops — Many Tabs → One Workspace | Spine InnovTech",
-    description: "Stop toggling between tabs to find context. Zero context lost.",
+    description: "Stop toggling between tabs to find context. Cross-system visibility with AI that handles the busywork.",
     images: ["/images/campaign/Banner-BusinessOps-A.jpg"],
   },
 }

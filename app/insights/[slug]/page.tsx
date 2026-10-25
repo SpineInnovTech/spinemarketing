@@ -27,11 +27,12 @@ export async function generateMetadata({
     description: article.metaDescription,
     alternates: { canonical },
     openGraph: {
+      siteName: "Spine InnovTech",
       title: article.metaTitle,
       description: article.metaDescription,
       url: absoluteUrl(canonical),
       type: "article",
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+      images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
     },
   }
 }

@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Monday brief. Revenue movement. Board pack — ready when you are.",
   alternates: { canonical: "/solutions/founders" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Founders & CXOs | Spine InnovTech",
     description: "Monday brief. Revenue movement. Board pack — ready when you are.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

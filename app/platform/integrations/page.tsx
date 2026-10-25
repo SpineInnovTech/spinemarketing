@@ -14,9 +14,10 @@ export const metadata: Metadata = {
     "The apps, files, and conversations you already use, through one connection.",
   alternates: { canonical: "/platform/integrations" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Integrations | Spine InnovTech",
     description: "The apps, files, and conversations you already use, through one connection.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

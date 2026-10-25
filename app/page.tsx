@@ -8,17 +8,25 @@ export const metadata: Metadata = {
     "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Spine InnovTech — Connecting Business Context for Humans and AI",
+    siteName: "Spine InnovTech",
+    title: "Connecting business context for humans and AI, with people in control.",
     description:
       "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [
+      {
+        url: "/og-share-2026-10.png",
+        width: 1200,
+        height: 630,
+        alt: "Spine InnovTech — Connecting business context for humans and AI, with people in control.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spine InnovTech — Connecting Business Context for Humans and AI",
+    title: "Connecting business context for humans and AI, with people in control.",
     description:
       "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
-    images: ["/og.png"],
+    images: ["/og-share-2026-10.png"],
   },
 };
 

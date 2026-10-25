@@ -12,9 +12,10 @@ export const metadata: Metadata = {
     "Utilisation, delivery, exceptions, escalations — the live view that keeps projects on track and clients happy.",
   alternates: { canonical: "/solutions/operations" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Operations & Delivery Leaders | Spine InnovTech",
     description: "Utilisation, delivery, exceptions, escalations — the live view that keeps projects on track and clients happy.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

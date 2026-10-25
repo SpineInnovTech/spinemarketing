@@ -12,10 +12,11 @@ export const metadata: Metadata = {
     "Learn how clear limits on who can see what, who can act, where information came from and proof of results shape Spine InnovTech's engineering approach.",
   alternates: { canonical: "/trust" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Trust & Governance — Spine InnovTech",
     description:
       "Learn how clear limits on who can see what, who can act, where information came from and proof of results shape Spine InnovTech's engineering approach.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

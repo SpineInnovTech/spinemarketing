@@ -12,9 +12,10 @@ export const metadata: Metadata = {
     "Orders, shipments, payments — live across ERP, CRM, and logistics.",
   alternates: { canonical: "/solutions/manufacturing" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Manufacturing & Trade | Spine InnovTech",
     description: "Orders, shipments, payments — live across ERP, CRM, and logistics.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 
