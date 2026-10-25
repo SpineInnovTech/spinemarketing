@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     "Explore SpineWorkspace features and workflows for sales, customer success, finance, operations and industry work. Evaluation lives on spineworkspace.com.",
   alternates: { canonical: "/solutions" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Solutions by Team & Industry | Spine InnovTech",
     description: "Explore domain-specific features, connected context, and governed workflows by team and industry.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace Solutions" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace Solutions" }],
   },
 }
 

@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Review proposed work with its evidence, send actions that matter to the right person to approve, and check the results.",
   alternates: { canonical: "/product/approval-gate-twin" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Governance & Twin in Action | Spine InnovTech",
     description: "Review proposed work with its evidence, send actions that matter to the right person to approve, and check the results.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

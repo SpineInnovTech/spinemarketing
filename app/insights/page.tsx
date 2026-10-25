@@ -13,10 +13,11 @@ export const metadata: Metadata = {
     "Perspectives from Spine InnovTech on business context, who is allowed to act, and how work keeps its history across tools and AI apps.",
   alternates: { canonical: "/insights" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Insights — Spine InnovTech",
     description:
       "Perspectives from Spine InnovTech on business context, who is allowed to act, and how work keeps its history across tools and AI apps.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

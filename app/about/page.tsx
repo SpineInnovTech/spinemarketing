@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Read the engineering principles behind Spine InnovTech: source authority, shared context, human judgment and observable business outcomes.",
   alternates: { canonical: "/about" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Our Philosophy | Spine InnovTech",
     description: "Read the engineering principles behind Spine InnovTech: source authority, shared context, human judgment and observable business outcomes.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

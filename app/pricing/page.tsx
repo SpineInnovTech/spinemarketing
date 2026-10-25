@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/pricing" },
   robots: { index: false, follow: true },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Pricing — SpineWorkspace",
     description: pricingDescription,
   },
