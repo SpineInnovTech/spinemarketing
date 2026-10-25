@@ -50,11 +50,11 @@ const comparisons = [
   },
   {
     before: "Board deck assembled manually",
-    after: "Reports build from live data in minutes",
+    after: "Reports build from live data",
   },
   {
     before: "Forecasts from last month's spreadsheet",
-    after: "Real-time projections from actual data",
+    after: "Up-to-date forecasts from real data",
   },
   {
     before: "Problems found after they hit revenue",
@@ -75,7 +75,7 @@ const fourViews = [
   {
     icon: Building2,
     role: "For CEOs",
-    desc: "Revenue, pipeline, retention — board prep in minutes.",
+    desc: "Revenue, pipeline, retention — board prep made easy.",
   },
   {
     icon: Settings,
@@ -451,7 +451,7 @@ const opsApprovalItems = [
     type: "action",
   },
   {
-    title: "Revenue reconciliation: Stripe vs Salesforce",
+    title: "Match revenue: Stripe vs Salesforce",
     status: "Awaiting approval",
     type: "action",
   },
@@ -543,7 +543,7 @@ const howItWorksSteps: StickyScrollStep[] = [
     label: "Step 01 \u2014 Connect",
     title: "Plug in the apps your business runs on",
     description:
-      "Connect via OAuth in minutes. No engineering required.",
+      "Connect with a secure sign-in. No engineering required.",
     visual: <OpsConnectVisual />,
   },
   {
@@ -1067,7 +1067,7 @@ export function BusinessOpsContent() {
                 num: "04",
                 title: "Board pack generation",
                 quote: "Generate a board-ready summary from live data for my approval.",
-                desc: "AI drafts the narrative. You review, approve, and export in minutes.",
+                desc: "AI drafts the write-up. You review, approve, and export.",
               },
             ].map(({ num, title, quote, desc }, i) => (
               <motion.div

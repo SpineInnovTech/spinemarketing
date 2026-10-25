@@ -21,14 +21,14 @@ import {
 export const metadata = createPageMetadata({
   title: "Documentation & Technical Reference",
   description:
-    "Documentation for Spine InnovTech and SpineWorkspace: architecture, Spine Fabric, governed runtime, connectors, and the machine-readable llms.txt index.",
+    "Docs for Spine InnovTech and SpineWorkspace: how it is built, Spine Fabric, how AI is kept in bounds, connections, and a file for AI tools to read.",
   path: "/docs",
 });
 
 const DOC_SECTIONS = [
   {
-    title: "Platform Architecture & Fabric",
-    description: "Shared business context, source lineage and the platform architecture.",
+    title: "How the platform and Fabric work",
+    description: "Shared business context, where each fact came from, and how the platform is built.",
     icon: Network,
     badge: "Architecture",
     docs: [
@@ -55,8 +55,8 @@ const DOC_SECTIONS = [
     ],
   },
   {
-    title: "Governed Runtime & Security",
-    description: "Access control, action authorization and outcome reconciliation.",
+    title: "Keeping AI in bounds & security",
+    description: "Who can get in, who may act, and checking the result.",
     icon: ShieldCheck,
     badge: "Trust & Governance",
     docs: [
@@ -83,8 +83,8 @@ const DOC_SECTIONS = [
     ],
   },
   {
-    title: "Adaptive Workbenches & AI Twin",
-    description: "Domain-specific projections and context-aware intelligence running inside policy bounds.",
+    title: "Role views & the AI Twin",
+    description: "Views made for each role, and smart help that stays within the rules.",
     icon: Layers3,
     badge: "Runtime Workbenches",
     docs: [
@@ -111,8 +111,8 @@ const DOC_SECTIONS = [
     ],
   },
   {
-    title: "Integrations & Technical Evaluation",
-    description: "Connector coverage, event ingestion and access requirements for compatible AI hosts.",
+    title: "Connections & checking the fit",
+    description: "Which tools connect, getting change alerts, and what AI tools need to connect.",
     icon: Code2,
     badge: "Extensibility",
     docs: [
@@ -148,7 +148,7 @@ export default function DocsPage() {
       <PageHero
         badge="Technical Documentation Hub"
         headline="Spine InnovTech Documentation"
-        subhead="Explore the architecture, governance and integration paths behind SpineWorkspace. Confirm supported connections and deployment access with your team's technical evaluation."
+        subhead="See how SpineWorkspace is built, how it stays safe, and how it connects. Confirm the connections and access your team needs together."
         primaryCta={{ label: "Developer Overview", href: "/developers" }}
         secondaryCta={{ label: "Machine-Readable /llms.txt", href: "/llms.txt" }}
       />

@@ -69,16 +69,16 @@ const scrollItems = [
     ],
   },
   {
-    tag: "Reconciliation",
-    title: "Observe effects and review corrective work",
-    description: "Execution can succeed, fail, or complete partially. Reconcile what happened against the intended outcome. Reversal depends on the source system, action, and available recovery path.",
+    tag: "Checking the result",
+    title: "Watch what happened and review any fixes",
+    description: "An action can work, fail, or only partly work. Check what happened against what was meant to happen. Whether it can be undone depends on the tool, the action, and what recovery is possible.",
     icon: RotateCcw,
     color: "#ef4444",
     features: [
-      "Track attempted actions and observed effects",
-      "Distinguish complete, failed, and partial outcomes",
-      "Review supported corrective steps with the right authority",
-      "Preserve reasons and evidence for reconciliation",
+      "Track what was tried and what it changed",
+      "Tell apart done, failed, and part-done",
+      "Review fixes with the right person",
+      "Keep the reasons and evidence on record",
     ],
   },
 ];

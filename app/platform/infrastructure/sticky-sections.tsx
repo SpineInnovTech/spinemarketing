@@ -11,68 +11,68 @@ import {
 
 const items = [
   {
-    tag: "Real-Time Sync",
+    tag: "Live sync",
     title: "The workspace shows the result",
-    description: "Event-driven updates help the Workspace reflect connected work. Source freshness, delivery delays, and reconciliation remain visible concerns.",
+    description: "The Workspace updates as connected work changes. How fresh the source is, delivery delays, and checking the result stay things to watch.",
     icon: Zap,
     color: "#fbbf24",
     features: [
-      "WebSocket-based real-time data push",
-      "Optimistic UI updates with server reconciliation",
-      "Change notifications across all connected views",
-      "Offline-capable with automatic sync on reconnect",
+      "Changes pushed to the screen as they happen",
+      "The screen updates fast, then confirms with the source",
+      "Updates show across every connected view",
+      "Keeps working offline and syncs when you reconnect",
     ],
   },
   {
-    tag: "Data Pipeline",
+    tag: "How data flows",
     title: "One connection",
-    description: "Raw data flows through extraction, validation, dedup, entity resolution, enrichment, scoring, indexing, and distribution.",
+    description: "Data comes in, is checked, de-duplicated, matched to the right item, enriched, rated, filed, and shared.",
     icon: Database,
     color: "#2dd4bf",
     features: [
-      "Parallel processing across pipeline stages",
-      "Dead letter queue for failed transformations",
-      "Pipeline metrics with stage-level latency tracking",
-      "Automatic retry with exponential backoff",
+      "Several steps run at the same time",
+      "Anything that fails is set aside, not lost",
+      "Each step is timed so slow spots show",
+      "Failed steps retry, waiting longer each time",
     ],
   },
   {
-    tag: "Edge Network",
-    title: "Edge delivery and explicit storage boundaries",
-    description: "Static assets and application requests have different delivery and storage needs. Data locations and cross-border flows require deployment-specific review.",
+    tag: "Worldwide delivery",
+    title: "Fast delivery, with a clear line on where data lives",
+    description: "Pages and app requests have different delivery and storage needs. Where data lives and whether it crosses borders is checked for your setup.",
     icon: Globe,
     color: "#8b5cf6",
     features: [
-      "Edge delivery where supported by the deployment",
-      "Storage locations reviewed separately from delivery",
-      "Measure latency using the actual user journey",
-      "Verify failover and recovery for the target environment",
+      "Fast delivery where your setup supports it",
+      "Where data is stored is checked on its own",
+      "Speed measured using the real user journey",
+      "Backup and recovery checked for your setup",
     ],
   },
   {
-    tag: "Observability",
-    title: "Full-stack monitoring and alerting",
-    description: "Observe system health, pipeline throughput, connector status, and error rates. Monitoring coverage and incident response must be agreed for the deployment.",
+    tag: "Keeping watch",
+    title: "Watching the whole system, with alerts",
+    description: "Watch how the system is doing, how much data is flowing, which tools are connected, and error rates. What is watched and how issues are handled is agreed for your setup.",
     icon: Activity,
     color: "#3b82f6",
     features: [
-      "Real-time system health dashboard",
-      "Pipeline throughput and latency metrics",
-      "Connector health monitoring with auto-reconnect",
-      "Automated incident detection and escalation",
+      "A live view of how the system is doing",
+      "How much data is flowing, and how fast",
+      "Watches connected tools and reconnects on its own",
+      "Spots problems and raises them automatically",
     ],
   },
   {
     tag: "Reliability",
-    title: "Plan, observe, and verify recovery",
-    description: "Deployment and recovery plans should describe how changes are introduced, failures detected, and service restored. Test those plans in the target environment.",
+    title: "Plan, watch, and check recovery",
+    description: "Plans for going live and for recovery should say how changes go in, how failures are spotted, and how service comes back. Test those plans for your setup.",
     icon: Shield,
     color: "#ef4444",
     features: [
-      "Staged deployment and recovery procedures",
-      "Migration planning with explicit service-impact review",
-      "Health checks appropriate to each service",
-      "Incident escalation and recovery verification",
+      "Changes rolled out in careful stages, with recovery steps",
+      "Moves planned with a clear look at any service impact",
+      "Health checks suited to each service",
+      "Issues raised, and recovery checked",
     ],
   },
 ];
@@ -82,7 +82,7 @@ export function InfrastructureStickyScroll() {
     <StickyScroll
       tag="Infrastructure Deep Dive"
       heading={<>Built for speed. <span className="text-primary">Built to last.</span></>}
-      subheading="Scroll to explore the infrastructure that powers continuous sync and reliable delivery."
+      subheading="Scroll to see what keeps SpineWorkspace in sync and delivering reliably."
       items={items}
     />
   );
