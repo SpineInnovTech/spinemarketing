@@ -51,7 +51,7 @@ export function ProductSecurityContent() {
       <main id="main">
         <PageHero
           badge="Product Security"
-          headline="Governed execution and audit design."
+          headline="Controlled execution and audit design."
           subhead="Illustrative governance concepts for SpineWorkspace. These screens do not independently prove deployed controls."
           primaryCta={{ label: "Contact security team", href: "/contact?intent=security" }}
         />

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/platform" },
   openGraph: {
     title: "Technology Architecture | Spine InnovTech",
-    description: "Shared business context, role-aware work, context-aware AI and governed execution in one connected architecture.",
+    description: "Shared business context, role-aware work, context-aware AI and controlled execution in one connected architecture.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace Platform" }],
   },
 }
