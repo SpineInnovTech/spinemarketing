@@ -16,7 +16,7 @@ export const posts: BlogPost[] = [
     slug: "stop-being-the-human-api",
     title: "Stop being the translator between your tools",
     description:
-      "Every founder, operator, and account manager starts their day the same way: open 12 tabs, copy-paste context, and lose an hour before real work begins.",
+      "Every founder, operator, and account manager starts their day the same way: open tab after tab, copy-paste context, and lose an hour before real work begins.",
     date: "2026-04-12",
     author: "Spine InnovTech Team",
     readTime: "4 min read",
@@ -82,7 +82,7 @@ It's the product. Twin prepares the next step. A person decides. The tools that 
     slug: "spine-fabric-contextual-continuity-layer",
     title: "The tools keep the record. The workspace shows the work.",
     description:
-      "Four kinds of information stay apart: the record, the evidence, the draft, and the person. Twin prepares within authorized context. Consequential actions need the right authority.",
+      "Four kinds of information stay apart: the record, the evidence, the draft, the person. Twin prepares within authorized context; actions need authority.",
     date: "2026-09-02",
     author: "Spine InnovTech Team",
     readTime: "5 min read",

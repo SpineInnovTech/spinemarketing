@@ -21,7 +21,7 @@ export function ManufacturingContent() {
           after: "Payment hold automatically surfaces as a shipping signal. The warehouse sees the hold before they pack the order.",
         },
         {
-          before: "End of quarter. Reconciliation reveals $340K in orders that shipped in August but were never invoiced. Cash you should have collected two months ago.",
+          before: "End of quarter. The books show $340K in orders that shipped in August but were never billed. Cash you should have collected two months ago.",
           after: "Shipped-but-not-billed gaps flagged the same day the shipment confirms. Invoicing starts automatically. Zero revenue leakage.",
         },
       ]}
@@ -39,7 +39,7 @@ export function ManufacturingContent() {
         { title: "Customer updates with full context", desc: "AI drafts notifications with shipment details and revised timelines. You review and approve before anything goes out." },
       ]}
       governance="Every exception action routes through your approval. Full audit trail for compliance."
-      connectors={["NetSuite", "SAP", "Shopify", "Salesforce", "FedEx API", "DHL API", "QuickBooks"]}
+      connectors={["NetSuite", "SAP", "Shopify", "Salesforce", "FedEx", "DHL", "QuickBooks"]}
       metrics={["On-Time Delivery %", "Cash Conversion Cycle", "Exception Resolution Time", "Shipped-Not-Billed Rate"]}
       outcomes={[
         { stat: "10%", label: "Faster Order-to-Cash" },

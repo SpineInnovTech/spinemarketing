@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, ShieldCheck, Sparkles, Target, Layers, ArrowRight } from "lucide-react";
+import { Check, ShieldCheck, Sparkles, Target, Layers } from "lucide-react";
 import { BorderBeam } from "@/components/ui/border-beam";
 
 interface CorporateOrbitalHeroProps {
@@ -26,53 +26,19 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
       <div className="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-[#B8E0FC]/40 blur-3xl pointer-events-none" />
       <div className="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-[#D8ECFC]/40 blur-3xl pointer-events-none" />
 
-      {/* Main 2-Column Hero Body */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-        {/* Left Copy Column */}
-        <div className="lg:col-span-5 flex flex-col justify-center">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#0070DC] bg-[#EAF7FF] border border-[#D8ECFC] px-3 py-1 rounded-full shadow-xs">
-              ENTERPRISE CONTEXT FABRIC & WORKSPACE
-            </span>
-          </div>
-
-          <h2 className="font-display text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#002B64] tracking-[-0.015em] leading-[1.12] mb-3">
-            The governed workbench where humans and AI move business context and work forward.
-          </h2>
-
-          <div className="text-xs sm:text-sm leading-relaxed mb-5 text-[#5E728B]">
-            <strong className="text-[#0070DC] font-bold block mb-1">
-              Humans govern the business. AI helps the work.
-            </strong>
-            <span>
-              SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.
-            </span>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <a
-              href="https://spineworkspace.com"
-              className="px-5 py-2.5 rounded-xl bg-[#0070DC] hover:bg-[#005EBB] text-white font-bold text-xs shadow-md shadow-[#0070DC]/20 transition-all flex items-center gap-1.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0070DC]"
-            >
-              <span>Explore SpineWorkspace Product</span>
-              <ArrowRight className="h-3.5 w-3.5" />
-            </a>
-            <a
-              href="/about"
-              className="px-5 py-2.5 rounded-xl bg-white border border-[#D8E5F0] hover:bg-[#F5FBFF] text-[#002B64] font-semibold text-xs shadow-xs transition-all flex items-center gap-1.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0070DC]"
-            >
-              <span>About Spine InnovTech</span>
-            </a>
-          </div>
-
-          <p className="text-xs text-[#8293A9] font-medium pt-2 border-t border-[#D8E5F0]/60">
-            The company behind SpineWorkspace · Governed Enterprise Foundation
+      {/* Main Hero Body — architecture diagram (illustrative) */}
+      <div className="relative z-10">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+          <p className="max-w-[640px] text-sm font-semibold text-[#002B64] tracking-[-0.01em] leading-snug">
+            How work moves: connected context, human approval, continuity.
           </p>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-3 py-1 text-[11px] font-semibold text-[#7C3AED]">
+            Illustrative example
+          </span>
         </div>
 
-        {/* Right Architecture Section: Ingress -> Spine Fabric -> Workbench -> Orbital Loop -> Egress */}
-        <div className="lg:col-span-7 relative flex items-center justify-between gap-1 overflow-x-auto lg:overflow-visible py-4">
+        {/* Architecture Section: Ingress -> Spine Fabric -> Workbench -> Orbital Loop -> Egress */}
+        <div className="relative flex items-center justify-between gap-1 overflow-x-auto lg:overflow-visible py-4">
           
           {/* 1. Left Ingress Stack */}
           <div className="flex flex-col gap-2 z-20 shrink-0">
@@ -105,10 +71,10 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
               <span className="text-[8px] font-bold text-[#002B64] mt-0.5">Plugins</span>
             </div>
 
-            {/* MCP: FastMCP / Model Context */}
+            {/* MCP: connect AI tools */}
             <div className="bg-[#EAF7FF] border border-[#0070DC]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
-              <span className="font-mono text-[9px] font-extrabold text-[#0070DC] tracking-tighter">MCP</span>
-              <span className="text-[7.5px] font-bold text-[#002B64]">Protocol</span>
+              <span className="font-mono text-[9px] font-extrabold text-[#0070DC] tracking-tighter">Connect</span>
+              <span className="text-[7.5px] font-bold text-[#002B64]">AI tools</span>
             </div>
 
             {/* Hosts: Claude / Cursor */}
@@ -116,7 +82,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="#D97706">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
               </svg>
-              <span className="text-[8px] font-bold text-[#002B64] mt-0.5">AI Hosts</span>
+              <span className="text-[8px] font-bold text-[#002B64] mt-0.5">AI apps</span>
             </div>
           </div>
 
@@ -125,26 +91,26 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="w-4 sm:w-6 h-0.5 bg-gradient-to-r from-[#1685F4] to-[#0070DC] relative">
               <span className="absolute -top-1 right-0 w-2 h-2 rounded-full bg-[#0070DC] animate-ping" />
             </div>
-            <span className="text-[8px] font-mono font-bold text-[#1685F4] mt-1">Ingress</span>
+            <span className="text-[8px] font-mono font-bold text-[#1685F4] mt-1">Bring in</span>
           </div>
 
-          {/* 2. Spine Fabric Substrate Capsule */}
+          {/* 2. Spine Fabric capsule */}
           <div className="bg-gradient-to-b from-[#EAF7FF] to-[#D8ECFC] border-2 border-[#0070DC] rounded-2xl p-2 w-28 sm:w-32 shadow-lg z-20 shrink-0 flex flex-col gap-1.5">
             <div className="flex items-center gap-1 border-b border-[#0070DC]/30 pb-1">
               <Layers className="w-3.5 h-3.5 text-[#0070DC]" />
               <span className="text-[9px] font-black uppercase text-[#002B64] tracking-wider">Spine Fabric</span>
             </div>
             <div className="bg-white/90 rounded-lg p-1.5 border border-[#D8ECFC] shadow-2xs">
-              <span className="text-[8px] font-bold text-[#002B64] block">Operational Context</span>
-              <span className="text-[7.5px] text-[#5E728B] leading-tight block">One governed view</span>
+              <span className="text-[8px] font-bold text-[#002B64] block">Your information</span>
+              <span className="text-[7.5px] text-[#5E728B] leading-tight block">One shared view</span>
             </div>
             <div className="bg-white/90 rounded-lg p-1.5 border border-[#D8ECFC] shadow-2xs">
-              <span className="text-[8px] font-bold text-[#002B64] block">Account Anchor</span>
-              <span className="text-[7.5px] text-[#5E728B] leading-tight block">Bridge keys & history</span>
+              <span className="text-[8px] font-bold text-[#002B64] block">Account record</span>
+              <span className="text-[7.5px] text-[#5E728B] leading-tight block">Links and history</span>
             </div>
             <div className="bg-[#E8F9F0] rounded-lg p-1.5 border border-[#12B76A]/40 shadow-2xs">
-              <span className="text-[8px] font-bold text-[#12B76A] block">KPI Movement</span>
-              <span className="text-[7.5px] text-[#002B64] leading-tight block">Governed metrics</span>
+              <span className="text-[8px] font-bold text-[#12B76A] block">Results</span>
+              <span className="text-[7.5px] text-[#002B64] leading-tight block">Tracked numbers</span>
             </div>
           </div>
 
@@ -153,14 +119,14 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="w-4 sm:w-6 h-0.5 bg-gradient-to-r from-[#0070DC] to-[#002B64] relative">
               <span className="absolute -top-1 right-0 w-2 h-2 rounded-full bg-[#002B64]" />
             </div>
-            <span className="text-[8px] font-mono font-bold text-[#0070DC] mt-1">Bind</span>
+            <span className="text-[8px] font-mono font-bold text-[#0070DC] mt-1">Connect</span>
           </div>
 
           {/* 3. Central Workbench Deck (Human + Twin) */}
           <div className="bg-white border-2 border-[#002B64] rounded-2xl p-2.5 w-44 sm:w-52 shadow-2xl z-20 shrink-0 flex flex-col gap-2">
             <div className="flex items-center justify-between border-b border-[#D8E5F0] pb-1.5">
               <span className="text-[10px] font-black uppercase tracking-tight text-[#002B64]">Shared Workbench</span>
-              <span className="text-[7.5px] font-mono font-bold text-white bg-[#0070DC] px-1.5 py-0.5 rounded">LIVE</span>
+              <span className="text-[7.5px] font-mono font-bold text-white bg-[#0070DC] px-1.5 py-0.5 rounded">Demo</span>
             </div>
 
             {/* Dual Collaborators: Human + AI Twin */}
@@ -205,9 +171,9 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="flex items-center justify-between pt-1 border-t border-[#D8E5F0] text-[7.5px]">
               <div className="flex items-center gap-1 text-[#002B64] font-bold">
                 <ShieldCheck className="w-3 h-3 text-[#12B76A]" />
-                <span>Hermes Verified</span>
+                <span>Human-approved</span>
               </div>
-              <span className="font-mono text-[#0070DC] font-bold">Closed-Loop</span>
+              <span className="font-mono text-[#0070DC] font-bold">Full loop</span>
             </div>
           </div>
 
@@ -216,10 +182,11 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="w-4 sm:w-6 h-0.5 bg-gradient-to-r from-[#002B64] to-[#0070DC] relative">
               <span className="absolute -top-1 right-0 w-2 h-2 rounded-full bg-[#0070DC]" />
             </div>
-            <span className="text-[8px] font-mono font-bold text-[#0070DC] mt-1">Execute</span>
+            <span className="text-[8px] font-mono font-bold text-[#0070DC] mt-1 text-center leading-tight">Controlled execution</span>
+            <span className="text-[7px] text-[#5E728B] mt-0.5 text-center leading-tight">Approved and traceable</span>
           </div>
 
-          {/* 4. Right Egress Stack: Synchronized Outcomes back to Tools */}
+          {/* 4. Right Egress Stack: Controlled execution — approved and traceable outcomes back to tools */}
           <div className="flex flex-col gap-2 z-20 shrink-0">
             {/* Sync to Salesforce */}
             <div className="bg-[#E8F9F0] border border-[#12B76A]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
@@ -239,16 +206,16 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
               <span className="text-[7.5px] font-bold text-[#002B64]">Document</span>
             </div>
 
-            {/* Sync to AI Memory */}
+            {/* Keep a record for AI */}
             <div className="bg-[#EAF7FF] border border-[#0070DC]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
-              <span className="text-[7.5px] font-black text-[#0070DC]">MEMORY</span>
+              <span className="text-[7.5px] font-black text-[#0070DC]">REMEMBER</span>
               <span className="text-[7.5px] font-bold text-[#002B64]">Context</span>
             </div>
 
-            {/* Closed Loop Return */}
+            {/* Record kept */}
             <div className="bg-white border border-[#D8E5F0] rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
-              <span className="text-[8px] font-black text-[#0070DC]">LOOP</span>
-              <span className="text-[7.5px] font-bold text-[#002B64]">Audit</span>
+              <span className="text-[8px] font-black text-[#0070DC]">RECORD</span>
+              <span className="text-[7.5px] font-bold text-[#002B64]">Kept</span>
             </div>
           </div>
 
@@ -260,12 +227,10 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
       <div className="relative z-10 mt-6 pt-4 border-t border-[#D8E5F0]/70 flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2 text-[#5E728B]">
           <span className="inline-block w-2 h-2 rounded-full bg-[#12B76A]" />
-          <span>One governed view of business context &amp; connection state</span>
+          <span>One shared view of your information and what is connected</span>
         </div>
         <div className="flex items-center gap-4 text-[11px] font-medium text-[#0070DC]">
-          <span>Connect Once, Continue Forever</span>
-          <span className="text-[#8293A9]">·</span>
-          <span>Human-Governed Closed Loop</span>
+          <span>People stay in control of every loop</span>
         </div>
       </div>
     </div>

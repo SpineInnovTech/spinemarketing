@@ -10,22 +10,22 @@ import { Section, SectionHeader } from "@/components/marketing/section";
 import { FinalCTA } from "@/components/final-cta";
 
 const dataProtection = [
-  { icon: Lock, title: "Storage protection", desc: "Encryption, key management and rotation must be reviewed against configured providers." },
-  { icon: ShieldCheck, title: "Transport security", desc: "Protected transport paths should be validated using actual deployment evidence." },
-  { icon: FileText, title: "Sensitive-field boundaries", desc: "Sensitive-field treatment depends on data classification and integration policy." },
-  { icon: Globe, title: "Data location", desc: "Storage regions and cross-border flows require contract and infrastructure verification." },
+  { icon: Lock, title: "Kept safe in storage", desc: "How data is locked, and how the keys are kept and changed, is reviewed against your providers." },
+  { icon: ShieldCheck, title: "Kept safe in transit", desc: "Safe paths for data on the move are checked using real proof from your setup." },
+  { icon: FileText, title: "Care for sensitive fields", desc: "How sensitive fields are treated depends on how the data is sorted and your rules." },
+  { icon: Globe, title: "Where data lives", desc: "Where data is stored, and whether it crosses borders, is confirmed in your contract and setup." },
 ];
 
 const accessControl = [
-  { icon: Users, title: "RBAC", desc: "Access scopes must be checked against actual user role, tenant, provider and context." },
-  { icon: Globe, title: "SSO / SAML", desc: "Supported identity-provider configuration requires implementation review." },
-  { icon: ShieldCheck, title: "Contextual Firewalling", desc: "Department-scoped access must be enforced and tested at the relevant data boundaries." },
+  { icon: Users, title: "Access by role", desc: "What each person can reach is checked against their real role, company, provider and task." },
+  { icon: Globe, title: "Single sign-on", desc: "Using your company's own sign-in needs a setup review." },
+  { icon: ShieldCheck, title: "Boundaries by team", desc: "Team-only access is set and tested at the right data lines." },
 ];
 
 const truthBoundary = [
-  { icon: Lock, title: "Authority boundary", desc: "Consequential actions require authorization under governing policy and verified enforcement." },
-  { icon: AlertTriangle, title: "Emergency procedures", desc: "Exceptional operations need explicit authority, justification and reviewable evidence." },
-  { icon: FileText, title: "Context isolation", desc: "Cross-context data access must be bounded by identity, policy and tenant scope." },
+  { icon: Lock, title: "Who is allowed to act", desc: "Actions that matter need a yes under the rules in place, and the limit is checked." },
+  { icon: AlertTriangle, title: "Emergency steps", desc: "Rare, out-of-the-ordinary steps need a clear yes, a reason, and a record anyone can review." },
+  { icon: FileText, title: "Data kept apart", desc: "Reaching data across teams is limited by who you are, the rules, and your company." },
 ];
 
 const fade = (delay = 0) => ({
@@ -43,7 +43,7 @@ export function PlatformSecurityContent() {
         <PageHero
           badge="Platform Security"
           headline="Authority is designed into the execution path."
-          subhead="An architectural view of identity, policy, data boundaries and governed execution. Verify implementation evidence before relying on any individual control."
+          subhead="A look at who you are, the rules, where data stays, and the limits on what AI can do. Check the real setup before relying on any one control."
           primaryCta={{ label: "Review the security model", href: "/contact?intent=security" }}
         />
 
@@ -63,7 +63,7 @@ export function PlatformSecurityContent() {
         </Section>
 
         <Section>
-          <SectionHeader label="Access Control" headline="Access scope and identity controls" />
+          <SectionHeader label="Access Control" headline="Who can get in, and what they can reach" />
           <div className="grid gap-4 md:grid-cols-3">
             {accessControl.map((a, i) => (
               <motion.div key={a.title} {...fade(i * 0.06)} className="rounded-md border border-[#E5E5E5] bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -86,7 +86,7 @@ export function PlatformSecurityContent() {
               <h2 className="text-[20px] font-semibold text-[#032D60]">Governance Enforcement</h2>
             </div>
             <p className="mb-6 text-[14px] text-[#444]">
-              The intended execution boundary: capability access does not by itself grant authority to act.
+              The line we aim for: being able to reach something does not, by itself, mean you are allowed to act on it.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               {truthBoundary.map((t, i) => (

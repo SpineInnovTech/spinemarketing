@@ -8,7 +8,7 @@ const commitments = [
     eyebrow: "Access boundaries",
     title: "Share context according to responsibility and permission.",
     body: [
-      "User, organizational and connected-system permissions must shape what information can be assembled and presented.",
+      "User, team and connected-tool permissions must shape what information can be brought together and shown.",
       "Role-aware views and AI preparation should apply those boundaries throughout the work. A shared business context does not imply universal visibility.",
     ],
   },
@@ -23,7 +23,7 @@ const commitments = [
   },
   {
     number: "03",
-    eyebrow: "Evidence and provenance",
+    eyebrow: "Evidence and where it came from",
     title: "Make the basis of a decision inspectable.",
     body: [
       "People should be able to see which sources support a conclusion, where interpretation has been applied and what remains uncertain.",
@@ -36,7 +36,7 @@ const commitments = [
     title: "Preserve what happened after the decision.",
     body: [
       "Work can be requested, authorized, attempted, completed or left unresolved. Those states have different meanings.",
-      "The architecture should retain the relationship between the approved intent, the attempted operation and the evidence available about its result.",
+      "The product should keep the link between the approved intent, the action tried and the evidence about its result.",
     ],
   },
 ]
@@ -48,7 +48,7 @@ export function TrustContent() {
         tone="ice"
         badge="Our design commitments"
         headline={"Trust depends on clear boundaries\nand visible evidence."}
-        subhead="Business context can contain sensitive information, consequential decisions and capabilities that change external systems. Our design approach puts access, authority, provenance and outcome verification within the architecture of the work."
+        subhead="Business context can hold sensitive information, big decisions and actions that change other tools. Our design puts who can see what, who can act, where information came from, and proof of what happened into the work itself."
         primaryCta={{ label: "Discuss our governance approach", href: "/contact?topic=trust" }}
         secondaryCta={{ label: "Read our responsible AI approach", href: "/responsible-ai" }}
       />

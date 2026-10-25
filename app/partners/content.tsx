@@ -4,8 +4,8 @@ import { PageHero } from "@/components/marketing/page-hero"
 
 const collaborationAreas = [
   {
-    title: "Technology and host ecosystems",
-    body: "Explore governed interfaces between business context and compatible AI hosts, developer environments, enterprise applications and model providers.",
+    title: "Technology and AI tools",
+    body: "Explore safe, governed connections between business context and the AI tools, developer apps, business software and AI models teams already use.",
   },
   {
     title: "Integration and implementation expertise",
@@ -17,7 +17,7 @@ const collaborationAreas = [
   },
   {
     title: "Research and engineering",
-    body: "Explore questions in context quality, provenance, continuity, delegated authority and verification of outcomes.",
+    body: "Explore questions in context quality, where information came from, continuity, delegated authority and checking outcomes.",
   },
 ]
 

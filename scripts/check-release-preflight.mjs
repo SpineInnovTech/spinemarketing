@@ -47,8 +47,9 @@ check(
 const home = read("app/page.tsx");
 const banner = read("components/marketing/innovlabs-home.tsx");
 check(home.includes("InnovLabsHome"), "homepage no longer renders Spine InnovTech");
-check(banner.includes("SPINE INNOVTECH") && banner.includes("We build governed business context for humans and AI."), "company identity and product introduction missing");
+check(banner.includes("Spine InnovTech") && banner.includes("Connecting business context for humans and AI, with people in control."), "company identity and product introduction missing");
 check(!banner.includes("We build the foundation for connected business work."), "old homepage H1 must be absent from the hero");
+check(!banner.includes("We build governed business context for humans and AI."), "prior homepage H1 must be absent from the hero");
 for (const asset of ["public/og.png", "public/icon.svg"]) {
   check(existsSync(asset), `missing shared metadata asset ${asset}`);
 }

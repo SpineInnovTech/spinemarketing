@@ -31,19 +31,19 @@ const boundaries = [
   {
     number: "02",
     eyebrow: "Human approval",
-    title: "A person or approved policy authorizes consequential actions.",
+    title: "A person or approved rule allows important actions.",
     body: [
-      "A proposal remains a proposal until authorized. For consequential proposals, the responsible person can inspect the intended action, affected records, supporting evidence and material uncertainty.",
-      "Execution uses governed capabilities; completion depends on observed and reconciled results.",
+      "A proposal stays a proposal until it is approved. For important proposals, the responsible person can see the planned action, the records it affects, the evidence behind it and anything still unclear.",
+      "The action uses governed tools; it counts as done only once the result is seen and checked.",
     ],
   },
   {
     number: "03",
-    eyebrow: "Defined scope",
-    title: "The Twin works within delegated authority.",
+    eyebrow: "Clear limits",
+    title: "The Twin works within the authority it is given.",
     body: [
-      "A person's permissions and organizational policy determine what authority they can delegate. The Twin stays within that scope as it investigates, prepares or uses a capability.",
-      "Changing tools, models or hosts requires the applicable access and authority checks in the receiving environment.",
+      "A person's permissions and company policy decide what they can hand over. The Twin stays within those limits as it looks into things, prepares work or uses a tool.",
+      "Moving to other tools or AI models needs the same access and permission checks in the place it moves to.",
     ],
   },
   {
@@ -134,7 +134,7 @@ export function TwinContent() {
           align="left"
           label="Keep exploring"
           headline="See the Twin within the whole foundation."
-          body="Spine Twin works within the Spine foundation and its governed execution. Step back to the architecture or see how the pieces fit together."
+          body="Spine Twin works within the Spine foundation and its controlled execution. Step back to the architecture or see how the pieces fit together."
         />
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link href="/spine" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">

@@ -12,24 +12,24 @@ import { FinalCTA } from "@/components/final-cta";
 import { InfrastructureStickyScroll } from "./sticky-sections";
 
 const firebaseCards = [
-  { title: "Realtime Database", desc: "Near real-time entity state updates to every client." },
-  { title: "State Persistence", desc: "Survives refreshes, timeouts, and device switches." },
-  { title: "Cloud Functions Eventing", desc: "Pure event-driven downstream processing — no polling." },
+  { title: "Live database", desc: "Updates each screen as the record changes, close to real time." },
+  { title: "Stays put", desc: "Survives refreshes, timeouts, and device switches." },
+  { title: "Acts on changes", desc: "Work happens when something changes — no constant checking." },
 ];
 
 const services = [
-  { icon: Database, name: "Spine Service", desc: "Business entities, source relationships, and schema governance." },
-  { icon: Layers, name: "Context Service", desc: "Real-time view assembly and conflict detection." },
-  { icon: Zap, name: "Twin Service", desc: "AI reasoning engine and signal detection." },
-  { icon: Globe, name: "Approval Service", desc: "Governance enforcement and human-in-the-loop routing logic." },
-  { icon: BarChart3, name: "Action Service", desc: "Authorized execution with observed effects and reconciliation." },
-  { icon: Server, name: "Notification Service", desc: "Alert routing and digest generation — no spam." },
+  { icon: Database, name: "Spine Service", desc: "Business items, how they relate, and keeping the record tidy." },
+  { icon: Layers, name: "Context Service", desc: "Builds the live view and spots clashes." },
+  { icon: Zap, name: "Twin Service", desc: "The AI that thinks things through and spots signals." },
+  { icon: Globe, name: "Approval Service", desc: "Keeps to the rules and sends decisions to a person." },
+  { icon: BarChart3, name: "Action Service", desc: "Approved actions, with the result watched and checked." },
+  { icon: Server, name: "Notification Service", desc: "Sends alerts and summaries — no spam." },
 ];
 
 const scalabilityCards = [
-  { title: "Cloudflare Edge", desc: "Workers at edge for low-latency global access." },
-  { title: "D1 / R2 Storage", desc: "Database and object-storage responsibilities depend on the configured deployment." },
-  { title: "Queue Management", desc: "Async work requires retry, failure handling, and reconciliation." },
+  { title: "Fast, worldwide", desc: "Runs close to people around the world, so it feels quick." },
+  { title: "Storage", desc: "Where the database and files live depends on your setup." },
+  { title: "Steady under load", desc: "Background work retries, handles failures, and checks the result." },
 ];
 
 const fade = (delay = 0) => ({
@@ -46,21 +46,21 @@ export function InfrastructureContent() {
       <main id="main">
         <PageHero
           badge="Infrastructure"
-          headline="Six services. Global edge. Near real-time."
-          subhead="Explore the service responsibilities and infrastructure approach behind SpineWorkspace. Deployment regions, performance, and recovery behavior depend on the configured environment."
+          headline="Six services. Worldwide. Close to real time."
+          subhead="See what each service does and how SpineWorkspace is built. Where it runs, how fast it is, and how it recovers depend on your setup."
           primaryCta={{ label: "See the architecture", href: "/contact?intent=demo" }}
         />
 
         <Section variant="muted">
           <div className="grid gap-4 sm:grid-cols-3">
-            <KpiBlock label="Normalization to UI" value="Near real-time" detail="Continuous entity updates" />
-            <KpiBlock label="Purpose-built services" value="6" detail="Single-responsibility microservices" />
-            <KpiBlock label="Edge distribution" value="Global" detail="Cloudflare Workers at the edge" />
+            <KpiBlock label="Change to screen" value="Near real-time" detail="Updates keep coming" />
+            <KpiBlock label="Purpose-built services" value="6" detail="Each with one clear job" />
+            <KpiBlock label="Reach" value="Global" detail="Runs close to people worldwide" />
           </div>
         </Section>
 
         <Section>
-          <SectionHeader label="Firebase Architecture" headline="Real-time sync and event-driven state" />
+          <SectionHeader label="Live updates" headline="Keeps screens in sync as things change" />
           <div className="grid gap-4 md:grid-cols-3">
             {firebaseCards.map((f, i) => (
               <motion.div key={f.title} {...fade(i * 0.06)} className="rounded-md border border-[#E5E5E5] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -72,7 +72,7 @@ export function InfrastructureContent() {
         </Section>
 
         <Section variant="muted">
-          <SectionHeader label="Service Architecture" headline="Six microservices, one clear responsibility each" />
+          <SectionHeader label="The services" headline="Six services, each with one clear job" />
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {services.map((s, i) => (
               <motion.div key={s.name} {...fade(i * 0.05)} className="rounded-md border border-[#E5E5E5] bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -87,7 +87,7 @@ export function InfrastructureContent() {
         </Section>
 
         <Section>
-          <SectionHeader label="Cloudflare Edge & Scale" headline="Edge distribution and async queue management" />
+          <SectionHeader label="Scale" headline="Fast worldwide, and steady under load" />
           <div className="grid gap-4 md:grid-cols-3">
             {scalabilityCards.map((s, i) => (
               <motion.div key={s.title} {...fade(i * 0.06)} className="rounded-md border border-[#E5E5E5] bg-white p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -101,7 +101,7 @@ export function InfrastructureContent() {
         <section className="border-t border-[#E5E5E5] bg-[#F3F6F9] py-16">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-[length:min(28px,var(--marketing-heading-size))] font-semibold text-[#032D60]">Built for scale from day one.</h2>
-            <p className="mt-3 text-[16px] text-[#444]">Walk through the full architecture in a 30-minute session.</p>
+            <p className="mt-3 text-[16px] text-[#444]">Walk through the full setup in a short session.</p>
             <Link
               href="/contact?intent=demo"
               className="mt-8 inline-flex h-10 items-center gap-2 rounded-md bg-[#0176D3] px-5 text-[14px] font-semibold text-white hover:bg-[#0B5CAB]"

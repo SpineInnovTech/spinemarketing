@@ -14,7 +14,7 @@ const responsibilities = [
   },
   {
     title: "Explicit authority",
-    body: "Separate what a connected system can do from what a particular person or AI is permitted to do. Keep consequential actions tied to human decisions.",
+    body: "Separate what a connected tool can do from what a particular person or AI is allowed to do. Keep important actions tied to human decisions.",
   },
   {
     title: "Work continuity",
@@ -27,7 +27,7 @@ const paths = [
     icon: Network,
     eyebrow: "The technical detail",
     title: "Spine Fabric",
-    body: "How the foundation relates authorized records, evidence and decisions across the systems a business already uses, while source systems stay authoritative.",
+    body: "How the foundation connects the records, evidence and decisions you are allowed to use across the tools a business already runs, while those tools keep the record.",
     href: "/platform/spine-fabric",
     cta: "Explore Spine Fabric",
   },
@@ -35,7 +35,7 @@ const paths = [
     icon: Waypoints,
     eyebrow: "The AI counterpart",
     title: "Spine Twin",
-    body: "A context-aware AI counterpart that investigates, prepares work and proposes next steps, while consequential actions wait for a person's approval.",
+    body: "A context-aware AI counterpart that looks into things, prepares work and suggests next steps, while important actions wait for a person's approval.",
     href: "/twin",
     cta: "Meet Spine Twin",
   },
@@ -95,7 +95,7 @@ export function SpineContent() {
           align="left"
           label="Keep exploring"
           headline="See the foundation across our work."
-          body="The technology overview sets the whole architecture in context; the portfolio shows how the pieces fit around SpineWorkspace."
+          body="The technology overview sets the whole picture in context; the portfolio shows how the pieces fit around SpineWorkspace."
         />
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link href="/platform" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white transition hover:bg-[#0055B8]">

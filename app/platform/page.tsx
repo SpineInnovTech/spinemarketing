@@ -11,13 +11,13 @@ import { TechnologyDetailLinks } from "./technology-detail-links"
 import { BreadcrumbJsonLd, SoftwareApplicationJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Technology Architecture | Spine InnovTech",
+  title: "Technology | Spine InnovTech",
   description:
-    "Explore the Spine architecture: Fabric, Workbench, Twin, Runtime and connected capabilities for business-context collaboration.",
+    "See how SpineWorkspace works: Fabric, Workbench, Twin, and approved action that bring your tools together for people and AI.",
   alternates: { canonical: "/platform" },
   openGraph: {
-    title: "Technology Architecture | Spine InnovTech",
-    description: "Shared business context, role-aware work, context-aware AI and governed execution in one connected architecture.",
+    title: "Technology | Spine InnovTech",
+    description: "Shared information, work built around your role, AI that helps, and actions people approve — all in one connected product.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace Platform" }],
   },
 }

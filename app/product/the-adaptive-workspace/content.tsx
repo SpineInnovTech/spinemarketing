@@ -45,7 +45,7 @@ const viewCategories = [
     category: "Technical & Personal",
     icon: Server,
     views: [
-      { view: "IT & DevOps", desc: "Connector status, schema health, API logs", icon: Server },
+      { view: "IT & DevOps", desc: "Connection status, data health, activity logs", icon: Server },
       { view: "Partner Manager", desc: "Co-sell pipeline, partner health, MDF tracking", icon: Globe },
       { view: "Personal Workspace", desc: "My accounts, tasks, priorities, morning brief", icon: User },
     ],

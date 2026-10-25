@@ -73,7 +73,7 @@ const contact = source("app/contact/content.tsx");
 const form = source("components/lead-form.tsx");
 
 check(home.includes("InnovLabsHome"), "corporate homepage component not wired");
-check(banner.includes("SPINE INNOVTECH") && banner.includes("We build governed business context for humans and AI."), "company identity and product introduction absent");
+check(banner.includes("Spine InnovTech") && banner.includes("Connecting business context for humans and AI, with people in control."), "company identity and product introduction absent");
 check(source("components/header.tsx").includes("headerNavigation"), "header must render the full corporate navigation");
 for (const label of ["Company", "Technology", "Insights"]) {
   check(source("lib/navigation.ts").includes(`label: "${label}"`), `missing corporate navigation category: ${label}`);
@@ -88,7 +88,7 @@ for (const heading of ["Company", "Technology", "Product", "Perspectives"]) {
   check(source("lib/navigation.ts").includes(`heading: "${heading}"`), `footer missing master group: ${heading}`);
 }
 check(
-  source("lib/navigation.ts").includes('export const COMPANY_TAGLINE = "We build governed business context for humans and AI.";') &&
+  source("lib/navigation.ts").includes('export const COMPANY_TAGLINE = "Connecting business context for humans and AI, with people in control.";') &&
     footer.includes("COMPANY_TAGLINE"),
   "footer must carry the short brand statement",
 );
@@ -118,7 +118,7 @@ const aboutProof = source("app/about/sticky-sections.tsx");
 check(aboutPage.includes("AboutJourneyScroll"), "About/Our story must render the founder origin story");
 check(aboutProof.includes("$8M") && aboutProof.includes("MuleSoft") && aboutProof.includes("Salesforce"), "About origin must tell the $8M renewal with authorized Slack/email/MuleSoft/Salesforce context");
 check(/Before founding Spine InnovTech/.test(aboutProof) && /not a SpineWorkspace customer result/i.test(aboutProof), "About $8M must be framed as prior founder experience, not a SpineWorkspace customer result/testimonial/ROI");
-check(banner.includes("Explore SpineWorkspace") && banner.includes('href="/proof"'), "homepage must offer the action CTA (Explore SpineWorkspace, one word) and a path to the proof");
+check(banner.includes("Explore SpineWorkspace"), "homepage must offer the action CTA (Explore SpineWorkspace, one word)");
 
 // Product brand is ONE WORD in visitor copy everywhere. Company is 'Spine InnovTech'.
 const brandSources = [

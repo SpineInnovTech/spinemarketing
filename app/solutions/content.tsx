@@ -47,7 +47,7 @@ export function SolutionsContent() {
           </p>
           <h2 className="mt-5 max-w-[840px] text-[length:min(clamp(2.4rem,4.6vw,4.3rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.055em] text-[#082B5E]">Relevant views. Shared context. Clear authority.</h2>
           <p className="mt-6 max-w-[810px] text-[16px] leading-[1.85] text-[#4E607A]">
-            The categories below describe potential work lenses and solution patterns, not a promise that every connected provider or role-specific projection is deployed for every customer.
+            The groups below show the kinds of work and common patterns, not a promise that every connected tool or role-specific view is set up for every customer.
           </p>
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {PUBLIC_SOLUTIONS.map((solution, index) => (

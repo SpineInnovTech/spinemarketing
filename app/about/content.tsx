@@ -6,17 +6,17 @@ const principles = [
   {
     number: "01",
     title: "Respect source authority.",
-    body: "Shared context must preserve where information came from and which system owns the underlying record. Interpretation, proposed changes and accepted facts need distinguishable states.",
+    body: "Shared context must keep track of where information came from and which tool owns the real record. What is an interpretation, what is a proposed change and what is an accepted fact must stay easy to tell apart.",
   },
   {
     number: "02",
     title: "Keep access and action separate.",
-    body: "Reading a record, interpreting it, preparing a proposal and executing a change are different responsibilities. Each needs an appropriate scope of permission.",
+    body: "Reading a record, interpreting it, preparing a proposal and making a change are different jobs. Each needs the right permission for that step.",
   },
   {
     number: "03",
     title: "Match context to responsibility.",
-    body: "People and AI should receive context relevant to the work they are authorized to perform. Consistency of understanding must coexist with boundaries between users, teams and organizations.",
+    body: "People and AI should get the context that fits the work they are allowed to do. Everyone can share the same understanding while still keeping clear limits between people, teams and companies.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function AboutContent() {
       <PageHero
         badge="How we think and build / Spine InnovTech"
         headline="Intelligence needs context. Action needs authority."
-        subhead="Our engineering philosophy begins with the responsibilities people carry in a business: understand the situation, make a sound decision and remain accountable for what follows. We design technology to support those responsibilities as information, tools and AI capabilities become more distributed."
+        subhead="Our engineering philosophy starts with the responsibilities people carry in a business: understand the situation, make a sound decision and stay accountable for what follows. We build technology to support those responsibilities as information, tools and AI spread across more and more places."
         primaryCta={{ label: "Explore the technology", href: "/platform" }}
         secondaryCta={{ label: "Meet the company", href: "/company" }}
       />
@@ -42,10 +42,10 @@ export function AboutContent() {
             An account owner needs to know which commitments are at risk. A technical account lead needs to understand how an incident affects a customer's objectives. A manager needs to know whether the agreed action actually happened.
           </p>
           <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] leading-[1.95] text-[#536883]">
-            These questions give the architecture a purpose. They determine which records should be related, which evidence matters and whose authority is needed. This is not a story about replacing the tools organizations already trust — it is about connecting business context so a person or AI counterpart can understand what matters without losing the boundaries that protect the business.
+            These questions give the work a purpose. They decide which records should be connected, which evidence matters and whose approval is needed. This is not a story about replacing the tools organizations already trust — it is about connecting business context so a person or AI counterpart can see what matters without losing the limits that protect the business.
           </p>
           <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.95] text-[#17375F]">
-            Our direction is simple: shared business understanding, useful collaboration between humans and AI, and governed paths from intention to verified outcome.
+            Our direction is simple: a shared understanding of the business, useful teamwork between people and AI, and a clear, approved path from intention to a checked result.
           </p>
         </div>
       </section>
@@ -70,7 +70,7 @@ export function AboutContent() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[.21em] text-[#2461BC]">From philosophy to product</p>
           <h2 className="mt-6 text-[length:min(clamp(2.4rem,4.4vw,4.4rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.055em] text-[#0C274E]">SpineWorkspace puts the principle to work.</h2>
-          <p className="mt-7 text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#536883]">One workspace for humans and AI to understand the business, share the work, and achieve goals together. Spine Fabric, the Workbench, the Twin and Runtime are parts of that integrated direction.</p>
+          <p className="mt-7 text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#536883]">One workspace for humans and AI to understand the business, share the work, and achieve goals together. Spine Fabric, the Workbench, the Twin and approved action are parts of that one direction.</p>
           <a href="/product" className="mt-9 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#102F5B] px-6 text-sm font-semibold text-white transition hover:bg-[#2759A0]">
             Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
           </a>
@@ -79,7 +79,7 @@ export function AboutContent() {
           {[
             { icon: GitBranch, title: "Context", body: "Relate goals, customers, signals, work and evidence." },
             { icon: Waypoints, title: "Collaboration", body: "Share the right understanding with people and AI." },
-            { icon: ShieldCheck, title: "Governance", body: "Move forward through authorized actions and verified results." },
+            { icon: ShieldCheck, title: "Governance", body: "Move forward through approved actions and checked results." },
           ].map(({ icon: Icon, title, body }) => (
             <div key={title} className="flex gap-4 rounded-xl border border-white/15 bg-white/5 p-5">
               <Icon className="mt-1 h-5 w-5 shrink-0 text-[#A3C7FF]" aria-hidden />

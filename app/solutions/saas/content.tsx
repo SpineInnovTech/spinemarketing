@@ -27,7 +27,7 @@ export function SaasContent() {
         },
         {
           before: "QBR decks take 2+ hours of copy-pasting from five different dashboards.",
-          after: "One-click QBR deck generated from real adoption data. Ready in seconds, not hours.",
+          after: "One-click QBR deck generated from real adoption data. Ready in one click, not hours of copy-paste.",
         },
       ]}
       signals={[
@@ -41,7 +41,7 @@ export function SaasContent() {
         { title: "See who's actually using your product", desc: "Health scores built from real adoption data — logins, feature usage, and engagement — not guesswork." },
         { title: "Get warned before customers leave", desc: "When support tickets spike, payments slow, and usage drops — you know immediately, not at renewal." },
         { title: "Spot expansion opportunities automatically", desc: "AI identifies power users near their limits and drafts the upgrade conversation for your review." },
-        { title: "Build QBR decks in seconds", desc: "One click generates a customer review deck from real adoption data. No more copy-pasting from five tools." },
+        { title: "Build QBR decks with one click", desc: "One click generates a customer review deck from real adoption data. No more copy-pasting from five tools." },
       ]}
       governance="Every health score change shows you the source data. No message goes to a customer without your review and approval."
       connectors={["Salesforce", "HubSpot", "Stripe", "Chargebee", "Zendesk", "Segment", "Amplitude", "Mixpanel", "Slack", "GitHub"]}

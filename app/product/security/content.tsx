@@ -14,21 +14,21 @@ const trustDashboard = [
 ];
 
 const sovereigntyControls = [
-  { title: "Your Data, Your Rules", desc: "Source systems retain their authoritative roles; data copies and access must be governed." },
-  { title: "Data residency review", desc: "Locations and cross-border processing depend on provider deployment and contract." },
-  { title: "Retention boundaries", desc: "Applicable retention periods and controls require configuration and legal review." },
+  { title: "Your Data, Your Rules", desc: "Your original tools stay in charge; any copies and access must follow set rules." },
+  { title: "Where data lives", desc: "Where it is stored and whether it crosses borders depends on the provider and your contract." },
+  { title: "How long data is kept", desc: "How long data is kept, and the controls around it, need setup and a legal review." },
 ];
 
 const auditFeatures = [
-  { icon: FileText, title: "Decision evidence", desc: "A reviewable trail should connect decisions with identity, authority and outcomes." },
-  { icon: Eye, title: "Context reconstruction", desc: "Reconstruction depends on available, authorized source evidence and supported logging." },
-  { icon: RotateCcw, title: "Reconciliation tracking", desc: "Record attempts, effects and reconciliation status where supported." },
+  { icon: FileText, title: "Decision evidence", desc: "A trail anyone can review should link each decision to who made it, their right to, and the result." },
+  { icon: Eye, title: "Rebuild the picture", desc: "Rebuilding what happened depends on the source evidence you are allowed to see and what was recorded." },
+  { icon: RotateCcw, title: "Result tracking", desc: "Record what was tried, what it changed, and whether the result matched, where supported." },
 ];
 
 const rbacItems = [
-  { title: "RBAC Visualization", desc: "Permissions should reflect actual roles, attributes and provider scopes." },
-  { title: "Contextual Firewalling UI", desc: "Department and data-domain boundaries require policy enforcement." },
-  { title: "API Key Management", desc: "Scope, rotation and audit requirements should be verified per integration." },
+  { title: "Access by role, at a glance", desc: "What each person can do should match their real role and what each provider allows." },
+  { title: "Boundaries by team", desc: "Lines around teams and data areas need rules that are enforced." },
+  { title: "Connection keys", desc: "How connection keys are set, changed, and recorded should be checked per tool." },
 ];
 
 const emergencyItems = [
@@ -51,13 +51,13 @@ export function ProductSecurityContent() {
       <main id="main">
         <PageHero
           badge="Product Security"
-          headline="Governed execution and audit design."
-          subhead="Illustrative governance concepts for SpineWorkspace. These screens do not independently prove deployed controls."
+          headline="Controlled execution and audit design."
+          subhead="Example views of how SpineWorkspace keeps control. These screens do not, on their own, prove what is switched on in your setup."
           primaryCta={{ label: "Contact security team", href: "/contact?intent=security" }}
         />
 
         <Section variant="muted">
-          <SectionHeader label="Trust & Governance Dashboard" headline="Conceptual distinction between investigation and consequential action" />
+          <SectionHeader label="Trust & Governance Dashboard" headline="Looking into something vs. acting on it" />
           <div className="grid gap-4 md:grid-cols-2 mb-6">
             {trustDashboard.map((t) => (
               <div key={t.zone} className={`rounded-md border ${t.border} ${t.bg} p-6`}>
@@ -77,7 +77,7 @@ export function ProductSecurityContent() {
         </Section>
 
         <Section>
-          <SectionHeader label="Approval Audit Center" headline="Decision and verification evidence" />
+          <SectionHeader label="Approval Audit Center" headline="A clear record of decisions and checks" />
           <div className="grid gap-4 md:grid-cols-3">
             {auditFeatures.map((a, i) => (
               <motion.div key={a.title} {...fade(i * 0.06)} className="rounded-md border border-[#E5E5E5] bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -92,7 +92,7 @@ export function ProductSecurityContent() {
         </Section>
 
         <Section variant="muted">
-          <SectionHeader label="Access Control Matrix" headline="Permissions scoped to role and context" />
+          <SectionHeader label="Access Control Matrix" headline="What each person can do, set by role" />
           <div className="grid gap-4 md:grid-cols-3">
             {rbacItems.map((r, i) => (
               <motion.div key={r.title} {...fade(i * 0.05)} className="rounded-md border border-[#E5E5E5] bg-white p-5">
