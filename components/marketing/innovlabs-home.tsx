@@ -14,7 +14,7 @@ const workflowSteps = [
   {
     phase: "Connect",
     title: "Bring the account into view",
-    body: "Retrieve the authorized account, support and contract context for the renewal.",
+    body: "Bring up the account, support and contract details you are allowed to see for the renewal.",
   },
   {
     phase: "Connect",
@@ -34,12 +34,12 @@ const workflowSteps = [
   {
     phase: "Review",
     title: "The change is executed",
-    body: "The approved update is executed in the source system that owns the record.",
+    body: "The approved update is made in the tool that owns the record.",
   },
   {
     phase: "Review",
     title: "The record is kept",
-    body: "Show the resulting source-system state and the audit record that was retained.",
+    body: "Show how the tool looks now, and the record kept of what was done.",
   },
 ] as const;
 
