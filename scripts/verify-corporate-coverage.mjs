@@ -221,12 +221,23 @@ for (const route of HEADER_REQUIRED_ROUTES) {
   const findAnchor = (href, label) =>
     anchors.find((a) => a.href === href && a.label === label);
 
-  // 2) Thirteen sub-links with exact label + destination, in order. Order is
-  // checked by the index of each successive match increasing.
+  // 2) Thirteen sub-links with exact label + destination, in order. The
+  // dropdowns now render in the Magic UI mega-menu shape: each entry's anchor
+  // contains the exact sub-link TITLE followed by a one-line description, so the
+  // anchor's normalised inner text is "<label> <description>". The label is
+  // matched as the anchor text's leading segment on a word boundary (so
+  // "Company overview" matches "Company overview We build for the work between
+  // systems." but not an unrelated "Company overviewer"); the destination href
+  // is still matched EXACTLY and order is still enforced by increasing index.
+  // (Markup-shape change from the plain link list — noted in the PR body.)
+  const labelMatchesTitle = (anchorLabel, subLabel) =>
+    anchorLabel === subLabel ||
+    anchorLabel === `${subLabel} ` ||
+    anchorLabel.startsWith(`${subLabel} `);
   let lastIndex = -1;
   for (const sub of HEADER_SUBLINKS) {
     const idx = anchors.findIndex(
-      (a, i) => i > lastIndex && a.href === sub.href && a.label === sub.label,
+      (a, i) => i > lastIndex && a.href === sub.href && labelMatchesTitle(a.label, sub.label),
     );
     if (idx === -1) {
       headerFailures.push(`${route}: missing/out-of-order sub-link ${sub.label} -> ${sub.href}`);
