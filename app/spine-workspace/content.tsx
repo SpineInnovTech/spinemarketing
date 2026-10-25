@@ -11,7 +11,7 @@ const foundationPillars = [
   {
     icon: LayoutGrid,
     title: "Workbench",
-    body: "People work in role-aware surfaces in the Workbench, the primary working environment.",
+    body: "People work in role-aware surfaces in the Workbench, the main place they work.",
   },
   {
     icon: Sparkles,
@@ -20,8 +20,8 @@ const foundationPillars = [
   },
   {
     icon: ShieldCheck,
-    title: "Runtime",
-    body: "Humans decide and approve. Runtime governs execution and reconciles observed outcomes.",
+    title: "Approved action",
+    body: "Humans decide and approve. The product carries out the approved action and checks the result.",
   },
 ]
 
@@ -43,7 +43,7 @@ export function SpineWorkspaceOverviewContent() {
         tone="ice"
         badge="A product by Spine InnovTech"
         headline="SpineWorkspace"
-        subhead="Connected context. Human control. AI-ready. SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record."
+        subhead="Connected context. Human control. AI-ready. SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools keep the record."
         principle="Your tools. Your context. Your decisions."
         primaryCta={{ label: "Explore SpineWorkspace", href: "https://spineworkspace.com" }}
         secondaryCta={{ label: "Understand our technology approach", href: "/platform" }}
@@ -59,7 +59,7 @@ export function SpineWorkspaceOverviewContent() {
             Fabric assembles authorized records, evidence, goals, decisions and outcomes into shared context. Your CRM, support, finance, contract and document systems keep their records.
           </p>
           <p className="text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#536883]">
-            People work in role-aware surfaces in the Workbench, the primary working environment. The Twin investigates and prepares the next step from that context. Humans decide and approve. Runtime governs execution and reconciles observed outcomes.
+            People work in role-aware surfaces in the Workbench, the main place they work. The Twin looks into things and prepares the next step from that context. Humans decide and approve. The product carries out the approved action and checks the result.
           </p>
           <p className="text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#536883]">
             Context and decisions carry forward so the story does not have to be rebuilt on every handoff or tool switch.
@@ -107,7 +107,7 @@ export function SpineWorkspaceOverviewContent() {
             An account review, technical investigation or handoff should retain its evidence, decisions and open questions.
           </p>
           <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#536883]">
-            Our approach to continuity extends that principle to compatible environments through permitted context and supported interfaces. Each environment must still establish the access and authority required for the work.
+            Our approach to continuity extends that principle to other compatible places through permitted context and supported connections. Each place must still set up the access and permission the work needs.
           </p>
         </div>
       </section>

@@ -157,15 +157,15 @@ export const pages = {
 
   businessContext: {
     meta: {
-      title: "Business Context — Ingestion & Retrieval",
-      description: "Discover, ingest, relate and retrieve governed context with source provenance and role-aware access. Original systems remain authoritative.",
+      title: "Business Context — Bring the right facts together",
+      description: "Find, connect and bring together the facts a task needs, with a record of where each one came from and who can see it. Your original tools stay in charge.",
       path: "/business-context",
     },
     hero: {
-      badge: "SPINE FABRIC · TRUTH AND CONTEXT",
-      headline: "Ingest the truth. Retrieve the context.",
+      badge: "SPINE FABRIC · FACTS AND CONTEXT",
+      headline: "Bring the facts together. See the context.",
       subhead:
-        "Spine Fabric is the governed contextual operating plane behind the Workbench. It relates authorized source records, events, relationships and evidence so humans and AI can retrieve the context relevant to their work.",
+        "Spine Fabric is the shared, governed base behind the Workbench. (\"Governed\" means every use follows set rules.) It connects the records, events, relationships and evidence you are allowed to see, so people and AI can find the facts a task needs.",
       primaryCta: { label: "See how work is shown", href: "/adaptive-workspace" },
     },
     sections: [
@@ -310,37 +310,37 @@ export const pages = {
 
   hostConnectedEnvironment: {
     meta: {
-      title: "Host Connection Evidence | SpineWorkspace",
+      title: "Proof of what an AI tool can reach | SpineWorkspace",
       description:
-        "Understand the separate evidence for host identity, capability discovery, authorization, invocation and reconciliation, with independent authority across hosts.",
+        "See the separate proof for who the AI tool is, what it can find, what it is allowed to do, what it did, and whether the result matched — with each tool keeping its own say.",
       path: "/host-connected-environment",
     },
     hero: {
-      badge: "SPINE NETWORK · HOST CONNECTIONS",
-      headline: "Know what your host can actually access.",
+      badge: "SPINE NETWORK · AI TOOL CONNECTIONS",
+      headline: "Know what your AI tool can actually reach.",
       subhead:
-        "Host identity, discovered tools, authorized capabilities and verified execution are distinct. Spine Network preserves independent host bindings while source systems retain control of their records.",
+        "Who the AI tool is, what tools it can find, what it is allowed to do, and whether it did what it said are kept apart. Spine Network keeps each AI tool's access separate, and your original tools stay in charge of their own records.",
       primaryCta: { label: "See how work continues", href: "/continuity" },
     },
     sections: [
       {
-        headline: "A connected host starts the evidence chain.",
+        headline: "A connected AI tool starts the record.",
         body:
-          "The intended connection experience identifies the host binding, principal, tenant, workspace and permitted scopes. That identity evidence does not establish access to the host's private applications or connectors.",
+          "When an AI tool connects, we first confirm who it is: the tool, the person, the company, the workspace and what it is allowed to touch. Knowing who it is does not, by itself, let it into the tool's own apps or data.",
       },
       {
-        headline: "Discovered capabilities still require authority.",
+        headline: "Finding a tool is not the same as being allowed to use it.",
         body:
-          "A capability may be explicitly host-exposed, separately bound to Spine or unavailable. Discovery metadata does not grant permission. Current consent, scopes, membership and capability policy determine what may be used.",
+          "A task may be open to the AI tool, kept for Spine only, or not available at all. Seeing that a task exists does not grant permission. What is allowed depends on current consent, what the tool may touch, who is a member, and the rules in place.",
       },
       {
-        headline: "Verify the invocation and its outcome separately.",
-        body: "The five required stages are identity verification, capability discovery, authorization, safe invocation and reconciliation. An ingestion acknowledgement must be followed by canonical materialization, source lineage and authorized retrieval before data readiness is proven.",
+        headline: "Check what it did, and whether the result matched, on their own.",
+        body: "There are five steps: confirm who it is, find what it can do, check it is allowed, do the task safely, and confirm the result matched. When new facts come in, we also confirm they were saved, note where they came from, and allow access before we treat them as ready.",
       },
       {
-        headline: "Carry the work forward with independent permissions.",
+        headline: "Carry the work forward, with permission checked again each time.",
         body:
-          "Spine Network is designed to preserve the same entity, versioned context, work item and checkpoint across compatible hosts. Each destination re-evaluates authority and produces its own retrieval trace. Private host memory, credentials and privileges do not transfer. These are evidence requirements, not a claim of a verified production handoff.",
+          "Spine Network is built to keep the same item, saved context, work and save point as work moves between AI tools that can work together. Each new tool checks permission again and keeps its own record. A tool's private memory, sign-ins and rights do not travel with it. These are the things we aim to prove, not a claim of a tested live handoff.",
       },
     ],
     crossLinks: {
@@ -366,8 +366,8 @@ export const pages = {
         body: "Availability is not authority. Twin can propose. A person with the right scope accepts or rejects the proposal. The source system stays the record.",
       },
       {
-        headline: "Three memory scopes.",
-        body: "Personal memory stays with the person. Session memory stays with that sitting. Organizational memory is shared context for the organization. None of them replaces the record. They are not blended.",
+        headline: "Three kinds of memory.",
+        body: "Personal memory stays with the person. Session memory stays with that sitting. Organizational memory is shared for the whole organization. None of them replaces the record. They are kept apart.",
         items: ["Personal memory", "Session memory", "Organizational memory"],
       },
       {
@@ -387,13 +387,13 @@ export const pages = {
 
   continuity: {
     meta: {
-      title: "Cross-Host Continuity — One Context",
-      description: "Business memory, work state, checkpoints, evidence, and outcomes stay connected across sessions and hosts.",
+      title: "Carry work across tools — One context",
+      description: "Business memory, work in progress, save points, evidence and results stay connected across sittings and across AI tools.",
       path: "/continuity",
     },
     hero: {
       badge: "Continuity",
-      headline: "One work item. Multiple hosts. Independent authority.",
+      headline: "One piece of work. Many tools. Each one still asks permission.",
       primaryCta: { label: "See continuity proof", href: "/proof" },
     },
     sections: [
@@ -402,12 +402,12 @@ export const pages = {
         body: "Switching between CRM, email, chat, and project tools forces people and AI to reconstruct what happened, why it matters, and what comes next.",
       },
       {
-        headline: "Business memory that persists.",
-        body: "Versioned context and authorized work state can be resumed across compatible AI hosts through Spine Network. Each host is re-authorized and never inherits another host's private credentials.",
+        headline: "Business memory that stays.",
+        body: "Saved context and your work in progress can be picked up again across AI tools that can work together, through Spine Network. Each tool asks permission again and never gets another tool's private sign-ins.",
       },
       {
-        headline: "Three memory scopes.",
-        body: "Personal memory, session memory, and organizational memory are different scopes. A resumed checkpoint carries the work, not a blend of all three.",
+        headline: "Three kinds of memory.",
+        body: "Personal memory, session memory, and organizational memory are kept apart. When you pick work back up, it carries that work, not a mix of all three.",
         items: ["Personal memory", "Session memory", "Organizational memory"],
       },
     ],
@@ -519,20 +519,20 @@ export const pages = {
 
   developers: {
     meta: {
-      title: "Developers — Evaluate Your Integration",
-      description: "Review connector coverage, events, AI host access and permissions for your SpineWorkspace integration.",
+      title: "Developers — Check how it connects",
+      description: "Review the connections, events, AI tool access and permissions for your SpineWorkspace setup.",
       path: "/developers",
     },
     hero: {
       badge: "Developers",
-      headline: "Evaluate your integration.",
+      headline: "Check how it connects.",
       subhead: "Review the connections, events and access controls your team needs. Your existing tools keep the record.",
       primaryCta: { label: "Read the docs", href: DOCS_URL },
     },
     sections: [
       {
         id: "integration-paths",
-        headline: "Choose your technical starting point.",
+        headline: "Choose where to start.",
         body: "Supported providers, operations and deployment access are confirmed for your environment.",
         cards: [
           { title: "Connector catalog", description: "Find relevant tools, then confirm supported operations and access.", href: "/integrations" },
@@ -548,13 +548,13 @@ export const pages = {
   platformHub: {
     meta: {
       title: "Spine Platform",
-      description: "Explore the architecture behind SpineWorkspace: business context, role-aware collaboration, context-aware AI and controlled execution.",
+      description: "See how SpineWorkspace works: shared information, work built around your role, AI that helps, and actions people approve.",
       path: "/platform",
     },
     hero: {
       badge: "Spine Platform",
-      headline: "One architecture for connected business work.",
-      subhead: "Fabric provides shared context. Workbench brings it into role-aware work. Twin helps people understand and prepare. Runtime governs authorized execution and observed outcomes. Connected capabilities extend that architecture.",
+      headline: "One joined-up way to do connected business work.",
+      subhead: "Fabric brings your information together. Workbench puts it into work built around your role. Twin helps people understand and prepare. People approve the action, and the result is checked. Connected tools add to all of this.",
       primaryCta: { label: "Spine Fabric", href: "/platform/spine-fabric" },
     },
     sections: [
@@ -565,8 +565,8 @@ export const pages = {
           { title: "How it works", description: "The tools keep the record. The workspace shows the work. A person decides, and an accepted change goes back.", href: "/platform/how-it-works" },
           { title: "Integrations", description: "The apps, files, and conversations already in use.", href: "/platform/integrations" },
           { title: "The tools you already use", description: "Each tool stays itself. They do not have to talk to each other directly.", href: "/host-connected-environment" },
-          { title: "Observation and reconciliation", description: "Results observed, not blindly trusted.", href: "/governance" },
-          { title: "Security and governance", description: "Access, auditability, and execution controls.", href: "/security" },
+          { title: "Check the result", description: "Results are checked, not blindly trusted.", href: "/governance" },
+          { title: "Security and governance", description: "Who can see what, what is recorded, and controls on actions.", href: "/security" },
         ],
       },
     ],
@@ -574,36 +574,36 @@ export const pages = {
 
   securityPage: {
     meta: {
-      title: "Security — Governance, data handling, and bounded execution",
-      description: "Access controls, evidence, auditability, and execution boundaries for SpineWorkspace.",
+      title: "Security — Who can decide, how data is handled, what AI may do",
+      description: "Access rules, evidence, a clear record, and limits on what AI can do for SpineWorkspace.",
       path: "/security",
     },
     hero: {
       badge: "Security",
       headline: "Controls and limits for the workspace.",
-      subhead: "Access, encryption, and what Twin is not allowed to do. Authority and memory scopes live on Governance.",
+      subhead: "Who can get in, how data is kept safe, and what Twin is not allowed to do. Who may decide, and which memory they may use, lives on Governance.",
       primaryCta: { label: "Contact security team", href: "/contact?intent=security" },
     },
     sections: [
       {
-        headline: "Governance model.",
-        body: "Humans govern the business. AI assists within authority boundaries. Availability of a capability does not grant authority to use it.",
+        headline: "Who is in control.",
+        body: "People run the business. AI helps within set limits. Being able to do something does not mean it is allowed.",
       },
       {
-        headline: "Access and authorization.",
-        body: "Role-based access, scoped permissions, and the person's permission keep actions within organizational policy.",
+        headline: "Who can get in, and what they can do.",
+        body: "Access by role, limits on what each person can touch, and the person's own say keep actions within company rules.",
       },
       {
-        headline: "Evidence and auditability.",
-        body: "Actions link to evidence. Audit trails support reconciliation and review—not just model confidence.",
+        headline: "Evidence and a clear record.",
+        body: "Every action is tied to its evidence. A full record lets people check the result and review it — not just trust the AI.",
       },
       {
-        headline: "Execution controls.",
-        body: "Consequential actions require explicit approval. Scoped execution prevents AI from operating outside authorized boundaries.",
+        headline: "Limits on what AI can do.",
+        body: "Actions that matter need a person's clear yes. Set limits stop AI from acting outside what it is allowed to do.",
       },
       {
-        headline: "Data boundaries.",
-        body: "Spine assembles context from connected systems without replacing the tools that keep the record. Data handling aligns with your governance requirements.",
+        headline: "Where data stays.",
+        body: "Spine brings together the facts from your connected tools without replacing the tools that keep the record. Data is handled to match your rules.",
       },
     ],
   },
@@ -692,21 +692,21 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
   operations: {
     meta: {
       title: "Operations — Coordinate connected work",
-      description: "Cross-functional processes, handoffs, execution, and reconciliation.",
+      description: "Work across teams, handoffs, getting things done, and checking the result.",
       path: "/use-cases/operations",
     },
     hero: {
       badge: "Operations",
-      headline: "Coordinate work across fragmented systems.",
+      headline: "Coordinate work across scattered tools.",
       primaryCta: { label: "Book a demo", href: "/contact?intent=demo" },
     },
     sections: [],
     topics: [
-      { title: "Cross-functional processes", description: "Work flows across teams from the same truth and context." },
-      { title: "Handoffs", description: "Truth and context survive every transition—not lost in Slack threads." },
-      { title: "Execution", description: "Governed actions with approval boundaries." },
+      { title: "Work across teams", description: "Work flows across teams from the same facts and context." },
+      { title: "Handoffs", description: "Facts and context survive every handover—not lost in chat threads." },
+      { title: "Getting things done", description: "Actions that follow the rules, with approval before anything that matters." },
       { title: "Evidence", description: "Every step linked to source data and decisions." },
-      { title: "Reconciliation", description: "Outcomes checked against the source record." },
+      { title: "Checking the result", description: "Results checked against the source record." },
     ],
   },
   "founders-and-leaders": {
@@ -745,7 +745,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
       { title: "Work queues", description: "Prioritized work linked to goals and evidence." },
       { title: "Approvals", description: "Controlled execution—nothing consequential runs without authority." },
       { title: "Visibility", description: "Everyone sees the same business story." },
-      { title: "Continuity", description: "Handoffs and host switches don't reset the narrative." },
+      { title: "Continuity", description: "Handoffs and tool switches don't reset the story." },
     ],
   },
 };

@@ -10,11 +10,11 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "Founders & CXOs | Spine InnovTech",
   description:
-    "Monday brief. Revenue movement. Board pack — available in seconds.",
+    "Monday brief. Revenue movement. Board pack — ready when you are.",
   alternates: { canonical: "/solutions/founders" },
   openGraph: {
     title: "Founders & CXOs | Spine InnovTech",
-    description: "Monday brief. Revenue movement. Board pack — available in seconds.",
+    description: "Monday brief. Revenue movement. Board pack — ready when you are.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }

@@ -36,13 +36,13 @@ export function FoundersContent() {
       dashboardCards={[
         { title: "Red-Flag Accounts", desc: "Your top accounts ranked by risk and revenue. Click any one and see the full picture — usage, support, payments, communications." },
         { title: "Forecast Drift", desc: "Pipeline coverage, deal slippage, and renewal risk — compared to last week. You see what moved and why." },
-        { title: "Cash Runway", desc: "Burn rate, collections forecast, and revenue trajectory — connected to actual customer health, not just projections." },
+        { title: "Cash Runway", desc: "Burn rate, collections forecast, and revenue trajectory — connected to actual customer health, not just forecasts." },
         { title: "Monday Brief", desc: "A single-screen summary of what changed this week. Auto-generated every Monday with evidence links." },
         { title: "Escalation Queue", desc: "Critical signals from across the org — flagged for executive review with full context and recommended actions." },
         { title: "Team Pulse", desc: "Cross-functional signal activity: how many risks surfaced, how many actions approved, how fast things are moving." },
       ]}
       deepDives={[
-        { title: "Board-ready in seconds, not days", desc: "NRR, burn rate, cash runway, and pipeline coverage — pulled from your actual systems. One click, not three days of prep." },
+        { title: "Board-ready without the scramble", desc: "NRR, burn rate, cash runway, and pipeline coverage — pulled from your actual systems. One click, not three days of prep." },
         { title: "Decisions backed by evidence", desc: "Every signal shows you the exact data behind it. When you act, you know why. When you share it with the board, they can verify." },
         { title: "Full audit trail across the org", desc: "See every AI-suggested action — what was proposed, who approved it, what happened. Governance you can actually verify." },
       ]}

@@ -24,7 +24,7 @@ export function FinanceIndustryContent() {
         },
         {
           label: "Cash forecast",
-          before: "Spreadsheet-based projections from invoice aging. Doesn't account for customer health.",
+          before: "Spreadsheet-based forecasts from invoice aging. Doesn't account for customer health.",
           after: "AI-weighted forecast using payment history, customer health, and engagement data.",
         },
         {
@@ -36,7 +36,7 @@ export function FinanceIndustryContent() {
       dashboardCards={[
         { title: "Collections Risk Panel", desc: "Overdue invoices ranked by customer health, not just aging. See who will pay and who needs escalation." },
         { title: "Revenue Leak Detector", desc: "Billed-not-delivered and delivered-not-billed gaps — surfaced automatically, updated in real time." },
-        { title: "Cash Flow Forecast", desc: "AI-weighted projections based on health, payment history, and engagement — not just what's on the invoice." },
+        { title: "Cash Flow Forecast", desc: "AI-weighted forecasts based on health, payment history, and engagement — not just what's on the invoice." },
         { title: "Dunning Queue", desc: "AI-drafted collection messages with tone matched to customer relationship. Your approval required before sending." },
         { title: "Write-Off Risk", desc: "Accounts trending toward write-off flagged early. Full context for the decision — support history, usage, engagement." },
         { title: "Compliance Audit Log", desc: "Every AI-suggested action logged with who approved it, when, and the evidence that drove it." },

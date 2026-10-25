@@ -74,7 +74,7 @@ function DefaultHeroArtCard({
 
       <div className="mt-4 rounded-xl border border-[#D9E4EF] bg-white p-4 shadow-2xs">
         <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-[#526479]">
-          Active workspace projection
+          What you are working on now
         </p>
         <p className="mt-1.5 line-clamp-2 text-[16px] font-semibold leading-snug text-[#032D60]">
           {headlineLine}
@@ -93,10 +93,10 @@ function DefaultHeroArtCard({
             Context
           </div>
           <p className="mt-1 text-[12.5px] font-semibold text-[#032D60]">
-            Source-linked records
+            Records linked to their source
           </p>
           <p className="mt-0.5 text-[11.5px] leading-snug text-[#526479]">
-            Assembled with provenance from authorized tools.
+            Brought together from the tools you are allowed to use, with where each one came from.
           </p>
         </div>
 
@@ -106,10 +106,10 @@ function DefaultHeroArtCard({
             Prepared Step
           </div>
           <p className="mt-1 text-[12.5px] font-semibold text-[#032D60]">
-            Scoped option ready
+            A next step, ready
           </p>
           <p className="mt-0.5 text-[11.5px] leading-snug text-[#526479]">
-            Evidence-backed next step prepared for inspection.
+            A suggested next step, with the evidence behind it, ready for you to look at.
           </p>
         </div>
 
@@ -122,7 +122,7 @@ function DefaultHeroArtCard({
             Human review gate
           </p>
           <p className="mt-0.5 text-[11.5px] leading-snug text-[#33465B]">
-            Consequential actions wait for explicit approval.
+            Important actions wait for a person to approve them.
           </p>
         </div>
       </div>
@@ -130,9 +130,9 @@ function DefaultHeroArtCard({
       <div className="mt-3 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#D9E4EF] bg-white px-3.5 py-2 text-[12px] text-[#526479]">
         <span className="inline-flex items-center gap-1.5 font-medium text-[#032D60]">
           <CheckCircle2 className="h-3.5 w-3.5 text-[#006FE8]" aria-hidden />
-          Spine InnovTech · SpineWorkspace architecture
+          Spine InnovTech · SpineWorkspace
         </span>
-        <span>Illustrative interface · source systems stay authoritative</span>
+        <span>Example view · your tools keep the record</span>
       </div>
     </div>
   );

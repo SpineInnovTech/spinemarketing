@@ -16,7 +16,7 @@ export const posts: BlogPost[] = [
     slug: "stop-being-the-human-api",
     title: "Stop being the translator between your tools",
     description:
-      "Every founder, operator, and account manager starts their day the same way: open 12 tabs, copy-paste context, and lose an hour before real work begins.",
+      "Every founder, operator, and account manager starts their day the same way: open tab after tab, copy-paste context, and lose an hour before real work begins.",
     date: "2026-04-12",
     author: "Spine InnovTech Team",
     readTime: "4 min read",

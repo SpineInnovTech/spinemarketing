@@ -10,11 +10,11 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "Governance & Twin in Action | Spine InnovTech",
   description:
-    "Review proposed work with evidence, route consequential actions to the right authority, and reconcile observed outcomes.",
+    "Review proposed work with its evidence, send actions that matter to the right person to approve, and check the results.",
   alternates: { canonical: "/product/approval-gate-twin" },
   openGraph: {
     title: "Governance & Twin in Action | Spine InnovTech",
-    description: "Review proposed work with evidence, route consequential actions to the right authority, and reconcile observed outcomes.",
+    description: "Review proposed work with its evidence, send actions that matter to the right person to approve, and check the results.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }

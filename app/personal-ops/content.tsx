@@ -37,7 +37,7 @@ const steps = [
   {
     num: "01",
     title: "Connect the apps you already use",
-    desc: "Plug in via OAuth once. The Spine starts reading immediately.",
+    desc: "Connect once with a secure sign-in. The Spine starts reading right away.",
   },
   {
     num: "02",

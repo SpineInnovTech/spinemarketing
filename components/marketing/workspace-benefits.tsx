@@ -7,21 +7,21 @@ const benefits = [
   {
     icon: Database,
     title: "Governed business context",
-    body: "Connect authorized records and retrieve the evidence for the task. Keep source permissions and lineage with the context. Your existing tools remain the systems of record.",
+    body: "Connect the records you are allowed to use and bring up the evidence for the task. Keep each tool's permissions and where the information came from. Your existing tools stay the place of record.",
     href: "/business-context",
     link: "Explore business context",
   },
   {
     icon: Layers3,
-    title: "One Fabric across 13 domains",
-    body: "Give Sales, Finance, Account Success and other teams their own views of shared business context, with access appropriate to each role.",
+    title: "One shared view across teams",
+    body: "Give Sales, Finance, Account Success and other teams their own view of the same shared business context, with each person seeing only what their role allows.",
     href: "/platform/spine-fabric",
     link: "Explore Spine Fabric",
   },
   {
     icon: PanelsTopLeft,
-    title: "Editable dashboards and Canvas",
-    body: "Edit record drafts from operational dashboards with KPIs and actions. Compose Canvas documents, tables and graphs from reusable UI Library blocks.",
+    title: "Editable dashboards and documents",
+    body: "Edit draft records right from dashboards that show key numbers and let you act. Build documents, tables and charts from ready-made building blocks in Canvas, the place for shaping work.",
     href: "https://spineworkspace.com",
     link: "Explore SpineWorkspace Product",
   },
@@ -84,7 +84,7 @@ export function WorkspaceBenefits({ detailed = false }: { detailed?: boolean }) 
             </BlurFade>
           ))}
         </div>
-        <p className="mt-5 text-xs leading-6 text-[#596F89]">Available views depend on connected sources, your role and authorized capabilities.</p>
+        <p className="mt-5 text-xs leading-6 text-[#596F89]">What you can see depends on the tools you connect, your role and what you are allowed to do.</p>
       </div>
     </section>
   );

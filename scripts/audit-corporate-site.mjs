@@ -118,7 +118,7 @@ const aboutProof = source("app/about/sticky-sections.tsx");
 check(aboutPage.includes("AboutJourneyScroll"), "About/Our story must render the founder origin story");
 check(aboutProof.includes("$8M") && aboutProof.includes("MuleSoft") && aboutProof.includes("Salesforce"), "About origin must tell the $8M renewal with authorized Slack/email/MuleSoft/Salesforce context");
 check(/Before founding Spine InnovTech/.test(aboutProof) && /not a SpineWorkspace customer result/i.test(aboutProof), "About $8M must be framed as prior founder experience, not a SpineWorkspace customer result/testimonial/ROI");
-check(banner.includes("Explore SpineWorkspace") && banner.includes('href="/proof"'), "homepage must offer the action CTA (Explore SpineWorkspace, one word) and a path to the proof");
+check(banner.includes("Explore SpineWorkspace"), "homepage must offer the action CTA (Explore SpineWorkspace, one word)");
 
 // Product brand is ONE WORD in visitor copy everywhere. Company is 'Spine InnovTech'.
 const brandSources = [

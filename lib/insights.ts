@@ -92,7 +92,7 @@ export const INSIGHT_ARTICLES: InsightArticle[] = [
         paragraphs: [
           "Context becomes useful when it supports a responsibility. Someone needs to decide whether to change the plan, contact the customer, escalate the incident or accept the risk.",
           "That decision should retain its evidence and become part of the continuing work. Otherwise the organization will need to reconstruct the reasoning at the next handoff.",
-          "At Spine InnovTech, this is the foundation we are working on: context that people and AI can use together, within clear access and authority boundaries, while existing tools remain the systems of record.",
+          "At Spine InnovTech, this is the foundation we are working on: context that people and AI can use together, within clear limits on who can see what and who can act, while your existing tools keep the record.",
         ],
       },
     ],
@@ -103,41 +103,41 @@ export const INSIGHT_ARTICLES: InsightArticle[] = [
     title: "Connection is not permission.",
     metaTitle: "Connection Is Not Permission — Spine InnovTech",
     metaDescription:
-      "Explore the boundary between discovering a connected capability and authorizing a person or AI to use it for business work.",
+      "Explore the line between finding a connected tool and giving a person or AI permission to use it for business work.",
     category: "Governance",
     byline: "Spine InnovTech",
     cardSummary:
-      "How to think about the boundary between discovering a capability and authorizing a person or AI to use it.",
+      "How to think about the line between finding a tool and giving a person or AI permission to use it.",
     sections: [
       {
         paragraphs: [
-          "A connected environment may expose a useful capability: read an account, inspect an incident, prepare a message or update a record.",
-          "Discovery can establish that the capability exists. It still leaves several questions open. Who may use it? Which information may it access? For which account? Under whose authority? With what approval?",
-          "Those questions become especially important when AI can select tools and prepare actions across multiple systems.",
+          "A connected tool may offer something useful: read an account, look at an incident, prepare a message or update a record.",
+          "Finding it can show that the tool exists. It still leaves several questions open. Who may use it? Which information may it reach? For which account? With whose permission? With what approval?",
+          "Those questions matter even more when AI can pick tools and prepare actions across many tools.",
         ],
       },
       {
-        heading: "Capability describes what is possible",
+        heading: "What a tool can do is only part of the story",
         paragraphs: [
-          "A tool's interface tells us what operation it can perform and what inputs it expects. Its presence in a host or catalog can help a system understand how to request that operation.",
-          "Authorization needs a different set of facts: identity, organizational boundaries, role, delegated scope, the requested operation and relevant policy.",
-          "A broadly capable connection can serve people with very different responsibilities. The scope of each person's permitted work must remain explicit.",
+          "A tool shows what it can do and what it needs to do it. Seeing it in an app or list can help a system work out how to ask for that action.",
+          "Permission needs a different set of facts: who the person is, the company's limits, their role, what they have been allowed to do, the action asked for and the rules that apply.",
+          "One broad connection can serve people with very different jobs. What each person is allowed to do must stay clear.",
         ],
       },
       {
-        heading: "Preparation and execution carry different responsibilities",
+        heading: "Preparing and doing are different jobs",
         paragraphs: [
-          "Suppose an AI finds an unresolved customer commitment and prepares a proposed follow-up.",
-          "Gathering the permitted context, drafting the follow-up, approving it and sending it are distinct steps. A useful system should preserve that distinction as the work proceeds.",
-          "Where approval is required, the reviewer needs enough information to understand the intended action and its implications. The eventual operation should remain tied to the authority that permitted it.",
+          "Suppose an AI finds an unresolved customer commitment and prepares a suggested follow-up.",
+          "Gathering the context it is allowed to use, drafting the follow-up, approving it and sending it are separate steps. A good system should keep that separation as the work goes on.",
+          "Where approval is needed, the reviewer needs enough to understand the action and what it would do. The action itself should stay tied to the permission that allowed it.",
         ],
       },
       {
-        heading: "Changing environments should preserve the boundary",
+        heading: "Moving between tools should keep the line clear",
         paragraphs: [
-          "Work may move from a shared workspace into an AI host or development environment. The tools available there may differ. The receiving environment still needs to establish the authority required for that work.",
-          "Continuity can carry the decision and its evidence. Each environment must independently verify identity, access and execution authority against its own requirements. An earlier approval or visible capability cannot grant permission by itself.",
-          "At Spine InnovTech, we treat this separation as a foundation of accountable human and AI collaboration: discover what is available, establish what is permitted, and retain evidence of what happened.",
+          "Work may move from a shared workspace into an AI app or a developer tool. The tools there may be different. The tool picking up the work still needs to set the permission that work requires.",
+          "Carrying work forward can bring the decision and its evidence along. Each tool must check for itself who the person is, what they can see and what they can do, against its own rules. An earlier approval or an available tool does not grant permission by itself.",
+          "At Spine InnovTech, we treat this separation as a foundation of accountable human and AI teamwork: find what is available, set what is allowed, and keep a record of what happened.",
         ],
       },
     ],
@@ -148,11 +148,11 @@ export const INSIGHT_ARTICLES: InsightArticle[] = [
     title: "Work should retain its history.",
     metaTitle: "Work Should Retain Its History — Spine InnovTech",
     metaDescription:
-      "What work continuity needs to preserve as customer issues, commitments and decisions move between people, systems and AI environments.",
+      "What keeping work's history needs to hold onto as customer issues, commitments and decisions move between people, tools and AI apps.",
     category: "Work continuity",
     byline: "Spine InnovTech",
     cardSummary:
-      "What continuity needs to preserve when a customer issue, commitment or decision moves between people, tools and AI environments.",
+      "What keeping the history needs to hold onto when a customer issue, commitment or decision moves between people, tools and AI apps.",
     sections: [
       {
         paragraphs: [
@@ -172,16 +172,16 @@ export const INSIGHT_ARTICLES: InsightArticle[] = [
       {
         heading: "Context must travel within permission",
         paragraphs: [
-          "The next environment may have different access rules. A customer-facing team, an engineering team and an external AI host may each be allowed to use different parts of the same work history.",
-          "A useful handoff therefore needs to preserve both meaning and scope. It should communicate enough context for the recipient's responsibility while respecting the boundaries of the source information.",
+          "The next place may have different rules about who can see what. A customer-facing team, an engineering team and an outside AI app may each be allowed to use different parts of the same work history.",
+          "So a good handoff needs to keep both the meaning and the limits. It should pass on enough for the next person's job while respecting the limits on the original information.",
         ],
       },
       {
         heading: "The result belongs to the history too",
         paragraphs: [
-          "Continuity does not end when an action is requested. The work needs a record of whether the operation completed, failed or still needs reconciliation.",
-          "That outcome informs the next decision. Without it, the next person may repeat an action or assume a commitment has been met.",
-          "This is why Spine InnovTech treats continuity as an engineering concern across people, systems and AI environments. The aim is simple to state: help the next person continue with the evidence and understanding needed to take responsibility.",
+          "Keeping the history does not end when an action is asked for. The work needs a record of whether it finished, failed or still needs to be checked and put right.",
+          "That result shapes the next decision. Without it, the next person may repeat an action or assume a promise has been kept.",
+          "This is why Spine InnovTech treats keeping the history as an engineering job across people, tools and AI apps. The aim is simple to say: help the next person carry on with the evidence and understanding they need to take responsibility.",
         ],
       },
     ],

@@ -154,7 +154,7 @@ export function RecordsPanel() {
   return (
     <div className="rounded-2xl border border-[#D9E4EF] bg-white p-5">
       <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#526479]">Business Context</p>
-      <h2 className="mt-2 text-[18px] font-semibold text-[#032D60]">Records, evidence, provenance</h2>
+      <h2 className="mt-2 text-[18px] font-semibold text-[#032D60]">Records, evidence, where it came from</h2>
       <dl className="mt-4 space-y-3 text-[14px]">
         <div>
           <dt className="font-semibold text-[#032D60]">Truth</dt>
@@ -169,7 +169,7 @@ export function RecordsPanel() {
           <dd className="text-[#33465B]">Linked, not copied into a new home for the record.</dd>
         </div>
         <div>
-          <dt className="font-semibold text-[#032D60]">Provenance</dt>
+          <dt className="font-semibold text-[#032D60]">Where it came from</dt>
           <dd className="text-[#33465B]">The source system stays authoritative until a person accepts a change.</dd>
         </div>
       </dl>

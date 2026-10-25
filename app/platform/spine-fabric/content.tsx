@@ -8,8 +8,8 @@ import { Section, SectionHeader } from "@/components/marketing/section";
 
 const foundations = [
   { icon: GitBranch, title: "Relationships", body: "Connect people, accounts, goals, events, evidence, decisions, tasks and outcomes. See how a commitment relates to a customer, or how a decision changes the work toward a goal." },
-  { icon: Database, title: "Provenance", body: "Distinguish observed records, supporting evidence, interpretations, drafts and verified outcomes. Sources, freshness, conflicts and missing information remain part of the business picture." },
-  { icon: ShieldCheck, title: "Authority", body: "Context follows identity, role, policy and authorized scope. Knowing about a situation does not independently grant permission to act on it." },
+  { icon: Database, title: "Where it came from", body: "Tell apart observed records, supporting evidence, interpretations, drafts and checked results. Where information came from, how fresh it is, what conflicts and what is missing all stay part of the picture." },
+  { icon: ShieldCheck, title: "Authority", body: "Context follows who someone is, their role, the rules and what they are allowed to do. Knowing about a situation does not, by itself, give permission to act on it." },
   { icon: History, title: "Continuity", body: "Carry relevant history and earlier decisions into a new session or handoff. People and their Twin can continue the work from its existing context." },
 ];
 
@@ -31,8 +31,8 @@ export function SpineFabricContent() {
         secondaryCta={{ label: "Explore SpineWorkspace", href: "https://spineworkspace.com" }}
         art={
           <figure>
-            <Image src="/images/corporate-architecture.png" width={1774} height={887} priority alt="Concept illustration of Fabric, Workbench, Twin and Runtime within one connected business architecture" className="h-auto w-full rounded-xl" />
-            <figcaption className="mt-4 text-xs leading-relaxed text-[#4E607A]">Concept illustration. Fabric supplies shared context within the wider Spine architecture.</figcaption>
+            <Image src="/images/corporate-architecture.png" width={1774} height={887} priority alt="Concept picture of Fabric, Workbench, Twin and approved action in one connected way of working" className="h-auto w-full rounded-xl" />
+            <figcaption className="mt-4 text-xs leading-relaxed text-[#4E607A]">Concept picture. Fabric supplies shared context within the wider Spine foundation.</figcaption>
           </figure>
         }
       />
@@ -61,13 +61,13 @@ export function SpineFabricContent() {
         </div>
       </Section>
       <Section variant="muted">
-        <SectionHeader align="left" label="Designed to cooperate" headline="Build context around the systems you already use." body="Source systems continue to own their records. Fabric relates authorized information from connected environments, preserving where it came from and why it matters to the current work." />
+        <SectionHeader align="left" label="Designed to work together" headline="Build context around the tools you already use." body="Your existing tools keep their records. Fabric connects the information you are allowed to use from those tools, keeping track of where it came from and why it matters to the work in hand." />
         <ol className="mt-10 grid gap-4 md:grid-cols-2">
           {[
-            ["Connect", "Read the relevant records, events, documents and conversations through authorized connections."],
-            ["Relate", "Link information to the right people, entities, goals and work, retaining its source and history."],
-            ["Understand", "Bring the permitted context into shared surfaces so people can review a situation and prepare options."],
-            ["Continue", "Carry decisions and observed results forward while governed actions remain subject to the appropriate authority."],
+            ["Connect", "Read the records, events, documents and conversations that matter, through connections you are allowed to use."],
+            ["Relate", "Link information to the right people, things, goals and work, keeping its source and history."],
+            ["Understand", "Bring the information you are allowed to use into shared surfaces so people can look at a situation and prepare options."],
+            ["Continue", "Carry decisions and checked results forward, while any action still needs the right person or rule to approve it."],
           ].map(([title, body], i) => (
             <li key={title} className="rounded-2xl border border-[#D6E8F8] bg-white p-7">
               <p className="text-xs font-bold text-[#0055B8]">0{i + 1}</p>
@@ -78,7 +78,7 @@ export function SpineFabricContent() {
         </ol>
       </Section>
       <Section>
-        <SectionHeader align="left" label="Keep exploring" headline="See how the foundation fits together." body="Spine Fabric is the detail behind the foundation. Start from the introduction, meet the AI counterpart, or step back to the full architecture." />
+        <SectionHeader align="left" label="Keep exploring" headline="See how the foundation fits together." body="Spine Fabric is the detail behind the foundation. Start from the introduction, meet the AI counterpart, or step back to the whole picture." />
         <div className="flex flex-wrap gap-3">
           <Link href="/spine" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">
             Spine, in brief <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />

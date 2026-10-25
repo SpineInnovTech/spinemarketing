@@ -38,7 +38,7 @@ const journeyItems = [
     description: "Working within authorized access, context drawn from Slack, email, the MuleSoft connector and multiple Salesforce connectors was brought together. Seen as one governed view, the records revealed the underlying problem the dashboards had missed.",
     icon: Search,
     color: "#f59e0b",
-    features: ["Slack + email + MuleSoft", "Multiple Salesforce connectors", "Authorized, governed access only"],
+    features: ["Slack + email + MuleSoft", "Multiple Salesforce connectors", "Allowed, governed access only"],
   },
   {
     tag: "The save, and the lasting need",
@@ -46,7 +46,7 @@ const journeyItems = [
     description: "Prior founder experience, not a SpineWorkspace customer result, testimonial or ROI claim. With the underlying problem in view, the account was saved. The lasting need was clear: continuous, governed shared context — a way to preserve that understanding as people, systems and decisions changed. That experience shaped the company we are building.",
     icon: CheckCircle2,
     color: "#1BA784",
-    features: ["Account saved", "Source systems stayed authoritative", "Continuous governed shared context was the need"],
+    features: ["Account saved", "The original tools kept the record", "Continuous governed shared context was the need"],
   },
 ];
 
