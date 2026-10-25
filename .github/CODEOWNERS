@@ -1,0 +1,9 @@
+# CODEOWNERS — spinemarketing (Spine InnovTech corporate site)
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# All changes require review from the owner. AI agent sessions cannot be GitHub
+# users, so the guardian policy is enforced in CI (see .github/REPO_GUARDIAN.md),
+# not here.
+
+# Default: the owner reviews everything.
+* @NirmalPrinceJ

@@ -12,7 +12,7 @@
     "wrangler:whoami": "env -u CLOUDFLARE_API_TOKEN -u CLOUDFLARE_ACCOUNT_ID wrangler whoami",
     "deploy:dev": "wrangler deploy --env dev",
     "deploy:test": "wrangler deploy --env test",
-    "deploy:prod": "wrangler deploy --env prod",
+    "deploy:prod": "node scripts/prod-deploy-guard.mjs",
     "preview": "wrangler dev --env prod",
     "content:migrate": "tsx scripts/migrate-blog-to-sanity.ts",
     "sanity:dev": "sanity dev",
@@ -21,10 +21,13 @@
     "check": "npm run lint && npm run audit:site && npm run check:cloudflare && npm run typecheck",
     "audit:site": "node scripts/audit-corporate-site.mjs",
     "check:cloudflare": "node scripts/check-cloudflare-config.mjs",
-    "verify:artifact": "node scripts/verify-static-artifact.mjs && node scripts/verify-corporate-coverage.mjs",
+    "guard:branch": "bash scripts/branch-guard.sh",
+    "guard:pr": "bash scripts/branch-guard.sh check-pr",
+    "guard:prod": "node scripts/prod-deploy-guard.mjs --check-only",
+    "verify:artifact": "node scripts/verify-static-artifact.mjs && node scripts/verify-corporate-coverage.mjs && node scripts/verify-copy-guard.mjs",
     "verify:live": "node scripts/verify-live-site.mjs",
     "build:cloudflare": "npm run lint && npm run audit:site && npm run check:cloudflare && npm run typecheck && npm run build && npm run verify:artifact",
-    "deploy:cloudflare": "npm run verify:artifact && wrangler deploy --env prod && node scripts/purge-cloudflare-cache.mjs && npm run verify:live"
+    "deploy:cloudflare": "node scripts/prod-deploy-guard.mjs --check-only && npm run verify:artifact && node scripts/prod-deploy-guard.mjs && node scripts/purge-cloudflare-cache.mjs && npm run verify:live"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",

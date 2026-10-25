@@ -77,7 +77,14 @@ for (const gate of ["npm run lint", "npm run audit:site", "npm run check:cloudfl
   assert(pipeline.includes(gate), `Cloudflare build is missing gate: ${gate}`);
 }
 assert(build.deployCommand === "npm run deploy:cloudflare", "Cloudflare Deploy command mismatch");
-assert(pkg.scripts?.["deploy:cloudflare"]?.includes("wrangler deploy --env prod"), "Cloudflare deploy must target prod");
+// Prod is deployed through the guard (scripts/prod-deploy-guard.mjs), not a bare
+// `wrangler deploy`. The guard refuses unless the tree is clean, HEAD==origin/main
+// and CONFIRM_PROD_DEPLOY is set, then runs `wrangler deploy --env prod` itself.
+// So deploy:cloudflare must route through the guard, and the guard must target prod.
+assert(pkg.scripts?.["deploy:cloudflare"]?.includes("prod-deploy-guard.mjs"), "Cloudflare deploy must route through the prod deploy guard");
+assert(pkg.scripts?.["deploy:prod"]?.includes("prod-deploy-guard.mjs"), "deploy:prod must route through the prod deploy guard, not a bare wrangler deploy");
+assert(existsSync("scripts/prod-deploy-guard.mjs"), "prod deploy guard script missing");
+assert(readFileSync("scripts/prod-deploy-guard.mjs", "utf8").includes('"wrangler", "deploy", "--env", "prod"'), "prod deploy guard must target the prod environment");
 assert(pkg.scripts?.["deploy:cloudflare"]?.includes("verify:live"), "deployment must verify public hostname");
 assert(pkg.scripts?.check?.includes("check:cloudflare"), "release preflight must include Cloudflare config");
 assert(!pkg.scripts?.check?.includes("check:ci"), "obsolete CircleCI check still referenced");
