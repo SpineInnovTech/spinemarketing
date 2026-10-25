@@ -36,7 +36,7 @@ export function FoundersContent() {
       dashboardCards={[
         { title: "Red-Flag Accounts", desc: "Your top accounts ranked by risk and revenue. Click any one and see the full picture — usage, support, payments, communications." },
         { title: "Forecast Drift", desc: "Pipeline coverage, deal slippage, and renewal risk — compared to last week. You see what moved and why." },
-        { title: "Cash Runway", desc: "Burn rate, collections forecast, and revenue trajectory — connected to actual customer health, not just projections." },
+        { title: "Cash Runway", desc: "Burn rate, collections forecast, and revenue trajectory — connected to actual customer health, not just forecasts." },
         { title: "Monday Brief", desc: "A single-screen summary of what changed this week. Auto-generated every Monday with evidence links." },
         { title: "Escalation Queue", desc: "Critical signals from across the org — flagged for executive review with full context and recommended actions." },
         { title: "Team Pulse", desc: "Cross-functional signal activity: how many risks surfaced, how many actions approved, how fast things are moving." },

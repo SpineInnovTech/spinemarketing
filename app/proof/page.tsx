@@ -32,7 +32,7 @@ const evidence = [
     description: "See the native navigation expand and collapse, then open work-view search in the actual application.",
     label: "Watch the shell recording",
     href: "/product#workbench-recording",
-    detail: "Recorded October 14, 2026, using existing QA fixtures. Playback keeps the original speed, with no compositing. This establishes interface interactions, not live ingestion, verified host access or completed provider execution.",
+    detail: "Recorded October 14, 2026, using existing test examples. Playback keeps the original speed, with no editing. This shows how the screens work, not live data loading, proven tool access, or a finished action in your tools.",
   },
   {
     title: "Follow one piece of work.",

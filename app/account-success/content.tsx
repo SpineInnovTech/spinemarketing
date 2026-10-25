@@ -184,7 +184,7 @@ const useCases = [
   },
   {
     num: "02",
-    title: "Duplicate detection at ingest",
+    title: "Spot duplicates as data comes in",
     desc: "New records scored against existing entities before entering SpineWorkspace.",
   },
   {
@@ -371,7 +371,7 @@ export function AccountSuccessContent() {
                     "High-confidence matches are prepared for authorized review",
                     "Low-confidence matches go to your review queue",
                     "Supported changes retain decision and source evidence",
-                    "View updates track source freshness and reconciliation",
+                    "View updates track how fresh the source is and whether results match",
                   ].map((outcome, i) => (
                     <motion.li key={i} {...fade(i * 0.06)} className="flex items-start gap-3">
                       <div

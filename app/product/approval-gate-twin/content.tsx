@@ -292,7 +292,7 @@ export function ApprovalGateTwinContent() {
               AI that works <span className="text-primary">with you, not for you.</span>
             </h2>
             <p className="mx-auto mt-4 text-[15px] font-medium leading-[1.6] text-white/40">
-              Authorized work, reviewable decisions, and reconciliation of observed effects.
+              Allowed work, decisions you can review, and a check that results match.
             </p>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
               <Link href="/product/security" className="inline-flex h-10 items-center rounded-full border border-white/15 px-5 text-[13px] font-semibold text-white/60 hover:border-white/30 hover:text-white transition-colors">

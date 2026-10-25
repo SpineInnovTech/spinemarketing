@@ -44,7 +44,7 @@ export function FinanceLeadersContent() {
       deepDives={[
         { title: "Collections that make sense", desc: "Stop chasing invoices by aging alone. See which customers are healthy (and will pay) versus which are at risk (and need a different approach)." },
         { title: "Revenue protection from day one", desc: "When billing and delivery are connected, you catch gaps immediately — before they become write-offs or audit findings." },
-        { title: "Cash flow forecasts from real signals", desc: "AI-weighted projections that account for customer health and payment history — not just what the spreadsheet says." },
+        { title: "Cash flow forecasts from real signals", desc: "AI-weighted forecasts that account for customer health and payment history — not just what the spreadsheet says." },
       ]}
       governance="Every dunning message and write-off requires your approval. AI recommends — you control what goes out."
       connectors={["QuickBooks", "NetSuite", "Sage", "Stripe", "Salesforce", "HubSpot", "Zendesk"]}
