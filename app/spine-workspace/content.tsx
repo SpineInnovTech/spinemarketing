@@ -43,8 +43,8 @@ export function SpineWorkspaceOverviewContent() {
         tone="ice"
         badge="A product by Spine InnovTech"
         headline="SpineWorkspace"
-        subhead="SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record."
-        principle="Humans govern the business. AI helps the work."
+        subhead="Connected context. Human control. AI-ready. SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record."
+        principle="Your tools. Your context. Your decisions."
         primaryCta={{ label: "Explore SpineWorkspace", href: "https://spineworkspace.com" }}
         secondaryCta={{ label: "Understand our technology approach", href: "/platform" }}
       />

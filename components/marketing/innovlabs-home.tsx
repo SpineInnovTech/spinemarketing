@@ -6,6 +6,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { CorporateOrbitalHero } from "./corporate-orbital-hero";
 import { CorporateArchitectureStoryboard } from "./corporate-architecture-storyboard";
 import { WorkspaceBenefits } from "./workspace-benefits";
+import { INSIGHT_ARTICLES } from "@/lib/insights";
 
 // The Acme renewal story, grouped under the existing Connect -> Prepare -> Review
 // phases, as six steps. Illustrative example, not a live record.
@@ -150,8 +151,6 @@ export function InnovLabsHome() {
         </div>
       </section>
 
-      <WorkspaceBenefits />
-
       {/* PART 2 — ONE WORKFLOW, SHOWN END TO END */}
       <section id="workflow" aria-labelledby="home-workflow-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
         <div className={container}>
@@ -232,6 +231,8 @@ export function InnovLabsHome() {
         </div>
       </section>
 
+      <WorkspaceBenefits />
+
       {/* PART 5 — CONCISE ARCHITECTURE (3-scene storyboard, plain copy) */}
       <section id="architecture-story" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-14 sm:py-18">
         <div className={container}>
@@ -299,33 +300,21 @@ export function InnovLabsHome() {
               </Link>
             </div>
             <div className="mt-6 grid gap-6 md:grid-cols-3">
-              <Link href="/insights" className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all">
-                <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">Architecture</span>
-                <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
-                  Why business context belongs in a governed fabric
-                </h4>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
-                  Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
-              <Link href="/insights" className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all">
-                <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">Operating thesis</span>
-                <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
-                  Why tool proliferation keeps operators copying state
-                </h4>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
-                  Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
-              <Link href="/insights" className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all">
-                <span className="rounded-full bg-[#E8F9F0] px-2.5 py-0.5 text-[11px] font-semibold text-[#12B76A]">Governance</span>
-                <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
-                  Why autonomous AI still needs human authority
-                </h4>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
-                  Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
+              {INSIGHT_ARTICLES.map((article) => (
+                <Link
+                  key={article.slug}
+                  href={`/insights/${article.slug}`}
+                  className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
+                >
+                  <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">{article.category}</span>
+                  <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
+                    {article.title}
+                  </h4>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
+                    Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

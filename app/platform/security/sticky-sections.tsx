@@ -16,7 +16,7 @@ import {
 const items = [
   { icon: Shield, label: "SOC 2 aligned", description: "Governance-ready practices. No certification claimed.", color: "#2dd4bf" },
   { icon: Lock, label: "AES-256", description: "Encryption at rest and in transit for all data.", color: "#3b82f6" },
-  { icon: Eye, label: "Audit Trail", description: "Immutable log of every read, write, and approval.", color: "#8b5cf6" },
+  { icon: Eye, label: "Audit Trail", description: "Append-only audit log of every read, write, and approval.", color: "#8b5cf6" },
   { icon: Key, label: "Access Control", description: "Role-based permissions with department isolation.", color: "#fbbf24" },
   { icon: Server, label: "Data Residency", description: "Multi-region deployment is not available yet.", color: "#ef4444" },
   { icon: FileCheck, label: "Compliance Export", description: "Audit trail export on demand for review.", color: "#f97316" },
