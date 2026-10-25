@@ -64,7 +64,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Spine InnovTech",
               legalName: "Spine InnovTech Private Limited",
-              description: "Technology for shared business context, human and AI collaboration, governed capabilities and work continuity.",
+              description: "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
               url: publicSiteUrl,
               logo: absoluteUrl("/icon.svg"),
               sameAs: [],

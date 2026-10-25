@@ -171,7 +171,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="flex items-center justify-between pt-1 border-t border-[#D8E5F0] text-[7.5px]">
               <div className="flex items-center gap-1 text-[#002B64] font-bold">
                 <ShieldCheck className="w-3 h-3 text-[#12B76A]" />
-                <span>Governed &amp; Verified</span>
+                <span>Human-approved</span>
               </div>
               <span className="font-mono text-[#0070DC] font-bold">Closed-Loop</span>
             </div>
@@ -188,7 +188,6 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
 
           {/* 4. Right Egress Stack: Controlled execution — approved and traceable outcomes back to tools */}
           <div className="flex flex-col gap-2 z-20 shrink-0">
-            <span className="text-[7.5px] font-bold text-[#002B64] text-center leading-tight">Controlled execution</span>
             {/* Sync to Salesforce */}
             <div className="bg-[#E8F9F0] border border-[#12B76A]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
               <span className="text-[7.5px] font-black text-[#12B76A]">UPDATE</span>
@@ -231,8 +230,6 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
           <span>One governed view of business context &amp; connection state</span>
         </div>
         <div className="flex items-center gap-4 text-[11px] font-medium text-[#0070DC]">
-          <span>Connect Once, Continue Forever</span>
-          <span className="text-[#8293A9]">·</span>
           <span>Human-Governed Closed Loop</span>
         </div>
       </div>
