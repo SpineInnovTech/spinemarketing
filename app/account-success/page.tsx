@@ -9,7 +9,7 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "Account Success — One Customer, One Record | Spine InnovTech",
   description:
-    "Detect churn signals across 4+ tools before it's too late. Cross-tool entity matching, confidence scoring, and human-approved merges. One customer. One record.",
+    "Detect churn signals across 4+ tools before it's too late. Cross-tool entity matching, confidence scoring, human-approved merges. One customer, one record.",
   alternates: { canonical: "/account-success" },
   openGraph: {
     title: "Account Success — One Customer, One Record | Spine InnovTech",

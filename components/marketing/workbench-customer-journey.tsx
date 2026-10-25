@@ -64,7 +64,7 @@ const stages: readonly {
   {
     title: "Check the outcome",
     action: "Follow execution with reconciliation.",
-    detail: "The governed execution path produces an audit record and a verifiable receipt. The journey checks the receipt rather than treating a dispatch acknowledgement as the whole result.",
+    detail: "The controlled execution path produces an audit record and a verifiable receipt. The journey checks the receipt rather than treating a dispatch acknowledgement as the whole result.",
     continuity: "The execution reference, receipt and audit trail.",
     evidence: "E2E-13–14",
     captureSrc: "/images/workbench/editable-dashboard/editing-20261015.webp",

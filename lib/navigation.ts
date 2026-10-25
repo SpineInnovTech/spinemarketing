@@ -1,4 +1,18 @@
 import type { LucideIcon } from "lucide-react";
+import {
+  Building2,
+  BookOpen,
+  UserRound,
+  Handshake,
+  Briefcase,
+  Layers,
+  Boxes,
+  ShieldCheck,
+  Waypoints,
+  LayoutGrid,
+  Compass,
+  Sparkles,
+} from "lucide-react";
 import type { ConnectorNavMark, KindNavMark } from "@/lib/integration-nav";
 
 export type NavItemChild = { name: string; href: string; icon: LucideIcon; desc?: string; external?: boolean };
@@ -19,7 +33,21 @@ export const DOCS_URL = "/docs";
 // A submenu entry is a top item with a `submenu` array; a direct entry has
 // none. Links in each submenu are plain in-page links (not role=menu items),
 // in exactly this order with these exact labels and destinations.
-export type HeaderSubLink = { label: string; href: string };
+// A submenu entry carries a Lucide icon and a one-line description so the
+// desktop/mobile dropdowns can render in the Magic UI mega-menu pattern (icon
+// tile + title + description, with the first "overview" entry shown as a
+// featured gradient card via `featured: true`). The icon and desc are
+// presentational only; `label`, `href` and the ORDER are fixed by the Final
+// Content Master and the corporate-coverage gate and must not change.
+// Descriptions are taken verbatim (shortened) from each destination page's or
+// section's own heading / lead text — no new claims.
+export type HeaderSubLink = {
+  label: string;
+  href: string;
+  icon?: LucideIcon;
+  desc?: string;
+  featured?: boolean;
+};
 export type HeaderNavItem = {
   label: string;
   href: string;
@@ -31,31 +59,99 @@ export const headerNavigation: HeaderNavItem[] = [
     label: "Company",
     href: "/company",
     submenu: [
-      { label: "Company overview", href: "/company" },
-      { label: "Our story", href: "/company#our-story" },
-      { label: "Founder", href: "/company#founder" },
-      { label: "Partnerships", href: "/partners" },
-      { label: "Careers", href: "/careers" },
+      {
+        label: "Company overview",
+        href: "/company",
+        icon: Building2,
+        desc: "We build for the work between systems.",
+        featured: true,
+      },
+      {
+        label: "Our story",
+        href: "/company#our-story",
+        icon: BookOpen,
+        desc: "The experience behind the company.",
+      },
+      {
+        label: "Founder",
+        href: "/company#founder",
+        icon: UserRound,
+        desc: "Nirmal Prince J, Founder & Chief Executive Officer.",
+      },
+      {
+        label: "Partnerships",
+        href: "/partners",
+        icon: Handshake,
+        desc: "Connect your expertise to a shared foundation for work.",
+      },
+      {
+        label: "Careers",
+        href: "/careers",
+        icon: Briefcase,
+        desc: "Help business work retain its meaning.",
+      },
     ],
   },
   {
     label: "Technology",
     href: "/platform",
     submenu: [
-      { label: "Technology overview", href: "/platform" },
-      { label: "Shared business context", href: "/platform#business-context" },
-      { label: "Authority & execution", href: "/platform#governed-execution" },
-      { label: "Work continuity", href: "/platform#work-continuity" },
-      { label: "SpineWorkspace overview", href: "/spine-workspace" },
+      {
+        label: "Technology overview",
+        href: "/platform",
+        icon: Layers,
+        desc: "One architecture for connected business work.",
+        featured: true,
+      },
+      {
+        label: "Shared business context",
+        href: "/platform#business-context",
+        icon: Boxes,
+        desc: "Preserve where information came from. Explain why it matters.",
+      },
+      {
+        label: "Authority & execution",
+        href: "/platform#governed-execution",
+        icon: ShieldCheck,
+        desc: "Keep each responsibility explicit.",
+      },
+      {
+        label: "Work continuity",
+        href: "/platform#work-continuity",
+        icon: Waypoints,
+        desc: "A handoff should preserve meaning and recheck permission.",
+      },
+      {
+        label: "SpineWorkspace overview",
+        href: "/spine-workspace",
+        icon: LayoutGrid,
+        desc: "The governed workspace where humans and AI share one view.",
+      },
     ],
   },
   {
     label: "Our philosophy",
     href: "/about",
     submenu: [
-      { label: "Engineering principles", href: "/about" },
-      { label: "Trust & governance", href: "/trust" },
-      { label: "Responsible AI", href: "/responsible-ai" },
+      {
+        label: "Engineering principles",
+        href: "/about",
+        icon: Compass,
+        desc: "Intelligence needs context. Action needs authority.",
+        featured: true,
+      },
+      {
+        label: "Trust & governance",
+        href: "/trust",
+        icon: ShieldCheck,
+        desc: "Trust depends on clear boundaries and visible evidence.",
+      },
+      {
+        label: "Responsible AI",
+        href: "/responsible-ai",
+        icon: Sparkles,
+        desc: "Give AI useful context. Keep authority explicit.",
+      },
     ],
   },
   { label: "Insights", href: "/insights" },
@@ -129,5 +225,5 @@ export const footerUtilityLinks: { name: string; href: string }[] = [
   { name: "Site map", href: "/site-map" },
 ];
 
-export const COMPANY_TAGLINE = "We build governed business context for humans and AI.";
+export const COMPANY_TAGLINE = "Connecting business context for humans and AI, with people in control.";
 export const PRODUCT_ONELINER = "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.";

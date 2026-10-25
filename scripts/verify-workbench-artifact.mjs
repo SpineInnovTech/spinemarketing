@@ -35,7 +35,7 @@ for (const route of ["product"]) {
 const indexHtml = await readFile("out/index.html", "utf8");
 assert.ok(indexHtml.includes("Interactive Storyboard"), "Missing Interactive Storyboard on corporate index");
 assert.ok(
-  indexHtml.includes("Corporate Architecture Storyboard") || indexHtml.includes("Governed Context Fabric"),
+  indexHtml.includes("architecture storyboard") || indexHtml.includes("Connected context"),
   "Missing diagrammatic architecture storyboard on corporate index"
 );
 assert.ok(

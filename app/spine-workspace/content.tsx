@@ -43,8 +43,8 @@ export function SpineWorkspaceOverviewContent() {
         tone="ice"
         badge="A product by Spine InnovTech"
         headline="SpineWorkspace"
-        subhead="SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record."
-        principle="Humans govern the business. AI helps the work."
+        subhead="Connected context. Human control. AI-ready. SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record."
+        principle="Your tools. Your context. Your decisions."
         primaryCta={{ label: "Explore SpineWorkspace", href: "https://spineworkspace.com" }}
         secondaryCta={{ label: "Understand our technology approach", href: "/platform" }}
       />
@@ -52,7 +52,7 @@ export function SpineWorkspaceOverviewContent() {
       <section className="mx-auto max-w-[1220px] px-5 py-24 sm:px-8 lg:py-32">
         <p className="text-xs font-semibold uppercase tracking-[.21em] text-[#2461BC]">The foundation in daily work</p>
         <h2 className="mt-5 max-w-[780px] text-[length:min(clamp(2.3rem,4.5vw,4.3rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.055em] text-[#0C274E]">
-          Shared context. Human decisions. Governed execution.
+          Shared context. Human decisions. Controlled execution.
         </h2>
         <div className="mt-8 grid max-w-[900px] gap-5">
           <p className="text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#536883]">

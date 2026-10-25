@@ -151,13 +151,13 @@ export const pages = {
     crossLinks: {
       prev: { label: "SpineWorkspace", href: "/product" },
       next: { label: "Spine Context Assembler", href: "/business-context" },
-      related: [{ label: "Spine Fabric", href: "/platform/spine-fabric" }, { label: "Governed execution", href: "/governance" }],
+      related: [{ label: "Spine Fabric", href: "/platform/spine-fabric" }, { label: "Controlled execution", href: "/governance" }],
     },
   },
 
   businessContext: {
     meta: {
-      title: "Business Context — Ingestion & Retrieval | SpineWorkspace",
+      title: "Business Context — Ingestion & Retrieval",
       description: "Discover, ingest, relate and retrieve governed context with source provenance and role-aware access. Original systems remain authoritative.",
       path: "/business-context",
     },
@@ -350,7 +350,7 @@ export const pages = {
 
   governance: {
     meta: {
-      title: "Governance — AI can help. Humans stay in control.",
+      title: "Governance — Humans stay in control",
       description: "Humans govern the business. AI helps the business work. Availability does not mean authority.",
       path: "/governance",
     },
@@ -387,7 +387,7 @@ export const pages = {
 
   continuity: {
     meta: {
-      title: "Cross-Host Continuity — One Context, Multiple AI Hosts",
+      title: "Cross-Host Continuity — One Context",
       description: "Business memory, work state, checkpoints, evidence, and outcomes stay connected across sessions and hosts.",
       path: "/continuity",
     },
@@ -519,7 +519,7 @@ export const pages = {
 
   developers: {
     meta: {
-      title: "Developers — Evaluate Your SpineWorkspace Integration",
+      title: "Developers — Evaluate Your Integration",
       description: "Review connector coverage, events, AI host access and permissions for your SpineWorkspace integration.",
       path: "/developers",
     },
@@ -548,7 +548,7 @@ export const pages = {
   platformHub: {
     meta: {
       title: "Spine Platform",
-      description: "Explore the architecture behind SpineWorkspace: business context, role-aware collaboration, context-aware AI and governed execution.",
+      description: "Explore the architecture behind SpineWorkspace: business context, role-aware collaboration, context-aware AI and controlled execution.",
       path: "/platform",
     },
     hero: {
@@ -670,7 +670,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
   },
   "customer-success": {
     meta: {
-      title: "Customer Success — Carry the customer record and the context for each interaction",
+      title: "Customer Success — Connected records",
       description: "Health, risk, renewal records, and relationship memory in one workspace.",
       path: "/use-cases/customer-success",
     },
@@ -691,7 +691,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
   },
   operations: {
     meta: {
-      title: "Operations — Coordinate work across fragmented systems",
+      title: "Operations — Coordinate connected work",
       description: "Cross-functional processes, handoffs, execution, and reconciliation.",
       path: "/use-cases/operations",
     },
@@ -711,7 +711,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
   },
   "founders-and-leaders": {
     meta: {
-      title: "Founders and Leaders — Goals, KPIs, and execution together",
+      title: "Founders & Leaders — Goals to execution",
       description: "Strategic visibility, decision traceability, and organizational memory.",
       path: "/use-cases/founders-and-leaders",
     },
@@ -730,7 +730,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
   },
   teams: {
     meta: {
-      title: "Teams — One workspace for shared work and shared memory",
+      title: "Teams — Shared work and memory",
       description: "Collaboration between humans and AI with approvals and visibility.",
       path: "/use-cases/teams",
     },
@@ -743,7 +743,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
     topics: [
       { title: "Human–AI collaboration", description: "Twin prepares proposals from shared truth and context; team members stay aligned." },
       { title: "Work queues", description: "Prioritized work linked to goals and evidence." },
-      { title: "Approvals", description: "Governed execution—nothing consequential runs without authority." },
+      { title: "Approvals", description: "Controlled execution—nothing consequential runs without authority." },
       { title: "Visibility", description: "Everyone sees the same business story." },
       { title: "Continuity", description: "Handoffs and host switches don't reset the narrative." },
     ],

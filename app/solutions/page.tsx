@@ -13,7 +13,7 @@ import { WorkspaceAuthActions } from "@/components/marketing/workspace-auth-acti
 export const metadata: Metadata = {
   title: "Solutions by Team & Industry | Spine InnovTech",
   description:
-    "Explore SpineWorkspace features and workflows for sales, customer success, finance, operations, and industry-specific work. Sign up or sign in to your authorized workspace.",
+    "Explore SpineWorkspace features and workflows for sales, customer success, finance, operations and industry work. Evaluation lives on spineworkspace.com.",
   alternates: { canonical: "/solutions" },
   openGraph: {
     title: "Solutions by Team & Industry | Spine InnovTech",
