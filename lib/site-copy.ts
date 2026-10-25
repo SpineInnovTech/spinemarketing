@@ -151,7 +151,7 @@ export const pages = {
     crossLinks: {
       prev: { label: "SpineWorkspace", href: "/product" },
       next: { label: "Spine Context Assembler", href: "/business-context" },
-      related: [{ label: "Spine Fabric", href: "/platform/spine-fabric" }, { label: "Governed execution", href: "/governance" }],
+      related: [{ label: "Spine Fabric", href: "/platform/spine-fabric" }, { label: "Controlled execution", href: "/governance" }],
     },
   },
 
@@ -548,7 +548,7 @@ export const pages = {
   platformHub: {
     meta: {
       title: "Spine Platform",
-      description: "Explore the architecture behind SpineWorkspace: business context, role-aware collaboration, context-aware AI and governed execution.",
+      description: "Explore the architecture behind SpineWorkspace: business context, role-aware collaboration, context-aware AI and controlled execution.",
       path: "/platform",
     },
     hero: {
@@ -743,7 +743,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
     topics: [
       { title: "Human–AI collaboration", description: "Twin prepares proposals from shared truth and context; team members stay aligned." },
       { title: "Work queues", description: "Prioritized work linked to goals and evidence." },
-      { title: "Approvals", description: "Governed execution—nothing consequential runs without authority." },
+      { title: "Approvals", description: "Controlled execution—nothing consequential runs without authority." },
       { title: "Visibility", description: "Everyone sees the same business story." },
       { title: "Continuity", description: "Handoffs and host switches don't reset the narrative." },
     ],

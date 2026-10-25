@@ -29,8 +29,8 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
       {/* Main Hero Body — architecture diagram (illustrative) */}
       <div className="relative z-10">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-          <p className="max-w-[640px] font-display text-base sm:text-lg font-semibold text-[#002B64] tracking-[-0.015em] leading-snug">
-            The governed workbench where humans and AI move business context and work forward.
+          <p className="max-w-[640px] text-sm font-semibold text-[#002B64] tracking-[-0.01em] leading-snug">
+            How work moves: connected context, human approval, continuity.
           </p>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-3 py-1 text-[11px] font-semibold text-[#7C3AED]">
             Illustrative example
@@ -182,11 +182,13 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="w-4 sm:w-6 h-0.5 bg-gradient-to-r from-[#002B64] to-[#0070DC] relative">
               <span className="absolute -top-1 right-0 w-2 h-2 rounded-full bg-[#0070DC]" />
             </div>
-            <span className="text-[8px] font-mono font-bold text-[#0070DC] mt-1">Execute</span>
+            <span className="text-[8px] font-mono font-bold text-[#0070DC] mt-1 text-center leading-tight">Controlled execution</span>
+            <span className="text-[7px] text-[#5E728B] mt-0.5 text-center leading-tight">Approved and traceable</span>
           </div>
 
-          {/* 4. Right Egress Stack: Synchronized Outcomes back to Tools */}
+          {/* 4. Right Egress Stack: Controlled execution — approved and traceable outcomes back to tools */}
           <div className="flex flex-col gap-2 z-20 shrink-0">
+            <span className="text-[7.5px] font-bold text-[#002B64] text-center leading-tight">Controlled execution</span>
             {/* Sync to Salesforce */}
             <div className="bg-[#E8F9F0] border border-[#12B76A]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
               <span className="text-[7.5px] font-black text-[#12B76A]">UPDATE</span>

@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: { absolute: "Technology Portfolio | Spine InnovTech" },
-  description: "Explore the Spine InnovTech technology portfolio: the SpineWorkspace product, Spine Fabric, Spine Twin and governed execution architecture.",
+  description: "Explore the Spine InnovTech technology portfolio: the SpineWorkspace product, Spine Fabric, Spine Twin and controlled execution architecture.",
   alternates: { canonical: "/portfolio" },
 };
 
@@ -40,7 +40,7 @@ const work = [
   },
   {
     icon: ShieldCheck,
-    type: "Governed execution",
+    type: "Controlled execution",
     title: "Spine Runtime",
     body: "The controls that separate discovery, proposals, authority, execution, observation and reconciliation.",
     href: "/trust",

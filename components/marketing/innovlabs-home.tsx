@@ -46,17 +46,17 @@ const workflowSteps = [
 const principles = [
   {
     icon: ShieldCheck,
-    title: "Source authority",
+    title: "Your tools keep the record.",
     body: "Your existing tools stay the systems of record. SpineWorkspace reads and writes with their authority, never instead of them.",
   },
   {
     icon: UserCheck,
-    title: "Human approval",
+    title: "Your people keep the authority.",
     body: "AI prepares the work. A person approves every consequential action before it happens.",
   },
   {
     icon: Workflow,
-    title: "Continuity",
+    title: "Context continues with the work.",
     body: "Context stays with the work, so the next step continues from where the last one left off.",
   },
 ] as const;
@@ -89,22 +89,17 @@ export function InnovLabsHome() {
             <BlurFade delay={0.02} inView>
               <p className="inline-flex max-w-full items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1.5 text-[12px] font-semibold leading-snug text-[#006FE8] shadow-2xs">
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#006FE8]" />
-                <AnimatedShinyText shimmerWidth={160}>Spine InnovTech — Connecting business context for humans and AI, with people in control.</AnimatedShinyText>
+                <AnimatedShinyText shimmerWidth={130}>Spine InnovTech</AnimatedShinyText>
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
               <h1 id="company-title" className="font-display mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-.015em] text-[#032D60]">
-                Make business decisions with the context behind them.
+                Connecting business context for humans and AI, with people in control.
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>
               <p className={body + " mt-4 max-w-[720px] mx-auto"}>
-                SpineWorkspace brings connected business records into one workspace so teams can understand the situation, prepare next steps with AI, and approve consequential actions.
-              </p>
-            </BlurFade>
-            <BlurFade delay={0.12} inView>
-              <p className="mt-4 max-w-[720px] mx-auto text-[15px] font-medium leading-[1.7] text-[#082B5E]">
-                Your tools keep the record. Your people keep the authority. Context continues with the work.
+                Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.
               </p>
             </BlurFade>
             <BlurFade delay={0.14} inView>
@@ -119,10 +114,6 @@ export function InnovLabsHome() {
             </BlurFade>
           </div>
 
-          <BlurFade delay={0.16} inView className="w-full">
-            <CorporateOrbitalHero />
-          </BlurFade>
-
           {/* Customer problem in plain words */}
           <div className="mx-auto mt-10 max-w-[960px] border-t border-[#D6E8F8] pt-8">
             <p className="text-center text-[13px] font-semibold uppercase tracking-[.18em] text-[#006FE8]">What is hard today</p>
@@ -134,6 +125,28 @@ export function InnovLabsHome() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* SPINEWORKSPACE BLOCK — right after the hero, with the workbench diagram */}
+      <section id="spineworkspace" aria-labelledby="home-spineworkspace-title" className="scroll-mt-24 bg-white py-14 sm:py-16 border-b border-[#D6E8F8]">
+        <div className={container}>
+          <div className="mx-auto max-w-[820px] text-center">
+            <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+              SpineWorkspace
+            </p>
+            <h2 id="home-spineworkspace-title" className={heading + " mt-4"}>Connected context. Human control. AI-ready.</h2>
+            <p className={body + " mt-4"}>Your tools. Your context. Your decisions.</p>
+            <div className="mt-6 flex justify-center">
+              <a href="https://spineworkspace.com" className={primaryButton}>
+                Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
+              </a>
+            </div>
+          </div>
+          <BlurFade delay={0.08} inView className="mt-9 w-full">
+            <CorporateOrbitalHero />
+          </BlurFade>
         </div>
       </section>
 
@@ -156,34 +169,23 @@ export function InnovLabsHome() {
             A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce, Zendesk and Gmail. The steps group under Connect, Prepare and Review.
           </p>
 
-          <div className="mt-9 grid gap-5 lg:grid-cols-12">
-            {/* Reuse the existing workbench diagram as the visual */}
-            <div className="lg:col-span-7">
-              <BlurFade inView className="w-full">
-                <CorporateOrbitalHero />
-              </BlurFade>
-              <p className="mt-2 text-xs font-medium text-[#8293A9]">Illustrative example. Values shown are not live data.</p>
-            </div>
-
-            {/* Six steps */}
-            <ol className="lg:col-span-5 space-y-3">
-              {workflowSteps.map((step, index) => (
-                <BlurFade key={step.title} delay={index * 0.05} inView>
-                  <li className="flex gap-3 rounded-2xl border border-[#D6E8F8] bg-white p-4 shadow-2xs">
-                    <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
-                      {index + 1}
-                    </span>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className={`rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${phaseTint[step.phase]}`}>{step.phase}</span>
-                        <h3 className="text-sm font-semibold text-[#082B5E]">{step.title}</h3>
-                      </div>
-                      <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
+          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {workflowSteps.map((step, index) => (
+              <BlurFade key={step.title} delay={index * 0.05} inView className="h-full">
+                <div className="flex h-full gap-3 rounded-2xl border border-[#D6E8F8] bg-white p-4 shadow-2xs">
+                  <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className={`rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${phaseTint[step.phase]}`}>{step.phase}</span>
+                      <h3 className="text-sm font-semibold text-[#082B5E]">{step.title}</h3>
                     </div>
-                  </li>
-                </BlurFade>
-              ))}
-            </ol>
+                    <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
+                  </div>
+                </div>
+              </BlurFade>
+            ))}
           </div>
         </div>
       </section>

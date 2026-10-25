@@ -115,7 +115,7 @@ export function PlatformStickyScroll() {
       <StickyGather
         tag="How It Assembles"
         heading={<>Scattered tools. <span className="text-primary">One unified architecture.</span></>}
-        subheading="The architecture brings business context, working surfaces, intelligence, and governed execution together. Source systems retain their authoritative roles."
+        subheading="The architecture brings business context, working surfaces, intelligence, and controlled execution together. Source systems retain their authoritative roles."
         centerLabel="The Spine"
         centerDescription="Adaptive core"
         items={gatherItems}

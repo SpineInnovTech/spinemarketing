@@ -43,7 +43,7 @@ export function PlatformSecurityContent() {
         <PageHero
           badge="Platform Security"
           headline="Authority is designed into the execution path."
-          subhead="An architectural view of identity, policy, data boundaries and governed execution. Verify implementation evidence before relying on any individual control."
+          subhead="An architectural view of identity, policy, data boundaries and controlled execution. Verify implementation evidence before relying on any individual control."
           primaryCta={{ label: "Review the security model", href: "/contact?intent=security" }}
         />
 
