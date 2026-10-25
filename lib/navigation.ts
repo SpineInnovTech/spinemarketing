@@ -129,5 +129,5 @@ export const footerUtilityLinks: { name: string; href: string }[] = [
   { name: "Site map", href: "/site-map" },
 ];
 
-export const COMPANY_TAGLINE = "We build governed business context for humans and AI.";
+export const COMPANY_TAGLINE = "Connecting business context for humans and AI, with people in control.";
 export const PRODUCT_ONELINER = "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.";

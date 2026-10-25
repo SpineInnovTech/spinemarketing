@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, UserCheck, Workflow } from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -7,52 +7,114 @@ import { CorporateOrbitalHero } from "./corporate-orbital-hero";
 import { CorporateArchitectureStoryboard } from "./corporate-architecture-storyboard";
 import { WorkspaceBenefits } from "./workspace-benefits";
 
-const approach = [
-  ["Connect", "Bring together the records your team is authorized to use."],
-  ["Prepare", "Review the context. Ask your AI Twin to summarize the situation and prepare a next step."],
-  ["Review", "Check the evidence, authorize consequential actions and retain the outcome."],
+// The Acme renewal story, grouped under the existing Connect -> Prepare -> Review
+// phases, as six steps. Illustrative example, not a live record.
+const workflowSteps = [
+  {
+    phase: "Connect",
+    title: "Bring the account into view",
+    body: "Retrieve the authorized account, support and contract context for the renewal.",
+  },
+  {
+    phase: "Connect",
+    title: "Show the evidence",
+    body: "Show the source evidence behind it and flag the gaps that are still unresolved.",
+  },
+  {
+    phase: "Prepare",
+    title: "Prepare the next step",
+    body: "The AI Twin prepares a renewal-risk summary and a proposed next action.",
+  },
+  {
+    phase: "Review",
+    title: "The person approves",
+    body: "The person reviews the proposal and approves the exact change to make.",
+  },
+  {
+    phase: "Review",
+    title: "The change is executed",
+    body: "The approved update is executed in the source system that owns the record.",
+  },
+  {
+    phase: "Review",
+    title: "The record is kept",
+    body: "Show the resulting source-system state and the audit record that was retained.",
+  },
 ] as const;
+
+// Three operating principles.
+const principles = [
+  {
+    icon: ShieldCheck,
+    title: "Source authority",
+    body: "Your existing tools stay the systems of record. SpineWorkspace reads and writes with their authority, never instead of them.",
+  },
+  {
+    icon: UserCheck,
+    title: "Human approval",
+    body: "AI prepares the work. A person approves every consequential action before it happens.",
+  },
+  {
+    icon: Workflow,
+    title: "Continuity",
+    body: "Context stays with the work, so the next step continues from where the last one left off.",
+  },
+] as const;
+
+const problems = [
+  "Answers live in many tools, so the full picture is never in one place.",
+  "People copy facts between systems by hand, and detail gets lost.",
+  "AI can draft work, but no one can see what it used or approve it.",
+] as const;
+
 const container = "mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12";
 const heading = "text-[length:min(clamp(2rem,4vw,3.8rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.045em]";
 const body = "text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#4E607A]";
-const button = "inline-flex min-h-12 items-center gap-3 rounded-xl bg-[#006FE8] px-6 text-[14px] font-semibold text-white shadow-[0_6px_18px_rgba(0,111,232,0.28)] transition-all hover:bg-[#0055B8] hover:shadow-[0_10px_24px_rgba(0,111,232,0.36)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]";
+const primaryButton = "inline-flex min-h-12 items-center gap-3 rounded-xl bg-[#006FE8] px-6 text-[14px] font-semibold text-white shadow-[0_6px_18px_rgba(0,111,232,0.28)] transition-all hover:bg-[#0055B8] hover:shadow-[0_10px_24px_rgba(0,111,232,0.36)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]";
+const secondaryButton = "inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]";
+const phaseTint: Record<string, string> = {
+  Connect: "bg-[#EAF5FC] text-[#006FE8] border-[#CCE3F5]",
+  Prepare: "bg-[#F3E8FF] text-[#7C3AED] border-[#E9D5FF]",
+  Review: "bg-[#E8F9F0] text-[#059669] border-[#BBF0D2]",
+};
 
 export function InnovLabsHome() {
   return (
     <div className="bg-white text-[#082B5E]">
+      {/* PART 1 — HERO + CUSTOMER PROBLEM */}
       <section aria-labelledby="company-title" className="relative overflow-hidden border-b border-[#D6E8F8] bg-gradient-to-b from-[#EBF7FF] via-[#F0F8FF] to-white">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-15%,rgba(0,111,232,0.12),transparent_70%)]" aria-hidden />
         <div className={container + " relative z-10 py-10 sm:py-14"}>
-          <div className="mx-auto max-w-[820px] text-center mb-10">
+          <div className="mx-auto max-w-[860px] text-center mb-10">
             <BlurFade delay={0.02} inView>
-              <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8] shadow-2xs">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-                <AnimatedShinyText shimmerWidth={130}>SPINE INNOVTECH · CONNECTED BUSINESS WORK</AnimatedShinyText>
+              <p className="inline-flex max-w-full items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1.5 text-[12px] font-semibold leading-snug text-[#006FE8] shadow-2xs">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#006FE8]" />
+                <AnimatedShinyText shimmerWidth={160}>Spine InnovTech — Connecting business context for humans and AI, with people in control.</AnimatedShinyText>
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
               <h1 id="company-title" className="font-display mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-.015em] text-[#032D60]">
-                We build governed business context for humans and AI.
+                Make business decisions with the context behind them.
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>
-              <p className={body + " mt-4 max-w-[680px] mx-auto"}>
-                Your tools keep the record. Your people keep the authority.
-                Context continues with the work. Our flagship product,
-                SpineWorkspace, brings that foundation into daily work.
+              <p className={body + " mt-4 max-w-[720px] mx-auto"}>
+                SpineWorkspace brings connected business records into one workspace so teams can understand the situation, prepare next steps with AI, and approve consequential actions.
+              </p>
+            </BlurFade>
+            <BlurFade delay={0.12} inView>
+              <p className="mt-4 max-w-[720px] mx-auto text-[15px] font-medium leading-[1.7] text-[#082B5E]">
+                Your tools keep the record. Your people keep the authority. Context continues with the work.
               </p>
             </BlurFade>
             <BlurFade delay={0.14} inView>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <a
-                  href="https://spineworkspace.com"
-                  className={button}
-                >
-                  Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
+                <a href="#workflow" className={primaryButton}>
+                  See the workflow <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
-                <Link href="/company" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF]">
-                  Discover our approach
-                </Link>
+                <a href="https://spineworkspace.com" className={secondaryButton}>
+                  Explore SpineWorkspace
+                </a>
               </div>
             </BlurFade>
           </div>
@@ -61,136 +123,208 @@ export function InnovLabsHome() {
             <CorporateOrbitalHero />
           </BlurFade>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-7 gap-y-2 border-t border-[#D6E8F8] pt-6 text-sm font-semibold text-[#006FE8]">
-            <Link href="/proof" className="inline-flex min-h-11 items-center gap-2 rounded-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]">Inspect the product evidence <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-            <Link href="/developers#integration-paths" className="inline-flex min-h-11 items-center gap-2 rounded-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]">Evaluate integrations and access <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-            <a href="https://spineworkspace.com" className="inline-flex min-h-11 items-center gap-2 rounded-sm hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]">Go to Product Site (spineworkspace.com) <ArrowRight className="h-4 w-4" aria-hidden /></a>
+          {/* Customer problem in plain words */}
+          <div className="mx-auto mt-10 max-w-[960px] border-t border-[#D6E8F8] pt-8">
+            <p className="text-center text-[13px] font-semibold uppercase tracking-[.18em] text-[#006FE8]">What is hard today</p>
+            <div className="mt-5 grid gap-4 md:grid-cols-3">
+              {problems.map((text, index) => (
+                <BlurFade key={text} delay={index * 0.06} inView className="h-full">
+                  <p className="h-full rounded-2xl border border-[#D6E8F8] bg-white/70 p-5 text-sm leading-7 text-[#4E607A]">{text}</p>
+                </BlurFade>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <WorkspaceBenefits />
 
-      <section id="architecture-story" className="scroll-mt-24 bg-[#F8FBFF] py-14 sm:py-18 border-b border-[#D6E8F8]">
+      {/* PART 2 — ONE WORKFLOW, SHOWN END TO END */}
+      <section id="workflow" aria-labelledby="home-workflow-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
         <div className={container}>
-          <div className="mb-8">
+          <div className="flex flex-wrap items-center gap-3">
             <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
               <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-              Interactive Storyboard
+              One workflow, end to end
             </p>
-            <h2 className={heading + " mt-3 max-w-[820px]"}>
-              Governed Architecture: From Source Systems to Multi-Host Execution.
-            </h2>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-3 py-0.5 text-[11px] font-semibold text-[#7C3AED]">
+              Illustrative example
+            </span>
+          </div>
+          <h2 id="home-workflow-title" className={heading + " mt-5 max-w-[820px]"}>One workflow, shown end to end.</h2>
+          <p className={body + " mt-4 max-w-[760px]"}>
+            A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce, Zendesk and Gmail. The steps group under Connect, Prepare and Review.
+          </p>
+
+          <div className="mt-9 grid gap-5 lg:grid-cols-12">
+            {/* Reuse the existing workbench diagram as the visual */}
+            <div className="lg:col-span-7">
+              <BlurFade inView className="w-full">
+                <CorporateOrbitalHero />
+              </BlurFade>
+              <p className="mt-2 text-xs font-medium text-[#8293A9]">Illustrative example. Values shown are not live data.</p>
+            </div>
+
+            {/* Six steps */}
+            <ol className="lg:col-span-5 space-y-3">
+              {workflowSteps.map((step, index) => (
+                <BlurFade key={step.title} delay={index * 0.05} inView>
+                  <li className="flex gap-3 rounded-2xl border border-[#D6E8F8] bg-white p-4 shadow-2xs">
+                    <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className={`rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${phaseTint[step.phase]}`}>{step.phase}</span>
+                        <h3 className="text-sm font-semibold text-[#082B5E]">{step.title}</h3>
+                      </div>
+                      <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
+                    </div>
+                  </li>
+                </BlurFade>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* PART 3 — THREE OPERATING PRINCIPLES */}
+      <section id="principles" aria-labelledby="home-principles-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-16 sm:py-20">
+        <div className={container}>
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+            How it stays governed
+          </p>
+          <h2 id="home-principles-title" className={heading + " mt-5 max-w-[820px]"}>Three principles the product runs on.</h2>
+          <div className="mt-9 grid gap-5 md:grid-cols-3">
+            {principles.map(({ icon: Icon, title, body: pbody }, index) => (
+              <BlurFade key={title} delay={index * 0.06} inView className="h-full">
+                <MagicCard className="h-full" innerClassName="p-6 sm:p-7">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#CBE5FA] bg-[#F0F8FF] text-[#006FE8] shadow-2xs">
+                    <Icon className="h-5 w-5" aria-hidden />
+                  </span>
+                  <h3 className="mt-5 text-[length:var(--marketing-card-size)] font-semibold leading-snug">{title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-[#4E607A]">{pbody}</p>
+                </MagicCard>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PART 4 — WHO IT SERVES FIRST */}
+      <section id="who-it-serves" aria-labelledby="home-audience-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
+        <div className={container}>
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+            Who it serves first
+          </p>
+          <h2 id="home-audience-title" className={heading + " mt-5 max-w-[820px]"}>Built first for account and customer success teams.</h2>
+          <p className={body + " mt-4 max-w-[760px]"}>
+            Renewals bring the account record, support history and contract terms into one reviewed next step, so the team can see the risk and act on it with authority.
+          </p>
+          <p className="mt-5 text-sm leading-7 text-[#4E607A]">
+            Other teams — sales, finance, operations and more —{" "}
+            <a href="https://spineworkspace.com" className="font-semibold text-[#006FE8] hover:underline">see how SpineWorkspace fits their work</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* PART 5 — CONCISE ARCHITECTURE (3-scene storyboard, plain copy) */}
+      <section id="architecture-story" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-14 sm:py-18">
+        <div className={container}>
+          <div className="mb-8 max-w-[820px]">
+            <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+              How it is built
+            </p>
+            <h2 className={heading + " mt-3"}>From source systems to governed, continuing work.</h2>
+            <p className={body + " mt-4"}>
+              Three parts: connected context, agentic governance with human approval, and continuity across AI hosts. The deeper detail lives on the platform pages.
+            </p>
           </div>
           <CorporateArchitectureStoryboard />
         </div>
       </section>
 
-      <section id="how-it-works" aria-labelledby="home-workflow-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
+      {/* PART 6 — CAPABILITY STATUS AND TRUST */}
+      <section id="trust" aria-labelledby="home-trust-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
         <div className={container}>
           <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            How it works
+            Status and trust
           </p>
-          <h2 id="home-workflow-title" className={heading + " mt-5 max-w-[820px]"}>From scattered records to a reviewed next step.</h2>
-          <div className="mt-9 grid gap-5 md:grid-cols-3">
-            {approach.map(([title, description], index) => (
-              <BlurFade key={title} delay={index * 0.06} inView className="h-full">
-                <MagicCard className="h-full" innerClassName="p-6 sm:p-7">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
-                    0{index + 1}
-                  </span>
-                  <h3 className="mt-4 text-[length:var(--marketing-card-size)] font-semibold leading-snug">{title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#4E607A]">{description}</p>
-                </MagicCard>
-              </BlurFade>
-            ))}
-          </div>
-          <p className="mt-6 max-w-[860px] text-sm leading-7 text-[#4E607A]">
-            Spine Network is designed to continue context and work checkpoints across compatible AI hosts.
-            Each host independently verifies identity, tool access and authority.
+          <h2 id="home-trust-title" className={heading + " mt-5 max-w-[820px]"}>What is shown here, and what to check.</h2>
+          <p className={body + " mt-4 max-w-[760px]"}>
+            The examples on this page are illustrative. They show how the workflow is designed to work, not a record of live results.
           </p>
-          <div className="mt-3 flex flex-wrap gap-x-7 gap-y-1">
-            <Link href="/platform/how-it-works" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">See the workflow <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-            <Link href="/host-connected-environment" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Explore host connections and continuity <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+          <div className="mt-6 flex flex-wrap gap-x-7 gap-y-2">
+            <Link href="/proof" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">See what the product documents <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+            <Link href="/trust" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Trust <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+            <Link href="/responsible-ai" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Responsible AI <ArrowRight className="h-4 w-4" aria-hidden /></Link>
           </div>
         </div>
       </section>
 
-      <section id="insights" aria-labelledby="home-insights-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-16 sm:py-20">
+      {/* PART 7 — COMPANY STORY, PRODUCT CTA, INSIGHTS TEASER */}
+      <section id="company-insights" aria-labelledby="home-company-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-16 sm:py-20">
         <div className={container}>
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-                Insights &amp; Research
-              </p>
-              <h2 id="home-insights-title" className={heading + " mt-4 max-w-[720px]"}>
-                Architectural thinking for governed operational intelligence.
-              </h2>
+          <div className="max-w-[820px]">
+            <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+              Spine InnovTech
+            </p>
+            <h2 id="home-company-title" className={heading + " mt-5"}>The company behind SpineWorkspace.</h2>
+            <p className={body + " mt-4"}>
+              Spine InnovTech builds the governed foundation for shared business context. SpineWorkspace is our flagship product.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href="/company" className={primaryButton}>
+                Discover our approach <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+              <a href="https://spineworkspace.com" className={secondaryButton}>
+                Explore SpineWorkspace
+              </a>
             </div>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-[#006FE8] hover:underline"
-            >
-              View all articles <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <Link
-              href="/blog/spine-fabric-contextual-continuity-layer"
-              className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
-            >
-              <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">
-                Architecture
-              </span>
-              <h3 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
-                Spine Fabric: The Contextual Continuity Layer for Enterprise AI
-              </h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
-                Why business context must live in a governed data fabric rather than prompt engineering or ad-hoc vector memory.
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
-                Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-
-            <Link
-              href="/blog/stop-being-the-human-api"
-              className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
-            >
-              <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">
-                Operating Thesis
-              </span>
-              <h3 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
-                Stop Being the Human API: Why Tool Proliferation Fails Operators
-              </h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
-                How much of the workday operators lose copying state between tools, and how unified context ends the coordination tax.
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
-                Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
-
-            <Link
-              href="/blog/why-ai-needs-your-approval"
-              className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
-            >
-              <span className="rounded-full bg-[#E8F9F0] px-2.5 py-0.5 text-[11px] font-semibold text-[#12B76A]">
-                Governance
-              </span>
-              <h3 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
-                Why Autonomous AI Still Requires Governed Human Authority
-              </h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
-                Separating proposal preparation from consequential execution: the zero-trust governance boundary behind agentic work.
-              </p>
-              <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
-                Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
+          {/* Insights teaser — points at the 3 /insights articles */}
+          <div className="mt-12">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <h3 className="text-[length:var(--marketing-card-size)] font-semibold tracking-[-.02em] text-[#082B5E]">From our Insights</h3>
+              <Link href="/insights" className="inline-flex items-center gap-2 text-sm font-semibold text-[#006FE8] hover:underline">
+                View all <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="mt-6 grid gap-6 md:grid-cols-3">
+              <Link href="/insights" className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all">
+                <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">Architecture</span>
+                <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
+                  Why business context belongs in a governed fabric
+                </h4>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
+                  Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+              <Link href="/insights" className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all">
+                <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">Operating thesis</span>
+                <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
+                  Why tool proliferation keeps operators copying state
+                </h4>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
+                  Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+              <Link href="/insights" className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all">
+                <span className="rounded-full bg-[#E8F9F0] px-2.5 py-0.5 text-[11px] font-semibold text-[#12B76A]">Governance</span>
+                <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
+                  Why autonomous AI still needs human authority
+                </h4>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
+                  Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
