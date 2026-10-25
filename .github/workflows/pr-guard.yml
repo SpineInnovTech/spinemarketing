@@ -1,0 +1,79 @@
+# PR guard — runs on every pull request into a lane branch (dev, test, main).
+#
+# Two jobs with STABLE names so they can be made required status checks:
+#   lane    — validates the PR's base←head lane with scripts/branch-guard.sh
+#   verify  — the full static-release gate (lint, audit, cloudflare, typecheck,
+#             build, verify:artifact — which now includes the copy guard)
+#
+# ci.yml (Manual marketing QA, workflow_dispatch) is kept separate and unchanged.
+name: PR guard
+
+on:
+  pull_request:
+    branches:
+      - dev
+      - test
+      - main
+  workflow_dispatch:
+
+# Least privilege: read the repo only. No secrets are used by either job.
+permissions:
+  contents: read
+
+env:
+  NEXT_PUBLIC_SITE_URL: https://spineinnovtech.com
+
+jobs:
+  lane:
+    name: Lane check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Validate PR lane (base <- head)
+        env:
+          BASE: ${{ github.event.pull_request.base.ref }}
+          HEAD: ${{ github.event.pull_request.head.ref }}
+        run: |
+          if [ -z "${BASE:-}" ] || [ -z "${HEAD:-}" ]; then
+            echo "No pull_request context (manual dispatch) — skipping lane check."
+            exit 0
+          fi
+          bash scripts/branch-guard.sh check-pr "$BASE" "$HEAD"
+
+  verify:
+    name: Static release verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Repository preflight
+        run: npm run lint
+
+      - name: Audit corporate routes and claims
+        run: npm run audit:site
+
+      - name: Validate Cloudflare deployment contract
+        run: npm run check:cloudflare
+
+      - name: TypeScript check
+        run: npm run typecheck
+
+      - name: Static export
+        run: npm run build
+
+      - name: Verify corporate artifact (incl. copy guard)
+        run: npm run verify:artifact
