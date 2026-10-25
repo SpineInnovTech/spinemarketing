@@ -52,13 +52,13 @@ const reading: ResourceLink[] = [
 const understand: ResourceLink[] = [
   {
     title: "Trust & governance",
-    desc: "Access, authority, provenance and outcomes. Design commitments, not deployed certifications.",
+    desc: "Who can see what, who can act, where information came from, and the results. Design promises, not deployed certifications.",
     href: "/trust",
     cta: "Read the approach",
   },
   {
     title: "Responsible AI",
-    desc: "Evidence, bounded delegation, meaningful review and memory boundaries.",
+    desc: "Evidence, clear limits on what AI may do, reviews that mean something, and keeping memory areas separate.",
     href: "/responsible-ai",
     cta: "Read the approach",
   },
@@ -74,7 +74,7 @@ const understand: ResourceLink[] = [
 const explore: ResourceLink[] = [
   {
     title: "Technology portfolio",
-    desc: "Illustrative workflows and architecture. Demonstrations, not customer results.",
+    desc: "Example workflows and how it is built. Demonstrations, not customer results.",
     href: "/portfolio",
     cta: "View the portfolio",
   },

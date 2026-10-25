@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: { absolute: "Company news | Spine InnovTech" },
-  description: "Company news from Spine InnovTech: notes on company direction and the governed architecture behind SpineWorkspace. Product release notes are on the product website.",
+  description: "Company news from Spine InnovTech: notes on company direction and how SpineWorkspace is built, with people in control. Product release notes are on the product website.",
   alternates: { canonical: "/updates" },
 };
 
@@ -28,9 +28,9 @@ const news = [
   },
   {
     period: "September 2026",
-    category: "Architecture",
-    title: "One product with a governed architecture",
-    body: "Spine Fabric, Workbench, Twin, Runtime and the Marketplace describe connected capabilities of SpineWorkspace. Business context, authority and verified outcomes remain the design focus rather than separate standalone AI agents.",
+    category: "How it is built",
+    title: "One product, with people in control",
+    body: "Spine Fabric, Workbench, Twin, approved action and the Marketplace are connected parts of SpineWorkspace. The focus stays on business context, who can act, and checked results — rather than separate AI agents working on their own.",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function CompanyNewsPage() {
           tone="ice"
           badge="Spine InnovTech / Company news"
           headline="Company news"
-          subhead="Notes from Spine InnovTech on company direction and the governed architecture behind SpineWorkspace. Product release notes live on the product website."
+          subhead="Notes from Spine InnovTech on company direction and how SpineWorkspace is built, with people in control. Product release notes live on the product website."
           primaryCta={{ label: "About Spine InnovTech", href: "/company" }}
           secondaryCta={{ label: "Product release notes", href: "https://spineworkspace.com" }}
         />

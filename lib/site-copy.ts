@@ -548,13 +548,13 @@ export const pages = {
   platformHub: {
     meta: {
       title: "Spine Platform",
-      description: "Explore the architecture behind SpineWorkspace: business context, role-aware collaboration, context-aware AI and controlled execution.",
+      description: "See how SpineWorkspace works: shared information, work built around your role, AI that helps, and actions people approve.",
       path: "/platform",
     },
     hero: {
       badge: "Spine Platform",
-      headline: "One architecture for connected business work.",
-      subhead: "Fabric provides shared context. Workbench brings it into role-aware work. Twin helps people understand and prepare. Runtime governs authorized execution and observed outcomes. Connected capabilities extend that architecture.",
+      headline: "One joined-up way to do connected business work.",
+      subhead: "Fabric brings your information together. Workbench puts it into work built around your role. Twin helps people understand and prepare. People approve the action, and the result is checked. Connected tools add to all of this.",
       primaryCta: { label: "Spine Fabric", href: "/platform/spine-fabric" },
     },
     sections: [
@@ -565,8 +565,8 @@ export const pages = {
           { title: "How it works", description: "The tools keep the record. The workspace shows the work. A person decides, and an accepted change goes back.", href: "/platform/how-it-works" },
           { title: "Integrations", description: "The apps, files, and conversations already in use.", href: "/platform/integrations" },
           { title: "The tools you already use", description: "Each tool stays itself. They do not have to talk to each other directly.", href: "/host-connected-environment" },
-          { title: "Observation and reconciliation", description: "Results observed, not blindly trusted.", href: "/governance" },
-          { title: "Security and governance", description: "Access, auditability, and execution controls.", href: "/security" },
+          { title: "Check the result", description: "Results are checked, not blindly trusted.", href: "/governance" },
+          { title: "Security and governance", description: "Who can see what, what is recorded, and controls on actions.", href: "/security" },
         ],
       },
     ],

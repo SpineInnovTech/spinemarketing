@@ -10,12 +10,12 @@ import { INSIGHTS_INDEX, INSIGHT_ARTICLES } from "@/lib/insights"
 export const metadata: Metadata = {
   title: "Insights — Spine InnovTech",
   description:
-    "Perspectives from Spine InnovTech on business context, capability governance and the continuity of work across systems and AI environments.",
+    "Perspectives from Spine InnovTech on business context, who is allowed to act, and how work keeps its history across tools and AI apps.",
   alternates: { canonical: "/insights" },
   openGraph: {
     title: "Insights — Spine InnovTech",
     description:
-      "Perspectives from Spine InnovTech on business context, capability governance and the continuity of work across systems and AI environments.",
+      "Perspectives from Spine InnovTech on business context, who is allowed to act, and how work keeps its history across tools and AI apps.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

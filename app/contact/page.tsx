@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | Spine InnovTech",
-    description: "Book a demo or request a connector. We connect your tools live.",
+    description: "Book a demo or ask us to connect a tool. We connect your tools live.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }

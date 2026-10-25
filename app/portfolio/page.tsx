@@ -9,7 +9,7 @@ import { absoluteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: { absolute: "Technology Portfolio | Spine InnovTech" },
-  description: "Explore the Spine InnovTech technology portfolio: the SpineWorkspace product, Spine Fabric, Spine Twin and controlled execution architecture.",
+  description: "Explore the Spine InnovTech technology portfolio: the SpineWorkspace product, Spine Fabric, Spine Twin and controlled execution.",
   alternates: { canonical: "/portfolio" },
 };
 
@@ -26,7 +26,7 @@ const work = [
     icon: Network,
     type: "Context foundation",
     title: "Spine Fabric",
-    body: "The context, relationship, signal and continuity fabric designed to keep shared work grounded in evidence and appropriate access.",
+    body: "The part that keeps shared work grounded in evidence and the right access, by connecting records, how they relate, signals and history.",
     href: "/platform/spine-fabric",
     external: false,
   },
@@ -34,15 +34,15 @@ const work = [
     icon: Waypoints,
     type: "AI counterpart",
     title: "Spine Twin",
-    body: "A context-aware AI counterpart for collecting relevant information, preparing work and proposing authorized next steps.",
+    body: "A context-aware AI counterpart for gathering the right information, preparing work and proposing approved next steps.",
     href: "/twin",
     external: false,
   },
   {
     icon: ShieldCheck,
     type: "Controlled execution",
-    title: "Spine Runtime",
-    body: "The controls that separate discovery, proposals, authority, execution, observation and reconciliation.",
+    title: "Approved action",
+    body: "The controls that keep each step separate: looking into things, proposing, approving, acting, and checking the result.",
     href: "/trust",
     external: false,
   },

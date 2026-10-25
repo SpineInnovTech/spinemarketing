@@ -37,27 +37,27 @@ const contactFAQs = [
   },
   {
     question: "Is my data safe with SpineWorkspace?",
-    answer: "SpineWorkspace is designed around tenant isolation, encrypted connector credential storage, and role-based access control. Access boundaries, authority and the data handling that apply depend on your deployment, connected providers and agreements — contact the product team to discuss the controls and documentation relevant to your requirements.",
+    answer: "SpineWorkspace is built to keep each company's data separate, store connection logins safely, and give people access based on their role. Exactly which protections and data rules apply depends on your setup, the tools you connect and your agreements — contact the product team to go through the controls and documents that fit your needs.",
   },
   {
     question: "Which tools do you connect?",
     answer: (
       <span>
-        SpineWorkspace connects across CRM, ERP, project management, code repositories, communication, and document systems. Explore our{" "}
+        SpineWorkspace connects across CRM, ERP, project management, code repositories, communication, and document tools. Explore our{" "}
         <Link href="/platform/integrations" className="text-[#0176D3] underline underline-offset-2 hover:text-[#0B5CAB]">
           integrations catalog
         </Link>
-        . Source systems of record remain authoritative, with Spine maintaining governed read context and authorized coordination.
+        . Your existing tools keep the record; Spine keeps a governed view it is allowed to read and helps coordinate approved work.
       </span>
     ),
   },
   {
     question: "Do I need to replace my current tools?",
-    answer: "No. SpineWorkspace is designed around a read-and-propose architecture that complements your existing systems of record. The tools you already use keep the primary record; the Twin analyzes context and prepares proposed actions, but any consequential changes require explicit human approval before write-back.",
+    answer: "No. SpineWorkspace reads your information and suggests next steps, alongside the tools you already use. The tools you already use keep the main record; the Twin looks at the context and prepares suggested actions, but any important change needs a person to approve it before it is written back.",
   },
   {
     question: "How does Spine InnovTech relate to SpineWorkspace?",
-    answer: "Spine InnovTech is the company that builds the governed foundation for humans and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work. SpineWorkspace is its flagship product, where humans and AI share one governed view of the business while existing tools remain the systems of record.",
+    answer: "Spine InnovTech is the company that builds the governed foundation for people and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work. SpineWorkspace is its flagship product, where people and AI share one governed view of the business while your existing tools keep the record.",
   },
 ];
 

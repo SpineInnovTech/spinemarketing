@@ -30,13 +30,13 @@ const architectureScenes: ArchitectureScene[] = [
   {
     id: "fabric",
     step: "01",
-    label: "Context Fabric",
+    label: "Connected context",
     badge: "Step 1 · Connected context",
     layer: "Connected context",
     title: "Connected context.",
     detail:
-      "Bring the records your team is authorized to use — accounts, support, contracts — into one connected view. Each stays owned by its source system.",
-    point: "Your existing tools stay the systems of record.",
+      "Bring the records your team is allowed to use — accounts, support, contracts — into one connected view. Each record stays owned by the tool it came from.",
+    point: "Your existing tools stay the place of record.",
     ctaHref: "/platform/spine-fabric",
     ctaLabel: "How context is connected",
   },
@@ -44,24 +44,24 @@ const architectureScenes: ArchitectureScene[] = [
     id: "hermes",
     step: "02",
     label: "Agentic Governance",
-    badge: "Step 2 · Agentic governance",
+    badge: "Step 2 · Agentic Governance",
     layer: "Human approval",
-    title: "Agentic governance.",
+    title: "Agentic Governance.",
     detail:
-      "AI prepares a proposal. A person reviews it and approves the exact change before anything is written back to a source system.",
-    point: "People approve every consequential action.",
+      "AI prepares a proposal. A person reviews it and approves the exact change before anything is written back to a tool.",
+    point: "People approve every important action.",
     ctaHref: "/platform",
     ctaLabel: "How governance works",
   },
   {
     id: "continuity",
     step: "03",
-    label: "Host Continuity",
-    badge: "Step 3 · Continuity",
+    label: "Work continuity",
+    badge: "Step 3 · Work continuity",
     layer: "Continuity",
-    title: "Continuity.",
+    title: "Work continuity.",
     detail:
-      "Context stays with the work as it moves between AI hosts, so the next step continues from where the last one left off.",
+      "The context stays with the work as it moves between AI tools, so the next step continues from where the last one left off.",
     point: "Context continues with the work.",
     ctaHref: "/spine",
     ctaLabel: "How continuity works",
@@ -177,7 +177,7 @@ export function CorporateArchitectureStoryboard() {
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#D6E8F8] bg-white px-3 py-1 font-mono text-[11px] font-semibold text-[#006FE8] shadow-2xs">
             <Workflow className="h-3 w-3 text-[#006FE8]" aria-hidden />
-            Interactive Storyboard
+            Click through the steps
           </span>
         </div>
 

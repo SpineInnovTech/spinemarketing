@@ -14,11 +14,11 @@ const practices = [
   },
   {
     number: "02",
-    eyebrow: "Delegate within a defined scope",
+    eyebrow: "Delegate within clear limits",
     title: "Give AI a responsibility with clear limits.",
     body: [
-      "A person's permissions and organizational policy determine what authority they can delegate. An AI counterpart should remain within that scope as it investigates, prepares or uses a capability.",
-      "Changing tools, models or hosts requires the applicable access and authority checks in the receiving environment.",
+      "A person's permissions and company policy decide what they can hand to AI. An AI counterpart should stay within those limits as it looks into things, prepares work or uses a tool.",
+      "Moving to other tools or AI models needs the same access and permission checks in the place it moves to.",
     ],
   },
   {
@@ -26,17 +26,17 @@ const practices = [
     eyebrow: "Make review meaningful",
     title: "Human approval needs enough context to be a decision.",
     body: [
-      "For consequential proposals, the responsible person should be able to inspect the intended action, affected records, supporting evidence, expected effect and material uncertainty.",
+      "For important proposals, the responsible person should be able to see the planned action, the records it affects, the evidence behind it, the expected effect and anything still unclear.",
       "People need to be able to reject, revise or approve a proposal within their authority. The resulting decision should remain connected to the work.",
     ],
   },
   {
     number: "04",
-    eyebrow: "Preserve memory boundaries",
+    eyebrow: "Keep memory areas separate",
     title: "Reuse context deliberately.",
     body: [
-      "Personal notes, AI working memory and shared organizational knowledge serve different purposes. Moving information between those scopes should depend on explicit permission and a governed process.",
-      "A retained conclusion should remain traceable to its sources and open to correction when the evidence changes.",
+      "Personal notes, AI working memory and shared company knowledge serve different purposes. Moving information between these areas should need clear permission and a controlled process.",
+      "A kept conclusion should still trace back to its sources and stay open to correction when the evidence changes.",
     ],
   },
   {

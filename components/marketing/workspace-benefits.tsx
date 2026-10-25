@@ -7,7 +7,7 @@ const benefits = [
   {
     icon: Database,
     title: "Governed business context",
-    body: "Connect authorized records and retrieve the evidence for the task. Keep source permissions and lineage with the context. Your existing tools remain the systems of record.",
+    body: "Connect the records you are allowed to use and bring up the evidence for the task. Keep each tool's permissions and where the information came from. Your existing tools stay the place of record.",
     href: "/business-context",
     link: "Explore business context",
   },
