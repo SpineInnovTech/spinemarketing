@@ -89,7 +89,7 @@ const actionLibrary = [
 const emergencyControls = [
   { icon: AlertTriangle, color: "text-red-400", title: "Pause Twin", desc: "Instant suspension of all proactive suggestions." },
   { icon: Eye, color: "text-violet-400", title: "Override with Audit", desc: "Force-execute with mandatory justification entry." },
-  { icon: RotateCcw, color: "text-cyan-400", title: "Recovery Interface", desc: "Inspect effects and reconcile supported corrective actions. Reversal depends on the source system and operation." },
+  { icon: RotateCcw, color: "text-cyan-400", title: "Recovery Interface", desc: "Look at what happened and review fixes. Whether it can be undone depends on the tool and the action." },
 ];
 
 export function ApprovalGateTwinContent() {
@@ -270,7 +270,7 @@ export function ApprovalGateTwinContent() {
         <div className="mx-auto max-w-[1100px]">
           <motion.div {...fade(0)} className="mx-auto max-w-2xl text-center mb-12">
             <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-primary mb-3">Emergency Controls</p>
-            <h2 className="section-heading">Pause. Review. <span className="text-primary">Reconcile.</span></h2>
+            <h2 className="section-heading">Pause. Review. <span className="text-primary">Check.</span></h2>
           </motion.div>
           <div className="grid gap-5 sm:grid-cols-3">
             {emergencyControls.map((e, i) => (

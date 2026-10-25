@@ -57,15 +57,15 @@ const scrollItems = [
   },
   {
     tag: "Audit Trail",
-    title: "Who approved what, when — immutable",
-    description: "Every approval, rejection, and edit logged with timestamp, user, and outcome. Append-only. Export-ready for compliance.",
+    title: "Who approved what, when — and it can't be changed",
+    description: "Every approval, rejection, and edit is saved with the time, the person, and the result. Nothing is overwritten. Ready to export for compliance.",
     icon: Clock,
     color: "#3b82f6",
     features: [
-      "Immutable append-only audit log",
-      "Timestamp, user ID, and action outcome recorded",
-      "Full decision chain from signal to execution",
-      "Export-ready audit trails for compliance review",
+      "A record that is added to, never changed",
+      "Time, who did it, and the result all saved",
+      "The full path from signal to action",
+      "Records ready to export for compliance",
     ],
   },
   {
@@ -85,15 +85,15 @@ const scrollItems = [
 
 const gatherItems = [
   { icon: ShieldCheck, label: "Review", description: "A person decides before anything is written back.", color: "#2dd4bf" },
-  { icon: Eye, label: "Evidence Panel", description: "Source data and confidence on every suggestion.", color: "#8b5cf6" },
-  { icon: GitBranch, label: "Routing Engine", description: "Impact-based escalation and multi-approver flows.", color: "#3b82f6" },
-  { icon: Activity, label: "Twin Scoring", description: "0-100 confidence with historical accuracy tracking.", color: "#fbbf24" },
-  { icon: Clock, label: "Audit Log", description: "Immutable record of every decision and outcome.", color: "#f97316" },
-  { icon: RotateCcw, label: "Reconciliation", description: "Observed effects and supported corrective work.", color: "#ef4444" },
-  { icon: AlertTriangle, label: "Risk Flagging", description: "Low-confidence suggestions auto-flagged for review.", color: "#ec4899" },
-  { icon: CheckCircle2, label: "Bulk Review", description: "Portfolio-wide action review in one queue.", color: "#14b8a6" },
-  { icon: Lock, label: "Access Control", description: "Role-based approval permissions per action type.", color: "#a855f7" },
-  { icon: Fingerprint, label: "Identity Verification", description: "Multi-factor approval for high-impact actions.", color: "#06b6d4" },
+  { icon: Eye, label: "Evidence Panel", description: "Source data and a confidence rating on every suggestion.", color: "#8b5cf6" },
+  { icon: GitBranch, label: "Routing", description: "Bigger decisions go to more people, by how much they matter.", color: "#3b82f6" },
+  { icon: Activity, label: "Twin Scoring", description: "A 0-100 rating, with a record of how accurate it has been.", color: "#fbbf24" },
+  { icon: Clock, label: "Record", description: "A record of every decision and result that can't be changed.", color: "#f97316" },
+  { icon: RotateCcw, label: "Checking the result", description: "What happened, and any fixes that were made.", color: "#ef4444" },
+  { icon: AlertTriangle, label: "Risk Flagging", description: "Low-confidence suggestions flagged for review.", color: "#ec4899" },
+  { icon: CheckCircle2, label: "Bulk Review", description: "Review actions across the whole portfolio in one queue.", color: "#14b8a6" },
+  { icon: Lock, label: "Access Control", description: "Approval rights set by role, per kind of action.", color: "#a855f7" },
+  { icon: Fingerprint, label: "Identity Check", description: "An extra sign-in step for high-impact actions.", color: "#06b6d4" },
 ];
 
 export function ApprovalStickyScroll() {
