@@ -12,10 +12,11 @@ export const metadata: Metadata = {
     "Our approach to working with AI centers on evidence, clear limits on what AI may do, reviews that mean something, correction, and keeping memory areas separate.",
   alternates: { canonical: "/responsible-ai" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Responsible AI — Spine InnovTech",
     description:
       "Our approach to working with AI centers on evidence, clear limits on what AI may do, reviews that mean something, correction, and keeping memory areas separate.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

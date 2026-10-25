@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Connect the systems your business already uses: CRM, support, finance, project tools, email and documents. Source systems stay authoritative.",
   alternates: { canonical: "/integrations" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Connected Ecosystems & Integrations | Spine InnovTech",
     description: "Connect business systems and assemble shared context for people and their Twin. Source systems stay authoritative.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace Integrations" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace Integrations" }],
   },
 }
 

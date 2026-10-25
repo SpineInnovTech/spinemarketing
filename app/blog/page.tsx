@@ -12,9 +12,10 @@ export const metadata: Metadata = {
   // continues to host /blog/<slug> permalinks. Point the index canonical at /insights.
   alternates: { canonical: "/insights" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Insights & Articles | Spine InnovTech",
     description: "Insights on connected workspaces, AI governance, and operational intelligence.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

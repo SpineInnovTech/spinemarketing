@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Security and governance design principles for SpineWorkspace; deployed controls and certifications require independent verification.",
   alternates: { canonical: "/security" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Security & Governance | Spine InnovTech",
     description: "Security and governance design principles for SpineWorkspace; deployed controls and certifications require independent verification.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

@@ -8,9 +8,10 @@ export const metadata: Metadata = {
   description: "Security architecture principles for SpineWorkspace. Review actual identity, encryption, access-control and audit evidence for each deployment.",
   alternates: { canonical: "/platform/security" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Platform Security Architecture | Spine InnovTech",
     description: "Security architecture principles for SpineWorkspace. Review actual identity, encryption, access-control and audit evidence for each deployment.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 
