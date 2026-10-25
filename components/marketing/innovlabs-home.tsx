@@ -185,7 +185,7 @@ export function InnovLabsHome() {
                 Why Autonomous AI Still Requires Governed Human Authority
               </h3>
               <p className="mt-2.5 text-sm leading-relaxed text-[#5E728B]">
-                Separating proposal preparation from consequential execution: the zero-trust governance boundary behind Hermes.
+                Separating proposal preparation from consequential execution: the zero-trust governance boundary behind agentic work.
               </p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
                 Read article <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />

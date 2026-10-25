@@ -52,12 +52,12 @@ const architectureScenes: ArchitectureScene[] = [
   {
     id: "hermes",
     step: "02",
-    label: "Hermes Governance",
-    badge: "Runtime · Hermes Zero-Trust Governance Gate",
+    label: "Agentic Governance",
+    badge: "Runtime · Agentic Zero-Trust Governance Gate",
     layer: "Execution Boundary Layer",
-    title: "Hermes Zero-Trust Runtime: Proposal Sandbox vs. Consequential Execution.",
+    title: "Agentic Zero-Trust Runtime: Proposal Sandbox vs. Consequential Execution.",
     detail:
-      "Autonomous AI Twins operate in unprivileged evaluation sandboxes and can only emit cryptographically signed proposals. Consequential writebacks require explicit human authorization verified against the Hermes Zero-Trust policy gate.",
+      "Autonomous AI Twins operate in unprivileged evaluation sandboxes and can only emit cryptographically signed proposals. Consequential writebacks require explicit human authorization verified against the zero-trust policy gate.",
     ctaHref: "/platform/security",
     ctaLabel: "Review Governance Architecture",
   },
@@ -402,7 +402,7 @@ export function CorporateArchitectureStoryboard() {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <span className="inline-flex items-center gap-1 rounded bg-[#EBF7FF] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#006FE8]">
-                      <ShieldCheck className="h-3 w-3" /> Hermes Core
+                      <ShieldCheck className="h-3 w-3" /> Governance Core
                     </span>
                     <span className="font-mono text-[10px] font-semibold text-[#006FE8]">
                       POLICY v2.4
@@ -510,7 +510,7 @@ export function CorporateArchitectureStoryboard() {
                     <div className="flex items-center justify-between text-[#355579]">
                       <span>Audit Receipt</span>
                       <span className="font-mono text-[10px] font-semibold text-[#006FE8]">
-                        {simulatedApproval ? "hermes.receipt:0x8f2a" : "Awaiting Sign"}
+                        {simulatedApproval ? "receipt:0x8f2a" : "Awaiting Sign"}
                       </span>
                     </div>
                   </div>

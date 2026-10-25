@@ -205,7 +205,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="flex items-center justify-between pt-1 border-t border-[#D8E5F0] text-[7.5px]">
               <div className="flex items-center gap-1 text-[#002B64] font-bold">
                 <ShieldCheck className="w-3 h-3 text-[#12B76A]" />
-                <span>Hermes Verified</span>
+                <span>Governed &amp; Verified</span>
               </div>
               <span className="font-mono text-[#0070DC] font-bold">Closed-Loop</span>
             </div>
