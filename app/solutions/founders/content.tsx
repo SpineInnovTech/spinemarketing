@@ -42,7 +42,7 @@ export function FoundersContent() {
         { title: "Team Pulse", desc: "Cross-functional signal activity: how many risks surfaced, how many actions approved, how fast things are moving." },
       ]}
       deepDives={[
-        { title: "Board-ready in seconds, not days", desc: "NRR, burn rate, cash runway, and pipeline coverage — pulled from your actual systems. One click, not three days of prep." },
+        { title: "Board-ready without the scramble", desc: "NRR, burn rate, cash runway, and pipeline coverage — pulled from your actual systems. One click, not three days of prep." },
         { title: "Decisions backed by evidence", desc: "Every signal shows you the exact data behind it. When you act, you know why. When you share it with the board, they can verify." },
         { title: "Full audit trail across the org", desc: "See every AI-suggested action — what was proposed, who approved it, what happened. Governance you can actually verify." },
       ]}

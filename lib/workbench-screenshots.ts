@@ -196,7 +196,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
         route: "/workspace/work/finance/forecasting",
         desktop: "/images/workbench/finance/forecasting.webp",
         badge: "Forecast Model",
-        alt: "Financial forecasting projection comparing demo contracted ARR with recognized revenue.",
+        alt: "Financial forecasting view comparing demo contracted ARR with recognized revenue.",
       },
     },
     valueNarrative: {
@@ -368,7 +368,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
       whatManualWorkItReduces:
         "Eliminates complex, fragile Excel forecasting macros and multi-hour data-cleaning cycles every quarter-end.",
       whyItMatters:
-        "Provides executive leadership with defensible, data-backed revenue projections grounded in connected pipeline records.",
+        "Provides executive leadership with defensible, data-backed revenue forecasts grounded in connected pipeline records.",
     },
   },
 
@@ -768,7 +768,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
       },
     },
     valueNarrative: {
-      whatUsersSee: "Shared navigation around the FounderOps projection.",
+      whatUsersSee: "Shared navigation around the FounderOps view.",
       whatTheyCanDo: "Move between common work areas and role-specific views within one shell, subject to workspace permissions.",
       whatManualWorkItReduces: "A consistent shell can reduce repeated navigation across departmental tools.",
       whyItMatters: "Roles share a work environment while retaining separate permissions and relevant context.",
