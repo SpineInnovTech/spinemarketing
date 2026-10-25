@@ -91,7 +91,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             <div className="w-4 sm:w-6 h-0.5 bg-gradient-to-r from-[#1685F4] to-[#0070DC] relative">
               <span className="absolute -top-1 right-0 w-2 h-2 rounded-full bg-[#0070DC] animate-ping" />
             </div>
-            <span className="text-[8px] font-mono font-bold text-[#1685F4] mt-1">In</span>
+            <span className="text-[8px] font-mono font-bold text-[#1685F4] mt-1">Bring in</span>
           </div>
 
           {/* 2. Spine Fabric capsule */}
