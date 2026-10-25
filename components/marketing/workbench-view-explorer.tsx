@@ -447,7 +447,7 @@ export function WorkbenchViewExplorer({
                   Workbench Capture Not Available
                 </h3>
                 <p className="mx-auto mt-2 max-w-md text-sm text-[#4E607A]">
-                  The projection <code>{domain.title}</code> is an internal or infrastructure-specific capability without an approved public marketing screenshot.
+                  The view <code>{domain.title}</code> is an internal or infrastructure-specific capability without an approved public marketing screenshot.
                 </p>
                 <button
                   type="button"
@@ -530,7 +530,7 @@ export function WorkbenchViewExplorer({
                         <CheckCircle2 className="h-4 w-4 text-[#006FE8]" />
                         <span>
                           <strong>Workbench view:</strong> {currentScreenshot.title} in{" "}
-                          <code>{domain.title}</code> projection.
+                          <code>{domain.title}</code> view.
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
@@ -555,7 +555,7 @@ export function WorkbenchViewExplorer({
                             01
                           </span>
                           <span className="text-[11px] font-semibold uppercase tracking-wider text-[#006FE8]">
-                            Visual Projection
+                            Visual view
                           </span>
                         </div>
                         <h4 className="mt-3.5 text-base font-bold text-[#082B5E]">
