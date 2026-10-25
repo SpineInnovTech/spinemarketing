@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Save at-risk accounts. Accelerate renewals. Surface expansion signals.",
   alternates: { canonical: "/solutions/customer-success" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Customer Success & Account Managers | Spine InnovTech",
     description: "Save at-risk accounts. Accelerate renewals. Surface expansion signals.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

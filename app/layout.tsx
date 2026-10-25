@@ -32,19 +32,23 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Governed foundation for humans and AI to share business context and move work forward.",
+    title: "Connecting business context for humans and AI, with people in control.",
     description:
-      "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
+      "Spine InnovTech connects your tools, people, and AI through shared business context, with people in control.",
     siteName: "Spine InnovTech",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [
+      {
+        url: "/og-share-2026-10.png",
+        width: 1200,
+        height: 630,
+        alt: "Spine InnovTech — Connecting business context for humans and AI, with people in control.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Governed foundation for humans and AI to share business context and move work forward.",
-    description:
-      "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
-    images: ["/og.png"],
+    images: ["/og-share-2026-10.png"],
   },
 }
 

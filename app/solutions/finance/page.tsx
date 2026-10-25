@@ -13,9 +13,10 @@ export const metadata: Metadata = {
     "Revenue, risk, collections, cash — the financial picture that finance leaders actually need to run the business.",
   alternates: { canonical: "/solutions/finance" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Finance | Spine InnovTech",
     description: "Revenue, risk, collections, cash — the financial picture that finance leaders actually need to run the business.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

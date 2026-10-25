@@ -12,10 +12,11 @@ export const metadata: Metadata = {
     "Spine Twin looks into things, prepares work and suggests next steps from the context it is allowed to use. Important actions wait for a person's approval.",
   alternates: { canonical: "/twin" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Spine Twin — Context-aware AI within human authority | Spine InnovTech",
     description:
       "Spine Twin looks into things, prepares work and suggests next steps from the context it is allowed to use. Important actions wait for a person's approval.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

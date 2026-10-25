@@ -11,9 +11,10 @@ export const metadata: Metadata = {
   description: "What's new in SpineWorkspace — product updates, new connectors, and improvements.",
   alternates: { canonical: "/changelog" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Changelog | Spine InnovTech",
     description: "What's new in SpineWorkspace — product updates, new connectors, and improvements.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

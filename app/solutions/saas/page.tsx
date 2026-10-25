@@ -12,9 +12,10 @@ export const metadata: Metadata = {
     "Renewals, expansion, adoption — connected in one account view.",
   alternates: { canonical: "/solutions/saas" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "SaaS | Spine InnovTech",
     description: "Renewals, expansion, adoption — connected in one account view.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

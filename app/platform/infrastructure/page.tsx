@@ -8,9 +8,10 @@ export const metadata: Metadata = {
   description: "Multi-region infrastructure, encryption, and operational resilience powering the SpineWorkspace.",
   alternates: { canonical: "/platform/infrastructure" },
   openGraph: {
+    siteName: "Spine InnovTech",
     title: "Infrastructure | Spine InnovTech",
     description: "Multi-region infrastructure, encryption, and operational resilience powering the SpineWorkspace.",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 
