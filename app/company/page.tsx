@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 
 const beliefs = [
   { n: "01", title: "Context is a business capability.", text: "Meaning emerges from relationships between goals, people, systems, events, decisions, and work. Software should help reveal those relationships." },
-  { n: "02", title: "AI needs the business, not just a prompt.", text: "Useful intelligence depends on timely context, provenance, permissions, and an understanding of the work already underway." },
-  { n: "03", title: "Connection does not equal authority.", text: "A tool being available never means an agent or person is authorized to use it. Approval and scope belong in the architecture." },
+  { n: "02", title: "AI needs the business, not just a prompt.", text: "Useful intelligence depends on timely context, where information came from, permissions, and an understanding of the work already underway." },
+  { n: "03", title: "Connection does not equal authority.", text: "A tool being available never means an AI or person is allowed to use it. Approval and limits belong in the product itself." },
   { n: "04", title: "Work deserves continuity.", text: "A team should be able to carry forward a decision, handoff, and verified outcome without reconstructing the history every time." },
 ];
 
@@ -28,7 +28,7 @@ const pursuits = [
   ["Business context", "Connect the people, goals, relationships, events, evidence, and outcomes that make business work understandable."],
   ["Intelligent workspaces", "Create relevant work surfaces for humans and AI around their responsibilities and authorized capabilities."],
   ["Governed AI", "Design accountable paths from context gathering and proposals to authorization, execution, and verification."],
-  ["Connected ecosystems", "Work with existing applications, hosts, tools, and connectors rather than forcing businesses into a new isolated silo."],
+  ["Connected ecosystems", "Work with the apps, AI tools and connectors a business already uses, instead of forcing it into a new, separate silo."],
 ];
 
 export default function CompanyPage() {

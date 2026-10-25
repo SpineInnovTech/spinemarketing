@@ -65,7 +65,7 @@ const items = [
   {
     tag: "One connection",
     title: "The tools, files, and conversations you already use",
-    description: "Supported connections bring records and evidence into related business context. Availability and scope depend on the provider and permissions.",
+    description: "Supported connections bring records and evidence into related business context. What is available, and how much you can connect, depends on the tool and its permissions.",
     icon: GitBranch,
     color: "#3b82f6",
     features: [

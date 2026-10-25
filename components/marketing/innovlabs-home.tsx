@@ -48,12 +48,12 @@ const principles = [
   {
     icon: ShieldCheck,
     title: "Your tools keep the record.",
-    body: "Your existing tools stay the systems of record. SpineWorkspace reads and writes with their authority, never instead of them.",
+    body: "Your existing tools stay the place of record. SpineWorkspace reads and writes with their permission, never instead of them.",
   },
   {
     icon: UserCheck,
     title: "Your people keep the authority.",
-    body: "AI prepares the work. A person approves every consequential action before it happens.",
+    body: "AI prepares the work. A person approves every important action before it happens.",
   },
   {
     icon: Workflow,
@@ -241,35 +241,16 @@ export function InnovLabsHome() {
               <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
               How it is built
             </p>
-            <h2 className={heading + " mt-3"}>From source systems to governed, continuing work.</h2>
+            <h2 className={heading + " mt-3"}>From your tools to work that keeps going.</h2>
             <p className={body + " mt-4"}>
-              Three parts: connected context, agentic governance with human approval, and continuity across AI hosts. The deeper detail lives on the platform pages.
+              Three parts: your information brought together, Agentic Governance (AI prepares the work and a person approves it), and work that carries on from one AI tool to the next. More detail is on the platform pages.
             </p>
           </div>
           <CorporateArchitectureStoryboard />
         </div>
       </section>
 
-      {/* PART 6 — CAPABILITY STATUS AND TRUST */}
-      <section id="trust" aria-labelledby="home-trust-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
-        <div className={container}>
-          <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            Status and trust
-          </p>
-          <h2 id="home-trust-title" className={heading + " mt-5 max-w-[820px]"}>What is shown here, and what to check.</h2>
-          <p className={body + " mt-4 max-w-[760px]"}>
-            The examples on this page are illustrative. They show how the workflow is designed to work, not a record of live results.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-x-7 gap-y-2">
-            <Link href="/proof" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">See what the product documents <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-            <Link href="/trust" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Trust <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-            <Link href="/responsible-ai" className="inline-flex min-h-11 items-center gap-2 rounded-sm text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]">Responsible AI <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-          </div>
-        </div>
-      </section>
-
-      {/* PART 7 — COMPANY STORY, PRODUCT CTA, INSIGHTS TEASER */}
+      {/* COMPANY STORY, PRODUCT CTA, INSIGHTS TEASER */}
       <section id="company-insights" aria-labelledby="home-company-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-16 sm:py-20">
         <div className={container}>
           <div className="max-w-[820px]">

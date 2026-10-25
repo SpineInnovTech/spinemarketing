@@ -9,12 +9,12 @@ import { ResponsibleAiContent } from "./content"
 export const metadata: Metadata = {
   title: "Responsible AI — Spine InnovTech",
   description:
-    "Our approach to AI collaboration centers on evidence, bounded delegation, meaningful human review, correction and clear memory boundaries.",
+    "Our approach to working with AI centers on evidence, clear limits on what AI may do, reviews that mean something, correction, and keeping memory areas separate.",
   alternates: { canonical: "/responsible-ai" },
   openGraph: {
     title: "Responsible AI — Spine InnovTech",
     description:
-      "Our approach to AI collaboration centers on evidence, bounded delegation, meaningful human review, correction and clear memory boundaries.",
+      "Our approach to working with AI centers on evidence, clear limits on what AI may do, reviews that mean something, correction, and keeping memory areas separate.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

@@ -15,7 +15,7 @@ const details = [
     icon: Network,
     eyebrow: "The technical detail",
     title: "Spine Fabric",
-    body: "How the foundation relates authorized records, evidence and decisions, while source systems stay authoritative.",
+    body: "How the foundation connects the records, evidence and decisions you are allowed to use, while your existing tools keep the record.",
     href: "/platform/spine-fabric",
     cta: "Explore Spine Fabric",
   },
@@ -23,7 +23,7 @@ const details = [
     icon: Waypoints,
     eyebrow: "The AI counterpart",
     title: "Spine Twin",
-    body: "Context-aware AI that prepares work and proposes next steps, while consequential actions wait for a person's approval.",
+    body: "Context-aware AI that prepares work and proposes next steps, while important actions wait for a person's approval.",
     href: "/twin",
     cta: "Meet Spine Twin",
   },
@@ -36,7 +36,7 @@ export function TechnologyDetailLinks() {
         align="left"
         label="Explore the technology in detail"
         headline="Three pages, one connected foundation."
-        body="Start with the introduction, read the technical detail, or meet the AI counterpart. Each explains a different part of the same architecture."
+        body="Start with the introduction, read the technical detail, or meet the AI counterpart. Each explains a different part of the same foundation."
       />
       <div className="grid gap-5 md:grid-cols-3">
         {details.map(({ icon: Icon, eyebrow, title, body, href, cta }) => (

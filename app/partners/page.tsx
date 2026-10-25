@@ -9,12 +9,12 @@ import { PartnersContent } from "./content"
 export const metadata: Metadata = {
   title: "Partnerships — Spine InnovTech",
   description:
-    "Explore collaboration with Spine InnovTech across technology ecosystems, integration expertise, business workflows and engineering research.",
+    "Explore working with Spine InnovTech across technology and AI tools, integration expertise, business workflows and engineering research.",
   alternates: { canonical: "/partners" },
   openGraph: {
     title: "Partnerships — Spine InnovTech",
     description:
-      "Explore collaboration with Spine InnovTech across technology ecosystems, integration expertise, business workflows and engineering research.",
+      "Explore working with Spine InnovTech across technology and AI tools, integration expertise, business workflows and engineering research.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

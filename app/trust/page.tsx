@@ -9,12 +9,12 @@ import { TrustContent } from "./content"
 export const metadata: Metadata = {
   title: "Trust & Governance — Spine InnovTech",
   description:
-    "Learn how access boundaries, explicit authority, provenance and outcome verification shape Spine InnovTech's engineering approach.",
+    "Learn how clear limits on who can see what, who can act, where information came from and proof of results shape Spine InnovTech's engineering approach.",
   alternates: { canonical: "/trust" },
   openGraph: {
     title: "Trust & Governance — Spine InnovTech",
     description:
-      "Learn how access boundaries, explicit authority, provenance and outcome verification shape Spine InnovTech's engineering approach.",
+      "Learn how clear limits on who can see what, who can act, where information came from and proof of results shape Spine InnovTech's engineering approach.",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

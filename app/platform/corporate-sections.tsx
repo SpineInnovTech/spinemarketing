@@ -7,11 +7,11 @@
 // keeps each heading clear of the sticky header (h-16).
 
 const stages = [
-  ["Establish context", "Assemble permitted information with source references, relevant history and visible uncertainty."],
-  ["Prepare", "Help people and AI investigate the situation and develop a proposed next step with supporting evidence."],
-  ["Review and authorize", "Give the responsible person enough context to decide. Check identity, scope, policy and required approvals before execution."],
-  ["Execute", "Use the permitted capability and its owning connection. Keep the operation tied to the decision and authority that allowed it."],
-  ["Verify and continue", "Observe the result, reconcile it with the source system where possible, and retain completion, failure or unresolved status with the work."],
+  ["Bring the context together", "Pull together the information you are allowed to see, with where it came from, the history that matters and anything still unclear."],
+  ["Prepare", "Help people and AI look into the situation and put together a suggested next step, with the evidence behind it."],
+  ["Review and approve", "Give the right person enough to decide. Check who they are, what they can do, the rules and any needed sign-off before anything happens."],
+  ["Do it", "Use the allowed tool and its connection. Keep the action tied to the decision and the approval that allowed it."],
+  ["Check and continue", "Watch the result, match it against the source tool where possible, and keep whether it finished, failed or is still open with the work."],
 ];
 
 export function PlatformCorporateSections() {
@@ -29,9 +29,9 @@ export function PlatformCorporateSections() {
         </h2>
         <div className="mt-8 max-w-[800px] space-y-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">
           <p>A record gains meaning through its relationships: the account it belongs to, the commitment it supports, the incident it explains or the goal it affects.</p>
-          <p>Our approach relates authorized records, evidence, goals, decisions and outcomes while preserving source identity. Existing CRM, support, finance, contract and document systems remain the systems of record.</p>
-          <p>Useful context should help people understand what changed, which sources support a conclusion, where the evidence disagrees and who owns the next decision.</p>
-          <p>When sources conflict or information is stale, that uncertainty should remain visible. An AI interpretation must remain distinguishable from a source record or an accepted decision.</p>
+          <p>Our approach connects records, evidence, goals, decisions and outcomes you are allowed to use, while keeping each source clear. Your existing CRM, support, finance, contract and document tools stay the place of record.</p>
+          <p>Useful context should help people see what changed, which sources back up a conclusion, where the evidence disagrees and who owns the next decision.</p>
+          <p>When sources disagree or information is out of date, that should stay visible. What the AI worked out should always be easy to tell apart from a source record or a decision people made.</p>
         </div>
       </section>
 
@@ -61,7 +61,7 @@ export function PlatformCorporateSections() {
             ))}
           </ul>
           <p className="mt-8 max-w-[800px] text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#445A75]">
-            Human approval remains subject to organizational and source-system permissions. A requested action, an accepted request and a verified outcome are distinct states.
+            A person's approval still has to fit the company's rules and each tool's own permissions. Asking for an action, approving it, and a checked result are three different things.
           </p>
         </div>
       </section>
@@ -71,16 +71,16 @@ export function PlatformCorporateSections() {
         className="scroll-mt-24 mx-auto max-w-[1240px] px-5 py-20 sm:px-8 lg:py-28"
       >
         <p className="text-[11px] font-semibold uppercase tracking-[.24em] text-[#245FC8]">
-          CONTINUITY ACROSS ENVIRONMENTS
+          WORK THAT CARRIES ON
         </p>
         <h2 className="mt-5 max-w-[820px] text-[length:min(clamp(2.2rem,4vw,4rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.055em] text-[#032D60]">
-          A handoff should preserve meaning and recheck permission.
+          A handoff should keep the meaning and recheck permission.
         </h2>
         <div className="mt-8 max-w-[800px] space-y-5 text-[length:min(18px,var(--marketing-body-size))] leading-[1.9] text-[#445A75]">
-          <p>Continuity means carrying forward the work&apos;s identity, evidence, decisions, ownership and remaining questions.</p>
-          <p>It matters when an account changes hands, an incident moves to engineering or someone resumes work in a compatible AI environment.</p>
-          <p>The receiving environment must independently establish identity, access and authority. A previous approval or visible capability cannot be treated as permission everywhere else.</p>
-          <p>Connections depend on supported interfaces and the capabilities each environment explicitly exposes. They do not imply access to every tool, conversation, model or file in a connected host.</p>
+          <p>Carrying on means bringing the work&apos;s evidence, decisions, owner and open questions along with it.</p>
+          <p>It matters when an account changes hands, an incident moves to engineering or someone picks up the work again in another AI tool.</p>
+          <p>The tool picking up the work must check who the person is, their access and what they can do, on its own. An earlier approval or an available tool does not count as permission everywhere else.</p>
+          <p>Connections depend on what each tool chooses to share and support. They do not mean access to every tool, conversation, AI model or file in a connected app.</p>
         </div>
       </section>
     </div>

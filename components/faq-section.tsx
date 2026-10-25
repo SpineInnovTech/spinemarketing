@@ -20,7 +20,7 @@ const platformFAQs: FAQItem[] = [
   },
   {
     question: "What are the Workspace and Twin?",
-    answer: "The Workspace brings goals, responsibilities, evidence, decisions, and next steps into a shared work environment. Twin helps investigate, prepare, and coordinate work using authorized business context. Consequential actions remain subject to the right authority and policy; source systems keep their authoritative roles.",
+    answer: "The Workspace brings goals, responsibilities, evidence, decisions, and next steps into one shared place to work. Twin helps look into things, prepare, and coordinate work using the business context it is allowed to use. Important actions still need the right person or rule to approve them; your existing tools keep the record.",
   },
   {
     question: "How is SpineWorkspace different from a CRM or a dashboard tool?",
@@ -28,15 +28,15 @@ const platformFAQs: FAQItem[] = [
   },
   {
     question: "Does Twin act on its own?",
-    answer: "Twin can help proactively gather authorized context and prepare work, including in Coworker mode. Preparing a proposal does not grant authority to execute it. Consequential actions require the applicable human or policy authorization, and outcomes must be observed and reconciled.",
+    answer: "Twin can gather the context it is allowed to use and prepare work ahead of time, including in Coworker mode. Preparing a suggestion does not give it the power to act. Important actions need the right person or rule to approve them, and the result must be watched and checked.",
   },
   {
     question: "How many apps can I connect?",
-    answer: "Connection scope depends on the supported provider, permissions, deployment, and agreed evaluation. The integrations page describes system categories and examples. Discuss availability and limits for your actual tools with the team.",
+    answer: "How much you can connect depends on the tool, its permissions, your setup, and what you agree to try. The integrations page shows the kinds of tools and some examples. Talk through what is available and any limits for your actual tools with the team.",
   },
   {
     question: "Is my data secure?",
-    answer: "The security model is organized around identity, policy, access scope, data boundaries, and decision evidence. Verify configured controls, provider processing terms, and deployment evidence for your evaluation. This website does not claim an independent security certification; the security pages explain what to review with the team.",
+    answer: "Security is built around who someone is, the rules, what each person can see, clear data limits, and a record of decisions. Check the controls that are set up, each provider's terms, and the deployment evidence for your review. This website does not claim an outside security certification; the security pages explain what to go through with the team.",
   },
   {
     question: "Can I start with just the Workspace?",
