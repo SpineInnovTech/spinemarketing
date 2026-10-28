@@ -11,7 +11,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
   return (
     <div
       className={`relative w-full rounded-3xl border border-[#D8E5F0] bg-white p-5 md:p-8 lg:p-10 shadow-2xl overflow-hidden isolation-auto ${className}`}
-      aria-label="Spine InnovTech Corporate Orbital Architecture"
+      aria-label="How work moves through Spine InnovTech"
     >
       <BorderBeam size={280} duration={16} colorFrom="#0070DC" colorTo="#1685F4" />
 

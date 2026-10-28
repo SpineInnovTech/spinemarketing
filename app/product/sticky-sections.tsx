@@ -78,7 +78,7 @@ const scrollItems = [
     color: "#ef4444",
     features: [
       "Append-only knowledge — nothing deleted, everything versioned",
-      "Cross-team insight sharing with governed access",
+      "Teams share what they are allowed to see",
       "Session continuity — ask anything, AI answers from real data",
       "Pattern recognition improves with each decision cycle",
     ],
@@ -115,7 +115,7 @@ export function ProductStickySections() {
       <StickyGather
         tag="Connected Intelligence"
         heading={<>Twelve modules. <span className="text-primary">One operating surface.</span></>}
-        subheading="Every capability gathers into a single workspace — no tab switching, no context loss."
+        subheading="The work you can do sits in one workspace. You do not have to switch tabs or rebuild the story."
         centerLabel="Workspace"
         centerDescription="Your daily surface"
         items={gatherItems}

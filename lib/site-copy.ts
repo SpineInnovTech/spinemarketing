@@ -43,14 +43,14 @@ export const pages = {
     meta: {
       title: "SpineWorkspace — One Fabric, 13 Domain Workspaces",
       description:
-        "SpineWorkspace brings authoritative truth and the context for the current task together. Source systems stay authoritative.",
+        "SpineWorkspace brings the record from your tools together with the facts this task needs. Those tools keep the record.",
       path: "/spineworkspace",
     },
     hero: {
       badge: "SpineWorkspace · Business Context Workbench",
       headline: "One business context. Every domain. Ready to work.",
       subhead:
-        "SpineWorkspace connects authorized source records into one governed business-context Fabric, projects role-relevant views across 13 domains and provides ready-built workflows. Original source systems remain authoritative.",
+        "SpineWorkspace connects the records you are allowed to see into Spine Fabric, the shared view of records from the tools you already use. It shows a view for each job and includes ready-built workflows. Those tools keep the record.",
       primaryCta: { label: "See a workflow", href: "/product#how-it-works" },
       secondaryCta: { label: "Book a tailored demo", href: "/contact?intent=demo" },
     },
@@ -77,7 +77,7 @@ export const pages = {
         headline: "The Spine InnovTech technology ecosystem.",
         cards: [
           { title: "SpineWorkspace", description: "The workspace where a person sees the work and decides.", href: "/spineworkspace" },
-          { title: "Spine Platform", description: "The governed architecture behind SpineWorkspace.", href: "/platform" },
+          { title: "Spine Platform", description: "How SpineWorkspace is built.", href: "/platform" },
           { title: "Spine Fabric", description: "One connection to the tools that keep the record.", href: "/platform/spine-fabric" },
           { title: "Spine Twin", description: "Prepares a proposal when someone asks.", href: "/twin" },
           { title: "Spine Coworker", description: "Gathers the records and evidence this person may use.", href: "/twin#coworker" },
@@ -141,7 +141,7 @@ export const pages = {
       },
       {
         headline: "Human and policy boundaries stay explicit.",
-        body: "A person or approved policy authorizes consequential actions. A proposal remains a proposal until authorized. Execution uses governed capabilities; completion depends on observed and reconciled results.",
+        body: "A person, or a rule they have approved, allows important actions. A suggestion stays a suggestion until then. The product only does what it is allowed to do. It is finished when the result is seen and checked against the record.",
       },
       {
         headline: "Business context continues as models and tools evolve.",
@@ -165,7 +165,7 @@ export const pages = {
       badge: "SPINE FABRIC · FACTS AND CONTEXT",
       headline: "Bring the facts together. See the context.",
       subhead:
-        "Spine Fabric is the shared, governed base behind the Workbench. (\"Governed\" means every use follows set rules.) It connects the records, events, relationships and evidence you are allowed to see, so people and AI can find the facts a task needs.",
+        "Spine Fabric is the shared view of records behind the Workbench, the screen where a person does the work. Every use follows set rules. It connects the records, events, relationships and evidence you are allowed to see, so people and AI can find the facts a task needs.",
       primaryCta: { label: "See how work is shown", href: "/adaptive-workspace" },
     },
     sections: [
@@ -193,7 +193,7 @@ export const pages = {
       {
         headline: "Proposals do not become business truth.",
         body:
-          "Source systems stay authoritative. A proposal does not become truth until a person with authority accepts it.",
+          "The tools you already use keep the record. A suggestion does not become the record until a person who is allowed to accept it does so.",
       },
     ],
     crossLinks: {
@@ -213,7 +213,7 @@ export const pages = {
       badge: "Spine Triage Bot",
       headline: "See what needs a decision.",
       subhead:
-        "Spine Triage Bot is a SpineWorkspace capability. It sorts a new message, file, or ticket so a person can see what needs attention. It does not write the record.",
+        "Spine Triage Bot is part of SpineWorkspace. It sorts a new message, file, or ticket so a person can see what needs attention. It does not write the record.",
       primaryCta: { label: "See Spine Twin", href: "/twin" },
     },
     sections: [
@@ -245,7 +245,7 @@ export const pages = {
       badge: "Spine Folder Monitor",
       headline: "A new file shows up with the work.",
       subhead:
-        "Spine Folder Monitor is a SpineWorkspace capability. It watches the folders the business already uses. When a file arrives or changes, the workspace can show it with the task. The file stays in the folder.",
+        "Spine Folder Monitor is part of SpineWorkspace. It watches the folders the business already uses. When a file arrives or changes, the workspace can show it with the task. The file stays in the folder.",
       primaryCta: { label: "See Spine Fabric", href: "/platform/spine-fabric" },
     },
     sections: [
@@ -275,7 +275,7 @@ export const pages = {
     hero: {
       badge: "ONE FABRIC · 13 DOMAINS",
       headline: "Different domain views. One business context.",
-      subhead: "Sales, Account Success, Finance, Engineering, Operations and leadership use role-relevant views of the same governed business context. Supported standard work starts from prebuilt views rather than custom departmental development.",
+      subhead: "Sales, Account Success, Finance, Engineering, Operations and leadership each see the view that fits their job, from the same facts. Standard work starts from ready-made views.",
       primaryCta: { label: "Explore adaptive work", href: "/host-connected-environment" },
     },
     sections: [
@@ -350,20 +350,20 @@ export const pages = {
 
   governance: {
     meta: {
-      title: "Governance — Humans stay in control",
-      description: "Humans govern the business. AI helps the business work. Availability does not mean authority.",
+      title: "Who decides — People stay in control",
+      description: "People run the business. AI helps with the work. Being able to see something is not permission to change it.",
       path: "/governance",
     },
     hero: {
-      badge: "Governance",
-      headline: "Humans govern the business. AI helps the business work.",
-      subhead: "A review surface for proposals, evidence, and the person who decides.",
+      badge: "Who decides",
+      headline: "People run the business. AI helps with the work.",
+      subhead: "A place to review a proposal, the facts behind it, and the person who decides.",
       primaryCta: { label: "Read the security overview", href: "/security" },
     },
     sections: [
       {
         headline: "Authority is a person, not a model.",
-        body: "Availability is not authority. Twin can propose. A person with the right scope accepts or rejects the proposal. The source system stays the record.",
+        body: "Being able to see a tool is not permission to use it. Spine Twin can prepare a proposal. A person with the right job accepts or rejects it. The tool you already use keeps the record.",
       },
       {
         headline: "Three kinds of memory.",
@@ -372,7 +372,7 @@ export const pages = {
       },
       {
         headline: "Pending review is the default.",
-        body: "A proposal stays pending until someone with authority accepts it. Evidence stays linked to the source system.",
+        body: "A proposal stays waiting until a person who is allowed to decide accepts it. The facts stay linked to the tool that keeps the record.",
       },
       {
         headline: "Controls live on the security page.",
@@ -462,14 +462,14 @@ export const pages = {
     meta: {
       title: "Company — Spine InnovTech builds SpineWorkspace",
       description:
-        "Spine InnovTech builds SpineWorkspace. Spine Fabric, Workbench, Twin, Runtime and Marketplace describe parts of one governed business-context workspace; supporting agents and tools are capabilities, not separately marketed products.",
+        "Spine InnovTech builds SpineWorkspace. Spine Fabric, the Workbench, Spine Twin and the marketplace are parts of one workspace. The helpers and tools are parts of that product, not separate products.",
       path: "/company",
     },
     hero: {
       badge: "Spine InnovTech",
       headline: "We build for the work that gets lost between systems.",
       subhead:
-        "Spine InnovTech builds SpineWorkspace. Spine Fabric, Workbench, Twin, Runtime and Marketplace describe parts of one governed business-context workspace; supporting agents and tools are capabilities, not separately marketed products. The systems teams already depend on remain authoritative.",
+        "Spine InnovTech builds SpineWorkspace. Spine Fabric, the Workbench, Spine Twin and the marketplace are parts of one workspace. The helpers and tools are parts of that product, not separate products. The tools teams already depend on keep the record.",
       primaryCta: { label: "Speak with the team", href: "/contact" },
       secondaryCta: { label: "See a workflow", href: "/product#how-it-works" },
     },
@@ -483,7 +483,7 @@ export const pages = {
         headline: "What we ship.",
         cards: [
           { title: "SpineWorkspace", description: "The workspace where a person sees the work and decides.", href: "/spineworkspace" },
-          { title: "Spine Platform", description: "The governed architecture behind SpineWorkspace.", href: "/platform" },
+          { title: "Spine Platform", description: "How SpineWorkspace is built.", href: "/platform" },
           { title: "Spine Fabric", description: "One connection to the tools that keep the record.", href: "/platform/spine-fabric" },
           { title: "Spine Twin", description: "Prepares a proposal when someone asks.", href: "/twin" },
           { title: "Spine Coworker", description: "Gathers the records and evidence this person may use.", href: "/twin#coworker" },
@@ -499,7 +499,7 @@ export const pages = {
           "Truth stays in source systems. Context is assembled for the work and linked to evidence",
           "Accountability — people accept consequential steps; proposals stay proposals until then",
           "Continuity — work resumes across sessions and handoffs without rebuilding the story",
-          "Adaptive capability — the workspace follows the goal, role, and evidence in front of the work",
+          "Fits the job — the workspace follows the goal, the role, and the facts in front of the work",
         ],
       },
       {
@@ -554,7 +554,7 @@ export const pages = {
     hero: {
       badge: "Spine Platform",
       headline: "One joined-up way to do connected business work.",
-      subhead: "Fabric brings your information together. Workbench puts it into work built around your role. Twin helps people understand and prepare. People approve the action, and the result is checked. Connected tools add to all of this.",
+      subhead: "Spine Fabric is the shared view of records from the tools you already use. The Workbench is the screen where a person does the work, built around their job. Spine Twin is the AI that prepares the next step and waits. A person approves the action, and the result is checked.",
       primaryCta: { label: "Spine Fabric", href: "/platform/spine-fabric" },
     },
     sections: [
@@ -566,7 +566,7 @@ export const pages = {
           { title: "Integrations", description: "The apps, files, and conversations already in use.", href: "/platform/integrations" },
           { title: "The tools you already use", description: "Each tool stays itself. They do not have to talk to each other directly.", href: "/host-connected-environment" },
           { title: "Check the result", description: "Results are checked, not blindly trusted.", href: "/governance" },
-          { title: "Security and governance", description: "Who can see what, what is recorded, and controls on actions.", href: "/security" },
+          { title: "Security and who decides", description: "Who can see what, what is recorded, and controls on actions.", href: "/security" },
         ],
       },
     ],
@@ -581,7 +581,7 @@ export const pages = {
     hero: {
       badge: "Security",
       headline: "Controls and limits for the workspace.",
-      subhead: "Who can get in, how data is kept safe, and what Twin is not allowed to do. Who may decide, and which memory they may use, lives on Governance.",
+      subhead: "Who can get in, how data is kept safe, and what Twin is not allowed to do. Who may decide, and which memory they may use, is explained with the approval rules.",
       primaryCta: { label: "Contact security team", href: "/contact?intent=security" },
     },
     sections: [
@@ -623,8 +623,8 @@ export const proofCards: ProofCardCopy[] = [
     description: "The work uses the tools already open for that person before it reaches for anything else.",
   },
   {
-    title: "Governance boundary",
-    description: "Availability ≠ authority. Humans approve consequential actions.",
+    title: "A person approves",
+    description: "Being able to see a tool is not permission to use it. A person approves important actions.",
   },
   {
     title: "Observation and reconciliation",
@@ -648,7 +648,7 @@ export const useCasePages: Record<string, UseCasePageCopy> = {
   sales: {
     meta: {
       title: "Sales — Keep revenue work connected",
-      description: "Accounts, pipeline, commitments, and deal memory in one governed workspace.",
+      description: "Accounts, pipeline, commitments, and deal history in one workspace, with a person in charge.",
       path: "/use-cases/sales",
     },
     hero: {
@@ -793,7 +793,7 @@ export const homeCopy = {
     body: "SpineWorkspace connects your existing tools so people and AI work from the same truth and the context for this task.",
     cards: [
       { title: "Workbench", description: "Role-aware views of goals, truth, context, and work", href: "/adaptive-workspace" },
-      { title: "Twin", description: "Prepares a proposal from governed truth and context, then waits for review", href: "/twin" },
+      { title: "Twin", description: "Prepares a suggestion from the record and the facts, then waits for a person to review it", href: "/twin" },
       { title: "SpineWorkspace", description: "Connects systems without claiming source authority", href: "/platform/spine-fabric" },
       { title: "Governance", description: "Humans approve. AI proposes. Nothing executes without authority.", href: "/governance" },
       { title: "Continuity", description: "Work, memory, and evidence persist across sessions and hosts", href: "/continuity" },

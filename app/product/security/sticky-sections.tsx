@@ -13,7 +13,7 @@ const items = [
   {
     tag: "Review",
     title: "Non-bypassable human approval",
-    description: "Every AI-proposed action sits in a governed approval queue. No shortcut to execution. No auto-approve option.",
+    description: "Every action the AI suggests waits for a person to approve it. There is no shortcut and no automatic approval.",
     icon: ShieldCheck,
     color: "#2dd4bf",
     features: [
@@ -82,7 +82,7 @@ export function ProductSecurityStickyScroll() {
     <StickyScroll
       tag="Security & Governance"
       heading={<>Five layers of <span className="text-primary">trust and control.</span></>}
-      subheading="Scroll to explore how the product keeps your data safe and your decisions governed."
+      subheading="Scroll to see how the product keeps your data safe and leaves decisions with people."
       items={items}
     />
   );

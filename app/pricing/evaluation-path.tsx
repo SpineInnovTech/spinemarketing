@@ -11,15 +11,15 @@ const steps = [
   },
   {
     title: "Connect authorized context",
-    body: "Wire the connectors your evaluation needs. Source systems stay authoritative. Permissions inherit from each system.",
+    body: "Connect the tools your evaluation needs. Those tools keep the record. Permissions come from each system.",
   },
   {
-    title: "Run governed work",
+    title: "Run work a person approves",
     body: "People and Twin work from the same evidence. Proposals stay proposals until someone with authority accepts them.",
   },
   {
     title: "Decide on commercial fit",
-    body: "Pricing follows workflow scope, connector footprint, and governance needs — not a generic seat count alone.",
+    body: "Pricing follows the workflow, the tools you connect, and how much approval the work needs. It is not a generic seat count alone.",
   },
 ];
 
@@ -27,19 +27,19 @@ const packages = [
   {
     name: "Evaluation",
     audience: "A focused operating team",
-    outcome: "Prove one governed workflow on real business context",
+    outcome: "Prove one approved workflow on the real facts of the work",
     note: "Fixed scope, defined timeline, limited integrations",
   },
   {
     name: "Team Workspace",
     audience: "One functional team",
-    outcome: "Run recurring workflows with governed context",
+    outcome: "Run repeating work with the same shared facts",
     note: "Workspace scope plus connected-context footprint",
   },
   {
     name: "Enterprise",
     audience: "Multiple teams or business units",
-    outcome: "Shared operating context, governance, broader integrations",
+    outcome: "Shared facts about the work, approval rules, and more connected tools",
     note: "Custom agreement and implementation plan",
   },
 ];
@@ -54,7 +54,7 @@ export function PricingEvaluationPath() {
             Priced to the workflow, not the buzzword
           </h2>
           <p className="mt-4 text-[16px] leading-[1.65] text-[#33465B]">
-            SpineWorkspace is priced to integration scope, governance needs, and the operating workflows you run. Start with a scoped evaluation — not a generic trial claim.
+            SpineWorkspace is priced to the tools you connect, how much approval the work needs, and the workflows you run. Start with a scoped evaluation — not a generic trial claim.
           </p>
         </div>
 

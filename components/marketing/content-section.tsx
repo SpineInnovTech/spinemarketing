@@ -22,10 +22,10 @@ const GLOSS: Record<string, string> = {
   "Personal memory": "Stays with the person. It is not shared organizational context.",
   "Session memory": "Stays with that sitting.",
   "Organizational memory": "Shared business context for the organization.",
-  Context: "People and AI work from the same governed picture of the work.",
+  Context: "People and AI work from the same picture of the work.",
   Accountability: "A person accepts consequential steps. Proposals stay proposals until then.",
   Continuity: "The business story survives sessions, hosts, and handoffs.",
-  "Adaptive capability": "The workspace uses the host and the role in front of the work.",
+  "Fits the job": "The workspace uses the tools and the role in front of the work.",
 };
 
 type Aside = { kicker: string; title: string; rows: { term: string; detail: string }[] };
@@ -37,7 +37,7 @@ const ASIDES: Record<string, Aside> = {
     title: "Truth stays in source systems",
     rows: [
       { term: "Sits above", detail: "Existing systems, including CRM, email, and project tools." },
-      { term: "Brings together", detail: "Authoritative truth and the context for the current task." },
+      { term: "Brings together", detail: "The record from your tools, and the facts this task needs." },
       { term: "Stays in place", detail: "SpineWorkspace does not replace the tools already in the stack." },
     ],
   },
@@ -45,7 +45,7 @@ const ASIDES: Record<string, Aside> = {
     kicker: "Before a response",
     title: "What the Twin uses",
     rows: [
-      { term: "Truth", detail: "Authoritative records the person is allowed to use." },
+      { term: "The record", detail: "Records from your tools that this person is allowed to use." },
       { term: "Context", detail: "Goals, active work, customer history, prior decisions, and evidence for this task." },
       { term: "Proposal", detail: "Stays a proposal until a person reviews it." },
     ],
@@ -93,18 +93,18 @@ const ASIDES: Record<string, Aside> = {
   },
   "Authority is a person, not a model.": {
     kicker: "Who decides",
-    title: "Availability is not authority",
+    title: "Seeing a tool is not permission",
     rows: [
-      { term: "Twin", detail: "Can propose." },
-      { term: "A person", detail: "With the right scope accepts or rejects the proposal. The source system stays the record." },
+      { term: "Spine Twin", detail: "Can prepare a proposal." },
+      { term: "A person", detail: "With the right job accepts or rejects it. The tool you already use keeps the record." },
     ],
   },
   "Pending review is the default.": {
     kicker: "Until accepted",
-    title: "A proposal stays pending",
+    title: "A proposal stays waiting",
     rows: [
-      { term: "Default", detail: "Pending until someone with authority accepts it." },
-      { term: "Evidence", detail: "Stays linked to the source system." },
+      { term: "Default", detail: "Waiting until a person who is allowed to decide accepts it." },
+      { term: "Evidence", detail: "Stays linked to the tool that keeps the record." },
     ],
   },
   "Every tool handoff splits truth from context.": {
@@ -117,19 +117,19 @@ const ASIDES: Record<string, Aside> = {
   },
   "Building around shared business reality.": {
     kicker: "Spine InnovTech",
-    title: "Same governed context",
+    title: "The same facts",
     rows: [
-      { term: "Built so", detail: "People and AI can work from the same governed business context." },
+      { term: "Built so", detail: "People and AI can work from the same facts about the work." },
       { term: "Using", detail: "The tools a team already runs." },
     ],
   },
   "Governance model.": {
     kicker: "Boundary",
-    title: "Humans govern",
+    title: "People decide",
     rows: [
-      { term: "People", detail: "Govern the business." },
-      { term: "AI", detail: "Assists within authority boundaries." },
-      { term: "Availability", detail: "Does not grant authority to use a capability." },
+      { term: "People", detail: "Run the business." },
+      { term: "AI", detail: "Helps inside limits a person sets." },
+      { term: "Seeing a tool", detail: "Does not give permission to use what it can do." },
     ],
   },
   "Coworker gathers truth and context. Twin prepares the proposal.": {

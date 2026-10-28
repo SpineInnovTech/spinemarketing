@@ -48,7 +48,7 @@ export function InfrastructureContent() {
           badge="Infrastructure"
           headline="Six services. Worldwide. Close to real time."
           subhead="See what each service does and how SpineWorkspace is built. Where it runs, how fast it is, and how it recovers depend on your setup."
-          primaryCta={{ label: "See the architecture", href: "/contact?intent=demo" }}
+          primaryCta={{ label: "See how it is built", href: "/contact?intent=demo" }}
         />
 
         <Section variant="muted">

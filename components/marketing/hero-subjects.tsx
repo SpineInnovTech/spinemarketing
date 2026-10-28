@@ -158,7 +158,7 @@ export function RecordsPanel() {
       <dl className="mt-4 space-y-3 text-[14px]">
         <div>
           <dt className="font-semibold text-[#032D60]">Truth</dt>
-          <dd className="text-[#33465B]">Account status, as held in the source system.</dd>
+          <dd className="text-[#33465B]">Account status, as held in the tool that keeps the record.</dd>
         </div>
         <div>
           <dt className="font-semibold text-[#032D60]">Context</dt>
@@ -170,7 +170,7 @@ export function RecordsPanel() {
         </div>
         <div>
           <dt className="font-semibold text-[#032D60]">Where it came from</dt>
-          <dd className="text-[#33465B]">The source system stays authoritative until a person accepts a change.</dd>
+          <dd className="text-[#33465B]">The tool that keeps the record stays in charge until a person accepts a change.</dd>
         </div>
       </dl>
     </div>
@@ -206,7 +206,7 @@ export function GovernancePanel() {
     <div className="rounded-2xl border border-[#D9E4EF] bg-white p-5">
       <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#526479]">Authority</p>
       <h2 className="mt-2 text-[18px] font-semibold text-[#032D60]">Pending review</h2>
-      <p className="mt-2 text-[14px] leading-[1.55] text-[#33465B]">A proposal stays a proposal until a person with authority accepts it.</p>
+      <p className="mt-2 text-[14px] leading-[1.55] text-[#33465B]">A proposal stays a proposal until a person who is allowed to decide accepts it.</p>
       <ul className="mt-4 space-y-2 text-[14px] text-[#33465B]">
         <li className="rounded-lg bg-[#F3F6F9] px-3 py-2"><span className="font-semibold text-[#032D60]">Personal memory</span> stays with the person</li>
         <li className="rounded-lg bg-[#F3F6F9] px-3 py-2"><span className="font-semibold text-[#032D60]">Session memory</span> stays with that sitting</li>
@@ -228,7 +228,7 @@ export function ReviewSurface() {
         </div>
         <div>
           <dt className="font-semibold text-[#032D60]">Boundary</dt>
-          <dd className="text-[#33465B]">Availability is not authority. Consequential work waits.</dd>
+          <dd className="text-[#33465B]">Seeing a tool is not permission to use it. Important work waits.</dd>
         </div>
         <div>
           <dt className="font-semibold text-[#032D60]">Status</dt>

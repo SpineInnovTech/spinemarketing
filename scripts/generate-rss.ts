@@ -18,7 +18,7 @@ async function main() {
   <channel>
     <title>Spine InnovTech Blog</title>
     <link>${absoluteUrl("/blog")}</link>
-    <description>Insights on connected workspaces, AI governance, and operational intelligence.</description>
+    <description>Insights on connected workspaces, people approving AI, and work that continues.</description>
     <language>en</language>
     <atom:link href="${absoluteUrl("/rss.xml")}" rel="self" type="application/rss+xml"/>
 ${posts

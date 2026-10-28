@@ -81,7 +81,7 @@ export function RoleSolutionLayout({
               <Shield className="h-5 w-5 text-[#0176D3]" />
             </div>
             <div>
-              <h3 className="text-[15px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">Governance</h3>
+              <h3 className="text-[15px] font-bold uppercase tracking-[0.08em] text-[#0176D3]">A person approves</h3>
               <p className="mt-2 text-[15px] leading-[1.7] text-[#444]">{governanceNote}</p>
             </div>
           </div>

@@ -163,7 +163,7 @@ export const PUBLIC_SOLUTIONS: PublicSolution[] = [
     name: "Human Resources",
     navLabel: "Human Resources",
     headline: "People operations with the records and the context for the decision.",
-    description: "Hiring, onboarding, and people programs connected to goals and governance boundaries.",
+    description: "Hiring, onboarding, and people programs, with clear limits on who can decide.",
     buyerSummary: "Coordinate people decisions with relevant context.",
     workspaceAssociations: [{ host: "humanresources.spineworkspace.com", label: "HR Workbench", primary: true }],
   },
@@ -193,7 +193,7 @@ export const PUBLIC_SOLUTIONS: PublicSolution[] = [
     name: "Memory & Knowledge",
     navLabel: "Memory & Knowledge",
     headline: "Organizational memory that compounds.",
-    description: "Knowledge, portfolio context, and durable business memory—governed and evidence-linked.",
+    description: "Knowledge, portfolio context, and business memory that stays tied to the evidence.",
     buyerSummary: "Keep organizational memory connected to its evidence.",
     workspaceAssociations: [
       { host: "orgmemory.spineworkspace.com", label: "Organizational Memory", primary: true },
@@ -233,7 +233,7 @@ export const PLATFORM_SURFACES: PlatformSurface[] = [
     host: "platform.spineworkspace.com",
     label: "Platform",
     marketingPath: "/platform",
-    description: "Platform hub and architecture overview.",
+    description: "Platform hub and how it is built.",
   },
   {
     id: "mcp",

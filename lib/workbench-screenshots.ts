@@ -356,7 +356,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
         title: "Revenue Pipeline Alignment",
         route: "/workspace/work/revops/pipeline",
         desktop: "/images/workbench/revops/pipeline.webp",
-        badge: "Pipeline Governance",
+        badge: "Pipeline checks",
         alt: "RevOps pipeline alignment screen showing demonstration cross-system deal hygiene and CRM stage progression.",
       },
     },
@@ -551,7 +551,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
         route: "/workspace/work/legal/compliance",
         desktop: "/images/workbench/legal/compliance.webp",
         badge: "Regulatory Controls",
-        alt: "Corporate compliance register tracking data privacy obligations and governance audits in demonstration mode.",
+        alt: "Corporate compliance register tracking data privacy obligations and review logs in demonstration mode.",
       },
     },
     valueNarrative: {
@@ -562,7 +562,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
       whatManualWorkItReduces:
         "Replaces hunting through cloud drives and email threads for signed contract PDFs and key renewal clauses.",
       whyItMatters:
-        "Protects enterprise governance, prevents accidental contract breaches, and ensures compliance evidence is immediately accessible.",
+        "Keeps contract evidence in one place so a person can check a renewal or a privacy duty before it is missed.",
     },
   },
 
@@ -713,11 +713,11 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
   "book-of-records": {
     domainId: "book-of-records",
     domainTitle: "Book of Records",
-    tagline: "Immutable Ledger & Governance Audit Trail",
+    tagline: "A record of decisions",
     screenshots: {
       primary: {
         id: "audit-trail",
-        title: "Governance Audit Trail",
+        title: "Decision log",
         route: "/workspace/work/book-of-records/audit-trail",
         desktop: "/images/workbench/book-of-records/audit-trail.webp",
         badge: "Verifiable Ledger",
@@ -728,8 +728,8 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
         title: "Records Dashboard",
         route: "/workspace/work/book-of-records/dashboard",
         desktop: "/images/workbench/book-of-records/dashboard.webp",
-        badge: "Governance Status",
-        alt: "Book of Records governance dashboard displaying system event verifications and compliance integrity in demonstration state.",
+        badge: "Record status",
+        alt: "Book of Records dashboard showing system event checks in demonstration state.",
       },
       secondary: {
         id: "decisions",
@@ -744,11 +744,11 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
       whatUsersSee:
       "Verifiable ledger of executive decisions, policy changes, approval gate logs, and cross-system data modifications from captured QA data.",
       whatTheyCanDo:
-        "Review governance audit logs, verify who authorized consequential actions, and inspect complete lineage from decision to outcome.",
+        "Review the log of decisions, see who approved an important action, and follow that decision back to the result.",
       whatManualWorkItReduces:
         "Eliminates stressful, time-consuming audit preparation and manual log gathering across disjointed cloud services.",
       whyItMatters:
-        "Guarantees comprehensive regulatory compliance, accountability, and defensible audit readiness for enterprise organizations.",
+        "Keeps a record people can check when they need to show what was decided and who approved it. This view is not a certification.",
     },
   },
 

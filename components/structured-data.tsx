@@ -30,7 +30,7 @@ export function SoftwareApplicationJsonLd() {
     operatingSystem: "Web",
     url: publicSiteUrl,
     description:
-      "SpineWorkspace is a governed AI workspace for operational work. Connect authorized business signals from existing systems. People and AI work from the same evidence. Built by Spine InnovTech.",
+      "SpineWorkspace is a workspace where people and AI share the work. Connect the signals you are allowed to use from the tools you already have. People and AI work from the same facts. Built by Spine InnovTech.",
   }
 
   return (

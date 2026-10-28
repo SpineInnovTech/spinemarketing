@@ -28,9 +28,9 @@ export function Footer() {
               {COMPANY_TAGLINE}
             </h2>
             <p className="mt-5 max-w-[400px] text-[14px] leading-[1.85] text-[#CBD9EB]">
-              Spine InnovTech develops technology for shared business
-              understanding, human and AI collaboration, explicit authority and
-              work continuity.
+              Spine InnovTech connects your tools so people and AI can see the
+              same facts. A person approves important actions. The story stays
+              with the work.
             </p>
             <Link
               href="/contact"
@@ -76,8 +76,8 @@ export function Footer() {
           </nav>
         </div>
         <p className="border-b border-white/15 py-6 text-[13px] leading-[1.8] text-[#CBD9EB]">
-          Source systems stay authoritative. Authority stays with people.
-          Context stays with the work.
+          Your tools keep the record. Your people keep the authority.
+          Context continues with the work.
         </p>
         <div className="flex flex-wrap items-center justify-between gap-4 py-7">
           <p className="text-[12px] text-[#CBD9EB]">

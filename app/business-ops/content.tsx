@@ -990,9 +990,9 @@ export function BusinessOpsContent() {
               </div>
               <div className="space-y-8 lg:pt-16">
                 {[
-                  { value: 12, suffix: "+", label: "Tools unified" },
-                  { value: 4, suffix: "", label: "Role-specific lenses" },
-                  { value: 100, suffix: "%", label: "Governed AI actions" },
+                  { value: 12, suffix: "+", label: "Tools in one view" },
+                  { value: 4, suffix: "", label: "Views for each job" },
+                  { value: 100, suffix: "%", label: "Important actions a person approves" },
                 ].map((stat, i) => (
                   <motion.div
                     key={stat.label}

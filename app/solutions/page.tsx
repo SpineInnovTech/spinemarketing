@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Spine InnovTech",
     title: "Solutions by Team & Industry | Spine InnovTech",
-    description: "Explore domain-specific features, connected context, and governed workflows by team and industry.",
+    description: "See how sales, customer success, finance, operations and other teams use the same facts for different jobs.",
     images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace Solutions" }],
   },
 }
@@ -47,11 +47,10 @@ export default function SolutionsPage() {
         />
         <BenefitsGrid
           tag="Why SpineWorkspace"
-          heading="Same Spine. Every context."
+          heading="The same product. A view for each job."
         />
         <TestimonialsSection
-          heading="Illustrative solution scenarios"
-          tag="Demonstration, not customer quotes"
+          heading="Examples for each team"
         />
         <FinalCTA />
       </main>

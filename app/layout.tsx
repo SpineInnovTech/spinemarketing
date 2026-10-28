@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     types: { "application/rss+xml": "/rss.xml" },
   },
   title: {
-    default: "Spine InnovTech — Governed Business Context for Humans and AI",
+    default: "Spine InnovTech — Connecting Business Context for Humans and AI",
     template: "%s",
   },
   description:
-    "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
+    "Spine InnovTech connects your tools, people, and AI so a team can see the facts and take the next step. Your tools keep the record. Your people keep the authority.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/icon.svg",

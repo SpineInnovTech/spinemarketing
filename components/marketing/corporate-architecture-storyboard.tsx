@@ -43,15 +43,15 @@ const architectureScenes: ArchitectureScene[] = [
   {
     id: "hermes",
     step: "02",
-    label: "Agentic Governance",
-    badge: "Step 2 · Agentic Governance",
+    label: "People approve the AI",
+    badge: "Step 2 · People approve the AI",
     layer: "Human approval",
-    title: "Agentic Governance.",
+    title: "People approve the AI.",
     detail:
       "AI prepares a proposal. A person reviews it and approves the exact change before anything is written back to a tool.",
     point: "People approve every important action.",
     ctaHref: "/platform",
-    ctaLabel: "How governance works",
+    ctaLabel: "How approval works",
   },
   {
     id: "continuity",
@@ -88,7 +88,7 @@ export function CorporateArchitectureStoryboard() {
 
   return (
     <div
-      aria-label="Spine InnovTech architecture storyboard"
+      aria-label="How Spine InnovTech is built"
       className="relative overflow-hidden rounded-2xl border border-[#BBDDF8] bg-white shadow-[0_20px_60px_rgba(0,111,232,0.10)]"
     >
       <BorderBeam size={260} duration={14} colorFrom="#006FE8" colorTo="#38BDF8" />
@@ -98,7 +98,7 @@ export function CorporateArchitectureStoryboard() {
         <div
           className="flex flex-wrap gap-1.5"
           role="tablist"
-          aria-label="Architecture storyboard steps"
+          aria-label="How it is built, step by step"
           onKeyDown={(e) => {
             if (e.key === "ArrowRight") {
               e.preventDefault();
