@@ -10,12 +10,12 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "Our Philosophy | Spine InnovTech",
   description:
-    "Read the engineering principles behind Spine InnovTech: source authority, shared context, human judgment and observable business outcomes.",
+    "How Spine InnovTech builds: the tools you already use keep the record, people and AI share the facts, and a person approves the action.",
   alternates: { canonical: "/about" },
   openGraph: {
     siteName: "Spine InnovTech",
     title: "Our Philosophy | Spine InnovTech",
-    description: "Read the engineering principles behind Spine InnovTech: source authority, shared context, human judgment and observable business outcomes.",
+    description: "How Spine InnovTech builds: the tools you already use keep the record, people and AI share the facts, and a person approves the action.",
     images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

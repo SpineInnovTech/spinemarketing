@@ -30,7 +30,7 @@ export default function ChangelogPage() {
         <PageHero
           badge="Product Changelog"
           headline="What's new in SpineWorkspace."
-          subhead="The dated log of product updates, new connectors, and architecture improvements. Shorter buyer notes are on Updates."
+          subhead="The dated log of product updates, new connections, and improvements to how it is built. Shorter notes for buyers are on Updates."
           primaryCta={{ label: "Company updates", href: "/updates" }}
           secondaryCta={{ label: "Explore SpineWorkspace", href: "/product" }}
         />

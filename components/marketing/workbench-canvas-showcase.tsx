@@ -20,7 +20,7 @@ const sidebarSections = [
   { id: "communications", label: "Communications", detail: "Activity Feed, Email, Calendar, Meetings, Chat, Calls and Shared Documents." },
   { id: "personal", label: "Personal", detail: "Notes, Knowledge Base, Brainstorming Sessions and Activity." },
   { id: "work", label: "Work", detail: "All Work followed by the native Account Success package: CS Today, account and health views, contacts, meetings, success plans, risks and business context. Planned entries keep their inactive state." },
-  { id: "platform", label: "Platform", detail: "The native Ecosystem, Spine and Runtime subsections, including integrations, knowledge, memory continuity, automation, governance and observability." },
+  { id: "platform", label: "Platform", detail: "The product sidebar's Platform group: connections, Spine, and how work runs. It includes knowledge, memory, automation, approval, and what you can watch." },
   { id: "administration", label: "Administration", detail: "The native Organization and Controls subsections for the QA administrator profile. Access in the application depends on the signed-in user’s permissions." },
 ] as const;
 

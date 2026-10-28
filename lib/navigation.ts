@@ -100,7 +100,7 @@ export const headerNavigation: HeaderNavItem[] = [
         label: "Technology overview",
         href: "/platform",
         icon: Layers,
-        desc: "One architecture for connected business work.",
+        desc: "How connected business work is built.",
         featured: true,
       },
       {
@@ -125,7 +125,7 @@ export const headerNavigation: HeaderNavItem[] = [
         label: "SpineWorkspace overview",
         href: "/spine-workspace",
         icon: LayoutGrid,
-        desc: "The governed workspace where humans and AI share one view.",
+        desc: "The workspace where people and AI share one view of the work.",
       },
     ],
   },
@@ -137,7 +137,7 @@ export const headerNavigation: HeaderNavItem[] = [
         label: "Engineering principles",
         href: "/about",
         icon: Compass,
-        desc: "Intelligence needs context. Action needs authority.",
+        desc: "AI needs the facts. A person approves the action.",
         featured: true,
       },
       {
@@ -226,4 +226,4 @@ export const footerUtilityLinks: { name: string; href: string }[] = [
 ];
 
 export const COMPANY_TAGLINE = "Connecting business context for humans and AI, with people in control.";
-export const PRODUCT_ONELINER = "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools remain the systems of record.";
+export const PRODUCT_ONELINER = "SpineWorkspace is the workspace where people and AI share one view of the business, while your existing tools keep the record.";

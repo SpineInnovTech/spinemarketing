@@ -6,6 +6,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { CorporateOrbitalHero } from "./corporate-orbital-hero";
 import { CorporateArchitectureStoryboard } from "./corporate-architecture-storyboard";
 import { WorkspaceBenefits } from "./workspace-benefits";
+import { TestimonialsSection } from "@/components/testimonials-section";
 import { INSIGHT_ARTICLES } from "@/lib/insights";
 
 // The Acme renewal story, grouped under the existing Connect -> Prepare -> Review
@@ -24,7 +25,7 @@ const workflowSteps = [
   {
     phase: "Prepare",
     title: "Prepare the next step",
-    body: "The AI Twin prepares a renewal-risk summary and a proposed next action.",
+    body: "Spine Twin, the AI that prepares the next step, writes a renewal-risk summary and a suggested action. It waits for a person.",
   },
   {
     phase: "Review",
@@ -101,6 +102,9 @@ export function InnovLabsHome() {
             <BlurFade delay={0.1} inView>
               <p className={body + " mt-4 max-w-[720px] mx-auto"}>
                 Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.
+              </p>
+              <p className={body + " mt-3 max-w-[720px] mx-auto"}>
+                Business context means the facts about the work, kept together, so people and AI are looking at the same picture.
               </p>
             </BlurFade>
             <BlurFade delay={0.14} inView>
@@ -194,7 +198,7 @@ export function InnovLabsHome() {
         <div className={container}>
           <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            How it stays governed
+            How people stay in control
           </p>
           <h2 id="home-principles-title" className={heading + " mt-5 max-w-[820px]"}>Three principles the product runs on.</h2>
           <div className="mt-9 grid gap-5 md:grid-cols-3">
@@ -222,7 +226,7 @@ export function InnovLabsHome() {
           </p>
           <h2 id="home-audience-title" className={heading + " mt-5 max-w-[820px]"}>Built first for account and customer success teams.</h2>
           <p className={body + " mt-4 max-w-[760px]"}>
-            Renewals bring the account record, support history and contract terms into one reviewed next step, so the team can see the risk and act on it with authority.
+            Renewals bring the account record, support history and contract terms into one next step. The team can see the risk. A person decides what to do.
           </p>
           <p className="mt-5 text-sm leading-7 text-[#4E607A]">
             Other teams — sales, finance, operations and more —{" "}
@@ -230,6 +234,8 @@ export function InnovLabsHome() {
           </p>
         </div>
       </section>
+
+      <TestimonialsSection heading="What the work looks like" />
 
       <WorkspaceBenefits />
 
@@ -243,7 +249,7 @@ export function InnovLabsHome() {
             </p>
             <h2 className={heading + " mt-3"}>From your tools to work that keeps going.</h2>
             <p className={body + " mt-4"}>
-              Three parts: your information brought together, Agentic Governance (AI prepares the work and a person approves it), and work that carries on from one AI tool to the next. More detail is on the platform pages.
+              Three parts: your information brought together, people approve the AI, and work that carries on from one AI tool to the next. More detail is on the platform pages.
             </p>
           </div>
           <CorporateArchitectureStoryboard />
@@ -260,7 +266,7 @@ export function InnovLabsHome() {
             </p>
             <h2 id="home-company-title" className={heading + " mt-5"}>The company behind SpineWorkspace.</h2>
             <p className={body + " mt-4"}>
-              Spine InnovTech builds the governed foundation for shared business context. SpineWorkspace is our flagship product.
+              Spine InnovTech builds SpineWorkspace. It connects your tools so people and AI can see the same facts about the work. A person stays in charge.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/company" className={primaryButton}>

@@ -30,12 +30,12 @@ const stages: readonly {
   },
   {
     title: "Connect permitted context",
-    action: "Find the capability the work needs.",
-    detail: "The journey resolves a host connection and a Google Workspace capability. Discovery and permission checks determine what the participant may use.",
-    continuity: "The permitted source and capability binding.",
+    action: "Find what the work is allowed to use.",
+    detail: "The journey finds a connected host and what Google Workspace is allowed to do. Discovery and permission checks decide what the person may use.",
+    continuity: "The source they are allowed to use, and what it can do.",
     evidence: "E2E-06–07",
     captureSrc: "/images/workbench/native-shell/navigation-platform-20261015.webp",
-    captureCaption: "Stage 02 · Platform Ecosystem, Spine & Runtime capability bindings",
+    captureCaption: "Stage 02 · Connected tools and what this person may use",
     desktopFrame: [0, 410, 1360, 650],
     mobileFrame: [0, 435, 360, 645],
   },
@@ -201,7 +201,7 @@ export function WorkbenchCustomerJourney() {
                 href="/host-connected-environment"
                 className="inline-flex items-center gap-1.5 font-semibold text-[#006FE8] hover:underline"
               >
-                Explore governed continuity <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+                See how the story stays with the work <ArrowRight className="h-3.5 w-3.5" aria-hidden />
               </Link>
             </div>
           </div>

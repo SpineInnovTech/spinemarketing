@@ -5,7 +5,7 @@ import { PageHero } from "@/components/marketing/page-hero"
 const collaborationAreas = [
   {
     title: "Technology and AI tools",
-    body: "Explore safe, governed connections between business context and the AI tools, developer apps, business software and AI models teams already use.",
+    body: "Explore safe connections between the facts about the work and the AI tools, developer apps, business software and AI models teams already use.",
   },
   {
     title: "Integration and implementation expertise",
@@ -28,7 +28,7 @@ export function PartnersContent() {
         tone="ice"
         badge="Build with Spine InnovTech"
         headline={"Connect your expertise to a shared\nfoundation for work."}
-        subhead="We welcome conversations with technology companies, integration specialists, service providers and researchers exploring how business context can remain useful across systems and AI environments. Bring a concrete problem, a relevant capability or a perspective that could improve how people work."
+        subhead="We welcome conversations with technology companies, integration specialists, service providers and researchers. Bring a concrete problem, something your product can do, or a point of view that could help people work."
         primaryCta={{ label: "Discuss a collaboration", href: "/contact?topic=partnership" }}
       />
 

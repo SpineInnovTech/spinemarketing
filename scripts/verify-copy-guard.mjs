@@ -149,7 +149,7 @@ const HOME_REQUIRED = [
   "Connected context. Human control. AI-ready.",
   "Your tools. Your context. Your decisions.",
   // Named pins
-  "Agentic Governance",
+  "People approve the AI",
   "Controlled execution",
   "Approved and traceable",
   "Human-approved",

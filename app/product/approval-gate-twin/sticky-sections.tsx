@@ -101,7 +101,7 @@ export function ApprovalStickyScroll() {
     <StickyScroll
       tag="Approval Deep Dive"
       heading={<>Five gates between <span className="text-primary">AI and action.</span></>}
-      subheading="Scroll to explore how every AI suggestion passes through governed human review."
+      subheading="Scroll to see how every AI suggestion waits for a person to review it."
       items={scrollItems}
     />
   );
@@ -110,9 +110,9 @@ export function ApprovalStickyScroll() {
 export function ApprovalGather() {
   return (
     <StickyGather
-      tag="Governance Architecture"
+      tag="How approval is built"
       heading={<>Ten safeguards. <span className="text-primary">One approval surface.</span></>}
-      subheading="Every governance capability converges into the Review — your control layer."
+      subheading="The checks come together in Review, where a person stays in control."
       centerLabel="Review"
       centerDescription="Human control"
       items={gatherItems}

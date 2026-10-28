@@ -16,7 +16,7 @@ const workflow = [
   },
   {
     title: "Prepare with your Twin",
-    body: "Ask your AI Twin to summarize the situation, investigate the evidence and propose a useful next step.",
+    body: "Ask Spine Twin, the AI that prepares the next step, to summarize the situation, look at the facts, and suggest a useful next step. It waits for a person.",
   },
   {
     title: "Review with authority",

@@ -6,7 +6,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 const benefits = [
   {
     icon: Database,
-    title: "Governed business context",
+    title: "The facts about the work",
     body: "Connect the records you are allowed to use and bring up the evidence for the task. Keep each tool's permissions and where the information came from. Your existing tools stay the place of record.",
     href: "/business-context",
     link: "Explore business context",

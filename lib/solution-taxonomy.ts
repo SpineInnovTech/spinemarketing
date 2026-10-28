@@ -193,7 +193,7 @@ export const PUBLIC_SOLUTIONS: PublicSolution[] = [
     name: "Memory & Knowledge",
     navLabel: "Memory & Knowledge",
     headline: "Organizational memory that compounds.",
-    description: "Knowledge, portfolio context, and durable business memory—governed and evidence-linked.",
+    description: "Knowledge, portfolio context, and business memory that stays tied to the evidence.",
     buyerSummary: "Keep organizational memory connected to its evidence.",
     workspaceAssociations: [
       { host: "orgmemory.spineworkspace.com", label: "Organizational Memory", primary: true },
@@ -233,7 +233,7 @@ export const PLATFORM_SURFACES: PlatformSurface[] = [
     host: "platform.spineworkspace.com",
     label: "Platform",
     marketingPath: "/platform",
-    description: "Platform hub and architecture overview.",
+    description: "Platform hub and how it is built.",
   },
   {
     id: "mcp",

@@ -1396,7 +1396,7 @@ export const WORKBENCH_SOURCE_DOMAINS: WorkbenchSourceDomain[] = [
   {
     "id": "business-intelligence",
     "title": "Business Intelligence",
-    "benefit": "Work across reports, data sources, quality and analytical outputs with provenance.",
+    "benefit": "Work across reports, data sources, quality and analytical outputs, and see where the facts came from.",
     "audience": "registered",
     "definitionSource": "domain-manifest",
     "views": [
@@ -1513,7 +1513,7 @@ export const WORKBENCH_SOURCE_DOMAINS: WorkbenchSourceDomain[] = [
   {
     "id": "knowledge-management",
     "title": "Knowledge Management",
-    "benefit": "Bring documents, search, taxonomy and knowledge governance together.",
+    "benefit": "Bring documents, search, and how knowledge is organized together.",
     "audience": "registered",
     "definitionSource": "domain-manifest",
     "views": [
@@ -1564,7 +1564,7 @@ export const WORKBENCH_SOURCE_DOMAINS: WorkbenchSourceDomain[] = [
   {
     "id": "book-of-records",
     "title": "Book of Records",
-    "benefit": "Trace entities, decisions, audit trails, lineage and reconciliation.",
+    "benefit": "Trace the records, decisions, the review trail, and how a result was checked.",
     "audience": "registered",
     "definitionSource": "domain-manifest",
     "views": [
@@ -1700,6 +1700,6 @@ export const SHARED_WORKBENCH_SHELL = [
   { title: "Communications", items: ["Activity Feed", "Email", "Calendar", "Meetings", "Chat", "Calls", "Shared Documents"] },
   { title: "Personal", items: ["Notes", "Knowledge Base", "Brainstorming Sessions", "Activity"] },
   { title: "Work", items: ["Domain-specific and role-specific views"] },
-  { title: "Platform", items: ["Ecosystem", "Spine", "Runtime"] },
+  { title: "Platform", items: ["Ecosystem", "Spine", "How work runs"] },
   { title: "Administration", items: ["Organization", "Controls"] },
 ] as const;

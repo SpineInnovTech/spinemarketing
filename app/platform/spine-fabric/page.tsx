@@ -10,13 +10,13 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "Spine Fabric — The contextual foundation | Spine InnovTech",
   description:
-    "Spine Fabric relates authorized records, evidence, goals, decisions and outcomes into governed business context, while existing tools keep the record.",
+    "Spine Fabric is the shared view of records from the tools you already use. It connects the records, evidence, goals, decisions and results you are allowed to see. Those tools keep the record.",
   alternates: { canonical: "/platform/spine-fabric" },
   openGraph: {
     siteName: "Spine InnovTech",
     title: "Spine Fabric — The contextual foundation | Spine InnovTech",
     description:
-      "Spine Fabric relates authorized records, evidence, goals, decisions and outcomes into governed business context, while existing tools keep the record.",
+      "Spine Fabric is the shared view of records from the tools you already use. It connects the records, evidence, goals, decisions and results you are allowed to see. Those tools keep the record.",
     images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

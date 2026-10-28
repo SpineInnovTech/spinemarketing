@@ -12,7 +12,7 @@ export interface GatherItem {
 }
 
 export function StickyGather({
-  tag = "Architecture",
+  tag = "How it is built",
   heading,
   subheading,
   centerLabel,

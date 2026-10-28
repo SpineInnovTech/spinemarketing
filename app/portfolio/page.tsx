@@ -57,9 +57,9 @@ export default function PortfolioPage() {
         <PageHero
           badge="Spine InnovTech / Portfolio"
           headline="One direction. Connected capabilities."
-          subhead="Our portfolio is built around SpineWorkspace. The elements below describe an integrated product architecture, not a list of separately purchasable products or verified customer implementations."
+          subhead="Our portfolio is built around SpineWorkspace. The pieces below are parts of one product, not a list of separately purchasable products, and not verified customer results."
           primaryCta={{ label: "Explore SpineWorkspace", href: "/spine-workspace" }}
-          secondaryCta={{ label: "Platform architecture", href: "/platform" }}
+          secondaryCta={{ label: "How it is built", href: "/platform" }}
         />
         <section className="mx-auto max-w-[1220px] px-5 py-24 sm:px-8 lg:py-32">
           <div className="grid gap-5 md:grid-cols-2">

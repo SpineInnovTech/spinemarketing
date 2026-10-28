@@ -99,7 +99,7 @@ export function SolutionsContent() {
               One workspace
             </p>
             <h2 className="mt-5 text-[length:min(clamp(2.3rem,4vw,4rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.05em] text-[#082B5E]">Different roles shouldn't need different truths.</h2>
-            <p className="mt-6 text-[16px] leading-[1.8] text-[#4E607A]">Capabilities and views adapt to the work, while business context, policy and authority remain governed.</p>
+            <p className="mt-6 text-[16px] leading-[1.8] text-[#4E607A]">What you can do, and what you see, follow the work. The facts, the rules, and who may act stay clear.</p>
           </div>
           <Link href="/company" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition hover:bg-[#0055B8]">Why Spine InnovTech <ArrowRight className="h-4 w-4" aria-hidden /></Link>
         </div>

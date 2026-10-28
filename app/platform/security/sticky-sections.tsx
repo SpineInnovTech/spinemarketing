@@ -28,9 +28,9 @@ const items = [
 export function SecurityGather() {
   return (
     <StickyGather
-      tag="Security Architecture"
+      tag="How security is built"
       heading={<>Nine layers of <span className="text-primary">trust.</span></>}
-      subheading="Every security capability converges into one governance model — auditable, reviewable, and transparent."
+      subheading="The security controls come together in one set of rules you can review."
       centerLabel="TruthBoundary"
       centerDescription="Security core"
       items={items}

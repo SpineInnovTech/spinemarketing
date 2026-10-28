@@ -28,7 +28,7 @@ export function CareersContent() {
         tone="ice"
         badge="People who build"
         headline="Help business work retain its meaning."
-        subhead="We are interested in people who care about difficult systems problems and the everyday responsibilities those systems support. Our work brings together integration architecture, business context, AI collaboration, governance and product engineering."
+        subhead="We are interested in people who care about hard systems problems and the everyday work those systems support. Our work brings together connecting tools, the facts about the work, people and AI working together, clear approval, and product engineering."
         primaryCta={{ label: "Introduce yourself", href: "/contact?topic=careers" }}
         secondaryCta={{ label: "Read how we think", href: "/about" }}
       />

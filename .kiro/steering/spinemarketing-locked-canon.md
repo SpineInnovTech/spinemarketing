@@ -15,10 +15,10 @@ enforces the homepage pins and the banned-copy list.
 - **CTAs:** "See the workflow" (#workflow, primary); "Explore SpineWorkspace" (https://spineworkspace.com, secondary)
 - **SpineWorkspace block:** label "SpineWorkspace"; H2 "Connected context. Human control. AI-ready."; line "Your tools. Your context. Your decisions."
 - **Diagram:** "Controlled execution", caption "Approved and traceable", badge "Human-approved"
-- **02 tab:** Agentic Governance
+- **02 tab:** People approve the AI
 - **"Governed execution" became "Controlled execution".** Keep the `#governed-execution` anchor id and all URLs.
 - **Footer tagline:** Connecting business context for humans and AI, with people in control.
-- **Footer closing line (gate-pinned):** Source systems stay authoritative. Authority stays with people. Context stays with the work.
+- **Footer closing line (gate-pinned):** Your tools keep the record. Your people keep the authority. Context continues with the work.
 - **Principle titles:** Your tools keep the record. / Your people keep the authority. / Context continues with the work.
 - **Tab title:** Spine InnovTech — Connecting Business Context for Humans and AI
 - **Home share title (og/twitter):** Connecting business context for humans and AI, with people in control.
