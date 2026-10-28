@@ -93,18 +93,18 @@ const ASIDES: Record<string, Aside> = {
   },
   "Authority is a person, not a model.": {
     kicker: "Who decides",
-    title: "Availability is not authority",
+    title: "Seeing a tool is not permission",
     rows: [
-      { term: "Twin", detail: "Can propose." },
-      { term: "A person", detail: "With the right scope accepts or rejects the proposal. The source system stays the record." },
+      { term: "Spine Twin", detail: "Can prepare a proposal." },
+      { term: "A person", detail: "With the right job accepts or rejects it. The tool you already use keeps the record." },
     ],
   },
   "Pending review is the default.": {
     kicker: "Until accepted",
-    title: "A proposal stays pending",
+    title: "A proposal stays waiting",
     rows: [
-      { term: "Default", detail: "Pending until someone with authority accepts it." },
-      { term: "Evidence", detail: "Stays linked to the source system." },
+      { term: "Default", detail: "Waiting until a person who is allowed to decide accepts it." },
+      { term: "Evidence", detail: "Stays linked to the tool that keeps the record." },
     ],
   },
   "Every tool handoff splits truth from context.": {
