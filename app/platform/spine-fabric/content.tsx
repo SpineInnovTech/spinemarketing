@@ -31,7 +31,7 @@ export function SpineFabricContent() {
         secondaryCta={{ label: "Explore SpineWorkspace", href: "https://spineworkspace.com" }}
         art={
           <figure>
-            <Image src="/images/corporate-architecture.png" width={1774} height={887} priority alt="Concept picture of Fabric, Workbench, Twin and approved action in one connected way of working" className="h-auto w-full rounded-xl" />
+            <Image src="/images/corporate-architecture.png" width={1774} height={887} priority alt="Picture of Spine Fabric, the Workbench, Spine Twin and an approved action working together" className="h-auto w-full rounded-xl" />
             <figcaption className="mt-4 text-xs leading-relaxed text-[#4E607A]">Concept picture. Fabric supplies shared context within the wider Spine foundation.</figcaption>
           </figure>
         }

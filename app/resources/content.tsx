@@ -30,7 +30,7 @@ const reading: ResourceLink[] = [
   },
   {
     title: "Connection is not permission.",
-    desc: "The boundary between discovering a capability and authorizing its use.",
+    desc: "The line between finding what a tool can do and giving someone permission to use it.",
     href: "/insights/connection-and-authority",
     cta: "Read the perspective",
   },

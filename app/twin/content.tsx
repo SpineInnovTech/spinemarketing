@@ -34,7 +34,7 @@ const boundaries = [
     title: "A person or approved rule allows important actions.",
     body: [
       "A proposal stays a proposal until it is approved. For important proposals, the responsible person can see the planned action, the records it affects, the evidence behind it and anything still unclear.",
-      "The action uses governed tools; it counts as done only once the result is seen and checked.",
+      "The action uses only the tools it is allowed to use. It counts as done only once the result is seen and checked.",
     ],
   },
   {
@@ -134,7 +134,7 @@ export function TwinContent() {
           align="left"
           label="Keep exploring"
           headline="See the Twin within the whole foundation."
-          body="Spine Twin works within the Spine foundation and its controlled execution. Step back to the architecture or see how the pieces fit together."
+          body="Spine Twin works within the Spine foundation and its controlled execution. Step back to how it is built, or see how the pieces fit together."
         />
         <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           <Link href="/spine" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">

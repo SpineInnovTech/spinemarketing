@@ -170,7 +170,7 @@ export function RecordsPanel() {
         </div>
         <div>
           <dt className="font-semibold text-[#032D60]">Where it came from</dt>
-          <dd className="text-[#33465B]">The source system stays authoritative until a person accepts a change.</dd>
+          <dd className="text-[#33465B]">The tool that keeps the record stays in charge until a person accepts a change.</dd>
         </div>
       </dl>
     </div>

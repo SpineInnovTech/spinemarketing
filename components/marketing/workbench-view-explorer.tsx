@@ -447,7 +447,7 @@ export function WorkbenchViewExplorer({
                   Workbench Capture Not Available
                 </h3>
                 <p className="mx-auto mt-2 max-w-md text-sm text-[#4E607A]">
-                  The view <code>{domain.title}</code> is an internal or infrastructure-specific capability without an approved public marketing screenshot.
+                  The view <code>{domain.title}</code> is an internal screen. It does not have an approved public screenshot yet.
                 </p>
                 <button
                   type="button"
@@ -463,7 +463,7 @@ export function WorkbenchViewExplorer({
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[.18em] text-[#006FE8]">
-                      Value Architecture · {domain.title} Workbench
+                      How {domain.title} work is organized
                     </p>
                     <h3 className="mt-1 text-xl sm:text-2xl font-semibold text-[#082B5E]">
                       {narrative.tagline}
@@ -661,7 +661,7 @@ export function WorkbenchViewExplorer({
                         {compact ? `${domain.title} View Catalog` : `${domain.title} Solution`}
                       </h4>
                       <p className="mt-2 text-xs leading-6 text-[#355579]">
-                        Explore the complete declared view registry, connector bindings, and governed automation workflows for {domain.title}.
+                        See the views, the tool connections, and the approved workflows for {domain.title}.
                       </p>
                     </div>
                     {compact ? (
@@ -861,7 +861,7 @@ export function WorkbenchViewExplorer({
             href="/product/the-adaptive-workspace"
             className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#0055B8] hover:underline"
           >
-            Explore the adaptive architecture <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            See how the workspace fits the job <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
         </div>
       </div>

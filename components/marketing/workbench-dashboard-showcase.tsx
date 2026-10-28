@@ -30,7 +30,7 @@ const dashboardViews = [
     detail:
       "Review Customer Service & Support records, KPIs and items needing attention. Search, filter and inspect without leaving the Workbench.",
     whatChanges: "Shows 2 tracked Spine context items (tkt-501, tkt-502), readiness state (92%), and direct Review Plan / View Evidence controls.",
-    governanceNote: "Source records remain authoritative; dashboard actions respect workspace policy.",
+    governanceNote: "The tools you already use keep the record. Dashboard actions follow the workspace rules.",
   },
   {
     id: "editing",
@@ -52,7 +52,7 @@ const dashboardViews = [
     focusBadge: "Focused Zoom · Draft Creation Modal",
     title: "Capture the next item.",
     detail:
-      "Create a local draft with a title, owner and date. Update working status; approvals and execution follow the governed action path.",
+      "Create a local draft with a title, owner and date. Update the working status. Approval and the change follow the path a person allows.",
     whatChanges: "Captures Title, Owner (Support Lead), Target Date, and Category before saving to the local outbox.",
     governanceNote: "Creating a local draft never mutates external systems without authorization.",
   },

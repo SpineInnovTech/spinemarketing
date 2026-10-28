@@ -22,7 +22,7 @@ export function IntegrationsContent() {
       <PageHero
         badge="Integrations"
         headline="Your tools. Shared context."
-        subhead="Connect the systems your team already uses. Source systems stay authoritative. SpineWorkspace assembles governed business context for people and their Twin."
+        subhead="Connect the tools your team already uses. Those tools keep the record. SpineWorkspace brings the facts together for people and Spine Twin, the AI that prepares the next step and waits."
         primaryCta={{ label: "Book a demo", href: "/contact?intent=demo" }}
         secondaryCta={{ label: "Read the docs", href: DOCS_URL }}
         art={<AppCluster />}
@@ -52,7 +52,7 @@ export function IntegrationsContent() {
                   ["CRM", "Customer relationships, pipeline, commitments, owner activity", "CRM remains the customer record"],
                   ["Support platform", "Open tickets, escalation history, risk signals", "Ticketing system owns cases"],
                   ["Email / calendar", "Recent commitments and meeting context", "Messages stay in the source mailbox"],
-                  ["Document storage", "Contracts, project briefs, plans and decisions", "Files remain governed where they live"],
+                  ["Document storage", "Contracts, project briefs, plans and decisions", "Files stay in the tool that keeps them"],
                   ["Finance / billing", "Invoices, payments, obligations and exceptions", "Finance systems own financial records"],
                   ["Project / engineering", "Tasks, dependencies, issues and delivery history", "Project tools own their work records"],
                   ["SpineWorkspace", "Context assembly, evidence links, proposals, review", "Does not become a new home for the record"],
@@ -161,7 +161,7 @@ export function IntegrationsContent() {
             <div className="mx-auto max-w-2xl rounded-md border border-[#E5E5E5] bg-white p-8 shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
               <h3 className="text-[length:min(20px,var(--marketing-card-size))] font-semibold tracking-[-0.02em] text-[#032D60]">Connect the tools your team already uses</h3>
               <p className="mt-2 text-[15px] leading-[1.5] text-[#444]">
-                Authorized connections through each app&apos;s setup flow. Source systems stay authoritative. Custom connectors are available on request.
+                Connections go through each app&apos;s own setup. Those tools keep the record. Custom connections are available on request.
               </p>
               <div className="mt-6">
                 <EnterpriseButton href="/contact?intent=demo">See all integrations in a demo</EnterpriseButton>

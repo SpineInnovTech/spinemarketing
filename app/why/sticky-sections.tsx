@@ -71,7 +71,7 @@ export function WhyAnswerGather() {
   return (
     <StickyGather
       tag="The SpineWorkspace Answer"
-      heading="Six capabilities. One governed workspace."
+      heading="Six things it does. One workspace."
       centerLabel="SpineWorkspace"
       items={answerNodes}
     />

@@ -59,8 +59,8 @@ const securityFeatures = [
 
 const principles = [
   {
-    title: "Read-first architecture",
-    desc: "Existing systems remain authoritative where the integration design permits.",
+    title: "Read first",
+    desc: "The tools you already use keep the record, wherever the connection allows.",
   },
   {
     title: "Minimal data footprint",
@@ -72,7 +72,7 @@ const principles = [
   },
   {
     title: "You stay in control, always",
-    desc: "Clear authority and accountability are part of the architecture.",
+    desc: "Who may decide, and who is accountable, is part of how it is built.",
   },
 ];
 
@@ -90,7 +90,7 @@ export function SecurityContent() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="section-heading">
-              Security architecture{" "}
+              How security is built{" "}
               <span className="text-primary">and governance principles</span>
             </h2>
           </motion.div>

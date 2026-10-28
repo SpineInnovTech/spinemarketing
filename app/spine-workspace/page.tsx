@@ -9,13 +9,13 @@ import { SpineWorkspaceOverviewContent } from "./content"
 export const metadata: Metadata = {
   title: "SpineWorkspace — A Product by Spine InnovTech",
   description:
-    "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools keep the record.",
+    "SpineWorkspace is the workspace where people and AI share one view of the business, while your existing tools keep the record.",
   alternates: { canonical: "/spine-workspace" },
   openGraph: {
     siteName: "Spine InnovTech",
     title: "SpineWorkspace — A Product by Spine InnovTech",
     description:
-      "SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools keep the record.",
+      "SpineWorkspace is the workspace where people and AI share one view of the business, while your existing tools keep the record.",
     images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

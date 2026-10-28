@@ -132,7 +132,7 @@ export function ApprovalGateTwinContent() {
         <div className="mx-auto max-w-[1100px]">
           <motion.div {...fade(0)} className="mx-auto max-w-2xl text-center mb-12">
             <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-primary mb-3">Governance</p>
-            <h2 className="section-heading">Governed <span className="text-primary">by design</span></h2>
+            <h2 className="section-heading">A person approves <span className="text-primary">by design</span></h2>
           </motion.div>
           <div className="grid gap-5 sm:grid-cols-2">
             {governanceFeatures.map(({ icon: Icon, title, desc }, i) => (

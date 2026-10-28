@@ -30,7 +30,7 @@ const valueItems = [
     description: "The Twin monitors cross-system signals and proposes actions — with evidence. You approve everything.",
     icon: Brain,
     color: "#8b5cf6",
-    features: ["Twin signal detection", "Evidence-backed proposals", "Governed approval queue"],
+    features: ["Spine Twin spots what needs attention", "Suggestions backed by the facts", "A queue a person approves"],
   },
   {
     tag: "Scale governance",

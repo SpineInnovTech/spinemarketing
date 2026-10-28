@@ -61,8 +61,8 @@ export function PlatformHowItWorksContent() {
         badge="How it works"
         tone="ice"
         headline={"The tools keep the record.\nThe workspace shows the work."}
-        subhead="People and Twin work from permitted business context. Twin helps investigate and prepare; consequential actions need the appropriate authority. Source systems retain their authoritative roles."
-        principle="SpineWorkspace does not replace truth. Source systems stay authoritative."
+        subhead="People and Spine Twin work from the facts they are allowed to see. Spine Twin helps look into the situation and prepare the next step. Important actions need the right person's approval. The tools you already use keep the record."
+        principle="SpineWorkspace does not replace the record. The tools you already use keep it."
         primaryCta={{ label: "See a workflow", href: "/product#how-it-works" }}
         secondaryCta={{ label: "Book a tailored demo", href: "/contact?intent=demo" }}
       />

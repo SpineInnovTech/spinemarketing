@@ -11,10 +11,10 @@ const steps = [
   },
   {
     title: "Connect authorized context",
-    body: "Wire the connectors your evaluation needs. Source systems stay authoritative. Permissions inherit from each system.",
+    body: "Connect the tools your evaluation needs. Those tools keep the record. Permissions come from each system.",
   },
   {
-    title: "Run governed work",
+    title: "Run work a person approves",
     body: "People and Twin work from the same evidence. Proposals stay proposals until someone with authority accepts them.",
   },
   {
@@ -27,13 +27,13 @@ const packages = [
   {
     name: "Evaluation",
     audience: "A focused operating team",
-    outcome: "Prove one governed workflow on real business context",
+    outcome: "Prove one approved workflow on the real facts of the work",
     note: "Fixed scope, defined timeline, limited integrations",
   },
   {
     name: "Team Workspace",
     audience: "One functional team",
-    outcome: "Run recurring workflows with governed context",
+    outcome: "Run repeating work with the same shared facts",
     note: "Workspace scope plus connected-context footprint",
   },
   {

@@ -10,12 +10,12 @@ import { BreadcrumbJsonLd } from "@/components/structured-data"
 export const metadata: Metadata = {
   title: "Connected Ecosystems & Integrations | Spine InnovTech",
   description:
-    "Connect the systems your business already uses: CRM, support, finance, project tools, email and documents. Source systems stay authoritative.",
+    "Connect the systems your business already uses: CRM, support, finance, project tools, email and documents. Those tools keep the record.",
   alternates: { canonical: "/integrations" },
   openGraph: {
     siteName: "Spine InnovTech",
     title: "Connected Ecosystems & Integrations | Spine InnovTech",
-    description: "Connect business systems and assemble shared context for people and their Twin. Source systems stay authoritative.",
+    description: "Connect the tools you already use and bring the facts together for people and Spine Twin. Those tools keep the record.",
     images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace Integrations" }],
   },
 }
@@ -31,8 +31,7 @@ export default function IntegrationsPage() {
       <main id="main">
         <IntegrationsContent />
         <TestimonialsSection
-          heading="Illustrative connector scenarios"
-          tag="Demonstration, not customer quotes"
+          heading="Examples of connected tools"
         />
         <FinalCTA />
       </main>

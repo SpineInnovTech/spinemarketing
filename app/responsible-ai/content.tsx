@@ -8,8 +8,8 @@ const practices = [
     eyebrow: "Ground preparation in evidence",
     title: "Inspect the evidence behind a proposed next step.",
     body: [
-      "An AI-generated summary or proposal should make its supporting context available for review. Source references, conflicting information and relevant uncertainty help people assess whether it is sound.",
-      "Interpretation must remain distinguishable from source records and accepted business decisions.",
+      "A summary or suggestion from AI should show the facts behind it. People need the sources, the conflicts, and what is still unclear.",
+      "A guess must stay easy to tell apart from a source record and from a decision people have already accepted.",
     ],
   },
   {
@@ -17,7 +17,7 @@ const practices = [
     eyebrow: "Delegate within clear limits",
     title: "Give AI a responsibility with clear limits.",
     body: [
-      "A person's permissions and company policy decide what they can hand to AI. An AI counterpart should stay within those limits as it looks into things, prepares work or uses a tool.",
+      "A person's permissions and company rules decide what they can hand to AI. The AI should stay within those limits as it looks into things, prepares work, or uses a tool.",
       "Moving to other tools or AI models needs the same access and permission checks in the place it moves to.",
     ],
   },
@@ -26,8 +26,8 @@ const practices = [
     eyebrow: "Make review meaningful",
     title: "Human approval needs enough context to be a decision.",
     body: [
-      "For important proposals, the responsible person should be able to see the planned action, the records it affects, the evidence behind it, the expected effect and anything still unclear.",
-      "People need to be able to reject, revise or approve a proposal within their authority. The resulting decision should remain connected to the work.",
+      "For an important suggestion, the person in charge should see the planned action, the records it affects, the facts behind it, the expected effect, and anything still unclear.",
+      "People need to be able to reject, change, or approve a suggestion when their job allows it. The decision should stay with the work.",
     ],
   },
   {
@@ -56,9 +56,9 @@ export function ResponsibleAiContent() {
       <PageHero
         tone="ice"
         badge="AI within business responsibility"
-        headline={"Give AI useful context.\nKeep authority explicit."}
-        subhead="AI can help people investigate information, recognize patterns and prepare work. Its role also needs clear boundaries: which context it may use, what it may propose and which decisions remain with people. These responsibilities guide how we design AI collaboration at Spine InnovTech."
-        primaryCta={{ label: "Explore our governance approach", href: "/trust" }}
+        headline={"Give AI the facts it needs.\nA person keeps the decision."}
+        subhead="AI can help people look into the facts, spot patterns, and prepare work. It also needs clear limits: which facts it may use, what it may suggest, and which decisions stay with people."
+        primaryCta={{ label: "Read how we think about trust", href: "/trust" }}
         secondaryCta={{ label: "Read our philosophy", href: "/about" }}
       />
 

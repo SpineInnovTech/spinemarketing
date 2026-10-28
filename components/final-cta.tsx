@@ -17,7 +17,7 @@ export function FinalCTA() {
               Build on shared context, not disconnected tools.
             </h2>
             <p className="mt-6 max-w-[700px] text-[16px] leading-[1.85] text-[#4E607A]">
-              Explore how our technology connects business context, human judgment and governed AI capability. Start with the company behind the thinking or meet SpineWorkspace, our flagship product.
+              See how we connect the facts about the work, a person's judgment, and AI that waits for approval. Start with the company, or meet SpineWorkspace, our product.
             </p>
           </div>
           <div className="flex flex-col items-start gap-3 lg:items-stretch">

@@ -316,7 +316,7 @@ const EXPECTED_FOOTER_GROUPS = [
 ];
 const FOOTER_BRAND_STATEMENT = "Connecting business context for humans and AI, with people in control.";
 const FOOTER_CLOSING_LINE =
-  "Source systems stay authoritative. Authority stays with people. Context stays with the work.";
+  "Your tools keep the record. Your people keep the authority. Context continues with the work.";
 const FOOTER_COPYRIGHT = "© 2026 Spine InnovTech. All rights reserved.";
 // Bottom-bar utility links — beside the legal links, not inside the master's
 // four groups. "Site map" keeps the directory reachable from the footer.
