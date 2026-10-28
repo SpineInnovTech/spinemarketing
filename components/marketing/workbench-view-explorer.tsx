@@ -629,7 +629,7 @@ export function WorkbenchViewExplorer({
                           04
                         </span>
                         <span className="text-[11px] font-semibold uppercase tracking-wider text-[#208050]">
-                          Governance
+                          Approvals
                         </span>
                       </div>
                       <h4 className="mt-3.5 text-base font-bold text-[#082B5E]">

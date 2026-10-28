@@ -4,13 +4,13 @@ import { ProductSecurityContent } from "./content"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 
 export const metadata: Metadata = {
-  title: "Product Governance Concepts | Spine InnovTech",
-  description: "Illustrative governance concepts for SpineWorkspace, including approval boundaries and evidence collection; not a certification of live controls.",
+  title: "Who can act | Spine InnovTech",
+  description: "Examples of how SpineWorkspace keeps approval limits and a record of the facts. This is not a certification of live controls.",
   alternates: { canonical: "/product/security" },
   openGraph: {
     siteName: "Spine InnovTech",
-    title: "Product Governance Concepts | Spine InnovTech",
-    description: "Illustrative governance concepts for SpineWorkspace, including approval boundaries and evidence collection; not a certification of live controls.",
+    title: "Who can act | Spine InnovTech",
+    description: "Examples of how SpineWorkspace keeps approval limits and a record of the facts. This is not a certification of live controls.",
     images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }

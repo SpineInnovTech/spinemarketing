@@ -63,7 +63,7 @@ const items = [
     ],
   },
   {
-    tag: "Governance",
+    tag: "Limits",
     title: "Connections carry limits and a purpose",
     description: "Finding a tool grants no access on its own. A connection needs a valid sign-in, permission and a supported ability before use.",
     icon: Shield,

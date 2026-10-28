@@ -51,7 +51,7 @@ const architectureScenes: ArchitectureScene[] = [
       "AI prepares a proposal. A person reviews it and approves the exact change before anything is written back to a tool.",
     point: "People approve every important action.",
     ctaHref: "/platform",
-    ctaLabel: "How governance works",
+    ctaLabel: "How approval works",
   },
   {
     id: "continuity",

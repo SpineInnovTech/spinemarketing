@@ -24,7 +24,7 @@ const names: Record<string, string> = {
   "/platform/spine-fabric": "Spine Fabric — technical overview",
   "/spine": "Spine Fabric — introduction",
   "/twin": "Spine Twin",
-  "/governance": "Governance & approved action",
+  "/governance": "Who decides, and what a person approves",
   "/adaptive-workspace": "Adaptive Workspace",
   "/product/the-adaptive-workspace": "Spine Workbench — adaptive work lenses",
   "/platform/how-it-works": "How the technology works",

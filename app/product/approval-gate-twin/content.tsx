@@ -52,7 +52,7 @@ const approvalTiers = [
 const safetyMechanisms = [
   { label: "Department-Scoped Access", desc: "AI cannot access unauthorized departments. Enforced before any action surfaces." },
   { label: "Immutable Audit Trail", desc: "Append-only log of every approval decision. Timestamped and traceable." },
-  { label: "Emergency Override", desc: "Traceable exception handling with mandatory governance logging." },
+  { label: "Emergency Override", desc: "A recorded exception, with a log a person can review." },
 ];
 
 const virtualState = [

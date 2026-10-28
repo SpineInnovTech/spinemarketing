@@ -61,7 +61,7 @@ export async function InsightsIndex() {
       <PageHero
         badge="Insights & Articles"
         headline="Product thinking and business context."
-        subhead="Articles on connected workspaces, AI governance, and operational continuity from Spine InnovTech."
+        subhead="Articles on connected workspaces, people approving AI, and work that continues, from Spine InnovTech."
         primaryCta={{ label: "Company updates", href: "/updates" }}
         secondaryCta={{ label: "Product changelog", href: "/changelog" }}
       />

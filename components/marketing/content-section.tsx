@@ -125,10 +125,10 @@ const ASIDES: Record<string, Aside> = {
   },
   "Governance model.": {
     kicker: "Boundary",
-    title: "Humans govern",
+    title: "People decide",
     rows: [
-      { term: "People", detail: "Govern the business." },
-      { term: "AI", detail: "Assists within authority boundaries." },
+      { term: "People", detail: "Run the business." },
+      { term: "AI", detail: "Helps inside limits a person sets." },
       { term: "Seeing a tool", detail: "Does not give permission to use what it can do." },
     ],
   },
