@@ -1544,7 +1544,7 @@ export const WORKBENCH_SOURCE_DOMAINS: WorkbenchSourceDomain[] = [
       },
       {
         "id": "governance",
-        "label": "Governance",
+        "label": "Approvals",
         "kind": "dashboard"
       },
       {

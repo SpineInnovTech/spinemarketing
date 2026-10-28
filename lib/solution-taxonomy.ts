@@ -163,7 +163,7 @@ export const PUBLIC_SOLUTIONS: PublicSolution[] = [
     name: "Human Resources",
     navLabel: "Human Resources",
     headline: "People operations with the records and the context for the decision.",
-    description: "Hiring, onboarding, and people programs connected to goals and governance boundaries.",
+    description: "Hiring, onboarding, and people programs, with clear limits on who can decide.",
     buyerSummary: "Coordinate people decisions with relevant context.",
     workspaceAssociations: [{ host: "humanresources.spineworkspace.com", label: "HR Workbench", primary: true }],
   },

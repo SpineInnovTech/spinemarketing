@@ -350,20 +350,20 @@ export const pages = {
 
   governance: {
     meta: {
-      title: "Governance — Humans stay in control",
-      description: "Humans govern the business. AI helps the business work. Availability does not mean authority.",
+      title: "Who decides — People stay in control",
+      description: "People run the business. AI helps with the work. Being able to see something is not permission to change it.",
       path: "/governance",
     },
     hero: {
-      badge: "Governance",
-      headline: "Humans govern the business. AI helps the business work.",
-      subhead: "A review surface for proposals, evidence, and the person who decides.",
+      badge: "Who decides",
+      headline: "People run the business. AI helps with the work.",
+      subhead: "A place to review a proposal, the facts behind it, and the person who decides.",
       primaryCta: { label: "Read the security overview", href: "/security" },
     },
     sections: [
       {
         headline: "Authority is a person, not a model.",
-        body: "Availability is not authority. Twin can propose. A person with the right scope accepts or rejects the proposal. The source system stays the record.",
+        body: "Being able to see a tool is not permission to use it. Spine Twin can prepare a proposal. A person with the right job accepts or rejects it. The tool you already use keeps the record.",
       },
       {
         headline: "Three kinds of memory.",
@@ -372,7 +372,7 @@ export const pages = {
       },
       {
         headline: "Pending review is the default.",
-        body: "A proposal stays pending until someone with authority accepts it. Evidence stays linked to the source system.",
+        body: "A proposal stays waiting until a person who is allowed to decide accepts it. The facts stay linked to the tool that keeps the record.",
       },
       {
         headline: "Controls live on the security page.",
@@ -566,7 +566,7 @@ export const pages = {
           { title: "Integrations", description: "The apps, files, and conversations already in use.", href: "/platform/integrations" },
           { title: "The tools you already use", description: "Each tool stays itself. They do not have to talk to each other directly.", href: "/host-connected-environment" },
           { title: "Check the result", description: "Results are checked, not blindly trusted.", href: "/governance" },
-          { title: "Security and governance", description: "Who can see what, what is recorded, and controls on actions.", href: "/security" },
+          { title: "Security and who decides", description: "Who can see what, what is recorded, and controls on actions.", href: "/security" },
         ],
       },
     ],
@@ -581,7 +581,7 @@ export const pages = {
     hero: {
       badge: "Security",
       headline: "Controls and limits for the workspace.",
-      subhead: "Who can get in, how data is kept safe, and what Twin is not allowed to do. Who may decide, and which memory they may use, lives on Governance.",
+      subhead: "Who can get in, how data is kept safe, and what Twin is not allowed to do. Who may decide, and which memory they may use, is explained with the approval rules.",
       primaryCta: { label: "Contact security team", href: "/contact?intent=security" },
     },
     sections: [
@@ -623,8 +623,8 @@ export const proofCards: ProofCardCopy[] = [
     description: "The work uses the tools already open for that person before it reaches for anything else.",
   },
   {
-    title: "Governance boundary",
-    description: "Availability ≠ authority. Humans approve consequential actions.",
+    title: "A person approves",
+    description: "Being able to see a tool is not permission to use it. A person approves important actions.",
   },
   {
     title: "Observation and reconciliation",

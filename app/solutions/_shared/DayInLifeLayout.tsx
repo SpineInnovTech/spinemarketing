@@ -127,7 +127,7 @@ export function DayInLifeLayout({
       </Section>
 
       <Section variant="muted">
-        <SectionHeader label="Capabilities" headline="Built for your role" />
+        <SectionHeader label="What it can do" headline="Built for your role" />
         <div className="grid gap-4 sm:grid-cols-2">
           {capabilities.map(({ title, desc }, i) => (
             <motion.div key={i} {...fade(i * 0.08)} className="rounded-md border border-[#E5E5E5] bg-white p-5">

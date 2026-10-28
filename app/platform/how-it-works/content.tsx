@@ -100,9 +100,9 @@ export function PlatformHowItWorksContent() {
         </ol>
         <p className="mt-8 text-[15px] leading-[1.6] text-[#33465B]">
           <Link href="/governance" className="font-semibold text-[#0176D3] hover:underline">
-            Governance
+            Who decides
           </Link>{" "}
-          is who may decide.{" "}
+          is the page about approval.{" "}
           <Link href="/twin" className="font-semibold text-[#0176D3] hover:underline">
             Twin
           </Link>{" "}

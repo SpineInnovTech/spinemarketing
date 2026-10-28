@@ -66,7 +66,7 @@ export function TwinContent() {
         headline={"AI that works with your\nbusiness context."}
         subhead="Spine Twin brings objectives, responsibilities, records, signals, decisions and evidence into the work. It helps people investigate situations, prepare options and coordinate the next step within the authority they have."
         primaryCta={{ label: "Read our responsible AI approach", href: "/responsible-ai" }}
-        secondaryCta={{ label: "See trust & governance", href: "/trust" }}
+        secondaryCta={{ label: "See how trust works", href: "/trust" }}
       />
 
       <Section variant="muted">

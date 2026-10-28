@@ -33,7 +33,7 @@ const securityFeatures = [
   {
     icon: KeyRound,
     title: "Role-based access control",
-    desc: "Policy and role boundaries are designed to govern which capabilities and data may be accessed.",
+    desc: "Each person's role decides which information they can see and what they can do.",
   },
   {
     icon: Users,
@@ -90,8 +90,7 @@ export function SecurityContent() {
             className="mx-auto max-w-2xl text-center"
           >
             <h2 className="section-heading">
-              How security is built{" "}
-              <span className="text-primary">and governance principles</span>
+              How security is built, and how people stay in control
             </h2>
           </motion.div>
 
