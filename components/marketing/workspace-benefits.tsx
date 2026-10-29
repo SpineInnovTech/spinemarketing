@@ -7,21 +7,32 @@ const benefits = [
   {
     icon: Database,
     title: "The facts about the work",
-    body: "Connect the records you are allowed to use and bring up the evidence for the task. Keep each tool's permissions and where the information came from. Your existing tools stay the place of record.",
+    lines: [
+      "Connect the records you are allowed to use.",
+      "Bring up the evidence for the task.",
+      "Keep each tool's permissions.",
+      "Your existing tools stay the place of record.",
+    ],
     href: "/business-context",
     link: "Explore business context",
   },
   {
     icon: Layers3,
     title: "One shared view across teams",
-    body: "Give Sales, Finance, Account Success and other teams their own view of the same shared business context, with each person seeing only what their role allows.",
+    lines: [
+      "Each team gets its own view of the work.",
+      "Each person sees only what their role allows.",
+    ],
     href: "/platform/spine-fabric",
     link: "Explore Spine Fabric",
   },
   {
     icon: PanelsTopLeft,
     title: "Editable dashboards and documents",
-    body: "Edit draft records right from dashboards that show key numbers and let you act. Build documents, tables and charts from ready-made building blocks in Canvas, the place for shaping work.",
+    lines: [
+      "Edit draft records from dashboards that show key numbers.",
+      "Build documents, tables and charts in Canvas.",
+    ],
     href: "https://spineworkspace.com",
     link: "Explore SpineWorkspace Product",
   },
@@ -55,7 +66,7 @@ export function WorkspaceBenefits({ detailed = false }: { detailed?: boolean }) 
           Bring the information behind the work into a workspace your team can use.
         </p>
         <div className="mt-9 grid gap-5 lg:grid-cols-3">
-          {benefits.map(({ icon: Icon, title, body, href, link }, index) => (
+          {benefits.map(({ icon: Icon, title, lines, href, link }, index) => (
             <BlurFade key={title} delay={index * 0.06} inView className="h-full">
               <MagicCard className="h-full" innerClassName="justify-between p-6 sm:p-7">
                 <div>
@@ -63,7 +74,11 @@ export function WorkspaceBenefits({ detailed = false }: { detailed?: boolean }) 
                     <Icon className="h-5 w-5" aria-hidden />
                   </span>
                   <h3 className="mt-5 text-[length:var(--marketing-card-size)] font-semibold leading-[1.4] tracking-[-.025em]">{title}</h3>
-                  <p className="mt-4 text-[14px] leading-7 text-[#4E607A]">{body}</p>
+                  <ul className="mt-4 space-y-2 text-[14px] leading-6 text-[#4E607A]">
+                    {lines.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
                 </div>
                 {href.startsWith("http") ? (
                   <a

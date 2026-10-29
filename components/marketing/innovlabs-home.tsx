@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, UserCheck, Workflow } from "lucide-react";
+import { ArrowRight, BarChart3, Building2, Cable, Eye, ListChecks, MessagesSquare, ShieldCheck, UserCheck, UserRound, Workflow } from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { CorporateOrbitalHero } from "./corporate-orbital-hero";
@@ -79,14 +80,51 @@ const renewalExamples = [
 ] as const;
 
 const problems = [
-  "Answers live in many tools, so the full picture is never in one place.",
-  "People copy facts between systems by hand, and detail gets lost.",
-  "AI can draft work, but no one can see what it used or approve it.",
+  { name: "Many tools", description: "Answers live in many tools, so the full picture is never in one place." },
+  { name: "Hand copying", description: "People copy facts between systems by hand, and detail gets lost." },
+  { name: "No approval", description: "AI can draft work, but no one can see what it used or approve it." },
 ] as const;
+
+const relationshipCards = [
+  { name: "Data", description: "Data shows what is happening.", Icon: BarChart3 },
+  { name: "Context", description: "Context helps explain why.", Icon: MessagesSquare },
+  { name: "Next step", description: "Together, they help you decide what to do next.", Icon: ListChecks },
+] as const;
+
+const pictureCards = [
+  { name: "Your tools", description: "Your tools, with the conversations and history behind them.", Icon: Cable },
+  { name: "Full picture", description: "People and AI see the full picture and the next step.", Icon: Eye },
+  { name: "Your approval", description: "Changes to your tools happen only with your approval.", Icon: ShieldCheck },
+] as const;
+
+const renewalFacts = [
+  { name: "The account", description: "A renewal for the Acme account.", Icon: Building2 },
+  { name: "The person", description: "Maya, a customer success lead, works with her AI Twin.", Icon: UserRound },
+  { name: "The tools", description: "Salesforce, Zendesk and Gmail.", Icon: Cable },
+] as const;
+
+const audienceCards = [
+  { name: "One next step", description: "Renewals bring the account record, support history and contract terms together." },
+  { name: "The risk", description: "The team can see the risk." },
+  { name: "The decision", description: "A person decides what to do." },
+] as const;
+
+const buildCards = [
+  { name: "Information", description: "Your information brought together." },
+  { name: "Approval", description: "People approve the AI." },
+  { name: "The next tool", description: "Work carries on from one AI tool to the next." },
+] as const;
+
+const companyCards = [
+  { name: "The company", description: "Spine InnovTech builds SpineWorkspace." },
+  { name: "The same facts", description: "People and AI can see the same facts about the work." },
+  { name: "In charge", description: "A person stays in charge." },
+] as const;
+
+const bento = "auto-rows-auto";
 
 const container = "mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12";
 const heading = "text-[length:min(clamp(2rem,4vw,3.8rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.045em]";
-const body = "text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#4E607A]";
 const primaryButton = "inline-flex min-h-12 items-center gap-3 rounded-xl bg-[#006FE8] px-6 text-[14px] font-semibold text-white shadow-[0_6px_18px_rgba(0,111,232,0.28)] transition-all hover:bg-[#0055B8] hover:shadow-[0_10px_24px_rgba(0,111,232,0.36)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]";
 const secondaryButton = "inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]";
 const phaseTint: Record<string, string> = {
@@ -118,15 +156,23 @@ export function InnovLabsHome() {
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>
-              <p className={body + " mt-4 max-w-[720px] mx-auto"}>
-                Data shows what is happening. Context helps explain why. Together, they help you decide what to do next.
-              </p>
-              <p className={body + " mt-3 max-w-[720px] mx-auto"}>
-                SpineWorkspace brings information from your tools together with the conversations and history behind it. People and AI can see the full picture and work out the next step. Changes to your tools happen only with your approval.
-              </p>
-              <p className={body + " mt-3 max-w-[720px] mx-auto font-semibold text-[#082B5E]"}>
+              <p className="mt-4 text-[length:min(17px,var(--marketing-body-size))] font-semibold text-[#082B5E]">
                 Your data and the story behind it, in one place.
               </p>
+            </BlurFade>
+            <BlurFade delay={0.12} inView>
+              <BentoGrid className={bento + " mt-8 text-left"}>
+                {relationshipCards.map(({ name, description, Icon }) => (
+                  <BentoCard key={name} name={name} description={description} Icon={Icon} />
+                ))}
+              </BentoGrid>
+            </BlurFade>
+            <BlurFade delay={0.14} inView>
+              <BentoGrid className={bento + " mt-5 text-left"}>
+                {pictureCards.map(({ name, description, Icon }) => (
+                  <BentoCard key={name} name={name} description={description} Icon={Icon} />
+                ))}
+              </BentoGrid>
             </BlurFade>
             <BlurFade delay={0.14} inView>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -143,13 +189,11 @@ export function InnovLabsHome() {
           {/* Customer problem in plain words */}
           <div className="mx-auto mt-10 max-w-[960px] border-t border-[#D6E8F8] pt-8">
             <p className="text-center text-[13px] font-semibold uppercase tracking-[.18em] text-[#006FE8]">What is hard today</p>
-            <div className="mt-5 grid gap-4 md:grid-cols-3">
-              {problems.map((text, index) => (
-                <BlurFade key={text} delay={index * 0.06} inView className="h-full">
-                  <p className="h-full rounded-2xl border border-[#D6E8F8] bg-white/70 p-5 text-sm leading-7 text-[#4E607A]">{text}</p>
-                </BlurFade>
+            <BentoGrid className={bento + " mt-5"}>
+              {problems.map(({ name, description }) => (
+                <BentoCard key={name} name={name} description={description} />
               ))}
-            </div>
+            </BentoGrid>
           </div>
         </div>
       </section>
@@ -163,7 +207,7 @@ export function InnovLabsHome() {
               SpineWorkspace
             </p>
             <h2 id="home-spineworkspace-title" className={heading + " mt-4"}>Connected context. Human control. AI-ready.</h2>
-            <p className={body + " mt-4"}>Your tools. Your context. Your decisions.</p>
+            <p className="mt-4 text-[length:min(17px,var(--marketing-body-size))] font-semibold text-[#082B5E]">Your tools. Your context. Your decisions.</p>
             <div className="mt-6 flex justify-center">
               <a href="https://spineworkspace.com" className={primaryButton}>
                 Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
@@ -189,9 +233,11 @@ export function InnovLabsHome() {
             </span>
           </div>
           <h2 id="home-workflow-title" className={heading + " mt-5 max-w-[820px]"}>See how it works: a customer renewal</h2>
-          <p className={body + " mt-4 max-w-[760px]"}>
-            A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce, Zendesk and Gmail. The steps group under Connect, Prepare and Review.
-          </p>
+          <BentoGrid className={bento + " mt-6"}>
+            {renewalFacts.map(({ name, description, Icon }) => (
+              <BentoCard key={name} name={name} description={description} Icon={Icon} />
+            ))}
+          </BentoGrid>
 
           <div className="mt-8 max-w-[820px] overflow-x-auto rounded-2xl border border-[#D6E8F8]">
             <table className="w-full text-left text-sm">
@@ -212,14 +258,20 @@ export function InnovLabsHome() {
               </tbody>
             </table>
           </div>
-          <p className={body + " mt-4 max-w-[760px]"}>
-            A conversation is data too. It adds context when it helps you understand the customer’s situation. These are examples, not separate boxes.
-          </p>
+          <BentoGrid className={bento + " mt-5"}>
+            <BentoCard
+              className="md:col-span-2 lg:col-span-3"
+              name="A conversation is data too."
+              description="It adds context when it helps you understand the customer’s situation."
+            >
+              <p className="text-sm font-medium text-[#082B5E]">These are examples, not separate boxes.</p>
+            </BentoCard>
+          </BentoGrid>
 
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {workflowSteps.map((step, index) => (
               <BlurFade key={step.title} delay={index * 0.05} inView className="h-full">
-                <div className="flex h-full gap-3 rounded-2xl border border-[#D6E8F8] bg-white p-4 shadow-2xs">
+                <MagicCard className="h-full" innerClassName="flex h-full gap-3 p-4">
                   <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
                     {index + 1}
                   </span>
@@ -230,7 +282,7 @@ export function InnovLabsHome() {
                     </div>
                     <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
                   </div>
-                </div>
+                </MagicCard>
               </BlurFade>
             ))}
           </div>
@@ -269,9 +321,11 @@ export function InnovLabsHome() {
             Who it serves first
           </p>
           <h2 id="home-audience-title" className={heading + " mt-5 max-w-[820px]"}>Built first for account and customer success teams.</h2>
-          <p className={body + " mt-4 max-w-[760px]"}>
-            Renewals bring the account record, support history and contract terms into one next step. The team can see the risk. A person decides what to do.
-          </p>
+          <BentoGrid className={bento + " mt-6"}>
+            {audienceCards.map(({ name, description }) => (
+              <BentoCard key={name} name={name} description={description} />
+            ))}
+          </BentoGrid>
           <p className="mt-5 text-sm leading-7 text-[#4E607A]">
             Other teams — sales, finance, operations and more —{" "}
             <a href="https://spineworkspace.com" className="font-semibold text-[#006FE8] hover:underline">see how SpineWorkspace fits their work</a>.
@@ -292,8 +346,13 @@ export function InnovLabsHome() {
               How it is built
             </p>
             <h2 className={heading + " mt-3"}>From your tools to work that keeps going.</h2>
-            <p className={body + " mt-4"}>
-              Three parts: your information brought together, people approve the AI, and work that carries on from one AI tool to the next. More detail is on the platform pages.
+            <BentoGrid className={bento + " mt-6"}>
+              {buildCards.map(({ name, description }) => (
+                <BentoCard key={name} name={name} description={description} />
+              ))}
+            </BentoGrid>
+            <p className="mt-5 text-sm leading-7 text-[#4E607A]">
+              <Link href="/platform" className="font-semibold text-[#006FE8] hover:underline">More detail is on the platform pages.</Link>
             </p>
           </div>
           <CorporateArchitectureStoryboard />
@@ -309,9 +368,11 @@ export function InnovLabsHome() {
               Spine InnovTech
             </p>
             <h2 id="home-company-title" className={heading + " mt-5"}>The company behind SpineWorkspace.</h2>
-            <p className={body + " mt-4"}>
-              Spine InnovTech builds SpineWorkspace. It connects your tools so people and AI can see the same facts about the work. A person stays in charge.
-            </p>
+            <BentoGrid className={bento + " mt-6"}>
+              {companyCards.map(({ name, description }) => (
+                <BentoCard key={name} name={name} description={description} />
+              ))}
+            </BentoGrid>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/company" className={primaryButton}>
                 Discover our approach <ArrowRight className="h-4 w-4" aria-hidden />
