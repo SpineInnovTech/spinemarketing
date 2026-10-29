@@ -1,8 +1,20 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, UserCheck, Workflow } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  Cable,
+  Eye,
+  ListChecks,
+  MessagesSquare,
+  ShieldCheck,
+  UserCheck,
+  Workflow,
+} from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { TestimonialsSection } from "@/components/testimonials-section";
 import { CorporateOrbitalHero } from "@/components/marketing/corporate-orbital-hero";
 import { CorporateArchitectureStoryboard } from "@/components/marketing/corporate-architecture-storyboard";
 import { WorkspaceBenefits } from "@/components/marketing/workspace-benefits";
@@ -14,7 +26,6 @@ import {
   homeFounderNote,
   homeFourSteps,
   homeProblems,
-  homeTrustLine,
 } from "@/lib/plain-language/corporate-home";
 import {
   BentoSolutionSection,
@@ -41,7 +52,7 @@ const workflowSteps = [
   {
     phase: "Prepare",
     title: "Prepare the next step",
-    body: "The AI Twin prepares a renewal-risk summary and a proposed next action.",
+    body: "Spine Twin, the AI that prepares the next step, writes a renewal-risk summary and a suggested action. It waits for a person.",
   },
   {
     phase: "Review",
@@ -78,6 +89,40 @@ const principles = [
   },
 ] as const;
 
+const renewalExamples = [
+  { data: "Renewal date and contract value", explains: "What the customer needs before renewing" },
+  { data: "Number of open support tickets", explains: "Which issue could make the customer leave" },
+  { data: "Product usage trend", explains: "Why usage changed and what the customer said" },
+] as const;
+
+const heroExplanationCards = [
+  { name: "Data", description: "Data shows what is happening.", Icon: BarChart3 },
+  { name: "Context", description: "Context helps explain why.", Icon: MessagesSquare },
+  { name: "Next step", description: "Together, they help you decide what to do next.", Icon: ListChecks },
+  { name: "Your tools", description: "Your tools, with the conversations and history behind them.", Icon: Cable },
+  { name: "Full picture", description: "People and AI see the full picture and the next step.", Icon: Eye },
+  { name: "Your approval", description: "Changes to your tools happen only with your approval.", Icon: ShieldCheck },
+] as const;
+
+const audiencePoints = [
+  "Renewals bring the account record, support history and contract terms together.",
+  "The team can see the risk.",
+  "A person decides what to do.",
+] as const;
+
+const buildPoints = [
+  "Your information brought together.",
+  "People approve the AI.",
+  "Work carries on from one AI tool to the next.",
+] as const;
+
+const companyPoints = [
+  "Spine InnovTech builds SpineWorkspace.",
+  "People and AI can see the same facts about the work.",
+  "A person stays in charge.",
+] as const;
+
+const heroBento = "auto-rows-auto sm:grid-cols-2 lg:grid-cols-3";
 const container = "mx-auto max-w-6xl px-5 sm:px-8 lg:px-12";
 const heading =
   "text-[length:min(clamp(2rem,4vw,3.8rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.045em]";
@@ -115,16 +160,25 @@ export function CorporateHomeT1() {
             <BlurFade delay={0.06} inView>
               <h1
                 id="company-title"
-                className="font-display mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-.015em] text-[#032D60]"
+                className="font-display mt-4 text-[clamp(1.35rem,6.2vw,2.85rem)] font-bold leading-[1.15] tracking-[-.02em] text-[#032D60]"
               >
-                Connecting business context for humans and AI, with people in control.
+                <span className="block">Your Business Tools</span>
+                <span className="block">Your Business Context</span>
+                <span className="block">Your Decisions</span>
+                <span className="block">AI Acts With Your Approval</span>
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>
-              <p className={`${body} mx-auto mt-4 max-w-[720px]`}>
-                Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from
-                insight to action, with people in control.
+              <p className="mx-auto mt-4 max-w-[720px] text-[length:min(17px,var(--marketing-body-size))] font-semibold text-[#082B5E]">
+                Your data and the story behind it, in one place.
               </p>
+            </BlurFade>
+            <BlurFade delay={0.12} inView>
+              <BentoGrid className={`${heroBento} mt-8 text-left`}>
+                {heroExplanationCards.map(({ name, description, Icon }) => (
+                  <BentoCard key={name} name={name} description={description} Icon={Icon} />
+                ))}
+              </BentoGrid>
             </BlurFade>
             <BlurFade delay={0.14} inView>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
@@ -135,9 +189,6 @@ export function CorporateHomeT1() {
                   Explore SpineWorkspace
                 </a>
               </div>
-            </BlurFade>
-            <BlurFade delay={0.18} inView>
-              <p className="mt-5 text-sm text-[#4E607A]">{homeTrustLine}</p>
             </BlurFade>
           </div>
           <FourStepStripSection steps={homeFourSteps} />
@@ -196,16 +247,45 @@ export function CorporateHomeT1() {
             </span>
           </div>
           <h2 id="home-workflow-title" className={`${heading} mt-5 max-w-[820px]`}>
-            One example, start to finish
+            See how it works: a customer renewal
           </h2>
           <p className={`${body} mt-4 max-w-[760px]`}>
-            A renewal for the Acme account. Maya leads customer success. She works with Spine Twin across Salesforce,
-            Zendesk and Gmail. The steps group under Connect, Prepare and Review.
+            A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce,
+            Zendesk and Gmail.
+          </p>
+          <div className="mt-8 max-w-[820px] overflow-x-auto rounded-2xl border border-[#D6E8F8]">
+            <table className="w-full text-left text-sm">
+              <caption className="sr-only">Illustrative example of data and what helps explain it</caption>
+              <thead className="bg-[#F0F8FF] text-[#082B5E]">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    Data
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-semibold">
+                    What helps explain it
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {renewalExamples.map((row) => (
+                  <tr key={row.data} className="border-t border-[#D6E8F8]">
+                    <th scope="row" className="w-1/2 px-4 py-3 align-top font-medium text-[#082B5E]">
+                      {row.data}
+                    </th>
+                    <td className="w-1/2 px-4 py-3 align-top leading-6 text-[#4E607A]">{row.explains}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={`${body} mt-4 max-w-[760px]`}>
+            A conversation is data too. It adds context when it helps you understand the customer&apos;s situation. These
+            are examples, not separate boxes.
           </p>
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {workflowSteps.map((step, index) => (
               <BlurFade key={step.title} delay={index * 0.05} inView className="h-full">
-                <div className="flex h-full gap-3 rounded-2xl border border-[#D6E8F8] bg-white p-4 shadow-2xs">
+                <MagicCard className="h-full" innerClassName="flex h-full gap-3 p-4">
                   <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
                     {index + 1}
                   </span>
@@ -220,7 +300,7 @@ export function CorporateHomeT1() {
                     </div>
                     <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
                   </div>
-                </div>
+                </MagicCard>
               </BlurFade>
             ))}
           </div>
@@ -231,7 +311,7 @@ export function CorporateHomeT1() {
         <div className={container}>
           <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            Solution
+            How people stay in control
           </p>
           <h2 id="home-principles-title" className={`${heading} mt-5 max-w-[820px]`}>
             Three rules the product follows
@@ -252,6 +332,32 @@ export function CorporateHomeT1() {
         </div>
       </section>
 
+      <section id="who-it-serves" aria-labelledby="home-audience-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-white py-20 md:py-28">
+        <div className={container}>
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+            Who it serves first
+          </p>
+          <h2 id="home-audience-title" className={`${heading} mt-5 max-w-[820px]`}>
+            Built first for account and customer success teams.
+          </h2>
+          <ul className={`mt-4 max-w-[760px] list-disc space-y-2 pl-5 ${body}`}>
+            {audiencePoints.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+          <p className="mt-5 text-sm leading-7 text-[#4E607A]">
+            Other teams — sales, finance, operations and more —{" "}
+            <a href="https://spineworkspace.com" className="font-semibold text-[#006FE8] hover:underline">
+              see how SpineWorkspace fits their work
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      <TestimonialsSection heading="What the work looks like" />
+
       <WorkspaceBenefits />
 
       <section id="architecture-story" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F0F8FF] py-20 md:py-28">
@@ -262,9 +368,15 @@ export function CorporateHomeT1() {
               How it is built
             </p>
             <h2 className={`${heading} mt-3`}>From your tools to work that keeps going.</h2>
-            <p className={`${body} mt-4`}>
-              Three parts: your information brought together, Agentic Governance (AI prepares the work and a person
-              approves it), and work that carries on from one AI tool to the next. More detail is on the platform pages.
+            <ul className={`mt-4 list-disc space-y-2 pl-5 ${body}`}>
+              {buildPoints.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm leading-7 text-[#4E607A]">
+              <Link href="/platform" className="font-semibold text-[#006FE8] hover:underline">
+                More detail is on the platform pages.
+              </Link>
             </p>
           </div>
           <span className="sr-only">Interactive Storyboard</span>
@@ -290,10 +402,11 @@ export function CorporateHomeT1() {
             <h2 id="home-company-title" className={`${heading} mt-5`}>
               The company behind SpineWorkspace.
             </h2>
-            <p className={`${body} mt-4`}>
-              Spine InnovTech builds the governed foundation for shared business context. SpineWorkspace is our flagship
-              product.
-            </p>
+            <ul className={`mt-4 list-disc space-y-2 pl-5 ${body}`}>
+              {companyPoints.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/company" className={primaryButton}>
                 Discover our approach <ArrowRight className="h-4 w-4" aria-hidden />
