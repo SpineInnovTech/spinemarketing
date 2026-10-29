@@ -151,9 +151,9 @@ const HOME_REQUIRED = [
   "Data shows what is happening.",
   "Context helps explain why.",
   "Together, they help you decide what to do next.",
-  // Supporting paragraph and positioning line
-  "SpineWorkspace brings information from your tools together with the conversations and history behind it.",
-  "People and AI can see the full picture and work out the next step.",
+  // Short cards, not a paragraph
+  "Your tools, with the conversations and history behind them.",
+  "People and AI see the full picture and the next step.",
   "Changes to your tools happen only with your approval.",
   "Your data and the story behind it, in one place.",
   // Renewal example
@@ -185,6 +185,9 @@ const HOME_FORBIDDEN = [
   "Business context means the facts about the work, kept together, so people and AI are looking at the same picture.",
   "One workflow, shown end to end",
   "Your business data and context, together—with people in control.",
+  "SpineWorkspace brings information from your tools together with the conversations and history behind it.",
+  "People and AI can see the full picture and work out the next step.",
+  "Data shows what is happening. Context helps explain why. Together, they help you decide what to do next.",
 ];
 
 /* -------------------------------------------------------------------------- */

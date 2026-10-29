@@ -10,8 +10,8 @@ enforces the homepage pins and the banned-copy list.
 ## Locked copy (exact words)
 
 - **Home H1:** four lines, in order: Your Business Tools / Your Business Context / Your Decisions / AI Acts With Your Approval.
-- **Relationship:** Data shows what is happening. Context helps explain why. Together, they help you decide what to do next.
-- **Supporting paragraph:** SpineWorkspace brings information from your tools together with the conversations and history behind it. People and AI can see the full picture and work out the next step. Changes to your tools happen only with your approval.
+- **Relationship cards:** Data — Data shows what is happening. / Context — Context helps explain why. / Next step — Together, they help you decide what to do next.
+- **Picture cards:** Your tools — Your tools, with the conversations and history behind them. / Full picture — People and AI see the full picture and the next step. / Your approval — Changes to your tools happen only with your approval.
 - **Positioning line:** Your data and the story behind it, in one place.
 - **Eyebrow pill:** Spine InnovTech
 - **CTAs:** "See the workflow" (#workflow, primary); "Explore SpineWorkspace" (https://spineworkspace.com, secondary)

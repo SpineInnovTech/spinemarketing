@@ -1,5 +1,7 @@
 "use client";
 
+import { MagicCard } from "@/components/ui/magic-card";
+
 const examples = [
   {
     title: "Hand the work to the next person",
@@ -38,16 +40,13 @@ export function TestimonialsSection({
 
         <div className="grid gap-5 sm:grid-cols-2">
           {examples.map((example) => (
-            <article
-              key={example.title}
-              className="rounded-md border border-[#E5E5E5] bg-white p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
-            >
+            <MagicCard key={example.title} innerClassName="p-6">
               <p className="text-[12px] font-bold uppercase tracking-[0.06em] text-[#526479]">
                 Example, not a customer review
               </p>
               <h3 className="mt-3 text-[16px] font-semibold leading-snug text-[#032D60]">{example.title}</h3>
-              <p className="mt-3 text-[15px] leading-[1.7] text-[#444]">{example.body}</p>
-            </article>
+              <p className="mt-3 text-[15px] leading-6 text-[#444]">{example.body}</p>
+            </MagicCard>
           ))}
         </div>
       </div>
