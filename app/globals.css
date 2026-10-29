@@ -1913,3 +1913,21 @@ html[data-theme="dark"] .arvio-badge {
 .innovtech-review-action { padding: 9px 8px; }
 .innovtech-review-action strong { font-size: 14px; }
 .innovtech-review-action small { font-size: 11px; max-width: 260px; }
+
+/* Shared section library (components/sections). Unlayered so dark beats utilities. */
+.sx-surface { background-color: #ffffff; }
+.sx-muted { background-color: #f6f9fd; }
+.sx-tint { background-color: rgba(0, 111, 232, 0.07); }
+.sx-card { background-color: #ffffff; border-color: #d6e8f8; }
+.sx-title { color: #082b5e; }
+.sx-body { color: #4e607a; }
+.sx-accent { color: #006fe8; }
+.sx-line { border-color: #d6e8f8; }
+html[data-theme="dark"] .sx-surface { background-color: #0b1728; }
+html[data-theme="dark"] .sx-muted { background-color: #0f1e33; }
+html[data-theme="dark"] .sx-tint { background-color: rgba(0, 111, 232, 0.14); }
+html[data-theme="dark"] .sx-card { background-color: #12233a; border-color: #2a3e56; }
+html[data-theme="dark"] .sx-title { color: #e8f2fc; }
+html[data-theme="dark"] .sx-body { color: #a9bcce; }
+html[data-theme="dark"] .sx-accent { color: #8cc4f2; }
+html[data-theme="dark"] .sx-line { border-color: #2a3e56; }

@@ -1,89 +1,53 @@
 import Link from "next/link";
-import { ArrowRight, BarChart3, Cable, Eye, ListChecks, MessagesSquare, ShieldCheck, UserCheck, Workflow } from "lucide-react";
-import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import {
+  BadgeDollarSign,
+  BarChart3,
+  Briefcase,
+  Building2,
+  Cable,
+  Eye,
+  FileSearch,
+  Files,
+  Handshake,
+  HeartHandshake,
+  Layers,
+  LifeBuoy,
+  ListChecks,
+  Megaphone,
+  MessagesSquare,
+  Settings2,
+  ShieldCheck,
+  Unplug,
+  UserCheck,
+  Users,
+  Workflow,
+} from "lucide-react";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
-import { MagicCard } from "@/components/ui/magic-card";
 import { BlurFade } from "@/components/ui/blur-fade";
+import {
+  ArticlesSection,
+  BentoSection,
+  CtaBandSection,
+  FaqBlockSection,
+  FeatureTabsSection,
+  FounderNoteSection,
+  HeroSection,
+  LogoStripSection,
+  ProblemSection,
+  Section,
+  SectionHeader,
+  SectionLink,
+  StepsSection,
+  TeamStripSection,
+} from "@/components/sections";
+import { TestimonialsSection } from "@/components/testimonials-section";
 import { CorporateOrbitalHero } from "./corporate-orbital-hero";
 import { CorporateArchitectureStoryboard } from "./corporate-architecture-storyboard";
 import { WorkspaceBenefits } from "./workspace-benefits";
-import { TestimonialsSection } from "@/components/testimonials-section";
 import { INSIGHT_ARTICLES } from "@/lib/insights";
 
-// The Acme renewal story, grouped under the existing Connect -> Prepare -> Review
-// phases, as six steps. Illustrative example, not a live record.
-const workflowSteps = [
-  {
-    phase: "Connect",
-    title: "Bring the account into view",
-    body: "Bring up the account, support and contract details you are allowed to see for the renewal.",
-  },
-  {
-    phase: "Connect",
-    title: "Show the evidence",
-    body: "Show the source evidence behind it and flag the gaps that are still unresolved.",
-  },
-  {
-    phase: "Prepare",
-    title: "Prepare the next step",
-    body: "Spine Twin, the AI that prepares the next step, writes a renewal-risk summary and a suggested action. It waits for a person.",
-  },
-  {
-    phase: "Review",
-    title: "The person approves",
-    body: "The person reviews the proposal and approves the exact change to make.",
-  },
-  {
-    phase: "Review",
-    title: "The change is executed",
-    body: "The approved update is made in the tool that owns the record.",
-  },
-  {
-    phase: "Review",
-    title: "The record is kept",
-    body: "Show how the tool looks now, and the record kept of what was done.",
-  },
-] as const;
-
-// Three operating principles.
-const principles = [
-  {
-    icon: ShieldCheck,
-    title: "Your tools keep the record.",
-    body: "Your existing tools stay the place of record. SpineWorkspace reads and writes with their permission, never instead of them.",
-  },
-  {
-    icon: UserCheck,
-    title: "Your people keep the authority.",
-    body: "AI prepares the work. A person approves every important action before it happens.",
-  },
-  {
-    icon: Workflow,
-    title: "Context continues with the work.",
-    body: "Context stays with the work, so the next step continues from where the last one left off.",
-  },
-] as const;
-
-const renewalExamples = [
-  {
-    data: "Renewal date and contract value",
-    explains: "What the customer needs before renewing",
-  },
-  {
-    data: "Number of open support tickets",
-    explains: "Which issue could make the customer leave",
-  },
-  {
-    data: "Product usage trend",
-    explains: "Why usage changed and what the customer said",
-  },
-] as const;
-
-const problems = [
-  "Answers live in many tools, so the full picture is never in one place.",
-  "People copy facts between systems by hand, and detail gets lost.",
-  "AI can draft work, but no one can see what it used or approve it.",
-] as const;
+const SPINEWORKSPACE_URL = "https://spineworkspace.com";
+const shot = (path: string) => `/images/workbench/${path}`;
 
 const heroExplanationCards = [
   { name: "Data", description: "Data shows what is happening.", Icon: BarChart3 },
@@ -94,10 +58,168 @@ const heroExplanationCards = [
   { name: "Your approval", description: "Changes to your tools happen only with your approval.", Icon: ShieldCheck },
 ] as const;
 
-const audiencePoints = [
-  "Renewals bring the account record, support history and contract terms together.",
-  "The team can see the risk.",
-  "A person decides what to do.",
+const problems = [
+  {
+    icon: Unplug,
+    title: "The picture is split across tools.",
+    body: "Answers live in many tools, so the full picture is never in one place.",
+  },
+  {
+    icon: Files,
+    title: "Facts get copied by hand.",
+    body: "People copy facts between systems by hand, and detail gets lost.",
+  },
+  {
+    icon: FileSearch,
+    title: "AI work is hard to check.",
+    body: "AI can draft work, but no one can see what it used or approve it.",
+  },
+] as const;
+
+// Three operating principles, plus the shared view they produce.
+const principles = [
+  {
+    icon: ShieldCheck,
+    size: "large",
+    title: "Your tools keep the record.",
+    body: "Your existing tools stay the place of record. SpineWorkspace reads and writes with their permission, never instead of them.",
+  },
+  {
+    icon: UserCheck,
+    size: "small",
+    title: "Your people keep the authority.",
+    body: "AI prepares the work. A person approves every important action before it happens.",
+  },
+  {
+    icon: Workflow,
+    size: "small",
+    title: "Context continues with the work.",
+    body: "Context stays with the work, so the next step continues from where the last one left off.",
+  },
+  {
+    icon: Layers,
+    size: "large",
+    title: "One shared view of the work.",
+    body: "People and AI can see the same facts about the work. A person stays in charge.",
+    href: SPINEWORKSPACE_URL,
+    linkLabel: "Explore SpineWorkspace",
+  },
+] as const;
+
+const renewalExamples = [
+  { data: "Renewal date and contract value", explains: "What the customer needs before renewing" },
+  { data: "Number of open support tickets", explains: "Which issue could make the customer leave" },
+  { data: "Product usage trend", explains: "Why usage changed and what the customer said" },
+] as const;
+
+// The Acme renewal story, grouped under Connect -> Prepare -> Review. Illustrative example, not a live record.
+const workflowSteps = [
+  {
+    label: "Connect",
+    title: "Bring the account into view",
+    body: "Bring up the account, support and contract details you are allowed to see for the renewal.",
+    image: { src: shot("account-success/account-health.webp"), alt: "Account health view for the Acme account" },
+  },
+  {
+    label: "Connect",
+    title: "Show the evidence",
+    body: "Show the source evidence behind it and flag the gaps that are still unresolved.",
+    image: { src: shot("common/knowledge.webp"), alt: "Source evidence gathered for the renewal" },
+  },
+  {
+    label: "Prepare",
+    title: "Prepare the next step",
+    body: "The AI Twin prepares a renewal-risk summary and a proposed next action.",
+    image: { src: shot("account-success/twin-action.webp"), alt: "AI Twin proposing a next action for the renewal" },
+  },
+  {
+    label: "Review",
+    title: "The person approves",
+    body: "The person reviews the proposal and approves the exact change to make.",
+    image: { src: shot("common/approvals.webp"), alt: "Approval queue where a person reviews the proposed change" },
+  },
+  {
+    label: "Review",
+    title: "The change is executed",
+    body: "The approved update is made in the tool that owns the record.",
+    image: { src: shot("account-success/dashboard.webp"), alt: "Account dashboard after the approved update" },
+  },
+  {
+    label: "Review",
+    title: "The record is kept",
+    body: "Show how the tool looks now, and the record kept of what was done.",
+    image: { src: shot("book-of-records/audit-trail.webp"), alt: "Record of what was done and who approved it" },
+  },
+] as const;
+
+const featureTabs = [
+  {
+    id: "twin",
+    label: "Spine Twin",
+    title: "Prepares the work for a person to approve.",
+    body: "Spine Twin prepares summaries and proposed next actions from the context you are allowed to see. A person approves every important action before it happens.",
+    href: "/twin",
+    image: { src: shot("account-success/twin-action.webp"), alt: "Spine Twin preparing a proposed action" },
+  },
+  {
+    id: "coworker",
+    label: "Spine Coworker",
+    title: "Gathers the records and evidence this person may use.",
+    body: "Spine Coworker watches authorized signals, assembles relevant evidence and prepares useful context. It does not send messages, change business records or commit the organization on its own.",
+    href: "/twin",
+    image: { src: shot("common/knowledge.webp"), alt: "Evidence gathered by Spine Coworker" },
+  },
+  {
+    id: "triage",
+    label: "Spine Triage Bot",
+    title: "Sorts what just arrived so a person sees what needs a decision.",
+    body: "Spine Triage Bot sorts a new message, file, or ticket so a person can see what needs attention. It does not write the record. The tools keep the record.",
+    href: "/triage-bot",
+    image: { src: shot("support/tickets.webp"), alt: "Incoming tickets sorted by Spine Triage Bot" },
+  },
+  {
+    id: "folder-monitor",
+    label: "Spine Folder Monitor",
+    title: "Watches the folders the business already uses.",
+    body: "Spine Folder Monitor notices new and changed files in the folders your team already works in. The file stays in the folder.",
+    href: "/folder-monitor",
+    image: { src: shot("canvas/library-20261015.webp"), alt: "Library of files watched by Spine Folder Monitor" },
+  },
+] as const;
+
+const teams = [
+  { icon: HeartHandshake, name: "Customer Success", line: "Renewals with the full account picture.", href: "/solutions/customer-success" },
+  { icon: Handshake, name: "Sales", line: "Deals with the history behind them.", href: "/solutions/sales" },
+  { icon: Megaphone, name: "Marketing", line: "Campaigns tied to the accounts they reach.", href: "/solutions/marketing" },
+  { icon: LifeBuoy, name: "Customer Support", line: "Tickets with the account context in view.", href: "/solutions/customer-support" },
+  { icon: BadgeDollarSign, name: "Finance", line: "Numbers with the reasons behind them.", href: "/solutions/finance" },
+  { icon: Settings2, name: "Operations", line: "Handovers that do not start from zero.", href: "/solutions/operations" },
+  { icon: Users, name: "RevOps", line: "One view across sales, success and finance.", href: "/solutions/revops" },
+  { icon: Building2, name: "Founders", line: "The whole business in one reviewed picture.", href: "/solutions/founders" },
+  { icon: Briefcase, name: "Services", line: "Client work that keeps its context.", href: "/solutions/services" },
+] as const;
+
+const faqs = [
+  {
+    question: "What is the difference between Spine InnovTech and SpineWorkspace?",
+    answer: "Spine InnovTech is the company. SpineWorkspace is our flagship product, where people and AI work from the same business context.",
+  },
+  {
+    question: "Does SpineWorkspace replace our existing tools?",
+    answer: "No. Your existing tools stay the place of record. SpineWorkspace reads and writes with their permission, never instead of them.",
+  },
+  {
+    question: "Can the AI change our records on its own?",
+    answer: "No. AI prepares the work. A person approves every important action before it happens, and the approved change is made in the tool that owns the record.",
+  },
+  {
+    question: "What information can the AI see?",
+    answer: "Only what the person is allowed to see in the connected tools. Permissions stay with the tools that own the data.",
+  },
+  {
+    question: "Who is it built for first?",
+    answer: "Account and customer success teams. Other teams, such as sales, finance and operations, can see how SpineWorkspace fits their work on the solutions pages.",
+  },
 ] as const;
 
 const buildPoints = [
@@ -106,292 +228,151 @@ const buildPoints = [
   "Work carries on from one AI tool to the next.",
 ] as const;
 
-const companyPoints = [
-  "Spine InnovTech builds SpineWorkspace.",
-  "People and AI can see the same facts about the work.",
-  "A person stays in charge.",
-] as const;
+const articles = INSIGHT_ARTICLES.map((article) => ({
+  href: `/insights/${article.slug}`,
+  category: article.category,
+  title: article.title,
+}));
 
-const bento = "auto-rows-auto sm:grid-cols-2 lg:grid-cols-3";
-const bodyText = "text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#4E607A]";
-const plainRow =
-  "rounded-2xl border border-[#D6E8F8] bg-white/70 px-5 py-4 text-sm leading-7 text-[#4E607A]";
-
-const container = "mx-auto max-w-[1320px] px-5 sm:px-8 lg:px-12";
-const heading = "text-[length:min(clamp(2rem,4vw,3.8rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.045em]";
-const primaryButton = "inline-flex min-h-12 items-center gap-3 rounded-xl bg-[#006FE8] px-6 text-[14px] font-semibold text-white shadow-[0_6px_18px_rgba(0,111,232,0.28)] transition-all hover:bg-[#0055B8] hover:shadow-[0_10px_24px_rgba(0,111,232,0.36)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]";
-const secondaryButton = "inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#CBE5FA] bg-white px-5 text-[14px] font-semibold text-[#082B5E] shadow-2xs hover:bg-[#F0F8FF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#006FE8]";
-const phaseTint: Record<string, string> = {
-  Connect: "bg-[#EAF5FC] text-[#006FE8] border-[#CCE3F5]",
-  Prepare: "bg-[#F3E8FF] text-[#7C3AED] border-[#E9D5FF]",
-  Review: "bg-[#E8F9F0] text-[#059669] border-[#BBF0D2]",
-};
+function RenewalExampleTable() {
+  return (
+    <div className="max-w-3xl">
+      <div className="sx-card overflow-x-auto rounded-xl border">
+        <table className="w-full text-left text-sm">
+          <caption className="sr-only">Illustrative example of data and what helps explain it</caption>
+          <thead className="sx-muted sx-title">
+            <tr>
+              <th scope="col" className="px-4 py-3 font-semibold">Data</th>
+              <th scope="col" className="px-4 py-3 font-semibold">What helps explain it</th>
+            </tr>
+          </thead>
+          <tbody>
+            {renewalExamples.map((row) => (
+              <tr key={row.data} className="sx-line border-t">
+                <th scope="row" className="sx-title w-1/2 px-4 py-3 align-top font-medium">{row.data}</th>
+                <td className="sx-body w-1/2 px-4 py-3 align-top leading-6">{row.explains}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="sx-body mt-4 text-sm leading-relaxed md:text-base">
+        {"A conversation is data too. It adds context when it helps you understand the customer\u2019s situation. These are examples, not separate boxes."}
+      </p>
+    </div>
+  );
+}
 
 export function InnovLabsHome() {
   return (
-    <div className="bg-white text-[#082B5E]">
-      {/* PART 1 — HERO + CUSTOMER PROBLEM */}
-      <section aria-labelledby="company-title" className="relative overflow-hidden border-b border-[#D6E8F8] bg-gradient-to-b from-[#EBF7FF] via-[#F0F8FF] to-white">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-15%,rgba(0,111,232,0.12),transparent_70%)]" aria-hidden />
-        <div className={container + " relative z-10 py-10 sm:py-14"}>
-          <div className="mx-auto max-w-[860px] text-center mb-10">
-            <BlurFade delay={0.02} inView>
-              <p className="inline-flex max-w-full items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1.5 text-[12px] font-semibold leading-snug text-[#006FE8] shadow-2xs">
-                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#006FE8]" />
-                <AnimatedShinyText shimmerWidth={130}>Spine InnovTech</AnimatedShinyText>
-              </p>
-            </BlurFade>
-            <BlurFade delay={0.06} inView>
-              <h1 id="company-title" className="font-display mt-4 text-[clamp(1.35rem,6.2vw,2.85rem)] font-bold leading-[1.15] tracking-[-.02em] text-[#032D60]">
-                <span className="block">Your Business Tools</span>
-                <span className="block">Your Business Context</span>
-                <span className="block">Your Decisions</span>
-                <span className="block">AI Acts With Your Approval</span>
-              </h1>
-            </BlurFade>
-            <BlurFade delay={0.1} inView>
-              <p className="mt-4 text-[length:min(17px,var(--marketing-body-size))] font-semibold text-[#082B5E]">
-                Your data and the story behind it, in one place.
-              </p>
-            </BlurFade>
-            <BlurFade delay={0.12} inView>
-              <BentoGrid className={bento + " mt-8 text-left"}>
-                {heroExplanationCards.map(({ name, description, Icon }) => (
-                  <BentoCard key={name} name={name} description={description} Icon={Icon} />
-                ))}
-              </BentoGrid>
-            </BlurFade>
-            <BlurFade delay={0.14} inView>
-              <div className="mt-6 flex flex-wrap justify-center gap-3">
-                <a href="#workflow" className={primaryButton}>
-                  See the workflow <ArrowRight className="h-4 w-4" aria-hidden />
-                </a>
-                <a href="https://spineworkspace.com" className={secondaryButton}>
-                  Explore SpineWorkspace
-                </a>
-              </div>
-            </BlurFade>
-          </div>
-
-          {/* Customer problem in plain words */}
-          <div className="mx-auto mt-10 max-w-[960px] border-t border-[#D6E8F8] pt-8">
-            <p className="text-center text-[13px] font-semibold uppercase tracking-[.18em] text-[#006FE8]">What is hard today</p>
-            <div className="mt-5 grid gap-4 md:grid-cols-3">
-              {problems.map((text) => (
-                <BlurFade key={text} delay={0.04} inView className="h-full">
-                  <p className={plainRow + " h-full"}>{text}</p>
-                </BlurFade>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="sx-surface">
+      <HeroSection
+        id="company-title"
+        chip="Spine InnovTech"
+        title={
+          <>
+            <span className="block">Your Business Tools</span>
+            <span className="block">Your Business Context</span>
+            <span className="block">Your Decisions</span>
+            <span className="block">AI Acts With Your Approval</span>
+          </>
+        }
+        lead="Your data and the story behind it, in one place."
+        primary={{ label: "See the workflow", href: "#workflow" }}
+        secondary={{ label: "Explore SpineWorkspace", href: SPINEWORKSPACE_URL }}
+      >
+        <BentoGrid className="auto-rows-auto text-left sm:grid-cols-2 lg:grid-cols-3">
+          {heroExplanationCards.map(({ name, description, Icon }) => (
+            <BentoCard key={name} name={name} description={description} Icon={Icon} />
+          ))}
+        </BentoGrid>
+      </HeroSection>
 
       {/* SPINEWORKSPACE BLOCK — right after the hero, with the workbench diagram */}
-      <section id="spineworkspace" aria-labelledby="home-spineworkspace-title" className="scroll-mt-24 bg-white py-14 sm:py-16 border-b border-[#D6E8F8]">
-        <div className={container}>
-          <div className="mx-auto max-w-[820px] text-center">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-              SpineWorkspace
-            </p>
-            <h2 id="home-spineworkspace-title" className={heading + " mt-4"}>Connected context. Human control. AI-ready.</h2>
-            <p className="mt-4 text-[length:min(17px,var(--marketing-body-size))] font-semibold text-[#082B5E]">Your tools. Your context. Your decisions.</p>
-            <div className="mt-6 flex justify-center">
-              <a href="https://spineworkspace.com" className={primaryButton}>
-                Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
-              </a>
-            </div>
-          </div>
-          <BlurFade delay={0.08} inView className="mt-9 w-full">
-            <CorporateOrbitalHero />
-          </BlurFade>
+      <Section id="spineworkspace" labelledBy="home-spineworkspace-title" className="pt-4 md:pt-8">
+        <SectionHeader
+          id="home-spineworkspace-title"
+          eyebrow="SpineWorkspace"
+          title="Connected context. Human control. AI-ready."
+          intro="Your tools. Your context. Your decisions."
+        />
+        <div className="mt-8 flex justify-center">
+          <SectionLink action={{ label: "Explore SpineWorkspace", href: SPINEWORKSPACE_URL }} />
         </div>
-      </section>
+        <BlurFade delay={0.08} inView className="mt-12 w-full">
+          <CorporateOrbitalHero />
+        </BlurFade>
+      </Section>
 
-      {/* PART 2 — ONE WORKFLOW, SHOWN END TO END */}
-      <section id="workflow" aria-labelledby="home-workflow-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
-        <div className={container}>
-          <div className="flex flex-wrap items-center gap-3">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-              One workflow, end to end
-            </p>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-3 py-0.5 text-[11px] font-semibold text-[#7C3AED]">
-              Illustrative example
-            </span>
-          </div>
-          <h2 id="home-workflow-title" className={heading + " mt-5 max-w-[820px]"}>See how it works: a customer renewal</h2>
-          <p className={bodyText + " mt-4 max-w-[760px]"}>
-            A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce, Zendesk and Gmail.
-          </p>
+      <LogoStripSection />
 
-          <div className="mt-8 max-w-[820px] overflow-x-auto rounded-2xl border border-[#D6E8F8]">
-            <table className="w-full text-left text-sm">
-              <caption className="sr-only">Illustrative example of data and what helps explain it</caption>
-              <thead className="bg-[#F0F8FF] text-[#082B5E]">
-                <tr>
-                  <th scope="col" className="px-4 py-3 font-semibold">Data</th>
-                  <th scope="col" className="px-4 py-3 font-semibold">What helps explain it</th>
-                </tr>
-              </thead>
-              <tbody>
-                {renewalExamples.map((row) => (
-                  <tr key={row.data} className="border-t border-[#D6E8F8]">
-                    <th scope="row" className="w-1/2 px-4 py-3 align-top font-medium text-[#082B5E]">{row.data}</th>
-                    <td className="w-1/2 px-4 py-3 align-top leading-6 text-[#4E607A]">{row.explains}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className={bodyText + " mt-4 max-w-[760px]"}>
-            A conversation is data too. It adds context when it helps you understand the customer’s situation. These are examples, not separate boxes.
-          </p>
+      <ProblemSection eyebrow="What is hard today" title="Work stalls when context is scattered." items={problems} />
 
-          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {workflowSteps.map((step, index) => (
-              <BlurFade key={step.title} delay={index * 0.05} inView className="h-full">
-                <MagicCard className="h-full" innerClassName="flex h-full gap-3 p-4">
-                  <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span className={`rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${phaseTint[step.phase]}`}>{step.phase}</span>
-                      <h3 className="text-sm font-semibold text-[#082B5E]">{step.title}</h3>
-                    </div>
-                    <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
-                  </div>
-                </MagicCard>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BentoSection id="principles" eyebrow="How people stay in control" title="Three principles the product runs on." items={principles} />
 
-      {/* PART 3 — THREE OPERATING PRINCIPLES */}
-      <section id="principles" aria-labelledby="home-principles-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-16 sm:py-20">
-        <div className={container}>
-          <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            How people stay in control
-          </p>
-          <h2 id="home-principles-title" className={heading + " mt-5 max-w-[820px]"}>Three principles the product runs on.</h2>
-          <div className="mt-9 grid gap-5 md:grid-cols-3">
-            {principles.map(({ icon: Icon, title, body: pbody }, index) => (
-              <BlurFade key={title} delay={index * 0.06} inView className="h-full">
-                <MagicCard className="h-full" innerClassName="p-6 sm:p-7">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#CBE5FA] bg-[#F0F8FF] text-[#006FE8] shadow-2xs">
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </span>
-                  <h3 className="mt-5 text-[length:var(--marketing-card-size)] font-semibold leading-snug">{title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#4E607A]">{pbody}</p>
-                </MagicCard>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StepsSection
+        id="workflow"
+        eyebrow="One workflow, end to end"
+        badge="Illustrative example"
+        title="See how it works: a customer renewal"
+        intro="A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce, Zendesk and Gmail."
+        aside={<RenewalExampleTable />}
+        steps={workflowSteps}
+      />
 
-      {/* PART 4 — WHO IT SERVES FIRST */}
-      <section id="who-it-serves" aria-labelledby="home-audience-title" className="scroll-mt-24 bg-white py-16 sm:py-20">
-        <div className={container}>
-          <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-[#EAF5FC] px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            Who it serves first
-          </p>
-          <h2 id="home-audience-title" className={heading + " mt-5 max-w-[820px]"}>Built first for account and customer success teams.</h2>
-          <ul className={"mt-4 max-w-[760px] list-disc space-y-2 pl-5 " + bodyText}>
-            {audiencePoints.map((line) => (
-              <li key={line}>{line}</li>
-            ))}
-          </ul>
-          <p className="mt-5 text-sm leading-7 text-[#4E607A]">
-            Other teams — sales, finance, operations and more —{" "}
-            <a href="https://spineworkspace.com" className="font-semibold text-[#006FE8] hover:underline">see how SpineWorkspace fits their work</a>.
-          </p>
-        </div>
-      </section>
+      <FounderNoteSection
+        quote="The lasting need was a shared picture of the work that stays with the next person. That is what we set out to build."
+        name="Spine InnovTech"
+        role="Why we started"
+        href="/about"
+      />
+
+      <FeatureTabsSection id="features" eyebrow="Inside SpineWorkspace" title="Helpers that prepare the work. People decide." tabs={featureTabs} />
 
       <TestimonialsSection heading="What the work looks like" />
 
       <WorkspaceBenefits />
 
-      {/* PART 5 — CONCISE ARCHITECTURE (3-scene storyboard, plain copy) */}
-      <section id="architecture-story" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-14 sm:py-18">
-        <div className={container}>
-          <div className="mb-8 max-w-[820px]">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-              How it is built
-            </p>
-            <h2 className={heading + " mt-3"}>From your tools to work that keeps going.</h2>
-            <ul className={"mt-4 list-disc space-y-2 pl-5 " + bodyText}>
-              {buildPoints.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-            <p className="mt-5 text-sm leading-7 text-[#4E607A]">
-              <Link href="/platform" className="font-semibold text-[#006FE8] hover:underline">More detail is on the platform pages.</Link>
-            </p>
-          </div>
+      {/* CONCISE ARCHITECTURE (3-scene storyboard, plain copy) */}
+      <Section id="architecture-story" labelledBy="home-architecture-title" tone="muted">
+        <SectionHeader id="home-architecture-title" eyebrow="How it is built" title="From your tools to work that keeps going."
+          intro="Three parts: your information brought together, Agentic Governance (AI prepares the work and a person approves it), and work that carries on from one AI tool to the next."
+          align="left"
+        />
+        <ul className="sx-body mt-4 max-w-3xl list-disc space-y-2 pl-5 text-base leading-relaxed">
+          {buildPoints.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
+        <p className="mt-5 text-sm">
+          <Link href="/platform" className="sx-accent font-semibold hover:underline">
+            More detail is on the platform pages.
+          </Link>
+        </p>
+        <div className="mt-10">
           <CorporateArchitectureStoryboard />
         </div>
-      </section>
+      </Section>
 
-      {/* COMPANY STORY, PRODUCT CTA, INSIGHTS TEASER */}
-      <section id="company-insights" aria-labelledby="home-company-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F8FBFF] py-16 sm:py-20">
-        <div className={container}>
-          <div className="max-w-[820px]">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-              Spine InnovTech
-            </p>
-            <h2 id="home-company-title" className={heading + " mt-5"}>The company behind SpineWorkspace.</h2>
-            <ul className={"mt-4 list-disc space-y-2 pl-5 " + bodyText}>
-              {companyPoints.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/company" className={primaryButton}>
-                Discover our approach <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-              <a href="https://spineworkspace.com" className={secondaryButton}>
-                Explore SpineWorkspace
-              </a>
-            </div>
-          </div>
+      <TeamStripSection
+        id="who-it-serves"
+        eyebrow="Who it serves first"
+        title="Built first for account and customer success teams."
+        intro="Renewals bring the account record, support history and contract terms together. The team can see the risk. A person decides what to do."
+        teams={teams}
+      />
 
-          {/* Insights teaser — points at the 3 /insights articles */}
-          <div className="mt-12">
-            <div className="flex flex-wrap items-end justify-between gap-4">
-              <h3 className="text-[length:var(--marketing-card-size)] font-semibold tracking-[-.02em] text-[#082B5E]">From our Insights</h3>
-              <Link href="/insights" className="inline-flex items-center gap-2 text-sm font-semibold text-[#006FE8] hover:underline">
-                View all <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-            <div className="mt-6 grid gap-6 md:grid-cols-3">
-              {INSIGHT_ARTICLES.map((article) => (
-                <Link
-                  key={article.slug}
-                  href={`/insights/${article.slug}`}
-                  className="group rounded-2xl border border-[#D6E8F8] bg-white p-6 shadow-2xs hover:border-[#006FE8] hover:shadow-md transition-all"
-                >
-                  <span className="rounded-full bg-[#EAF7FF] px-2.5 py-0.5 text-[11px] font-semibold text-[#0070DC]">{article.category}</span>
-                  <h4 className="mt-4 text-[17px] font-semibold leading-snug text-[#002B64] group-hover:text-[#0070DC] transition-colors">
-                    {article.title}
-                  </h4>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#0070DC]">
-                    Read on Insights <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <FaqBlockSection tone="muted" items={faqs} />
+
+      <ArticlesSection title="From our Insights" articles={articles} />
+
+      <CtaBandSection
+        id="company-insights"
+        title="The company behind SpineWorkspace."
+        body="Spine InnovTech builds SpineWorkspace. People and AI can see the same facts about the work. A person stays in charge."
+        primary={{ label: "Discover our approach", href: "/company" }}
+        secondary={{ label: "Explore SpineWorkspace", href: SPINEWORKSPACE_URL }}
+      />
     </div>
   );
 }
