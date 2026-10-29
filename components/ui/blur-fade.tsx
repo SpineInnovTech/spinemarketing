@@ -5,6 +5,7 @@ import {
   AnimatePresence,
   motion,
   useInView,
+  useReducedMotion,
   type MotionProps,
   type Variants,
 } from "framer-motion"
@@ -45,6 +46,7 @@ export function BlurFade({
   ...props
 }: BlurFadeProps) {
   const ref = useRef(null)
+  const reduceMotion = useReducedMotion()
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
   const isInView = !inView || inViewResult
   const defaultVariants: Variants = {
@@ -69,6 +71,14 @@ export function BlurFade({
     hiddenFilter != null &&
     visibleFilter != null &&
     hiddenFilter !== visibleFilter
+
+  if (reduceMotion) {
+    return (
+      <div ref={ref} className={className}>
+        {children}
+      </div>
+    )
+  }
 
   return (
     <AnimatePresence>

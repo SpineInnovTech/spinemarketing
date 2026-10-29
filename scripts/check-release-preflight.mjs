@@ -45,7 +45,9 @@ check(
 );
 
 const home = read("app/page.tsx");
-const banner = read("components/marketing/innovlabs-home.tsx");
+const banner =
+  read("components/marketing/innovlabs-home.tsx") +
+  read("lib/page-templates/corporate-home-t1.tsx");
 check(home.includes("InnovLabsHome"), "homepage no longer renders Spine InnovTech");
 check(banner.includes("Spine InnovTech") && banner.includes("Connecting business context for humans and AI, with people in control."), "company identity and product introduction missing");
 check(!banner.includes("We build the foundation for connected business work."), "old homepage H1 must be absent from the hero");
@@ -84,6 +86,7 @@ const inspected = [
   "components/footer.tsx",
   "components/header.tsx",
   "components/marketing/innovlabs-home.tsx",
+  "lib/page-templates/corporate-home-t1.tsx",
   "app/company/page.tsx",
   "app/page.tsx",
 ];

@@ -62,7 +62,9 @@ for (const file of publicSurface) {
   }
 }
 const home = source("app/page.tsx");
-const banner = source("components/marketing/innovlabs-home.tsx");
+const banner =
+  source("components/marketing/innovlabs-home.tsx") +
+  source("lib/page-templates/corporate-home-t1.tsx");
 const footer = source("components/footer.tsx");
 const meta = source("app/layout.tsx");
 const policy = source("lib/route-policy.ts");

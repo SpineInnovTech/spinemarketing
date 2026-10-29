@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Layers3 } from "lucide-react";
 import { PUBLIC_SOLUTIONS, marketingPathForSolution } from "@/lib/solution-taxonomy";
+import { solutionsHubCopy } from "@/lib/plain-language/solutions-hub";
 import { SOLUTION_DOMAINS, getSolutionDomain } from "@/lib/solution-domains";
 import { WorkbenchViewExplorer } from "@/components/marketing/workbench-view-explorer";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
@@ -19,23 +20,24 @@ export function SolutionsContent() {
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-[#F0F8FF] px-3.5 py-1 text-xs font-bold uppercase tracking-[.1em] text-[#006FE8] shadow-2xs">
               <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
               <AnimatedShinyText className="text-xs font-bold uppercase tracking-[.1em]">
-                Solutions Catalogue · Spine InnovTech
+                {solutionsHubCopy.chip}
               </AnimatedShinyText>
             </div>
             <h1 className="mt-4 max-w-[1000px] text-[length:min(clamp(3.2rem,6vw,5.6rem),var(--marketing-title-size))] font-bold leading-[1.06] tracking-[-.055em] text-[#032D60]">
-              One business context. <span className="text-[#006FE8]">Different work.</span>
+              {solutionsHubCopy.headline}
             </h1>
             <p className="mt-6 max-w-[790px] text-[length:min(18px,var(--marketing-body-size))] leading-[1.8] text-[#4E607A]">
-              Finance, customer success, product, and leadership need different perspectives, not disconnected versions of business truth. Explore how the same contextual workspace supports different responsibilities, goals, and decisions.
+              {solutionsHubCopy.subhead}
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <Link href="/product" className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition hover:bg-[#0055B8]">
-                Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
+              <Link href={solutionsHubCopy.primaryCta.href} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(0,111,232,0.25)] transition hover:bg-[#0055B8]">
+                {solutionsHubCopy.primaryCta.label} <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
-              <Link href="/contact" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#006FE8] bg-white px-6 text-sm font-semibold text-[#082B5E] shadow-2xs transition hover:bg-[#EBF7FF]">
-                Discuss your use case <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
+              <Link href={solutionsHubCopy.secondaryCta.href} className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#006FE8] bg-white px-6 text-sm font-semibold text-[#082B5E] shadow-2xs transition hover:bg-[#EBF7FF]">
+                {solutionsHubCopy.secondaryCta.label} <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
               </Link>
             </div>
+            <p className="mt-5 text-sm text-[#4E607A]">{solutionsHubCopy.trustLine}</p>
           </BlurFade>
         </div>
       </section>
@@ -43,12 +45,12 @@ export function SolutionsContent() {
         <div className="mx-auto max-w-[1220px]">
           <p className="inline-flex items-center gap-2 rounded-full border border-[#CBE5FA] bg-white px-3 py-0.5 text-xs font-semibold uppercase tracking-[.22em] text-[#006FE8]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-            By role and function
+            {solutionsHubCopy.teamsSection.label}
           </p>
-          <h2 className="mt-5 max-w-[840px] text-[length:min(clamp(2.4rem,4.6vw,4.3rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.055em] text-[#082B5E]">Relevant views. Shared context. Clear authority.</h2>
-          <p className="mt-6 max-w-[810px] text-[16px] leading-[1.85] text-[#4E607A]">
-            The groups below show the kinds of work and common patterns, not a promise that every connected tool or role-specific view is set up for every customer.
-          </p>
+          <h2 className="mt-5 max-w-[840px] text-[length:min(clamp(2.4rem,4.6vw,4.3rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.055em] text-[#082B5E]">
+            {solutionsHubCopy.teamsSection.headline}
+          </h2>
+          <p className="mt-6 max-w-[810px] text-[16px] leading-[1.85] text-[#4E607A]">{solutionsHubCopy.teamsSection.intro}</p>
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {PUBLIC_SOLUTIONS.map((solution, index) => (
               <BlurFade key={solution.id} delay={0.04 * (index % 6)} className="h-full">
