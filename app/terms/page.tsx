@@ -5,6 +5,8 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/marketing/page-hero"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 import { COMPANY_LEGAL_NAME } from "@/lib/company"
+import { PlainSummaryBox } from "@/components/sections/plain-summary-box"
+import { termsPlainSummary } from "@/lib/plain-language/legal"
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | Spine InnovTech",
@@ -35,6 +37,11 @@ export default function TermsPage() {
           secondaryCta={{ label: "Security overview", href: "/security" }}
         />
         <section className="mx-auto max-w-[800px] px-6 py-16 md:px-16">
+          <PlainSummaryBox>
+            {termsPlainSummary.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </PlainSummaryBox>
           <div className="space-y-10 text-[15px] font-medium leading-[1.7] text-foreground/80">
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">1. Acceptance of terms</h2>

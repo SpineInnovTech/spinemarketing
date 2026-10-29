@@ -63,7 +63,7 @@ export const headerNavigation: HeaderNavItem[] = [
         label: "Company overview",
         href: "/company",
         icon: Building2,
-        desc: "We build for the work between systems.",
+        desc: "Why we build for the work between your apps.",
         featured: true,
       },
       {

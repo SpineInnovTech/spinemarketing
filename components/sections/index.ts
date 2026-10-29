@@ -1,0 +1,9 @@
+export { FourStepStripSection } from "./four-step-strip-section";
+export { LogoStripSection } from "./logo-strip-section";
+export { ProblemSection } from "./problem-section";
+export { BentoSolutionSection } from "./bento-solution-section";
+export { FounderNoteSection } from "./founder-note-section";
+export { FeatureTabsSection } from "./feature-tabs-section";
+export { TeamMarqueeSection } from "./team-marquee-section";
+export { HomeFaqSection } from "./home-faq-section";
+export { PlainSummaryBox } from "./plain-summary-box";
