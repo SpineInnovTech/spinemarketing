@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from "next/link";
 import { ArrowRight, BarChart3, Cable, Eye, ListChecks, MessagesSquare, ShieldCheck, UserCheck, Workflow } from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
@@ -126,8 +127,13 @@ const phaseTint: Record<string, string> = {
   Prepare: "bg-[#F3E8FF] text-[#7C3AED] border-[#E9D5FF]",
   Review: "bg-[#E8F9F0] text-[#059669] border-[#BBF0D2]",
 };
+=======
+import { CorporateHomeT1 } from "@/lib/page-templates/corporate-home-t1";
+>>>>>>> 8a2602c (feat: Magic UI section library and plain-language corporate rollout)
 
+/** Corporate homepage — T1 Magic UI layout (see lib/page-templates/corporate-home-t1.tsx). */
 export function InnovLabsHome() {
+<<<<<<< HEAD
   return (
     <div className="bg-white text-[#082B5E]">
       {/* PART 1 — HERO + CUSTOMER PROBLEM */}
@@ -394,4 +400,7 @@ export function InnovLabsHome() {
       </section>
     </div>
   );
+=======
+  return <CorporateHomeT1 />;
+>>>>>>> 8a2602c (feat: Magic UI section library and plain-language corporate rollout)
 }
