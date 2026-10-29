@@ -73,7 +73,7 @@ const contact = source("app/contact/content.tsx");
 const form = source("components/lead-form.tsx");
 
 check(home.includes("InnovLabsHome"), "corporate homepage component not wired");
-check(banner.includes("Spine InnovTech") && banner.includes("Connecting business context for humans and AI, with people in control."), "company identity and product introduction absent");
+check(banner.includes("Spine InnovTech") && banner.includes("Your Business Tools") && banner.includes("Your Business Context") && banner.includes("Your Decisions") && banner.includes("AI Acts With Your Approval"), "company identity and product introduction absent");
 check(source("components/header.tsx").includes("headerNavigation"), "header must render the full corporate navigation");
 for (const label of ["Company", "Technology", "Insights"]) {
   check(source("lib/navigation.ts").includes(`label: "${label}"`), `missing corporate navigation category: ${label}`);
@@ -88,7 +88,7 @@ for (const heading of ["Company", "Technology", "Product", "Perspectives"]) {
   check(source("lib/navigation.ts").includes(`heading: "${heading}"`), `footer missing master group: ${heading}`);
 }
 check(
-  source("lib/navigation.ts").includes('export const COMPANY_TAGLINE = "Connecting business context for humans and AI, with people in control.";') &&
+  source("lib/navigation.ts").includes('export const COMPANY_TAGLINE = "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.";') &&
     footer.includes("COMPANY_TAGLINE"),
   "footer must carry the short brand statement",
 );

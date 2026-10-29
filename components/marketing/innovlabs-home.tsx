@@ -63,6 +63,21 @@ const principles = [
   },
 ] as const;
 
+const renewalExamples = [
+  {
+    data: "Renewal date and contract value",
+    explains: "What the customer needs before renewing",
+  },
+  {
+    data: "Number of open support tickets",
+    explains: "Which issue could make the customer leave",
+  },
+  {
+    data: "Product usage trend",
+    explains: "Why usage changed and what the customer said",
+  },
+] as const;
+
 const problems = [
   "Answers live in many tools, so the full picture is never in one place.",
   "People copy facts between systems by hand, and detail gets lost.",
@@ -95,16 +110,22 @@ export function InnovLabsHome() {
               </p>
             </BlurFade>
             <BlurFade delay={0.06} inView>
-              <h1 id="company-title" className="font-display mt-4 text-[length:min(clamp(2.5rem,4.8vw,4.2rem),var(--marketing-title-size))] font-bold leading-[1.08] tracking-[-.015em] text-[#032D60]">
-                Connecting business context for humans and AI, with people in control.
+              <h1 id="company-title" className="font-display mt-4 text-[clamp(1.35rem,6.2vw,2.85rem)] font-bold leading-[1.15] tracking-[-.02em] text-[#032D60]">
+                <span className="block">Your Business Tools</span>
+                <span className="block">Your Business Context</span>
+                <span className="block">Your Decisions</span>
+                <span className="block">AI Acts With Your Approval</span>
               </h1>
             </BlurFade>
             <BlurFade delay={0.1} inView>
               <p className={body + " mt-4 max-w-[720px] mx-auto"}>
-                Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.
+                Data shows what is happening. Context helps explain why. Together, they help you decide what to do next.
               </p>
               <p className={body + " mt-3 max-w-[720px] mx-auto"}>
-                Business context means the facts about the work, kept together, so people and AI are looking at the same picture.
+                SpineWorkspace brings information from your tools together with the conversations and history behind it. People and AI can see the full picture and work out the next step. Changes to your tools happen only with your approval.
+              </p>
+              <p className={body + " mt-3 max-w-[720px] mx-auto font-semibold text-[#082B5E]"}>
+                Your data and the story behind it, in one place.
               </p>
             </BlurFade>
             <BlurFade delay={0.14} inView>
@@ -167,9 +188,32 @@ export function InnovLabsHome() {
               Illustrative example
             </span>
           </div>
-          <h2 id="home-workflow-title" className={heading + " mt-5 max-w-[820px]"}>One workflow, shown end to end.</h2>
+          <h2 id="home-workflow-title" className={heading + " mt-5 max-w-[820px]"}>See how it works: a customer renewal</h2>
           <p className={body + " mt-4 max-w-[760px]"}>
             A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce, Zendesk and Gmail. The steps group under Connect, Prepare and Review.
+          </p>
+
+          <div className="mt-8 max-w-[820px] overflow-x-auto rounded-2xl border border-[#D6E8F8]">
+            <table className="w-full text-left text-sm">
+              <caption className="sr-only">Illustrative example of data and what helps explain it</caption>
+              <thead className="bg-[#F0F8FF] text-[#082B5E]">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-semibold">Data</th>
+                  <th scope="col" className="px-4 py-3 font-semibold">What helps explain it</th>
+                </tr>
+              </thead>
+              <tbody>
+                {renewalExamples.map((row) => (
+                  <tr key={row.data} className="border-t border-[#D6E8F8]">
+                    <th scope="row" className="w-1/2 px-4 py-3 align-top font-medium text-[#082B5E]">{row.data}</th>
+                    <td className="w-1/2 px-4 py-3 align-top leading-6 text-[#4E607A]">{row.explains}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className={body + " mt-4 max-w-[760px]"}>
+            A conversation is data too. It adds context when it helps you understand the customer’s situation. These are examples, not separate boxes.
           </p>
 
           <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
