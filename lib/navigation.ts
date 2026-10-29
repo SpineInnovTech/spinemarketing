@@ -225,5 +225,5 @@ export const footerUtilityLinks: { name: string; href: string }[] = [
   { name: "Site map", href: "/site-map" },
 ];
 
-export const COMPANY_TAGLINE = "Connecting business context for humans and AI, with people in control.";
+export const COMPANY_TAGLINE = "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.";
 export const PRODUCT_ONELINER = "SpineWorkspace is the workspace where people and AI share one view of the business, while your existing tools keep the record.";

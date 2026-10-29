@@ -9,19 +9,21 @@ enforces the homepage pins and the banned-copy list.
 
 ## Locked copy (exact words)
 
-- **Home H1:** Connecting business context for humans and AI, with people in control.
-- **Lead:** Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.
+- **Home H1:** four lines, in order: Your Business Tools / Your Business Context / Your Decisions / AI Acts With Your Approval.
+- **Relationship:** Data shows what is happening. Context helps explain why. Together, they help you decide what to do next.
+- **Supporting paragraph:** SpineWorkspace brings information from your tools together with the conversations and history behind it. People and AI can see the full picture and work out the next step. Changes to your tools happen only with your approval.
+- **Positioning line:** Your data and the story behind it, in one place.
 - **Eyebrow pill:** Spine InnovTech
 - **CTAs:** "See the workflow" (#workflow, primary); "Explore SpineWorkspace" (https://spineworkspace.com, secondary)
 - **SpineWorkspace block:** label "SpineWorkspace"; H2 "Connected context. Human control. AI-ready."; line "Your tools. Your context. Your decisions."
 - **Diagram:** "Controlled execution", caption "Approved and traceable", badge "Human-approved"
 - **02 tab:** People approve the AI
 - **"Governed execution" became "Controlled execution".** Keep the `#governed-execution` anchor id and all URLs.
-- **Footer tagline:** Connecting business context for humans and AI, with people in control.
+- **Footer tagline:** Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.
 - **Footer closing line (gate-pinned):** Your tools keep the record. Your people keep the authority. Context continues with the work.
 - **Principle titles:** Your tools keep the record. / Your people keep the authority. / Context continues with the work.
-- **Tab title:** Spine InnovTech — Connecting Business Context for Humans and AI
-- **Home share title (og/twitter):** Connecting business context for humans and AI, with people in control.
+- **Tab title:** Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.
+- **Home share title (og/twitter):** Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.
 - **Header:** 3 dropdowns with 13 sub-links (Company 5, Technology 5, Our philosophy 3); Insights and Contact as direct links; CTA "Explore SpineWorkspace →"
 
 ## Brand

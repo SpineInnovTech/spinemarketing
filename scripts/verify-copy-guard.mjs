@@ -140,11 +140,34 @@ const JARGON_ALLOW = [
 
 // Positive copy the homepage MUST carry (the locked canon).
 const HOME_REQUIRED = [
-  // H1
-  "Connecting business context for humans and AI, with people in control.",
-  // Lead
-  "Spine InnovTech connects your tools, people, and AI through shared business context",
-  "so teams can move from insight to action, with people in control.",
+  // H1, each line
+  "Your Business Tools",
+  "Your Business Context",
+  "Your Decisions",
+  "AI Acts With Your Approval",
+  // Title and footer, one line
+  "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.",
+  // Relationship
+  "Data shows what is happening.",
+  "Context helps explain why.",
+  "Together, they help you decide what to do next.",
+  // Supporting paragraph and positioning line
+  "SpineWorkspace brings information from your tools together with the conversations and history behind it.",
+  "People and AI can see the full picture and work out the next step.",
+  "Changes to your tools happen only with your approval.",
+  "Your data and the story behind it, in one place.",
+  // Renewal example
+  "See how it works: a customer renewal",
+  "Illustrative example",
+  "What helps explain it",
+  "Renewal date and contract value",
+  "What the customer needs before renewing",
+  "Number of open support tickets",
+  "Which issue could make the customer leave",
+  "Product usage trend",
+  "Why usage changed and what the customer said",
+  "A conversation is data too.",
+  "These are examples, not separate boxes.",
   // SpineWorkspace block
   "Connected context. Human control. AI-ready.",
   "Your tools. Your context. Your decisions.",
@@ -155,6 +178,13 @@ const HOME_REQUIRED = [
   "Human-approved",
   "See the workflow",
   "Explore SpineWorkspace",
+];
+
+const HOME_FORBIDDEN = [
+  "Connecting business context for humans and AI, with people in control.",
+  "Business context means the facts about the work, kept together, so people and AI are looking at the same picture.",
+  "One workflow, shown end to end",
+  "Your business data and context, together—with people in control.",
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -230,6 +260,11 @@ if (!home) {
   for (const phrase of HOME_REQUIRED) {
     if (!home.includes(phrase)) {
       failures.push(`REQUIRED homepage copy missing: "${phrase}"`);
+    }
+  }
+  for (const phrase of HOME_FORBIDDEN) {
+    if (home.includes(phrase)) {
+      failures.push(`REMOVED homepage copy still present: "${phrase}"`);
     }
   }
 }
