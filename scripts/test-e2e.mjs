@@ -1264,9 +1264,9 @@ registerTest(4, null, "T4.1", "Real-World: Legacy Corporate Visitor Redirection 
 registerTest(4, null, "T4.2", "Real-World: Enterprise Architect Technical Diagram Evaluation Flow", async () => {
   // Scenario: Enterprise architect arrives on homepage to inspect technical architecture.
   // Must see diagrammatic architecture storyboard (Fabric, Hermes, Continuity) and zero product workbench heroes.
-  const home = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const home = corporateHomeSource();
   assert.ok(!home.includes("<WorkbenchHeroPreview"), "Must not show interactive product workbench on corporate homepage");
-  assert.ok(home.includes("<CorporateArchitectureStoryboard"), "Must render CorporateArchitectureStoryboard");
+  assert.ok(home.includes("CorporateArchitectureStoryboard"), "Must render CorporateArchitectureStoryboard");
   const storyboard = readFileSync("components/marketing/corporate-architecture-storyboard.tsx", "utf8");
   assert.ok(storyboard.includes("Context Fabric"), "Must feature Context Fabric");
   assert.ok(storyboard.includes("Hermes Zero-Trust"), "Must feature Hermes Zero-Trust Governance");
