@@ -3,8 +3,7 @@ import { Header } from "@/components/header-client"
 import { Footer } from "@/components/footer"
 import { InnovLabsHome } from "@/components/marketing/innovlabs-home"
 const homeTitle = "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.";
-const homeDescription =
-  "SpineWorkspace brings information from your tools together with the conversations and history behind it. People and AI can see the full picture and work out the next step. Changes to your tools happen only with your approval.";
+const homeDescription = "Your data and the story behind it, in one place.";
 
 export const metadata: Metadata = {
   title: { absolute: homeTitle },
