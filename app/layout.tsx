@@ -11,7 +11,6 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 // by next/font, so no runtime Google call and the CSP is unaffected.
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
   display: "swap",
   variable: "--font-jakarta",
 })
