@@ -12,14 +12,14 @@ for (let attempt = 1; attempt <= retries; attempt++) {
     const response = await fetch(url, { headers: { "Cache-Control": "no-cache" }, redirect: "follow", signal: AbortSignal.timeout(20000) });
     const html = await response.text();
     if (response.ok && new URL(response.url).hostname === new URL(origin).hostname &&
-        html.includes("Connecting business context for humans and AI, with people in control.") && html.includes("Spine InnovTech") &&
+        html.includes("Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.") && html.includes("Spine InnovTech") &&
         !html.includes("We build governed business context for humans and AI.") &&
         !html.includes("We build the foundation for connected business work.") &&
         !html.includes("Good morning, Operator")) {
       console.log(`Cloudflare production verified: ${origin} (HTTP ${response.status})`);
       process.exit(0);
     }
-    last = `HTTP ${response.status}; final host ${new URL(response.url).hostname}; product introduction ${html.includes("Connecting business context for humans and AI, with people in control.")}`;
+    last = `HTTP ${response.status}; final host ${new URL(response.url).hostname}; product introduction ${html.includes("Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.")}`;
   } catch (error) {
     last = String(error);
   }

@@ -24,8 +24,32 @@ const productAlias = redirects.find(([source]) => source === "/spineworkspace");
 if (!productAlias || productAlias[1] !== "/product" || productAlias[2] !== "301") {
   throw new Error("Legacy /spineworkspace entry must redirect internally to /product.");
 }
-if (!text.includes("Connecting business context for humans and AI, with people in control.") || !text.includes("Spine InnovTech")) {
+const homeTitle = "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.";
+if (!text.includes(homeTitle) || !text.includes("Spine InnovTech")) {
   throw new Error("Static export missing corporate hero/company identity.");
+}
+for (const line of [
+  "Data shows what is happening.",
+  "Context helps explain why.",
+  "Together, they help you decide what to do next.",
+  "Your data and the story behind it, in one place.",
+  "See how it works: a customer renewal",
+  "What helps explain it",
+  "A conversation is data too.",
+]) {
+  if (!text.includes(line)) throw new Error(`Static export missing locked homepage line: ${line}`);
+}
+if (text.includes("Connecting business context for humans and AI, with people in control.")) {
+  throw new Error("Static export still carries the previous homepage headline.");
+}
+if (text.includes("Business context means the facts about the work")) {
+  throw new Error("Static export still defines only business context.");
+}
+if (text.includes("One workflow, shown end to end")) {
+  throw new Error("Static export still introduces the renewal as the whole story.");
+}
+if (text.includes("Your business data and context, together")) {
+  throw new Error("Static export still carries the unused single headline.");
 }
 if (text.includes("We build the foundation for connected business work.")) {
   throw new Error("Static export still carries the old homepage H1.");
