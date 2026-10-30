@@ -42,7 +42,7 @@ export function AboutContent() {
             An account owner needs to know which commitments are at risk. A technical account lead needs to understand how an incident affects a customer's objectives. A manager needs to know whether the agreed action actually happened.
           </p>
           <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] leading-[1.95] text-[#536883]">
-            These questions give the work a purpose. They decide which records should be connected, which evidence matters and whose approval is needed. This is not a story about replacing the tools organizations already trust — it is about connecting business context so a person or AI counterpart can see what matters without losing the limits that protect the business.
+            These questions give the work a purpose. They decide which records should be connected, which evidence matters and whose approval is needed. This is not a story about replacing the tools organizations already trust — it is about connecting business context so a person or an AI assistant can see what matters without losing the limits that protect the business.
           </p>
           <p className="mt-5 text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.95] text-[#17375F]">
             Our direction is simple: a shared understanding of the business, useful teamwork between people and AI, and a clear, approved path from intention to a checked result.

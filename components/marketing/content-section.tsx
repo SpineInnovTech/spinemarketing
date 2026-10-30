@@ -54,7 +54,7 @@ const ASIDES: Record<string, Aside> = {
     kicker: "What you see",
     title: "Twin",
     rows: [
-      { term: "One counterpart", detail: "Twin is the user-facing AI counterpart." },
+      { term: "One assistant", detail: "Twin is the one AI assistant you talk to." },
       { term: "What is already open", detail: "Twin uses the tools already open for this task." },
       { term: "Not in the product", detail: "No second chat product and no model picker." },
     ],

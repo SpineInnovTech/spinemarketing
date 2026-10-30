@@ -32,9 +32,9 @@ const work = [
   },
   {
     icon: Waypoints,
-    type: "AI counterpart",
+    type: "AI assistant",
     title: "Spine Twin",
-    body: "A context-aware AI counterpart for gathering the right information, preparing work and proposing approved next steps.",
+    body: "The AI assistant that gathers the right information, prepares work and suggests next steps for a person to approve.",
     href: "/twin",
     external: false,
   },

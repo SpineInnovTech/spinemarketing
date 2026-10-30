@@ -190,12 +190,12 @@ const useCases = [
   {
     num: "03",
     title: "Human review queue",
-    desc: "Low-confidence matches surfaced in a resolution UI. You decide, not the algorithm.",
+    desc: "When the system is not sure two records are the same customer, it asks you. You decide, not the software.",
   },
   {
     num: "04",
-    title: "Canonical entity assembly",
-    desc: "Approved matches merge into one customer view across every tool.",
+    title: "One view per customer",
+    desc: "Once you confirm a match, records from every tool are joined into one customer view.",
   },
 ];
 

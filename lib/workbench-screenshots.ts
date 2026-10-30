@@ -223,7 +223,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
         desktop: "/images/workbench/account-success/account-health.webp",
         mobile: "/images/workbench/account-success/account-health-mobile.webp",
         badge: "Live Workbench Views",
-        alt: "Authentic Account Success view displaying deterministic demonstration fixture: Acme Corp story readiness score (100%), verified domain coverage indicators, and health signals.",
+        alt: "Account Success screen with sample data: how complete the Acme Corp customer story is (100%), which sources are covered, and customer health warnings.",
       },
       dashboard: {
         id: "dashboard",
@@ -244,13 +244,13 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
     },
     valueNarrative: {
       whatUsersSee:
-      "Comprehensive account overview displaying captured QA data: story readiness score (100%), simulated domain coverage (CRM, support tickets, product telemetry), risk indicators, and contextual Twin recommendations.",
+      "A full customer overview, using sample test data: how complete the customer’s story is (100%), which sources are covered (CRM, support tickets, product usage), warning signs, and suggestions from Twin, the AI assistant.",
       whatTheyCanDo:
-        "Review unified customer health signals, examine open support escalation risks, evaluate contract renewals, and approve Twin-prepared recovery plans.",
+        "See how healthy each customer is, check urgent support issues, review upcoming renewals, and approve the recovery plans Twin drafts.",
       whatManualWorkItReduces:
         "Prevents spending hours before customer check-ins digging through Jira tickets, Zendesk cases, and CRM notes to understand client sentiment.",
       whyItMatters:
-        "Enables proactive churn prevention by relating customer signals across tools rather than relying on disconnected status updates.",
+        "Spot a customer at risk of leaving early, because the warning signs from every tool are in one place instead of scattered across status updates.",
     },
   },
 
@@ -712,16 +712,16 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
 
   "book-of-records": {
     domainId: "book-of-records",
-    domainTitle: "Book of Records",
-    tagline: "A record of decisions",
+    domainTitle: "Decision records",
+    tagline: "Who decided what, and when",
     screenshots: {
       primary: {
         id: "audit-trail",
         title: "Decision log",
         route: "/workspace/work/book-of-records/audit-trail",
         desktop: "/images/workbench/book-of-records/audit-trail.webp",
-        badge: "Verifiable Ledger",
-        alt: "Authentic Book of Records Audit Trail view displaying timestamped decisions, policy gates, and verification outcomes in demonstration state.",
+        badge: "Decision log",
+        alt: "Decision log screen showing dated decisions, the approvals they needed, and whether each result was checked, using sample data.",
       },
       dashboard: {
         id: "dashboard",
@@ -729,7 +729,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
         route: "/workspace/work/book-of-records/dashboard",
         desktop: "/images/workbench/book-of-records/dashboard.webp",
         badge: "Record status",
-        alt: "Book of Records dashboard showing system event checks in demonstration state.",
+        alt: "Decision records dashboard showing recent checks, using sample data.",
       },
       secondary: {
         id: "decisions",
@@ -737,7 +737,7 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
         route: "/workspace/work/book-of-records/decisions",
         desktop: "/images/workbench/book-of-records/decisions.webp",
         badge: "Decision History",
-        alt: "Verified decision register capturing human-in-the-loop approvals and policy sign-offs in demonstration state.",
+        alt: "Decision list showing what people approved and signed off, using sample data.",
       },
     },
     valueNarrative: {
@@ -754,17 +754,17 @@ export const WORKBENCH_SCREENSHOT_CATALOG: Record<string, WorkbenchDomainNarrati
 
   common: {
     domainId: "common",
-    domainTitle: "Shared Workbench Shell",
-    tagline: "Shared Navigation & Role-Specific Work",
+    domainTitle: "Shared workspace",
+    tagline: "One menu for everyone, with screens for each role",
     screenshots: {
       primary: {
         id: "shared-shell",
-        title: "Workbench Shell · FounderOps",
+        title: "Workspace · Founder view",
         route: "/workspace/work/founderops/founder-ops",
         desktop: "/images/workbench/founderops/cockpit-20261014.webp",
         mobile: "/images/workbench/founderops/cockpit-20261014-mobile.webp",
         badge: "Live Workbench Views",
-        alt: "Authentic shared Workbench navigation around a populated FounderOps QA capture.",
+        alt: "The shared SpineWorkspace menu around the founder view, filled with sample test data.",
       },
     },
     valueNarrative: {

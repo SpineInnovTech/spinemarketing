@@ -123,6 +123,10 @@ const BANNED_JARGON = [
   "projections", "ingestion", "ingress", "runtime", "zero-trust", "orchestration",
   "schema", "embeddings", "LLM", "12 tabs", "4+ tools", "in seconds",
   "multi-region", "45 minutes",
+  // Plain-language pass (30 Oct 2026): internal terms a first-time visitor
+  // cannot decode. Product names stay, but these labels are retired.
+  "telemetry", "tenant", "canonical", "AI counterpart", "Book of Records",
+  "Declared Views", "Workbench shell", "ingested",
 ];
 
 // Pages exempt from the jargon list entirely (reference + legal copy).

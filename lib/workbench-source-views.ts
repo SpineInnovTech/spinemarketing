@@ -1563,8 +1563,8 @@ export const WORKBENCH_SOURCE_DOMAINS: WorkbenchSourceDomain[] = [
   },
   {
     "id": "book-of-records",
-    "title": "Book of Records",
-    "benefit": "Trace the records, decisions, the review trail, and how a result was checked.",
+    "title": "Decision records",
+    "benefit": "See every decision, who approved it, and how the result was checked.",
     "audience": "registered",
     "definitionSource": "domain-manifest",
     "views": [

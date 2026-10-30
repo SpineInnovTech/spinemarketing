@@ -8,10 +8,10 @@ const benefits = [
     icon: Database,
     title: "The facts about the work",
     lines: [
-      "Connect the records you are allowed to use.",
-      "Bring up the evidence for the task.",
-      "Keep each tool's permissions.",
-      "Your existing tools stay the place of record.",
+      "Connect the tools you already use, such as your CRM, email and help desk.",
+      "See the facts behind each task, with a link to where each one came from.",
+      "People only see what they already have access to.",
+      "Your data stays in your tools. Nothing is moved or copied away.",
     ],
     href: "/business-context",
     link: "Explore business context",
@@ -20,31 +20,32 @@ const benefits = [
     icon: Layers3,
     title: "One shared view across teams",
     lines: [
-      "Each team gets its own view of the work.",
+      "Spine Fabric is the part that pulls your information together into one view.",
+      "Each team sees the view that fits its job, on the same facts.",
       "Each person sees only what their role allows.",
     ],
     href: "/platform/spine-fabric",
-    link: "Explore Spine Fabric",
+    link: "How Spine Fabric works",
   },
   {
     icon: PanelsTopLeft,
     title: "Editable dashboards and documents",
     lines: [
-      "Edit draft records from dashboards that show key numbers.",
-      "Build documents, tables and charts in Canvas.",
+      "See your key numbers on a dashboard and edit drafts right there.",
+      "Write documents and build tables and charts in Canvas, the built-in editor.",
     ],
     href: "https://spineworkspace.com",
-    link: "Explore SpineWorkspace Product",
+    link: "Explore SpineWorkspace",
   },
 ];
 
 const solutions = [
   ["Customer Success", "Prepare renewals with account health, commitments and service history.", "/solutions/customer-success"],
-  ["Sales & Revenue Operations", "Review pipeline, conversations and next steps in one account context.", "/solutions/revops"],
+  ["Sales & Revenue Operations", "See open deals, recent conversations and next steps for each customer in one place.", "/solutions/revops"],
   ["Finance", "Review financial records with the decisions and work behind them.", "/solutions/finance"],
-  ["Operations", "Keep dependencies, approvals and handoffs visible across teams.", "/solutions/operations"],
+  ["Operations", "See what each task is waiting on, who must approve it and who picks it up next.", "/solutions/operations"],
   ["Product & Engineering", "Connect customer feedback, incidents and delivery work.", "/solutions/product-engineering"],
-  ["Leadership", "Review goals, progress and decisions with source evidence.", "/solutions/founders"],
+  ["Leadership", "Review goals, progress and decisions, with the facts behind each one.", "/solutions/founders"],
 ] as const;
 
 export function WorkspaceBenefits({ detailed = false }: { detailed?: boolean }) {

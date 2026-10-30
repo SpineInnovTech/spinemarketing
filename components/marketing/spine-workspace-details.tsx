@@ -71,10 +71,10 @@ export function SpineWorkspaceDetails() {
             </BlurFade>
           ))}
         </div>
-        <p className="mx-auto mt-7 max-w-[850px] text-sm leading-7 text-[#4E607A]">Spine Network is designed to carry context and work checkpoints across compatible AI hosts. Each host independently verifies identity, tool access and authority before continuing.</p>
+        <p className="mx-auto mt-7 max-w-[850px] text-sm leading-7 text-[#4E607A]">Spine Network is the part that lets you move between AI tools, such as ChatGPT or Claude, without starting over. Your work and its background come with you. Each AI tool checks who you are and what you are allowed to do before it carries on.</p>
         <div className="mt-5 flex flex-wrap justify-center gap-x-7 gap-y-3">
           <Link href="/platform/how-it-works" className="innovtech-text-link">See the underlying workflow <ArrowRight size={18} aria-hidden /></Link>
-          <Link href="/host-connected-environment" className="innovtech-text-link">Explore host connections and continuity <ArrowRight size={18} aria-hidden /></Link>
+          <Link href="/host-connected-environment" className="innovtech-text-link">How it works with your AI tools <ArrowRight size={18} aria-hidden /></Link>
           <Link href="/security" className="innovtech-text-link">Security and who decides <ArrowRight size={18} aria-hidden /></Link>
         </div>
       </section>

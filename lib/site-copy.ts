@@ -535,10 +535,10 @@ export const pages = {
         headline: "Choose where to start.",
         body: "Supported providers, operations and deployment access are confirmed for your environment.",
         cards: [
-          { title: "Connector catalog", description: "Find relevant tools, then confirm supported operations and access.", href: "/integrations" },
-          { title: "Events and webhooks", description: "Review supported event ingestion and the setup required for your environment.", href: "/platform/integrations#integration-methods" },
-          { title: "AI hosts and MCP", description: "Understand host identity, capability discovery, authorization and verified outcomes.", href: "/host-connected-environment" },
-          { title: "Security and permissions", description: "Review tenant boundaries, access scopes and action controls.", href: "/security" },
+          { title: "Supported tools", description: "Find the tools you use, then check what SpineWorkspace can read and do in each.", href: "/integrations" },
+          { title: "Live updates from your tools", description: "See which tools can send updates as they happen, and what setup that needs.", href: "/platform/integrations#integration-methods" },
+          { title: "AI tools you already use", description: "How SpineWorkspace works with AI tools like ChatGPT or Claude: what each can see, what it may do, and how results are checked.", href: "/host-connected-environment" },
+          { title: "Security and permissions", description: "How each company's data stays separate, who can see what, and which actions need approval.", href: "/security" },
           { title: "Technical reference", description: "Explore the architecture and request the integration details your team needs.", href: DOCS_URL },
         ],
       },
@@ -627,12 +627,12 @@ export const proofCards: ProofCardCopy[] = [
     description: "Being able to see a tool is not permission to use it. A person approves important actions.",
   },
   {
-    title: "Observation and reconciliation",
-    description: "Results are observed and verified—not blindly trusted.",
+    title: "Results are checked",
+    description: "After a change is made, SpineWorkspace checks it really happened, instead of assuming it did.",
   },
   {
-    title: "Continuity across hosts",
-    description: "Objectives resume across hosts with the same truth and context.",
+    title: "Switch AI tools without starting over",
+    description: "Pick up the same work in another AI tool, with the same facts and background.",
   },
 ];
 
@@ -792,11 +792,11 @@ export const homeCopy = {
     headline: "One workspace around the business—not another app.",
     body: "SpineWorkspace connects your existing tools so people and AI work from the same truth and the context for this task.",
     cards: [
-      { title: "Workbench", description: "Role-aware views of goals, truth, context, and work", href: "/adaptive-workspace" },
+      { title: "Workbench", description: "The screen where you work, showing the goals, facts and tasks for your role", href: "/adaptive-workspace" },
       { title: "Twin", description: "Prepares a suggestion from the record and the facts, then waits for a person to review it", href: "/twin" },
-      { title: "SpineWorkspace", description: "Connects systems without claiming source authority", href: "/platform/spine-fabric" },
+      { title: "SpineWorkspace", description: "Connects your tools, while each tool keeps its own records", href: "/platform/spine-fabric" },
       { title: "Governance", description: "Humans approve. AI proposes. Nothing executes without authority.", href: "/governance" },
-      { title: "Continuity", description: "Work, memory, and evidence persist across sessions and hosts", href: "/continuity" },
+      { title: "Continuity", description: "Your work and its history carry over between sessions and AI tools", href: "/continuity" },
     ],
   },
   ecosystem: {
@@ -804,11 +804,11 @@ export const homeCopy = {
     headline: "Connect what you already use. Discover what's available.",
     body:
       "SpineWorkspace connects the tools, files, and conversations you already use. It sees what is actually open, and it carries the record and the evidence forward.",
-    cta: { label: "See how hosts connect", href: "/host-connected-environment" },
+    cta: { label: "See how AI tools connect", href: "/host-connected-environment" },
   },
   proofTeaser: {
     label: "Proof",
-    headline: "Independent hosts. Shared truth and context. Governed work.",
+    headline: "Any AI tool. The same facts. A person approves.",
     body:
       "SpineWorkspace sees which tools are open, keeps the record and the evidence apart, and waits for a person to decide.",
     cta: { label: "See the proof", href: "/proof" },

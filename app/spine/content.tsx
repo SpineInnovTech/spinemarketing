@@ -33,9 +33,9 @@ const paths = [
   },
   {
     icon: Waypoints,
-    eyebrow: "The AI counterpart",
+    eyebrow: "The AI assistant",
     title: "Spine Twin",
-    body: "A context-aware AI counterpart that looks into things, prepares work and suggests next steps, while important actions wait for a person's approval.",
+    body: "The AI assistant that looks into things, prepares work and suggests next steps. Important actions wait for a person's approval.",
     href: "/twin",
     cta: "Meet Spine Twin",
   },
@@ -50,7 +50,7 @@ export function SpineContent() {
         headline={"A foundation for shared\nbusiness understanding."}
         subhead="Spine is the foundation Spine InnovTech builds so people and AI can share one view of the business, while your existing tools keep the record. This page is a short introduction. The detail lives on the pages it links to."
         primaryCta={{ label: "See the technical detail", href: "/platform/spine-fabric" }}
-        secondaryCta={{ label: "Meet the AI counterpart", href: "/twin" }}
+        secondaryCta={{ label: "Meet the AI assistant", href: "/twin" }}
       />
 
       <Section variant="muted">
@@ -75,7 +75,7 @@ export function SpineContent() {
           align="left"
           label="One clear path"
           headline="Where to go for the detail."
-          body="Spine is one foundation, not three products. These two pages explain how it works and the AI counterpart that works within it."
+          body="Spine is one foundation, not three products. These two pages explain how it works and the AI assistant that works inside it."
         />
         <div className="grid gap-5 md:grid-cols-2">
           {paths.map(({ icon: Icon, eyebrow, title, body, href, cta }) => (

@@ -33,8 +33,8 @@ const scrollItems = [
   },
   {
     tag: "Spine Workbench",
-    title: "Bring context into a shared working surface",
-    description: "People work with responsibilities, records, evidence, decisions, and next steps. Role and task decide which information belongs in view.",
+    title: "One screen where your team does the work",
+    description: "The Workbench is the screen where you work. It shows the tasks, records, facts and next steps for your role, and hides what you do not need.",
     icon: Activity,
     color: "#8b5cf6",
     features: [
@@ -46,8 +46,8 @@ const scrollItems = [
   },
   {
     tag: "Spine Twin",
-    title: "Investigate, prepare, and coordinate with context",
-    description: "Twin helps compare evidence, spot missing information, prepare options, and coordinate work. It prepares work only within what it is allowed to do.",
+    title: "An AI assistant that prepares, then waits",
+    description: "Spine Twin is the AI assistant. It compares the facts, spots what is missing, and drafts options and next steps. It only works with what it is allowed to see, and it never acts on its own.",
     icon: Brain,
     color: "#fbbf24",
     features: [
@@ -89,14 +89,14 @@ const gatherItems = [
   { icon: Database, label: "Spine Fabric", description: "How records relate, where they came from, who can act, and what continues.", color: "#2dd4bf" },
   { icon: Activity, label: "Context", description: "Patterns and risk signals brought together for you.", color: "#8b5cf6" },
   { icon: Brain, label: "AI sessions", description: "Knowledge that builds up from every interaction.", color: "#fbbf24" },
-  { icon: Plug, label: "Connectors", description: "The tools you already connect.", color: "#3b82f6" },
+  { icon: Plug, label: "Tool connections", description: "The tools you already connect.", color: "#3b82f6" },
   { icon: Shield, label: "Review", description: "The right person to approve important decisions.", color: "#ef4444" },
   { icon: Lock, label: "Who can act", description: "Who someone is, the rules, their access, and a record of decisions.", color: "#f59e0b" },
   { icon: Eye, label: "Spine Workbench", description: "Goals, responsibilities, evidence, and next steps.", color: "#06b6d4" },
   { icon: Zap, label: "Twin", description: "AI suggests with evidence. You approve what happens.", color: "#a855f7" },
-  { icon: Server, label: "Behind the scenes", description: "Delivery, storage, event handling, and recovery.", color: "#ec4899" },
+  { icon: Server, label: "Behind the scenes", description: "Keeps everything running, saved and backed up.", color: "#ec4899" },
   { icon: GitBranch, label: "Connected tools", description: "Each tool's own abilities and permissions.", color: "#14b8a6" },
-  { icon: RefreshCw, label: "Approved action", description: "Approve, act, watch, and set right.", color: "#f97316" },
+  { icon: RefreshCw, label: "Approved action", description: "You approve, it acts, and it checks the result. If something goes wrong, it can be undone.", color: "#f97316" },
   { icon: Layers, label: "SpineWorkspace", description: "Fits your tools. Keeps working when you switch tools.", color: "#6366f1" },
 ];
 
@@ -115,7 +115,7 @@ export function PlatformStickyScroll() {
       <StickyGather
         tag="How it fits together"
         heading={<>Scattered tools. <span className="text-primary">One joined-up picture.</span></>}
-        subheading="SpineWorkspace brings your information, working surfaces, AI help, and approved action together. Your existing tools stay the place of record."
+        subheading="SpineWorkspace brings your information, your work screens, AI help and approvals together. Your existing tools keep the official records."
         centerLabel="The Spine"
         centerDescription="The core"
         items={gatherItems}

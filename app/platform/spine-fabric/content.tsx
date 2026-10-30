@@ -78,7 +78,7 @@ export function SpineFabricContent() {
         </ol>
       </Section>
       <Section>
-        <SectionHeader align="left" label="Keep exploring" headline="See how the foundation fits together." body="Spine Fabric is the detail behind the foundation. Start from the introduction, meet the AI counterpart, or step back to the whole picture." />
+        <SectionHeader align="left" label="Keep exploring" headline="See how the foundation fits together." body="Spine Fabric is the detail behind the foundation. Start from the introduction, meet the AI assistant, or step back to the whole picture." />
         <div className="flex flex-wrap gap-3">
           <Link href="/spine" className="inline-flex min-h-12 items-center gap-2 rounded-xl border border-[#C5D8EC] bg-white px-6 text-sm font-semibold text-[#082B5E] transition hover:border-[#006FE8] hover:bg-[#F3F8FE]">
             Spine, in brief <ArrowRight className="h-4 w-4 text-[#006FE8]" aria-hidden />
