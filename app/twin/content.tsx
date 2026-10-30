@@ -4,18 +4,18 @@ import { PageHero } from "@/components/marketing/page-hero"
 import { Section, SectionHeader } from "@/components/marketing/section"
 
 const capabilities = [
-  { title: "Investigate", body: "Relate a signal to its sources, dependencies, earlier decisions and business impact." },
-  { title: "Prepare", body: "Assemble summaries, options, plans and proposed next steps around the current goal." },
-  { title: "Coordinate", body: "Help people move work between responsibilities and approved capabilities with its context intact." },
+  { title: "Investigate", body: "Find out why something happened: where it came from, what it depends on, what was decided before, and what it affects." },
+  { title: "Prepare", body: "Write summaries, options, plans and suggested next steps for the goal you are working on." },
+  { title: "Coordinate", body: "Hand work from one person or team to the next without losing the background." },
 ]
 
 const functions = [
-  { title: "Operations", body: "Prepare a handoff or escalation with its dependencies, owners and decision history." },
-  { title: "Finance", body: "Compare an exception with the invoice, contractual commitments and supporting evidence." },
-  { title: "Product & engineering", body: "Investigate a release blocker and prepare options around its customer impact and delivery goal." },
+  { title: "Operations", body: "Prepare a handoff or an escalation, with who owns what, what it is waiting on and what was already decided." },
+  { title: "Finance", body: "Check an unusual charge against the invoice, the contract and the notes behind it." },
+  { title: "Product & engineering", body: "Look into what is holding up a release, and suggest options based on the customers affected and the delivery date." },
   { title: "Customer-facing teams", body: "Prepare onboarding, account reviews, expansion conversations or renewal decisions from the customer story." },
-  { title: "Leadership", body: "Bring goals, signals, responsibilities and unresolved decisions into an executive brief." },
-  { title: "People & knowledge", body: "Find permitted knowledge and prepare a context-rich answer for an employee or team." },
+  { title: "Leadership", body: "Pull goals, warning signs, owners and open decisions into a short brief for leaders." },
+  { title: "People & knowledge", body: "Find the right document or answer, from what you are allowed to see, for a colleague or team." },
 ]
 
 const boundaries = [
@@ -62,9 +62,9 @@ export function TwinContent() {
     <>
       <PageHero
         tone="ice"
-        badge="Spine Twin · Context-aware AI"
+        badge="Spine Twin · Your AI assistant"
         headline={"AI that works with your\nbusiness context."}
-        subhead="Spine Twin brings objectives, responsibilities, records, signals, decisions and evidence into the work. It helps people investigate situations, prepare options and coordinate the next step within the authority they have."
+        subhead="Spine Twin is the AI assistant inside SpineWorkspace. It reads the goals, records, conversations and past decisions from your tools, explains what is going on, and suggests the next step. It never acts until a person approves."
         primaryCta={{ label: "Read our responsible AI approach", href: "/responsible-ai" }}
         secondaryCta={{ label: "See how trust works", href: "/trust" }}
       />
@@ -74,7 +74,7 @@ export function TwinContent() {
           align="left"
           label="Understand before responding"
           headline="Start with the situation, its evidence and the goal."
-          body="The Twin uses the context it is permitted to access to explain a situation, compare evidence and identify what is missing. The work can involve an operational handoff, a financial exception, a delivery decision or a customer review."
+          body="The Twin uses the context it is permitted to access to explain a situation, compare the facts and point out what is missing. That might be a handoff between teams, an unusual invoice, a delivery decision or a customer review."
         />
         <div className="grid gap-5 md:grid-cols-3">
           {capabilities.map((item) => (
@@ -91,7 +91,7 @@ export function TwinContent() {
           align="left"
           label="Spine Coworker"
           headline="Relevant context can be ready before the conversation starts."
-          body="Spine Coworker represents the context-gathering aspect of the experience: watching authorized signals, assembling relevant evidence and preparing useful context. Gathering context is distinct from independently sending messages, changing business records or committing the organization."
+          body="Spine Coworker does the legwork for Twin. It watches the emails, tickets and files you have allowed it to see, and gathers the relevant facts before you need them. Coworker only gathers. It never sends messages, changes records or makes commitments on your behalf."
         />
         <SectionHeader
           align="left"

@@ -11,9 +11,9 @@ import {
 
 const items = [
   {
-    tag: "SaaS Connectors",
+    tag: "Business apps",
     title: "Connect supported tools with explicit permissions",
-    description: "CRM, support, finance, projects, and knowledge sources contribute different context. Authentication, availability, and supported operations vary by provider.",
+    description: "Your CRM, help desk, finance, project and document tools each add part of the picture. How you sign in, and what each tool lets SpineWorkspace read or change, depends on the tool.",
     icon: Cloud,
     color: "#3b82f6",
     features: [

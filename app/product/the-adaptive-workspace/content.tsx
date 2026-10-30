@@ -164,7 +164,7 @@ export function TheAdaptiveWorkspaceContent() {
             <p className="text-[12px] font-bold uppercase tracking-[0.12em] text-primary mb-3">Customer view</p>
             <h2 className="section-heading">Every record. <span className="text-primary">Every source.</span></h2>
             <p className="mt-4 text-[16px] font-medium leading-[1.55] text-muted-foreground">
-              Canonical objects assembled from every connected tool.
+              One record for each customer, project and deal, built from every tool you connect.
             </p>
           </motion.div>
           <div className="grid gap-5 sm:grid-cols-2">

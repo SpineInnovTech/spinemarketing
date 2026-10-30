@@ -6,12 +6,12 @@ import mediaStyles from "./responsive-media.module.css";
 import { WorkbenchCapturePreview, type CaptureFrame } from "./workbench-capture-preview";
 
 const views = [
-  { id: "document", step: "01", label: "Document", title: "Documents with working context.", detail: "Combine editable text, record tables, metric blocks and Twin assistance in Canvas." },
-  { id: "database", step: "02", label: "Database", title: "The same records, as a table.", detail: "Review a renewal contract and expansion opportunity with status, stage and owner." },
-  { id: "graph", step: "03", label: "Context graph", title: "See how the work connects.", detail: "Explore a renewal work item, decision, agreement and related diagram." },
-  { id: "blocks", step: "04", label: "Block library", title: "Build with reusable blocks.", detail: "Add text, tables, metrics, actions and Twin blocks from the Canvas UI Library." },
-  { id: "library", step: "05", label: "Workbench library", title: "Start from a template.", detail: "Browse domain templates, Canvas presets and UI components in the same shell." },
-  { id: "sidebar", step: "06", label: "Sidebar structure", title: "The application’s complete navigation structure.", detail: "Home, My Work, Communications, Personal, Work, Platform and Administration keep their native order and nesting. The Work menu reflects the Account Success QA profile." },
+  { id: "document", step: "01", label: "Document", title: "Documents with working context.", detail: "Canvas is the built-in editor. Mix your own writing with live tables, key numbers and help from Twin, the AI assistant." },
+  { id: "database", step: "02", label: "Table", title: "The same records, as a table.", detail: "Review a renewal contract and expansion opportunity with status, stage and owner." },
+  { id: "graph", step: "03", label: "Connections map", title: "See how the work connects.", detail: "See how a renewal links to its decisions, agreements and related work, as a simple map." },
+  { id: "blocks", step: "04", label: "Block library", title: "Build with reusable blocks.", detail: "Add text, tables, numbers, buttons and AI blocks from a ready-made library." },
+  { id: "library", step: "05", label: "Templates", title: "Start from a template.", detail: "Pick a ready-made page for your team and start from there." },
+  { id: "sidebar", step: "06", label: "Sidebar structure", title: "The full menu, as it appears in the app.", detail: "Home, My Work, Communications, Personal, Work, Platform and Administration keep their native order and nesting. The Work section shows what an Account Success test user would see." },
 ] as const;
 
 const sidebarSections = [
@@ -19,9 +19,9 @@ const sidebarSections = [
   { id: "my-work", label: "My Work", detail: "Inbox, Tasks, My Queue, Approvals, Notifications, Recent Work and Favorites." },
   { id: "communications", label: "Communications", detail: "Activity Feed, Email, Calendar, Meetings, Chat, Calls and Shared Documents." },
   { id: "personal", label: "Personal", detail: "Notes, Knowledge Base, Brainstorming Sessions and Activity." },
-  { id: "work", label: "Work", detail: "All Work followed by the native Account Success package: CS Today, account and health views, contacts, meetings, success plans, risks and business context. Planned entries keep their inactive state." },
-  { id: "platform", label: "Platform", detail: "The product sidebar's Platform group: connections, Spine, and how work runs. It includes knowledge, memory, automation, approval, and what you can watch." },
-  { id: "administration", label: "Administration", detail: "The native Organization and Controls subsections for the QA administrator profile. Access in the application depends on the signed-in user’s permissions." },
+  { id: "work", label: "Work", detail: "All Work, then the Account Success screens: today’s priorities, customer and health views, contacts, meetings, success plans, risks and background notes. Items still being built are greyed out." },
+  { id: "platform", label: "Platform", detail: "The Platform section: your tool connections, saved knowledge, automations, approvals and activity history." },
+  { id: "administration", label: "Administration", detail: "Company and access settings, as a test admin would see them. What each person sees depends on their permissions." },
 ] as const;
 
 const choiceStyle = "min-h-11 rounded-lg px-3 py-2 text-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]";
@@ -180,7 +180,7 @@ export function WorkbenchCanvasShowcase() {
       </div>
       <details className="mt-4 text-xs leading-6 text-[#596F89]">
         <summary className="w-fit cursor-pointer rounded-sm font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]">About these captures</summary>
-        <p className="mt-2 max-w-3xl">Native application components composed locally with existing QA fixture records. Populated Canvas captures use the component’s record input; the routed page does not yet supply them. Canvas composition edits are local to the view; saved layouts are not demonstrated. Sync and host badges do not verify connections or completed actions.</p>
+        <p className="mt-2 max-w-3xl">Real app screens, filled with sample test records (QA fixture data). The live page does not load these records yet. Changes you make to a Canvas page are not saved yet. The connection badges are examples. They do not prove a tool is connected or that an action happened.</p>
       </details>
       {expanded && (
         <dialog ref={dialogRef} onClose={() => setExpanded(false)} aria-labelledby={titleId} onClick={event => { if (event.target === event.currentTarget) dialogRef.current?.close(); }} className="fixed inset-0 z-50 m-0 h-dvh max-h-none w-screen max-w-none bg-[#082B5E]/85 p-2 backdrop-blur-sm sm:p-5">
@@ -195,7 +195,7 @@ export function WorkbenchCanvasShowcase() {
             <div tabIndex={0} role="region" aria-label="Scrollable application capture" className={`${actualSize ? "" : mediaStyles.fitRegion} min-h-0 flex-1 overflow-auto bg-[#F0F8FF] p-2 focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-[#006FE8]`}>
               <img src={imagePath} alt={`Full ${imageLabel} capture from the application components with QA fixture data.`} width={1600} height={imageHeight} className={actualSize ? "h-auto w-[1600px] max-w-none" : mediaStyles.fitImage} />
             </div>
-            <p className="shrink-0 border-t border-[#D9E8F4] px-3 py-2 text-xs leading-5 text-[#596F89]">QA fixture capture. Choose Actual size and scroll to read the full sidebar and view.</p>
+            <p className="shrink-0 border-t border-[#D9E8F4] px-3 py-2 text-xs leading-5 text-[#596F89]">Screenshot with sample QA fixture data. Choose Actual size and scroll to see the whole menu and page.</p>
           </div>
         </dialog>
       )}

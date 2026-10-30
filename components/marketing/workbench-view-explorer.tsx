@@ -252,14 +252,15 @@ export function WorkbenchViewExplorer({
               See your work. Choose your view.
             </h2>
             <p className="mt-4 text-[16px] leading-7 text-[#4E607A]">
-              Run daily work in editable dashboards. Build documents, tables and context graphs
-              in Canvas with reusable UI Library blocks. Both share the blue Workbench shell.
+              Do your daily work on dashboards you can edit. Write documents and build tables and
+              charts in Canvas, the built-in editor. Both live in the same workspace, with the same
+              menu on the left.
             </p>
           </div>
 
           <div hidden={activeTab !== "screenshot" && activeTab !== "inventory"} className="w-full max-w-sm">
             <label htmlFor={`${id}-select`} className="mb-2 block text-xs font-semibold uppercase tracking-wider text-[#082B5E]">
-              Select a Workbench domain
+              Choose a team
             </label>
             <select
               id={`${id}-select`}
@@ -344,7 +345,7 @@ export function WorkbenchViewExplorer({
               }`}
             >
               <Play className="h-4 w-4" aria-hidden="true" />
-              Shell recording
+              Watch a short video
             </button>
             <button
               type="button"
@@ -357,7 +358,7 @@ export function WorkbenchViewExplorer({
               }`}
             >
               <Layers3 className="h-4 w-4" aria-hidden="true" />
-              View catalog ({domain.views.length})
+              All screens ({domain.views.length})
             </button>
           </div>
 
@@ -444,7 +445,7 @@ export function WorkbenchViewExplorer({
               <div className="rounded-2xl border border-[#CBE5FA] bg-white p-8 text-center shadow-sm">
                 <AlertCircle className="mx-auto h-8 w-8 text-[#577292]" />
                 <h3 className="mt-3 text-lg font-semibold text-[#082B5E]">
-                  Workbench Capture Not Available
+                  Screenshot not available yet
                 </h3>
                 <p className="mx-auto mt-2 max-w-md text-sm text-[#4E607A]">
                   The view <code>{domain.title}</code> is an internal screen. It does not have an approved public screenshot yet.
@@ -454,7 +455,7 @@ export function WorkbenchViewExplorer({
                   onClick={() => setActiveTab("inventory")}
                   className="mt-4 inline-flex items-center gap-2 rounded-xl bg-[#006FE8] px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#0055B8]"
                 >
-                  View Declared Component Catalog <ArrowRight className="h-4 w-4" />
+                  See the list of screens <ArrowRight className="h-4 w-4" />
                 </button>
               </div>
             ) : (
@@ -567,7 +568,7 @@ export function WorkbenchViewExplorer({
                       </div>
                       <div className="mt-4 flex items-center gap-1.5 border-t border-[#E6F2FC] pt-3 text-[11px] font-semibold text-[#006FE8]">
                         <Eye className="h-3.5 w-3.5" />
-                        <span>Shared Workbench navigation</span>
+                        <span>Same menu for every team</span>
                       </div>
                     </MagicCard>
 
@@ -579,11 +580,11 @@ export function WorkbenchViewExplorer({
                             02
                           </span>
                           <span className="text-[11px] font-semibold uppercase tracking-wider text-[#006FE8]">
-                            Operator Action
+                            What you do
                           </span>
                         </div>
                         <h4 className="mt-3.5 text-base font-bold text-[#082B5E]">
-                          Workflow purpose
+                          What this screen is for
                         </h4>
                         <p className="mt-2 text-xs leading-6 text-[#4E607A]">
                           {narrative.valueNarrative.whatTheyCanDo}
@@ -591,7 +592,7 @@ export function WorkbenchViewExplorer({
                       </div>
                       <div className="mt-4 flex items-center gap-1.5 border-t border-[#E6F2FC] pt-3 text-[11px] font-semibold text-[#006FE8]">
                         <CheckCircle2 className="h-3.5 w-3.5" />
-                        <span>Actions follow workspace policy</span>
+                        <span>Changes wait for your approval</span>
                       </div>
                     </MagicCard>
                   </div>
@@ -617,7 +618,7 @@ export function WorkbenchViewExplorer({
                     </div>
                     <div className="mt-4 flex items-center gap-1.5 border-t border-[#E6F2FC] pt-3 text-[11px] font-semibold text-[#5A7391]">
                       <LayoutDashboard className="h-3.5 w-3.5 text-[#006FE8]" />
-                      <span>Connected context across work</span>
+                      <span>Facts from your tools in one place</span>
                     </div>
                   </MagicCard>
 
@@ -641,7 +642,7 @@ export function WorkbenchViewExplorer({
                     </div>
                     <div className="mt-4 flex items-center gap-1.5 border-t border-[#E6F2FC] pt-3 text-[11px] font-semibold text-[#208050]">
                       <ShieldCheck className="h-3.5 w-3.5" />
-                      <span>Auditable Decision Continuity</span>
+                      <span>Every decision is recorded</span>
                     </div>
                   </MagicCard>
 
@@ -651,17 +652,17 @@ export function WorkbenchViewExplorer({
                     <div>
                       <div className="flex items-center justify-between">
                         <span className="rounded-full border border-[#BBDDF8] bg-white px-2.5 py-0.5 text-[10px] font-semibold tracking-wider text-[#006FE8] uppercase">
-                          Domain Catalog
+                          Team screens
                         </span>
                         <span className="font-mono text-xs font-semibold text-[#006FE8]">
                           {domain.views.length} Views
                         </span>
                       </div>
                       <h4 className="mt-3 text-lg font-bold text-[#082B5E]">
-                        {compact ? `${domain.title} View Catalog` : `${domain.title} Solution`}
+                        {compact ? `All ${domain.title} screens` : `SpineWorkspace for ${domain.title}`}
                       </h4>
                       <p className="mt-2 text-xs leading-6 text-[#355579]">
-                        See the views, the tool connections, and the approved workflows for {domain.title}.
+                        See the screens, the tools they connect to, and what needs approval for {domain.title}.
                       </p>
                     </div>
                     {compact ? (
@@ -670,14 +671,14 @@ export function WorkbenchViewExplorer({
                         onClick={() => setActiveTab("inventory")}
                         className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-[#006FE8] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#0055B8]"
                       >
-                        Browse {domain.views.length} Declared Views <ArrowRight className="h-4 w-4" />
+                        Browse all {domain.views.length} screens <ArrowRight className="h-4 w-4" />
                       </button>
                     ) : (
                       <Link
                         href={DOMAIN_TO_SOLUTION_PATH[domain.id] ?? "/solutions"}
                         className="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-[#006FE8] px-4 py-2.5 text-xs font-semibold text-white shadow-sm transition-colors hover:bg-[#0055B8]"
                       >
-                        Open {domain.title} Deep-Dive <ArrowRight className="h-4 w-4" />
+                        See more for {domain.title} <ArrowRight className="h-4 w-4" />
                       </Link>
                     )}
                   </div>
@@ -767,7 +768,7 @@ export function WorkbenchViewExplorer({
                 SpineWorkspace
               </div>
               <p className="mt-5 text-[11px] font-semibold uppercase tracking-[.14em] text-[#577592]">
-                Shared navigation
+                Menu (same for every team)
               </p>
               <nav className="mt-3 space-y-3" aria-label="Workbench navigation groups">
                 {SHARED_WORKBENCH_SHELL.map((group) => (
@@ -800,12 +801,12 @@ export function WorkbenchViewExplorer({
                     Work / {domain.title}
                   </p>
                   <h3 className="mt-2 text-2xl font-semibold tracking-tight text-[#082B5E]">
-                    {domain.title} Workbench
+                    {domain.title} workspace
                   </h3>
                   <p className="mt-3 text-sm leading-7 text-[#4E607A]">{domain.benefit}</p>
                 </div>
                 <span className="rounded-full border border-[#CCE3F5] bg-[#F0F8FF] px-3 py-1.5 text-xs font-semibold text-[#285687]">
-                  {domain.views.length} defined views
+                  {domain.views.length} screens
                 </span>
               </div>
 
@@ -827,7 +828,7 @@ export function WorkbenchViewExplorer({
                         <p className="text-sm font-semibold text-[#10355E]">{view.label}</p>
                         <p className="mt-1 text-xs capitalize text-[#6A7E96]">
                           {view.kind === "runtime"
-                            ? "L1 runtime binding"
+                            ? "Live screen"
                             : `${view.kind} view`}
                         </p>
                       </div>
@@ -843,8 +844,8 @@ export function WorkbenchViewExplorer({
                   className="mt-5 rounded-lg px-1 py-2 text-sm font-semibold text-[#006FE8] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#006FE8]"
                 >
                   {showAll
-                    ? "Show fewer views"
-                    : `Show all ${sortedViews.length} defined views`}
+                    ? "Show fewer screens"
+                    : `Show all ${sortedViews.length} screens`}
                 </button>
               )}
             </div>
@@ -854,8 +855,9 @@ export function WorkbenchViewExplorer({
         <div className="mt-8 flex flex-col gap-4 border-t border-[#D6E8F8] pt-5 sm:flex-row sm:items-start sm:justify-between">
           <p className="max-w-2xl text-xs leading-6 text-[#596F89]">
             <ShieldCheck className="mr-1 inline h-4 w-4 align-[-3px] text-[#006FE8]" aria-hidden="true" />
-            Actual application captures with QA fixture data. Figures and host badges are not
-            verified live customer telemetry, connection proof or evidence of completed actions.
+            Real screenshots of the app, filled with sample test data (QA fixture data). The numbers
+            and status badges are examples. They are not live customer data, and they do not prove a
+            tool is connected or that an action was completed.
           </p>
           <Link
             href="/product/the-adaptive-workspace"

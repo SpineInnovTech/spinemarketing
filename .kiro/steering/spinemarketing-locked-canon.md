@@ -46,7 +46,8 @@ enforces the homepage pins and the banned-copy list.
 - "Governed execution"
 - "We build governed business context for humans and AI."
 - "What is shown here, and what to check."
-- Jargon: MCP, OAuth, PKCE, webhook, ABAC, RBAC, SHA-256, cryptographic, provenance, lineage, entity graph, substrate, kernel, projection(s), ingestion, ingress, runtime, zero-trust, orchestration, schema, embeddings, LLM, "12 tabs", "4+ tools", "in seconds", multi-region, "45 minutes".
+- Jargon: MCP, OAuth, PKCE, webhook, ABAC, RBAC, SHA-256, cryptographic, provenance, lineage, entity graph, substrate, kernel, projection(s), ingestion, ingress, runtime, zero-trust, orchestration, schema, embeddings, LLM, "12 tabs", "4+ tools", "in seconds", multi-region, "45 minutes", telemetry, tenant, canonical, "AI counterpart" (say "AI assistant"), "Book of Records" (say "Decision records"), "Declared Views", "Workbench shell", ingested.
+- First mention of a product name explains it in plain words: Spine Twin = the AI assistant; Spine Coworker = gathers the facts for Twin; Spine Fabric = pulls your information together into one view; Workbench = the screen where you work; Spine Network = lets you switch AI tools without starting over; Canvas = the built-in editor.
 
 ### Allowed exceptions
 

@@ -102,15 +102,15 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             </div>
             <div className="bg-white/90 rounded-lg p-1.5 border border-[#D8ECFC] shadow-2xs">
               <span className="text-[8px] font-bold text-[#002B64] block">Your information</span>
-              <span className="text-[7.5px] text-[#5E728B] leading-tight block">One shared view</span>
+              <span className="text-[7.5px] text-[#5E728B] leading-tight block">All in one place</span>
             </div>
             <div className="bg-white/90 rounded-lg p-1.5 border border-[#D8ECFC] shadow-2xs">
-              <span className="text-[8px] font-bold text-[#002B64] block">Account record</span>
-              <span className="text-[7.5px] text-[#5E728B] leading-tight block">Links and history</span>
+              <span className="text-[8px] font-bold text-[#002B64] block">Customer record</span>
+              <span className="text-[7.5px] text-[#5E728B] leading-tight block">With its history</span>
             </div>
             <div className="bg-[#E8F9F0] rounded-lg p-1.5 border border-[#12B76A]/40 shadow-2xs">
-              <span className="text-[8px] font-bold text-[#12B76A] block">Results</span>
-              <span className="text-[7.5px] text-[#002B64] leading-tight block">Tracked numbers</span>
+              <span className="text-[8px] font-bold text-[#12B76A] block">Numbers</span>
+              <span className="text-[7.5px] text-[#002B64] leading-tight block">Usage, tickets, deals</span>
             </div>
           </div>
 
@@ -125,8 +125,8 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
           {/* 3. Central Workbench Deck (Human + Twin) */}
           <div className="bg-white border-2 border-[#002B64] rounded-2xl p-2.5 w-44 sm:w-52 shadow-2xl z-20 shrink-0 flex flex-col gap-2">
             <div className="flex items-center justify-between border-b border-[#D8E5F0] pb-1.5">
-              <span className="text-[10px] font-black uppercase tracking-tight text-[#002B64]">Shared Workbench</span>
-              <span className="text-[7.5px] font-mono font-bold text-white bg-[#0070DC] px-1.5 py-0.5 rounded">Demo</span>
+              <span className="text-[10px] font-black uppercase tracking-tight text-[#002B64]">Your workspace</span>
+              <span className="text-[7.5px] font-mono font-bold text-white bg-[#0070DC] px-1.5 py-0.5 rounded">Example</span>
             </div>
 
             {/* Dual Collaborators: Human + AI Twin */}
@@ -137,7 +137,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
                   M
                 </div>
                 <span className="text-[8.5px] font-bold text-[#002B64]">Maya</span>
-                <span className="text-[7px] text-[#5E728B]">CS Lead (Human)</span>
+                <span className="text-[7px] text-[#5E728B]">Customer lead</span>
                 <div className="mt-1 flex items-center gap-0.5 text-[7px] font-bold text-[#12B76A]">
                   <Check className="w-2.5 h-2.5" /> Approved
                 </div>
@@ -149,9 +149,9 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
                   <Sparkles className="w-3.5 h-3.5" />
                 </div>
                 <span className="text-[8.5px] font-bold text-[#0070DC]">Spine Twin</span>
-                <span className="text-[7px] text-[#002B64]">AI Counterpart</span>
+                <span className="text-[7px] text-[#002B64]">AI assistant</span>
                 <div className="mt-1 flex items-center gap-0.5 text-[7px] font-bold text-[#0070DC]">
-                  <Target className="w-2.5 h-2.5" /> Proposals
+                  <Target className="w-2.5 h-2.5" /> Suggests
                 </div>
               </div>
             </div>
@@ -159,11 +159,11 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             {/* Context-assembled Work Item */}
             <div className="bg-[#F5FBFF] border border-[#D8ECFC] rounded-lg p-1.5">
               <div className="flex items-center justify-between text-[7.5px] font-bold text-[#002B64] mb-0.5">
-                <span>Acme Renewal · \$120k</span>
-                <span className="text-[#12B76A]">ARR +15%</span>
+                <span>Acme renewal · \$120k</span>
+                <span className="text-[#12B76A]">Due soon</span>
               </div>
               <p className="text-[7px] text-[#5E728B] leading-tight line-clamp-1">
-                Context assembled from Salesforce + Zendesk + Gmail
+                Facts from Salesforce, Zendesk and Gmail
               </p>
             </div>
 
@@ -173,7 +173,7 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
                 <ShieldCheck className="w-3 h-3 text-[#12B76A]" />
                 <span>Human-approved</span>
               </div>
-              <span className="font-mono text-[#0070DC] font-bold">Full loop</span>
+              <span className="font-mono text-[#0070DC] font-bold">You decide</span>
             </div>
           </div>
 
@@ -191,13 +191,13 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
             {/* Sync to Salesforce */}
             <div className="bg-[#E8F9F0] border border-[#12B76A]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
               <span className="text-[7.5px] font-black text-[#12B76A]">UPDATE</span>
-              <span className="text-[7.5px] font-bold text-[#002B64]">CRM Deal</span>
+              <span className="text-[7.5px] font-bold text-[#002B64]">Deal</span>
             </div>
 
             {/* Sync to Slack */}
             <div className="bg-[#E8F9F0] border border-[#12B76A]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
-              <span className="text-[7.5px] font-black text-[#12B76A]">NOTIFY</span>
-              <span className="text-[7.5px] font-bold text-[#002B64]">Channel</span>
+              <span className="text-[7.5px] font-black text-[#12B76A]">TELL</span>
+              <span className="text-[7.5px] font-bold text-[#002B64]">The team</span>
             </div>
 
             {/* Sync to Drive */}
@@ -208,14 +208,14 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
 
             {/* Keep a record for AI */}
             <div className="bg-[#EAF7FF] border border-[#0070DC]/40 rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
-              <span className="text-[7.5px] font-black text-[#0070DC]">REMEMBER</span>
-              <span className="text-[7.5px] font-bold text-[#002B64]">Context</span>
+              <span className="text-[7.5px] font-black text-[#0070DC]">SAVE</span>
+              <span className="text-[7.5px] font-bold text-[#002B64]">The why</span>
             </div>
 
             {/* Record kept */}
             <div className="bg-white border border-[#D8E5F0] rounded-2xl p-1.5 w-12 sm:w-13 h-12 sm:h-13 flex flex-col items-center justify-center shadow-md">
-              <span className="text-[8px] font-black text-[#0070DC]">RECORD</span>
-              <span className="text-[7.5px] font-bold text-[#002B64]">Kept</span>
+              <span className="text-[8px] font-black text-[#0070DC]">LOG</span>
+              <span className="text-[7.5px] font-bold text-[#002B64]">Who OK'd it</span>
             </div>
           </div>
 
@@ -227,10 +227,10 @@ export function CorporateOrbitalHero({ className = "" }: CorporateOrbitalHeroPro
       <div className="relative z-10 mt-6 pt-4 border-t border-[#D8E5F0]/70 flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="flex items-center gap-2 text-[#5E728B]">
           <span className="inline-block w-2 h-2 rounded-full bg-[#12B76A]" />
-          <span>One shared view of your information and what is connected</span>
+          <span>Spine Fabric gathers your information. Your workspace shows it. Spine Twin, the AI assistant, suggests the next step.</span>
         </div>
         <div className="flex items-center gap-4 text-[11px] font-medium text-[#0070DC]">
-          <span>People stay in control of every loop</span>
+          <span>Nothing changes until a person approves it</span>
         </div>
       </div>
     </div>

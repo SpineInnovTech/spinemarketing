@@ -21,9 +21,9 @@ const details = [
   },
   {
     icon: Waypoints,
-    eyebrow: "The AI counterpart",
+    eyebrow: "The AI assistant",
     title: "Spine Twin",
-    body: "Context-aware AI that prepares work and proposes next steps, while important actions wait for a person's approval.",
+    body: "The AI assistant that reads the facts from your tools, prepares work and suggests next steps. Important actions wait for a person's approval.",
     href: "/twin",
     cta: "Meet Spine Twin",
   },
@@ -36,7 +36,7 @@ export function TechnologyDetailLinks() {
         align="left"
         label="Explore the technology in detail"
         headline="Three pages, one connected foundation."
-        body="Start with the introduction, read the technical detail, or meet the AI counterpart. Each explains a different part of the same foundation."
+        body="Start with the introduction, read the technical detail, or meet the AI assistant. Each explains a different part of the same foundation."
       />
       <div className="grid gap-5 md:grid-cols-3">
         {details.map(({ icon: Icon, eyebrow, title, body, href, cta }) => (

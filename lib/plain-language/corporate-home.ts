@@ -36,7 +36,7 @@ export const homeBento = {
     },
     {
       title: "Prepare with AI",
-      description: "Spine Twin drafts the next step from facts you may use.",
+      description: "Spine Twin, the AI assistant, drafts the next step from the facts you can see.",
       href: "/twin",
       large: false,
     },
@@ -52,27 +52,27 @@ export const homeBento = {
 export const homeFeatureTabs = {
   eyebrow: "Features",
   headline: "Built for everyday work",
-  intro: "Four helpers that sit inside your real tools and records.",
+  intro: "Four helpers that work with the tools and files you already use.",
   tabs: [
     {
       id: "twin",
       label: "Spine Twin",
       title: "Ask the Twin",
-      body: "Summarise a situation, compare evidence and get a suggested next step—with reasons and sources.",
+      body: "Spine Twin is the AI assistant. Ask it what is going on with a customer or project, and get a short summary and a suggested next step, with the reasons and where each fact came from.",
       href: "/twin",
     },
     {
       id: "coworker",
       label: "Spine Coworker",
       title: "Gather the facts first",
-      body: "Before Twin suggests anything, Coworker collects the records and evidence you are allowed to use for that task.",
+      body: "Spine Coworker does the legwork. Before Twin suggests anything, Coworker collects the emails, tickets and records you are allowed to see for that task.",
       href: "/twin#coworker",
     },
     {
       id: "triage",
       label: "Triage Bot",
       title: "Sort what just arrived",
-      body: "New email, file or ticket—linked to the right work and flagged for a decision. Nothing changes in your apps.",
+      body: "When a new email, file or ticket arrives, Triage Bot links it to the right customer or project and flags anything that needs a decision. Nothing changes in your apps.",
       href: "/triage-bot",
     },
     {
@@ -101,7 +101,7 @@ export const homeFaq = {
     {
       question: "Does SpineWorkspace replace our tools?",
       answer:
-        "No. Your CRM, email, support desk and folders keep the official records. SpineWorkspace reads and writes only with permission.",
+        "No. Your CRM, email, help desk and folders keep the official records. SpineWorkspace sits on top of them, reads what you allow, and only makes a change after a person approves it.",
     },
     {
       question: "Does AI act on its own?",
@@ -111,12 +111,12 @@ export const homeFaq = {
     {
       question: "What is Spine Twin?",
       answer:
-        "Twin works from your business facts—not guesses—and shows why it suggested each step. Coworker gathers the evidence first.",
+        "Spine Twin is the AI assistant inside SpineWorkspace. It reads the facts from your tools, suggests a next step, and shows why. It never acts until a person approves. Spine Coworker gathers the facts for it first.",
     },
     {
       question: "Who is it for first?",
       answer:
-        "We built first for account and customer success teams running renewals, but sales, finance, support and operations use the same pattern.",
+        "We built it first for account and customer success teams who manage renewals. Sales, finance, support and operations teams can work the same way.",
     },
     {
       question: "Where do I see pricing?",

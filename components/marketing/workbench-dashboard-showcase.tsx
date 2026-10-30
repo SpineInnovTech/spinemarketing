@@ -23,62 +23,62 @@ const dashboardViews = [
   {
     id: "overview",
     step: "01",
-    label: "Operational dashboard",
+    label: "Daily dashboard",
     route: "/workspace/work/service/dashboard",
-    focusBadge: "Full Dashboard & Queue",
+    focusBadge: "Full dashboard and to-do list",
     title: "Daily work, in one dashboard.",
     detail:
-      "Review Customer Service & Support records, KPIs and items needing attention. Search, filter and inspect without leaving the Workbench.",
-    whatChanges: "Shows 2 tracked Spine context items (tkt-501, tkt-502), readiness state (92%), and direct Review Plan / View Evidence controls.",
-    governanceNote: "The tools you already use keep the record. Dashboard actions follow the workspace rules.",
+      "See support tickets, key numbers and what needs attention today. Search, filter and open any item without leaving the page.",
+    whatChanges: "Shows two sample tickets (tkt-501, tkt-502), how ready they are (92%), and buttons to review the plan or see the facts behind it.",
+    governanceNote: "The tools you already use keep the record. Changes made here follow your team's approval rules.",
   },
   {
     id: "editing",
     step: "02",
     label: "Edit a local draft",
     route: "/workspace/work/service/dashboard?edit=DRAFT-7725",
-    focusBadge: "Focused Zoom · Inline Draft Editor",
+    focusBadge: "Close-up · Editing a draft",
     title: "Edit the draft. Keep the context.",
     detail:
-      "Update a local draft’s title and notes beside its owner, date and status. Connected source records stay under the authorized workflow.",
-    whatChanges: "Opens inline editor for DRAFT-7725 (SSO follow-up — Acme Corporation) while keeping the live queue visible below.",
-    governanceNote: "Edits remain in the scoped local outbox until reviewed.",
+      "Change a draft’s title and notes next to its owner, due date and status. Records in your other tools only change after approval.",
+    whatChanges: "Opens draft DRAFT-7725 (a login follow-up for Acme Corporation) for editing, with the to-do list still visible below.",
+    governanceNote: "Edits stay as a draft inside SpineWorkspace until someone reviews them.",
   },
   {
     id: "draft",
     step: "03",
     label: "Create a draft",
     route: "/workspace/work/service/dashboard?modal=new-draft",
-    focusBadge: "Focused Zoom · Draft Creation Modal",
+    focusBadge: "Close-up · Creating a draft",
     title: "Capture the next item.",
     detail:
-      "Create a local draft with a title, owner and date. Update the working status. Approval and the change follow the path a person allows.",
-    whatChanges: "Captures Title, Owner (Support Lead), Target Date, and Category before saving to the local outbox.",
-    governanceNote: "Creating a local draft never mutates external systems without authorization.",
+      "Create a draft with a title, owner and date, and set its status. Nothing goes out to your other tools until a person approves it.",
+    whatChanges: "Asks for a title, owner (Support Lead), due date and category, then saves it as a draft.",
+    governanceNote: "Creating a draft never changes your other tools without approval.",
   },
   {
     id: "filter",
     step: "04",
     label: "Search and filter",
     route: "/workspace/work/service/dashboard?q=SSO",
-    focusBadge: "Focused Zoom · Live Table Filter",
+    focusBadge: "Close-up · Search and filter",
     title: "Find the work that needs attention.",
     detail:
       "Search records and filter by status while the dashboard stays in place.",
-    whatChanges: "Filters the queue by query 'SSO' and status pills (All, Review, In Progress, Approved) to isolate tkt-501 immediately.",
-    governanceNote: "Instant client-side filtering over permitted workspace context.",
+    whatChanges: "Searches the list for 'SSO' (single sign-on) and filters by status (All, Review, In Progress, Approved) to find ticket tkt-501.",
+    governanceNote: "Search only covers what you are allowed to see.",
   },
   {
     id: "workbench",
     step: "05",
-    label: "Workbench shell",
+    label: "Team workspace",
     route: "/workspace/work/account-success",
-    focusBadge: "Role Shell · Account Success",
-    title: "The role-based operating shell.",
+    focusBadge: "Team view · Account Success",
+    title: "A workspace built for your role.",
     detail:
-      "The Account Success shell keeps records, Inspect and Ask Twin together. Metrics without a source binding remain unbound.",
-    whatChanges: "Displays Spine Fabric Live View records (Acme Renewal Contract, Expansion License) with inline Ask Twin and Inspect triggers.",
-    governanceNote: "Metrics without a live source binding explicitly display as unbound rather than inventing numbers.",
+      "The Account Success view keeps customer records, the Inspect button and Ask Twin (the AI assistant) together. Numbers with no connected source stay blank instead of being made up.",
+    whatChanges: "Shows two sample records (Acme renewal contract, expansion licence) with Ask Twin and Inspect buttons on each row.",
+    governanceNote: "If a number is not connected to a real tool yet, it shows as blank. We never invent numbers.",
   },
 ] as const;
 
@@ -87,29 +87,29 @@ const bentoPillars = [
     targetId: "overview" as const,
     code: "01",
     icon: LayoutDashboard,
-    title: "Live Queue & KPIs",
-    summary: "Track operational items, readiness state and review plans in one unified table.",
+    title: "To-do list and key numbers",
+    summary: "Track open items, how ready they are, and the plan for each, in one table.",
   },
   {
     targetId: "editing" as const,
     code: "02",
     icon: Edit3,
-    title: "Inline Draft Editing",
-    summary: "Revise local draft notes, owners and due dates right beside connected records.",
+    title: "Edit drafts in place",
+    summary: "Change draft notes, owners and due dates right next to the related records.",
   },
   {
     targetId: "filter" as const,
     code: "04",
     icon: Filter,
-    title: "Instant Search & Filter",
+    title: "Search and filter",
     summary: "Filter by keyword or approval status (Review, In Progress, Approved) in place.",
   },
   {
     targetId: "workbench" as const,
     code: "05",
     icon: Sparkles,
-    title: "Role Shell & Ask Twin",
-    summary: "Launch Inspect or Ask Twin directly from any entity row in the role shell.",
+    title: "Your team view and Ask Twin",
+    summary: "Open the details or ask the AI assistant about any row, right where you are.",
   },
 ] as const;
 
@@ -141,7 +141,7 @@ export function WorkbenchDashboardShowcase() {
     ? "/images/workbench/native-shell/workbench-20261015.webp"
     : `/images/workbench/editable-dashboard/${view.id}-20261015.webp`;
   const imageAlt = isNativeShell
-    ? "Captured native SpineWorkspace Account Success Workbench shell with unbound KPI values, two QA records, Inspect and Ask Twin controls, and the complete blue sidebar."
+    ? "SpineWorkspace Account Success screen with blank key numbers, two sample records, Inspect and Ask Twin buttons, and the full blue menu."
     : `Captured SpineWorkspace Customer Service & Support dashboard: ${view.label}, with the real operational dashboard controls and native blue sidebar.`;
 
   const stepDashboardView = (delta: number) => {
@@ -425,8 +425,8 @@ export function WorkbenchDashboardShowcase() {
         </summary>
         <p className="mt-2 max-w-3xl">
           {isNativeShell
-            ? "Native application components composed locally with two existing QA fixture records; the routed Workbench page does not yet supply them. Sync and host badges do not verify connections or completed actions."
-            : "Captured from the running application dashboard with existing QA fixtures and a reviewed local draft/status repair that is pending application integration. Edits remain in the scoped local outbox. Connected-source changes require the authorized workflow. This capture does not demonstrate a freeform dashboard layout editor."}
+            ? "Real app screens, filled with two sample test records (QA fixture data). The live page does not load these records yet. The connection badges are examples. They do not prove a tool is connected or that an action happened."
+            : "Captured from the running app, filled with sample test data (QA fixtures). One draft and status fix shown here is still being added to the app. Edits stay as drafts inside SpineWorkspace. Changes to your other tools need approval. You cannot rearrange the dashboard layout yet."}
         </p>
       </details>
 
@@ -484,9 +484,9 @@ export function WorkbenchDashboardShowcase() {
             </div>
             <p className="shrink-0 border-t border-[#D9E8F4] px-3 py-2 text-xs leading-5 text-[#596F89]">
               {isNativeShell
-                ? "Native shell composition with QA fixture records."
-                : "QA fixture capture."}{" "}
-              Choose Actual size and scroll to inspect the dashboard controls.
+                ? "Real app screen with sample QA fixture records."
+                : "Screenshot with sample QA fixture data."}{" "}
+              Choose Actual size and scroll to see the whole dashboard.
             </p>
           </div>
         </dialog>
