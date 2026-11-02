@@ -9,10 +9,15 @@ enforces the homepage pins and the banned-copy list.
 
 ## Locked copy (exact words)
 
-- **Home H1:** Connecting business context for humans and AI, with people in control.
-- **Lead:** Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.
+Revised 2 Nov 2026 for the first-time-visitor homepage redesign (owner brief):
+the hero moved to the company-first narrative below; the previous H1 stays as
+the footer tagline. All other pins are unchanged.
+
+- **Home H1:** Helping people and AI work better together.
+- **Lead:** We build technology that connects business information, decisions and everyday work—so teams can move forward without starting from scratch.
 - **Eyebrow pill:** Spine InnovTech
-- **CTAs:** "See the workflow" (#workflow, primary); "Explore SpineWorkspace" (https://spineworkspace.com, secondary)
+- **CTAs:** "Explore SpineWorkspace" (https://spineworkspace.com, primary); "See the workflow" (#workflow, secondary)
+- **Homepage structure (company-first):** who we are (hero) → the problem we are solving → what we build (SpineWorkspace) → why it matters → our approach (principles, workflow, how it is built) → our founder → company information.
 - **SpineWorkspace block:** label "SpineWorkspace"; H2 "Connected context. Human control. AI-ready."; line "Your tools. Your context. Your decisions."
 - **Diagram:** "Controlled execution", caption "Approved and traceable", badge "Human-approved"
 - **02 tab:** Agentic Governance
@@ -20,8 +25,8 @@ enforces the homepage pins and the banned-copy list.
 - **Footer tagline:** Connecting business context for humans and AI, with people in control.
 - **Footer closing line (gate-pinned):** Source systems stay authoritative. Authority stays with people. Context stays with the work.
 - **Principle titles:** Your tools keep the record. / Your people keep the authority. / Context continues with the work.
-- **Tab title:** Spine InnovTech — Connecting Business Context for Humans and AI
-- **Home share title (og/twitter):** Connecting business context for humans and AI, with people in control.
+- **Tab title:** Spine InnovTech — Helping People and AI Work Better Together
+- **Home share title (og/twitter):** Helping people and AI work better together.
 - **Header:** 3 dropdowns with 13 sub-links (Company 5, Technology 5, Our philosophy 3); Insights and Contact as direct links; CTA "Explore SpineWorkspace →"
 
 ## Brand

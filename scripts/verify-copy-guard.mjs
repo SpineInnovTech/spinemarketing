@@ -141,10 +141,10 @@ const JARGON_ALLOW = [
 // Positive copy the homepage MUST carry (the locked canon).
 const HOME_REQUIRED = [
   // H1
-  "Connecting business context for humans and AI, with people in control.",
+  "Helping people and AI work better together.",
   // Lead
-  "Spine InnovTech connects your tools, people, and AI through shared business context",
-  "so teams can move from insight to action, with people in control.",
+  "We build technology that connects business information, decisions and everyday work",
+  "so teams can move forward without starting from scratch.",
   // SpineWorkspace block
   "Connected context. Human control. AI-ready.",
   "Your tools. Your context. Your decisions.",

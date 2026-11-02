@@ -3,29 +3,29 @@ import { Header } from "@/components/header-client"
 import { Footer } from "@/components/footer"
 import { InnovLabsHome } from "@/components/marketing/innovlabs-home"
 export const metadata: Metadata = {
-  title: "Spine InnovTech — Connecting Business Context for Humans and AI",
+  title: "Spine InnovTech — Helping People and AI Work Better Together",
   description:
-    "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
+    "We build technology that connects business information, decisions and everyday work—so teams can move forward without starting from scratch.",
   alternates: { canonical: "/" },
   openGraph: {
     siteName: "Spine InnovTech",
-    title: "Connecting business context for humans and AI, with people in control.",
+    title: "Helping people and AI work better together.",
     description:
-      "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
+      "We build technology that connects business information, decisions and everyday work—so teams can move forward without starting from scratch.",
     images: [
       {
         url: "/og-share-2026-10.png",
         width: 1200,
         height: 630,
-        alt: "Spine InnovTech — Connecting business context for humans and AI, with people in control.",
+        alt: "Spine InnovTech — Helping people and AI work better together.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Connecting business context for humans and AI, with people in control.",
+    title: "Helping people and AI work better together.",
     description:
-      "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
+      "We build technology that connects business information, decisions and everyday work—so teams can move forward without starting from scratch.",
     images: ["/og-share-2026-10.png"],
   },
 };

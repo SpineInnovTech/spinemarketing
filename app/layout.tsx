@@ -22,19 +22,19 @@ export const metadata: Metadata = {
     types: { "application/rss+xml": "/rss.xml" },
   },
   title: {
-    default: "Spine InnovTech — Governed Business Context for Humans and AI",
+    default: "Spine InnovTech — Helping People and AI Work Better Together",
     template: "%s",
   },
   description:
-    "We build the governed foundation for shared business context. Your tools keep the record. Your people keep the authority.",
+    "We build technology that connects business information, decisions and everyday work—so teams can move forward without starting from scratch.",
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Connecting business context for humans and AI, with people in control.",
+    title: "Helping people and AI work better together.",
     description:
-      "Spine InnovTech connects your tools, people, and AI through shared business context, with people in control.",
+      "We build technology that connects business information, decisions and everyday work—so teams can move forward without starting from scratch.",
     siteName: "Spine InnovTech",
     type: "website",
     images: [
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: "/og-share-2026-10.png",
         width: 1200,
         height: 630,
-        alt: "Spine InnovTech — Connecting business context for humans and AI, with people in control.",
+        alt: "Spine InnovTech — Helping people and AI work better together.",
       },
     ],
   },
@@ -68,7 +68,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Spine InnovTech",
               legalName: "Spine InnovTech Private Limited",
-              description: "Spine InnovTech connects your tools, people, and AI through shared business context—so teams can move from insight to action, with people in control.",
+              description: "We build technology that connects business information, decisions and everyday work—so teams can move forward without starting from scratch.",
               url: publicSiteUrl,
               logo: absoluteUrl("/icon.svg"),
               sameAs: [],
