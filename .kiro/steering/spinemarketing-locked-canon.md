@@ -49,6 +49,27 @@ spineworkspace.com.
   modernization and support". CTA "Talk to us about a project" (/contact).
 - The copy guard pins these lines and forbids the retired heading.
 
+## Founder sign-off — 2026-11-16 (production release)
+
+The owner reviewed the production candidate (the October rollout and the 2026-11-16 revision) and
+decided:
+
+- **Canon approved.** The locked copy above ships to production.
+- **Share picture.** `public/og-share-2026-11.png` (copied to `public/og.png`) shows the wordmark
+  and the four H1 lines, so the picture matches the home share title. Site-wide og:image and
+  twitter:image point to it. The default share title in `app/layout.tsx`, used by pages without
+  their own, is the home share title, so no share card pairs the previous headline with the new
+  picture. `og-share-2026-10.png` stays in `public/` for links that already cached it.
+- **Founder note approved as written.** Homepage quote, attributed to "Nirmal Prince J", "Founder
+  and CEO, Spine InnovTech": "Before Spine InnovTech, I spent years connecting business systems.
+  The tools were linked, but people making decisions still could not see the whole story. That gap
+  is why we build SpineWorkspace."
+- **Legal summaries held back.** The plain-language summary boxes stay off `/privacy` and `/terms`
+  until counsel reviews them. The draft wording stays in `lib/plain-language/legal.ts`; the legal
+  text is unchanged.
+- **Security claim keeps its hedge.** The role-based access line on `/security` reads "Each
+  person's role is designed to decide which information they can see and what they can do."
+
 ## Brand
 
 - **"Spine InnovTech"** and one-word **"SpineWorkspace"**.

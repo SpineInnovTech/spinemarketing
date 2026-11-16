@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Solutions by Team & Industry | Spine InnovTech",
     description: "See how sales, customer success, finance, operations and other teams use the same facts for different jobs.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace Solutions" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace Solutions" }],
   },
 }
 

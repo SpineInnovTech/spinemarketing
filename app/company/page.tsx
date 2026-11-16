@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Company — Spine InnovTech",
     description: "Meet Spine InnovTech, the technology company behind SpineWorkspace, and learn why we build for the work between business systems.",
     type: "website",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 };
 

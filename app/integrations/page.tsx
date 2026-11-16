@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Connected Ecosystems & Integrations | Spine InnovTech",
     description: "Connect the tools you already use and bring the facts together for people and Spine Twin. Those tools keep the record.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace Integrations" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace Integrations" }],
   },
 }
 

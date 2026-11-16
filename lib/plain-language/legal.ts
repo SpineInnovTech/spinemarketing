@@ -1,4 +1,7 @@
-/** Plain-language summaries (S19) — legal body unchanged; requires legal review before prod. */
+/**
+ * Plain-language summaries (S19). Held back from /privacy and /terms until counsel reviews them
+ * (founder decision, 2026-11-16). The legal text is unchanged.
+ */
 
 export const privacyPlainSummary = [
   "We collect information you give us (such as name and email on Contact) and usage data when you use SpineWorkspace.",

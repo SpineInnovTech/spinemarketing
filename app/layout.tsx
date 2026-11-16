@@ -32,23 +32,23 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "Connecting business context for humans and AI, with people in control.",
+    title: "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.",
     description:
       "Spine InnovTech connects your tools, people, and AI through shared business context, with people in control.",
     siteName: "Spine InnovTech",
     type: "website",
     images: [
       {
-        url: "/og-share-2026-10.png",
+        url: "/og-share-2026-11.png",
         width: 1200,
         height: 630,
-        alt: "Spine InnovTech — Connecting business context for humans and AI, with people in control.",
+        alt: "Spine InnovTech — Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og-share-2026-10.png"],
+    images: ["/og-share-2026-11.png"],
   },
 }
 

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Finance Leaders | Spine InnovTech",
     description: "Cash, collections, runway — accounting, billing, and CRM unified.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 
