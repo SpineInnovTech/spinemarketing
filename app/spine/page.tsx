@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Spine — The foundation for connected business work | Spine InnovTech",
     description:
       "Spine is the foundation Spine InnovTech builds so people and AI can share one view of the business, while your existing tools keep the record.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

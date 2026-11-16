@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Resources | Spine InnovTech",
     description:
       "Perspectives, our technology approach and demonstrations from Spine InnovTech. Detailed product guides and getting started live on the product website.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 };
 

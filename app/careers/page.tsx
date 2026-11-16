@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Careers — Spine InnovTech",
     description:
       "Explore the problems Spine InnovTech works on and introduce yourself if you care about business context, integration and responsible AI.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 

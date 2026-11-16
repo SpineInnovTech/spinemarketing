@@ -5,8 +5,6 @@ import { Footer } from "@/components/footer"
 import { PageHero } from "@/components/marketing/page-hero"
 import { BreadcrumbJsonLd } from "@/components/structured-data"
 import { COMPANY_LEGAL_NAME } from "@/lib/company"
-import { PlainSummaryBox } from "@/components/sections/plain-summary-box"
-import { privacyPlainSummary } from "@/lib/plain-language/legal"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Spine InnovTech",
@@ -16,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Privacy Policy | Spine InnovTech",
     description: "How SpineWorkspace collects, uses, and protects your data.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 
@@ -37,11 +35,6 @@ export default function PrivacyPage() {
           secondaryCta={{ label: "Terms & Conditions", href: "/terms" }}
         />
         <section className="mx-auto max-w-[800px] px-6 py-16 md:px-16">
-          <PlainSummaryBox>
-            {privacyPlainSummary.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
-          </PlainSummaryBox>
           <div className="space-y-10 text-[15px] font-medium leading-[1.7] text-foreground/80">
             <div>
               <h2 className="text-[18px] font-semibold tracking-[-0.03em] text-foreground">1. Information we collect</h2>

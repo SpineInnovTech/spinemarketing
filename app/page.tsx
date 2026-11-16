@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: homeDescription,
     images: [
       {
-        url: "/og-share-2026-10.png",
+        url: "/og-share-2026-11.png",
         width: 1200,
         height: 630,
         alt: homeTitle,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: homeTitle,
     description: homeDescription,
-    images: ["/og-share-2026-10.png"],
+    images: ["/og-share-2026-11.png"],
   },
 };
 

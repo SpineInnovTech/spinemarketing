@@ -33,7 +33,7 @@ const securityFeatures = [
   {
     icon: KeyRound,
     title: "Role-based access control",
-    desc: "Each person's role decides which information they can see and what they can do.",
+    desc: "Each person's role is designed to decide which information they can see and what they can do.",
   },
   {
     icon: Users,

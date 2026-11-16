@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "How platform security is built | Spine InnovTech",
     description: "How SpineWorkspace security is built. Review sign-in, how data is protected, who can get in, and the record of actions for each setup.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "Spine InnovTech" }],
   },
 }
 
