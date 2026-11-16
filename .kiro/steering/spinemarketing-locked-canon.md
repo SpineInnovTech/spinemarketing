@@ -31,6 +31,24 @@ enforces the homepage pins and the banned-copy list.
 - **Home share title (og/twitter):** Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.
 - **Header:** 3 dropdowns with 13 sub-links (Company 5, Technology 5, Our philosophy 3); Insights and Contact as direct links; CTA "Explore SpineWorkspace →"
 
+## Founder revision — 2026-11-16 (homepage)
+
+The owner revised the homepage as part of the Spine InnovTech production launch: the company site
+presents the company, its products and its services, and the full product demonstration lives on
+spineworkspace.com.
+
+- **Renewal example → teaser.** The `#workflow` section keeps its anchor, so "See the workflow" still
+  lands there. It now carries the "Illustrative example" badge, H2 "One renewal, from question to
+  approved change", three steps (Connect, Prepare, Review) and the link "See the full walkthrough on
+  SpineWorkspace" (https://spineworkspace.com/how-it-works). The old heading "See how it works: a
+  customer renewal" and the Acme narrative are retired.
+- **Products and services.** A `#offerings` section follows the SpineWorkspace block. H2 "Products
+  and services from Spine InnovTech". Product cards: "SpineWorkspace" (Our product) and "Spine
+  Intelligence Platform" (Use it on its own). Services: "Enterprise integration and technology",
+  "Platform engineering and implementation", "AI and automation", "Consulting, migration,
+  modernization and support". CTA "Talk to us about a project" (/contact).
+- The copy guard pins these lines and forbids the retired heading.
+
 ## Brand
 
 - **"Spine InnovTech"** and one-word **"SpineWorkspace"**.

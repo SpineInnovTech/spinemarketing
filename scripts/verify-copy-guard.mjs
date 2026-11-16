@@ -156,18 +156,18 @@ const HOME_REQUIRED = [
   "People and AI see the full picture and the next step.",
   "Changes to your tools happen only with your approval.",
   "Your data and the story behind it, in one place.",
-  // Renewal example
-  "See how it works: a customer renewal",
+  // Renewal teaser (founder revision 2026-11-16: the full walkthrough lives on spineworkspace.com)
+  "One renewal, from question to approved change",
   "Illustrative example",
-  "What helps explain it",
-  "Renewal date and contract value",
-  "What the customer needs before renewing",
-  "Number of open support tickets",
-  "Which issue could make the customer leave",
-  "Product usage trend",
-  "Why usage changed and what the customer said",
-  "A conversation is data too.",
-  "These are examples, not separate boxes.",
+  "See the full walkthrough on SpineWorkspace",
+  // Products and services (founder revision 2026-11-16)
+  "Products and services from Spine InnovTech",
+  "Spine Intelligence Platform",
+  "Enterprise integration and technology",
+  "Platform engineering and implementation",
+  "AI and automation",
+  "Consulting, migration, modernization and support",
+  "Talk to us about a project",
   // SpineWorkspace block
   "Connected context. Human control. AI-ready.",
   "Your tools. Your context. Your decisions.",
@@ -188,6 +188,9 @@ const HOME_FORBIDDEN = [
   "SpineWorkspace brings information from your tools together with the conversations and history behind it.",
   "People and AI can see the full picture and work out the next step.",
   "Data shows what is happening. Context helps explain why. Together, they help you decide what to do next.",
+  // Founder revision 2026-11-16: the full product walkthrough belongs on spineworkspace.com.
+  "See how it works: a customer renewal",
+  "A renewal for the Acme account",
 ];
 
 /* -------------------------------------------------------------------------- */
