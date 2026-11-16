@@ -47,7 +47,7 @@ const storyScenes = [
     id: "governance",
     step: "03",
     label: "Review & Continue",
-    badge: "Spine Twin · Governed Action",
+    badge: "Spine Twin · A person approves",
     title: "AI prepares the next step. Humans approve.",
     detail:
       "Ask your AI Twin to summarize risks or draft a follow-up with linked evidence. Consequential writes stay behind your approval gate and carry across hosts.",
@@ -66,7 +66,7 @@ export function WorkbenchHeroPreview() {
 
   return (
     <div
-      aria-label="SpineWorkspace visual architecture storyboard"
+      aria-label="How SpineWorkspace fits together"
       className="relative overflow-hidden rounded-2xl border border-[#BBDDF8] bg-white shadow-[0_20px_60px_rgba(0,111,232,0.10)]"
     >
       <BorderBeam size={260} duration={14} colorFrom="#006FE8" colorTo="#38BDF8" />
@@ -214,7 +214,7 @@ export function WorkbenchHeroPreview() {
               <div className="mt-4 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-[#CBE5FA] bg-[#EBF7FF]/70 px-3 py-2 text-[11px] font-medium text-[#082B5E]">
                 <span className="inline-flex items-center gap-1.5">
                   <Lock className="h-3.5 w-3.5 text-[#006FE8]" aria-hidden />
-                  Source systems remain authoritative
+                  The tools you already use keep the record
                 </span>
                 <span className="font-mono text-[10px] font-semibold text-[#006FE8]">
                   Role-scoped access verified

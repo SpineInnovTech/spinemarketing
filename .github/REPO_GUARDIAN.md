@@ -45,7 +45,7 @@ template, and:
 - **ALLOWS** "Meeting with GlobalTech in 45 minutes" on /solutions/customer-success,
   the /docs and /developers reference pages, and /privacy and /terms.
 - **REQUIRES** the locked homepage copy (H1, lead, the SpineWorkspace H2/line,
-  "Agentic Governance", "Controlled execution", "Approved and traceable",
+  "People approve the AI", "Controlled execution", "Approved and traceable",
   "Human-approved", "See the workflow", "Explore SpineWorkspace").
 
 The locked copy is pinned word-for-word in

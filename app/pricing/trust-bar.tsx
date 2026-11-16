@@ -17,7 +17,7 @@ export function PricingTrustBar() {
         <motion.div {...fade(0)} className="mx-auto max-w-lg text-center mb-10">
           <h2 className="text-[length:min(24px,var(--marketing-heading-size))] font-semibold tracking-[-0.03em] text-[#032D60]">
             Every plan includes{" "}
-            <span className="text-[#0176D3]">governance by design.</span>
+            <span className="text-[#0176D3]">a person in control.</span>
           </h2>
         </motion.div>
 

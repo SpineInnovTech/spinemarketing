@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Technology | Spine InnovTech",
     description: "Shared information, work built around your role, AI that helps, and actions people approve — all in one connected product.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace Platform" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace Platform" }],
   },
 }
 

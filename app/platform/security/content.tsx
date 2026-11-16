@@ -105,7 +105,7 @@ export function PlatformSecurityContent() {
         <section className="border-t border-[#E5E5E5] bg-white py-16">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-[length:min(28px,var(--marketing-heading-size))] font-semibold text-[#032D60]">Review security claims against evidence.</h2>
-            <p className="mt-3 text-[16px] text-[#444]">Contact the team to discuss the architecture, deployment scope and control evidence.</p>
+            <p className="mt-3 text-[16px] text-[#444]">Contact the team to discuss how it is built, where it runs, and the controls you can review.</p>
             <Link
               href="/contact?intent=demo"
               className="mt-8 inline-flex h-10 items-center gap-2 rounded-md bg-[#0176D3] px-5 text-[14px] font-semibold text-white hover:bg-[#0B5CAB]"

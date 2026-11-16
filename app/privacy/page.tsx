@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Privacy Policy | Spine InnovTech",
     description: "How SpineWorkspace collects, uses, and protects your data.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

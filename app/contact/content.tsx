@@ -47,7 +47,7 @@ const contactFAQs = [
         <Link href="/platform/integrations" className="text-[#0176D3] underline underline-offset-2 hover:text-[#0B5CAB]">
           integrations catalog
         </Link>
-        . Your existing tools keep the record; Spine keeps a governed view it is allowed to read and helps coordinate approved work.
+        . Your existing tools keep the record. Spine keeps a view it is allowed to read, and it helps coordinate work a person has approved.
       </span>
     ),
   },
@@ -57,7 +57,7 @@ const contactFAQs = [
   },
   {
     question: "How does Spine InnovTech relate to SpineWorkspace?",
-    answer: "Spine InnovTech is the company that builds the governed foundation for people and AI to share business context. Your tools keep the record. Your people keep the authority. Context continues with the work. SpineWorkspace is its flagship product, where people and AI share one governed view of the business while your existing tools keep the record.",
+    answer: "Spine InnovTech is the company behind SpineWorkspace. Your tools keep the record. Your people keep the authority. Context continues with the work. SpineWorkspace is the product where people and AI share one view of the business, while your existing tools keep the record.",
   },
 ];
 
@@ -115,7 +115,7 @@ export function ContactContent({
               {
                 icon: Mail,
                 title: "Email us",
-                desc: "General questions, architecture discussions, partnership inquiries or project scoping.",
+                desc: "General questions, how the product is built, partnership inquiries, or project scoping.",
                 cta: "Use the form",
                 href: "#contact-form",
                 external: false,

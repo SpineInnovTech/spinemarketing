@@ -435,28 +435,35 @@ registerTest(1, 7, "F7.5", "Architecture storyboard avoids interactive product w
 });
 
 // Feature 8: Realign InnovLabs Home
+function corporateHomeSource() {
+  return (
+    readFileSync("components/marketing/innovlabs-home.tsx", "utf8") +
+    readFileSync("lib/page-templates/corporate-home-t1.tsx", "utf8")
+  );
+}
+
 registerTest(1, 8, "F8.1", "innovlabs-home.tsx does not import WorkbenchHeroPreview", async () => {
-  const text = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const text = corporateHomeSource();
   assert.ok(!text.includes("workbench-hero-preview"), "innovlabs-home.tsx must not import workbench-hero-preview");
 });
 
 registerTest(1, 8, "F8.2", "innovlabs-home.tsx does not render WorkbenchHeroPreview component", async () => {
-  const text = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const text = corporateHomeSource();
   assert.ok(!text.includes("<WorkbenchHeroPreview"), "innovlabs-home.tsx must not render <WorkbenchHeroPreview");
 });
 
 registerTest(1, 8, "F8.3", "innovlabs-home.tsx imports and renders CorporateArchitectureStoryboard", async () => {
-  const text = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const text = corporateHomeSource();
   assert.ok(text.includes("CorporateArchitectureStoryboard"), "Must import and render CorporateArchitectureStoryboard");
 });
 
 registerTest(1, 8, "F8.4", "innovlabs-home.tsx retains corporate brand badge SPINE INNOVTECH", async () => {
-  const text = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const text = corporateHomeSource();
   assert.ok(text.includes("SPINE INNOVTECH"), "Must retain brand badge SPINE INNOVTECH");
 });
 
 registerTest(1, 8, "F8.5", "innovlabs-home.tsx retains Interactive Storyboard verification badge", async () => {
-  const text = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const text = corporateHomeSource();
   assert.ok(text.includes("Interactive Storyboard"), "Must retain 'Interactive Storyboard' badge string for verification");
 });
 
@@ -477,12 +484,12 @@ registerTest(1, 9, "F9.3", "workspace-benefits.tsx links to product marketing si
 });
 
 registerTest(1, 9, "F9.4", "innovlabs-home.tsx secondary hero button points to architecture or product", async () => {
-  const text = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const text = corporateHomeSource();
   assert.ok(!text.includes('href="/product#workbench-views"'), "Hero CTA must not link to #workbench-views");
 });
 
 registerTest(1, 9, "F9.5", "Corporate homepage components contain zero dead #workbench-views anchors", async () => {
-  const files = ["components/marketing/innovlabs-home.tsx", "components/marketing/workspace-benefits.tsx"];
+  const files = ["lib/page-templates/corporate-home-t1.tsx", "components/marketing/workspace-benefits.tsx"];
   for (const f of files) {
     if (existsSync(f)) {
       const c = readFileSync(f, "utf8");
@@ -894,7 +901,7 @@ registerTest(1, 21, "F21.3", "Corporate codebase contains Next.js export build c
 });
 
 registerTest(1, 21, "F21.4", "Homepage source is free of Customer Zero and demo workspace leaks", async () => {
-  const home = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const home = corporateHomeSource();
   assert.ok(!home.includes("Good morning, Operator"), "No demo dashboard leaks");
   assert.ok(!home.includes("Customer Zero"), "No Customer Zero leaks");
 });
@@ -937,7 +944,7 @@ registerTest(1, 22, "F22.5", "Product workbench explorer page renders without un
 
 // Feature 23: Cross-Domain Link Check
 registerTest(1, 23, "F23.1", "All external product marketing links use HTTPS", async () => {
-  const files = ["components/marketing/innovlabs-home.tsx", "components/final-cta.tsx", "components/footer.tsx"];
+  const files = ["lib/page-templates/corporate-home-t1.tsx", "components/final-cta.tsx", "components/footer.tsx"];
   for (const f of files) {
     if (existsSync(f)) {
       const c = readFileSync(f, "utf8");
@@ -957,7 +964,7 @@ registerTest(1, 23, "F23.3", "All external app links use HTTPS", async () => {
 });
 
 registerTest(1, 23, "F23.4", "Zero localhost or staging link leaks in public corporate components", async () => {
-  const files = ["components/marketing/innovlabs-home.tsx", "components/marketing/corporate-architecture-storyboard.tsx", "components/final-cta.tsx"];
+  const files = ["lib/page-templates/corporate-home-t1.tsx", "components/marketing/corporate-architecture-storyboard.tsx", "components/final-cta.tsx"];
   for (const f of files) {
     if (existsSync(f)) {
       const c = readFileSync(f, "utf8");
@@ -1257,9 +1264,9 @@ registerTest(4, null, "T4.1", "Real-World: Legacy Corporate Visitor Redirection 
 registerTest(4, null, "T4.2", "Real-World: Enterprise Architect Technical Diagram Evaluation Flow", async () => {
   // Scenario: Enterprise architect arrives on homepage to inspect technical architecture.
   // Must see diagrammatic architecture storyboard (Fabric, Hermes, Continuity) and zero product workbench heroes.
-  const home = readFileSync("components/marketing/innovlabs-home.tsx", "utf8");
+  const home = corporateHomeSource();
   assert.ok(!home.includes("<WorkbenchHeroPreview"), "Must not show interactive product workbench on corporate homepage");
-  assert.ok(home.includes("<CorporateArchitectureStoryboard"), "Must render CorporateArchitectureStoryboard");
+  assert.ok(home.includes("CorporateArchitectureStoryboard"), "Must render CorporateArchitectureStoryboard");
   const storyboard = readFileSync("components/marketing/corporate-architecture-storyboard.tsx", "utf8");
   assert.ok(storyboard.includes("Context Fabric"), "Must feature Context Fabric");
   assert.ok(storyboard.includes("Hermes Zero-Trust"), "Must feature Hermes Zero-Trust Governance");

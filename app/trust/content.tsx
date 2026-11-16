@@ -5,29 +5,29 @@ import { PageHero } from "@/components/marketing/page-hero"
 const commitments = [
   {
     number: "01",
-    eyebrow: "Access boundaries",
-    title: "Share context according to responsibility and permission.",
+    eyebrow: "Who can see what",
+    title: "Show each person only what their job allows.",
     body: [
-      "User, team and connected-tool permissions must shape what information can be brought together and shown.",
-      "Role-aware views and AI preparation should apply those boundaries throughout the work. A shared business context does not imply universal visibility.",
+      "A person's role, their team, and the tools they connect decide which facts can be brought together and shown.",
+      "The view for each job, and the facts the AI prepares, should follow those limits. Sharing one picture of the work does not mean everyone sees everything.",
     ],
   },
   {
     number: "02",
-    eyebrow: "Authority boundaries",
-    title: "Every action needs a basis for permission.",
+    eyebrow: "Who can act",
+    title: "Every action needs permission.",
     body: [
-      "The availability of a capability tells us what a system can do. Authorization determines whether a particular person or AI may use it for the intended purpose.",
-      "Our approach separates preparation, human review, authorization and execution. Approval must remain connected to the action it permits and cannot override source permissions.",
+      "What a tool can do is not the same as permission to use it. A person or AI may use it only for the job they are allowed to do.",
+      "Preparing, reviewing, approving, and making the change are separate steps. Approval stays tied to that change. It cannot override the limits of the tool that keeps the record.",
     ],
   },
   {
     number: "03",
     eyebrow: "Evidence and where it came from",
-    title: "Make the basis of a decision inspectable.",
+    title: "Show why a decision was made.",
     body: [
-      "People should be able to see which sources support a conclusion, where interpretation has been applied and what remains uncertain.",
-      "Conflicting records, stale evidence and changes in source information should remain visible enough to inform review and correction.",
+      "People should be able to see which sources support a conclusion, where someone added an interpretation, and what is still unclear.",
+      "Conflicting records, old facts, and changes in the source tools should stay visible enough to review and correct.",
     ],
   },
   {
@@ -48,8 +48,8 @@ export function TrustContent() {
         tone="ice"
         badge="Our design commitments"
         headline={"Trust depends on clear boundaries\nand visible evidence."}
-        subhead="Business context can hold sensitive information, big decisions and actions that change other tools. Our design puts who can see what, who can act, where information came from, and proof of what happened into the work itself."
-        primaryCta={{ label: "Discuss our governance approach", href: "/contact?topic=trust" }}
+        subhead="The facts about the work can include sensitive information, big decisions, and actions that change other tools. Our design keeps who can see what, who can act, where the facts came from, and what happened, inside the work itself."
+        primaryCta={{ label: "Talk about trust", href: "/contact?topic=trust" }}
         secondaryCta={{ label: "Read our responsible AI approach", href: "/responsible-ai" }}
       />
 
@@ -83,7 +83,7 @@ export function TrustContent() {
               For SpineWorkspace evaluation, discuss current controls, data handling and available documentation with the product team.
             </p>
             <a href="https://spineworkspace.com/contact" className="mt-9 inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#006FE8] px-6 text-sm font-semibold text-white transition hover:bg-[#0055B8]">
-              Discuss product security and governance <ArrowUpRight className="h-4 w-4" aria-hidden />
+              Talk about product security <ArrowUpRight className="h-4 w-4" aria-hidden />
             </a>
           </div>
         </div>

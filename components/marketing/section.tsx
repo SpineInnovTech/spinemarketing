@@ -15,9 +15,9 @@ export function Section({ children, className = "", id, variant = "dark" }: Sect
   return (
     <section
       id={id}
-      className={`relative -mt-px overflow-hidden border-t border-[#D6E8F8] py-20 md:py-24 ${bg} ${className}`}
+      className={`relative -mt-px overflow-hidden border-t border-[#D6E8F8] py-20 md:py-28 ${bg} ${className}`}
     >
-      <div className="relative z-10 mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12">{children}</div>
+      <div className="relative z-10 mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">{children}</div>
     </section>
   );
 }

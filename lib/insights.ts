@@ -104,7 +104,7 @@ export const INSIGHT_ARTICLES: InsightArticle[] = [
     metaTitle: "Connection Is Not Permission — Spine InnovTech",
     metaDescription:
       "Explore the line between finding a connected tool and giving a person or AI permission to use it for business work.",
-    category: "Governance",
+    category: "Who decides",
     byline: "Spine InnovTech",
     cardSummary:
       "How to think about the line between finding a tool and giving a person or AI permission to use it.",
@@ -141,7 +141,7 @@ export const INSIGHT_ARTICLES: InsightArticle[] = [
         ],
       },
     ],
-    cta: { label: "Read our approach to trust and governance", href: "/trust" },
+    cta: { label: "Read our approach to trust", href: "/trust" },
   },
   {
     slug: "work-continuity",

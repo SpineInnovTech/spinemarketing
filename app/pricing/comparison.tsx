@@ -35,10 +35,10 @@ const planFeatures = [
     ],
   },
   {
-    category: "Governance",
+    category: "Approvals",
     features: [
       { name: "Basic risk alerts", starter: true, growth: true, command: true },
-      { name: "Governance", starter: false, growth: true, command: true },
+      { name: "Approval rules", starter: false, growth: true, command: true },
       { name: "A record of what a person decided", starter: false, growth: false, command: true },
       { name: "SSO & RBAC", starter: false, growth: false, command: true },
       { name: "Enterprise audit trail", starter: false, growth: false, command: true },

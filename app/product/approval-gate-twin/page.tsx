@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Governance & Twin in Action | Spine InnovTech",
     description: "Review proposed work with its evidence, send actions that matter to the right person to approve, and check the results.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

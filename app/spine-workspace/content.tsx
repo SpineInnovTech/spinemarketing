@@ -6,17 +6,17 @@ const foundationPillars = [
   {
     icon: Boxes,
     title: "Fabric",
-    body: "Fabric assembles authorized records, evidence, goals, decisions and outcomes into shared context. Your CRM, support, finance, contract and document systems keep their records.",
+    body: "Spine Fabric is the shared view of records from the tools you already use. It brings together the records, evidence, goals, decisions and results you are allowed to see. Your CRM, support, finance, contract and document systems keep their records.",
   },
   {
     icon: LayoutGrid,
     title: "Workbench",
-    body: "People work in role-aware surfaces in the Workbench, the main place they work.",
+    body: "The Workbench is the screen where a person does the work. Each person sees the view that fits their job.",
   },
   {
     icon: Sparkles,
     title: "Twin",
-    body: "The Twin investigates and prepares the next step from that context.",
+    body: "Spine Twin is the AI that prepares the next step from those facts, then waits for a person.",
   },
   {
     icon: ShieldCheck,
@@ -43,7 +43,7 @@ export function SpineWorkspaceOverviewContent() {
         tone="ice"
         badge="A product by Spine InnovTech"
         headline="SpineWorkspace"
-        subhead="Connected context. Human control. AI-ready. SpineWorkspace is the governed workspace where humans and AI share one view of the business, while your existing tools keep the record."
+        subhead="Connected context. Human control. AI-ready. SpineWorkspace is the workspace where people and AI share one view of the business, while your existing tools keep the record."
         principle="Your tools. Your context. Your decisions."
         primaryCta={{ label: "Explore SpineWorkspace", href: "https://spineworkspace.com" }}
         secondaryCta={{ label: "Understand our technology approach", href: "/platform" }}
@@ -52,20 +52,20 @@ export function SpineWorkspaceOverviewContent() {
       <section className="mx-auto max-w-[1220px] px-5 py-24 sm:px-8 lg:py-32">
         <p className="text-xs font-semibold uppercase tracking-[.21em] text-[#2461BC]">The foundation in daily work</p>
         <h2 className="mt-5 max-w-[780px] text-[length:min(clamp(2.3rem,4.5vw,4.3rem),var(--marketing-heading-size))] font-semibold leading-[1.12] tracking-[-.055em] text-[#0C274E]">
-          Shared context. Human decisions. Controlled execution.
+          Shared facts. Human decisions. Controlled execution.
         </h2>
         <div className="mt-8 grid max-w-[900px] gap-5">
           <p className="text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#536883]">
-            Fabric assembles authorized records, evidence, goals, decisions and outcomes into shared context. Your CRM, support, finance, contract and document systems keep their records.
+            Spine Fabric is the shared view of records from the tools you already use. It brings together the records, evidence, goals, decisions and results you are allowed to see. Your CRM, support, finance, contract and document systems keep their records.
           </p>
           <p className="text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#536883]">
-            People work in role-aware surfaces in the Workbench, the main place they work. The Twin looks into things and prepares the next step from that context. Humans decide and approve. The product carries out the approved action and checks the result.
+            The Workbench is the screen where a person does the work. Each person sees the view that fits their job. Spine Twin looks into the facts and prepares the next step. People decide and approve. The product carries out the approved action and checks the result.
           </p>
           <p className="text-[length:min(17px,var(--marketing-body-size))] leading-[1.9] text-[#536883]">
             Context and decisions carry forward so the story does not have to be rebuilt on every handoff or tool switch.
           </p>
           <p className="text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.9] text-[#17375F]">
-            One governed view means consistent business context within each person&rsquo;s role and permissions.
+            One shared view means the same facts, limited to each person&rsquo;s job and what they are allowed to see.
           </p>
         </div>
         <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">

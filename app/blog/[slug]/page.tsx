@@ -42,7 +42,7 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
-      images: post.heroImageUrl ? [{ url: post.heroImageUrl }] : [{ url: "/og-share-2026-10.png", width: 1200, height: 630 }],
+      images: post.heroImageUrl ? [{ url: post.heroImageUrl }] : [{ url: "/og-share-2026-11.png", width: 1200, height: 630 }],
     },
   }
 }
