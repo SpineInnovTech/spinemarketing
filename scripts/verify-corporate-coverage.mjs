@@ -314,9 +314,9 @@ const EXPECTED_FOOTER_GROUPS = [
     { label: "Resources", href: "/resources" },
   ] },
 ];
-const FOOTER_BRAND_STATEMENT = "Connecting business context for humans and AI, with people in control.";
+const FOOTER_BRAND_STATEMENT = "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.";
 const FOOTER_CLOSING_LINE =
-  "Source systems stay authoritative. Authority stays with people. Context stays with the work.";
+  "Your tools keep the record. Your people keep the authority. Context continues with the work.";
 const FOOTER_COPYRIGHT = "© 2026 Spine InnovTech. All rights reserved.";
 // Bottom-bar utility links — beside the legal links, not inside the master's
 // four groups. "Site map" keeps the directory reachable from the footer.

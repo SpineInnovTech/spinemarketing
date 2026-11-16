@@ -140,21 +140,57 @@ const JARGON_ALLOW = [
 
 // Positive copy the homepage MUST carry (the locked canon).
 const HOME_REQUIRED = [
-  // H1
-  "Connecting business context for humans and AI, with people in control.",
-  // Lead
-  "Spine InnovTech connects your tools, people, and AI through shared business context",
-  "so teams can move from insight to action, with people in control.",
+  // H1, each line
+  "Your Business Tools",
+  "Your Business Context",
+  "Your Decisions",
+  "AI Acts With Your Approval",
+  // Title and footer, one line
+  "Your Business Tools. Your Business Context. Your Decisions. AI Acts With Your Approval.",
+  // Relationship
+  "Data shows what is happening.",
+  "Context helps explain why.",
+  "Together, they help you decide what to do next.",
+  // Short cards, not a paragraph
+  "Your tools, with the conversations and history behind them.",
+  "People and AI see the full picture and the next step.",
+  "Changes to your tools happen only with your approval.",
+  "Your data and the story behind it, in one place.",
+  // Renewal teaser (founder revision 2026-11-16: the full walkthrough lives on spineworkspace.com)
+  "One renewal, from question to approved change",
+  "Illustrative example",
+  "See the full walkthrough on SpineWorkspace",
+  // Products and services (founder revision 2026-11-16)
+  "Products and services from Spine InnovTech",
+  "Spine Intelligence Platform",
+  "Enterprise integration and technology",
+  "Platform engineering and implementation",
+  "AI and automation",
+  "Consulting, migration, modernization and support",
+  "Talk to us about a project",
   // SpineWorkspace block
   "Connected context. Human control. AI-ready.",
   "Your tools. Your context. Your decisions.",
   // Named pins
-  "Agentic Governance",
+  "People approve the AI",
   "Controlled execution",
   "Approved and traceable",
   "Human-approved",
   "See the workflow",
   "Explore SpineWorkspace",
+];
+
+const HOME_FORBIDDEN = [
+  "Connecting business context for humans and AI, with people in control.",
+  "Business context means the facts about the work, kept together, so people and AI are looking at the same picture.",
+  "One workflow, shown end to end",
+  "Your business data and context, together—with people in control.",
+  "SpineWorkspace brings information from your tools together with the conversations and history behind it.",
+  "People and AI can see the full picture and work out the next step.",
+  "Data shows what is happening. Context helps explain why. Together, they help you decide what to do next.",
+  // Founder revision 2026-11-16: the full product walkthrough belongs on spineworkspace.com.
+  "See how it works: a customer renewal",
+  "A renewal for the Acme account",
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -230,6 +266,11 @@ if (!home) {
   for (const phrase of HOME_REQUIRED) {
     if (!home.includes(phrase)) {
       failures.push(`REQUIRED homepage copy missing: "${phrase}"`);
+    }
+  }
+  for (const phrase of HOME_FORBIDDEN) {
+    if (home.includes(phrase)) {
+      failures.push(`REMOVED homepage copy still present: "${phrase}"`);
     }
   }
 }

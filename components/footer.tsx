@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { SpineLogo } from "@/components/spine-logo";
 import { footerColumns, footerLegalLinks, footerUtilityLinks, COMPANY_TAGLINE } from "@/lib/navigation";
+import { footerBrandBlurb } from "@/lib/plain-language/site-wide";
 import { COMPANY_NAME } from "@/lib/company";
 
 export function Footer() {
@@ -27,11 +28,7 @@ export function Footer() {
             <h2 className="mt-8 max-w-[440px] text-[length:min(clamp(1.5rem,2.2vw,2rem),var(--marketing-heading-size))] font-semibold leading-[1.25] tracking-[-.04em] text-white">
               {COMPANY_TAGLINE}
             </h2>
-            <p className="mt-5 max-w-[400px] text-[14px] leading-[1.85] text-[#CBD9EB]">
-              Spine InnovTech develops technology for shared business
-              understanding, human and AI collaboration, explicit authority and
-              work continuity.
-            </p>
+            <p className="mt-5 max-w-[400px] text-[14px] leading-[1.85] text-[#CBD9EB]">{footerBrandBlurb}</p>
             <Link
               href="/contact"
               className="mt-7 inline-flex items-center gap-2 text-[14px] font-semibold text-[#9BCAFF] transition hover:text-white"
@@ -76,8 +73,8 @@ export function Footer() {
           </nav>
         </div>
         <p className="border-b border-white/15 py-6 text-[13px] leading-[1.8] text-[#CBD9EB]">
-          Source systems stay authoritative. Authority stays with people.
-          Context stays with the work.
+          Your tools keep the record. Your people keep the authority.
+          Context continues with the work.
         </p>
         <div className="flex flex-wrap items-center justify-between gap-4 py-7">
           <p className="text-[12px] text-[#CBD9EB]">

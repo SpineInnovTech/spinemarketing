@@ -5,8 +5,8 @@ import { PageHero } from "@/components/marketing/page-hero";
 const principles = [
   {
     number: "01",
-    title: "Respect source authority.",
-    body: "Shared context must keep track of where information came from and which tool owns the real record. What is an interpretation, what is a proposed change and what is an accepted fact must stay easy to tell apart.",
+    title: "The tools you already use keep the record.",
+    body: "Keep track of where each fact came from, and which tool owns the real record. A guess, a suggested change, and an accepted fact must stay easy to tell apart.",
   },
   {
     number: "02",
@@ -25,8 +25,8 @@ export function AboutContent() {
     <>
       <PageHero
         badge="How we think and build / Spine InnovTech"
-        headline="Intelligence needs context. Action needs authority."
-        subhead="Our engineering philosophy starts with the responsibilities people carry in a business: understand the situation, make a sound decision and stay accountable for what follows. We build technology to support those responsibilities as information, tools and AI spread across more and more places."
+        headline="AI needs the facts. Action needs a person's approval."
+        subhead="People still have to understand the situation, make a sound decision, and stay accountable for what follows. We build technology to help with that as information, tools, and AI spread across more places."
         primaryCta={{ label: "Explore the technology", href: "/platform" }}
         secondaryCta={{ label: "Meet the company", href: "/company" }}
       />
@@ -70,7 +70,7 @@ export function AboutContent() {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[.21em] text-[#2461BC]">From philosophy to product</p>
           <h2 className="mt-6 text-[length:min(clamp(2.4rem,4.4vw,4.4rem),var(--marketing-heading-size))] font-semibold leading-[1.1] tracking-[-.055em] text-[#0C274E]">SpineWorkspace puts the principle to work.</h2>
-          <p className="mt-7 text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#536883]">One workspace for humans and AI to understand the business, share the work, and achieve goals together. Spine Fabric, the Workbench, the Twin and approved action are parts of that one direction.</p>
+          <p className="mt-7 text-[length:min(17px,var(--marketing-body-size))] leading-[1.85] text-[#536883]">One workspace where people and AI see the business and share the work. Spine Fabric is the shared view of records from the tools you already use. The Workbench is the screen where a person does the work. Spine Twin is the AI that prepares the next step and waits. A person approves the action.</p>
           <a href="/product" className="mt-9 inline-flex min-h-12 items-center gap-2 rounded-full bg-[#102F5B] px-6 text-sm font-semibold text-white transition hover:bg-[#2759A0]">
             Explore SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
           </a>
@@ -79,7 +79,7 @@ export function AboutContent() {
           {[
             { icon: GitBranch, title: "Context", body: "Relate goals, customers, signals, work and evidence." },
             { icon: Waypoints, title: "Collaboration", body: "Share the right understanding with people and AI." },
-            { icon: ShieldCheck, title: "Governance", body: "Move forward through approved actions and checked results." },
+            { icon: ShieldCheck, title: "Approval", body: "Move forward only after a person approves, then check the result." },
           ].map(({ icon: Icon, title, body }) => (
             <div key={title} className="flex gap-4 rounded-xl border border-white/15 bg-white/5 p-5">
               <Icon className="mt-1 h-5 w-5 shrink-0 text-[#A3C7FF]" aria-hidden />

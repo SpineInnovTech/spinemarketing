@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "How it works | Spine InnovTech",
     description: "People and Twin work from the business facts they are allowed to see: look into things, prepare work, review actions that matter, and check the results in your own tools.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

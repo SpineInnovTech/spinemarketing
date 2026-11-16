@@ -31,7 +31,7 @@ const painItems = [
     features: ["Multi-system context", "Evidence-backed reasoning", "Full entity awareness"],
   },
   {
-    tag: "Zero governance",
+    tag: "No one approves",
     title: "Automations run without approval.",
     description: "Records change overnight. Nobody approved it. The audit trail shows nothing. Trust erodes silently.",
     icon: ShieldAlert,
@@ -71,7 +71,7 @@ export function WhyAnswerGather() {
   return (
     <StickyGather
       tag="The SpineWorkspace Answer"
-      heading="Six capabilities. One governed workspace."
+      heading="Six things it does. One workspace."
       centerLabel="SpineWorkspace"
       items={answerNodes}
     />

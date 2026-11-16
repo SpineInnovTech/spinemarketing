@@ -21,7 +21,7 @@ const MAIL = "connect@spineworkspace.com"
 
 const INTENT_LABELS: Record<LeadIntent, string> = {
   contact: "General inquiry",
-  technology: "Technology & architecture",
+  technology: "Technology and how it is built",
   partnership: "Partnership",
   trust: "Trust & governance",
   security: "Security report",

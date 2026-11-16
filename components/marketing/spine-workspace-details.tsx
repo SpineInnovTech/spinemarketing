@@ -16,7 +16,7 @@ const workflow = [
   },
   {
     title: "Prepare with your Twin",
-    body: "Ask your AI Twin to summarize the situation, investigate the evidence and propose a useful next step.",
+    body: "Ask Spine Twin, the AI that prepares the next step, to summarize the situation, look at the facts, and suggest a useful next step. It waits for a person.",
   },
   {
     title: "Review with authority",
@@ -75,7 +75,7 @@ export function SpineWorkspaceDetails() {
         <div className="mt-5 flex flex-wrap justify-center gap-x-7 gap-y-3">
           <Link href="/platform/how-it-works" className="innovtech-text-link">See the underlying workflow <ArrowRight size={18} aria-hidden /></Link>
           <Link href="/host-connected-environment" className="innovtech-text-link">Explore host connections and continuity <ArrowRight size={18} aria-hidden /></Link>
-          <Link href="/security" className="innovtech-text-link">Security and governance <ArrowRight size={18} aria-hidden /></Link>
+          <Link href="/security" className="innovtech-text-link">Security and who decides <ArrowRight size={18} aria-hidden /></Link>
         </div>
       </section>
 

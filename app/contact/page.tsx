@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Spine InnovTech",
     title: "Contact | Spine InnovTech",
     description: "Book a demo or ask us to connect a tool. We connect your tools live.",
-    images: [{ url: "/og-share-2026-10.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
+    images: [{ url: "/og-share-2026-11.png", width: 1200, height: 630, alt: "SpineWorkspace" }],
   },
 }
 

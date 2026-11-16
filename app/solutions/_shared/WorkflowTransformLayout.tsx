@@ -147,7 +147,7 @@ export function WorkflowTransformLayout({
       </Section>
 
       <Section>
-        <SectionHeader label="Capabilities" headline="Built for this work" />
+        <SectionHeader label="What it can do" headline="Built for this work" />
         <div className="space-y-3">
           {capabilities.map(({ title, desc }, i) => (
             <motion.div

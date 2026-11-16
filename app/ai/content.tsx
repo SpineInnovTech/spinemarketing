@@ -32,7 +32,7 @@ const threeLayers = [
   {
     icon: BookOpen,
     label: "Session Summaries",
-    desc: "Governed AI outputs entering knowledge",
+    desc: "AI suggestions a person has accepted, kept with the knowledge",
     color: "rgb(110,231,183)",
   },
 ];
@@ -145,7 +145,7 @@ export function AIContent() {
               }}
               className="mx-auto mt-8 max-w-2xl text-[length:min(17px,var(--marketing-body-size))] font-medium leading-[1.5] tracking-[-0.02em] text-white/55"
             >
-              Assembles evidence, explains why a signal exists, proposes concrete actions. Operates on governed context from the SpineWorkspace, not screen-scraped guesses. Always shows its reasoning before asking for approval. And through the Twin, it coordinates specialist agents behind the scenes — you talk to one intelligence, not a menu of bots.
+              It gathers the facts, explains why something needs attention, and suggests a concrete next step. It uses the facts in SpineWorkspace, not guesses scraped from a screen. It always shows its reasoning before it asks for approval. Spine Twin, the AI that prepares the next step, keeps the help in one place. You talk to one helper, not a menu of bots.
             </motion.p>
           </div>
         </div>

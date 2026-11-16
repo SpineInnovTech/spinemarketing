@@ -48,7 +48,7 @@ export function SpineContent() {
         tone="ice"
         badge="Our technology foundation"
         headline={"A foundation for shared\nbusiness understanding."}
-        subhead="Spine is the foundation Spine InnovTech builds so humans and AI can share one governed view of the business, while existing tools keep the record. This page is a short introduction; the detail lives on the pages it links to."
+        subhead="Spine is the foundation Spine InnovTech builds so people and AI can share one view of the business, while your existing tools keep the record. This page is a short introduction. The detail lives on the pages it links to."
         primaryCta={{ label: "See the technical detail", href: "/platform/spine-fabric" }}
         secondaryCta={{ label: "Meet the AI counterpart", href: "/twin" }}
       />
