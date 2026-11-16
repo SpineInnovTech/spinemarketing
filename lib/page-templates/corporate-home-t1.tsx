@@ -3,12 +3,18 @@ import {
   ArrowRight,
   BarChart3,
   Cable,
+  Compass,
   Eye,
+  Layers,
+  LayoutDashboard,
   ListChecks,
   MessagesSquare,
+  Plug,
   ShieldCheck,
+  Sparkles,
   UserCheck,
   Workflow,
+  Wrench,
 } from "lucide-react";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
@@ -38,36 +44,70 @@ import {
   TeamMarqueeSection,
 } from "@/components/sections";
 
-const workflowSteps = [
+// Founder revision 2026-11-16: the full renewal walkthrough lives on spineworkspace.com;
+// the company homepage keeps a short teaser.
+const workflowTeaser = [
   {
     phase: "Connect",
     title: "Bring the account into view",
-    body: "Bring up the account, support and contract details you are allowed to see for the renewal.",
-  },
-  {
-    phase: "Connect",
-    title: "Show the evidence",
-    body: "Show the source evidence behind it and flag the gaps that are still unresolved.",
+    body: "The account record, support history and contract terms, together in one place.",
   },
   {
     phase: "Prepare",
     title: "Prepare the next step",
-    body: "Spine Twin, the AI that prepares the next step, writes a renewal-risk summary and a suggested action. It waits for a person.",
+    body: "AI drafts a summary and a suggested action, then waits for a person.",
   },
   {
     phase: "Review",
     title: "The person approves",
-    body: "The person reviews the proposal and approves the exact change to make.",
+    body: "The approved change is made in the tool that owns the record, and a record of it is kept.",
+  },
+] as const;
+
+// Founder revision 2026-11-16: what Spine InnovTech offers.
+const offerings = [
+  {
+    icon: LayoutDashboard,
+    label: "Our product",
+    name: "SpineWorkspace",
+    description:
+      "A shared workspace where people and AI work from the same business context, and a person approves every important change.",
+    cta: { label: "Explore SpineWorkspace", href: "https://spineworkspace.com" },
   },
   {
-    phase: "Review",
-    title: "The change is executed",
-    body: "The approved update is made in the tool that owns the record.",
+    icon: Layers,
+    label: "Use it on its own",
+    name: "Spine Intelligence Platform",
+    description:
+      "The foundation behind SpineWorkspace: sign-in and access, business context, connections to your tools, AI and approvals. Connect your own applications and AI tools to it, with or without SpineWorkspace.",
+    cta: { label: "See developer details", href: "/developers" },
+  },
+] as const;
+
+const services = [
+  {
+    icon: Plug,
+    name: "Enterprise integration and technology",
+    description:
+      "Connect the business applications and data you already use, so information moves with the work instead of being copied by hand.",
   },
   {
-    phase: "Review",
-    title: "The record is kept",
-    body: "Show how the tool looks now, and the record kept of what was done.",
+    icon: Wrench,
+    name: "Platform engineering and implementation",
+    description:
+      "Set up the Spine Intelligence Platform for your organization, connect your systems and build the applications your teams need on it.",
+  },
+  {
+    icon: Sparkles,
+    name: "AI and automation",
+    description:
+      "Design AI help that prepares work for people to review, with clear limits on what it can see and what needs approval.",
+  },
+  {
+    icon: Compass,
+    name: "Consulting, migration, modernization and support",
+    description:
+      "Plan the move from older tools, modernize how work flows between teams, and keep everything running with ongoing support.",
   },
 ] as const;
 
@@ -87,12 +127,6 @@ const principles = [
     title: "Context continues with the work.",
     body: "Context stays with the work, so the next step continues from where the last one left off.",
   },
-] as const;
-
-const renewalExamples = [
-  { data: "Renewal date and contract value", explains: "What the customer needs before renewing" },
-  { data: "Number of open support tickets", explains: "Which issue could make the customer leave" },
-  { data: "Product usage trend", explains: "Why usage changed and what the customer said" },
 ] as const;
 
 const heroExplanationCards = [
@@ -220,6 +254,70 @@ export function CorporateHomeT1() {
         </div>
       </section>
 
+      <section
+        id="offerings"
+        aria-labelledby="home-offerings-title"
+        className="scroll-mt-24 border-b border-[#D6E8F8] bg-[#F7FBFF] py-20 md:py-24"
+      >
+        <div className={container}>
+          <div className="max-w-[820px]">
+            <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+              What we offer
+            </p>
+            <h2 id="home-offerings-title" className={`${heading} mt-5`}>
+              Products and services from Spine InnovTech
+            </h2>
+            <p className={`${body} mt-4`}>
+              SpineWorkspace is our product for everyday work. The Spine Intelligence Platform underneath it is also
+              available on its own, and our teams help you connect, build and run both.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {offerings.map(({ icon: Icon, label, name, description, cta }, index) => (
+              <BlurFade key={name} delay={index * 0.06} inView className="h-full">
+                <MagicCard className="h-full" innerClassName="flex h-full flex-col p-6 sm:p-7">
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[#CBE5FA] bg-[#F0F8FF] text-[#006FE8] shadow-2xs">
+                      <Icon className="h-5 w-5" aria-hidden />
+                    </span>
+                    <span className="text-[11px] font-semibold uppercase tracking-[.16em] text-[#006FE8]">{label}</span>
+                  </div>
+                  <h3 className="mt-5 text-[length:var(--marketing-card-size)] font-semibold leading-snug">{name}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-7 text-[#4E607A]">{description}</p>
+                  <a
+                    href={cta.href}
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#006FE8] hover:underline"
+                  >
+                    {cta.label} <ArrowRight className="h-4 w-4" aria-hidden />
+                  </a>
+                </MagicCard>
+              </BlurFade>
+            ))}
+          </div>
+          <h3
+            id="services"
+            className="mt-14 scroll-mt-24 text-[length:var(--marketing-card-size)] font-semibold tracking-[-.02em] text-[#082B5E]"
+          >
+            Services
+          </h3>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map(({ icon: Icon, name, description }) => (
+              <div key={name} className="flex h-full flex-col rounded-2xl border border-[#D6E8F8] bg-white p-5 shadow-2xs">
+                <Icon className="h-5 w-5 text-[#006FE8]" aria-hidden />
+                <h4 className="mt-4 text-[15px] font-semibold leading-snug text-[#082B5E]">{name}</h4>
+                <p className="mt-2 text-sm leading-6 text-[#4E607A]">{description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Link href="/contact" className={primaryButton}>
+              Talk to us about a project <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <ProblemSection
         eyebrow={homeProblems.eyebrow}
         headline={homeProblems.headline}
@@ -237,72 +335,54 @@ export function CorporateHomeT1() {
 
       <section id="workflow" aria-labelledby="home-workflow-title" className="scroll-mt-24 border-t border-[#D6E8F8] bg-[#F0F8FF] py-20 md:py-28">
         <div className={container}>
-          <div className="flex flex-wrap items-center gap-3">
-            <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
-              How it works
-            </p>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-3 py-0.5 text-[11px] font-semibold text-[#7C3AED]">
-              Illustrative example
-            </span>
-          </div>
-          <h2 id="home-workflow-title" className={`${heading} mt-5 max-w-[820px]`}>
-            See how it works: a customer renewal
-          </h2>
-          <p className={`${body} mt-4 max-w-[760px]`}>
-            A renewal for the Acme account. Maya, a customer success lead, works with her AI Twin across Salesforce,
-            Zendesk and Gmail.
-          </p>
-          <div className="mt-8 max-w-[820px] overflow-x-auto rounded-2xl border border-[#D6E8F8]">
-            <table className="w-full text-left text-sm">
-              <caption className="sr-only">Illustrative example of data and what helps explain it</caption>
-              <thead className="bg-[#F0F8FF] text-[#082B5E]">
-                <tr>
-                  <th scope="col" className="px-4 py-3 font-semibold">
-                    Data
-                  </th>
-                  <th scope="col" className="px-4 py-3 font-semibold">
-                    What helps explain it
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {renewalExamples.map((row) => (
-                  <tr key={row.data} className="border-t border-[#D6E8F8]">
-                    <th scope="row" className="w-1/2 px-4 py-3 align-top font-medium text-[#082B5E]">
-                      {row.data}
-                    </th>
-                    <td className="w-1/2 px-4 py-3 align-top leading-6 text-[#4E607A]">{row.explains}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className={`${body} mt-4 max-w-[760px]`}>
-            A conversation is data too. It adds context when it helps you understand the customer&apos;s situation. These
-            are examples, not separate boxes.
-          </p>
-          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {workflowSteps.map((step, index) => (
-              <BlurFade key={step.title} delay={index * 0.05} inView className="h-full">
-                <MagicCard className="h-full" innerClassName="flex h-full gap-3 p-4">
-                  <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
-                    {index + 1}
-                  </span>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <span
-                        className={`rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${phaseTint[step.phase]}`}
-                      >
-                        {step.phase}
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div>
+              <div className="flex flex-wrap items-center gap-3">
+                <p className="inline-flex items-center gap-2 rounded-full border border-[#CCE3F5] bg-white px-3 py-0.5 text-[11px] font-semibold uppercase tracking-[.2em] text-[#006FE8]">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#006FE8]" />
+                  How it works
+                </p>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-3 py-0.5 text-[11px] font-semibold text-[#7C3AED]">
+                  Illustrative example
+                </span>
+              </div>
+              <h2 id="home-workflow-title" className={`${heading} mt-5 max-w-[820px]`}>
+                One renewal, from question to approved change
+              </h2>
+              <p className={`${body} mt-4 max-w-[640px]`}>
+                A customer success lead sees the account, support history and contract together. AI prepares the next
+                step, and a person approves the change before anything is updated.
+              </p>
+              <div className="mt-7">
+                <a href="https://spineworkspace.com/how-it-works" className={primaryButton}>
+                  See the full walkthrough on SpineWorkspace <ArrowRight className="h-4 w-4" aria-hidden />
+                </a>
+              </div>
+            </div>
+            <ol aria-label="The renewal in three steps" className="grid gap-4">
+              {workflowTeaser.map((step, index) => (
+                <li key={step.title}>
+                  <BlurFade delay={index * 0.05} inView className="h-full">
+                    <MagicCard className="h-full" innerClassName="flex h-full gap-3 p-4">
+                      <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border border-[#CCE3F5] bg-[#EAF5FC] font-mono text-xs font-bold text-[#006FE8]">
+                        {index + 1}
                       </span>
-                      <h3 className="text-sm font-semibold text-[#082B5E]">{step.title}</h3>
-                    </div>
-                    <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
-                  </div>
-                </MagicCard>
-              </BlurFade>
-            ))}
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <span
+                            className={`rounded border px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${phaseTint[step.phase]}`}
+                          >
+                            {step.phase}
+                          </span>
+                          <h3 className="text-sm font-semibold text-[#082B5E]">{step.title}</h3>
+                        </div>
+                        <p className="mt-1.5 text-sm leading-6 text-[#4E607A]">{step.body}</p>
+                      </div>
+                    </MagicCard>
+                  </BlurFade>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
